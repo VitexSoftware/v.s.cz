@@ -31,7 +31,7 @@ $oPage->column3->addItem(new EaseHtmlH3Tag(_('Ke stažení')));
 
 $oPage->column3->addItem('<div style="background-color: #CAAAAA; margin: 2px; padding: 5px;">Zdrojové kody EaseFrameworku<br>');
 
-$dwDir = "/var/www/download/";
+$dwDir = "/var/www/html/download/";
 $d = dir($dwDir);
 $downloads = array();
 while (false !== ($entry = $d->read())) {
