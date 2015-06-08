@@ -1,0 +1,131 @@
+/* 
+    Document   : main
+    Created on : Sep 20, 2010, 7:54:25 PM
+    Author     : vitex
+    Description: main css
+*/
+
+@font-face {
+    font-family: 'Lobster';
+    src: url('lobster1.4-webfont.eot');
+    src: url('lobster1.4-webfont.eot?#iefix') format('embedded-opentype'),
+        url('lobster1.4-webfont.woff') format('woff'),
+        url('lobster1.4-webfont.ttf') format('truetype'),
+        url('lobster1.4-webfont.svg#lobster_1.4regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.navbar {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+}
+
+.avatar { width: 100px; }
+
+a { margin-top: 2px;  }
+
+.navbar .brand { color: gold; }
+
+.item img { margin-left: 200px; }
+
+h2 { font-style: italic; }
+
+code { font-size: 9px; font-weight: bolder; }
+
+#heroUnit { text-align: center; padding: 10px; }
+
+.carousel-caption { background: rgba(0,0,0, 0.9); border: 1px springgreen solid;  }
+
+.item { text-align: center; 
+        margin-left: auto;
+        margin-right: auto; }
+
+.ribbon {
+    top: 3.2em;
+    right: -3.7em;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    color:#fff;
+    display: block;
+    padding: .6em 3.5em;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    z-index: 100000;
+}
+
+.bg-teal {
+  background-color: #39cccc; }
+
+.nav-tabs { font-family: "Lobster",cursive; font-size: 1.5em; }
+
+
+.btn-center{
+  width: 50%;
+  text-align: center;
+  margin: inherit;
+}
+
+.social-login-btn {
+  margin: 5px;
+  width: 10%;
+  padding: 0;
+}
+
+.social-google {
+  background-color: #da573b;
+  border-color: #be5238;
+}
+.social-google:hover{
+  background-color: #be5238;
+  border-color: #9b4631;
+}
+
+.social-twitter {
+  background-color: #1daee3;
+  border-color: #3997ba;
+}
+.social-twitter:hover {
+  background-color: #3997ba;
+  border-color: #347b95;
+}
+
+.social-facebook {
+  background-color: #4c699e;
+  border-color: #47618d;
+}
+.social-facebook:hover {
+  background-color: #47618d;
+  border-color: #3c5173;
+}
+
+.social-linkedin {
+  background-color: #4875B4;
+  border-color: #466b99;
+}
+.social-linkedin:hover {
+  background-color: #466b99;
+  border-color: #3b5a7c;
+}
+
+.social-github {
+  background-color: #000000;
+  border-color: #466b99;
+}
+.social-github:hover {
+  background-color: #1e1b1d;
+  border-color: #111111;
+}
+

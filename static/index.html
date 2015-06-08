@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js">
+        </script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+        </script>
+        <style>
+
+            table {
+                border-width: 1px;
+                border-style: solid;
+                border-color: #000000;
+                border-collapse: collapse;
+            }        
+
+            th, td {
+                border-width: 1px;
+                border-style: solid;
+                border-color: #000000;
+                padding: 3px;
+            }
+
+            caption {
+                font-size: 1.4em;
+                font-weight: bold;
+                padding-bottom: 4px;
+            }
+
+            th {
+                font-variant: small-caps;
+                color: #666666;
+                letter-spacing: 0.2em;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    hosting
+                </h3>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Administrace
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://admin.murka.cz/" data-transition="slide">
+                            ISP Config
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://h.v.s.cz/net2ftp/" data-transition="slide">
+                            Web FTP
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://hosting.vitexsoftware.cz:8081/phpmyadmin/" data-transition="slide">
+                            PHP My Admin
+                        </a>
+                    </li>
+                    <li data-role="list-divider" role="heading">
+                        Pošta
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://debian.murka.cz/squirrelmail" data-transition="slide">
+                            Squirellmail
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://debian.murka.cz/roundcube" data-transition="slide">
+                            Roundcube
+                        </a>
+                    </li>
+                    <li data-role="list-divider" role="heading">
+                        Doplňky
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://v.s.cz/" data-transition="slide">
+                            Provozovatel
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://v.s.cz/redmine/projects/hosting" data-transition="slide">
+                            Kniha přání a stížností
+                        </a>
+                    </li>
+                </ul>
+                <h2>Cenník hostingu</h2>
+                <p>V ceně je zahrnuto přestěhování webu, pravidelné denní zálohy a <a href="callto:+420739778202'">telefonická podpora</a> nonstop.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Místo na disku</th>
+                            <th>Cena za měsíc</th>
+                            <th>Cena za rok</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>do 100Mb</td>
+                            <td>26 Kč</td>
+                            <td>312 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>do 200Mb</td>
+                            <td>52 Kč</td>
+                            <td>624 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>do 300Mb</td>
+                            <td>78 Kč</td>
+                            <td>936 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>300Mb až 500Mb</td>
+                            <td>100 Kč</td>
+                            <td>1200 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>500Mb až 1Gb</td>
+                            <td>150 Kč</td>
+                            <td>1800 Kč</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>V rámci provizního programu nabízíme 5% provize ze zprostředkovaných zakázek.</p>
+
+            </div>
+
+            <div data-theme="a" data-role="footer" data-position="fixed">
+                <h3>
+                    © 2013 Vitex Software
+                </h3>
+            </div>
+        </div>
+    </body>
+</html>
