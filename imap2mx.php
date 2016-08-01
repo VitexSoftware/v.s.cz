@@ -12,16 +12,16 @@ require_once 'includes/VSInit.php';
 
 
 
-$oPage->addItem(new VSPageTop(_('Imap2MX for Roundcube and Squirrelmail')));
+$oPage->addItem(new \VSCZ\ui\PageTop(_('Imap2MX for Roundcube and Squirrelmail')));
 $oPage->AddPageColumns();
 
-$prehled = $oPage->column2->addItem(new EaseHtmlDivTag());
+$prehled = $oPage->column2->addItem(new \Ease\Html\DivTag());
 $prehled->addItem('Plugin <strong>Imap2mx</strong> allow IMAP login to user\'s email address MX ip. This is special configuration for multiplete dedicated (ISPConfig) mailservers.');
 
 
 $oPage->column2->addItem('<hr>');
 
-$oPage->column1->addItem(new EaseHtmlH3Tag(_('Download')));
+$oPage->column1->addItem(new \Ease\Html\H3Tag(_('Download')));
 
 
 $oPage->column1->addItem('<div style="background-color: #CAAAAA; margin: 2px; padding: 5px;">imap2mx package<br>');
@@ -49,14 +49,14 @@ foreach ($downloads as $file => $size) {
 
 //echo '<pre>'; print_r($Downloads); echo '</pre>';
 
-$oPage->column1->addItem(new EaseHtmlATag('download/' . key($SquirelPackage), '<img style="width: 42px;" src="img/deb-package.png">&nbsp;' . key($SquirelPackage) . ' ' . current($SquirelPackage), array('class' => 'btn btn-success')));
+$oPage->column1->addItem(new \Ease\Html\ATag('download/' . key($SquirelPackage), '<img style="width: 42px;" src="img/deb-package.png">&nbsp;' . key($SquirelPackage) . ' ' . current($SquirelPackage), array('class' => 'btn btn-success')));
 
 $oPage->column1->addItem('</div>');
 
 
 
 
-$oPage->column3->addItem(new EaseHtmlH3Tag(_('Download')));
+$oPage->column3->addItem(new \Ease\Html\H3Tag(_('Download')));
 
 
 $oPage->column3->addItem('<div style="background-color: #CAAAAA; margin: 2px; padding: 5px;">imap2mx package<br>');
@@ -83,7 +83,7 @@ foreach ($downloads as $file => $size) {
 
 //echo '<pre>'; print_r($Downloads); echo '</pre>';
 
-$oPage->column3->addItem(new EaseHtmlATag('download/' . key($SquirelPackage), '<img style="width: 42px;" src="img/deb-package.png">&nbsp;' . key($SquirelPackage) . ' ' . current($SquirelPackage), array('class' => 'btn btn-success')));
+$oPage->column3->addItem(new \Ease\Html\ATag('download/' . key($SquirelPackage), '<img style="width: 42px;" src="img/deb-package.png">&nbsp;' . key($SquirelPackage) . ' ' . current($SquirelPackage), array('class' => 'btn btn-success')));
 
 $oPage->column3->addItem('</div>');
 
@@ -103,10 +103,10 @@ $oPage->column2->addItem('<a href="http://debian.org/"><img style="width: 60px;"
 $oPage->column2->addItem('<a href="http://ubuntu.com/"><img style="width: 60px;" title="Ubuntu Linux" src="img/ubuntulogo.png"></a>');
 
 
-$oPage->column1->addItem(new EaseHtmlATag('http://squirrelmail.org/', '<img style="height: 32px;" src="img/sm_logo.png">&nbsp; Official project homepage', array('class' => 'btn btn-info')));
-$oPage->column3->addItem(new EaseHtmlATag('http://www.roundcube.net/', '<img style="height: 32px;" src="img/rc_logo.png">&nbsp; Official project homepage', array('class' => 'btn btn-info')));
+$oPage->column1->addItem(new \Ease\Html\ATag('http://squirrelmail.org/', '<img style="height: 32px;" src="img/sm_logo.png">&nbsp; Official project homepage', array('class' => 'btn btn-info')));
+$oPage->column3->addItem(new \Ease\Html\ATag('http://www.roundcube.net/', '<img style="height: 32px;" src="img/rc_logo.png">&nbsp; Official project homepage', array('class' => 'btn btn-info')));
 
-$oPage->addItem(new VSPageBottom());
+$oPage->addItem(new \VSCZ\ui\PageBottom());
 
 
 $oPage->draw();

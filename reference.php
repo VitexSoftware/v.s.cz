@@ -10,7 +10,7 @@
  */
 require_once 'includes/VSInit.php';
 
-$oPage->addItem(new VSPageTop(_('Vitex Software')));
+$oPage->addItem(new \VSCZ\ui\PageTop(_('Vitex Software')));
 
 $oPage->addJavaScript('$(\'.carousel\').carousel();',null,true);
 $oPage->includeJavaScript('js/bootstrap-carousel.js');
@@ -69,20 +69,20 @@ $oPage->addItem('
 
 
 /*
-$OPage->column3->addItem(new EaseHtmlH3Tag(_('Reference')));
-$Reference = $OPage->column3->addItem( new EaseHtmlUlTag() );
-$Reference->addItem(new EaseHtmlATag('/EaseFramework/', _('Ease Framework')));
-$Trib = $Reference->addItem(new EaseHtmlATag('http://www.triband.cz/', _('Ease Shop společnosti triband')));
-$Trib->addItem(new EaseHtmlImgTag('img/triband.png', 'Přehled zboží',200));
+$OPage->column3->addItem(new \Ease\Html\H3Tag(_('Reference')));
+$Reference = $OPage->column3->addItem( new \Ease\Html\UlTag() );
+$Reference->addItem(new \Ease\Html\ATag('/EaseFramework/', _('Ease Framework')));
+$Trib = $Reference->addItem(new \Ease\Html\ATag('http://www.triband.cz/', _('Ease Shop společnosti triband')));
+$Trib->addItem(new \Ease\Html\ImgTag('img/triband.png', 'Přehled zboží',200));
 
-$Leg = $Reference->addItem(new EaseHtmlATag('http://www.magazin-legalizace.cz/', _('Objednávka předplatného magazínu Legalizace')));
-$Leg->addItem(new EaseHtmlImgTag('img/magazin-legalizace.png', 'Registrace',200));
+$Leg = $Reference->addItem(new \Ease\Html\ATag('http://www.magazin-legalizace.cz/', _('Objednávka předplatného magazínu Legalizace')));
+$Leg->addItem(new \Ease\Html\ImgTag('img/magazin-legalizace.png', 'Registrace',200));
 
-$Reference->addItem(new EaseHtmlATag('http://l.q.cz/', _('zkracovač adres LinkQuick')));
+$Reference->addItem(new \Ease\Html\ATag('http://l.q.cz/', _('zkracovač adres LinkQuick')));
 */
 
 
-$oPage->addItem(new VSPageBottom());
+$oPage->addItem(new \VSCZ\ui\PageBottom());
 
 
 $oPage->draw();

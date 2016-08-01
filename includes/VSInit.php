@@ -1,17 +1,19 @@
 <?php
-
 /**
  * Init aplikace
  *
  * @author    Vitex <vitex@hippy.cz>
  * @copyright Vitex@hippy.cz (G) 2010
  */
+
+namespace VSCZ;
+
 require_once 'includes/Configure.php';
-set_include_path('classes' . PATH_SEPARATOR . get_include_path());
+require_once '/var/lib/v.s.cz/autoload.php';
 
 function __autoload($class_name)
 {
-    $class_file = 'classes/' . $class_name . '.php';
+    $class_file = 'classes/'.$class_name.'.php';
     if (file_exists($class_file)) {
         include $class_file;
         return TRUE;
@@ -20,21 +22,19 @@ function __autoload($class_name)
 }
 
 $language = "cs_CZ";
-$codeset = "cs_CZ.UTF-8";
-$domain = "messages";
-putenv("LANGUAGE=" . $language);
-putenv("LANG=" . $language);
+$codeset  = "cs_CZ.UTF-8";
+$domain   = "messages";
+putenv("LANGUAGE=".$language);
+putenv("LANG=".$language);
 bind_textdomain_codeset($domain, "UTF8");
 setlocale(LC_ALL, $codeset);
 bindtextdomain($domain, realpath("./locale"));
 textdomain($domain);
 
-require_once 'Ease/EaseUser.php';
-
 session_start();
 
 if (!isset($_SESSION['User']) || !is_object($_SESSION['User'])) {
-    EaseShared::user(new EaseAnonym());
+    \Ease\Shared::user(new \Ease\Anonym());
 }
 
 
@@ -42,10 +42,7 @@ if (!isset($_SESSION['User']) || !is_object($_SESSION['User'])) {
  * Objekt uživatele VSUser nebo VSAnonym
  * @global VSUser
  */
-$OUser = & EaseShared::user();
-
-require_once 'VSWebPage.php';
+$OUser = & \Ease\Shared::user();
 
 /* @var $oPage VSWebPage */
-$oPage = new \VSWebPage( );
-
+$oPage = new \VSCZ\ui\WebPage( );

@@ -9,23 +9,23 @@
  * @subpackage Engine
  */
 
-require_once 'Ease/EaseTWBootstrap.php';
+require_once 'Ease/\Ease\TWB\ootstrap.php';
 
 /**
  * Description of loginbox
  *
  * @author vitex
  */
-class loginbox extends EaseHtmlDivTag {
+class loginbox extends \Ease\Html\DivTag {
 
     function __construct($target, $logincolumn, $passcolumn) {
         parent::__construct(null, null, array('id' => 'LoginFace'));
-        $loginForm = $this->addItem(new EaseHtmlForm('Login', $target, 'POST', null, array('class' => 'form-vertical')));
+        $loginForm = $this->addItem(new \Ease\Html\Form('Login', $target, 'POST', null, array('class' => 'form-vertical')));
         
-        $loginForm->addItem( new EaseTWBFormGroup(_('Login'), new EaseHtmlInputTextTag($logincolumn)) );
-        $loginForm->addItem( new EaseTWBFormGroup(_('Heslo'), new EaseHtmlInputPasswordTag($passcolumn)) );
+        $loginForm->addItem( new \Ease\TWB\FormGroup(_('Login'), new \Ease\Html\InputTextTag($logincolumn)) );
+        $loginForm->addItem( new \Ease\TWB\FormGroup(_('Heslo'), new \Ease\Html\InputPasswordTag($passcolumn)) );
         
-        $loginForm->addItem(new EaseTWSubmitButton(EaseTWBPart::GlyphIcon('log-in') .'&nbsp;' . _('Přihlášení'), 'success'));
+        $loginForm->addItem(new EaseTWSubmitButton(\Ease\TWB\Part::GlyphIcon('log-in') .'&nbsp;' . _('Přihlášení'), 'success'));
     }
 
 }

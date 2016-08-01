@@ -12,7 +12,7 @@ require_once 'includes/VSInit.php';
 require_once './classes/loginbox.php';
 
 
-$oPage->addItem(new VSPageTop(_('Fakturační systém Moloch')));
+$oPage->addItem(new \VSCZ\ui\PageTop(_('Fakturační systém Moloch')));
 //$oPage->AddItem('<a href="https://github.com/Vitexus/EaseFramework" class="ribbon bg-teal">Forkni na GitHubu</a>');
 
 /*
@@ -22,15 +22,15 @@ $oPage->addItem(new VSPageTop(_('Fakturační systém Moloch')));
  */
 
 
-$container = new EaseTWBContainer;
+$container = new \Ease\TWB\Container;
 
-$infopanel = $container->addItem(new EaseTWBPanel(new EaseHtmlH2Tag('Moloch')));
+$infopanel = $container->addItem(new \Ease\TWB\Panel(new \Ease\Html\H2Tag('Moloch')));
 
-$prehled = $infopanel->addItem(new EaseHtmlUlTag());
+$prehled = $infopanel->addItem(new \Ease\Html\UlTag());
 $prehled->addItemSmart('byl vyvíjen od roku 2000 jako intranetový IS společnosti <a href="http://arachne.cz/">Arachne Labs</a>. ');
 $prehled->addItemSmart('Současná verze je kompletní přepis do aktuálních technologií roku 2014. ');
 
-$infopanel->addItem(new EaseHtmlImgTag('img/moloch-main2015.png', 'Moloch', null, null, array('class' => 'img-responsive img-rounded')));
+$infopanel->addItem(new \Ease\Html\ImgTag('img/moloch-main2015.png', 'Moloch', null, null, array('class' => 'img-responsive img-rounded')));
 
 //$oPage->column3->addItem('<div style="background-color: #CAAAAA; margin: 2px; padding: 5px;">Zdrojové kody EaseFrameworku<br>');
 
@@ -54,10 +54,10 @@ foreach ($downloads as $file => $size) {
 
 //echo '<pre>'; print_r($Downloads); echo '</pre>';
 
-$row = $container->addItem(new EaseTWBRow);
+$row = $container->addItem(new \Ease\TWB\Row);
 
 
-$install = new EaseTWBWell(new EaseHtmlH3Tag(_('Ke stažení')));
+$install = new \Ease\TWB\Well(new \Ease\Html\H3Tag(_('Ke stažení')));
 
 $install->addItem(new VSDownloadButton($package));
 
@@ -73,23 +73,23 @@ $install->addItem('<hr><a href="http://debian.org/"><img style="width: 60px;" ti
 $install->addItem('<a href="http://ubuntu.com/"><img style="width: 60px;" title="Ubuntu Linux" src="img/ubuntulogo.png"></a><p></p>');
 
 
-$row->addItem(new EaseTWBCol(6, $install));
+$row->addItem(new \Ease\TWB\Col(6, $install));
 
-$loginFace = new EaseHtmlDivTag('LoginFace');
+$loginFace = new \Ease\Html\DivTag('LoginFace');
 
 $loginForm = new loginbox('/moloch/login.php', 'login', 'heslo');
 
-$loginFrame = new EaseHtmlDivTag(null, '<span class="label label-danger">' . _('testovací provoz') . '</span>', array('class' => 'alert alert-warning'));
+$loginFrame = new \Ease\Html\Div( '<span class="label label-danger">' . _('testovací provoz') . '</span>', array('class' => 'alert alert-warning'));
 
-$loginFrame->addItem(new EaseHtmlDivTag('WelcomeHint', _('Zadejte, prosím, Vaše přihlašovací údaje:')));
+$loginFrame->addItem(new \Ease\Html\DivTag('WelcomeHint', _('Zadejte, prosím, Vaše přihlašovací údaje:')));
 
 $loginFrame->addItem($loginForm);
 
-$row->addItem(new EaseTWBCol(6, new EaseTWBWell($loginFrame)));
+$row->addItem(new \Ease\TWB\Col(6, new \Ease\TWB\Well($loginFrame)));
 
 $oPage->addItem($container);
 
 
-$oPage->addItem(new VSPageBottom());
+$oPage->addItem(new \VSCZ\ui\PageBottom());
 
 $oPage->draw();

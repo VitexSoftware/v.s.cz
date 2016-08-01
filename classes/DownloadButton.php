@@ -1,11 +1,12 @@
 <?php
+namespace VSCZ;
 
 /**
  * Description of VSDownloadButton
  *
  * @author vitex
  */
-class VSDownloadButton extends EaseHtmlATag
+class DownloadButton extends \Ease\Html\ATag
 {
 
     /**

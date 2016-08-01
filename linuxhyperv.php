@@ -11,21 +11,21 @@
 require_once 'includes/VSInit.php';
 
 
-$oPage->addItem(new VSPageTop(_('Linux kernel for Hyper-V guest')));
+$oPage->addItem(new \VSCZ\ui\PageTop(_('Linux kernel for Hyper-V guest')));
 $oPage->AddPageColumns();
 $oPage->column1->setTagClass('span4');
 $oPage->column2->setTagClass('span5');
 $oPage->heroUnit->addItem('<h2>* * * This package was obsoleted due new Wheezy kernels * * *</h2>');
 
 
-$prehled = $oPage->column1->addItem(new EaseHtmlDivTag());
+$prehled = $oPage->column1->addItem(new \Ease\Html\DivTag());
 
-$Prehled2 = $oPage->column1->addItem(new EaseHtmlDivTag());
+$Prehled2 = $oPage->column1->addItem(new \Ease\Html\DivTag());
 $Prehled2->addItem('Custom image of latest <a href="http://kernel.org/">Linux kernel</a> with Microsoft <a href="http://technet.microsoft.com/en-us/windowsserver/dd448604">Hyper-V</a> drivers compiled-in.' );
 
 $oPage->column1->addItem('<br>');
 
-$oPage->column2->addItem(new EaseHtmlH3Tag(_('Download')));
+$oPage->column2->addItem(new \Ease\Html\H3Tag(_('Download')));
 
 $dwDir = "/var/www/download/";
 $d = dir($dwDir);
@@ -49,10 +49,10 @@ foreach ($downloads as $file=>$size){
 
 $oPage->column2->addItem('Unofficial Linux kernel image package for Microsoft HyperV virtual machines</br>');
 
-$oPage->column2->addItem(new EaseHtmlATag('download/'.key($LinuxHypervPackage), '<img style="width: 42px;" src="img/deb-package.png">&nbsp;' . key($LinuxHypervPackage) . ' '.current($LinuxHypervPackage) ,array('class'=>'btn btn-success')));
+$oPage->column2->addItem(new \Ease\Html\ATag('download/'.key($LinuxHypervPackage), '<img style="width: 42px;" src="img/deb-package.png">&nbsp;' . key($LinuxHypervPackage) . ' '.current($LinuxHypervPackage) ,array('class'=>'btn btn-success')));
 
 
-$oPage->column1->addItem(new EaseHtmlH4Tag(_('Hyper-V kernel modules info')));
+$oPage->column1->addItem(new \Ease\Html\H4Tag(_('Hyper-V kernel modules info')));
 
 $oPage->column1->addItem('<pre>
 Hypervisor detected: Microsoft HyperV
@@ -72,7 +72,7 @@ $oPage->column1->addItem('<h5>Compatible with</h5>');
 $oPage->column1->addItem('<a href="http://debian.org/"><img style="width: 60px;" title="Debian Linux" src="img/debian.png"></a>');
 $oPage->column1->addItem('<a href="http://ubuntu.com/"><img style="width: 60px;" title="Ubuntu Linux" src="img/ubuntulogo.png"></a>');
 
-$oPage->addItem(new VSPageBottom());
+$oPage->addItem(new \VSCZ\ui\PageBottom());
 
 
 $oPage->draw();

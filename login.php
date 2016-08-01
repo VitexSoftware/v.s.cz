@@ -32,15 +32,15 @@ if ($Login) {
 }
 
 
-$oPage->addItem(new VSPageTop(_('Přihlaš se')));
+$oPage->addItem(new \VSCZ\ui\PageTop(_('Přihlaš se')));
 
-$loginFace = new EaseHtmlDivTag('LoginFace');
+$loginFace = new \Ease\Html\DivTag('LoginFace');
 
 
-$loginFace->addItem(new EaseHtmlDivTag('WelcomeHint', _('<p>Zadejte, prosím, Vaše přihlašovací údaje:</p>')));
-$loginFace->addItem(new EaseHtmlDivTag('Spacer', '&nbsp;'));
+$loginFace->addItem(new \Ease\Html\DivTag('WelcomeHint', _('<p>Zadejte, prosím, Vaše přihlašovací údaje:</p>')));
+$loginFace->addItem(new \Ease\Html\DivTag('Spacer', '&nbsp;'));
 
-$loginForm = $loginFace->addItem(new EaseHtmlForm('Login'));
+$loginForm = $loginFace->addItem(new \Ease\Html\Form('Login'));
 $loginForm->SetTagID('LoginForm');
 $loginForm->addItem(new EaseLabeledInput('login', null, _('Login')));
 $loginForm->addItem(new EaseLabeledPasswordInput('password', null, _('Heslo')));
@@ -49,9 +49,9 @@ $loginForm->addItem(new EaseJQuerySubmitButton('LogIn', _('Přihlášení')));
 
 
 
-$oPage->column2->addItem(new EaseHtmlDivTag(null, $loginFace, array('class' => 'col1')));
-$oPage->column1->addItem(new EaseHtmlDivTag(null, _('Po přihlášení budete moci sledovat vybrané lokality a přispívat zprávami z nich'), array('class' => 'col2')));
-$oPage->column3->addItem(new EaseHtmlDivTag(null, VSTwitter::authButton('auth.php'), array('class' => 'col3')));
+$oPage->column2->addItem(new \Ease\Html\Div( $loginFace, array('class' => 'col1')));
+$oPage->column1->addItem(new \Ease\Html\Div( _('Po přihlášení budete moci sledovat vybrané lokality a přispívat zprávami z nich'), array('class' => 'col2')));
+$oPage->column3->addItem(new \Ease\Html\Div( VSTwitter::authButton('auth.php'), array('class' => 'col3')));
 
 /**
 $Collumn3->addItem( VSOpenIDUser::loginForm('login2-openid.php') );
@@ -60,7 +60,7 @@ $Collumn3->addItem( VSFacebook::getLoginButton() );
 $Collumn3->addItem( '<a href="https://www.facebook.com/dialog/oauth?client_id='. FB_APP_ID.'&redirect_uri='.urlencode(dirname(EasePage::phpSelf()).'/fbauth.php').'&scope=offline_access,user_checkins,friends_checkins">Connect with Facebook</a>' );
 */
 
-$oPage->addItem(new VSPageBottom());
+$oPage->addItem(new \VSCZ\ui\PageBottom());
 
 $oPage->draw();
 ?>

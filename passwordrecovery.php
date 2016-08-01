@@ -9,7 +9,7 @@
 */
 require_once 'includes/LBBegin.php';
 require_once 'Ease/EaseMail.php';
-require_once 'Ease/EaseHtmlForm.php';
+require_once 'Ease/\Ease\Html\Form.php';
 $Success = false;
 
 $EmailTo = $oPage->GetPostValue('Email');
@@ -53,16 +53,16 @@ if (!$Success) {
 
     $oPage->addItem('Zapoměl jste heslo? Vložte svou e-mailovou adresu, kterou jste zadal při registraci a my Vám pošleme nové.');
 
-    $EmailForm = $oPage->addItem(new EaseHtmlForm('PassworRecovery'));
+    $EmailForm = $oPage->addItem(new \Ease\Html\Form('PassworRecovery'));
     $EmailForm->addItem('Email: ');
-    $EmailForm->addItem(new EaseHtmlInputTextTag('Email', null, array('size' => '40')));
-    $EmailForm->addItem(new EaseHtmlInputSubmitTag('ok', _('Zaslat nové heslo')));
+    $EmailForm->addItem(new \Ease\Html\InputTextTag('Email', null, array('size' => '40')));
+    $EmailForm->addItem(new \Ease\Html\InputSubmitTag('ok', _('Zaslat nové heslo')));
 
     if (isset($_POST)) {
         $EmailForm->FillUp($_POST);
     }
 } else {
-    $oPage->addItem(new EaseHtmlATag('Login.php', _('Pokračovat')));
+    $oPage->addItem(new \Ease\Html\ATag('Login.php', _('Pokračovat')));
 }
 
 $oPage->addItem(new LBPageBottom());

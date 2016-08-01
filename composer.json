@@ -1,0 +1,35 @@
+{
+    "name": "vitexsoftware/vscz",
+    "description": "VitexSoftware homepage",
+    "version": "0.202.6",
+    "authors": [
+        {
+            "name": "vitex",
+            "email": "info@vitexsoftware.cz"
+        }
+    ],
+    "minimum-stability": "stable",
+    "config": {
+	"vendor-dir": "/var/lib/v.s.cz/"
+    },
+    "require": {
+        "php": ">= 5.5.9",
+        "vitexsoftware/ease-framework": ">= 1.1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "VSCZ\\": "classes/",
+            "VSCZ\\ui\\": "classes/ui/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/usr/share/php/Ease",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
+
+}

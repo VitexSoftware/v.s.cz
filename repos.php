@@ -10,11 +10,11 @@
  */
 require_once 'includes/VSInit.php';
 
-$oPage->addItem(new VSPageTop(_('Deb Repository')));
+$oPage->addItem(new \VSCZ\ui\PageTop(_('Deb Repository')));
 
-$reposinfo = new EaseTWBWell( new EaseHtmlH3Tag(_('How to use repository')) ) ;
+$reposinfo = new \Ease\TWB\Well( new \Ease\Html\H3Tag(_('How to use repository')) ) ;
 
-$steps = $reposinfo->addItem( new EaseHtmlUlTag(null, array('class'=>'list-group')) );
+$steps = $reposinfo->addItem( new \Ease\Html\UlTag(null, array('class'=>'list-group')) );
 
 $steps->addItemSmart('wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key | sudo apt-key add -',array('class'=>'list-group-item'));
 $steps->addItemSmart('echo deb http://v.s.cz/ stable main | sudo tee /etc/apt/sources.list.d/vitexsoftware.list ',array('class'=>'list-group-item'));
@@ -22,7 +22,7 @@ $steps->addItemSmart('sudo aptitude update',array('class'=>'list-group-item'));
 $steps->addItemSmart('sudo aptitude install <em>package(s)</em>',array('class'=>'list-group-item'));
 
 
-$oPage->addItem( new EaseTWBContainer( $reposinfo ) );
+$oPage->addItem( new \Ease\TWB\Container( $reposinfo ) );
 
 $packages = array();
 $pName = null;
@@ -58,7 +58,7 @@ if ($handle) {
     fclose($handle);
 }
 
-$ptable = new EaseHtmlTableTag(null, array('class' => 'table'));
+$ptable = new \Ease\Html\TableTag(null, array('class' => 'table'));
 $ptable->setHeader(array(_('Package name'),  _('Version'),_('Release date') , _('Size'), _('Package')));
 
 $oPage->addJavascript('$(".hinter").popover();',null,true);
@@ -69,14 +69,14 @@ foreach ($packages as $pName => $pProps) {
         continue;
     }
     $incTime = date ("m. d. Y H:i:s", filemtime( trim($pProps['Filename'] )));
-    $package = new EaseHtmlATag($pProps['Filename'], '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'.$pProps['Architecture'], array('class' => 'btn btn-xs btn-success'));
-    $pInfo = new EaseHtmlATag('#', $pName, array('tabindex' => 0, 'class' => 'hinter', 'data-toggle' => 'popover', 'data-trigger' => 'hover', 'data-content' => $pProps['Description']));
+    $package = new \Ease\Html\ATag($pProps['Filename'], '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'.$pProps['Architecture'], array('class' => 'btn btn-xs btn-success'));
+    $pInfo = new \Ease\Html\ATag('#', $pName, array('tabindex' => 0, 'class' => 'hinter', 'data-toggle' => 'popover', 'data-trigger' => 'hover', 'data-content' => $pProps['Description']));
     $ptable->addRowColumns(array($pInfo,  $pProps['Version'],$incTime  , VSWebPage::_format_bytes($pProps['Size']), $package));
 }
 
-$oPage->addItem(new EaseTWBContainer($ptable));
+$oPage->addItem(new \Ease\TWB\Container($ptable));
 
 
-$oPage->addItem(new VSPageBottom());
+$oPage->addItem(new \VSCZ\ui\PageBottom());
 
 $oPage->draw();

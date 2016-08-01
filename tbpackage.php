@@ -46,34 +46,34 @@ foreach ($downloads as $file => $size) {
 //$oPage->head->addItem('<link rel="alternate" type="application/rss+xml" title="Ease Framework SVN" href="/websvn/rss.php?repname=Ease+Framework" />');
 
 
-$oPage->addItem(new VSPageTop(_('unofficial Twitter Bootstrap Debian/Ubuntu packages')));
+$oPage->addItem(new \VSCZ\ui\PageTop(_('unofficial Twitter Bootstrap Debian/Ubuntu packages')));
 
 
-$container = $oPage->addItem(new EaseTWBContainer);
+$container = $oPage->addItem(new \Ease\TWB\Container);
 
 
-$packTabs = new EaseTWBTabs('PackTabs');
+$packTabs = new \Ease\TWB\Tabs('PackTabs');
 $bootStrapTab = $packTabs->addTab('Twitter Bootstrap');
 
 
-$bootStrapTab->addItem(new EaseHtmlDivTag(null, new VSDownloadButton($tbPackage), array('style' => 'float:left;')));
-$bootStrapTab->addItem(new EaseHtmlDivTag(null, new EaseHtmlATag('http://twitter.github.com/bootstrap/', '<img style="height: 32px;" src="img/twitter-bootstrap.png">&nbsp; Official project homepage', array('class' => 'btn btn-info')), array('style' => 'float:right;')));
+$bootStrapTab->addItem(new \Ease\Html\Div( new VSDownloadButton($tbPackage), array('style' => 'float:left;')));
+$bootStrapTab->addItem(new \Ease\Html\Div( new \Ease\Html\ATag('http://twitter.github.com/bootstrap/', '<img style="height: 32px;" src="img/twitter-bootstrap.png">&nbsp; Official project homepage', array('class' => 'btn btn-info')), array('style' => 'float:right;')));
 $bootStrapTab->addItem('is a free collection of tools for creating websites and web applications. It contains HTML and CSS-based design templates for typography, forms, buttons, charts, navigation and other interface components, as well as optional JavaScript extensions.');
 
 $fuelUXTab = $packTabs->addTab('Fuel UX');
-$fuelUXTab->addItem(new EaseHtmlDivTag(null, new VSDownloadButton($fuelUXPackage), array('style' => 'float:left;')));
-$fuelUXTab->addItem(new EaseHtmlDivTag(null, new EaseHtmlATag('http://getfuelux.com/', '<img style="height: 32px;" src="img/fuelux.png">', array('class' => 'btn btn-info', 'style' => 'margin-left: 5px;')), array('style' => 'float:right;')));
+$fuelUXTab->addItem(new \Ease\Html\Div( new VSDownloadButton($fuelUXPackage), array('style' => 'float:left;')));
+$fuelUXTab->addItem(new \Ease\Html\Div( new \Ease\Html\ATag('http://getfuelux.com/', '<img style="height: 32px;" src="img/fuelux.png">', array('class' => 'btn btn-info', 'style' => 'margin-left: 5px;')), array('style' => 'float:right;')));
 $fuelUXTab->addItem('extends Twitter Bootstrap with additional lightweight JavaScript controls. Other benefits include easy installation into web projects, integrated scripts for customizing Bootstrap and Fuel UX, simple updates, and solid optimization for deployment. All functionality is covered by live documentation and unit tests.');
 
 
 $bsSwitchTab = $packTabs->addTab('Bootstrap Switch');
-$bsSwitchTab->addItem(new EaseHtmlDivTag(null, new VSDownloadButton($tbSwPackage), array('style' => 'float:left;')));
-$bsSwitchTab->addItem(new EaseHtmlDivTag(null, new EaseHtmlATag('http://www.bootstrap-switch.org/', 'Project Homepage', array('class' => 'btn btn-info')), array('style' => 'float:right;')));
+$bsSwitchTab->addItem(new \Ease\Html\Div( new VSDownloadButton($tbSwPackage), array('style' => 'float:left;')));
+$bsSwitchTab->addItem(new \Ease\Html\Div( new \Ease\Html\ATag('http://www.bootstrap-switch.org/', 'Project Homepage', array('class' => 'btn btn-info')), array('style' => 'float:right;')));
 $bsSwitchTab->addItem('extends Twitter Bootstrap with switch widget.');
 
 $jqueryTab = $packTabs->addTab('jQuery');
-$jqueryTab->addItem(new EaseHtmlDivTag(null, new VSDownloadButton($jqueryPackage), array('style' => 'float:left;')));
-$jqueryTab->addItem(new EaseHtmlDivTag(null, new EaseHtmlATag('http://jquery.com/', '<img style="height: 32px;" src="img/logo-jquery.png">', array('class' => 'btn btn-info', 'style' => 'margin-left: 5px;')), array('style' => 'float:right;')));
+$jqueryTab->addItem(new \Ease\Html\Div( new VSDownloadButton($jqueryPackage), array('style' => 'float:left;')));
+$jqueryTab->addItem(new \Ease\Html\Div( new \Ease\Html\ATag('http://jquery.com/', '<img style="height: 32px;" src="img/logo-jquery.png">', array('class' => 'btn btn-info', 'style' => 'margin-left: 5px;')), array('style' => 'float:right;')));
 $jqueryTab->addItem('jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.');
 
 
@@ -84,12 +84,12 @@ $container->addItem($packTabs);
 
 
 
-$container2 = $oPage->addItem(new EaseTWBContainer('<p><br></p>'));
+$container2 = $oPage->addItem(new \Ease\TWB\Container('<p><br></p>'));
 
 
-$tabs = new EaseTWBTabs('infotabs');
+$tabs = new \Ease\TWB\Tabs('infotabs');
 
-$steps = new EaseHtmlUlTag(null, array('class' => 'list-group'));
+$steps = new \Ease\Html\UlTag(null, array('class' => 'list-group'));
 
 $steps->addItemSmart('wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key | sudo apt-key add -', array('class' => 'list-group-item'));
 $steps->addItemSmart('echo deb http://v.s.cz/ stable main | sudo tee /etc/apt/sources.list.d/vitexsoftware.list ', array('class' => 'list-group-item'));
@@ -141,10 +141,10 @@ $container2->addItem('<a href="http://debian.org/"><img style="width: 60px;" tit
 $container2->addItem('<a href="http://ubuntu.com/"><img style="width: 60px;" title="Ubuntu Linux" src="img/ubuntulogo.png"></a>');
 
 
-$container2->addItem(new EaseHtmlATag('http://bootsnipp.com/', '<img style="height: 32px;" src="img/bootsnip.png">&nbsp; Design elements and code snippets', array('class' => 'btn btn-info')));
+$container2->addItem(new \Ease\Html\ATag('http://bootsnipp.com/', '<img style="height: 32px;" src="img/bootsnip.png">&nbsp; Design elements and code snippets', array('class' => 'btn btn-info')));
 
 
-$oPage->addItem(new VSPageBottom());
+$oPage->addItem(new \VSCZ\ui\PageBottom());
 
 
 $oPage->draw();

@@ -18,11 +18,11 @@ if ($OUser->GetUserID()) {
     $OUser->AddStatusMessages($MessagesBackup);
 }
 
-$oPage->addItem(new VSPageTop(_('Odhlášení')));
+$oPage->addItem(new \VSCZ\ui\PageTop(_('Odhlášení')));
 
-$oPage->heroUnit->addItem(new EaseHtmlDivTag(null, _('Děkujeme za vaši přízeň a těšíme se na další návštěvu')));
+$oPage->heroUnit->addItem(new \Ease\Html\Div( _('Děkujeme za vaši přízeň a těšíme se na další návštěvu')));
 
-$oPage->addItem(new VSPageBottom());
+$oPage->addItem(new \VSCZ\ui\PageBottom());
 
 $oPage->draw();
 ?>

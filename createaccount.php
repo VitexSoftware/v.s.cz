@@ -105,15 +105,15 @@ if (isset($_POST) && count($_POST)) {
 
             $Email = $oPage->addItem(new EaseMail($NewOUser->getDataValue('email'), 'Potvrzení registrace'));
             $Email->SetMailHeaders(array('From' => EMAIL_FROM));
-            $Email->addItem(new EaseHtmlDivTag(null, "Právě jste byl/a zaregistrován/a do Apl   ikace LB s těmito přihlašovacími údaji:\n"));
-            $Email->addItem(new EaseHtmlDivTag(null, ' Login: ' . $NewOUser->GetUserLogin() . "\n"));
-            $Email->addItem(new EaseHtmlDivTag(null, ' Heslo: ' . $_POST['password'] . "\n"));
+            $Email->addItem(new \Ease\Html\Div( "Právě jste byl/a zaregistrován/a do Apl   ikace LB s těmito přihlašovacími údaji:\n"));
+            $Email->addItem(new \Ease\Html\Div( ' Login: ' . $NewOUser->GetUserLogin() . "\n"));
+            $Email->addItem(new \Ease\Html\Div( ' Heslo: ' . $_POST['password'] . "\n"));
             $Email->Send();
 
             $Email = $oPage->addItem(new EaseShopMail(SEND_ORDERS_TO, 'Nová registrace do LBu: ' . $NewOUser->getUserLogin()));
             $Email->SetMailHeaders(array('From' => EMAIL_FROM));
-            $Email->addItem(new EaseHtmlDivTag(null, "Do id právě zaregistrován nový uživatel:\n"));
-            $Email->addItem(new EaseHtmlDivTag('login', ' Login: ' . $NewOUser->getUserLogin() . "\n"));
+            $Email->addItem(new \Ease\Html\Div( "Do id právě zaregistrován nový uživatel:\n"));
+            $Email->addItem(new \Ease\Html\DivTag('login', ' Login: ' . $NewOUser->getUserLogin() . "\n"));
             $Email->addItem($NewOUser->CustomerAddress);
             $Email->Send();
 
@@ -123,7 +123,7 @@ if (isset($_POST) && count($_POST)) {
         } else {
             $OUser->addStatusMessage(_('Zápis do databáze se nezdařil!'), 'error');
             $Email = $oPage->addItem(new EaseMail(constant('SEND_ORDERS_TO'), 'Registrace uzivatel se nezdařila'));
-            $Email->addItem(new EaseHtmlDivTag('Fegistrace', $oPage->printPre($CustomerData)));
+            $Email->addItem(new \Ease\Html\DivTag('Fegistrace', $oPage->printPre($CustomerData)));
             $Email->Send();
         }
     }
@@ -173,33 +173,33 @@ input.ui-button { width: 100%; }
 ');
 
 
-$oPage->addItem(new VSPageTop(_('Registrace')));
+$oPage->addItem(new \VSCZ\ui\PageTop(_('Registrace')));
 $oPage->AddPageColumns();
 
-$RegForm = $oPage->column2->addItem(new EaseHtmlForm('create_account', 'createaccount.php'));
+$RegForm = $oPage->column2->addItem(new \Ease\Html\Form('create_account', 'createaccount.php'));
 $RegForm->SetTagID('LoginForm');
 
-$Account = new EaseHtmlH3Tag(_('Účet'));
+$Account = new \Ease\Html\H3Tag(_('Účet'));
 $Account->addItem(new EaseLabeledTextInput('login', null, _('přihlašovací jméno') . ' *'));
 $Account->addItem(new EaseLabeledPasswordStrongInput('password', null, _('heslo') . ' *'));
 $Account->addItem(new EaseLabeledPasswordControlInput('confirmation', null, _('potvrzení hesla') . ' *', array('id' => 'confirmation')));
 
-$Personal = new EaseHtmlH3Tag(_('Osobní'));
+$Personal = new \Ease\Html\H3Tag(_('Osobní'));
 $Personal->addItem(new EaseLabeledTextInput('firstname', null, _('jméno') . ' *'));
 $Personal->addItem(new EaseLabeledTextInput('lastname', null, _('příjmení') . ' *'));
 $Personal->addItem(new EaseLabeledTextInput('email_address', null, _('emailová adresa') . ' *' . ' (pouze malými písmeny)'));
 
-$RegForm->addItem(new EaseHtmlDivTag('Account', $Account));
-$RegForm->addItem(new EaseHtmlDivTag('Personal', $Personal));
-$RegForm->addItem(new EaseHtmlDivTag('Submit', new EaseJQuerySubmitButton('Register', _('Registrovat'), _('dokončit registraci'), array())));
+$RegForm->addItem(new \Ease\Html\DivTag('Account', $Account));
+$RegForm->addItem(new \Ease\Html\DivTag('Personal', $Personal));
+$RegForm->addItem(new \Ease\Html\DivTag('Submit', new EaseJQuerySubmitButton('Register', _('Registrovat'), _('dokončit registraci'), array())));
 
-$oPage->column1->addItem(new EaseHtmlDivTag('WelcomeHint', _('Registrací získáš možnost spravovat své lokality a psát o nich.')));
+$oPage->column1->addItem(new \Ease\Html\DivTag('WelcomeHint', _('Registrací získáš možnost spravovat své lokality a psát o nich.')));
 
 if (isset($_POST)) {
     $RegForm->FillUp($_POST);
 }
 
-$oPage->addItem(new VSPageBottom());
+$oPage->addItem(new \VSCZ\ui\PageBottom());
 $oPage->draw();
 ?>
 
