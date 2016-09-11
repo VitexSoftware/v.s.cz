@@ -6,7 +6,6 @@ namespace VSCZ\ui;
  * Hlavní menu
  *
  * @package    VitexSoftware
- * @subpackage WebUI
  * @author     Vitex <vitex@hippy.cz>
  */
 class MainMenu extends \Ease\TWB\Navbar
@@ -28,17 +27,17 @@ class MainMenu extends \Ease\TWB\Navbar
             '<img style="height: 19px;" src="img/deb-package.png"> '._('Repo')));
 
         $this->addDropDownMenu(
-            _('Projekty'),
+            _('Projects'),
             array(
             'http://h.v.s.cz/' => _('Hosting'),
             'monitoring.php' => _('Monitoring'),
             'ease.php' => _('PHP Ease Framework'),
-            'moloch.php' => _('Fakturační systém Moloch'),
+            'https://github.com/Spoje-NET/FlexiPeeHP' => _('FlexiPeeHP PHP Library'),
+            'https://github.com/Spoje-NET/Flexplorer' => _('Flexplorer REST API Developer tool'),
+            'moloch.php' => _('Moloch the invoice system'),
 //            'http://privator.eu/' => _('Privator.eu'),
             'tbpackage.php' => _('Twitter Bootstrap pro Debian'),
             'imap2mx.php' => _('Imap2MX webmail plugins')//,
-//                'easeshop.php' => _('elektronický obchod Ease Shop'),
-//                'moloch.php' =>  _('Fakturační systém Moloch')
             )
         );
 

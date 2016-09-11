@@ -27,7 +27,6 @@ $oPage->column2->addItem(new \Ease\Html\H1Tag(_('')));
 $NetworkSkills = $oPage->column2->addItem(new \Ease\Html\UlTag());
 $NetworkSkills->addItemSmart(new \Ease\Html\ATag('mailto:info@vitexsoftware.cz', 'info@vitexsoftware.cz'));
 $NetworkSkills->addItemSmart(new \Ease\Html\ATag('callto:+420739778202', 'T-Mobile: (+420) 739  778 202'));
-$NetworkSkills->addItemSmart(new \Ease\Html\ATag('callto:+420378774054', 'VoIP: (+420) 378 774054'));
 
 $oPage->column1->addItem(new \Ease\Html\H1Tag(_('Vitex Software')));
 $DevelSkills = $oPage->column1->addItem(new \Ease\Html\UlTag());
@@ -47,4 +46,3 @@ $oPage->addItem(new \VSCZ\ui\PageBottom());
 
 
 $oPage->draw();
-?>

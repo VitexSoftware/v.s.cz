@@ -10,12 +10,10 @@
  */
 require_once 'includes/VSInit.php';
 
-
-
 $oPage->addItem(new \VSCZ\ui\PageTop(_('Imap2MX for Roundcube and Squirrelmail')));
 $oPage->AddPageColumns();
 
-$prehled = $oPage->column2->addItem(new \Ease\Html\DivTag());
+$prehled = $oPage->column2->addItem(new \Ease\Html\Div());
 $prehled->addItem('Plugin <strong>Imap2mx</strong> allow IMAP login to user\'s email address MX ip. This is special configuration for multiplete dedicated (ISPConfig) mailservers.');
 
 

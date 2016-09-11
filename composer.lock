@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2f87557410b4437db970284c45b09f96",
+    "hash": "ddea904efd9d63c3b4875cb784013e0d",
     "content-hash": "11938b704ed3ebaa07844a0f67e193a6",
     "packages": [
         {
@@ -95,7 +95,7 @@
                 {
                     "name": "Chuck Hagenbuch",
                     "email": "chuck@horde.org",
-                    "role": "lead"
+                    "role": "Lead"
                 },
                 {
                     "name": "Richard Heyes",
@@ -259,16 +259,16 @@
         },
         {
             "name": "vitexsoftware/ease-framework",
-            "version": "1.1.2",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/EaseFramework.git",
-                "reference": "dba9483a43ff2c4535254a5ad37f01423ce9018c"
+                "reference": "b8615b66bb8cdd40e0bef9013c635b2404426529"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/EaseFramework/zipball/dba9483a43ff2c4535254a5ad37f01423ce9018c",
-                "reference": "dba9483a43ff2c4535254a5ad37f01423ce9018c",
+                "url": "https://api.github.com/repos/VitexSoftware/EaseFramework/zipball/b8615b66bb8cdd40e0bef9013c635b2404426529",
+                "reference": "b8615b66bb8cdd40e0bef9013c635b2404426529",
                 "shasum": ""
             },
             "require": {
@@ -309,7 +309,7 @@
             ],
             "description": "An PHP Framework for Ease of writing Applications",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2016-07-30 20:54:11"
+            "time": "2016-09-04 21:50:03"
         }
     ],
     "packages-dev": [],
