@@ -1,5 +1,7 @@
 <?php
 
+namespace VSCZ;
+
 /**
  * VitexSoftware - titulní strana
  *
@@ -15,20 +17,26 @@
 
 require_once 'includes/VSInit.php';
 
-$oPage->addItem(new \VSCZ\ui\PageTop(_('Vitex Software')));
+$oPage->addItem(new ui\PageTop(_('Vitex Software')));
 $oPage->AddPageColumns();
 
-$oPage->heroUnit = $oPage->container->addItem(new \Ease\Html\Div(
-    null, array('class' => 'jumbotron', 'id' => 'HeroUnit')));
 
+$mainPageMenu = new ui\MainPageMenu();
+$mainPageMenu->addMenuItem('img/ease-framework-logo.png',
+    _('PHP EaseFramework'), 'ease.php',
+    _('Framework pro snadné psaní PHP aplikací'));
+$mainPageMenu->addMenuItem('img/icinga_editor-logo.png', _('Icinga Editor'),
+    '/icinga-editor', _('Editor Konfigurace monitoringu'));
+$mainPageMenu->addMenuItem('img/flexipeehp-logo.png', _('FlexiPeeHP'),
+    _('https://github.com/Spoje-NET/FlexiPeeHP'),
+    _('PHP Knihovna pro komunikaci s FlexiBee'));
+$mainPageMenu->addMenuItem('img/flexplorer-logo.png', _('Flexplorer'),
+    '/flexplorer/', _('Vývojářský nástroj pro FlexiBee REST API'));
+$mainPageMenu->addMenuItem('img/flexihubee-logo.png', _('FlexiHUBee'),
+    'https://www.vitexsoftware.cz/redmine/projects/flexihubee',
+    _('Webová aplikace pro vzájemnou synchronizaci FlexiBee serverů (zatím neveřejné)'));
 
-$oPage->heroUnit->addItem('Linux Guru ');
-$oPage->heroUnit->addItem('<img src="img/debian-logo.png">');
-$oPage->heroUnit->addItem('<img src="img/redhat-logo.png">');
-$oPage->heroUnit->addItem('<img src="img/fedora-logo.png">');
-$oPage->heroUnit->addItem('<img src="img/centos-logo.png">');
-$oPage->heroUnit->addItem('<img src="img/ubuntu-logo.png">');
-$oPage->heroUnit->addItem(' řeší vaše problémy');
+$oPage->container->addItem($mainPageMenu);
 
 $oPage->column1->addItem(new \Ease\Html\H2Tag(_('Správa serverů')));
 

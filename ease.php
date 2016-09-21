@@ -1,5 +1,4 @@
 <?php
-
 /**
  * VitexSoftware - titulní strana
  *
@@ -10,7 +9,8 @@
  */
 require_once 'includes/VSInit.php';
 
-$oPage->addItem(new \VSCZ\ui\PageTop(_('Ease Framework'))); $oPage->AddItem('<a href="https://github.com/Vitexus/EaseFramework" class="ribbon bg-teal">Forkni na GitHubu</a>');
+$oPage->addItem(new \VSCZ\ui\PageTop(_('Ease Framework')));
+$oPage->AddItem('<a href="https://github.com/Vitexus/EaseFramework" class="ribbon bg-teal">Forkni na GitHubu</a>');
 
 $oPage->AddPageColumns();
 
@@ -31,33 +31,37 @@ $oPage->column3->addItem(new \Ease\Html\H3Tag(_('Ke stažení')));
 
 $oPage->column3->addItem('<div style="background-color: #CAAAAA; margin: 2px; padding: 5px;">Zdrojové kody EaseFrameworku<br>');
 
-$dwDir = "/var/www/html/download/";
-$d = dir($dwDir);
-$downloads = array();
-while (false !== ($entry = $d->read())) {
+$dwDir     = "/var/www/html/download/";
+$d         = dir($dwDir);
+$downloads = [];
+while (false !== ($entry     = $d->read())) {
     if ($entry[0] == '.') {
         continue;
     }
-    $downloads[$entry] = VSWebPage::_format_bytes(filesize($dwDir . $entry));
+    $downloads[$entry] = VSWebPage::_format_bytes(filesize($dwDir.$entry));
 }
 $d->close();
 ksort($downloads);
-$package = array();
-foreach ($downloads as $file=>$size) {
+$package = [];
+foreach ($downloads as $file => $size) {
     if (strstr($file, 'ease-framework_')) {
-        $package = array($file=>$size);
+        $package = [$file => $size];
     }
 }
 
 //echo '<pre>'; print_r($Downloads); echo '</pre>';
 
-$oPage->column3->addItem(new \Ease\Html\ATag('download/Ease.tar.bz2', 'Ease.tar.bz2 '.$downloads['Ease.tar.bz2'] ,array('class'=>'btn btn-success')));
-$oPage->column3->addItem(new \Ease\Html\ATag('download/'.key($package),'<img style="width: 42px;" src="img/deb-package.png">&nbsp;' .  key($package) . ' '.current($package) ,array('class'=>'btn btn-success')));
+$oPage->column3->addItem(new \Ease\Html\ATag('download/Ease.tar.bz2',
+    'Ease.tar.bz2 '.$downloads['Ease.tar.bz2'], ['class' => 'btn btn-success']));
+$oPage->column3->addItem(new \Ease\Html\ATag('download/'.key($package),
+    '<img style="width: 42px;" src="img/deb-package.png">&nbsp;'.key($package).' '.current($package),
+    ['class' => 'btn btn-success']));
 
 $oPage->column3->addItem('</div>');
 
 $oPage->column3->addItem('<div style="background-color: #A0A7A0; margin: 2px; padding: 5px;">Ukázková aplikace <a href="http://l.q.cz/">LinkQuick</a><br> ');
-$oPage->column3->addItem(new \Ease\Html\ATag('download/LinkQuick.tar.bz2', 'bz2 '.$downloads['LinkQuick.tar.bz2'],array('class'=>'btn btn-success')));
+$oPage->column3->addItem(new \Ease\Html\ATag('download/LinkQuick.tar.bz2',
+    'bz2 '.$downloads['LinkQuick.tar.bz2'], ['class' => 'btn btn-success']));
 $oPage->column3->addItem('</div>');
 
 $CodFS = $oPage->column2->addItem(new \Ease\Html\FieldSet(_('Ukázka kódu')));
@@ -72,10 +76,14 @@ $oPage->column2->addItem(new \Ease\Html\FieldSet(_('Výsledek: jQueryUI tlačít
 
 $oPage->column2->addItem(new EaseJQueryLinkButton('http://l.q.cz/', 'zkracovač'));
 
-$oPage->column1->addItem(new \Ease\Html\ATag('EaseDoc', 'Dokumentace Apigen',array('class'=>'btn btn-info')));
-$oPage->column1->addItem(new \Ease\Html\ATag('https://github.com/Vitexus/EaseFramework', 'GitHub',array('class'=>'btn btn-info')));
-$oPage->column1->addItem(new \Ease\Html\ATag('/websvn/rss.php?repname=Ease+Framework', 'RSS kanál',array('class'=>'btn btn-info')));
-$oPage->column1->addItem(new \Ease\Html\ATag('http://redmine.murka.cz/projects/ease-framework', 'Redmine',array('class'=>'btn btn-info')));
+$oPage->column1->addItem(new \Ease\Html\ATag('EaseDoc', 'Dokumentace Apigen',
+    ['class' => 'btn btn-info']));
+$oPage->column1->addItem(new \Ease\Html\ATag('https://github.com/Vitexus/EaseFramework',
+    'GitHub', ['class' => 'btn btn-info']));
+$oPage->column1->addItem(new \Ease\Html\ATag('/websvn/rss.php?repname=Ease+Framework',
+    'RSS kanál', ['class' => 'btn btn-info']));
+$oPage->column1->addItem(new \Ease\Html\ATag('http://redmine.murka.cz/projects/ease-framework',
+    'Redmine', ['class' => 'btn btn-info']));
 
 $oPage->column3->addItem('<hr><h4>Instalace zdroje</h4>');
 $oPage->column3->addItem('<a href="http://debian.org/"><img style="width: 60px;" title="Debian Linux" src="img/debian.png"></a>');

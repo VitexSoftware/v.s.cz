@@ -28,7 +28,7 @@ class MainMenu extends \Ease\TWB\Navbar
 
         $this->addDropDownMenu(
             _('Projects'),
-            array(
+            [
             'http://h.v.s.cz/' => _('Hosting'),
             'monitoring.php' => _('Monitoring'),
             'ease.php' => _('PHP Ease Framework'),
@@ -38,7 +38,7 @@ class MainMenu extends \Ease\TWB\Navbar
 //            'http://privator.eu/' => _('Privator.eu'),
             'tbpackage.php' => _('Twitter Bootstrap pro Debian'),
             'imap2mx.php' => _('Imap2MX webmail plugins')//,
-            )
+            ]
         );
 
 
@@ -47,5 +47,4 @@ class MainMenu extends \Ease\TWB\Navbar
         $this->addMenuItem(new \Ease\Html\ATag('cenik.php', _('Ceník')));
         $this->addMenuItem(new \Ease\Html\ATag('kontakt.php', _('Kontakt')));
     }
-
 }

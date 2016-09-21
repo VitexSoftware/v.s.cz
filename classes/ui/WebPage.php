@@ -41,15 +41,15 @@ class WebPage extends \Ease\TWB\WebPage
     function AddPageColumns()
     {
         $this->container = $this->addItem(new \Ease\Html\Div(null,
-            array('class' => 'container')));
+            ['class' => 'container']));
         $row             = $this->container->addItem(new \Ease\Html\Div(
-            null, array('class' => 'row')));
+            null, ['class' => 'row']));
         $this->column1   = $row->addItem(new \Ease\Html\Div(null,
-            array('class' => 'col-md-4')));
+            ['class' => 'col-md-4']));
         $this->column2   = $row->addItem(new \Ease\Html\Div(null,
-            array('class' => 'col-md-4')));
+            ['class' => 'col-md-4']));
         $this->column3   = $row->addItem(new \Ease\Html\Div(null,
-            array('class' => 'col-md-4')));
+            ['class' => 'col-md-4']));
     }
 
     static function _format_bytes($a_bytes)
@@ -74,5 +74,4 @@ class WebPage extends \Ease\TWB\WebPage
             return round($a_bytes / 1208925819614629174706176, 2).' YiB';
         }
     }
-
 }

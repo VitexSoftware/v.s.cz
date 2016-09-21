@@ -1,5 +1,4 @@
 <?php
-
 /**
  * VitexSoftware - titulní strana
  *
@@ -10,33 +9,33 @@
  */
 require_once 'includes/VSInit.php';
 
-$dwDir = "/var/www/download/";
-$d = dir($dwDir);
-$downloads = array();
-while (false !== ($entry = $d->read())) {
+$dwDir     = "/var/www/download/";
+$d         = dir($dwDir);
+$downloads = [];
+while (false !== ($entry     = $d->read())) {
     if ($entry[0] == '.') {
         continue;
     }
-    $downloads[$entry] = VSWebPage::_format_bytes(filesize($dwDir . $entry));
+    $downloads[$entry] = VSWebPage::_format_bytes(filesize($dwDir.$entry));
 }
 $d->close();
 ksort($downloads);
-$tbPackage = array();
-$fuelUXPackage = array();
-$tbSwPackage = array();
-$jqueryPackage = array();
+$tbPackage     = [];
+$fuelUXPackage = [];
+$tbSwPackage   = [];
+$jqueryPackage = [];
 foreach ($downloads as $file => $size) {
     if (strstr($file, 'libjs-twitter-bootstrap_')) {
-        $tbPackage = array($file => $size);
+        $tbPackage = [$file => $size];
     }
     if (strstr($file, 'libjs-fuelux_')) {
-        $fuelUXPackage = array($file => $size);
+        $fuelUXPackage = [$file => $size];
     }
     if (strstr($file, 'libjs-twitter-bootstrap-switch_')) {
-        $tbSwPackage = array($file => $size);
+        $tbSwPackage = [$file => $size];
     }
     if (strstr($file, 'libjs-jquery_')) {
-        $jqueryPackage = array($file => $size);
+        $jqueryPackage = [$file => $size];
     }
 }
 
@@ -52,28 +51,42 @@ $oPage->addItem(new \VSCZ\ui\PageTop(_('unofficial Twitter Bootstrap Debian/Ubun
 $container = $oPage->addItem(new \Ease\TWB\Container);
 
 
-$packTabs = new \Ease\TWB\Tabs('PackTabs');
+$packTabs     = new \Ease\TWB\Tabs('PackTabs');
 $bootStrapTab = $packTabs->addTab('Twitter Bootstrap');
 
 
-$bootStrapTab->addItem(new \Ease\Html\Div( new VSDownloadButton($tbPackage), array('style' => 'float:left;')));
-$bootStrapTab->addItem(new \Ease\Html\Div( new \Ease\Html\ATag('http://twitter.github.com/bootstrap/', '<img style="height: 32px;" src="img/twitter-bootstrap.png">&nbsp; Official project homepage', array('class' => 'btn btn-info')), array('style' => 'float:right;')));
+$bootStrapTab->addItem(new \Ease\Html\Div(new VSDownloadButton($tbPackage),
+    ['style' => 'float:left;']));
+$bootStrapTab->addItem(new \Ease\Html\Div(new \Ease\Html\ATag('http://twitter.github.com/bootstrap/',
+    '<img style="height: 32px;" src="img/twitter-bootstrap.png">&nbsp; Official project homepage',
+    ['class' => 'btn btn-info']), ['style' => 'float:right;']));
 $bootStrapTab->addItem('is a free collection of tools for creating websites and web applications. It contains HTML and CSS-based design templates for typography, forms, buttons, charts, navigation and other interface components, as well as optional JavaScript extensions.');
 
 $fuelUXTab = $packTabs->addTab('Fuel UX');
-$fuelUXTab->addItem(new \Ease\Html\Div( new VSDownloadButton($fuelUXPackage), array('style' => 'float:left;')));
-$fuelUXTab->addItem(new \Ease\Html\Div( new \Ease\Html\ATag('http://getfuelux.com/', '<img style="height: 32px;" src="img/fuelux.png">', array('class' => 'btn btn-info', 'style' => 'margin-left: 5px;')), array('style' => 'float:right;')));
+$fuelUXTab->addItem(new \Ease\Html\Div(new VSDownloadButton($fuelUXPackage),
+    ['style' => 'float:left;']));
+$fuelUXTab->addItem(new \Ease\Html\Div(new \Ease\Html\ATag('http://getfuelux.com/',
+    '<img style="height: 32px;" src="img/fuelux.png">',
+    ['class' => 'btn btn-info', 'style' => 'margin-left: 5px;']),
+    ['style' => 'float:right;']));
 $fuelUXTab->addItem('extends Twitter Bootstrap with additional lightweight JavaScript controls. Other benefits include easy installation into web projects, integrated scripts for customizing Bootstrap and Fuel UX, simple updates, and solid optimization for deployment. All functionality is covered by live documentation and unit tests.');
 
 
 $bsSwitchTab = $packTabs->addTab('Bootstrap Switch');
-$bsSwitchTab->addItem(new \Ease\Html\Div( new VSDownloadButton($tbSwPackage), array('style' => 'float:left;')));
-$bsSwitchTab->addItem(new \Ease\Html\Div( new \Ease\Html\ATag('http://www.bootstrap-switch.org/', 'Project Homepage', array('class' => 'btn btn-info')), array('style' => 'float:right;')));
+$bsSwitchTab->addItem(new \Ease\Html\Div(new VSDownloadButton($tbSwPackage),
+    ['style' => 'float:left;']));
+$bsSwitchTab->addItem(new \Ease\Html\Div(new \Ease\Html\ATag('http://www.bootstrap-switch.org/',
+    'Project Homepage', ['class' => 'btn btn-info']),
+    ['style' => 'float:right;']));
 $bsSwitchTab->addItem('extends Twitter Bootstrap with switch widget.');
 
 $jqueryTab = $packTabs->addTab('jQuery');
-$jqueryTab->addItem(new \Ease\Html\Div( new VSDownloadButton($jqueryPackage), array('style' => 'float:left;')));
-$jqueryTab->addItem(new \Ease\Html\Div( new \Ease\Html\ATag('http://jquery.com/', '<img style="height: 32px;" src="img/logo-jquery.png">', array('class' => 'btn btn-info', 'style' => 'margin-left: 5px;')), array('style' => 'float:right;')));
+$jqueryTab->addItem(new \Ease\Html\Div(new VSDownloadButton($jqueryPackage),
+    ['style' => 'float:left;']));
+$jqueryTab->addItem(new \Ease\Html\Div(new \Ease\Html\ATag('http://jquery.com/',
+    '<img style="height: 32px;" src="img/logo-jquery.png">',
+    ['class' => 'btn btn-info', 'style' => 'margin-left: 5px;']),
+    ['style' => 'float:right;']));
 $jqueryTab->addItem('jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.');
 
 
@@ -89,19 +102,25 @@ $container2 = $oPage->addItem(new \Ease\TWB\Container('<p><br></p>'));
 
 $tabs = new \Ease\TWB\Tabs('infotabs');
 
-$steps = new \Ease\Html\UlTag(null, array('class' => 'list-group'));
+$steps = new \Ease\Html\UlTag(null, ['class' => 'list-group']);
 
-$steps->addItemSmart('wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key | sudo apt-key add -', array('class' => 'list-group-item'));
-$steps->addItemSmart('echo deb http://v.s.cz/ stable main | sudo tee /etc/apt/sources.list.d/vitexsoftware.list ', array('class' => 'list-group-item'));
-$steps->addItemSmart('sudo aptitude update', array('class' => 'list-group-item'));
+$steps->addItemSmart('wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key | sudo apt-key add -',
+    ['class' => 'list-group-item']);
+$steps->addItemSmart('echo deb http://v.s.cz/ stable main | sudo tee /etc/apt/sources.list.d/vitexsoftware.list ',
+    ['class' => 'list-group-item']);
+$steps->addItemSmart('sudo aptitude update', ['class' => 'list-group-item']);
 
-$steps->addItemSmart('aptitude install libjs-twitter-bootstrap', array('class' => 'list-group-item'));
-$steps->addItemSmart('aptitude install libjs-fuelux', array('class' => 'list-group-item'));
-$steps->addItemSmart('aptitude install libjs-twitter-bootstrap-switch', array('class' => 'list-group-item'));
+$steps->addItemSmart('aptitude install libjs-twitter-bootstrap',
+    ['class' => 'list-group-item']);
+$steps->addItemSmart('aptitude install libjs-fuelux',
+    ['class' => 'list-group-item']);
+$steps->addItemSmart('aptitude install libjs-twitter-bootstrap-switch',
+    ['class' => 'list-group-item']);
 
 
 $tabs->addTab(_('Debian installation'), $steps);
-$tabs->addTab(_('Usage'), ('
+$tabs->addTab(_('Usage'),
+    ('
 
 In order to make use of twitter bootstrap in your html, include the following lines in
 your html header:
@@ -141,7 +160,9 @@ $container2->addItem('<a href="http://debian.org/"><img style="width: 60px;" tit
 $container2->addItem('<a href="http://ubuntu.com/"><img style="width: 60px;" title="Ubuntu Linux" src="img/ubuntulogo.png"></a>');
 
 
-$container2->addItem(new \Ease\Html\ATag('http://bootsnipp.com/', '<img style="height: 32px;" src="img/bootsnip.png">&nbsp; Design elements and code snippets', array('class' => 'btn btn-info')));
+$container2->addItem(new \Ease\Html\ATag('http://bootsnipp.com/',
+    '<img style="height: 32px;" src="img/bootsnip.png">&nbsp; Design elements and code snippets',
+    ['class' => 'btn btn-info']));
 
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());

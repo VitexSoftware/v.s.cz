@@ -1,5 +1,4 @@
 <?php
-
 /**
  * VitexSoftware - monitoring
  *
@@ -41,7 +40,8 @@ $serviceInfo->addItem(new \Ease\Html\PTag(_('Služba jako taková je nabízena d
 $serviceInfo->addItem(new \Ease\Html\PTag(_('Nad deset monitorovaných služeb požadujeme deset korun za každý host na měsíc')));
 $serviceInfo->addItem(new \Ease\Html\PTag(_('Zpoplatněny jsou i notifikační SMS a to dvěmi korunami za jednu zprávu.')));
 
-$serviceInfo->addItem(new \Ease\TWB\LinkButton('/icinga-editor/createaccount.php', _('Registrace'), 'success'));
+$serviceInfo->addItem(new \Ease\TWB\LinkButton('/icinga-editor/createaccount.php',
+    _('Registrace'), 'success'));
 
 
 
@@ -49,10 +49,12 @@ $serviceInfo->addItem(new \Ease\TWB\LinkButton('/icinga-editor/createaccount.php
 $serviceLogin = $serviceRow->addColumn(4);
 $serviceTab->addItem($serviceRow);
 
-$loginFace = new \Ease\Html\DivTag('LoginFace');
-$loginForm = new loginbox('/icinga-editor/login.php', 'login', 'password');
-$loginFrame = $serviceLogin->addItem(new \Ease\Html\Div( '<span class="label label-danger">' . _('testovací provoz') . '</span>', array('class' => 'alert alert-warning')));
-$loginFrame->addItem(new \Ease\Html\DivTag('WelcomeHint', _('Zadejte, prosím, Vaše přihlašovací údaje:')));
+$loginFace  = new \Ease\Html\DivTag('LoginFace');
+$loginForm  = new loginbox('/icinga-editor/login.php', 'login', 'password');
+$loginFrame = $serviceLogin->addItem(new \Ease\Html\Div('<span class="label label-danger">'._('testovací provoz').'</span>',
+    ['class' => 'alert alert-warning']));
+$loginFrame->addItem(new \Ease\Html\DivTag('WelcomeHint',
+    _('Zadejte, prosím, Vaše přihlašovací údaje:')));
 $loginFrame->addItem($loginForm);
 
 
@@ -77,14 +79,17 @@ $ossTab->addItem('
 <iframe src="https://ghbtns.com/github-btn.html?user=Vitexus&repo=icinga_configurator&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>');
 $sources = new \Ease\Html\UlTag;
 
-$sources->addItemSmart(new \Ease\Html\ATag('https://www.vitexsoftware.cz/redmine/projects/monitoring/repository', 'Redmine'));
-$sources->addItemSmart(new \Ease\Html\ATag('https://github.com/Vitexus/icinga_configurator', 'GitHub'));
+$sources->addItemSmart(new \Ease\Html\ATag('https://www.vitexsoftware.cz/redmine/projects/monitoring/repository',
+    'Redmine'));
+$sources->addItemSmart(new \Ease\Html\ATag('https://github.com/Vitexus/icinga_configurator',
+    'GitHub'));
 
 $ossTab->addItem($sources);
 
 $pageRow = new \Ease\TWB\Row;
 $pageRow->addColumn(8, $monitoringTabs);
-$pageRow->addColumn(4, '<a class="twitter-timeline"  href="https://twitter.com/VSMonitoring" data-widget-id="255378607919210497">Tweets by @VSMonitoring</a>
+$pageRow->addColumn(4,
+    '<a class="twitter-timeline"  href="https://twitter.com/VSMonitoring" data-widget-id="255378607919210497">Tweets by @VSMonitoring</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 ');
 
@@ -92,11 +97,13 @@ $pageRow->addColumn(4, '<a class="twitter-timeline"  href="https://twitter.com/V
 $supportTab = $monitoringTabs->addTab(_('Podpora'));
 $supportTab->addItem(new \Ease\Html\H4Tag(_('Snadný start')));
 $supportTab->addItem(new \Ease\Html\PTag(_('Ke spuštění monitoringu nejsou třeba žádné zvláštní znalosti. I přes to jsme pro vás připravili tento stručný ale názorný návod')));
-$supportTab->addItem(new \Ease\TWB\LinkButton('https://www.vitexsoftware.cz/redmine/projects/monitoring/wiki/Tutori%C3%A1l', _('Začínáme'), 'info'));
+$supportTab->addItem(new \Ease\TWB\LinkButton('https://www.vitexsoftware.cz/redmine/projects/monitoring/wiki/Tutori%C3%A1l',
+    _('Začínáme'), 'info'));
 
 $supportTab->addItem(new \Ease\Html\H4Tag(_('Zajímá nás váš názor')));
 $supportTab->addItem(new \Ease\Html\PTag(_('Náš systém je neustále ve vývoji a tak se může stát že něco přestane fungovat. Proto oceníme pokud nám toto oznámíte. Stejně tak oceníme vaše přání a připomínky.')));
-$supportTab->addItem(new \Ease\TWB\LinkButton('http://r.v.s.cz/projects/monitoring', 'Redmine - Kniha přání a stížností', 'warning'));
+$supportTab->addItem(new \Ease\TWB\LinkButton('http://r.v.s.cz/projects/monitoring',
+    'Redmine - Kniha přání a stížností', 'warning'));
 
 
 $oPage->container->addItem($pageRow);

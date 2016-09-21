@@ -1,4 +1,5 @@
 <?php
+
 namespace VSCZ\ui;
 
 /**
@@ -20,7 +21,7 @@ class PageBottom extends \Ease\TWB\Container
         $rowFluid1 = new \Ease\TWB\Row;
         $colA      = $rowFluid1->addItem(new \Ease\TWB\Col(2));
         $listA1    = $colA->addItem(new \Ease\Html\UlTag(_('Zdrojáky'),
-            array('style' => 'list-style-type: none')));
+            ['style' => 'list-style-type: none']));
         $listA1->addItemSmart(new \Ease\Html\ATag('/redmine', 'Redmine'));
         $listA1->addItemSmart(new \Ease\Html\ATag('https://github.com/Vitexus',
             'GitHub'));
@@ -28,28 +29,31 @@ class PageBottom extends \Ease\TWB\Container
 
         $colB   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
         $listB1 = $colB->addItem(new \Ease\Html\UlTag(_('Aplikace'),
-            array('style' => 'list-style-type: none')));
+            ['style' => 'list-style-type: none']));
         $listB1->addItemSmart(new \Ease\Html\ATag('ease.php', 'Ease Framework'));
-        $listB1->addItemSmart(new \Ease\Html\ATag('monitoring.php', 'Icinga Editor'));
+        $listB1->addItemSmart(new \Ease\Html\ATag('monitoring.php',
+            'Icinga Editor'));
         $listB1->addItemSmart(new \Ease\Html\ATag('moloch.php', 'Moloch'));
 
         $colC   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
         $listC1 = $colC->addItem(new \Ease\Html\UlTag(_('Služby'),
-            array('style' => 'list-style-type: none')));
+            ['style' => 'list-style-type: none']));
         $listC1->addItemSmart(new \Ease\Html\ATag('monitoring.php', 'Monitoring'));
         $listC1->addItemSmart(new \Ease\Html\ATag('repos.php', _('Repozitář')));
-        $listC1->addItemSmart(new \Ease\Html\ATag('http://h.v.s.cz/', _('Hosting')));
+        $listC1->addItemSmart(new \Ease\Html\ATag('http://h.v.s.cz/',
+            _('Hosting')));
 
         $colD   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
         $listD1 = $colD->addItem(new \Ease\Html\UlTag(_('Dokumentace'),
-            array('style' => 'list-style-type: none')));
+            ['style' => 'list-style-type: none']));
         $listD1->addItemSmart(new \Ease\Html\ATag('/EaseDoc', 'Ease Framework'));
         $listD1->addItemSmart(new \Ease\Html\ATag('/IciEditDoc', 'Icinga Editor'));
 
         $colE   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
         $listE1 = $colE->addItem(new \Ease\Html\UlTag(_('Spřízněné'),
-            array('style' => 'list-style-type: none')));
-        $listE1->addItemSmart(new \Ease\Html\ATag('http://murka.cz', _('Murka.cz')));
+            ['style' => 'list-style-type: none']));
+        $listE1->addItemSmart(new \Ease\Html\ATag('http://murka.cz',
+            _('Murka.cz')));
         $listE1->addItemSmart(new \Ease\Html\ATag('http://spoje.net',
             _('Spoje.Net')));
         $listE1->addItemSmart(new \Ease\Html\ATag('http://rclick.cz',
@@ -57,8 +61,9 @@ class PageBottom extends \Ease\TWB\Container
 
         $colF   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
         $listF1 = $colF->addItem(new \Ease\Html\UlTag(_('Více'),
-            array('style' => 'list-style-type: none')));
-        $listF1->addItemSmart(new \Ease\Html\ATag('reference.php', _('Reference')));
+            ['style' => 'list-style-type: none']));
+        $listF1->addItemSmart(new \Ease\Html\ATag('reference.php',
+            _('Reference')));
         $listF1->addItemSmart(new \Ease\Html\ATag('cenik.php', _('Cenník prací')));
         $listF1->addItemSmart(new \Ease\Html\ATag('kontakt.php', _('Kontakty')));
 
@@ -76,8 +81,8 @@ class PageBottom extends \Ease\TWB\Container
         ';
 
         $rowFluid2->addItem(new \Ease\TWB\Col(12,
-            array(new \Ease\TWB\Col(8, $socialIcons), new \Ease\TWB\Col(4,
-                _('&copy; 2012-2015 Vitex Software')))));
+            [new \Ease\TWB\Col(8, $socialIcons), new \Ease\TWB\Col(4,
+                _('&copy; 2012-2015 Vitex Software'))]));
 
         $this->addItem($rowFluid2);
     }
@@ -93,6 +98,4 @@ class PageBottom extends \Ease\TWB\Container
 
         $this->includeCss('css/font-awesome.min.css');
     }
-
 }
-

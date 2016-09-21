@@ -1,5 +1,4 @@
 <?php
-
 /**
  * VitexSoftware - titulní strana
  *
@@ -30,25 +29,26 @@ $prehled = $infopanel->addItem(new \Ease\Html\UlTag());
 $prehled->addItemSmart('byl vyvíjen od roku 2000 jako intranetový IS společnosti <a href="http://arachne.cz/">Arachne Labs</a>. ');
 $prehled->addItemSmart('Současná verze je kompletní přepis do aktuálních technologií roku 2014. ');
 
-$infopanel->addItem(new \Ease\Html\ImgTag('img/moloch-main2015.png', 'Moloch', null, null, array('class' => 'img-responsive img-rounded')));
+$infopanel->addItem(new \Ease\Html\ImgTag('img/moloch-main2015.png', 'Moloch',
+    null, null, ['class' => 'img-responsive img-rounded']));
 
 //$oPage->column3->addItem('<div style="background-color: #CAAAAA; margin: 2px; padding: 5px;">Zdrojové kody EaseFrameworku<br>');
 
-$dwDir = "/var/www/download/";
-$d = dir($dwDir);
-$downloads = array();
-while (false !== ($entry = $d->read())) {
+$dwDir     = "/var/www/download/";
+$d         = dir($dwDir);
+$downloads = [];
+while (false !== ($entry     = $d->read())) {
     if ($entry[0] == '.') {
         continue;
     }
-    $downloads[$entry] = VSWebPage::_format_bytes(filesize($dwDir . $entry));
+    $downloads[$entry] = VSWebPage::_format_bytes(filesize($dwDir.$entry));
 }
 $d->close();
 ksort($downloads);
-$package = array();
+$package = [];
 foreach ($downloads as $file => $size) {
     if (strstr($file, 'moloch_')) {
-        $package = array($file => $size);
+        $package = [$file => $size];
     }
 }
 
@@ -79,9 +79,11 @@ $loginFace = new \Ease\Html\DivTag('LoginFace');
 
 $loginForm = new loginbox('/moloch/login.php', 'login', 'heslo');
 
-$loginFrame = new \Ease\Html\Div( '<span class="label label-danger">' . _('testovací provoz') . '</span>', array('class' => 'alert alert-warning'));
+$loginFrame = new \Ease\Html\Div('<span class="label label-danger">'._('testovací provoz').'</span>',
+    ['class' => 'alert alert-warning']);
 
-$loginFrame->addItem(new \Ease\Html\DivTag('WelcomeHint', _('Zadejte, prosím, Vaše přihlašovací údaje:')));
+$loginFrame->addItem(new \Ease\Html\DivTag('WelcomeHint',
+    _('Zadejte, prosím, Vaše přihlašovací údaje:')));
 
 $loginFrame->addItem($loginForm);
 

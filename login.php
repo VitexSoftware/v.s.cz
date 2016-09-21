@@ -1,8 +1,7 @@
 <?php
-
 /**
  * Přihlašovací stránka
- * 
+ *
  * @package   VS
  * @author    Vitex <vitex@hippy.cz>
  * @copyright 2012 Vitex@hippy.cz (G)
@@ -37,7 +36,8 @@ $oPage->addItem(new \VSCZ\ui\PageTop(_('Přihlaš se')));
 $loginFace = new \Ease\Html\DivTag('LoginFace');
 
 
-$loginFace->addItem(new \Ease\Html\DivTag('WelcomeHint', _('<p>Zadejte, prosím, Vaše přihlašovací údaje:</p>')));
+$loginFace->addItem(new \Ease\Html\DivTag('WelcomeHint',
+    _('<p>Zadejte, prosím, Vaše přihlašovací údaje:</p>')));
 $loginFace->addItem(new \Ease\Html\DivTag('Spacer', '&nbsp;'));
 
 $loginForm = $loginFace->addItem(new \Ease\Html\Form('Login'));
@@ -49,17 +49,18 @@ $loginForm->addItem(new EaseJQuerySubmitButton('LogIn', _('Přihlášení')));
 
 
 
-$oPage->column2->addItem(new \Ease\Html\Div( $loginFace, array('class' => 'col1')));
-$oPage->column1->addItem(new \Ease\Html\Div( _('Po přihlášení budete moci sledovat vybrané lokality a přispívat zprávami z nich'), array('class' => 'col2')));
-$oPage->column3->addItem(new \Ease\Html\Div( VSTwitter::authButton('auth.php'), array('class' => 'col3')));
+$oPage->column2->addItem(new \Ease\Html\Div($loginFace, ['class' => 'col1']));
+$oPage->column1->addItem(new \Ease\Html\Div(_('Po přihlášení budete moci sledovat vybrané lokality a přispívat zprávami z nich'),
+    ['class' => 'col2']));
+$oPage->column3->addItem(new \Ease\Html\Div(VSTwitter::authButton('auth.php'),
+    ['class' => 'col3']));
 
 /**
-$Collumn3->addItem( VSOpenIDUser::loginForm('login2-openid.php') );
-$Collumn3->addItem( VSFacebook::getLoginButton() );
+  $Collumn3->addItem( VSOpenIDUser::loginForm('login2-openid.php') );
+  $Collumn3->addItem( VSFacebook::getLoginButton() );
 
-$Collumn3->addItem( '<a href="https://www.facebook.com/dialog/oauth?client_id='. FB_APP_ID.'&redirect_uri='.urlencode(dirname(EasePage::phpSelf()).'/fbauth.php').'&scope=offline_access,user_checkins,friends_checkins">Connect with Facebook</a>' );
-*/
-
+  $Collumn3->addItem( '<a href="https://www.facebook.com/dialog/oauth?client_id='. FB_APP_ID.'&redirect_uri='.urlencode(dirname(EasePage::phpSelf()).'/fbauth.php').'&scope=offline_access,user_checkins,friends_checkins">Connect with Facebook</a>' );
+ */
 $oPage->addItem(new \VSCZ\ui\PageBottom());
 
 $oPage->draw();

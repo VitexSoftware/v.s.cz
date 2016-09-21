@@ -1,4 +1,5 @@
 <?php
+
 namespace VSCZ;
 
 /**
@@ -18,16 +19,18 @@ class DownloadButton extends \Ease\Html\ATag
     public function __construct($packageInfo, $properties = null)
     {
         if (is_null($properties)) {
-            $properties = array('class' => 'btn btn-sexy');
+            $properties = ['class' => 'btn btn-sexy'];
         } else {
             if (isset($properties['class'])) {
-                $properties['class'] = 'btn btn-sexy ' . $properties['class'];
+                $properties['class'] = 'btn btn-sexy '.$properties['class'];
             } else {
                 $properties['class'] = 'btn btn-sexy';
             }
         }
         $properties['style'] = 'margin-right: 5px;';
-        parent::__construct('download/' . key($packageInfo), '<img style="width: 42px;" src="img/deb-package.png">&nbsp;' . key($packageInfo) . '<br><small>' . current($packageInfo) . '</small>', $properties);
+        parent::__construct('download/'.key($packageInfo),
+            '<img style="width: 42px;" src="img/deb-package.png">&nbsp;'.key($packageInfo).'<br><small>'.current($packageInfo).'</small>',
+            $properties);
     }
 
     function finalize()
@@ -59,5 +62,4 @@ background-color:rgba(167,221,50,0.8);
 }
             ');
     }
-
 }
