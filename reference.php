@@ -61,6 +61,13 @@ $oPage->addItem('
                       <p>Captive networking portal for hotel customers</p>
                     </div>
                   </div>
+                  <div class="item">
+                    <img src="img/reference/flexplorer_main.jpeg" alt="Flexplorer">
+                    <div class="carousel-caption">
+                      <h4><a href="/flexplorer/">FlexPlorer</a></h4>
+                      <p>Developers tool for <a href="http://flexibee.eu/">FlexiBee</a> API/JSON</p>
+                    </div>
+                  </div>
                 </div>
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>

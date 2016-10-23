@@ -29,12 +29,12 @@ class MainMenu extends \Ease\TWB\Navbar
         $this->addDropDownMenu(
             _('Projects'),
             [
-            'http://h.v.s.cz/' => _('Hosting'),
+//            'http://h.v.s.cz/' => _('Hosting'),
             'monitoring.php' => _('Monitoring'),
             'ease.php' => _('PHP Ease Framework'),
             'https://github.com/Spoje-NET/FlexiPeeHP' => _('FlexiPeeHP PHP Library'),
             'https://github.com/Spoje-NET/Flexplorer' => _('Flexplorer REST API Developer tool'),
-            'moloch.php' => _('Moloch the invoice system'),
+//            'moloch.php' => _('Moloch the invoice system'),
 //            'http://privator.eu/' => _('Privator.eu'),
             'tbpackage.php' => _('Twitter Bootstrap pro Debian'),
             'imap2mx.php' => _('Imap2MX webmail plugins')//,

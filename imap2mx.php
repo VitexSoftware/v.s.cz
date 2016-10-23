@@ -10,7 +10,7 @@
 require_once 'includes/VSInit.php';
 
 $oPage->addItem(new \VSCZ\ui\PageTop(_('Imap2MX for Roundcube and Squirrelmail')));
-$oPage->AddPageColumns();
+$oPage->addPageColumns();
 
 $prehled = $oPage->column2->addItem(new \Ease\Html\Div());
 $prehled->addItem('Plugin <strong>Imap2mx</strong> allow IMAP login to user\'s email address MX ip. This is special configuration for multiplete dedicated (ISPConfig) mailservers.');
@@ -23,14 +23,14 @@ $oPage->column1->addItem(new \Ease\Html\H3Tag(_('Download')));
 
 $oPage->column1->addItem('<div style="background-color: #CAAAAA; margin: 2px; padding: 5px;">imap2mx package<br>');
 
-$dwDir     = "/var/www/download/";
+$dwDir     = "/var/www/html/download/";
 $d         = dir($dwDir);
 $downloads = [];
 while (false !== ($entry     = $d->read())) {
     if ($entry[0] == '.') {
         continue;
     }
-    $downloads[$entry] = VSWebPage::_format_bytes(filesize($dwDir.$entry));
+    $downloads[$entry] = \VSCZ\ui\WebPage::_format_bytes(filesize($dwDir.$entry));
 }
 $d->close();
 ksort($downloads);
@@ -60,14 +60,14 @@ $oPage->column3->addItem(new \Ease\Html\H3Tag(_('Download')));
 
 $oPage->column3->addItem('<div style="background-color: #CAAAAA; margin: 2px; padding: 5px;">imap2mx package<br>');
 
-$dwDir     = "/var/www/download/";
+$dwDir     = "/var/www/html/download/";
 $d         = dir($dwDir);
 $downloads = [];
 while (false !== ($entry     = $d->read())) {
     if ($entry[0] == '.') {
         continue;
     }
-    $downloads[$entry] = VSWebPage::_format_bytes(filesize($dwDir.$entry));
+    $downloads[$entry] = VSCZ\ui\WebPage::_format_bytes(filesize($dwDir.$entry));
 }
 $d->close();
 ksort($downloads);

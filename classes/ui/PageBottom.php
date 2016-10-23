@@ -23,8 +23,10 @@ class PageBottom extends \Ease\TWB\Container
         $listA1    = $colA->addItem(new \Ease\Html\UlTag(_('Zdrojáky'),
             ['style' => 'list-style-type: none']));
         $listA1->addItemSmart(new \Ease\Html\ATag('/redmine', 'Redmine'));
-        $listA1->addItemSmart(new \Ease\Html\ATag('https://github.com/Vitexus',
+        $listA1->addItemSmart(new \Ease\Html\ATag('https://github.com/VitexSoftware',
             'GitHub'));
+        $listA1->addItemSmart(new \Ease\Html\ATag('https://hub.docker.com/u/vitexsoftware/',
+            'DockerHUB'));
 
 
         $colB   = $rowFluid1->addItem(new \Ease\TWB\Col(2));

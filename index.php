@@ -23,8 +23,8 @@ $oPage->AddPageColumns();
 
 $mainPageMenu = new ui\MainPageMenu();
 $mainPageMenu->addMenuItem('img/ease-framework-logo.png',
-    _('PHP EaseFramework'), 'ease.php',
-    _('Framework pro snadné psaní PHP aplikací'));
+    _('EaseFramework'),
+    'ease.php', _('Framework pro snadné psaní PHP aplikací'));
 $mainPageMenu->addMenuItem('img/icinga_editor-logo.png', _('Icinga Editor'),
     '/icinga-editor', _('Editor Konfigurace monitoringu'));
 $mainPageMenu->addMenuItem('img/flexipeehp-logo.png', _('FlexiPeeHP'),

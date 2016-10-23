@@ -7,9 +7,12 @@
  * @author     Vitex <vitex@hippy.cz>
  * @copyright  2012 Vitex@hippy.cz (G)
  */
+
+namespace VSCZ;
+
 require_once 'includes/VSInit.php';
 
-$oPage->addItem(new \VSCZ\ui\PageTop(_('Ease Framework')));
+$oPage->addItem(new ui\PageTop(_('Ease Framework')));
 $oPage->AddItem('<a href="https://github.com/Vitexus/EaseFramework" class="ribbon bg-teal">Forkni na GitHubu</a>');
 
 $oPage->AddPageColumns();
@@ -38,7 +41,7 @@ while (false !== ($entry     = $d->read())) {
     if ($entry[0] == '.') {
         continue;
     }
-    $downloads[$entry] = VSWebPage::_format_bytes(filesize($dwDir.$entry));
+    $downloads[$entry] = ui\WebPage::_format_bytes(filesize($dwDir.$entry));
 }
 $d->close();
 ksort($downloads);
@@ -66,21 +69,21 @@ $oPage->column3->addItem('</div>');
 
 $CodFS = $oPage->column2->addItem(new \Ease\Html\FieldSet(_('Ukázka kódu')));
 $CodFS->addItem('<pre><code>
-<span style="color: #007700">require_once&nbsp;</span><span style="color: #DD0000">\'Ease/EaseWebPage.php\'</span><span style="color: #007700">;</span>
 <span style="color: black">/**&nbsp;Instancujeme&nbsp;objekt&nbsp;webové&nbsp;stránky&nbsp;*/</span>
-<span style="color: #0000BB">$OPage&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">EaseWebPage</span><span style="color: #007700">();<br />
-<span style="color: black">/**&nbsp;Vložení&nbsp;jQuery&nbsp;tlačítka&nbsp;*/<br /></span><span style="color: #007700">require&nbsp;</span><span style="color: #DD0000">\'Ease/EaseJQueryWidgets.php\'</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$OPage</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">addItem</span><span style="color: #007700">(<br>new&nbsp;</span><span style="color: #0000BB">EaseJQueryLinkButton</span><span style="color: #007700">(</span><span style="color: #DD0000">\'http://l.q.cz\'</span><span style="color: #007700">,<br></span><span style="color: #DD0000">\'zkracovač\'</span><span style="color: #007700">));<br /></span>
+<span style="color: #0000BB">$OPage&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">\Ease\WebPage</span><span style="color: #007700">();<br />
+<span style="color: black">/**&nbsp;Vložení&nbsp;TwitterBootrstap&nbsp;tlačítka&nbsp;*/
+</span><span style="color: #0000BB">$OPage</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">addItem</span><span style="color: #007700">(<br>new&nbsp;</span><span style="color: #0000BB">\Ease\TWB\LinkButton</span><span style="color: #007700">(</span><span style="color: #DD0000">\'http://r.v.s.cz\'</span><span style="color: #007700">,<br></span><span style="color: #DD0000">\'Tlačítko\'</span><span style="color: #007700">));<br /></span>
 <span style="color: black">/**&nbsp;Vyrendrování&nbsp;stránky&nbsp;*/<br /></span><span style="color: #0000BB">$OPage</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">draw</span><span style="color: #007700">();<br /><br /></span></code></pre>');
 
-$oPage->column2->addItem(new \Ease\Html\FieldSet(_('Výsledek: jQueryUI tlačítko')));
+$oPage->column2->addItem(new \Ease\Html\FieldSet(_('Výsledek: Twitter Bootstrap tlačítko')));
 
-$oPage->column2->addItem(new EaseJQueryLinkButton('http://l.q.cz/', 'zkracovač'));
+$oPage->column2->addItem(new \Ease\TWB\LinkButton('http://r.v.s.cz/', 'Tlačítko'));
 
-$oPage->column1->addItem(new \Ease\Html\ATag('EaseDoc', 'Dokumentace Apigen',
-    ['class' => 'btn btn-info']));
+$oPage->column1->addItem(new \Ease\Html\ATag('/ease-framework/',
+    'Dokumentace Apigen', ['class' => 'btn btn-info']));
 $oPage->column1->addItem(new \Ease\Html\ATag('https://github.com/Vitexus/EaseFramework',
     'GitHub', ['class' => 'btn btn-info']));
-$oPage->column1->addItem(new \Ease\Html\ATag('/websvn/rss.php?repname=Ease+Framework',
+$oPage->column1->addItem(new \Ease\Html\ATag('https://github.com/VitexSoftware/EaseFramework/commits/master.atom',
     'RSS kanál', ['class' => 'btn btn-info']));
 $oPage->column1->addItem(new \Ease\Html\ATag('http://redmine.murka.cz/projects/ease-framework',
     'Redmine', ['class' => 'btn btn-info']));
@@ -97,6 +100,6 @@ $oPage->column1->addItem('<hr>');
 $oPage->column1->addItem(new \Ease\Html\FieldSet(_('Proč použít ?')));
 $oPage->column1->addItem('<img src="img/graf-timecost.png">');
 
-$oPage->addItem(new \VSCZ\ui\PageBottom());
+$oPage->addItem(new ui\PageBottom());
 
 $oPage->draw();
