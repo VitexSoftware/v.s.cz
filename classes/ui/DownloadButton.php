@@ -1,6 +1,6 @@
 <?php
 
-namespace VSCZ;
+namespace VSCZ\ui;
 
 /**
  * Description of VSDownloadButton

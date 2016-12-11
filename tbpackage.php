@@ -55,7 +55,7 @@ $packTabs     = new \Ease\TWB\Tabs('PackTabs');
 $bootStrapTab = $packTabs->addTab('Twitter Bootstrap');
 
 
-$bootStrapTab->addItem(new \Ease\Html\Div(new VSCZ\DownloadButton($tbPackage),
+$bootStrapTab->addItem(new \Ease\Html\Div(new VSCZ\ui\DownloadButton($tbPackage),
     ['style' => 'float:left;']));
 $bootStrapTab->addItem(new \Ease\Html\Div(new \Ease\Html\ATag('http://twitter.github.com/bootstrap/',
     '<img style="height: 32px;" src="img/twitter-bootstrap.png">&nbsp; Official project homepage',
@@ -63,7 +63,7 @@ $bootStrapTab->addItem(new \Ease\Html\Div(new \Ease\Html\ATag('http://twitter.gi
 $bootStrapTab->addItem('is a free collection of tools for creating websites and web applications. It contains HTML and CSS-based design templates for typography, forms, buttons, charts, navigation and other interface components, as well as optional JavaScript extensions.');
 
 $fuelUXTab = $packTabs->addTab('Fuel UX');
-$fuelUXTab->addItem(new \Ease\Html\Div(new VSCZ\DownloadButton($fuelUXPackage),
+$fuelUXTab->addItem(new \Ease\Html\Div(new VSCZ\ui\DownloadButton($fuelUXPackage),
     ['style' => 'float:left;']));
 $fuelUXTab->addItem(new \Ease\Html\Div(new \Ease\Html\ATag('http://getfuelux.com/',
     '<img style="height: 32px;" src="img/fuelux.png">',
@@ -73,7 +73,7 @@ $fuelUXTab->addItem('extends Twitter Bootstrap with additional lightweight JavaS
 
 
 $bsSwitchTab = $packTabs->addTab('Bootstrap Switch');
-$bsSwitchTab->addItem(new \Ease\Html\Div(new VSCZ\DownloadButton($tbSwPackage),
+$bsSwitchTab->addItem(new \Ease\Html\Div(new VSCZ\ui\DownloadButton($tbSwPackage),
     ['style' => 'float:left;']));
 $bsSwitchTab->addItem(new \Ease\Html\Div(new \Ease\Html\ATag('http://www.bootstrap-switch.org/',
     'Project Homepage', ['class' => 'btn btn-info']),
@@ -81,7 +81,7 @@ $bsSwitchTab->addItem(new \Ease\Html\Div(new \Ease\Html\ATag('http://www.bootstr
 $bsSwitchTab->addItem('extends Twitter Bootstrap with switch widget.');
 
 $jqueryTab = $packTabs->addTab('jQuery');
-$jqueryTab->addItem(new \Ease\Html\Div(new VSCZ\DownloadButton($jqueryPackage),
+$jqueryTab->addItem(new \Ease\Html\Div(new VSCZ\ui\DownloadButton($jqueryPackage),
     ['style' => 'float:left;']));
 $jqueryTab->addItem(new \Ease\Html\Div(new \Ease\Html\ATag('http://jquery.com/',
     '<img style="height: 32px;" src="img/logo-jquery.png">',

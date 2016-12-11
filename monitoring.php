@@ -2,18 +2,15 @@
 /**
  * VitexSoftware - monitoring
  *
- * @package    VS
- * @subpackage WebUI
  * @author     Vitex <vitex@hippy.cz>
  * @copyright  2012 Vitex@hippy.cz (G)
  */
 require_once 'includes/VSInit.php';
-require_once './classes/loginbox.php';
 
-$oPage->addItem(new \VSCZ\ui\PageTop(_('Vitex Software')));
-$oPage->AddPageColumns();
+$oPage->addItem(new \VSCZ\ui\PageTop(_('Icinga Configurator')));
+$oPage->addPageColumns();
 
-$oPage->AddItem('<a href="https://github.com/Vitexus/icinga_configurator" class="ribbon bg-teal">Forkni na GitHubu</a>');
+$oPage->addItem('<a href="https://github.com/Vitexus/icinga_configurator" class="ribbon bg-teal">Forkni na GitHubu</a>');
 
 
 if ($OUser->getUserID()) {
@@ -23,25 +20,25 @@ if ($OUser->getUserID()) {
 
 $monitoringTabs = new \Ease\TWB\Tabs('montabs');
 
-$serviceTab = $monitoringTabs->addTab(_('Monitorujte svoji síť'));
+$serviceTab = $monitoringTabs->addTab(_('Monitor your network'));
 $serviceRow = new \Ease\TWB\Row;
 
 $serviceInfo = $serviceRow->addColumn(8);
 
-$serviceInfo->addItem(new \Ease\Html\H2Tag(_('Monitoring serverů a služeb')));
+$serviceInfo->addItem(new \Ease\Html\H2Tag(_('Servers & Services Monitoring')));
 $serverSkills = $serviceInfo->addItem(new \Ease\Html\UlTag());
-$serverSkills->addItemSmart(_('Monitoring Windows i za NATem/firewallem'));
-$serverSkills->addItemSmart('Nonstop provoz');
-$serverSkills->addItemSmart('Notifikace přez mail, jabber, twitter a sms');
+$serverSkills->addItemSmart(_('Windows behind NATem/firewallem monitoring'));
+$serverSkills->addItemSmart('Nonstop worktime');
+$serverSkills->addItemSmart('email, jabber, and sms notifications');
 
 
-$serviceInfo->addItem(new \Ease\Html\H3Tag(_('Přidejte se')));
+$serviceInfo->addItem(new \Ease\Html\H3Tag(_('Sign Up')));
 $serviceInfo->addItem(new \Ease\Html\PTag(_('Služba jako taková je nabízena do deseti monitorovaných služeb zdarma.')));
 $serviceInfo->addItem(new \Ease\Html\PTag(_('Nad deset monitorovaných služeb požadujeme deset korun za každý host na měsíc')));
 $serviceInfo->addItem(new \Ease\Html\PTag(_('Zpoplatněny jsou i notifikační SMS a to dvěmi korunami za jednu zprávu.')));
 
 $serviceInfo->addItem(new \Ease\TWB\LinkButton('/icinga-editor/createaccount.php',
-    _('Registrace'), 'success'));
+    _('Sign IN'), 'success'));
 
 
 
@@ -49,20 +46,18 @@ $serviceInfo->addItem(new \Ease\TWB\LinkButton('/icinga-editor/createaccount.php
 $serviceLogin = $serviceRow->addColumn(4);
 $serviceTab->addItem($serviceRow);
 
-$loginFace  = new \Ease\Html\DivTag('LoginFace');
-$loginForm  = new loginbox('/icinga-editor/login.php', 'login', 'password');
+$loginFace  = new \Ease\Html\Div(null, ['id' => 'LoginFace']);
+$loginForm  = new VSCZ\ui\loginbox('/icinga-editor/login.php', 'login',
+    'password');
 $loginFrame = $serviceLogin->addItem(new \Ease\Html\Div('<span class="label label-danger">'._('testovací provoz').'</span>',
     ['class' => 'alert alert-warning']));
-$loginFrame->addItem(new \Ease\Html\DivTag('WelcomeHint',
-    _('Zadejte, prosím, Vaše přihlašovací údaje:')));
+$loginFrame->addItem(new \Ease\Html\Div(
+    _('Please enter your login and password'), ['id' => 'WelcomeHint']));
 $loginFrame->addItem($loginForm);
 
 
-
-
-
 $ossTab = $monitoringTabs->addTab(_('Open Source'));
-$ossTab->addItem(new \Ease\Html\H4Tag(_('Svoboda především')));
+$ossTab->addItem(new \Ease\Html\H4Tag(_('Freedom first')));
 $ossTab->addItem(new \Ease\Html\PTag(_('Ctíme myšlenku že software má být svobodný a proto jsou k dispozici zdrojové kódy i instalační balíčky pro debian a odvozené distribuce.')));
 $ossTab->addItem(new \Ease\Html\H4Tag(_('Instalace zdroje a balíčku')));
 $ossTab->addItem(new \Ease\Html\PTag(_('Bude pro nás výrazem uznání kvality naší práce pokud se rozhodnete používat naše konfigurační rozhraní monitoringu i na vašem serveru.')));

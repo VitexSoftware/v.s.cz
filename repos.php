@@ -2,8 +2,6 @@
 /**
  * VitexSoftware - titulní strana
  *
- * @package    VS
- * @subpackage WebUI
  * @author     Vitex <vitex@hippy.cz>
  * @copyright  2012 Vitex@hippy.cz (G)
  */
@@ -24,6 +22,8 @@ $steps->addItemSmart('sudo aptitude update', ['class' => 'list-group-item']);
 $steps->addItemSmart('sudo aptitude install <em>package(s)</em>',
     ['class' => 'list-group-item']);
 
+$updated = \Ease\Shared::db()->queryToValue('SELECT count(*) FROM `vs_access_log` WHERE `request_uri` = \'/dists/stable/InRelease\'');
+$reposinfo->addItem(sprintf(_('apt-get update feeded %d times'), $updated));
 
 $oPage->addItem(new \Ease\TWB\Container($reposinfo));
 
@@ -64,7 +64,7 @@ if ($handle) {
 
 $ptable = new \Ease\Html\TableTag(null, ['class' => 'table']);
 $ptable->setHeader([_('Package name'), _('Version'), _('Release date'), _('Size'),
-    _('Package')]);
+    _('Package'), _('Installs'), _('Downloads')]);
 
 $oPage->addJavascript('$(".hinter").popover();', null, true);
 $oPage->addCss('.hinter { font-weight: bold; font-size: large; }');
@@ -73,6 +73,10 @@ foreach ($packages as $pName => $pProps) {
     if (!file_exists(trim($pProps['Filename']))) {
         continue;
     }
+
+    $downloads = \Ease\Shared::db()->queryToArray(sprintf("SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' UNION SELECT COUNT(*) FROM ssl_vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%';",
+            $pName, $pName));
+
     $incTime = date("m. d. Y H:i:s", filemtime(trim($pProps['Filename'])));
     $package = new \Ease\Html\ATag($pProps['Filename'],
         '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'.$pProps['Architecture'],
@@ -81,7 +85,7 @@ foreach ($packages as $pName => $pProps) {
         ['tabindex' => 0, 'class' => 'hinter', 'data-toggle' => 'popover', 'data-trigger' => 'hover',
         'data-content' => $pProps['Description']]);
     $ptable->addRowColumns([$pInfo, $pProps['Version'], $incTime, \VSCZ\ui\WebPage::_format_bytes($pProps['Size']),
-        $package]);
+        $package, $downloads[0], $downloads[1]]);
 }
 
 $oPage->addItem(new \Ease\TWB\Container($ptable));
