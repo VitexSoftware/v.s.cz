@@ -74,8 +74,22 @@ foreach ($packages as $pName => $pProps) {
         continue;
     }
 
-    $downloads = \Ease\Shared::db()->queryToArray(sprintf("SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' UNION SELECT COUNT(*) FROM ssl_vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%';",
-            $pName, $pName));
+
+    $installs = \Ease\Shared::db()->queryToValue(sprintf(
+            "SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' AND agent LIKE 'Debian APT%%' ",
+            $pName));
+
+    $installsSSL = \Ease\Shared::db()->queryToValue(sprintf(
+            "SELECT COUNT(*) FROM ssl_vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' AND agent LIKE 'Debian APT%%' "
+            , $pName));
+
+    $downloads = \Ease\Shared::db()->queryToValue(sprintf(
+            "SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' AND agent NOT LIKE 'Debian APT%%' "
+            , $pName));
+
+    $downloadsSSL = \Ease\Shared::db()->queryToValue(sprintf(
+            "SELECT COUNT(*) FROM ssl_vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' AND agent NOT LIKE 'Debian APT%%' ",
+            $pName));
 
     $incTime = date("m. d. Y H:i:s", filemtime(trim($pProps['Filename'])));
     $package = new \Ease\Html\ATag($pProps['Filename'],
@@ -85,7 +99,7 @@ foreach ($packages as $pName => $pProps) {
         ['tabindex' => 0, 'class' => 'hinter', 'data-toggle' => 'popover', 'data-trigger' => 'hover',
         'data-content' => $pProps['Description']]);
     $ptable->addRowColumns([$pInfo, $pProps['Version'], $incTime, \VSCZ\ui\WebPage::_format_bytes($pProps['Size']),
-        $package, $downloads[0], $downloads[1]]);
+        $package, $installs + $installsSSL, $downloads + $downloadsSSL]);
 }
 
 $oPage->addItem(new \Ease\TWB\Container($ptable));

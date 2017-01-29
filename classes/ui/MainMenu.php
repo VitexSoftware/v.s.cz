@@ -16,12 +16,12 @@ class MainMenu extends \Ease\TWB\Navbar
      *
      *
      * @param type $name
-     * @param type $Brand
-     * @param type $Properties
+     * @param type $brand
+     * @param type $properties
      */
-    function __construct($name = null, $Brand = null, $Properties = null)
+    function __construct($name = null, $brand = null, $properties = null)
     {
-        parent::__construct($name, $Brand, $Properties);
+        parent::__construct($name, $brand, $properties);
 
         $this->addMenuItem(new \Ease\Html\ATag('repos.php',
             '<img style="height: 19px;" src="img/deb-package.png"> '._('Repo')));
@@ -42,7 +42,7 @@ class MainMenu extends \Ease\TWB\Navbar
         );
 
 
-//$nav->addMenuItem(new \Ease\Html\ATag('monitoring.php', _('Monitoring')));
+        $this->addMenuItem(new \Ease\Html\ATag('umim.php', _('Co umím')));
         $this->addMenuItem(new \Ease\Html\ATag('reference.php', _('Reference')));
         $this->addMenuItem(new \Ease\Html\ATag('cenik.php', _('Ceník')));
         $this->addMenuItem(new \Ease\Html\ATag('kontakt.php', _('Kontakt')));
