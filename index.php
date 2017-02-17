@@ -22,8 +22,14 @@ $oPage->AddPageColumns();
 
 
 $mainPageMenu = new ui\MainPageMenu();
+$mainPageMenu->addMenuItem('img/deb-package.png', _('Repozitář'), 'repos.php',
+    _('Repozitář balíčků pro Debian & Ubuntu'));
+
+
+
 $mainPageMenu->addMenuItem('img/tux-server.png', _('Hosting'), 'hosting.php',
     _('Specializovaný hosting'));
+
 
 
 $mainPageMenu->addMenuItem('img/ease-framework-logo.png',

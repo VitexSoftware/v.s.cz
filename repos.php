@@ -6,8 +6,14 @@
  * @copyright  2012 Vitex@hippy.cz (G)
  */
 require_once 'includes/VSInit.php';
+$oPage->includeJavaScript('js/jquery.tablesorter.min.js');
+$oPage->addJavaScript('$("#packs").tablesorter();');
 
 $oPage->addItem(new \VSCZ\ui\PageTop(_('Deb Repository')));
+
+
+$packTabs = new Ease\TWB\Tabs('PackTabs');
+
 
 $reposinfo = new \Ease\TWB\Well(new \Ease\Html\H3Tag(_('How to use repository')));
 
@@ -25,7 +31,6 @@ $steps->addItemSmart('sudo aptitude install <em>package(s)</em>',
 $updated = \Ease\Shared::db()->queryToValue('SELECT count(*) FROM `vs_access_log` WHERE `request_uri` = \'/dists/stable/InRelease\'');
 $reposinfo->addItem(sprintf(_('apt-get update feeded %d times'), $updated));
 
-$oPage->addItem(new \Ease\TWB\Container($reposinfo));
 
 $packages = [];
 $pName    = null;
@@ -62,8 +67,9 @@ if ($handle) {
     fclose($handle);
 }
 
-$ptable = new \Ease\Html\TableTag(null, ['class' => 'table']);
-$ptable->setHeader([_('Package name'), _('Version'), _('Release date'), _('Size'),
+$ptable = new \Ease\Html\TableTag(null, ['class' => 'table', 'id' => 'packs']);
+$ptable->setHeader([_('Package name'), _('Version'), _('Release date'),
+    _('Size'),
     _('Package'), _('Installs'), _('Downloads')]);
 
 $oPage->addJavascript('$(".hinter").popover();', null, true);
@@ -102,8 +108,10 @@ foreach ($packages as $pName => $pProps) {
         $package, $installs + $installsSSL, $downloads + $downloadsSSL]);
 }
 
-$oPage->addItem(new \Ease\TWB\Container($ptable));
+$packTabs->addTab(_('Packages'), $ptable);
+$packTabs->addTab(_('Instructions'), $reposinfo);
 
+$oPage->addItem(new \Ease\TWB\Container($packTabs));
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
 
