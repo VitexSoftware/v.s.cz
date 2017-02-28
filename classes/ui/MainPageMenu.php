@@ -40,16 +40,17 @@ class MainPageMenu extends \Ease\Html\Div
         );
     }
 
-    public function addMenuItem($image, $title, $url, $hint = null)
+    public function addMenuItem($image, $title, $url, $hint = null,
+                                $version = null)
     {
         return $this->row->addItem(
                 new \Ease\Html\ATag(
                 $url,
                 new \Ease\Html\Div(
-                "$title<center><img class=\"mpicon\" src=\"$image\" alt=\"$title\"></center>",
+        "$title<center><img class=\"mpicon\" src=\"$image\" alt=\"$title\">$version</center>",
                 ['class' => 'col-md-2 hinter', 'tabindex' => 0, 'data-toggle' => 'popover',
-                'data-trigger' => 'hover',
-                'data-content' => $hint]
+                        'data-trigger' => 'hover',
+                        'data-content' => $hint]
                 )
                 )
         );

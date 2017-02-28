@@ -10,11 +10,12 @@
     ],
     "minimum-stability": "stable",
     "config": {
-	"vendor-dir": "/var/lib/v.s.cz/"
+        "vendor-dir": "/var/lib/v.s.cz/"
     },
     "require": {
         "php": ">= 5.5.9",
-        "vitexsoftware/ease-framework": ">= 1.1.2"
+        "flexipeehp": "*",
+        "vitexsoftware/ease-framework": "*"
     },
     "autoload": {
         "psr-4": {
@@ -24,12 +25,21 @@
     },
     "repositories": [
         {
+            "packagist.org": false
+        },
+        {
             "type": "path",
             "url": "/usr/share/php/Ease",
             "options": {
                 "symlink": true
             }
+        },
+        {
+            "type": "path",
+            "url": "/usr/share/php/FlexiPeeHP",
+            "options": {
+                "symlink": true
+            }
         }
     ]
-
 }
