@@ -40,20 +40,19 @@ class WebPage extends \Ease\TWB\WebPage
 
     function AddPageColumns()
     {
-        $this->container = $this->addItem(new \Ease\Html\Div(null,
-            ['class' => 'container']));
-        $row             = $this->container->addItem(new \Ease\Html\Div(
-            null, ['class' => 'row']));
-        $this->column1   = $row->addItem(new \Ease\Html\Div(null,
+        $this->container = $this->addItem(new \Ease\TWB\Container());
+        $row             = $this->container->addItem(new \Ease\TWB\Row());
+        $this->column1   = $row->addItem(new \Ease\Html\DivTag(null,
             ['class' => 'col-md-4']));
-        $this->column2   = $row->addItem(new \Ease\Html\Div(null,
+        $this->column2   = $row->addItem(new \Ease\Html\DivTag(null,
             ['class' => 'col-md-4']));
-        $this->column3   = $row->addItem(new \Ease\Html\Div(null,
+        $this->column3   = $row->addItem(new \Ease\Html\DivTag(null,
             ['class' => 'col-md-4']));
     }
 
     static function _format_bytes($a_bytes)
     {
+        $a_bytes = doubleval($a_bytes);
         if ($a_bytes < 1024) {
             return $a_bytes.' B';
         } elseif ($a_bytes < 1048576) {
@@ -72,6 +71,25 @@ class WebPage extends \Ease\TWB\WebPage
             return round($a_bytes / 1180591620717411303424, 2).' ZiB';
         } else {
             return round($a_bytes / 1208925819614629174706176, 2).' YiB';
+        }
+    }
+
+    public static function secondsToTime($seconds)
+    {
+        $dtF = new \DateTime('@0');
+        $dtT = new \DateTime("@$seconds");
+        return $dtF->diff($dtT)->format('%a');
+    }
+
+    /**
+     * Only Admin can continue
+     */
+    function onlyForAdmin()
+    {
+        if (!\Ease\Shared::user()->getSettingValue('admin')) {
+            $this->addStatusMessage(_('Only for admin'), 'warning');
+            $this->redirect('login.php');
+            exit();
         }
     }
 }

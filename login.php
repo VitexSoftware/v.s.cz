@@ -1,67 +1,69 @@
 <?php
 /**
- * Přihlašovací stránka
+ * VitexSoftware - Login page
  *
- * @package   VS
- * @author    Vitex <vitex@hippy.cz>
- * @copyright 2012 Vitex@hippy.cz (G)
+ * @author     Vitex <vitex@hippy.cz>
+ * @copyright  2017 info@vitexsoftware.cz (G)
  */
-require_once 'includes/VSInit.php';
-require_once 'Ease/EaseJQueryWidgets.php';
-require_once 'classes/VSTwitter.php';
-require_once 'classes/VSFacebook.php';
 
-if (!is_object($OUser)) {
-    die(_('Cookies jsou vyžadovány'));
+namespace VSCZ;
+
+require_once 'includes/VSInit.php';
+
+if (!is_object($oUser)) {
+    die(_('Cookies required'));
 }
 
-$Login = $oPage->getRequestValue('login');
-
-if ($Login) {
-    $_SESSION['User'] = new VSUser();
-    if ($OUser->tryToLogin($_POST)) {
-        $NextUrl = $oPage->getRequestValue('NextUrl');
-        if (($NextUrl != 'logout.php') && !is_null($NextUrl)) {
-            $oPage->redirect($NextUrl);
-        } else {
-            $oPage->redirect('index.php');
-        }
+$login = $oPage->getRequestValue('login');
+if ($login) {
+    $oUser = \Ease\Shared::user(new User());
+//    \Ease\Shared::user()->SettingsColumn = 'settings';
+    if ($oUser->tryToLogin($_POST)) {
+        $oPage->redirect('newsedit.php');
         exit;
     }
+} else {
+        $oPage->addStatusMessage(_('Please enter your login and password'));
 }
 
+$oPage->addItem(new ui\PageTop(_('Sign in')));
+$oPage->addPageColumns();
 
-$oPage->addItem(new \VSCZ\ui\PageTop(_('Přihlaš se')));
-
-$loginFace = new \Ease\Html\DivTag('LoginFace');
-
-
-$loginFace->addItem(new \Ease\Html\DivTag('WelcomeHint',
-    _('<p>Zadejte, prosím, Vaše přihlašovací údaje:</p>')));
-$loginFace->addItem(new \Ease\Html\DivTag('Spacer', '&nbsp;'));
-
-$loginForm = $loginFace->addItem(new \Ease\Html\Form('Login'));
-$loginForm->SetTagID('LoginForm');
-$loginForm->addItem(new EaseLabeledInput('login', null, _('Login')));
-$loginForm->addItem(new EaseLabeledPasswordInput('password', null, _('Heslo')));
-$loginForm->addItem(new EaseJQuerySubmitButton('LogIn', _('Přihlášení')));
+$loginFace = new \Ease\Html\Div(null,['id'=>'LoginFace']);
 
 
+$oPage->container->addItem($loginFace);
 
 
-$oPage->column2->addItem(new \Ease\Html\Div($loginFace, ['class' => 'col1']));
-$oPage->column1->addItem(new \Ease\Html\Div(_('Po přihlášení budete moci sledovat vybrané lokality a přispívat zprávami z nich'),
-    ['class' => 'col2']));
-$oPage->column3->addItem(new \Ease\Html\Div(VSTwitter::authButton('auth.php'),
-    ['class' => 'col3']));
+$loginRow = new \Ease\TWB\Row();
+$infoColumn = $loginRow->addItem(new \Ease\TWB\Col(4));
 
-/**
-  $Collumn3->addItem( VSOpenIDUser::loginForm('login2-openid.php') );
-  $Collumn3->addItem( VSFacebook::getLoginButton() );
+$infoBlock = $infoColumn->addItem(new \Ease\TWB\Well(new \Ease\Html\ImgTag('img/password.png')));
+$infoBlock->addItem(_('Welcome to VitexSoftware.cz'));
 
-  $Collumn3->addItem( '<a href="https://www.facebook.com/dialog/oauth?client_id='. FB_APP_ID.'&redirect_uri='.urlencode(dirname(EasePage::phpSelf()).'/fbauth.php').'&scope=offline_access,user_checkins,friends_checkins">Connect with Facebook</a>' );
- */
-$oPage->addItem(new \VSCZ\ui\PageBottom());
+
+$loginColumn = $loginRow->addItem(new \Ease\TWB\Col(4));
+
+
+$submit = new \Ease\TWB\SubmitButton(_('Sign in'), 'success');
+
+$loginPanel = new \Ease\TWB\Panel(new \Ease\Html\ImgTag('img/vitexsoftwarelogo.png',
+    null, ['style' => 'width: 100px;']), 'success', null, $submit);
+$loginPanel->addItem(new \Ease\TWB\FormGroup(_('Username'), new \Ease\Html\InputTextTag('login', $login)));
+$loginPanel->addItem(new \Ease\TWB\FormGroup(_('Login'), new \Ease\Html\InputPasswordTag('password')));
+
+
+$loginColumn->addItem($loginPanel);
+
+$passRecoveryColumn = $loginRow->addItem(new \Ease\TWB\Col(4, new \Ease\TWB\LinkButton('passwordrecovery.php', '<i class="fa fa-key"></i>
+' . _('Password recovery'), 'warning')));
+
+
+$passRecoveryColumn->additem(new \Ease\TWB\LinkButton('createaccount.php', '<i class="fa fa-user"></i>
+' . _('Create account'), 'success'));
+
+$oPage->container->addItem(new \Ease\TWB\Form('Login', null, 'POST', $loginRow));
+
+$oPage->addItem(new ui\PageBottom());
 
 $oPage->draw();
-?>

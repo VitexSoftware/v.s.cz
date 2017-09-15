@@ -11,38 +11,29 @@ namespace VSCZ;
 require_once 'includes/Configure.php';
 require_once '/var/lib/v.s.cz/autoload.php';
 
-function __autoload($class_name)
-{
-    $class_file = 'classes/'.$class_name.'.php';
-    if (file_exists($class_file)) {
-        include $class_file;
-        return TRUE;
-    }
-    return FALSE;
+if (!defined('EASE_APPNAME')) {
+    define('EASE_APPNAME', 'shop4flexibee');
 }
 
-$language = "cs_CZ";
-$codeset  = "cs_CZ.UTF-8";
-$domain   = "messages";
-putenv("LANGUAGE=".$language);
-putenv("LANG=".$language);
-bind_textdomain_codeset($domain, "UTF8");
-setlocale(LC_ALL, $codeset);
-bindtextdomain($domain, realpath("./locale"));
-textdomain($domain);
+\Ease\Shared::initializeGetText(constant('EASE_APPNAME'));
 
 session_start();
 
-if (!isset($_SESSION['User']) || !is_object($_SESSION['User'])) {
-    \Ease\Shared::user(new \Ease\Anonym());
+if (\Ease\Shared::isCli()) {
+    if (!defined('EASE_LOGGER')) {
+        define('EASE_LOGGER', 'syslog|console|email');
+    }
+} else {
+    /* @var $oPage ui\WebPage */
+    $oPage = new ui\WebPage();
 }
 
-
 /**
- * Objekt uživatele VSUser nebo VSAnonym
- * @global VSUser
+ * Objekt uživatele User nebo Anonym
+ * @global \Ease\User
  */
-$OUser = & \Ease\Shared::user();
+$oUser = \Ease\Shared::user();
+
 
 /* @var $oPage VSWebPage */
 $oPage = new \VSCZ\ui\WebPage( );

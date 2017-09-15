@@ -7,12 +7,6 @@
  */
 require_once 'includes/VSInit.php';
 
-function secondsToTime($seconds)
-{
-    $dtF = new \DateTime('@0');
-    $dtT = new \DateTime("@$seconds");
-    return $dtF->diff($dtT)->format('%a');
-}
 $oPage->includeJavaScript('js/jquery.tablesorter.min.js');
 $oPage->addJavaScript('$("#packs").tablesorter();');
 
@@ -45,6 +39,9 @@ $handle   = @fopen("/var/lib/apt/lists/v.s.cz_dists_stable_main_binary-amd64_Pac
         "r");
 if ($handle) {
     while (($buffer = fgets($handle, 4096)) !== false) {
+        if (!strstr($buffer, ':')) {
+            continue;
+        }
         list( $key, $value ) = explode(':', $buffer);
         switch ($key) {
             case 'Package':
@@ -77,38 +74,24 @@ if ($handle) {
 $ptable = new \Ease\Html\TableTag(null, ['class' => 'table', 'id' => 'packs']);
 $ptable->setHeader([_('Package name'), _('Version'), _('Age'), _('Release date'),
     _('Size'),
-    _('Package'), _('Installs'), _('Downloads')]);
+    _('Package')]);
 
 $oPage->addJavascript('$(".hinter").popover();', null, true);
 $oPage->addCss('.hinter { font-weight: bold; font-size: large; }');
 
 foreach ($packages as $pName => $pProps) {
     $packFile = trim($pProps['Filename']);
-
+    $icon     = 'img/deb/'.$pName.'.png';
+    if (!file_exists($icon)) {
+        $icon = 'img/deb-package.png';
+    }
     if (!file_exists($packFile)) {
         continue;
     }
 
-
-    $installs = \Ease\Shared::db()->queryToValue(sprintf(
-            "SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' AND agent LIKE 'Debian APT%%' ",
-            $pName));
-
-    $installsSSL = \Ease\Shared::db()->queryToValue(sprintf(
-            "SELECT COUNT(*) FROM ssl_vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' AND agent LIKE 'Debian APT%%' "
-            , $pName));
-
-    $downloads = \Ease\Shared::db()->queryToValue(sprintf(
-            "SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' AND agent NOT LIKE 'Debian APT%%' "
-            , $pName));
-
-    $downloadsSSL = \Ease\Shared::db()->queryToValue(sprintf(
-            "SELECT COUNT(*) FROM ssl_vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' AND agent NOT LIKE 'Debian APT%%' ",
-            $pName));
-
     $fileMtime = filemtime($packFile);
     $incTime   = date("Y m. d.", $fileMtime);
-    $packAge   = secondsToTime(time() - $fileMtime);
+    $packAge   = \VSCZ\ui\WebPage::secondsToTime(doubleval(time() - $fileMtime));
 
     $package = new \Ease\Html\ATag($pProps['Filename'],
         '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'.$pProps['Architecture'],
@@ -116,14 +99,19 @@ foreach ($packages as $pName => $pProps) {
     $pInfo   = new \Ease\Html\ATag('#', $pName,
         ['tabindex' => 0, 'class' => 'hinter', 'data-toggle' => 'popover', 'data-trigger' => 'hover',
         'data-content' => $pProps['Description']]);
-    $ptable->addRowColumns([$pInfo, $pProps['Version'], $packAge, $incTime, \VSCZ\ui\WebPage::_format_bytes($pProps['Size']),
-        $package, $installs + $installsSSL, $downloads + $downloadsSSL]);
+    $ptable->addRowColumns(['<img class="debicon" src="'.$icon.'"> '.$pInfo,
+        $pProps['Version'],
+        $packAge, $incTime, \VSCZ\ui\WebPage::_format_bytes($pProps['Size']),
+        $package]);
 }
 
-$packTabs->addTab(_('Packages'), $ptable);
+$pTab = $packTabs->addTab(_('Packages'), $ptable);
+
+
 $packTabs->addTab(_('Instructions'), $reposinfo);
 
-$oPage->addItem(new \Ease\TWB\Container($packTabs));
+$oPage->addItem(new \Ease\TWB\Container($packTabs))->addItem(new Ease\TWB\LinkButton('repostats.php',
+    _('download count details').' ('._('please wait').')', 'info'));
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
 

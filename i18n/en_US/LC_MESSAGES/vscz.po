@@ -1,0 +1,1388 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VitexSoftware\n"
+"POT-Creation-Date: 2017-09-12 18:14+0200\n"
+"PO-Revision-Date: 2017-09-12 18:14+0200\n"
+"Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
+"Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+
+#: cenik.php:14 index.php:20 kontakt.php:28 reference.php:13
+msgid "Vitex Software"
+msgstr "Vitex Software"
+
+#: cenik.php:19
+msgid "Práce na dálku programování/administrace"
+msgstr ""
+
+#: cenik.php:25
+msgid "Práce na místě programování/administrace"
+msgstr ""
+
+#: classes/ui/MainMenu.php:26
+msgid "Repo"
+msgstr "Repo"
+
+#: classes/ui/MainMenu.php:29
+msgid "Projects"
+msgstr "Projects"
+
+#: classes/ui/MainMenu.php:32
+msgid "Monitoring"
+msgstr "Monitoring"
+
+#: classes/ui/MainMenu.php:33
+msgid "PHP Ease Framework"
+msgstr "PHP Ease Framework"
+
+#: classes/ui/MainMenu.php:34
+msgid "FlexiPeeHP PHP Library"
+msgstr "FlexiPeeHP PHP Library"
+
+#: classes/ui/MainMenu.php:35
+msgid "Flexplorer REST API Developer tool"
+msgstr "Flexplorer REST API Developer tool"
+
+#: classes/ui/MainMenu.php:36
+msgid "FlexyProXY"
+msgstr "FlexyProXY"
+
+#: classes/ui/MainMenu.php:37
+msgid "Shop4FlexiBee"
+msgstr "Shop4FlexiBee"
+
+#: classes/ui/MainMenu.php:40
+msgid "Twitter Bootstrap pro Debian"
+msgstr ""
+
+#: classes/ui/MainMenu.php:41
+msgid "Imap2MX webmail plugins"
+msgstr "Imap2MX webmail plugins"
+
+#: classes/ui/MainMenu.php:46 flexibee.php:13
+msgid "FlexiBee"
+msgstr "FlexiBee"
+
+#: classes/ui/MainMenu.php:50
+msgid "News Editor"
+msgstr "News Editor"
+
+#: classes/ui/MainMenu.php:53
+msgid "My Skills"
+msgstr "My Skills"
+
+#: classes/ui/MainMenu.php:54 classes/ui/PageBottom.php:73
+msgid "Reference"
+msgstr "Reference"
+
+#: classes/ui/MainMenu.php:55
+msgid "Pricelist"
+msgstr "Pricelist"
+
+#: classes/ui/MainMenu.php:56
+msgid "Contact"
+msgstr "Contact"
+
+#: classes/ui/NewsEditor.php:56
+msgid "Delete"
+msgstr "Delete"
+
+#: classes/ui/NewsEditor.php:78
+msgid "Name"
+msgstr "Name"
+
+#: classes/ui/NewsEditor.php:79
+msgid "Text"
+msgstr "Text"
+
+#: classes/ui/NewsEditor.php:81
+msgid "Czech"
+msgstr "Czech"
+
+#: classes/ui/NewsEditor.php:81
+msgid "English"
+msgstr "English"
+
+#: classes/ui/NewsEditor.php:81
+msgid "Language"
+msgstr "Language"
+
+#: classes/ui/PageBottom.php:23
+msgid "Zdrojáky"
+msgstr ""
+
+#: classes/ui/PageBottom.php:37
+msgid "Aplikace"
+msgstr ""
+
+#: classes/ui/PageBottom.php:47
+msgid "Služby"
+msgstr ""
+
+#: classes/ui/PageBottom.php:50
+msgid "Repozitář"
+msgstr ""
+
+#: classes/ui/PageBottom.php:51
+msgid "Hosting"
+msgstr "Hosting"
+
+#: classes/ui/PageBottom.php:54
+msgid "Dokumentace"
+msgstr ""
+
+#: classes/ui/PageBottom.php:60
+msgid "Spřízněné"
+msgstr ""
+
+#: classes/ui/PageBottom.php:63
+msgid "Murka.cz"
+msgstr ""
+
+#: classes/ui/PageBottom.php:65
+msgid "Spoje.Net"
+msgstr "Spoje.Net"
+
+#: classes/ui/PageBottom.php:67
+msgid "Rclick.cz"
+msgstr ""
+
+#: classes/ui/PageBottom.php:70
+msgid "Více"
+msgstr ""
+
+#: classes/ui/PageBottom.php:74
+msgid "Cenník prací"
+msgstr ""
+
+#: classes/ui/PageBottom.php:75
+msgid "Kontakty"
+msgstr ""
+
+#: classes/ui/PageBottom.php:92
+msgid "&copy; 2012-2017 Vitex Software"
+msgstr "&copy; 2012-2017 Vitex Software"
+
+#: classes/ui/WebPage.php:82
+msgid "Only for admin"
+msgstr "Only for admin"
+
+#: classes/ui/loginbox.php:23 login.php:53
+msgid "Login"
+msgstr "Login"
+
+#: classes/ui/loginbox.php:25
+msgid "Heslo"
+msgstr ""
+
+#: classes/ui/loginbox.php:28
+msgid "Přihlášení"
+msgstr ""
+
+#: createaccount.php:39
+msgid "jméno je příliš krátké"
+msgstr ""
+
+#: createaccount.php:44
+msgid "příjmení je příliš krátké"
+msgstr ""
+
+#: createaccount.php:49
+msgid "jména jsou dohromady příliš dlouhá"
+msgstr ""
+
+#: createaccount.php:55
+msgid "mailová adresa je příliš krátká"
+msgstr ""
+
+#: createaccount.php:59
+msgid "email address check error"
+msgstr "email address check error"
+
+#: createaccount.php:64
+msgid "email address allready registred"
+msgstr "email address allready registred"
+
+#: createaccount.php:74
+msgid "heslo je příliš krátké"
+msgstr ""
+
+#: createaccount.php:77
+msgid "kontrola hesla nesouhlasí"
+msgstr ""
+
+#: createaccount.php:83
+#, php-format
+msgid ""
+"Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné."
+msgstr ""
+
+#: createaccount.php:104
+msgid "Zákaznický účet byl vytvořen"
+msgstr ""
+
+#: createaccount.php:129
+msgid "Zápis do databáze se nezdařil!"
+msgstr ""
+
+#: createaccount.php:184
+msgid "Registrace"
+msgstr ""
+
+#: createaccount.php:191
+msgid "Účet"
+msgstr ""
+
+#: createaccount.php:193
+msgid "přihlašovací jméno"
+msgstr ""
+
+#: createaccount.php:195
+msgid "heslo"
+msgstr ""
+
+#: createaccount.php:197
+msgid "potvrzení hesla"
+msgstr ""
+
+#: createaccount.php:199
+msgid "Osobní"
+msgstr ""
+
+#: createaccount.php:200
+msgid "jméno"
+msgstr ""
+
+#: createaccount.php:202
+msgid "příjmení"
+msgstr ""
+
+#: createaccount.php:204
+msgid "emailová adresa"
+msgstr ""
+
+#: createaccount.php:209
+msgid "Registrovat"
+msgstr ""
+
+#: createaccount.php:210
+msgid "dokončit registraci"
+msgstr ""
+
+#: createaccount.php:213
+msgid "Registrací získáš možnost spravovat své lokality a psát o nich."
+msgstr ""
+
+#: ease.php:15
+msgid "Ease Framework"
+msgstr "Ease Framework"
+
+#: ease.php:33 moloch.php:60
+msgid "Ke stažení"
+msgstr ""
+
+#: ease.php:70
+msgid "Ukázka kódu"
+msgstr ""
+
+#: ease.php:78
+msgid "Výsledek: Twitter Bootstrap tlačítko"
+msgstr ""
+
+#: ease.php:100
+msgid "Proč použít ?"
+msgstr ""
+
+#: flexibee.php:21
+msgid "Go to FlexiBee site"
+msgstr "Go to FlexiBee site"
+
+#: flexibee.php:23
+msgid ""
+"Účetní a ekonomický systém pro menší firmy a živnostníky s bohatými možnostmi "
+"integrace."
+msgstr ""
+
+#: flexibee.php:32
+msgid ""
+"Abra poskytuje pouze instalační balíčkek grafického klienta pro desktop a "
+"nebo klienta se serverem. Kdo si ale nechce na server instalovat nepotřebné "
+"grafické knihovny, ten si nainstaluje náš balíček."
+msgstr ""
+
+#: flexibee.php:37 flexibee.php:46
+msgid "Více informací"
+msgstr ""
+
+#: flexibee.php:43
+msgid "Snadno nastavitelná utilita pro každodení zálohování vašich účetních dat"
+msgstr ""
+
+#: flexibee.php:50
+msgid ""
+"Senzory pro sledování stavu FlexiBee. Použitelné v monitorovacích systémech "
+"Nagios/Icinga."
+msgstr ""
+
+#: flexibee.php:54 flexibee.php:69 flexibee.php:82 flexibee.php:89
+#: flexibee.php:101 flexibee.php:125
+msgid "Source codes"
+msgstr "Source codes"
+
+#: flexibee.php:59
+msgid "Library FlexiPeeHP"
+msgstr "Library FlexiPeeHP"
+
+#: flexibee.php:60
+msgid "PHP Knihovna pro snadnou integraci vašich aplikací a systémů"
+msgstr ""
+
+#: flexibee.php:65
+msgid "Video presentation"
+msgstr "Video presentation"
+
+#: flexibee.php:74
+msgid ""
+"Vývojářský nástroj a editor pro FlexiBee API. Napsaný s využitím knihovny "
+"FlexiPeeHP:"
+msgstr ""
+
+#: flexibee.php:78
+msgid "See in action"
+msgstr "See in action"
+
+#: flexibee.php:84
+msgid "FlexiBee Git History"
+msgstr "FlexiBee Git History"
+
+#: flexibee.php:85
+msgid ""
+"Solution for saving all flexibee changes into git repository with json files "
+"in"
+msgstr ""
+"Solution for saving all flexibee changes into git repository with json files "
+"in"
+
+#: flexibee.php:94
+msgid ""
+"Transparent Proxy for filering and modification communictation with FlexiBee "
+msgstr ""
+"Transparent Proxy for filering and modification communictation with FlexiBee "
+
+#: flexibee.php:98
+msgid "Live Demo"
+msgstr "Live Demo"
+
+#: flexibee.php:104
+msgid "Basic app for order pricelist items and reaction after incoming payment"
+msgstr "Basic app for order pricelist items and reaction after incoming payment"
+
+#: flexibee.php:109
+msgid "Live Customer Demo"
+msgstr "Live Customer Demo"
+
+#: flexibee.php:112
+msgid "Username: admin Password: admin"
+msgstr "Username: admin Password: admin"
+
+#: flexibee.php:118
+msgid "Live Admin Demo"
+msgstr "Live Admin Demo"
+
+#: flexibee.php:129
+msgid "FlexiBee enhancenments"
+msgstr "FlexiBee enhancenments"
+
+#: flexibee.php:130
+msgid ""
+"Díky několikaleté praxi s tímto systémem vám přinášíme tyto naše vylepšení, "
+"integrace a nástroje"
+msgstr ""
+
+#: hosting.php:15
+msgid "Hosting - Vitex Software"
+msgstr "Hosting - Vitex Software"
+
+#: hosting.php:17
+msgid "Nabízíme hosting na těchto platformách:"
+msgstr ""
+
+#: hosting.php:20
+msgid "NodeJS"
+msgstr "NodeJS"
+
+#: hosting.php:21
+msgid "Javascript on backend and frontend"
+msgstr "Javascript on backend and frontend"
+
+#: hosting.php:26
+msgid "Ruby on Rails"
+msgstr "Ruby on Rails"
+
+#: hosting.php:27
+msgid "Most poplular Ruby WebAPPs framework"
+msgstr "Most poplular Ruby WebAPPs framework"
+
+#: hosting.php:31
+msgid "Python Django"
+msgstr "Python Django"
+
+#: hosting.php:32
+msgid "Most Popular Python WebAPPs framework"
+msgstr "Most Popular Python WebAPPs framework"
+
+#: imap2mx.php:12
+msgid "Imap2MX for Roundcube and Squirrelmail"
+msgstr "Imap2MX for Roundcube and Squirrelmail"
+
+#: imap2mx.php:21 imap2mx.php:58
+msgid "Download"
+msgstr "Download"
+
+#: index.php:28
+msgid "EaseFramework"
+msgstr "EaseFramework"
+
+#: index.php:29
+msgid "Framework pro snadné psaní PHP aplikací"
+msgstr ""
+
+#: index.php:39
+msgid "Icinga Editor"
+msgstr "Icinga Editor"
+
+#: index.php:40
+msgid "Editor Konfigurace monitoringu"
+msgstr ""
+
+#: index.php:44
+msgid "FlexiPeeHP"
+msgstr "FlexiPeeHP"
+
+#: index.php:45
+msgid "https://github.com/Spoje-NET/FlexiPeeHP"
+msgstr ""
+
+#: index.php:46
+msgid "PHP Knihovna pro komunikaci s FlexiBee"
+msgstr "PHP Knihovna pro komunikaci s FlexiBee"
+
+#: index.php:56
+msgid "Flexplorer"
+msgstr "Flexplorer"
+
+#: index.php:57
+msgid "Vývojářský nástroj pro FlexiBee REST API"
+msgstr ""
+
+#: index.php:69
+msgid "FlexiProxy"
+msgstr "FlexiProxy"
+
+#: index.php:70
+msgid "FlexiBee modifikátor"
+msgstr "FlexiBee modifikátor"
+
+#: kontakt.php:13
+#, fuzzy
+msgid "Vitex Software - kontakty"
+msgstr "Vitex Software"
+
+#: kontakt.php:15
+msgid "Vítězslav Dvořák"
+msgstr "Vítězslav Dvořák"
+
+#: login.php:14
+msgid "Cookies required"
+msgstr "Cookies required"
+
+#: login.php:26 monitoring.php:55
+msgid "Please enter your login and password"
+msgstr "Please enter your login and password"
+
+#: login.php:29 login.php:48
+msgid "Sign in"
+msgstr "Sign in"
+
+#: login.php:42
+msgid "Welcome to VitexSoftware.cz"
+msgstr "Welcome to VitexSoftware.cz"
+
+#: login.php:52
+msgid "Username"
+msgstr "Username"
+
+#: login.php:59
+msgid "Password recovery"
+msgstr "Password recovery"
+
+#: login.php:63
+msgid "Create account"
+msgstr "Create account"
+
+#: logout.php:21
+msgid "Sign off"
+msgstr "Sign off"
+
+#: logout.php:25
+msgid "Good bye & next time"
+msgstr "Good bye & next time"
+
+#: moloch.php:14
+msgid "Fakturační systém Moloch"
+msgstr ""
+
+#: moloch.php:82 monitoring.php:52
+msgid "testovací provoz"
+msgstr ""
+
+#: moloch.php:86
+msgid "Zadejte, prosím, Vaše přihlašovací údaje:"
+msgstr ""
+
+#: monitoring.php:10
+msgid "Icinga Configurator"
+msgstr "Icinga Configurator"
+
+#: monitoring.php:23
+msgid "Monitor your network"
+msgstr "Monitor your network"
+
+#: monitoring.php:28
+msgid "Servers & Services Monitoring"
+msgstr "Servers & Services Monitoring"
+
+#: monitoring.php:30
+msgid "Windows behind NATem/firewallem monitoring"
+msgstr "Windows behind NATem/firewallem monitoring"
+
+#: monitoring.php:35
+msgid "Sign Up"
+msgstr "Sign Up"
+
+#: monitoring.php:36
+msgid "Služba jako taková je nabízena do deseti monitorovaných služeb zdarma."
+msgstr ""
+
+#: monitoring.php:37
+msgid ""
+"Nad deset monitorovaných služeb požadujeme deset korun za každý host na měsíc"
+msgstr ""
+
+#: monitoring.php:38
+msgid "Zpoplatněny jsou i notifikační SMS a to dvěmi korunami za jednu zprávu."
+msgstr ""
+
+#: monitoring.php:41
+msgid "Sign IN"
+msgstr "Sign IN"
+
+#: monitoring.php:59
+msgid "Open Source"
+msgstr "Open Source"
+
+#: monitoring.php:60
+msgid "Freedom first"
+msgstr "Freedom first"
+
+#: monitoring.php:61
+msgid ""
+"Ctíme myšlenku že software má být svobodný a proto jsou k dispozici zdrojové "
+"kódy i instalační balíčky pro debian a odvozené distribuce."
+msgstr ""
+
+#: monitoring.php:62
+msgid "Instalace zdroje a balíčku"
+msgstr ""
+
+#: monitoring.php:63
+msgid ""
+"Bude pro nás výrazem uznání kvality naší práce pokud se rozhodnete používat "
+"naše konfigurační rozhraní monitoringu i na vašem serveru."
+msgstr ""
+
+#: monitoring.php:68
+msgid "Veřejně dostupné zdrojové kódy"
+msgstr ""
+
+#: monitoring.php:70
+msgid ""
+"Pro všechny zájemce o nahlédnutí nebo i přispění do zdrojových kódů jsou "
+"dveře otevřené."
+msgstr ""
+
+#: monitoring.php:92
+msgid "Podpora"
+msgstr ""
+
+#: monitoring.php:93
+msgid "Snadný start"
+msgstr ""
+
+#: monitoring.php:94
+msgid ""
+"Ke spuštění monitoringu nejsou třeba žádné zvláštní znalosti. I přes to jsme "
+"pro vás připravili tento stručný ale názorný návod"
+msgstr ""
+
+#: monitoring.php:96
+msgid "Začínáme"
+msgstr ""
+
+#: monitoring.php:98
+msgid "Zajímá nás váš názor"
+msgstr ""
+
+#: monitoring.php:99
+msgid ""
+"Náš systém je neustále ve vývoji a tak se může stát že něco přestane "
+"fungovat. Proto oceníme pokud nám toto oznámíte. Stejně tak oceníme vaše "
+"přání a připomínky."
+msgstr ""
+
+#: newsedit.php:22
+msgid "Article was saved"
+msgstr "Article was saved"
+
+#: newsedit.php:24
+msgid "Article was not saved"
+msgstr "Article was not saved"
+
+#: newsedit.php:30
+msgid "Article was deleted"
+msgstr "Article was deleted"
+
+#: newsedit.php:32
+msgid "Article was not deleted"
+msgstr "Article was not deleted"
+
+#: newsedit.php:38
+msgid "Vitex Software news editor"
+msgstr "Vitex Software news editor"
+
+#: passwordrecovery.php:29
+msgid "Nové heslo pro "
+msgstr ""
+
+#: passwordrecovery.php:30
+msgid "Tvoje přihlašovací údaje byly změněny:\n"
+msgstr ""
+
+#: passwordrecovery.php:62
+msgid "Zaslat nové heslo"
+msgstr ""
+
+#: passwordrecovery.php:68
+msgid "Pokračovat"
+msgstr ""
+
+#: repos.php:19 repostats.php:19
+msgid "Deb Repository"
+msgstr ""
+
+#: repos.php:25 repostats.php:25
+msgid "How to use repository"
+msgstr ""
+
+#: repos.php:39 repostats.php:39
+#, php-format
+msgid "apt-get update feeded %d times"
+msgstr "apt-get update feeded %d times"
+
+#: repos.php:81 repostats.php:81
+msgid "Package name"
+msgstr "Package name"
+
+#: repos.php:81 repostats.php:81
+msgid "Version"
+msgstr "Version"
+
+#: repos.php:81 repostats.php:81
+msgid "Age"
+msgstr "Age"
+
+#: repos.php:81 repostats.php:81
+msgid "Release date"
+msgstr "Release date"
+
+#: repos.php:82 repostats.php:82
+msgid "Size"
+msgstr "Size"
+
+#: repos.php:83 repostats.php:83
+msgid "Package"
+msgstr "Package"
+
+#: repos.php:109 repostats.php:126
+msgid "Packages"
+msgstr "Packages"
+
+#: repos.php:112 repostats.php:127
+msgid "Instructions"
+msgstr "Instructions"
+
+#: repos.php:115
+msgid "download count details"
+msgstr "download count details"
+
+#: repos.php:115
+msgid "please wait"
+msgstr "please wait"
+
+#: repostats.php:83
+msgid "Installs"
+msgstr "Installs"
+
+#: repostats.php:83
+msgid "Downloads"
+msgstr "Downloads"
+
+#: tbpackage.php:48
+msgid "unofficial Twitter Bootstrap Debian/Ubuntu packages"
+msgstr "unofficial Twitter Bootstrap Debian/Ubuntu packages"
+
+#: tbpackage.php:121
+msgid "Debian installation"
+msgstr "Debian installation"
+
+#: tbpackage.php:122
+msgid "Usage"
+msgstr "Usage"
+
+#: umim.php:20
+msgid "Co umím"
+msgstr ""
+
+#: umim.php:23
+msgid "Správa serverů"
+msgstr ""
+
+#: umim.php:32
+msgid "Správa sítě"
+msgstr ""
+
+#: umim.php:40
+msgid "Vývoj aplikací"
+msgstr ""
+
+#: umim.php:46
+msgid "Servis aplikací"
+msgstr ""
+
+#: umim.php:56
+msgid "Bezpečnostní audity"
+msgstr ""
+
+#~ msgid "About application"
+#~ msgstr "About application"
+
+#~ msgid "Used Libraries"
+#~ msgstr "Used Libraries"
+
+#~ msgid "ChangesAPI was enabled"
+#~ msgstr "ChangesAPI was enabled"
+
+#~ msgid "ChangesAPI was disabled"
+#~ msgstr "ChangesAPI was disabled"
+
+#~ msgid "Hook %s was registered"
+#~ msgstr "Hook %s was registered"
+
+#~ msgid "Hook %s not registered"
+#~ msgstr "Hook %s not registered"
+
+#~ msgid "Hook was unregistered"
+#~ msgstr "Hook was unregistered"
+
+#~ msgid "Hook was not unregistered"
+#~ msgstr "Hook was not unregistered"
+
+#~ msgid "Hook refreshed"
+#~ msgstr "Hook refreshed"
+
+#~ msgid "Hook refresh failed"
+#~ msgstr "Hook refresh failed"
+
+#~ msgid "ChangesAPI Tool"
+#~ msgstr "ChangesAPI Tool"
+
+#~ msgid "Enable"
+#~ msgstr "Enable"
+
+#~ msgid "Disable"
+#~ msgstr "Disable"
+
+#~ msgid "Changes API"
+#~ msgstr "Changes API"
+
+#~ msgid ""
+#~ "If it is turned on , FlexiBee records all changes made ​​to the database "
+#~ "company in the changelog and provides a list of changes recovered"
+#~ msgstr ""
+#~ "If it is turned on , FlexiBee records all changes made ​​to the database "
+#~ "company in the changelog and provides a list of changes recovered"
+
+#~ msgid "Web Hook"
+#~ msgstr "Web Hook"
+
+#~ msgid ""
+#~ "When the database FlexiBee to change the POST HTTP request sent to all "
+#~ "registered URL"
+#~ msgstr ""
+#~ "When the database FlexiBee to change the POST HTTP request sent to all "
+#~ "registered URL"
+
+#~ msgid "Data format"
+#~ msgstr "Data format"
+
+#~ msgid "Skip URL test"
+#~ msgstr "Skip URL test"
+
+#~ msgid "Suppress URL functionality test"
+#~ msgstr "Suppress URL functionality test"
+
+#~ msgid ""
+#~ "Version of which will begin sending FOLLOW changes , ie. The next higher "
+#~ "version . The default value is equal to the current global version "
+#~ "( globalVersion ) at the moment of registration Hook. Permissible values ​​"
+#~ "are in the range [ 0 , % s ]"
+#~ msgstr ""
+#~ "Version of which will begin sending FOLLOW changes , ie. The next higher "
+#~ "version . The default value is equal to the current global version "
+#~ "( globalVersion ) at the moment of registration Hook. Permissible values ​​"
+#~ "are in the range [ 0 , % s ]"
+
+#~ msgid "Security Code"
+#~ msgstr "Security Code"
+
+#~ msgid ""
+#~ "Any string (eg. %s) that will be sent with each change notifications in "
+#~ "the HTTP header. Used to easily verify that include incoming notifications "
+#~ "you registered Hook. Key name is in the HTTP header X-FB-Hook-SecKey ."
+#~ msgstr ""
+#~ "Any string (eg. %s) that will be sent with each change notifications in "
+#~ "the HTTP header. Used to easily verify that include incoming notifications "
+#~ "you registered Hook. Key name is in the HTTP header X-FB-Hook-SecKey ."
+
+#~ msgid "Perform operation"
+#~ msgstr "Perform operation"
+
+#~ msgid "Test"
+#~ msgstr "Test"
+
+#~ msgid "ChangesAPI & WebHooks"
+#~ msgstr "ChangesAPI & WebHooks"
+
+#~ msgid "Deleted"
+#~ msgstr "Deleted"
+
+#~ msgid "Record was added"
+#~ msgstr "Record was added"
+
+#~ msgid "Record was not added"
+#~ msgstr "Record was not added"
+
+#~ msgid "Record update failed"
+#~ msgstr "Record update failed"
+
+#~ msgid "Unserialization error %s #%s "
+#~ msgstr "Unserialization error %s #%s "
+
+#~ msgid "File %s was used"
+#~ msgstr "File %s was used"
+
+#~ msgid "URL %s was used"
+#~ msgstr "URL %s was used"
+
+#~ msgid "Error %s obataing %s"
+#~ msgstr "Error %s obataing %s"
+
+#~ msgid "No search results"
+#~ msgstr "No search results"
+
+#~ msgid "Login Failed"
+#~ msgstr "Login Failed"
+
+#~ msgid "Loading evidence list failed"
+#~ msgstr "Loading evidence list failed"
+
+#~ msgid "About"
+#~ msgstr "About"
+
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#~ msgid "Remeber me"
+#~ msgstr "Remeber me"
+
+#~ msgid "Settings"
+#~ msgstr "Settings"
+
+#~ msgid "Click to hide messages"
+#~ msgstr "Click to hide messages"
+
+#~ msgid "Save"
+#~ msgstr "Save"
+
+#~ msgid "Save & go to listing"
+#~ msgstr "Save & go to listing"
+
+#~ msgid "Save and next"
+#~ msgstr "Save and next"
+
+#~ msgid "ColumnsGroups"
+#~ msgstr "ColumnsGroups"
+
+#~ msgid "Mandatory"
+#~ msgstr "Mandatory"
+
+#~ msgid "ID List"
+#~ msgstr "ID List"
+
+#~ msgid "Summary List"
+#~ msgstr "Summary List"
+
+#~ msgid "Full List"
+#~ msgstr "Full List"
+
+#~ msgid "Sortable"
+#~ msgstr "Sortable"
+
+#~ msgid "Non Sortable"
+#~ msgstr "Non Sortable"
+
+#~ msgid "Writable"
+#~ msgstr "Writable"
+
+#~ msgid "Read Only"
+#~ msgstr "Read Only"
+
+#~ msgid "Json"
+#~ msgstr "Json"
+
+#~ msgid "XML"
+#~ msgstr "XML"
+
+#~ msgid "Add"
+#~ msgstr "Add"
+
+#~ msgid "Edit"
+#~ msgstr "Edit"
+
+#~ msgid "Select All"
+#~ msgstr "Select All"
+
+#~ msgid "Title missing"
+#~ msgstr "Title missing"
+
+#~ msgid "Please mark some rows"
+#~ msgstr "Please mark some rows"
+
+#~ msgid "Show in editor"
+#~ msgstr "Show in editor"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Required"
+#~ msgstr "Required"
+
+#~ msgid "Edit targeted record"
+#~ msgstr "Edit targeted record"
+
+#~ msgid "Unknown type of data %s"
+#~ msgstr "Unknown type of data %s"
+
+#~ msgid "Type"
+#~ msgstr "Type"
+
+#~ msgid "Columns"
+#~ msgstr "Columns"
+
+#~ msgid "External IDs"
+#~ msgstr "External IDs"
+
+#~ msgid "Query"
+#~ msgstr "Query"
+
+#~ msgid "Remove"
+#~ msgstr "Remove"
+
+#~ msgid "New"
+#~ msgstr "New"
+
+#~ msgid "Company"
+#~ msgstr "Company"
+
+#~ msgid "Overview"
+#~ msgstr "Overview"
+
+#~ msgid "Evidence"
+#~ msgstr "Evidence"
+
+#~ msgid "Tools"
+#~ msgstr "Tools"
+
+#~ msgid "WebHook test"
+#~ msgstr "WebHook test"
+
+#~ msgid "Accounting period"
+#~ msgstr "Accounting period"
+
+#~ msgid "Search"
+#~ msgstr "Search"
+
+#~ msgid "Close"
+#~ msgstr "Close"
+
+#~ msgid "Support"
+#~ msgstr "Support"
+
+#~ msgid "Services"
+#~ msgstr "Services"
+
+#~ msgid "Docs"
+#~ msgstr "Docs"
+
+#~ msgid "Author"
+#~ msgstr "Author"
+
+#~ msgid "Sponsored by"
+#~ msgstr "Sponsored by"
+
+#~ msgid "URL"
+#~ msgstr "URL"
+
+#~ msgid "URL Compositon"
+#~ msgstr "URL Compositon"
+
+#~ msgid "Query body Text"
+#~ msgstr "Query body Text"
+
+#~ msgid "Query body from File"
+#~ msgstr "Query body from File"
+
+#~ msgid "This file overwrite \"request body\""
+#~ msgstr "This file overwrite \"request body\""
+
+#~ msgid "Get Query Body from url"
+#~ msgstr "Get Query Body from url"
+
+#~ msgid "Method"
+#~ msgstr "Method"
+
+#~ msgid "Supported HTTP Operations"
+#~ msgstr "Supported HTTP Operations"
+
+#~ msgid "Format"
+#~ msgstr "Format"
+
+#~ msgid "Send"
+#~ msgstr "Send"
+
+#~ msgid "Make new request from this response"
+#~ msgstr "Make new request from this response"
+
+#~ msgid "Save this response to file"
+#~ msgstr "Save this response to file"
+
+#~ msgid "Yes"
+#~ msgstr "Yes"
+
+#~ msgid "No"
+#~ msgstr "No"
+
+#~ msgid "Please sign in as admin first"
+#~ msgstr "Please sign in as admin first"
+
+#~ msgid "Record Delete"
+#~ msgstr "Record Delete"
+
+#~ msgid "Keep record"
+#~ msgstr "Keep record"
+
+#~ msgid "Delete record"
+#~ msgstr "Delete record"
+
+#~ msgid "New record"
+#~ msgstr "New record"
+
+#~ msgid "Evidence %s does not exist"
+#~ msgstr "Evidence %s does not exist"
+
+#~ msgid "Evidence %s"
+#~ msgstr "Evidence %s"
+
+#~ msgid "Column Groups"
+#~ msgstr "Column Groups"
+
+#~ msgid "User Query"
+#~ msgstr "User Query"
+
+#~ msgid "Items overview"
+#~ msgstr "Items overview"
+
+#~ msgid "no"
+#~ msgstr "no"
+
+#~ msgid "yes"
+#~ msgstr "yes"
+
+#~ msgid "Allowed by license"
+#~ msgstr "Allowed by license"
+
+#~ msgid "Relations"
+#~ msgstr "Relations"
+
+#~ msgid "Info"
+#~ msgstr "Info"
+
+#~ msgid "Evidences"
+#~ msgstr "Evidences"
+
+#~ msgid "License"
+#~ msgstr "License"
+
+#~ msgid "Availble %s"
+#~ msgstr "Availble %s"
+
+#~ msgid "Unlicensed %s"
+#~ msgstr "Unlicensed %s"
+
+#~ msgid "All %s"
+#~ msgstr "All %s"
+
+#~ msgid "licence ok"
+#~ msgstr "licence ok"
+
+#~ msgid "unavialble"
+#~ msgstr "unavialble"
+
+#~ msgid "WebHook successfully triggered"
+#~ msgstr "WebHook successfully triggered"
+
+#~ msgid "WebHook returns non empty response"
+#~ msgstr "WebHook returns non empty response"
+
+#~ msgid "Which version of the changes will begin sending following changes"
+#~ msgstr "Which version of the changes will begin sending following changes"
+
+#~ msgid "Operation"
+#~ msgstr "Operation"
+
+#~ msgid "Record number"
+#~ msgstr "Record number"
+
+#~ msgid "Internal number of record edited"
+#~ msgstr "Internal number of record edited"
+
+#~ msgid "External number"
+#~ msgstr "External number"
+
+#~ msgid "External number of record edited"
+#~ msgstr "External number of record edited"
+
+#~ msgid "Build change"
+#~ msgstr "Build change"
+
+#~ msgid "Choose Registered"
+#~ msgstr "Choose Registered"
+
+#~ msgid ""
+#~ "When the database FlexiBee is changed the POST HTTP request sent to all "
+#~ "registered URL"
+#~ msgstr ""
+#~ "When the database FlexiBee is changed the POST HTTP request sent to all "
+#~ "registered URL"
+
+#~ msgid "Response"
+#~ msgstr "Response"
+
+#~ msgid "Request"
+#~ msgstr "Request"
+
+#~ msgid "WebHook probe"
+#~ msgstr "WebHook probe"
+
+#~ msgid "server info"
+#~ msgstr "server info"
+
+#~ msgid "license info"
+#~ msgstr "license info"
+
+#~ msgid "Server added to bookmarks"
+#~ msgstr "Server added to bookmarks"
+
+#~ msgid "Signed in as: "
+#~ msgstr "Signed in as: "
+
+#~ msgid "Login History"
+#~ msgstr "Login History"
+
+#~ msgid "FlexiBee server URL. ex.: https://localhost:5434"
+#~ msgstr "FlexiBee server URL. ex.: https://localhost:5434"
+
+#~ msgid "Login name"
+#~ msgstr "Login name"
+
+#~ msgid "User's password"
+#~ msgstr "User's password"
+
+#~ msgid "Add this to Login History"
+#~ msgstr "Add this to Login History"
+
+#~ msgid "display the contents of all the available records in all companies"
+#~ msgstr "display the contents of all the available records in all companies"
+
+#~ msgid "show the structure of evidence"
+#~ msgstr "show the structure of evidence"
+
+#~ msgid "send direct requests to the server and display results"
+#~ msgstr "send direct requests to the server and display results"
+
+#~ msgid "set up ChangesAPI and add WebHooks"
+#~ msgstr "set up ChangesAPI and add WebHooks"
+
+#~ msgid "Test WebHook script processing changes from FlexiBee answers"
+#~ msgstr "Test WebHook script processing changes from FlexiBee answers"
+
+#~ msgid "Collectively establish and abolish the accounting period"
+#~ msgstr "Collectively establish and abolish the accounting period"
+
+#~ msgid "Evidnece distinguish which are inaccessible because of the license"
+#~ msgstr "Evidnece distinguish which are inaccessible because of the license"
+
+#~ msgid "Shown next to json result of the request and page FlexiBee"
+#~ msgstr "Shown next to json result of the request and page FlexiBee"
+
+#~ msgid "Edit External ID numbers"
+#~ msgstr "Edit External ID numbers"
+
+#~ msgid "Features"
+#~ msgstr "Features"
+
+#~ msgid "Sign out"
+#~ msgstr "Sign out"
+
+#~ msgid "Thank you for your patronage and look forward to another visit"
+#~ msgstr "Thank you for your patronage and look forward to another visit"
+
+#~ msgid "Main Page"
+#~ msgstr "Main Page"
+
+#~ msgid "Custom request"
+#~ msgstr "Custom request"
+
+#~ msgid "Search results"
+#~ msgstr "Search results"
+
+#~ msgid "Search for %s results in %s"
+#~ msgstr "Search for %s results in %s"
+
+#~ msgid "History empty"
+#~ msgstr "History empty"
+
+#~ msgid "Reset history"
+#~ msgstr "Reset history"
+
+#~ msgid "Year %s was unregistred"
+#~ msgstr "Year %s was unregistred"
+
+#~ msgid "Year %s was not unregistred"
+#~ msgstr "Year %s was not unregistred"
+
+#~ msgid "Year was unregistred"
+#~ msgstr "Year was unregistred"
+
+#~ msgid "Year was not unregistred"
+#~ msgstr "Year was not unregistred"
+
+#~ msgid "From Year"
+#~ msgstr "From Year"
+
+#~ msgid "To Year"
+#~ msgstr "To Year"
+
+#~ msgid "Registered Accounting periods"
+#~ msgstr "Registered Accounting periods"
+
+#~ msgid "Remove unused"
+#~ msgstr "Remove unused"
+
+#~ msgid "Tool for massive creating Accounting periods"
+#~ msgstr "Tool for massive creating Accounting periods"
+
+#~ msgid "Evidence proprties overview"
+#~ msgstr "Evidence proprties overview"
+
+#~ msgid "Structure"
+#~ msgstr "Structure"
+
+#~ msgid "Custom query"
+#~ msgstr "Custom query"
+
+#~ msgid "Query does not sent yet"
+#~ msgstr "Query does not sent yet"
+
+#~ msgid "targeted evidence"
+#~ msgstr "targeted evidence"
+
+#~ msgid "subitems collection name"
+#~ msgstr "subitems collection name"
+
+#~ msgid "File"
+#~ msgstr "File"
+
+#~ msgid "Welcome"
+#~ msgstr "Welcome"
+
+#~ msgid "Dotaz nebyl zatím odeslán"
+#~ msgstr "Dotaz nebyl zatím odeslán"
+
+#~ msgid "Nothig here yet"
+#~ msgstr "Nothig here yet"
+
+#, fuzzy
+#~ msgid "Záznam nebyl uložen"
+#~ msgstr "Dotaz nebyl zatím odeslán"
+
+#, fuzzy
+#~ msgid "Struktura"
+#~ msgstr "Structure"
+
+#, fuzzy
+#~ msgid "Rok nebyl odregistrován"
+#~ msgstr "Dotaz nebyl zatím odeslán"
+
+#, fuzzy
+#~ msgid "Přeskočit test URL"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Evidence [roprties overview"
+#~ msgstr "Evidence properties overview"
+
+#, fuzzy
+#~ msgid "Test Web Hooku"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Přehled vlastností evidence"
+#~ msgstr "Evidence"
+
+#, fuzzy
+#~ msgid "Dotaz"
+#~ msgstr "Dotaz nebyl zatím odeslán"
+
+#, fuzzy
+#~ msgid "Uložit do FlexiBee"
+#~ msgstr "FlexiBee"

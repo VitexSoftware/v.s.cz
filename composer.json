@@ -8,14 +8,9 @@
             "email": "info@vitexsoftware.cz"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "config": {
         "vendor-dir": "/var/lib/v.s.cz/"
-    },
-    "require": {
-        "php": ">= 5.5.9",
-        "flexipeehp": "*",
-        "vitexsoftware/ease-framework": "*"
     },
     "autoload": {
         "psr-4": {
@@ -23,10 +18,12 @@
             "VSCZ\\ui\\": "classes/ui/"
         }
     },
+    "require": {
+        "php": ">= 5.5.9",
+        "flexipeehp": "*",
+        "ease-framework": "*"
+    },
     "repositories": [
-        {
-            "packagist.org": false
-        },
         {
             "type": "path",
             "url": "/usr/share/php/Ease",

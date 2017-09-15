@@ -15,7 +15,7 @@ class PageBottom extends \Ease\TWB\Container
     public function __construct($content = null)
     {
         parent::__construct($content);
-        $this->SetTagID('footer');
+        $this->setTagID('footer');
         $this->addItem('<hr>');
 
         $rowFluid1 = new \Ease\TWB\Row;
@@ -27,6 +27,10 @@ class PageBottom extends \Ease\TWB\Container
             'GitHub'));
         $listA1->addItemSmart(new \Ease\Html\ATag('https://hub.docker.com/u/vitexsoftware/',
             'DockerHUB'));
+        $listA1->addItemSmart(new \Ease\Html\ATag('https://atlas.hashicorp.com/vitexsoftware/',
+            'Vagrant'));
+
+
 
 
         $colB   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
@@ -35,15 +39,16 @@ class PageBottom extends \Ease\TWB\Container
         $listB1->addItemSmart(new \Ease\Html\ATag('ease.php', 'Ease Framework'));
         $listB1->addItemSmart(new \Ease\Html\ATag('monitoring.php',
             'Icinga Editor'));
-        $listB1->addItemSmart(new \Ease\Html\ATag('moloch.php', 'Moloch'));
+        $listB1->addItemSmart(new \Ease\Html\ATag('/flexplorer', 'FlexPlorer'));
+        $listB1->addItemSmart(new \Ease\Html\ATag('http://flexiproxy.vitexsoftware.cz/',
+            'FlexyProxy'));
 
         $colC   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
         $listC1 = $colC->addItem(new \Ease\Html\UlTag(_('Služby'),
             ['style' => 'list-style-type: none']));
         $listC1->addItemSmart(new \Ease\Html\ATag('monitoring.php', 'Monitoring'));
         $listC1->addItemSmart(new \Ease\Html\ATag('repos.php', _('Repozitář')));
-        $listC1->addItemSmart(new \Ease\Html\ATag('http://h.v.s.cz/',
-            _('Hosting')));
+        $listC1->addItemSmart(new \Ease\Html\ATag('hosting.php', _('Hosting')));
 
         $colD   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
         $listD1 = $colD->addItem(new \Ease\Html\UlTag(_('Dokumentace'),
@@ -84,7 +89,7 @@ class PageBottom extends \Ease\TWB\Container
 
         $rowFluid2->addItem(new \Ease\TWB\Col(12,
             [new \Ease\TWB\Col(8, $socialIcons), new \Ease\TWB\Col(4,
-                _('&copy; 2012-2015 Vitex Software'))]));
+                _('&copy; 2012-2017 Vitex Software'))]));
 
         $this->addItem($rowFluid2);
     }

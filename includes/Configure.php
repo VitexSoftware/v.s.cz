@@ -8,6 +8,8 @@
  */
 date_default_timezone_set('Europe/Prague');
 
+define('EASE_APPNAME', 'vscz');
+
 /**
  * Adresa odesilatele  
  */
@@ -27,11 +29,18 @@ define('DB_SERVER_PASSWORD', 'TeacPets4');
 /**
  * Název databáze
  */
-define('DB_DATABASE', 'apachelogs');
-
-define('DB_TYPE', 'mysql');
+//define('DB_DATABASE', 'apachelogs');
+//define('DB_TYPE', 'mysql');
 
 /**
  * Adresář pro zápis logů 
  */
 define('LOG_DIRECTORY', '/var/tmp/');
+
+
+define('DB_TYPE', 'mysql');
+define('DB_HOST', 'localhost');
+define('DB_PORT', 3306);
+define('DB_DATABASE', 'vscz');
+define('DB_USERNAME', 'vscz');
+define('DB_PASSWORD', 'TusVecFer.ow5');
