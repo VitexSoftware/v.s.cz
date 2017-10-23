@@ -36,23 +36,22 @@ if (isset($_POST) && count($_POST)) {
 
     if (strlen($firstname) < 2) {
         $error = true;
-        $OUser->addStatusMessage(_('jméno je příliš krátké'), 'warning');
+        $OUser->addStatusMessage(_('Name is too short'), 'warning');
     }
 
     if (strlen($lastname) < 2) {
         $error = true;
-        $OUser->addStatusMessage(_('příjmení je příliš krátké'), 'warning');
+        $OUser->addStatusMessage(_('Lastname is too short'), 'warning');
     }
 
     if (strlen($firstname) + strlen($lastname) > 30) {
         $error = true;
-        $OUser->addStatusMessage(_('jména jsou dohromady příliš dlouhá'),
-            'warning');
+        $OUser->addStatusMessage(_('the names are too long together'), 'warning');
     }
 
     if (strlen($email_address) < 5) {
         $error = true;
-        $OUser->addStatusMessage(_('mailová adresa je příliš krátká'), 'warning');
+        $OUser->addStatusMessage(_('mail address is too short'), 'warning');
     } else {
         if (!$OUser->isEmail($email_address, true)) {
             $error = true;
@@ -71,16 +70,16 @@ if (isset($_POST) && count($_POST)) {
 
     if (strlen($password) < 5) {
         $error = true;
-        $OUser->addStatusMessage(_('heslo je příliš krátké'), 'warning');
+        $OUser->addStatusMessage(_('the password is too short'), 'warning');
     } elseif ($password != $confirmation) {
         $error = true;
-        $OUser->addStatusMessage(_('kontrola hesla nesouhlasí'), 'warning');
+        $OUser->addStatusMessage(_('password check disagrees'), 'warning');
     }
 
     $oPage->MyDbLink->ExeQuery('SELECT id FROM users WHERE login=\''.$oPage->EaseAddSlashes($login).'\'');
     if ($oPage->MyDbLink->GetNumRows()) {
         $error = true;
-        $OUser->addStatusMessage(sprintf(_('Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné.'),
+        $OUser->addStatusMessage(sprintf(_('The specified username %s is already in the database. Please choose another one.'),
                 $login), 'warning');
     }
 
@@ -101,38 +100,31 @@ if (isset($_POST) && count($_POST)) {
         if ($CustomerID) {
             $NewOUser->SetMyKey($CustomerID);
 
-            $OUser->addStatusMessage(_('Zákaznický účet byl vytvořen'),
-                'success');
+            $OUser->addStatusMessage(_('účet byl vytvořen'), 'success');
             $NewOUser->LoginSuccess();
 
-            $Email = $oPage->addItem(new EaseMail($NewOUser->getDataValue('email'),
-                'Potvrzení registrace'));
-            $Email->SetMailHeaders(['From' => EMAIL_FROM]);
-            $Email->addItem(new \Ease\Html\Div("Právě jste byl/a zaregistrován/a do Apl   ikace LB s těmito přihlašovacími údaji:\n"));
-            $Email->addItem(new \Ease\Html\Div(' Login: '.$NewOUser->GetUserLogin()."\n"));
-            $Email->addItem(new \Ease\Html\Div(' Heslo: '.$_POST['password']."\n"));
-            $Email->Send();
+            $email = $oPage->addItem(new EaseMail($NewOUser->getDataValue('email'),
+                    'Potvrzení'));
+            $email->SetMailHeaders(['From' => EMAIL_FROM]);
+            $email->addItem(new \Ease\Html\Div("Právě jste byl/a zaregistrován/a do Apl   ikace LB s těmito přihlašovacími údaji:\n"));
+            $email->addItem(new \Ease\Html\Div(' Login: '.$NewOUser->GetUserLogin()."\n"));
+            $email->addItem(new \Ease\Html\Div(' Heslo: '.$_POST['password']."\n"));
+            $email->Send();
 
-            $Email = $oPage->addItem(new EaseShopMail(SEND_ORDERS_TO,
-                'Nová registrace do LBu: '.$NewOUser->getUserLogin()));
-            $Email->SetMailHeaders(['From' => EMAIL_FROM]);
-            $Email->addItem(new \Ease\Html\Div("Do id právě zaregistrován nový uživatel:\n"));
-            $Email->addItem(new \Ease\Html\DivTag('login',
-                ' Login: '.$NewOUser->getUserLogin()."\n"));
-            $Email->addItem($NewOUser->CustomerAddress);
-            $Email->Send();
+            $email = $oPage->addItem(new \Ease\Mailer(SEND_ORDERS_TO,
+                    'Nová registrace do v.s.cz: '.$NewOUser->getUserLogin()));
+            $email->SetMailHeaders(['From' => EMAIL_FROM]);
+            $email->addItem(new \Ease\Html\Div("Do id právě zaregistrován nový uživatel:\n"));
+            $email->addItem(new \Ease\Html\DivTag('login',
+                    ' Login: '.$NewOUser->getUserLogin()."\n"));
+            $email->addItem($NewOUser->CustomerAddress);
+            $email->Send();
 
             $_SESSION['User'] = clone $NewOUser;
             $oPage->Redirect('index.php');
             exit;
         } else {
-            $OUser->addStatusMessage(_('Zápis do databáze se nezdařil!'),
-                'error');
-            $Email = $oPage->addItem(new EaseMail(constant('SEND_ORDERS_TO'),
-                'Registrace uzivatel se nezdařila'));
-            $Email->addItem(new \Ease\Html\DivTag('Fegistrace',
-                $oPage->printPre($CustomerData)));
-            $Email->Send();
+            $oUser->addStatusMessage(_('Database entry failed!'), 'error');
         }
     }
 }
@@ -181,42 +173,39 @@ input.ui-button { width: 100%; }
 ');
 
 
-$oPage->addItem(new \VSCZ\ui\PageTop(_('Registrace')));
+$oPage->addItem(new \VSCZ\ui\PageTop(_('Sign On')));
 $oPage->AddPageColumns();
 
-$RegForm = $oPage->column2->addItem(new \Ease\Html\Form('create_account',
+$regForm = $oPage->column2->addItem(new \Ease\Html\Form('create_account',
     'createaccount.php'));
-$RegForm->SetTagID('LoginForm');
+$regForm->SetTagID('LoginForm');
 
-$Account = new \Ease\Html\H3Tag(_('Účet'));
-$Account->addItem(new EaseLabeledTextInput('login', null,
-    _('přihlašovací jméno').' *'));
-$Account->addItem(new EaseLabeledPasswordStrongInput('password', null,
-    _('heslo').' *'));
-$Account->addItem(new EaseLabeledPasswordControlInput('confirmation', null,
-    _('potvrzení hesla').' *', ['id' => 'confirmation']));
+$account = new \Ease\Html\H3Tag(_('Account'));
+$account->addItem(new EaseLabeledTextInput('login', null, _('Username').' *'));
+$account->addItem(new EaseLabeledPasswordStrongInput('password', null,
+        _('Password').' *'));
+$account->addItem(new EaseLabeledPasswordControlInput('confirmation', null,
+        _('Password confirmation').' *', ['id' => 'confirmation']));
 
-$Personal = new \Ease\Html\H3Tag(_('Osobní'));
-$Personal->addItem(new EaseLabeledTextInput('firstname', null, _('jméno').' *'));
-$Personal->addItem(new EaseLabeledTextInput('lastname', null,
-    _('příjmení').' *'));
-$Personal->addItem(new EaseLabeledTextInput('email_address', null,
-    _('emailová adresa').' *'.' (pouze malými písmeny)'));
+$personal = new \Ease\Html\H3Tag(_('Osobní'));
+$personal->addItem(new EaseLabeledTextInput('firstname', null, _('jméno').' *'));
+$personal->addItem(new EaseLabeledTextInput('lastname', null, _('příjmení').' *'));
+$personal->addItem(new EaseLabeledTextInput('email_address', null,
+        _('emailová adresa').' * ('._('lowercase letters only').')'));
 
-$RegForm->addItem(new \Ease\Html\DivTag('Account', $Account));
-$RegForm->addItem(new \Ease\Html\DivTag('Personal', $Personal));
-$RegForm->addItem(new \Ease\Html\DivTag('Submit',
-    new EaseJQuerySubmitButton('Register', _('Registrovat'),
-    _('dokončit registraci'), [])));
+$regForm->addItem(new \Ease\Html\DivTag('Account', $account));
+$regForm->addItem(new \Ease\Html\DivTag('Personal', $personal));
+$regForm->addItem(new \Ease\Html\DivTag('Submit',
+    new EaseJQuerySubmitButton('Register', _('Register'), _('finish'), [])));
 
 $oPage->column1->addItem(new \Ease\Html\DivTag('WelcomeHint',
-    _('Registrací získáš možnost spravovat své lokality a psát o nich.')));
+    _('Letsgo')));
 
 if (isset($_POST)) {
-    $RegForm->FillUp($_POST);
+    $regForm->FillUp($_POST);
 }
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
 $oPage->draw();
-?>
+
 

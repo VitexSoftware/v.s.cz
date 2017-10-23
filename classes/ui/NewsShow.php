@@ -24,12 +24,11 @@ class NewsShow extends \Ease\Container
         $news = $datasource->dblink->queryToArray($query, 'id', 'id');
         if (count($news)) {
             foreach ($news as $article) {
-
                 $articletext = $this->addItem(new \Ease\Html\Div(new \Ease\Html\H1Tag($article['title']),
-                    ['class' => 'smokeback']));
+                        ['class' => 'smokeback']));
                 $articletext->addItem(new \Ease\Html\Div($article['text']));
                 $articletext->addItem(new \Ease\Html\Div('<hr><div style="text-align: right"><small>'.$article['login'].' '.strftime("%d/%m/%Y %H:%M:%S",
-                        strtotime($article['DatCreate'])).'</small></div>'));
+                            strtotime($article['DatCreate'])).'</small></div>'));
             }
         } else {
             $this->addItem(new \Ease\TWB\Label('warning', _('No articles')));

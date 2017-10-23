@@ -5,15 +5,9 @@ namespace VSCZ;
 /**
  * VitexSoftware - titulní strana
  *
- * @package    VS
- * @subpackage WebUI
  * @author     Vitex <vitex@hippy.cz>
- * @copyright  2012 Vitex@hippy.cz (G)
+ * @copyright  2012-2017 Vitex@hippy.cz (G)
  */
-//if (!strstr($_SERVER['SERVER_NAME'], 'www.vitexsoftware.cz') || ($_SERVER['SERVER_PORT'] != 443)) {
-//    header('Location: https://www.vitexsoftware.cz/');
-//    exit;
-//}
 
 require_once 'includes/VSInit.php';
 

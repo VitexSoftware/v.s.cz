@@ -25,14 +25,14 @@ if ($EmailTo) {
         $PassChanger = new LBUser($UserID);
         $PassChanger->PasswordChange($NewPassword);
 
-        $Email = $oPage->addItem(new EaseShopMail($UserEmail,
+        $email = $oPage->addItem(new EaseShopMail($UserEmail,
             _('Nové heslo pro ').$_SERVER['SERVER_NAME']));
-        $Email->addItem(_("Tvoje přihlašovací údaje byly změněny:\n"));
+        $email->addItem(_("Tvoje přihlašovací údaje byly změněny:\n"));
 
-        $Email->addItem(' Login: '.$UserLogin."\n");
-        $Email->addItem(' Heslo: '.$NewPassword."\n");
+        $email->addItem(' Login: '.$UserLogin."\n");
+        $email->addItem(' Heslo: '.$NewPassword."\n");
 
-        $Email->Send();
+        $email->Send();
 
         $OUser->addStatusMessage('Tvoje nové heslo vám bylo odesláno mailem na zadanou adresu <strong>'.$_REQUEST['Email'].'</strong>');
         $Success = true;

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VitexSoftware\n"
-"POT-Creation-Date: 2017-09-12 18:14+0200\n"
-"PO-Revision-Date: 2017-09-12 18:14+0200\n"
+"POT-Creation-Date: 2017-10-23 08:34+0200\n"
+"PO-Revision-Date: 2017-10-23 08:36+0200\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
 "Language: en\n"
@@ -16,21 +16,29 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: vendor\n"
 
-#: cenik.php:14 index.php:20 kontakt.php:28 reference.php:13
+#: article.php:20 articles.php:20 classes/ui/MainMenu.php:49
+msgid "Articles"
+msgstr "Articles"
+
+#: article.php:26 index.php:86
+msgid "More articles"
+msgstr "More articles"
+
+#: cenik.php:14 index.php:14 kontakt.php:25 reference.php:13
 msgid "Vitex Software"
 msgstr "Vitex Software"
 
 #: cenik.php:19
-msgid "Práce na dálku programování/administrace"
-msgstr ""
+msgid "Remote programming / administration work"
+msgstr "Remote programming / administration work"
 
 #: cenik.php:25
-msgid "Práce na místě programování/administrace"
-msgstr ""
+msgid "On-site programming / administration work"
+msgstr "On-site programming / administration work"
 
 #: classes/ui/MainMenu.php:26
-msgid "Repo"
-msgstr "Repo"
+msgid "Debian Repository"
+msgstr "Debian Repository"
 
 #: classes/ui/MainMenu.php:29
 msgid "Projects"
@@ -56,13 +64,13 @@ msgstr "Flexplorer REST API Developer tool"
 msgid "FlexyProXY"
 msgstr "FlexyProXY"
 
-#: classes/ui/MainMenu.php:37
+#: classes/ui/MainMenu.php:37 index.php:74
 msgid "Shop4FlexiBee"
 msgstr "Shop4FlexiBee"
 
 #: classes/ui/MainMenu.php:40
 msgid "Twitter Bootstrap pro Debian"
-msgstr ""
+msgstr "Twitter Bootstrap pro Debian"
 
 #: classes/ui/MainMenu.php:41
 msgid "Imap2MX webmail plugins"
@@ -72,10 +80,6 @@ msgstr "Imap2MX webmail plugins"
 msgid "FlexiBee"
 msgstr "FlexiBee"
 
-#: classes/ui/MainMenu.php:50
-msgid "News Editor"
-msgstr "News Editor"
-
 #: classes/ui/MainMenu.php:53
 msgid "My Skills"
 msgstr "My Skills"
@@ -84,7 +88,7 @@ msgstr "My Skills"
 msgid "Reference"
 msgstr "Reference"
 
-#: classes/ui/MainMenu.php:55
+#: classes/ui/MainMenu.php:55 classes/ui/PageBottom.php:74
 msgid "Pricelist"
 msgstr "Pricelist"
 
@@ -92,61 +96,77 @@ msgstr "Pricelist"
 msgid "Contact"
 msgstr "Contact"
 
+#: classes/ui/MainMenu.php:61
+msgid "News Editor"
+msgstr "News Editor"
+
+#: classes/ui/NewPackages.php:67
+msgid "Fresh Packages"
+msgstr "Fresh Packages"
+
+#: classes/ui/NewPackages.php:77
+msgid "All Packages"
+msgstr "All Packages"
+
 #: classes/ui/NewsEditor.php:56
 msgid "Delete"
 msgstr "Delete"
 
-#: classes/ui/NewsEditor.php:78
+#: classes/ui/NewsEditor.php:79
 msgid "Name"
 msgstr "Name"
 
-#: classes/ui/NewsEditor.php:79
+#: classes/ui/NewsEditor.php:80
 msgid "Text"
 msgstr "Text"
 
-#: classes/ui/NewsEditor.php:81
+#: classes/ui/NewsEditor.php:82
 msgid "Czech"
 msgstr "Czech"
 
-#: classes/ui/NewsEditor.php:81
+#: classes/ui/NewsEditor.php:82
 msgid "English"
 msgstr "English"
 
-#: classes/ui/NewsEditor.php:81
+#: classes/ui/NewsEditor.php:82
 msgid "Language"
 msgstr "Language"
 
+#: classes/ui/NewsListing.php:27 classes/ui/NewsShow.php:34
+msgid "No articles"
+msgstr "No articles"
+
 #: classes/ui/PageBottom.php:23
-msgid "Zdrojáky"
-msgstr ""
+msgid "Source Codes"
+msgstr "Source Codes"
 
 #: classes/ui/PageBottom.php:37
-msgid "Aplikace"
-msgstr ""
+msgid "Applications"
+msgstr "Applications"
 
 #: classes/ui/PageBottom.php:47
-msgid "Služby"
-msgstr ""
+msgid "Services"
+msgstr "Services"
 
 #: classes/ui/PageBottom.php:50
-msgid "Repozitář"
-msgstr ""
+msgid "Reposistory"
+msgstr "Reposistory"
 
 #: classes/ui/PageBottom.php:51
 msgid "Hosting"
 msgstr "Hosting"
 
 #: classes/ui/PageBottom.php:54
-msgid "Dokumentace"
-msgstr ""
+msgid "Documentation"
+msgstr "Documentation"
 
 #: classes/ui/PageBottom.php:60
-msgid "Spřízněné"
-msgstr ""
+msgid "Related"
+msgstr "Related"
 
 #: classes/ui/PageBottom.php:63
 msgid "Murka.cz"
-msgstr ""
+msgstr "Murka.cz"
 
 #: classes/ui/PageBottom.php:65
 msgid "Spoje.Net"
@@ -154,133 +174,128 @@ msgstr "Spoje.Net"
 
 #: classes/ui/PageBottom.php:67
 msgid "Rclick.cz"
-msgstr ""
+msgstr "Rclick.cz"
 
 #: classes/ui/PageBottom.php:70
-msgid "Více"
-msgstr ""
-
-#: classes/ui/PageBottom.php:74
-msgid "Cenník prací"
-msgstr ""
+msgid "More"
+msgstr "More"
 
 #: classes/ui/PageBottom.php:75
-msgid "Kontakty"
-msgstr ""
+msgid "Contacts"
+msgstr "Contacts"
 
 #: classes/ui/PageBottom.php:92
 msgid "&copy; 2012-2017 Vitex Software"
 msgstr "&copy; 2012-2017 Vitex Software"
 
-#: classes/ui/WebPage.php:82
+#: classes/ui/WebPage.php:91
 msgid "Only for admin"
 msgstr "Only for admin"
 
-#: classes/ui/loginbox.php:23 login.php:53
-msgid "Login"
-msgstr "Login"
+#: classes/ui/loginbox.php:20 createaccount.php:184 login.php:52
+msgid "Username"
+msgstr "Username"
+
+#: classes/ui/loginbox.php:22 createaccount.php:186
+msgid "Password"
+msgstr "Password"
 
 #: classes/ui/loginbox.php:25
-msgid "Heslo"
-msgstr ""
-
-#: classes/ui/loginbox.php:28
-msgid "Přihlášení"
-msgstr ""
+msgid "Sign In"
+msgstr "Sign In"
 
 #: createaccount.php:39
-msgid "jméno je příliš krátké"
-msgstr ""
+msgid "Name is too short"
+msgstr "Name is too short"
 
 #: createaccount.php:44
-msgid "příjmení je příliš krátké"
-msgstr ""
+msgid "Lastname is too short"
+msgstr "Lastname is too short"
 
 #: createaccount.php:49
-msgid "jména jsou dohromady příliš dlouhá"
-msgstr ""
+msgid "the names are too long together"
+msgstr "the names are too long together"
 
-#: createaccount.php:55
-msgid "mailová adresa je příliš krátká"
-msgstr ""
+#: createaccount.php:54
+msgid "mail address is too short"
+msgstr "mail address is too short"
 
-#: createaccount.php:59
+#: createaccount.php:58
 msgid "email address check error"
 msgstr "email address check error"
 
-#: createaccount.php:64
+#: createaccount.php:63
 msgid "email address allready registred"
 msgstr "email address allready registred"
 
-#: createaccount.php:74
-msgid "heslo je příliš krátké"
-msgstr ""
+#: createaccount.php:73
+msgid "the password is too short"
+msgstr "the password is too short"
 
-#: createaccount.php:77
-msgid "kontrola hesla nesouhlasí"
-msgstr ""
+#: createaccount.php:76
+msgid "password check disagrees"
+msgstr "password check disagrees"
 
-#: createaccount.php:83
+#: createaccount.php:82
 #, php-format
 msgid ""
-"Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné."
+"The specified username %s is already in the database. Please choose another "
+"one."
+msgstr ""
+"The specified username %s is already in the database. Please choose another "
+"one."
+
+#: createaccount.php:103
+msgid "účet byl vytvořen"
 msgstr ""
 
-#: createaccount.php:104
-msgid "Zákaznický účet byl vytvořen"
-msgstr ""
+#: createaccount.php:127
+msgid "Database entry failed!"
+msgstr "Database entry failed!"
 
-#: createaccount.php:129
-msgid "Zápis do databáze se nezdařil!"
-msgstr ""
+#: createaccount.php:176
+msgid "Sign On"
+msgstr "Sign On"
 
-#: createaccount.php:184
-msgid "Registrace"
-msgstr ""
+#: createaccount.php:183
+msgid "Account"
+msgstr "Account"
 
-#: createaccount.php:191
-msgid "Účet"
-msgstr ""
+#: createaccount.php:188
+msgid "Password confirmation"
+msgstr "Password confirmation"
 
-#: createaccount.php:193
-msgid "přihlašovací jméno"
-msgstr ""
-
-#: createaccount.php:195
-msgid "heslo"
-msgstr ""
-
-#: createaccount.php:197
-msgid "potvrzení hesla"
-msgstr ""
-
-#: createaccount.php:199
+#: createaccount.php:190
 msgid "Osobní"
 msgstr ""
 
-#: createaccount.php:200
+#: createaccount.php:191
 msgid "jméno"
 msgstr ""
 
-#: createaccount.php:202
+#: createaccount.php:192
 msgid "příjmení"
 msgstr ""
 
-#: createaccount.php:204
+#: createaccount.php:194
 msgid "emailová adresa"
 msgstr ""
 
-#: createaccount.php:209
-msgid "Registrovat"
-msgstr ""
+#: createaccount.php:194
+msgid "lowercase letters only"
+msgstr "lowercase letters only"
 
-#: createaccount.php:210
-msgid "dokončit registraci"
-msgstr ""
+#: createaccount.php:199
+msgid "Register"
+msgstr "Register"
 
-#: createaccount.php:213
-msgid "Registrací získáš možnost spravovat své lokality a psát o nich."
-msgstr ""
+#: createaccount.php:199
+msgid "finish"
+msgstr "finish"
+
+#: createaccount.php:202
+msgid "Letsgo"
+msgstr "Letsgo"
 
 #: ease.php:15
 msgid "Ease Framework"
@@ -448,58 +463,65 @@ msgstr "Imap2MX for Roundcube and Squirrelmail"
 msgid "Download"
 msgstr "Download"
 
-#: index.php:28
+#: index.php:22
 msgid "EaseFramework"
 msgstr "EaseFramework"
 
-#: index.php:29
+#: index.php:23
 msgid "Framework pro snadné psaní PHP aplikací"
 msgstr ""
 
-#: index.php:39
+#: index.php:35
 msgid "Icinga Editor"
 msgstr "Icinga Editor"
 
-#: index.php:40
+#: index.php:36
 msgid "Editor Konfigurace monitoringu"
 msgstr ""
 
-#: index.php:44
+#: index.php:40
 msgid "FlexiPeeHP"
 msgstr "FlexiPeeHP"
 
-#: index.php:45
+#: index.php:41
 msgid "https://github.com/Spoje-NET/FlexiPeeHP"
 msgstr ""
 
-#: index.php:46
+#: index.php:42
 msgid "PHP Knihovna pro komunikaci s FlexiBee"
 msgstr "PHP Knihovna pro komunikaci s FlexiBee"
 
-#: index.php:56
+#: index.php:52
 msgid "Flexplorer"
 msgstr "Flexplorer"
 
-#: index.php:57
+#: index.php:53
 msgid "Vývojářský nástroj pro FlexiBee REST API"
 msgstr ""
 
-#: index.php:69
+#: index.php:65
 msgid "FlexiProxy"
 msgstr "FlexiProxy"
 
-#: index.php:70
+#: index.php:66
 msgid "FlexiBee modifikátor"
 msgstr "FlexiBee modifikátor"
 
+#: index.php:75
+msgid "Shopping App for Flexibee"
+msgstr "Shopping App for Flexibee;"
+
 #: kontakt.php:13
-#, fuzzy
-msgid "Vitex Software - kontakty"
-msgstr "Vitex Software"
+msgid "contacts"
+msgstr "contacts"
 
 #: kontakt.php:15
 msgid "Vítězslav Dvořák"
 msgstr "Vítězslav Dvořák"
+
+#: kontakt.php:36
+msgid "Bitcoins accepted"
+msgstr "Bitcoins accepted"
 
 #: login.php:14
 msgid "Cookies required"
@@ -517,9 +539,9 @@ msgstr "Sign in"
 msgid "Welcome to VitexSoftware.cz"
 msgstr "Welcome to VitexSoftware.cz"
 
-#: login.php:52
-msgid "Username"
-msgstr "Username"
+#: login.php:53
+msgid "Login"
+msgstr "Login"
 
 #: login.php:59
 msgid "Password recovery"
@@ -685,56 +707,56 @@ msgstr ""
 msgid "Pokračovat"
 msgstr ""
 
-#: repos.php:19 repostats.php:19
+#: repos.php:13 repostats.php:19
 msgid "Deb Repository"
-msgstr ""
+msgstr "Deb Repository"
 
-#: repos.php:25 repostats.php:25
+#: repos.php:19 repostats.php:25
 msgid "How to use repository"
-msgstr ""
+msgstr "How to use repository"
 
-#: repos.php:39 repostats.php:39
+#: repos.php:33 repostats.php:39
 #, php-format
 msgid "apt-get update feeded %d times"
 msgstr "apt-get update feeded %d times"
 
-#: repos.php:81 repostats.php:81
+#: repos.php:75 repostats.php:81
 msgid "Package name"
 msgstr "Package name"
 
-#: repos.php:81 repostats.php:81
+#: repos.php:75 repostats.php:81
 msgid "Version"
 msgstr "Version"
 
-#: repos.php:81 repostats.php:81
+#: repos.php:75 repostats.php:81
 msgid "Age"
 msgstr "Age"
 
-#: repos.php:81 repostats.php:81
+#: repos.php:75 repostats.php:81
 msgid "Release date"
 msgstr "Release date"
 
-#: repos.php:82 repostats.php:82
+#: repos.php:76 repostats.php:82
 msgid "Size"
 msgstr "Size"
 
-#: repos.php:83 repostats.php:83
+#: repos.php:77 repostats.php:83
 msgid "Package"
 msgstr "Package"
 
-#: repos.php:109 repostats.php:126
+#: repos.php:108 repostats.php:126
 msgid "Packages"
 msgstr "Packages"
 
-#: repos.php:112 repostats.php:127
+#: repos.php:111 repostats.php:127
 msgid "Instructions"
 msgstr "Instructions"
 
-#: repos.php:115
+#: repos.php:114
 msgid "download count details"
 msgstr "download count details"
 
-#: repos.php:115
+#: repos.php:114
 msgid "please wait"
 msgstr "please wait"
 
@@ -782,8 +804,12 @@ msgstr ""
 msgid "Bezpečnostní audity"
 msgstr ""
 
-#~ msgid "About application"
-#~ msgstr "About application"
+#, fuzzy
+#~ msgid "Vitex Software - kontakty"
+#~ msgstr "Vitex Software"
+
+#~ msgid "Repo"
+#~ msgstr "Repo"
 
 #~ msgid "Used Libraries"
 #~ msgstr "Used Libraries"
@@ -1047,9 +1073,6 @@ msgstr ""
 #~ msgid "Support"
 #~ msgstr "Support"
 
-#~ msgid "Services"
-#~ msgstr "Services"
-
 #~ msgid "Docs"
 #~ msgstr "Docs"
 
@@ -1140,9 +1163,6 @@ msgstr ""
 #~ msgid "Allowed by license"
 #~ msgstr "Allowed by license"
 
-#~ msgid "Relations"
-#~ msgstr "Relations"
-
 #~ msgid "Info"
 #~ msgstr "Info"
 
@@ -1193,9 +1213,6 @@ msgstr ""
 
 #~ msgid "Build change"
 #~ msgstr "Build change"
-
-#~ msgid "Choose Registered"
-#~ msgstr "Choose Registered"
 
 #~ msgid ""
 #~ "When the database FlexiBee is changed the POST HTTP request sent to all "
@@ -1290,9 +1307,6 @@ msgstr ""
 
 #~ msgid "History empty"
 #~ msgstr "History empty"
-
-#~ msgid "Reset history"
-#~ msgstr "Reset history"
 
 #~ msgid "Year %s was unregistred"
 #~ msgstr "Year %s was unregistred"

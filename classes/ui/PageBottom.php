@@ -20,8 +20,8 @@ class PageBottom extends \Ease\TWB\Container
 
         $rowFluid1 = new \Ease\TWB\Row;
         $colA      = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $listA1    = $colA->addItem(new \Ease\Html\UlTag(_('Zdrojáky'),
-            ['style' => 'list-style-type: none']));
+        $listA1    = $colA->addItem(new \Ease\Html\UlTag(_('Source Codes'),
+                ['style' => 'list-style-type: none']));
         $listA1->addItemSmart(new \Ease\Html\ATag('/redmine', 'Redmine'));
         $listA1->addItemSmart(new \Ease\Html\ATag('https://github.com/VitexSoftware',
             'GitHub'));
@@ -34,9 +34,9 @@ class PageBottom extends \Ease\TWB\Container
 
 
         $colB   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $listB1 = $colB->addItem(new \Ease\Html\UlTag(_('Aplikace'),
-            ['style' => 'list-style-type: none']));
-        $listB1->addItemSmart(new \Ease\Html\ATag('ease.php', 'Ease Framework'));
+        $listB1 = $colB->addItem(new \Ease\Html\UlTag(_('Applications'),
+                ['style' => 'list-style-type: none']));
+        $listB1->addItemSmart(new \Ease\Html\ATag('cease.php', 'Ease Framework'));
         $listB1->addItemSmart(new \Ease\Html\ATag('monitoring.php',
             'Icinga Editor'));
         $listB1->addItemSmart(new \Ease\Html\ATag('/flexplorer', 'FlexPlorer'));
@@ -44,21 +44,21 @@ class PageBottom extends \Ease\TWB\Container
             'FlexyProxy'));
 
         $colC   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $listC1 = $colC->addItem(new \Ease\Html\UlTag(_('Služby'),
-            ['style' => 'list-style-type: none']));
+        $listC1 = $colC->addItem(new \Ease\Html\UlTag(_('Services'),
+                ['style' => 'list-style-type: none']));
         $listC1->addItemSmart(new \Ease\Html\ATag('monitoring.php', 'Monitoring'));
-        $listC1->addItemSmart(new \Ease\Html\ATag('repos.php', _('Repozitář')));
+        $listC1->addItemSmart(new \Ease\Html\ATag('repos.php', _('Reposistory')));
         $listC1->addItemSmart(new \Ease\Html\ATag('hosting.php', _('Hosting')));
 
         $colD   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $listD1 = $colD->addItem(new \Ease\Html\UlTag(_('Dokumentace'),
-            ['style' => 'list-style-type: none']));
+        $listD1 = $colD->addItem(new \Ease\Html\UlTag(_('Documentation'),
+                ['style' => 'list-style-type: none']));
         $listD1->addItemSmart(new \Ease\Html\ATag('/EaseDoc', 'Ease Framework'));
         $listD1->addItemSmart(new \Ease\Html\ATag('/IciEditDoc', 'Icinga Editor'));
 
         $colE   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $listE1 = $colE->addItem(new \Ease\Html\UlTag(_('Spřízněné'),
-            ['style' => 'list-style-type: none']));
+        $listE1 = $colE->addItem(new \Ease\Html\UlTag(_('Related'),
+                ['style' => 'list-style-type: none']));
         $listE1->addItemSmart(new \Ease\Html\ATag('http://murka.cz',
             _('Murka.cz')));
         $listE1->addItemSmart(new \Ease\Html\ATag('http://spoje.net',
@@ -67,12 +67,12 @@ class PageBottom extends \Ease\TWB\Container
             _('Rclick.cz')));
 
         $colF   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $listF1 = $colF->addItem(new \Ease\Html\UlTag(_('Více'),
-            ['style' => 'list-style-type: none']));
+        $listF1 = $colF->addItem(new \Ease\Html\UlTag(_('More'),
+                ['style' => 'list-style-type: none']));
         $listF1->addItemSmart(new \Ease\Html\ATag('reference.php',
             _('Reference')));
-        $listF1->addItemSmart(new \Ease\Html\ATag('cenik.php', _('Cenník prací')));
-        $listF1->addItemSmart(new \Ease\Html\ATag('kontakt.php', _('Kontakty')));
+        $listF1->addItemSmart(new \Ease\Html\ATag('cenik.php', _('Pricelist')));
+        $listF1->addItemSmart(new \Ease\Html\ATag('kontakt.php', _('Contacts')));
 
 
         $this->addItem($rowFluid1);

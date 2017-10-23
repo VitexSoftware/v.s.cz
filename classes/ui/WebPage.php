@@ -24,6 +24,7 @@ class WebPage extends \Ease\TWB\WebPage
         $this->includeCss('css/default.css');
         \Ease\Shared::webPage()->head->addItem('<link rel="icon" type="image/png"
  href="img/tux-server.png" />');
+        \Ease\Shared::webPage()->head->addItem('<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">');
         \Ease\Shared::webPage()->head->addItem('<script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push([\'_setAccount\', \'UA-35526048-1\']);

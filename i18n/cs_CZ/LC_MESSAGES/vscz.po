@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Flexplorer\n"
-"POT-Creation-Date: 2017-09-15 22:24+0200\n"
-"PO-Revision-Date: 2017-09-15 22:30+0200\n"
+"Project-Id-Version: vscz\n"
+"POT-Creation-Date: 2017-10-18 08:55+0200\n"
+"PO-Revision-Date: 2017-10-18 08:56+0200\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
 "Language: cs_CZ\n"
@@ -17,9 +17,8 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: ../vendor\n"
 
 #: article.php:20 articles.php:20 classes/ui/MainMenu.php:49
-#, fuzzy
 msgid "Articles"
-msgstr "Záznam byl uložen"
+msgstr "Články"
 
 #: article.php:26 index.php:92
 msgid "More articles"
@@ -38,8 +37,9 @@ msgid "Práce na místě programování/administrace"
 msgstr ""
 
 #: classes/ui/MainMenu.php:26
-msgid "Repo"
-msgstr "Repo"
+#, fuzzy
+msgid "Debian Repository"
+msgstr "Deb Repozitář"
 
 #: classes/ui/MainMenu.php:29
 msgid "Projects"
@@ -90,7 +90,7 @@ msgstr "Co umím"
 msgid "Reference"
 msgstr "Reference"
 
-#: classes/ui/MainMenu.php:55
+#: classes/ui/MainMenu.php:55 classes/ui/PageBottom.php:74
 msgid "Pricelist"
 msgstr "Ceník"
 
@@ -103,14 +103,12 @@ msgid "News Editor"
 msgstr "Editor Novinek"
 
 #: classes/ui/NewPackages.php:67
-#, fuzzy
 msgid "Fresh Packages"
-msgstr "Balíčky"
+msgstr "Čerstvé Balíčky"
 
 #: classes/ui/NewPackages.php:77
-#, fuzzy
 msgid "All Packages"
-msgstr "Balíčky"
+msgstr "Všechny Balíčky"
 
 #: classes/ui/NewsEditor.php:56
 #, fuzzy
@@ -142,33 +140,36 @@ msgid "No articles"
 msgstr "žádné články"
 
 #: classes/ui/PageBottom.php:23
-msgid "Zdrojáky"
-msgstr ""
+#, fuzzy
+msgid "Source Codes"
+msgstr "Zdrojáky"
 
 #: classes/ui/PageBottom.php:37
-msgid "Aplikace"
-msgstr ""
+#, fuzzy
+msgid "Applications"
+msgstr "O Aplikaci"
 
 #: classes/ui/PageBottom.php:47
-#, fuzzy
-msgid "Služby"
+msgid "Services"
 msgstr "Služby"
 
 #: classes/ui/PageBottom.php:50
-msgid "Repozitář"
-msgstr ""
+#, fuzzy
+msgid "Reposistory"
+msgstr "Deb Repozitář"
 
 #: classes/ui/PageBottom.php:51
 msgid "Hosting"
 msgstr "Hosting"
 
 #: classes/ui/PageBottom.php:54
-msgid "Dokumentace"
+msgid "Documentation"
 msgstr ""
 
 #: classes/ui/PageBottom.php:60
-msgid "Spřízněné"
-msgstr ""
+#, fuzzy
+msgid "Related"
+msgstr "Vstahy"
 
 #: classes/ui/PageBottom.php:63
 msgid "Murka.cz"
@@ -186,21 +187,16 @@ msgstr ""
 msgid "Více"
 msgstr ""
 
-#: classes/ui/PageBottom.php:74
-msgid "Cenník prací"
-msgstr ""
-
 #: classes/ui/PageBottom.php:75
 #, fuzzy
-msgid "Kontakty"
-msgstr "Kontakty"
+msgid "Contacts"
+msgstr "Kontakt"
 
 #: classes/ui/PageBottom.php:92
-#, fuzzy
 msgid "&copy; 2012-2017 Vitex Software"
-msgstr "Vitex Software"
+msgstr "&copy; 2012-2017 Vitex Software"
 
-#: classes/ui/WebPage.php:90
+#: classes/ui/WebPage.php:91
 msgid "Only for admin"
 msgstr "Pouze pro admina"
 
@@ -536,7 +532,7 @@ msgstr ""
 
 #: index.php:81
 msgid "Shopping App for Flexibee"
-msgstr ""
+msgstr "Nákupní aplikace pro FlexiBee"
 
 #: kontakt.php:13
 #, fuzzy
@@ -585,7 +581,7 @@ msgstr "Odhlášení"
 
 #: logout.php:25
 msgid "Good bye & next time"
-msgstr ""
+msgstr "Neshledanou příště"
 
 #: moloch.php:14
 msgid "Fakturační systém Moloch"
@@ -610,7 +606,7 @@ msgstr "Sleduj svoji síť"
 
 #: monitoring.php:28
 msgid "Servers & Services Monitoring"
-msgstr ""
+msgstr "Monitoring Serverů a Služeb"
 
 #: monitoring.php:30
 msgid "Windows behind NATem/firewallem monitoring"
@@ -645,7 +641,7 @@ msgstr "Svobodný Software"
 
 #: monitoring.php:60
 msgid "Freedom first"
-msgstr ""
+msgstr "Svoboda především"
 
 #: monitoring.php:61
 msgid ""
@@ -808,7 +804,7 @@ msgstr "Stažení"
 
 #: tbpackage.php:48
 msgid "unofficial Twitter Bootstrap Debian/Ubuntu packages"
-msgstr ""
+msgstr "neoficiální balíčky TwitterBootstrap pro Debian/Ubuntu"
 
 #: tbpackage.php:121
 msgid "Debian installation"
@@ -842,8 +838,16 @@ msgstr ""
 msgid "Bezpečnostní audity"
 msgstr ""
 
-#~ msgid "About application"
-#~ msgstr "O Aplikaci"
+#~ msgid "Repo"
+#~ msgstr "Repo"
+
+#, fuzzy
+#~ msgid "Služby"
+#~ msgstr "Služby"
+
+#, fuzzy
+#~ msgid "Kontakty"
+#~ msgstr "Kontakty"
 
 #~ msgid "Used Libraries"
 #~ msgstr "Použité knihovny"
@@ -1128,9 +1132,6 @@ msgstr ""
 #~ msgid "Support"
 #~ msgstr "Podpora"
 
-#~ msgid "Services"
-#~ msgstr "Služby"
-
 #~ msgid "Docs"
 #~ msgstr "Dokumentace"
 
@@ -1225,9 +1226,6 @@ msgstr ""
 
 #~ msgid "Allowed by license"
 #~ msgstr "Povoleno licencí"
-
-#~ msgid "Relations"
-#~ msgstr "Vstahy"
 
 #~ msgid "Info"
 #~ msgstr "info"
