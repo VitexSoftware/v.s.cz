@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: vscz\n"
-"POT-Creation-Date: 2017-10-18 08:55+0200\n"
-"PO-Revision-Date: 2017-10-18 08:56+0200\n"
+"POT-Creation-Date: 2017-12-20 23:57+0100\n"
+"PO-Revision-Date: 2017-12-20 23:57+0100\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
 "Language: cs_CZ\n"
@@ -20,24 +20,23 @@ msgstr ""
 msgid "Articles"
 msgstr "Články"
 
-#: article.php:26 index.php:92
+#: article.php:26 index.php:112
 msgid "More articles"
 msgstr "Více článků"
 
-#: cenik.php:14 index.php:20 kontakt.php:28 reference.php:13
+#: cenik.php:14 index.php:13 kontakt.php:25 reference.php:13
 msgid "Vitex Software"
 msgstr "Vitex Software"
 
 #: cenik.php:19
-msgid "Práce na dálku programování/administrace"
-msgstr ""
+msgid "Remote programming / administration work"
+msgstr "Vzdálený vývoj / administrace"
 
 #: cenik.php:25
-msgid "Práce na místě programování/administrace"
-msgstr ""
+msgid "On-site programming / administration work"
+msgstr "Programování / Administrace na místě"
 
 #: classes/ui/MainMenu.php:26
-#, fuzzy
 msgid "Debian Repository"
 msgstr "Deb Repozitář"
 
@@ -46,7 +45,6 @@ msgid "Projects"
 msgstr "Projekty"
 
 #: classes/ui/MainMenu.php:32
-#, fuzzy
 msgid "Monitoring"
 msgstr "Monitoring"
 
@@ -66,7 +64,7 @@ msgstr "Flexplorer REST API vývojářský nástroj"
 msgid "FlexyProXY"
 msgstr "FlexyProXY"
 
-#: classes/ui/MainMenu.php:37 index.php:80
+#: classes/ui/MainMenu.php:37 index.php:83
 msgid "Shop4FlexiBee"
 msgstr "Shop4FlexiBee"
 
@@ -102,16 +100,23 @@ msgstr "Kontakt"
 msgid "News Editor"
 msgstr "Editor Novinek"
 
-#: classes/ui/NewPackages.php:67
+#: classes/ui/NewPackages.php:106
 msgid "Fresh Packages"
 msgstr "Čerstvé Balíčky"
 
-#: classes/ui/NewPackages.php:77
+#: classes/ui/NewPackages.php:116
 msgid "All Packages"
 msgstr "Všechny Balíčky"
 
+#: classes/ui/NewPackages.php:140
+msgid "Installed"
+msgstr "Instalací"
+
+#: classes/ui/NewPackages.php:140
+msgid "Downloaded"
+msgstr "Staženo"
+
 #: classes/ui/NewsEditor.php:56
-#, fuzzy
 msgid "Delete"
 msgstr "Smazat"
 
@@ -135,27 +140,25 @@ msgstr "Anglicky"
 msgid "Language"
 msgstr "Jazyk"
 
-#: classes/ui/NewsListing.php:27 classes/ui/NewsShow.php:35
+#: classes/ui/NewsListing.php:27 classes/ui/NewsShow.php:34
 msgid "No articles"
 msgstr "žádné články"
 
-#: classes/ui/PageBottom.php:23
-#, fuzzy
-msgid "Source Codes"
-msgstr "Zdrojáky"
+#: classes/ui/PageBottom.php:23 flexibee.php:54 flexibee.php:69 flexibee.php:82
+#: flexibee.php:89 flexibee.php:101 flexibee.php:125
+msgid "Source codes"
+msgstr "Zdrojové kódy"
 
-#: classes/ui/PageBottom.php:37
-#, fuzzy
+#: classes/ui/PageBottom.php:37 index.php:99
 msgid "Applications"
-msgstr "O Aplikaci"
+msgstr "Aplikace"
 
 #: classes/ui/PageBottom.php:47
 msgid "Services"
 msgstr "Služby"
 
 #: classes/ui/PageBottom.php:50
-#, fuzzy
-msgid "Reposistory"
+msgid "Repository"
 msgstr "Deb Repozitář"
 
 #: classes/ui/PageBottom.php:51
@@ -164,7 +167,7 @@ msgstr "Hosting"
 
 #: classes/ui/PageBottom.php:54
 msgid "Documentation"
-msgstr ""
+msgstr "Dokumentace"
 
 #: classes/ui/PageBottom.php:60
 #, fuzzy
@@ -173,7 +176,7 @@ msgstr "Vstahy"
 
 #: classes/ui/PageBottom.php:63
 msgid "Murka.cz"
-msgstr ""
+msgstr "Murka.cz"
 
 #: classes/ui/PageBottom.php:65
 msgid "Spoje.Net"
@@ -181,166 +184,150 @@ msgstr "Spoje.Net"
 
 #: classes/ui/PageBottom.php:67
 msgid "Rclick.cz"
-msgstr ""
+msgstr "Rclick.cz"
 
 #: classes/ui/PageBottom.php:70
-msgid "Více"
-msgstr ""
+msgid "More"
+msgstr "Více"
 
 #: classes/ui/PageBottom.php:75
-#, fuzzy
 msgid "Contacts"
-msgstr "Kontakt"
+msgstr "Kontakty"
 
-#: classes/ui/PageBottom.php:92
+#: classes/ui/PageBottom.php:90
 msgid "&copy; 2012-2017 Vitex Software"
 msgstr "&copy; 2012-2017 Vitex Software"
+
+#: classes/ui/PageBottom.php:94
+msgid "Powered by debian"
+msgstr "Poháněno Debianem"
 
 #: classes/ui/WebPage.php:91
 msgid "Only for admin"
 msgstr "Pouze pro admina"
 
-#: classes/ui/loginbox.php:23 login.php:53
-msgid "Login"
-msgstr "Login"
+#: classes/ui/loginbox.php:20 createaccount.php:184 login.php:52
+msgid "Username"
+msgstr "Uživatelské jméno"
 
-#: classes/ui/loginbox.php:25
-#, fuzzy
-msgid "Heslo"
+#: classes/ui/loginbox.php:22 createaccount.php:186
+msgid "Password"
 msgstr "Heslo"
 
-#: classes/ui/loginbox.php:28
-#, fuzzy
-msgid "Přihlášení"
-msgstr "Přihlášení"
+#: classes/ui/loginbox.php:25
+msgid "Sign In"
+msgstr "Přihlásit"
 
 #: createaccount.php:39
-msgid "jméno je příliš krátké"
-msgstr ""
+msgid "Name is too short"
+msgstr "Jméno je příliš krátké"
 
 #: createaccount.php:44
-msgid "příjmení je příliš krátké"
-msgstr ""
+msgid "Lastname is too short"
+msgstr "Příjmení je příliš krátké"
 
 #: createaccount.php:49
-msgid "jména jsou dohromady příliš dlouhá"
-msgstr ""
+msgid "the names are too long together"
+msgstr "jména jsou dohromady příliš dlouhá"
 
-#: createaccount.php:55
+#: createaccount.php:54
 #, fuzzy
-msgid "mailová adresa je příliš krátká"
-msgstr "mailová adresa je příliš krátká"
+msgid "mail address is too short"
+msgstr "Mailová adresa je příliš krátká"
 
-#: createaccount.php:59
+#: createaccount.php:58
 msgid "email address check error"
 msgstr "chyba kontroly emailové adresy"
 
-#: createaccount.php:64
+#: createaccount.php:63
 msgid "email address allready registred"
-msgstr ""
+msgstr "emailová adresa je již zaregistrována"
 
-#: createaccount.php:74
-#, fuzzy
-msgid "heslo je příliš krátké"
+#: createaccount.php:73
+msgid "the password is too short"
 msgstr "heslo je příliš krátké"
 
-#: createaccount.php:77
-#, fuzzy
-msgid "kontrola hesla nesouhlasí"
+#: createaccount.php:76
+msgid "password check disagrees"
 msgstr "kontrola hesla nesouhlasí"
 
-#: createaccount.php:83
-#, fuzzy, php-format
+#: createaccount.php:82
+#, php-format
 msgid ""
-"Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné."
-msgstr ""
-"Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné."
-
-#: createaccount.php:104
-msgid "Zákaznický účet byl vytvořen"
+"The specified username %s is already in the database. Please choose another "
+"one."
 msgstr ""
 
-#: createaccount.php:129
-#, fuzzy
-msgid "Zápis do databáze se nezdařil!"
-msgstr "Zápis do databáze se nezdařil!"
+#: createaccount.php:103
+msgid "účet byl vytvořen"
+msgstr ""
 
-#: createaccount.php:184
-#, fuzzy
-msgid "Registrace"
+#: createaccount.php:127
+msgid "Database entry failed!"
+msgstr ""
+
+#: createaccount.php:176
+msgid "Sign On"
 msgstr "Registrace"
 
-#: createaccount.php:191
-#, fuzzy
-msgid "Účet"
+#: createaccount.php:183
+msgid "Account"
 msgstr "Účet"
 
-#: createaccount.php:193
-#, fuzzy
-msgid "přihlašovací jméno"
-msgstr "přihlašovací jméno"
+#: createaccount.php:188
+msgid "Password confirmation"
+msgstr "Potvrzení hesla"
 
-#: createaccount.php:195
-#, fuzzy
-msgid "heslo"
-msgstr "heslo"
-
-#: createaccount.php:197
-#, fuzzy
-msgid "potvrzení hesla"
-msgstr "potvrzení hesla"
-
-#: createaccount.php:199
+#: createaccount.php:190
 msgid "Osobní"
 msgstr ""
 
-#: createaccount.php:200
+#: createaccount.php:191
 #, fuzzy
 msgid "jméno"
 msgstr "Jméno"
 
-#: createaccount.php:202
+#: createaccount.php:192
 msgid "příjmení"
 msgstr ""
 
-#: createaccount.php:204
+#: createaccount.php:194
 #, fuzzy
 msgid "emailová adresa"
 msgstr "emailová adresa"
 
-#: createaccount.php:209
-#, fuzzy
-msgid "Registrovat"
-msgstr "Registrovat"
+#: createaccount.php:194
+msgid "lowercase letters only"
+msgstr "pouze malá písmena"
 
-#: createaccount.php:210
+#: createaccount.php:199
 #, fuzzy
-msgid "dokončit registraci"
-msgstr "dokončit registraci"
+msgid "Register"
+msgstr "Registrace"
 
-#: createaccount.php:213
-msgid "Registrací získáš možnost spravovat své lokality a psát o nich."
+#: createaccount.php:199
+msgid "finish"
+msgstr "dokončit"
+
+#: createaccount.php:202
+msgid "Letsgo"
 msgstr ""
 
 #: ease.php:15
 msgid "Ease Framework"
 msgstr "Ease Framework"
 
-#: ease.php:33 moloch.php:60
-msgid "Ke stažení"
-msgstr ""
+#: ease.php:33 flexipeehp.php:29
+msgid "Apigen documentation"
+msgstr "Dokumentace APIGEN"
 
-#: ease.php:70
-msgid "Ukázka kódu"
-msgstr ""
+#: ease.php:38 flexipeehp.php:34
+msgid "RSS Feed"
+msgstr "RSS Kanál"
 
-#: ease.php:78
-msgid "Výsledek: Twitter Bootstrap tlačítko"
-msgstr ""
-
-#: ease.php:100
-msgid "Proč použít ?"
-msgstr ""
+#: ease.php:45 flexipeehp.php:41
+msgid "Latest change"
+msgstr "Poslední změna"
 
 #: flexibee.php:21
 msgid "Go to FlexiBee site"
@@ -372,12 +359,6 @@ msgid ""
 "Senzory pro sledování stavu FlexiBee. Použitelné v monitorovacích systémech "
 "Nagios/Icinga."
 msgstr ""
-
-#: flexibee.php:54 flexibee.php:69 flexibee.php:82 flexibee.php:89
-#: flexibee.php:101 flexibee.php:125
-#, fuzzy
-msgid "Source codes"
-msgstr "Zdrojáky"
 
 #: flexibee.php:59
 msgid "Library FlexiPeeHP"
@@ -414,7 +395,7 @@ msgstr "Řešení pro ukládání všech změn FlexiBee do souborů v GIT repozi
 #: flexibee.php:94
 msgid ""
 "Transparent Proxy for filering and modification communictation with FlexiBee "
-msgstr ""
+msgstr "Transparentní proxy pro filtrování a modifikaci komunikace s FlexiBee"
 
 #: flexibee.php:98
 msgid "Live Demo"
@@ -423,6 +404,8 @@ msgstr "Živé Demo"
 #: flexibee.php:104
 msgid "Basic app for order pricelist items and reaction after incoming payment"
 msgstr ""
+"Základní aplikace pro objednávání ceníkových položek a reakci po přijetí "
+"platby"
 
 #: flexibee.php:109
 msgid "Live Customer Demo"
@@ -446,6 +429,10 @@ msgid ""
 "integrace a nástroje"
 msgstr ""
 
+#: flexipeehp.php:15 index.php:46
+msgid "FlexiPeeHP"
+msgstr "FlexiPeeHP"
+
 #: hosting.php:15
 msgid "Hosting - Vitex Software"
 msgstr "Hosting - Vitex Software"
@@ -460,7 +447,7 @@ msgstr "NodeJS"
 
 #: hosting.php:21
 msgid "Javascript on backend and frontend"
-msgstr ""
+msgstr "Javascript na backendu i frontendu"
 
 #: hosting.php:26
 msgid "Ruby on Rails"
@@ -468,7 +455,7 @@ msgstr "Ruby on Rails"
 
 #: hosting.php:27
 msgid "Most poplular Ruby WebAPPs framework"
-msgstr ""
+msgstr "Nejpopulárnější Ruby framework pro Webvé aplikace"
 
 #: hosting.php:31
 msgid "Python Django"
@@ -476,23 +463,31 @@ msgstr "Python Django"
 
 #: hosting.php:32
 msgid "Most Popular Python WebAPPs framework"
-msgstr ""
+msgstr "Nejpopulárnější Phyton framework pro webové aplikace"
 
 #: imap2mx.php:12
 msgid "Imap2MX for Roundcube and Squirrelmail"
-msgstr ""
+msgstr "Imap2MX pro Roundcube a Squirrelmail"
 
 #: imap2mx.php:21 imap2mx.php:58
 msgid "Download"
 msgstr "Stažení"
 
-#: index.php:28
-msgid "EaseFramework"
-msgstr ""
+#: index.php:23
+msgid "EasePHP"
+msgstr "EasePHP"
 
-#: index.php:29
+#: index.php:24
 msgid "Framework pro snadné psaní PHP aplikací"
 msgstr ""
+
+#: index.php:28
+msgid "EaseBricks"
+msgstr "EaseBricks"
+
+#: index.php:29
+msgid "Common Widgets for EasePHP Framework"
+msgstr "Sdílené widgety pro EasePHP Framework"
 
 #: index.php:41
 msgid "Icinga Editor"
@@ -502,47 +497,85 @@ msgstr "Icinga Editor"
 msgid "Editor Konfigurace monitoringu"
 msgstr ""
 
-#: index.php:46
-msgid "FlexiPeeHP"
-msgstr "FlexiPeeHP"
-
-#: index.php:47
-msgid "https://github.com/Spoje-NET/FlexiPeeHP"
+#: index.php:47 index.php:57
+msgid "flexipeehp.php"
 msgstr ""
 
-#: index.php:48
+#: index.php:47
 msgid "PHP Knihovna pro komunikaci s FlexiBee"
 msgstr ""
 
-#: index.php:58
+#: index.php:56
+msgid "FlexiPeeHP Bricks"
+msgstr "FlexiPeeHP Bricks"
+
+#: index.php:57
+msgid "Widgets & Code snipplets for FlexiPeeHP"
+msgstr ""
+
+#: index.php:61
 msgid "Flexplorer"
 msgstr "Flexplorer"
 
-#: index.php:59
+#: index.php:62
 msgid "Vývojářský nástroj pro FlexiBee REST API"
 msgstr ""
 
-#: index.php:71
+#: index.php:74
 msgid "FlexiProxy"
 msgstr "FlexiProxy"
 
-#: index.php:72
+#: index.php:75
 msgid "FlexiBee modifikátor"
 msgstr ""
 
-#: index.php:81
+#: index.php:84
 msgid "Shopping App for Flexibee"
 msgstr "Nákupní aplikace pro FlexiBee"
 
+#: index.php:91
+msgid "IPEX B2B"
+msgstr "IPEX B2B"
+
+#: index.php:92
+msgid "Library for interaction with restapi.ipex.cz"
+msgstr "Knihovna pro komunikaci s restapi.ipex.cz"
+
+#: index.php:95
+msgid "PrimaERP"
+msgstr "PrimaERP"
+
+#: index.php:96
+msgid "Library for interaction with API primaerp.com"
+msgstr "Knihovna pro interakci s API primaerp.com"
+
+#: index.php:103
+msgid "Libraries"
+msgstr "Knihovny"
+
+#: index.php:107
+msgid "News"
+msgstr "Novinky"
+
+#: index.php:116
+msgid "Languages used last week"
+msgstr "Jazyky použité za poslední týden"
+
+#: index.php:118
+msgid "Coding activity last week"
+msgstr "Programátorská aktivita za poslední týden"
+
 #: kontakt.php:13
-#, fuzzy
-msgid "Vitex Software - kontakty"
-msgstr "Vitex Software"
+msgid "contacts"
+msgstr "Kontakty"
 
 #: kontakt.php:15
-#, fuzzy
 msgid "Vítězslav Dvořák"
-msgstr "&copy; 2016 Vítězslav \"Vitex\" Dvořák"
+msgstr "Vítězslav Dvořák"
+
+#: kontakt.php:36
+msgid "Bitcoins accepted"
+msgstr "Posílejte bitcoiny"
 
 #: login.php:14
 msgid "Cookies required"
@@ -551,7 +584,7 @@ msgstr "Cookies jsou vyžadovány"
 #: login.php:26 monitoring.php:55
 #, fuzzy
 msgid "Please enter your login and password"
-msgstr "Prosím potvrď své přihlašovací údaje"
+msgstr "Prosím zadej jméno a heslo"
 
 #: login.php:29 login.php:48
 msgid "Sign in"
@@ -561,10 +594,9 @@ msgstr "Přihlásit"
 msgid "Welcome to VitexSoftware.cz"
 msgstr "Vítejte u Vitex Software"
 
-#: login.php:52
-#, fuzzy
-msgid "Username"
-msgstr "Uživatelské Jméno"
+#: login.php:53
+msgid "Login"
+msgstr "Login"
 
 #: login.php:59
 msgid "Password recovery"
@@ -585,6 +617,10 @@ msgstr "Neshledanou příště"
 
 #: moloch.php:14
 msgid "Fakturační systém Moloch"
+msgstr ""
+
+#: moloch.php:60
+msgid "Ke stažení"
 msgstr ""
 
 #: moloch.php:82 monitoring.php:52
@@ -613,9 +649,8 @@ msgid "Windows behind NATem/firewallem monitoring"
 msgstr ""
 
 #: monitoring.php:35
-#, fuzzy
 msgid "Sign Up"
-msgstr "Přihlásit"
+msgstr "Regisrace"
 
 #: monitoring.php:36
 msgid "Služba jako taková je nabízena do deseti monitorovaných služeb zdarma."
@@ -699,14 +734,13 @@ msgid ""
 msgstr ""
 
 #: newsedit.php:22
-#, fuzzy
 msgid "Article was saved"
-msgstr "Záznam byl uložen"
+msgstr "článek byl uložen"
 
 #: newsedit.php:24
 #, fuzzy
 msgid "Article was not saved"
-msgstr "Záznam nebyl uložen"
+msgstr "Článek nebyl uložen"
 
 #: newsedit.php:30
 #, fuzzy
@@ -741,48 +775,48 @@ msgstr "Zaslat nové heslo"
 msgid "Pokračovat"
 msgstr "Pokračovat"
 
-#: repos.php:13 repostats.php:19
+#: repos.php:13 repostats.php:23
 msgid "Deb Repository"
 msgstr "Deb Repozitář"
 
-#: repos.php:19 repostats.php:25
+#: repos.php:19 repostats.php:29
 msgid "How to use repository"
 msgstr "Jak použít repozitář"
 
-#: repos.php:33 repostats.php:39
+#: repos.php:33 repostats.php:43
 #, php-format
 msgid "apt-get update feeded %d times"
 msgstr "apt-get update poskynut %d krát."
 
-#: repos.php:75 repostats.php:81
+#: repos.php:75 repostats.php:85
 msgid "Package name"
 msgstr "Jméno balíčku"
 
-#: repos.php:75 repostats.php:81
+#: repos.php:75 repostats.php:85
 msgid "Version"
 msgstr "Verze"
 
-#: repos.php:75 repostats.php:81
+#: repos.php:75 repostats.php:85
 msgid "Age"
 msgstr "Stáří"
 
-#: repos.php:75 repostats.php:81
+#: repos.php:75 repostats.php:85
 msgid "Release date"
 msgstr "Datum vydání"
 
-#: repos.php:76 repostats.php:82
+#: repos.php:76 repostats.php:86
 msgid "Size"
 msgstr "Velikost"
 
-#: repos.php:77 repostats.php:83
+#: repos.php:77 repostats.php:87
 msgid "Package"
 msgstr "Balíček"
 
-#: repos.php:108 repostats.php:126
+#: repos.php:108 repostats.php:125
 msgid "Packages"
 msgstr "Balíčky"
 
-#: repos.php:111 repostats.php:127
+#: repos.php:111 repostats.php:126
 msgid "Instructions"
 msgstr "Instrukce"
 
@@ -794,11 +828,11 @@ msgstr "podrobné počty stažení"
 msgid "please wait"
 msgstr "prosím čekejte"
 
-#: repostats.php:83
+#: repostats.php:87
 msgid "Installs"
 msgstr "Instalací"
 
-#: repostats.php:83
+#: repostats.php:87
 msgid "Downloads"
 msgstr "Stažení"
 
@@ -838,6 +872,67 @@ msgstr ""
 msgid "Bezpečnostní audity"
 msgstr ""
 
+#~ msgid "Source Codes"
+#~ msgstr "Zdrojové kódy"
+
+#, fuzzy
+#~ msgid "Heslo"
+#~ msgstr "Heslo"
+
+#, fuzzy
+#~ msgid "Přihlášení"
+#~ msgstr "Přihlášení"
+
+#, fuzzy
+#~ msgid "mailová adresa je příliš krátká"
+#~ msgstr "mailová adresa je příliš krátká"
+
+#, fuzzy
+#~ msgid "heslo je příliš krátké"
+#~ msgstr "heslo je příliš krátké"
+
+#, fuzzy
+#~ msgid "kontrola hesla nesouhlasí"
+#~ msgstr "kontrola hesla nesouhlasí"
+
+#, fuzzy
+#~ msgid ""
+#~ "Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné."
+#~ msgstr ""
+#~ "Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné."
+
+#, fuzzy
+#~ msgid "Zápis do databáze se nezdařil!"
+#~ msgstr "Zápis do databáze se nezdařil!"
+
+#, fuzzy
+#~ msgid "Účet"
+#~ msgstr "Účet"
+
+#, fuzzy
+#~ msgid "přihlašovací jméno"
+#~ msgstr "přihlašovací jméno"
+
+#, fuzzy
+#~ msgid "heslo"
+#~ msgstr "heslo"
+
+#, fuzzy
+#~ msgid "potvrzení hesla"
+#~ msgstr "potvrzení hesla"
+
+#, fuzzy
+#~ msgid "Registrovat"
+#~ msgstr "Registrovat"
+
+#, fuzzy
+#~ msgid "dokončit registraci"
+#~ msgstr "dokončit registraci"
+
+#, fuzzy
+#~ msgid "Vitex Software - kontakty"
+#~ msgstr "Vitex Software"
+
 #~ msgid "Repo"
 #~ msgstr "Repo"
 
@@ -848,9 +943,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Kontakty"
 #~ msgstr "Kontakty"
-
-#~ msgid "Used Libraries"
-#~ msgstr "Použité knihovny"
 
 #~ msgid "Changes recieved"
 #~ msgstr "Přijaté změny"

@@ -27,7 +27,7 @@ class NewsShow extends \Ease\Container
                 $articletext = $this->addItem(new \Ease\Html\Div(new \Ease\Html\H1Tag($article['title']),
                         ['class' => 'smokeback']));
                 $articletext->addItem(new \Ease\Html\Div($article['text']));
-                $articletext->addItem(new \Ease\Html\Div('<hr><div style="text-align: right"><small>'.$article['login'].' '.strftime("%d/%m/%Y %H:%M:%S",
+                $articletext->addItem(new \Ease\Html\Div('<hr><div style="text-align: right"><small>'.$article['login'].' '.strftime("%d/%m/%y",
                             strtotime($article['DatCreate'])).'</small></div>'));
             }
         } else {

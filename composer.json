@@ -20,8 +20,10 @@
     },
     "require": {
         "php": ">= 5.5.9",
+        "league/commonmark": "^0.15.0",
         "flexipeehp": "*",
-        "ease-framework": "*"
+        "ease-framework": "*",
+        "vitexsoftware/ease-bricks": "dev-master"
     },
     "repositories": [
         {

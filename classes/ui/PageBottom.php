@@ -20,7 +20,7 @@ class PageBottom extends \Ease\TWB\Container
 
         $rowFluid1 = new \Ease\TWB\Row;
         $colA      = $rowFluid1->addItem(new \Ease\TWB\Col(2));
-        $listA1    = $colA->addItem(new \Ease\Html\UlTag(_('Source Codes'),
+        $listA1    = $colA->addItem(new \Ease\Html\UlTag(_('Source codes'),
                 ['style' => 'list-style-type: none']));
         $listA1->addItemSmart(new \Ease\Html\ATag('/redmine', 'Redmine'));
         $listA1->addItemSmart(new \Ease\Html\ATag('https://github.com/VitexSoftware',
@@ -47,7 +47,7 @@ class PageBottom extends \Ease\TWB\Container
         $listC1 = $colC->addItem(new \Ease\Html\UlTag(_('Services'),
                 ['style' => 'list-style-type: none']));
         $listC1->addItemSmart(new \Ease\Html\ATag('monitoring.php', 'Monitoring'));
-        $listC1->addItemSmart(new \Ease\Html\ATag('repos.php', _('Reposistory')));
+        $listC1->addItemSmart(new \Ease\Html\ATag('repos.php', _('Repository')));
         $listC1->addItemSmart(new \Ease\Html\ATag('hosting.php', _('Hosting')));
 
         $colD   = $rowFluid1->addItem(new \Ease\TWB\Col(2));
@@ -75,8 +75,6 @@ class PageBottom extends \Ease\TWB\Container
         $listF1->addItemSmart(new \Ease\Html\ATag('kontakt.php', _('Contacts')));
 
 
-        $this->addItem($rowFluid1);
-
         $rowFluid2 = new \Ease\TWB\Row;
 
         $socialIcons = '
@@ -91,7 +89,12 @@ class PageBottom extends \Ease\TWB\Container
             [new \Ease\TWB\Col(8, $socialIcons), new \Ease\TWB\Col(4,
                 _('&copy; 2012-2017 Vitex Software'))]));
 
-        $this->addItem($rowFluid2);
+        $mainBottomRow = new \Ease\TWB\Row();
+        $mainBottomRow->addColumn(10,[$rowFluid1,$rowFluid2]);
+        $mainBottomRow->addColumn(2,new \Ease\Html\ATag('https://www.debian.org/', new \Ease\Html\ImgTag('img/poweredbydebian.png', _('Powered by debian'),['class'=>'img-responsive'])));
+        
+        $this->addItem($mainBottomRow);
+               
     }
 
     /**

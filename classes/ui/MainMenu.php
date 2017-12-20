@@ -22,7 +22,7 @@ class MainMenu extends \Ease\TWB\Navbar
     {
         parent::__construct($name, $brand, $properties);
 
-        $this->addMenuItem(new \Ease\Html\ATag('repos.php',
+        $this->addMenuItem(new \Ease\Html\ATag('repostats.php',
             '<img style="height: 19px;" src="img/deb-package.png"> '._('Debian Repository')));
 
         $this->addDropDownMenu(

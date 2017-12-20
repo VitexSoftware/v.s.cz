@@ -14,23 +14,16 @@ define('EASE_APPNAME', 'vscz');
  * Adresa odesilatele  
  */
 define('SEND_MAILS_FROM', 'noreply@vitexsoftware.cz');
-/**
- * Databázový server 
- */
-define('DB_SERVER', 'localhost');
-/**
- * Uživatelské jméno k databázi 
- */
-define('DB_SERVER_USERNAME', 'apache');
-/**
- * Heslo k databázi 
- */
-define('DB_SERVER_PASSWORD', 'TeacPets4');
-/**
- * Název databáze
- */
-//define('DB_DATABASE', 'apachelogs');
-//define('DB_TYPE', 'mysql');
+
+/**                                                                                                                                                                            
+ * Databázový pro logy.                                                                                                                                                        
+ */                                                                                                                                                                            
+define('STATS_SERVER', 'localhost');                                                                                                                                           
+define('STATS_USERNAME', 'apache');                                                                                                                                            
+define('STATS_PASSWORD', 'TeacPets4');                                                                                                                                         
+define('STATS_DATABASE', 'apachelogs');                                                                                                                                        
+define('STATS_TYPE', 'mysql');  
+define('STATS_PORT', 3306);  
 
 /**
  * Adresář pro zápis logů 

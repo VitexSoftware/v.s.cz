@@ -14,14 +14,48 @@ namespace VSCZ\ui;
  */
 class NewPackages extends \Ease\Html\Span
 {
+    /**
+     * Dblink for Package Counts
+     * 
+     * @var \Ease\SQL\PDO 
+     */
+    public $stDB = null;
 
+    public function getCounts($package)
+    {
+        $installs = $this->stDB->queryToValue(sprintf(
+                "SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/%s%%' AND agent LIKE 'Debian APT%%' ",
+                $package));
+
+        $downloads = $this->stDB->queryToValue(sprintf(
+                "SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/%s%%' AND agent NOT LIKE 'Debian APT%%' "
+                , $package));
+        return ['installs' => $installs, 'downloads' => $downloads];
+    }
+
+    /**
+     * 
+     * @param mixed $content
+     * @param array $properties
+     */
     public function __construct($content = null, $properties = array())
     {
+
+        $this->stDB = new \Ease\SQL\PDO([
+            'dbType' => constant('STATS_TYPE'),
+            'server' => constant('STATS_SERVER'),
+            'username' => constant('STATS_USERNAME'),
+            'password' => constant('STATS_PASSWORD'),
+            'database' => constant('STATS_DATABASE'),
+            'port' => constant('STATS_PORT')
+        ]);
+
 
         $packages = [];
         $pName    = null;
         $handle   = @fopen("/var/lib/apt/lists/v.s.cz_dists_stable_main_binary-amd64_Packages",
                 "r");
+        $position = 0;
         if ($handle) {
             while (($buffer = fgets($handle, 4096)) !== false) {
                 if (!strstr($buffer, ':')) {
@@ -31,6 +65,7 @@ class NewPackages extends \Ease\Html\Span
                 switch ($key) {
                     case 'Package':
                         $pName                  = trim($value);
+                        $position++;
                         break;
                     case 'Description':
                         $packages[$pName][$key] = $value;
@@ -50,8 +85,12 @@ class NewPackages extends \Ease\Html\Span
                         break;
                 }
                 $packages[$pName]['Name'] = $pName;
+
+
                 if (isset($packages[$pName]['Filename'])) {
-                    $packages[$pName]['fileMtime'] = filemtime($packages[$pName]['Filename']);
+
+                    $packages[$pName]['fileMtime'] = filemtime($packages[$pName]['Filename'])
+                        + $position;
                 }
             }
             if (!feof($handle)) {
@@ -65,18 +104,18 @@ class NewPackages extends \Ease\Html\Span
         krsort($packagesByTime);
 
         parent::__construct(new \Ease\Html\H1Tag(_('Fresh Packages'),
-            ['style' => 'text-align: center;']));
+                ['style' => 'text-align: center;']));
 
         foreach (array_slice($packagesByTime, 0, 5, true) as $pProps) {
             $this->addItem(new \Ease\Html\PTag($this->debInfoBlock($pProps)));
         }
 
-                $this->addItem(new \Ease\Html\PTag('<br>'));
+        $this->addItem(new \Ease\Html\PTag('<br>'));
 
-        $this->addItem(new \Ease\Html\PTag(new \Ease\Html\ATag('repos.php',
-            '<img style="width: 30px;" src="img/deb-package.png">&nbsp;'.' '._('All Packages').' <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+        $this->addItem(new \Ease\Html\PTag(new \Ease\Html\ATag('repostats.php',
+                    '<img style="width: 30px;" src="img/deb-package.png">&nbsp;'.' '._('All Packages').' <i class="fa fa-angle-double-right" aria-hidden="true"></i>
 ', ['class' => 'btn btn-info btn-lg btn-block']),
-            ['style' => 'text-align: center;']));
+                ['style' => 'text-align: center;']));
     }
 
     public function debInfoBlock($pProps)
@@ -87,6 +126,7 @@ class NewPackages extends \Ease\Html\Span
         if (!file_exists($icon)) {
             $icon = 'img/deb-package.png';
         }
+        $counts = $this->getCounts($pProps['Filename'], $pProps['Version']);
 
 
         $download = new \Ease\Html\ATag($pProps['Filename'],
@@ -96,9 +136,13 @@ class NewPackages extends \Ease\Html\Span
         return ['<br clear="all">',
             new \Ease\Html\H3Tag($pName.' '.$pProps['Version'],
                 ['style' => 'text-align: center;']),
+            
+            '<div style="text-align: center;"><small>'._('Installed').': '.$counts['installs'].'&nbsp&nbsp;'._('Downloaded').': '.$counts['downloads'].'</small></div>'.
+            
             '<img style="width: 50%; display: block; margin: 0 auto;" class="img-responsive" src="'.$icon.'">',
             new \Ease\Html\DivTag($pProps['Description']),
-            new \Ease\Html\DivTag($download, ['style' => 'text-align: center;'])
+            new \Ease\Html\DivTag($download,
+                ['style' => 'text-align: center;'])
         ];
     }
 }

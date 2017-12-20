@@ -12,10 +12,10 @@ require_once 'includes/Configure.php';
 require_once '/var/lib/v.s.cz/autoload.php';
 
 if (!defined('EASE_APPNAME')) {
-    define('EASE_APPNAME', 'shop4flexibee');
+    define('EASE_APPNAME', 'VitexSoftwareWEB');
 }
 
-\Ease\Shared::initializeGetText(constant('EASE_APPNAME'));
+\Ease\Shared::initializeGetText('vscz','cs_CZ','i18n');
 
 session_start();
 
@@ -37,3 +37,4 @@ $oUser = \Ease\Shared::user();
 
 /* @var $oPage VSWebPage */
 $oPage = new \VSCZ\ui\WebPage( );
+

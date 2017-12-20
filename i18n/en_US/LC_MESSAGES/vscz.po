@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VitexSoftware\n"
-"POT-Creation-Date: 2017-10-23 08:34+0200\n"
-"PO-Revision-Date: 2017-10-23 08:36+0200\n"
+"POT-Creation-Date: 2017-11-24 09:32+0100\n"
+"PO-Revision-Date: 2017-11-24 09:32+0100\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
 "Language: en\n"
@@ -100,11 +100,11 @@ msgstr "Contact"
 msgid "News Editor"
 msgstr "News Editor"
 
-#: classes/ui/NewPackages.php:67
+#: classes/ui/NewPackages.php:70
 msgid "Fresh Packages"
 msgstr "Fresh Packages"
 
-#: classes/ui/NewPackages.php:77
+#: classes/ui/NewPackages.php:80
 msgid "All Packages"
 msgstr "All Packages"
 
@@ -297,23 +297,23 @@ msgstr "finish"
 msgid "Letsgo"
 msgstr "Letsgo"
 
-#: ease.php:15
+#: ease.php:17
 msgid "Ease Framework"
 msgstr "Ease Framework"
 
-#: ease.php:33 moloch.php:60
+#: ease.php:35 moloch.php:60
 msgid "Ke stažení"
 msgstr ""
 
-#: ease.php:70
+#: ease.php:73
 msgid "Ukázka kódu"
 msgstr ""
 
-#: ease.php:78
+#: ease.php:81
 msgid "Výsledek: Twitter Bootstrap tlačítko"
 msgstr ""
 
-#: ease.php:100
+#: ease.php:103
 msgid "Proč použít ?"
 msgstr ""
 
@@ -510,6 +510,14 @@ msgstr "FlexiBee modifikátor"
 #: index.php:75
 msgid "Shopping App for Flexibee"
 msgstr "Shopping App for Flexibee;"
+
+#: index.php:90
+msgid "Languages used last week"
+msgstr "Languages used last week"
+
+#: index.php:92
+msgid "Coding activity last week"
+msgstr "Coding activity last week"
 
 #: kontakt.php:13
 msgid "contacts"
