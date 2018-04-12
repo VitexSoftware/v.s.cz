@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VitexSoftware\n"
-"POT-Creation-Date: 2017-11-24 09:32+0100\n"
-"PO-Revision-Date: 2017-11-24 09:32+0100\n"
+"POT-Creation-Date: 2018-01-31 15:46+0100\n"
+"PO-Revision-Date: 2018-01-31 15:47+0100\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
 "Language: en\n"
@@ -20,11 +20,11 @@ msgstr ""
 msgid "Articles"
 msgstr "Articles"
 
-#: article.php:26 index.php:86
+#: article.php:26 index.php:128
 msgid "More articles"
 msgstr "More articles"
 
-#: cenik.php:14 index.php:14 kontakt.php:25 reference.php:13
+#: cenik.php:14 index.php:13 kontakt.php:25 reference.php:13
 msgid "Vitex Software"
 msgstr "Vitex Software"
 
@@ -64,7 +64,7 @@ msgstr "Flexplorer REST API Developer tool"
 msgid "FlexyProXY"
 msgstr "FlexyProXY"
 
-#: classes/ui/MainMenu.php:37 index.php:74
+#: classes/ui/MainMenu.php:37 index.php:97
 msgid "Shop4FlexiBee"
 msgstr "Shop4FlexiBee"
 
@@ -100,13 +100,23 @@ msgstr "Contact"
 msgid "News Editor"
 msgstr "News Editor"
 
-#: classes/ui/NewPackages.php:70
+#: classes/ui/NewPackages.php:106
 msgid "Fresh Packages"
 msgstr "Fresh Packages"
 
-#: classes/ui/NewPackages.php:80
+#: classes/ui/NewPackages.php:116
 msgid "All Packages"
 msgstr "All Packages"
+
+#: classes/ui/NewPackages.php:140
+#, fuzzy
+msgid "Installed"
+msgstr "Installs"
+
+#: classes/ui/NewPackages.php:140
+#, fuzzy
+msgid "Downloaded"
+msgstr "Download"
 
 #: classes/ui/NewsEditor.php:56
 msgid "Delete"
@@ -136,11 +146,17 @@ msgstr "Language"
 msgid "No articles"
 msgstr "No articles"
 
-#: classes/ui/PageBottom.php:23
-msgid "Source Codes"
-msgstr "Source Codes"
+#: classes/ui/PackagistBadge.php:23
+#, fuzzy
+msgid "Packagist Downloads"
+msgstr "Downloads"
 
-#: classes/ui/PageBottom.php:37
+#: classes/ui/PageBottom.php:23 flexibee.php:56 flexibee.php:80 flexibee.php:93
+#: flexibee.php:100 flexibee.php:112 flexibee.php:136
+msgid "Source codes"
+msgstr "Source codes"
+
+#: classes/ui/PageBottom.php:37 index.php:115
 msgid "Applications"
 msgstr "Applications"
 
@@ -149,8 +165,9 @@ msgid "Services"
 msgstr "Services"
 
 #: classes/ui/PageBottom.php:50
-msgid "Reposistory"
-msgstr "Reposistory"
+#, fuzzy
+msgid "Repository"
+msgstr "How to use repository"
 
 #: classes/ui/PageBottom.php:51
 msgid "Hosting"
@@ -184,9 +201,13 @@ msgstr "More"
 msgid "Contacts"
 msgstr "Contacts"
 
-#: classes/ui/PageBottom.php:92
+#: classes/ui/PageBottom.php:90
 msgid "&copy; 2012-2017 Vitex Software"
 msgstr "&copy; 2012-2017 Vitex Software"
+
+#: classes/ui/PageBottom.php:94
+msgid "Powered by debian"
+msgstr ""
 
 #: classes/ui/WebPage.php:91
 msgid "Only for admin"
@@ -297,24 +318,21 @@ msgstr "finish"
 msgid "Letsgo"
 msgstr "Letsgo"
 
-#: ease.php:17
+#: ease.php:15
 msgid "Ease Framework"
 msgstr "Ease Framework"
 
-#: ease.php:35 moloch.php:60
-msgid "Ke stažení"
+#: ease.php:33 flexipeehp.php:29
+#, fuzzy
+msgid "Apigen documentation"
+msgstr "Documentation"
+
+#: ease.php:38 flexipeehp.php:34
+msgid "RSS Feed"
 msgstr ""
 
-#: ease.php:73
-msgid "Ukázka kódu"
-msgstr ""
-
-#: ease.php:81
-msgid "Výsledek: Twitter Bootstrap tlačítko"
-msgstr ""
-
-#: ease.php:103
-msgid "Proč použít ?"
+#: ease.php:45 flexipeehp.php:41
+msgid "Latest change"
 msgstr ""
 
 #: flexibee.php:21
@@ -334,52 +352,52 @@ msgid ""
 "grafické knihovny, ten si nainstaluje náš balíček."
 msgstr ""
 
-#: flexibee.php:37 flexibee.php:46
-msgid "Více informací"
-msgstr ""
+#: flexibee.php:39 flexibee.php:48 flexibee.php:64
+#, fuzzy
+msgid "More informations"
+msgstr "Password confirmation"
 
-#: flexibee.php:43
+#: flexibee.php:45
 msgid "Snadno nastavitelná utilita pro každodení zálohování vašich účetních dat"
 msgstr ""
 
-#: flexibee.php:50
+#: flexibee.php:52
 msgid ""
 "Senzory pro sledování stavu FlexiBee. Použitelné v monitorovacích systémech "
 "Nagios/Icinga."
 msgstr ""
 
-#: flexibee.php:54 flexibee.php:69 flexibee.php:82 flexibee.php:89
-#: flexibee.php:101 flexibee.php:125
-msgid "Source codes"
-msgstr "Source codes"
-
 #: flexibee.php:59
+msgid "Odesílač upomínek"
+msgstr ""
+
+#: flexibee.php:70
 msgid "Library FlexiPeeHP"
 msgstr "Library FlexiPeeHP"
 
-#: flexibee.php:60
+#: flexibee.php:71
 msgid "PHP Knihovna pro snadnou integraci vašich aplikací a systémů"
 msgstr ""
 
-#: flexibee.php:65
+#: flexibee.php:76
 msgid "Video presentation"
 msgstr "Video presentation"
 
-#: flexibee.php:74
+#: flexibee.php:85
 msgid ""
 "Vývojářský nástroj a editor pro FlexiBee API. Napsaný s využitím knihovny "
 "FlexiPeeHP:"
 msgstr ""
 
-#: flexibee.php:78
+#: flexibee.php:89
 msgid "See in action"
 msgstr "See in action"
 
-#: flexibee.php:84
+#: flexibee.php:95
 msgid "FlexiBee Git History"
 msgstr "FlexiBee Git History"
 
-#: flexibee.php:85
+#: flexibee.php:96
 msgid ""
 "Solution for saving all flexibee changes into git repository with json files "
 "in"
@@ -387,41 +405,45 @@ msgstr ""
 "Solution for saving all flexibee changes into git repository with json files "
 "in"
 
-#: flexibee.php:94
+#: flexibee.php:105
 msgid ""
 "Transparent Proxy for filering and modification communictation with FlexiBee "
 msgstr ""
 "Transparent Proxy for filering and modification communictation with FlexiBee "
 
-#: flexibee.php:98
+#: flexibee.php:109
 msgid "Live Demo"
 msgstr "Live Demo"
 
-#: flexibee.php:104
+#: flexibee.php:115
 msgid "Basic app for order pricelist items and reaction after incoming payment"
 msgstr "Basic app for order pricelist items and reaction after incoming payment"
 
-#: flexibee.php:109
+#: flexibee.php:120
 msgid "Live Customer Demo"
 msgstr "Live Customer Demo"
 
-#: flexibee.php:112
+#: flexibee.php:123
 msgid "Username: admin Password: admin"
 msgstr "Username: admin Password: admin"
 
-#: flexibee.php:118
+#: flexibee.php:129
 msgid "Live Admin Demo"
 msgstr "Live Admin Demo"
 
-#: flexibee.php:129
+#: flexibee.php:140
 msgid "FlexiBee enhancenments"
 msgstr "FlexiBee enhancenments"
 
-#: flexibee.php:130
+#: flexibee.php:141
 msgid ""
 "Díky několikaleté praxi s tímto systémem vám přinášíme tyto naše vylepšení, "
 "integrace a nástroje"
 msgstr ""
+
+#: flexipeehp.php:15 index.php:59
+msgid "FlexiPeeHP"
+msgstr "FlexiPeeHP"
 
 #: hosting.php:15
 msgid "Hosting - Vitex Software"
@@ -463,59 +485,118 @@ msgstr "Imap2MX for Roundcube and Squirrelmail"
 msgid "Download"
 msgstr "Download"
 
-#: index.php:22
-msgid "EaseFramework"
-msgstr "EaseFramework"
+#: index.php:18 monitoring.php:55
+msgid "Open Source"
+msgstr "Open Source"
 
-#: index.php:23
-msgid "Framework pro snadné psaní PHP aplikací"
+#: index.php:19
+msgid "IT Mangement"
+msgstr ""
+
+#: index.php:20
+msgid "Linux"
+msgstr ""
+
+#: index.php:21
+msgid "PHP Development"
 msgstr ""
 
 #: index.php:35
-msgid "Icinga Editor"
-msgstr "Icinga Editor"
+msgid "EasePHP"
+msgstr ""
 
 #: index.php:36
-msgid "Editor Konfigurace monitoringu"
+msgid "Framework pro snadné psaní PHP aplikací"
 msgstr ""
 
 #: index.php:40
-msgid "FlexiPeeHP"
-msgstr "FlexiPeeHP"
-
-#: index.php:41
-msgid "https://github.com/Spoje-NET/FlexiPeeHP"
+msgid "EaseBricks"
 msgstr ""
 
 #: index.php:42
+msgid "Common Widgets for EasePHP Framework"
+msgstr ""
+
+#: index.php:54
+msgid "Icinga Editor"
+msgstr "Icinga Editor"
+
+#: index.php:55
+msgid "Editor Konfigurace monitoringu"
+msgstr ""
+
+#: index.php:60
+msgid "flexipeehp.php"
+msgstr ""
+
+#: index.php:60
 msgid "PHP Knihovna pro komunikaci s FlexiBee"
 msgstr "PHP Knihovna pro komunikaci s FlexiBee"
 
-#: index.php:52
+#: index.php:69
+#, fuzzy
+msgid "FlexiPeeHP Bricks"
+msgstr "FlexiPeeHP"
+
+#: index.php:70
+msgid "https://github.com/VitexSoftware/FlexiPeeHP-Bricks"
+msgstr ""
+
+#: index.php:71
+msgid "Widgets & Code snipplets for FlexiPeeHP"
+msgstr ""
+
+#: index.php:75
 msgid "Flexplorer"
 msgstr "Flexplorer"
 
-#: index.php:53
+#: index.php:76
 msgid "Vývojářský nástroj pro FlexiBee REST API"
 msgstr ""
 
-#: index.php:65
+#: index.php:88
 msgid "FlexiProxy"
 msgstr "FlexiProxy"
 
-#: index.php:66
+#: index.php:89
 msgid "FlexiBee modifikátor"
 msgstr "FlexiBee modifikátor"
 
-#: index.php:75
+#: index.php:98
 msgid "Shopping App for Flexibee"
 msgstr "Shopping App for Flexibee;"
 
-#: index.php:90
+#: index.php:105
+msgid "IPEX B2B"
+msgstr ""
+
+#: index.php:107
+msgid "Library for interaction with restapi.ipex.cz"
+msgstr ""
+
+#: index.php:110
+msgid "PrimaERP"
+msgstr ""
+
+#: index.php:112
+msgid "Library for interaction with API primaerp.com"
+msgstr ""
+
+#: index.php:119
+#, fuzzy
+msgid "Libraries"
+msgstr "Used Libraries"
+
+#: index.php:123
+#, fuzzy
+msgid "News"
+msgstr "Actual news"
+
+#: index.php:132
 msgid "Languages used last week"
 msgstr "Languages used last week"
 
-#: index.php:92
+#: index.php:134
 msgid "Coding activity last week"
 msgstr "Coding activity last week"
 
@@ -535,7 +616,7 @@ msgstr "Bitcoins accepted"
 msgid "Cookies required"
 msgstr "Cookies required"
 
-#: login.php:26 monitoring.php:55
+#: login.php:26 monitoring.php:51
 msgid "Please enter your login and password"
 msgstr "Please enter your login and password"
 
@@ -571,7 +652,11 @@ msgstr "Good bye & next time"
 msgid "Fakturační systém Moloch"
 msgstr ""
 
-#: moloch.php:82 monitoring.php:52
+#: moloch.php:60
+msgid "Ke stažení"
+msgstr ""
+
+#: moloch.php:82 monitoring.php:48
 msgid "testovací provoz"
 msgstr ""
 
@@ -583,96 +668,92 @@ msgstr ""
 msgid "Icinga Configurator"
 msgstr "Icinga Configurator"
 
-#: monitoring.php:23
+#: monitoring.php:19
 msgid "Monitor your network"
 msgstr "Monitor your network"
 
-#: monitoring.php:28
+#: monitoring.php:24
 msgid "Servers & Services Monitoring"
 msgstr "Servers & Services Monitoring"
 
-#: monitoring.php:30
+#: monitoring.php:26
 msgid "Windows behind NATem/firewallem monitoring"
 msgstr "Windows behind NATem/firewallem monitoring"
 
-#: monitoring.php:35
+#: monitoring.php:31
 msgid "Sign Up"
 msgstr "Sign Up"
 
-#: monitoring.php:36
+#: monitoring.php:32
 msgid "Služba jako taková je nabízena do deseti monitorovaných služeb zdarma."
 msgstr ""
 
-#: monitoring.php:37
+#: monitoring.php:33
 msgid ""
 "Nad deset monitorovaných služeb požadujeme deset korun za každý host na měsíc"
 msgstr ""
 
-#: monitoring.php:38
+#: monitoring.php:34
 msgid "Zpoplatněny jsou i notifikační SMS a to dvěmi korunami za jednu zprávu."
 msgstr ""
 
-#: monitoring.php:41
+#: monitoring.php:37
 msgid "Sign IN"
 msgstr "Sign IN"
 
-#: monitoring.php:59
-msgid "Open Source"
-msgstr "Open Source"
-
-#: monitoring.php:60
+#: monitoring.php:56
 msgid "Freedom first"
 msgstr "Freedom first"
 
-#: monitoring.php:61
+#: monitoring.php:57
 msgid ""
 "Ctíme myšlenku že software má být svobodný a proto jsou k dispozici zdrojové "
 "kódy i instalační balíčky pro debian a odvozené distribuce."
 msgstr ""
 
-#: monitoring.php:62
+#: monitoring.php:58
 msgid "Instalace zdroje a balíčku"
 msgstr ""
 
-#: monitoring.php:63
+#: monitoring.php:59
 msgid ""
 "Bude pro nás výrazem uznání kvality naší práce pokud se rozhodnete používat "
 "naše konfigurační rozhraní monitoringu i na vašem serveru."
 msgstr ""
 
-#: monitoring.php:68
+#: monitoring.php:64
 msgid "Veřejně dostupné zdrojové kódy"
 msgstr ""
 
-#: monitoring.php:70
+#: monitoring.php:66
 msgid ""
 "Pro všechny zájemce o nahlédnutí nebo i přispění do zdrojových kódů jsou "
 "dveře otevřené."
 msgstr ""
 
-#: monitoring.php:92
+#: monitoring.php:88
 msgid "Podpora"
 msgstr ""
 
-#: monitoring.php:93
+#: monitoring.php:89
 msgid "Snadný start"
 msgstr ""
 
-#: monitoring.php:94
+#: monitoring.php:90
 msgid ""
 "Ke spuštění monitoringu nejsou třeba žádné zvláštní znalosti. I přes to jsme "
 "pro vás připravili tento stručný ale názorný návod"
 msgstr ""
 
-#: monitoring.php:96
+#: monitoring.php:92
 msgid "Začínáme"
 msgstr ""
 
-#: monitoring.php:98
+#: monitoring.php:94
 msgid "Zajímá nás váš názor"
 msgstr ""
 
-#: monitoring.php:99
+#: monitoring.php:95
 msgid ""
 "Náš systém je neustále ve vývoji a tak se může stát že něco přestane "
 "fungovat. Proto oceníme pokud nám toto oznámíte. Stejně tak oceníme vaše "
@@ -715,48 +796,48 @@ msgstr ""
 msgid "Pokračovat"
 msgstr ""
 
-#: repos.php:13 repostats.php:19
+#: repos.php:13 repostats.php:23
 msgid "Deb Repository"
 msgstr "Deb Repository"
 
-#: repos.php:19 repostats.php:25
+#: repos.php:19 repostats.php:29
 msgid "How to use repository"
 msgstr "How to use repository"
 
-#: repos.php:33 repostats.php:39
+#: repos.php:33 repostats.php:43
 #, php-format
 msgid "apt-get update feeded %d times"
 msgstr "apt-get update feeded %d times"
 
-#: repos.php:75 repostats.php:81
+#: repos.php:75 repostats.php:85
 msgid "Package name"
 msgstr "Package name"
 
-#: repos.php:75 repostats.php:81
+#: repos.php:75 repostats.php:85
 msgid "Version"
 msgstr "Version"
 
-#: repos.php:75 repostats.php:81
+#: repos.php:75 repostats.php:85
 msgid "Age"
 msgstr "Age"
 
-#: repos.php:75 repostats.php:81
+#: repos.php:75 repostats.php:85
 msgid "Release date"
 msgstr "Release date"
 
-#: repos.php:76 repostats.php:82
+#: repos.php:76 repostats.php:86
 msgid "Size"
 msgstr "Size"
 
-#: repos.php:77 repostats.php:83
+#: repos.php:77 repostats.php:87
 msgid "Package"
 msgstr "Package"
 
-#: repos.php:108 repostats.php:126
+#: repos.php:108 repostats.php:125
 msgid "Packages"
 msgstr "Packages"
 
-#: repos.php:111 repostats.php:127
+#: repos.php:111 repostats.php:126
 msgid "Instructions"
 msgstr "Instructions"
 
@@ -768,11 +849,11 @@ msgstr "download count details"
 msgid "please wait"
 msgstr "please wait"
 
-#: repostats.php:83
+#: repostats.php:87
 msgid "Installs"
 msgstr "Installs"
 
-#: repostats.php:83
+#: repostats.php:87
 msgid "Downloads"
 msgstr "Downloads"
 
@@ -812,15 +893,18 @@ msgstr ""
 msgid "Bezpečnostní audity"
 msgstr ""
 
+#~ msgid "Source Codes"
+#~ msgstr "Source Codes"
+
+#~ msgid "EaseFramework"
+#~ msgstr "EaseFramework"
+
 #, fuzzy
 #~ msgid "Vitex Software - kontakty"
 #~ msgstr "Vitex Software"
 
 #~ msgid "Repo"
 #~ msgstr "Repo"
-
-#~ msgid "Used Libraries"
-#~ msgstr "Used Libraries"
 
 #~ msgid "ChangesAPI was enabled"
 #~ msgstr "ChangesAPI was enabled"

@@ -20,7 +20,7 @@ $oPage->container->addItem(new \Ease\Html\ATag('https://flexibee.eu/',
     ['class' => 'img-responsive', 'style' => 'margin: 10px']),
     ['title' => _('Go to FlexiBee site')]));
 
-$oPage->container->addItem(new \Ease\Html\DivTag(_('Účetní a ekonomický systém pro menší firmy a živnostníky s bohatými možnostmi integrace.'),
+$oPage->container->addItem(new \Ease\Html\DivTag('<center>'._('Účetní a ekonomický systém pro menší firmy a živnostníky s bohatými možnostmi integrace.').'</center>',
     ['class' => 'jumbotron']));
 
 
@@ -32,9 +32,11 @@ $column1->addItem(new \Ease\Html\H3Tag('FlexiBee Server'));
 $column1->addItem(new \Ease\Html\DivTag(_('Abra poskytuje pouze instalační balíčkek grafického klienta pro desktop a nebo klienta se serverem. Kdo si ale nechce na server instalovat nepotřebné grafické knihovny, ten si nainstaluje náš balíček.'),
     ['style' => 'margin: 5px;']));
 
+//$column1->addItem(new \Ease\Html\ATag('https://github.com/Vitexus/ansible-role-FlexiBeeServer',_('Ansible Role FlexiBee server')));
+
 $column1->addItem(new \Ease\TWB\LinkButton('https://github.com/VitexSoftware/flexibee-server-deb',
    [new \Ease\Html\ImgTag('img/abra-flexibee-square.png', 'FlexiBee logo',
-        ['style' => 'height: 30px;']), ' ', _('Více informací').' »'],
+        ['style' => 'height: 30px;']), ' ', _('More informations').' »'],
     'success btn-lg'));
 
 
@@ -43,7 +45,7 @@ $column1->addItem(new \Ease\Html\H3Tag('Zálohování'));
 $column1->addItem(new \Ease\Html\DivTag(_('Snadno nastavitelná utilita pro každodení zálohování vašich účetních dat'),
     ['style' => 'margin: 5px;']));
 $column1->addItem(new \Ease\TWB\LinkButton('https://github.com/VitexSoftware/flexibee-server-deb',
-    _('Více informací').' »', 'success btn-lg'));
+    _('More informations').' »', 'success btn-lg'));
 
 
 $column1->addItem(new \Ease\Html\H3Tag('Monitoring'));
@@ -52,6 +54,15 @@ $column1->addItem(new \Ease\Html\DivTag(_('Senzory pro sledování stavu FlexiBe
 
 $column1->addItem(new \Ease\TWB\LinkButton('https://github.com/VitexSoftware/monitoring-plugins-flexibee',
     '<i class = "fa fa-github"></i> '._('Source codes').' »', 'info'));
+
+$column1->addItem(new \Ease\Html\H3Tag('Upomínky'));
+$column1->addItem(new \Ease\Html\DivTag(_('Odesílač upomínek'),
+    ['style' => 'margin: 5px;']));
+
+$column1->addItem(new \Ease\TWB\LinkButton('https://github.com/VitexSoftware/php-flexibee-reminder',
+   [new \Ease\Html\ImgTag('img/deb/php-flexibee-reminder.png', 'FlexiBee Reminder',
+        ['style' => 'height: 30px;']), ' ', _('More informations').' »'],
+    'success btn-lg'));
 
 
 
@@ -100,7 +111,7 @@ $column3->addItem(new \Ease\TWB\LinkButton('https://flexiproxy.vitexsoftware.cz/
 $column3->addItem(new \Ease\TWB\LinkButton('https://github.com/VitexSoftware/FlexiProxy',
     '<i class = "fa fa-github"></i> '._('Source codes').' »', 'info'));
 
-$column3->addItem(new \Ease\Html\H3Tag('Shop4FlexiBee'));
+$column3->addItem(new \Ease\Html\H3Tag('FlexiBee ClientZone'));
 $column3->addItem(new \Ease\Html\DivTag(_('Basic app for order pricelist items and reaction after incoming payment'),
     ['style' => 'margin: 5px;']));
 
@@ -121,7 +132,7 @@ $column3->addItem(new \Ease\TWB\LinkButton('https://shop4flexibee.vitexsoftware.
 
 
 
-$column3->addItem(new \Ease\TWB\LinkButton('https://github.com/VitexSoftware/Shop4FlexiBee',
+$column3->addItem(new \Ease\TWB\LinkButton('https://github.com/VitexSoftware/FlexiBee-ClientZone',
     '<i class = "fa fa-github"></i> '._('Source codes').' »', 'info'));
 
 

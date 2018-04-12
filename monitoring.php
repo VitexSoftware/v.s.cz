@@ -13,10 +13,6 @@ $oPage->addPageColumns();
 $oPage->addItem('<a href="https://github.com/Vitexus/icinga_configurator" class="ribbon bg-teal">Forkni na GitHubu</a>');
 
 
-if ($OUser->getUserID()) {
-    $oPage->redirect('http://v.s.cz/icinga-editor/');
-}
-
 
 $monitoringTabs = new \Ease\TWB\Tabs('montabs');
 
