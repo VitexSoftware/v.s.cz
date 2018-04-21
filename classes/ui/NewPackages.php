@@ -134,15 +134,12 @@ class NewPackages extends \Ease\Html\Span
             ['class' => 'btn btn-success']);
 
         return ['<br clear="all">',
-            new \Ease\Html\H3Tag($pName.' '.$pProps['Version'],
+            new \Ease\Html\H3Tag('<a href="package.php?package='.$pName.'">'.$pName.' '.$pProps['Version'].'</a>',
                 ['style' => 'text-align: center;']),
-            
             '<div style="text-align: center;"><small>'._('Installed').': '.$counts['installs'].'&nbsp&nbsp;'._('Downloaded').': '.$counts['downloads'].'</small></div>'.
-            
-            '<img style="width: 50%; display: block; margin: 0 auto;" class="img-responsive" src="'.$icon.'">',
+            '<a href="package.php?package='.$pName.'"><img style="width: 50%; display: block; margin: 0 auto;" class="img-responsive" src="'.$icon.'"></a>',
             new \Ease\Html\DivTag($pProps['Description']),
-            new \Ease\Html\DivTag($download,
-                ['style' => 'text-align: center;'])
+            new \Ease\Html\DivTag($download, ['style' => 'text-align: center;'])
         ];
     }
 }

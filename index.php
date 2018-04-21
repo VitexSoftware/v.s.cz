@@ -6,7 +6,7 @@ namespace VSCZ;
  * VitexSoftware - titulní strana
  *
  * @author     Vitex <vitex@hippy.cz>
- * @copyright  2012-2017 Vitex@hippy.cz (G)
+ * @copyright  2012-2018 Vitex@hippy.cz (G)
  */
 require_once 'includes/VSInit.php';
 
@@ -21,7 +21,7 @@ $libMenu = new ui\MainPageMenu();
 //    _('Repozitář balíčků pro Debian & Ubuntu'));
 
 $easeLib = $libMenu->addMenuItem('img/ease-framework-logo.png', _('EasePHP'),
-    'ease.php', _('Framework pro snadné psaní PHP aplikací'),
+    'ease.php', _('Framework for easy writing of PHP applications'),
     new \Ease\TWB\Label('info', \Ease\Atom::$frameworkVersion).new ui\PackagistBadge('VitexSoftware/EaseFramework','vitexsoftware/ease-framework'));
 
 
