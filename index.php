@@ -40,7 +40,7 @@ if (file_exists('/usr/share/icinga-editor/composer.json')) {
 
 
 $appMenu->addMenuItem('img/icinga_editor-logo.png', _('Icinga Editor'),
-    '/icinga-editor', _('Editor Konfigurace monitoringu'),
+    'http://monitoring.vitexsoftware.cz/', _('Editor Konfigurace monitoringu'),
     new \Ease\TWB\Label('info', $version));
 
 
@@ -125,6 +125,20 @@ $newsRow->addColumn(4, new \Ease\TWB\Well(new ui\NewPackages()));
 $newsColumn->addItem(new \Ease\TWB\Well('<h1>'._('Languages used last week').'</h1><figure><embed src="https://wakatime.com/share/@5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7/993cf4a7-8296-4820-96c3-c4caf210b3bf.svg"></embed></figure>'));
 
 $newsColumn->addItem(new \Ease\TWB\Well('<h1>'._('Coding activity last week').'</h1><figure><embed src="https://wakatime.com/share/@5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7/04de33a5-c65a-4447-a93a-d5294dd85c73.svg"></embed></figure>'));
+
+$newsColumn->addItem(new \Ease\Html\DivTag(null,['id'=>'ghfeed']));
+$oPage->includeCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css');
+$oPage->includeJavaScript('//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js');
+
+$oPage->includeJavaScript('js/github-activity-0.1.5.min.js');
+$oPage->includeCSS('css/github-activity-0.1.5.min.css');
+$oPage->addJavaScript('
+ GitHubActivity.feed({
+	username: "Vitexus",
+	selector: "#ghfeed",
+});   
+');
+
 
 $oPage->container->addItem($newsRow);
 

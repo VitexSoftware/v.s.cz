@@ -12,6 +12,9 @@ namespace VSCZ\ui;
 class WebPage extends \Ease\TWB\WebPage
 {
 
+    public $bootstrapThemeCSS = 'css/theme.css';
+
+
     /**
      * Základní objekt stránky
      *
@@ -20,7 +23,7 @@ class WebPage extends \Ease\TWB\WebPage
     function __construct(&$userObject = null)
     {
         parent::__construct('Vitex Software', $userObject);
-        $this->includeCss('css/bootstrap.css');
+        $this->includeCss('css/theme.css');
         $this->includeCss('css/default.css');
         \Ease\Shared::webPage()->head->addItem('<link rel="icon" type="image/png"
  href="img/tux-server.png" />');

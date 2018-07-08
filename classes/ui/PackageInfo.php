@@ -48,7 +48,12 @@ class PackageInfo extends \Ease\TWB\Panel
 
         $packageDownloadLink = new \Ease\Html\ATag($pProps['Filename'],
             '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'.$pProps['Filename'],
+            ['class' => 'btn btn-lg btn-default']);
+
+        $packageInstallLink = new \Ease\Html\ATag('install.php?package='.$pName,
+            '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'.$pName,
             ['class' => 'btn btn-lg btn-success']);
+
 
         $heading = new \Ease\TWB\Row();
         $heading->addColumn(2,
@@ -56,7 +61,8 @@ class PackageInfo extends \Ease\TWB\Panel
         $heading->addColumn(14,
             new \Ease\Html\H1Tag($pName.' '.$pProps['Version']));
 
-        parent::__construct($heading, 'info', null, $packageDownloadLink);
+        parent::__construct($heading, 'info', null,
+            [$packageDownloadLink, $packageInstallLink]);
 
         $this->addItem(new \Ease\TWB\Well($pProps['Description']));
 
@@ -69,7 +75,7 @@ class PackageInfo extends \Ease\TWB\Panel
         $infotable->addRowColumns([_('Size'), WebPage::_format_bytes($pProps['Size'])]);
         $infotable->addRowColumns([_('Installs'), $installs]);
         $infotable->addRowColumns([_('Downloads'), $downloads]);
-
+        $depIcons = '';
         $pDetails = explode(PHP_EOL, shell_exec('LC_ALL=C dpkg -I '.$packFile));
         if (count($pDetails)) {
             foreach ($pDetails as $row) {
@@ -77,7 +83,19 @@ class PackageInfo extends \Ease\TWB\Panel
                     list($key, $value) = explode(': ', $row);
                     switch (trim($key)) {
                         case 'Version':
-                            $version = $value;
+                            $version  = $value;
+                            break;
+                        case 'Depends':
+                        case 'Suggests':
+                        case 'Recommends':
+                        case 'Conflicts':
+                        case 'Replaces':
+                            $infotable->addRowColumns([
+                                _($key),
+                                self::addPackageLinks($value)
+                            ]);
+                            $depIcons .= self::packagesIcons(self::DependsToArray($value));
+
                             break;
                         case 'Homepage':
                             $projectUrl = $value;
@@ -94,27 +112,26 @@ class PackageInfo extends \Ease\TWB\Panel
             }
         }
 
-        
+
         $infoColumns = new \Ease\TWB\Row();
         $infoColumns->addColumn(8, $infotable);
 
         $rightColumn = new \Ease\Html\DivTag();
         $rightColumn->addItem(self::packageLogo($pName));
+        if (strlen($depIcons)) {
+            $rightColumn->addItem('<h3>'._('see also').'</h3>'.$depIcons);
+        }
+
 
         $infoColumns->addColumn(4, $rightColumn);
 
-        $this->addItem($infoColumns);
-        
-        $this->addItem(new \Ease\Html\PreTag(shell_exec('dpkg-query -L '.$pName)));
-
-        
-        if(strlen($projectUrl)){
-            $this->addItem( new HtmlMarkdownReadme( $projectUrl , $version ) );
-        }
+        $this->includeJavaScript('js/jquery.tablesorter.min.js');
+        $this->addJavaScript('$("#dwlstats").tablesorter();');
 
         $howmuch = "SELECT REPLACE( request_uri, '_all.deb','' ) AS ver, COUNT(*) AS howmuch, from_unixtime(time_stamp) FROM vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' GROUP BY request_uri ORDER BY request_uri DESC ";
 
-        $popularityTable = new \Ease\Html\TableTag(null, ['class' => 'table']);
+        $popularityTable = new \Ease\Html\TableTag(null,
+            ['class' => 'table', 'id' => 'dwlstats']);
 
         $popularityTable->addRowHeaderColumns([_('Version'), _('Download/Install count'),
             _('Last hit')]);
@@ -126,22 +143,81 @@ class PackageInfo extends \Ease\TWB\Panel
             $popularityTable->addRowColumns($iinfo);
         }
 
-        $this->addItem($popularityTable);
 
-        
-        
+        $packageTabs     = new \Ease\TWB\Tabs('PkgInfoTabs');
+        $packageTabs->addTab(_('Info'), $infoColumns);
+        $packageContents = shell_exec('dpkg-query -L '.$pName);
+        if (strlen($packageContents)) {
+            $packageTabs->addTab(_('Files'),
+                new \Ease\Html\PreTag($packageContents));
         }
+        if (strstr($projectUrl, 'github.com')) {
+            $packageTabs->addTab(_('Read Me'),
+                new HtmlMarkdownReadme($projectUrl, $version));
+        }
+        $packageTabs->addTab(_('Download stats'), $popularityTable);
+        $this->addItem($packageTabs);
+    }
+
+    static public function packagesIcons($packs)
+    {
+        $packIcons = [];
+        foreach (array_keys($packs) as $packName) {
+            $icon = 'img/deb/'.$packName.'.png';
+            if (file_exists($icon)) {
+                $packIcons[] = '<div><a href="package.php?package='.$packName.'">'.$packName.'</a></div>';
+                $packIcons[] = '<a href="package.php?package='.$packName.'">'.self::packageLogo($packName).'</a>';
+            }
+        }
+        return implode('', $packIcons);
+    }
+
+    public static function DependsToArray($dependsRaw)
+    {
+        $packagesRaw = explode(',', str_replace('|', ',', $dependsRaw));
+        foreach ($packagesRaw as $pid => $package) {
+            $package = trim($package);
+            if (strstr($package, ' ')) {
+                $packageName = explode(' ', $package)[0];
+            } else {
+                $packageName = trim($package);
+            }
+            $packages[$packageName] = $package;
+        }
+        return $packages;
+    }
+
+    public static function addPackageLinks($dependsRaw)
+    {
+        $packs = self::DependsToArray($dependsRaw);
+        foreach ($packs as $pack => $name) {
+            $icon = 'img/deb/'.$pack.'.png';
+            if (file_exists($icon)) {
+                $packs[$pack] = '<a href="package.php?package='.$pack.'">'.$name.'</a>';
+            } else {
+                $packs[$pack] = '<a href="https://packages.debian.org/stretch/'.$pack.'">'.$name.'</a>';
+            }
+        }
+
+        return implode(' , ', $packs);
+    }
+
+    public static function getPackageIcon($package)
+    {
+        $icon = 'img/deb/'.$package.'.png';
+        if (!file_exists($icon)) {
+            $icon = 'img/deb-package.png';
+        }
+        return $icon;
+    }
 
     public static function packageLogo($pName,
                                        $properties = ['class' => 'img-responsive',
             'style' => 'margin: auto auto;'])
     {
-        $icon = 'img/deb/'.$pName.'.png';
-        if (!file_exists($icon)) {
-            $icon = 'img/deb-package.png';
-        }
 
-        return new \Ease\Html\ImgTag($icon, $pName, $properties);
+        return new \Ease\Html\ImgTag(self::getPackageIcon($pName), $pName,
+            $properties);
     }
 
     static public function getPackagesInfo()

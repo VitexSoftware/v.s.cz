@@ -8,11 +8,11 @@
     "packages": [
         {
             "name": "ease-framework",
-            "version": "1.4.2.1",
+            "version": "1.4.8.5",
             "dist": {
                 "type": "path",
                 "url": "/usr/share/php/Ease",
-                "reference": "21d0cbdd9e9b0161f926344aa02b9481ada1b67e",
+                "reference": "34d06f868208d016ca1c87499a85b0ff8386c166",
                 "shasum": null
             },
             "require": {
@@ -53,11 +53,11 @@
         },
         {
             "name": "flexipeehp",
-            "version": "1.8.5.2",
+            "version": "1.10.1",
             "dist": {
                 "type": "path",
                 "url": "/usr/share/php/FlexiPeeHP",
-                "reference": "5c539f0145aac5367721f57c5ddc7c9d5909616d",
+                "reference": "4b1f9decb5f253c61d4ce5c1d39aca47c43a2cf9",
                 "shasum": null
             },
             "require": {
@@ -410,12 +410,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/Ease-PHP-Bricks.git",
-                "reference": "62cb7f116361f0cb365b15bf46d7a013fcd8fb69"
+                "reference": "5dcfd6201ea19c952d405ea615965e41fb434090"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/Ease-PHP-Bricks/zipball/62cb7f116361f0cb365b15bf46d7a013fcd8fb69",
-                "reference": "62cb7f116361f0cb365b15bf46d7a013fcd8fb69",
+                "url": "https://api.github.com/repos/VitexSoftware/Ease-PHP-Bricks/zipball/5dcfd6201ea19c952d405ea615965e41fb434090",
+                "reference": "5dcfd6201ea19c952d405ea615965e41fb434090",
                 "shasum": ""
             },
             "require": {
@@ -452,7 +452,7 @@
             ],
             "description": "EasePHPframework addons and code snipplets",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2017-12-20T20:40:23+00:00"
+            "time": "2017-12-25T19:02:10+00:00"
         },
         {
             "name": "vitexsoftware/ease-framework",
@@ -460,12 +460,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/EaseFramework.git",
-                "reference": "3f450d54950dccf2ee4784966e696cb051486792"
+                "reference": "cdca78f4a8cd2477f8c91fb88cf1c428b86e5dbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/EaseFramework/zipball/3f450d54950dccf2ee4784966e696cb051486792",
-                "reference": "3f450d54950dccf2ee4784966e696cb051486792",
+                "url": "https://api.github.com/repos/VitexSoftware/EaseFramework/zipball/cdca78f4a8cd2477f8c91fb88cf1c428b86e5dbc",
+                "reference": "cdca78f4a8cd2477f8c91fb88cf1c428b86e5dbc",
                 "shasum": ""
             },
             "require": {
@@ -500,7 +500,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -511,7 +511,7 @@
             ],
             "description": "An PHP Framework for Ease of writing Applications",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2017-12-19T12:34:55+00:00"
+            "time": "2018-05-22T22:28:07+00:00"
         }
     ],
     "packages-dev": [],
