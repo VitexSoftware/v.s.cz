@@ -13,7 +13,6 @@ require_once 'includes/VSInit.php';
 $oPage->addItem(new ui\PageTop(_('Vitex Software')));
 $oPage->addPageColumns();
 
-
 $appMenu = new ui\MainPageMenu();
 $libMenu = new ui\MainPageMenu();
 
@@ -22,13 +21,15 @@ $libMenu = new ui\MainPageMenu();
 
 $easeLib = $libMenu->addMenuItem('img/ease-framework-logo.png', _('EasePHP'),
     'ease.php', _('Framework for easy writing of PHP applications'),
-    new \Ease\TWB\Label('info', \Ease\Atom::$frameworkVersion).new ui\PackagistBadge('VitexSoftware/EaseFramework','vitexsoftware/ease-framework'));
+    new \Ease\TWB\Label('info', \Ease\Atom::$frameworkVersion).new ui\PackagistBadge('VitexSoftware/EaseFramework',
+    'vitexsoftware/ease-framework'));
 
 
 $libMenu->addMenuItem('img/ease-bricks-logo.png', _('EaseBricks'),
     'https://github.com/VitexSoftware/Ease-PHP-Bricks',
     _('Common Widgets for EasePHP Framework'),
-    new \Ease\TWB\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/Ease-PHP-Bricks','vitexsoftware/ease-bricks'));
+    new \Ease\TWB\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/Ease-PHP-Bricks',
+    'vitexsoftware/ease-bricks'));
 
 
 if (file_exists('/usr/share/icinga-editor/composer.json')) {
@@ -47,7 +48,8 @@ $appMenu->addMenuItem('img/icinga_editor-logo.png', _('Icinga Editor'),
 $libMenu->addMenuItem('img/flexipeehp-logo.png', _('FlexiPeeHP'),
     _('flexipeehp.php'), _('PHP Knihovna pro komunikaci s FlexiBee'),
     new \Ease\TWB\Label('info',
-    \FlexiPeeHP\FlexiBeeRO::$libVersion.' (FlexiBee '.\FlexiPeeHP\EvidenceList::$version.')').new ui\PackagistBadge('Spoje-NET/FlexiPeeHP','spoje.net/flexipeehp'));
+    \FlexiPeeHP\FlexiBeeRO::$libVersion.' (FlexiBee '.\FlexiPeeHP\EvidenceList::$version.')').new ui\PackagistBadge('Spoje-NET/FlexiPeeHP',
+    'spoje.net/flexipeehp'));
 
 if (file_exists('/usr/share/flexplorer/composer.json')) {
     $composerInfo = json_decode(file_get_contents('/usr/share/flexplorer/composer.json'));
@@ -57,7 +59,8 @@ if (file_exists('/usr/share/flexplorer/composer.json')) {
 $libMenu->addMenuItem('img/flexipeehp-bricks-logo.png', _('FlexiPeeHP Bricks'),
     _('https://github.com/VitexSoftware/FlexiPeeHP-Bricks'),
     _('Widgets & Code snipplets for FlexiPeeHP'),
-    new \Ease\TWB\Label('info', '0.2').new ui\PackagistBadge('VitexSoftware/FlexiPeeHP-Bricks','vitexsoftware/flexipeehp-bricks'));
+    new \Ease\TWB\Label('info', '0.2').new ui\PackagistBadge('VitexSoftware/FlexiPeeHP-Bricks',
+    'vitexsoftware/flexipeehp-bricks'));
 
 
 $appMenu->addMenuItem('img/flexplorer-logo.png', _('Flexplorer'),
@@ -83,7 +86,7 @@ if (file_exists('/usr/share/shop4flexibee/composer.json')) {
 }
 
 $appMenu->addMenuItem('img/shop4flexibee-logo.svg', _('FlexiBee ClientZone'),
-    'http://shop4flexibee.vitexsoftware.cz/', _('ClientZone App for FlexiBee'),
+    'https://clientzone.vitexsoftware.cz/', _('ClientZone App for FlexiBee'),
     new \Ease\TWB\Label('info', $version));
 
 //$mainPageMenu->addMenuItem('img/tux-server.png', _('Hosting'), 'hosting.php',
@@ -93,17 +96,33 @@ $appMenu->addMenuItem('img/shop4flexibee-logo.svg', _('FlexiBee ClientZone'),
 $libMenu->addMenuItem('img/ipex-b2b-logo.png', _('IPEX B2B'),
     'https://github.com/Spoje-NET/ipex-b2b',
     _('Library for interaction with restapi.ipex.cz'),
-    new \Ease\TWB\Label('info', '0.1').new ui\PackagistBadge('Spoje-NET/ipex-b2b','spoje.net/ipexb2b'));
+    new \Ease\TWB\Label('info', '0.1').new ui\PackagistBadge('Spoje-NET/ipex-b2b',
+    'spoje.net/ipexb2b'));
+
+$libMenu->addMenuItem('img/php-subreg-logo.png',
+    _('php-subreg'), 'https://github.com/Spoje-NET/php-subreg',
+    _('Easy interaction with subreg.cz'),
+    new \Ease\TWB\Label('info', '0.1').new ui\PackagistBadge('Spoje-NET/php-subreg',
+    'spoje.net/subreg'));
+
+$libMenu->addMenuItem('img/ease-fuelux-logo.png',
+    _('Ease FuelUX'), 'https://github.com/VitexSoftware/ease-fuelux',
+    _('FuelUX componets for EasePHP FrameWork '),
+    new \Ease\TWB\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/ease-fuelux',
+    'vitexsoftware/ease-fuelux'));
 
 $libMenu->addMenuItem('img/php-primaerp-logo.png', _('PrimaERP'),
     'https://github.com/VitexSoftware/php-primaERP',
     _('Library for interaction with API primaerp.com'),
-    new \Ease\TWB\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/php-primaERP','vitexsoftware/primaerp'));
+    new \Ease\TWB\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/php-primaERP',
+    'vitexsoftware/primaerp'));
 
 $libMenu->addMenuItem('img/deb/php-datamolino.png', _('Datamolino'),
     'https://github.com/VitexSoftware/phplib-datamolino',
     _('Library for interaction with Datamolino API'),
-    new \Ease\TWB\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/php-datamolino','vitexsoftware/datamolino'));
+    new \Ease\TWB\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/php-datamolino',
+    'vitexsoftware/datamolino'));
+
 
 $oPage->container->addItem(new \Ease\Html\H1Tag(_('Applications')));
 
