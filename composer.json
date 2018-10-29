@@ -21,8 +21,8 @@
     "require": {
         "php": ">= 5.5.9",
         "league/commonmark": "^0.15.0",
-        "flexipeehp": "*",
-        "ease-framework": "*",
+        "flexipeehp": "dev-master",
+        "ease-framework": "dev-master",
         "vitexsoftware/ease-bricks": "dev-master"
     },
     "repositories": [

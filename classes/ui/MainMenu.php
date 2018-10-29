@@ -60,5 +60,7 @@ class MainMenu extends \Ease\TWB\Navbar
             $this->addMenuItem(new \Ease\Html\ATag('newsedit.php',
                 _('News Editor')), 'left');
         }
+        
+        $this->addMenuItem( new \Ease\ui\LangSelect() , 'right');
     }
 }

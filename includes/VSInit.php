@@ -15,9 +15,9 @@ if (!defined('EASE_APPNAME')) {
     define('EASE_APPNAME', 'VitexSoftwareWEB');
 }
 
-\Ease\Shared::initializeGetText('vscz','cs_CZ','i18n');
-
 session_start();
+
+$locale = \Ease\Shared::locale(new \Ease\Locale(null,'./i18n','vscz'));
 
 if (\Ease\Shared::isCli()) {
     if (!defined('EASE_LOGGER')) {

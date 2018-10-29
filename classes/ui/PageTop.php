@@ -9,7 +9,7 @@ namespace VSCZ\ui;
  * @subpackage WebUI
  * @author     Vitex <vitex@hippy.cz>
  */
-class PageTop extends \Ease\Html\Div
+class PageTop extends \Ease\Html\DivTag
 {
     /**
      * Titulek stránky

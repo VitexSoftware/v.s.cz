@@ -87,10 +87,11 @@ class NewPackages extends \Ease\Html\Span
                 $packages[$pName]['Name'] = $pName;
 
 
-                if (isset($packages[$pName]['Filename'])) {
-
+                if (isset($packages[$pName]['Filename']) && file_exists($packages[$pName]['Filename'])) {
                     $packages[$pName]['fileMtime'] = filemtime($packages[$pName]['Filename'])
                         + $position;
+                } else {
+                    $packages[$pName]['fileMtime'] = time();
                 }
             }
             if (!feof($handle)) {
