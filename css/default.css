@@ -129,7 +129,7 @@ code { font-size: 9px; font-weight: bolder; }
     border-color: #111111;
 }
 
-.mpicon { width: 150px; height: 150px; }
+.mpicon { width: 150px; height: 150px; z-index: auto; }
 
 .mpicon:hover { width: 150px; height: 150px; 
 
@@ -160,3 +160,4 @@ code { font-size: 9px; font-weight: bolder; }
     background: -ms-linear-gradient(left, black 50%, white 50%);
     background: linear-gradient(left, black 50%, white 50%);
 }
+

@@ -41,7 +41,7 @@ if (file_exists('/usr/share/icinga-editor/composer.json')) {
 
 
 $appMenu->addMenuItem('img/icinga_editor-logo.png', _('Icinga Editor'),
-    '/icinga-editor', _('Editor Konfigurace monitoringu'),
+    'http://monitoring.vitexsoftware.cz/', _('Editor Konfigurace monitoringu'),
     new \Ease\TWB\Label('info', $version));
 
 
