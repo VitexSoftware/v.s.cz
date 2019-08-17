@@ -14,10 +14,10 @@ $oPage->addItem('<a href="https://github.com/Vitexus/icinga_configurator" class=
 
 
 
-$monitoringTabs = new \Ease\TWB\Tabs('montabs');
+$monitoringTabs = new \Ease\TWB4\Tabs('montabs');
 
 $serviceTab = $monitoringTabs->addTab(_('Monitor your network'));
-$serviceRow = new \Ease\TWB\Row;
+$serviceRow = new \Ease\TWB4\Row;
 
 $serviceInfo = $serviceRow->addColumn(8);
 
@@ -33,7 +33,7 @@ $serviceInfo->addItem(new \Ease\Html\PTag(_('Služba jako taková je nabízena d
 $serviceInfo->addItem(new \Ease\Html\PTag(_('Nad deset monitorovaných služeb požadujeme deset korun za každý host na měsíc')));
 $serviceInfo->addItem(new \Ease\Html\PTag(_('Zpoplatněny jsou i notifikační SMS a to dvěmi korunami za jednu zprávu.')));
 
-$serviceInfo->addItem(new \Ease\TWB\LinkButton('/icinga-editor/createaccount.php',
+$serviceInfo->addItem(new \Ease\TWB4\LinkButton('/icinga-editor/createaccount.php',
     _('Sign IN'), 'success'));
 
 
@@ -42,12 +42,12 @@ $serviceInfo->addItem(new \Ease\TWB\LinkButton('/icinga-editor/createaccount.php
 $serviceLogin = $serviceRow->addColumn(4);
 $serviceTab->addItem($serviceRow);
 
-$loginFace  = new \Ease\Html\Div(null, ['id' => 'LoginFace']);
+$loginFace  = new \Ease\Html\DivTag(null, ['id' => 'LoginFace']);
 $loginForm  = new VSCZ\ui\loginbox('/icinga-editor/login.php', 'login',
     'password');
-$loginFrame = $serviceLogin->addItem(new \Ease\Html\Div('<span class="label label-danger">'._('testovací provoz').'</span>',
+$loginFrame = $serviceLogin->addItem(new \Ease\Html\DivTag('<span class="label label-danger">'._('testovací provoz').'</span>',
     ['class' => 'alert alert-warning']));
-$loginFrame->addItem(new \Ease\Html\Div(
+$loginFrame->addItem(new \Ease\Html\DivTag(
     _('Please enter your login and password'), ['id' => 'WelcomeHint']));
 $loginFrame->addItem($loginForm);
 
@@ -77,7 +77,7 @@ $sources->addItemSmart(new \Ease\Html\ATag('https://github.com/Vitexus/icinga_co
 
 $ossTab->addItem($sources);
 
-$pageRow = new \Ease\TWB\Row;
+$pageRow = new \Ease\TWB4\Row;
 $pageRow->addColumn(8, $monitoringTabs);
 $pageRow->addColumn(4,
     '<a class="twitter-timeline"  href="https://twitter.com/VSMonitoring" data-widget-id="255378607919210497">Tweets by @VSMonitoring</a>
@@ -88,12 +88,12 @@ $pageRow->addColumn(4,
 $supportTab = $monitoringTabs->addTab(_('Podpora'));
 $supportTab->addItem(new \Ease\Html\H4Tag(_('Snadný start')));
 $supportTab->addItem(new \Ease\Html\PTag(_('Ke spuštění monitoringu nejsou třeba žádné zvláštní znalosti. I přes to jsme pro vás připravili tento stručný ale názorný návod')));
-$supportTab->addItem(new \Ease\TWB\LinkButton('https://www.vitexsoftware.cz/redmine/projects/monitoring/wiki/Tutori%C3%A1l',
+$supportTab->addItem(new \Ease\TWB4\LinkButton('https://www.vitexsoftware.cz/redmine/projects/monitoring/wiki/Tutori%C3%A1l',
     _('Začínáme'), 'info'));
 
 $supportTab->addItem(new \Ease\Html\H4Tag(_('Zajímá nás váš názor')));
 $supportTab->addItem(new \Ease\Html\PTag(_('Náš systém je neustále ve vývoji a tak se může stát že něco přestane fungovat. Proto oceníme pokud nám toto oznámíte. Stejně tak oceníme vaše přání a připomínky.')));
-$supportTab->addItem(new \Ease\TWB\LinkButton('http://r.v.s.cz/projects/monitoring',
+$supportTab->addItem(new \Ease\TWB4\LinkButton('http://r.v.s.cz/projects/monitoring',
     'Redmine - Kniha přání a stížností', 'warning'));
 
 
@@ -101,7 +101,7 @@ $oPage->container->addItem($pageRow);
 
 
 
-//$LoginFrame->addItem(new \Ease\TWB\LinkButton('/IcingaEditor/twauth.php?authenticate=1', '<img src="img/tw.png">&nbsp;'. _('Přihlásit pomocí Twitteru'),'success'));
+//$LoginFrame->addItem(new \Ease\TWB4\LinkButton('/IcingaEditor/twauth.php?authenticate=1', '<img src="img/tw.png">&nbsp;'. _('Přihlásit pomocí Twitteru'),'success'));
 //$OPage->column1->addItem(new \Ease\Html\ImgTag('img/statusmap.png', 'Monitoring v červenci 2002', 400));
 //$OPage->column3->addItem(new \Ease\Html\ImgTag('img/vsmonitoring.png', 'Logo', 250));
 

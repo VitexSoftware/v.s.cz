@@ -5,14 +5,14 @@
  * and open the template in the editor.
  */
 
-namespace VSCZ\ui;
+namespace VSCZ;
 
 /**
  * Description of News
  *
  * @author vitex
  */
-class News extends \Ease\Brick
+class News extends \Ease\SQL\Engine
 {
     public $myKeyColumn = 'id';
     public $myTable     = 'news';
@@ -29,14 +29,15 @@ class News extends \Ease\Brick
      */
     public $myLastModifiedColumn = 'DatSave';
 
+
+    
     /**
-     * News Article
+     * News listing query
+     * @return \Envms\FluentPDO
      */
-    public function __construct($id = null)
+    public function listingQuery()
     {
-        parent::__construct();
-        if (!is_null($id)) {
-            $this->loadFromSQL($id);
-        }
-    }
+        return parent::listingQuery()->select('user.login')->leftJoin('user ON user.id = author');
+    }    
+    
 }

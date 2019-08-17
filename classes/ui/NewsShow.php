@@ -13,25 +13,29 @@ namespace VSCZ\ui;
 class NewsShow extends \Ease\Container
 {
 
+    /**
+     * Show news on page
+     * 
+     * @param \VSCZ\News $datasource
+     * @param int $id Only Author with id
+     */
     function __construct($datasource, $id = null)
     {
         parent::__construct();
-        $query = 'SELECT * FROM '.$datasource->getMyTable().' a LEFT JOIN `user` ON `user`.id = author';
+        $news = $datasource->listingQuery();
         if (!is_null($id)) {
-            $query .= ' WHERE a.id='.$id;
+            $news->where('author.id',$id);
         }
-
-        $news = $datasource->dblink->queryToArray($query, 'id', 'id');
         if (count($news)) {
             foreach ($news as $article) {
-                $articletext = $this->addItem(new \Ease\Html\Div(new \Ease\Html\H1Tag($article['title']),
+                $articletext = $this->addItem(new \Ease\Html\DivTag(new \Ease\Html\H1Tag($article['title']),
                         ['class' => 'smokeback']));
-                $articletext->addItem(new \Ease\Html\Div($article['text']));
-                $articletext->addItem(new \Ease\Html\Div('<hr><div style="text-align: right"><small>'.$article['login'].' '.strftime("%d/%m/%y",
+                $articletext->addItem(new \Ease\Html\DivTag($article['text']));
+                $articletext->addItem(new \Ease\Html\DivTag('<hr><div style="text-align: right"><small>'.$article['login'].' '.strftime("%d/%m/%y",
                             strtotime($article['DatCreate'])).'</small></div>'));
             }
         } else {
-            $this->addItem(new \Ease\TWB\Label('warning', _('No articles')));
+            $this->addItem(new \Ease\TWB4\Label('warning', _('No articles')));
         }
     }
 }

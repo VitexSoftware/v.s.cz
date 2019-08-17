@@ -19,11 +19,13 @@
         }
     },
     "require": {
-        "php": ">= 5.5.9",
-        "league/commonmark": "^0.15.0",
-        "flexipeehp": "*",
-        "ease-framework": "*",
-        "vitexsoftware/ease-bricks": "dev-master"
+        "php": ">= 7.1",
+        "league/commonmark": "*",
+        "spoje.net/flexibee": "*",
+        "vitexsoftware/ease-core": "dev-master",
+        "vitexsoftware/ease-twbootstrap4-widgets": "dev-master",
+        "vitexsoftware/ease-fluentpdo": "dev-master"
+
     },
     "repositories": [
         {

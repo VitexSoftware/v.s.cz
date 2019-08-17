@@ -12,26 +12,15 @@ namespace VSCZ\ui;
  *
  * @author vitex
  */
-class NewPackages extends \Ease\Html\Span
+class NewPackages extends \Ease\Html\SpanTag
 {
+
+    use \Ease\SQL\Orm;
     /**
-     * Dblink for Package Counts
-     * 
-     * @var \Ease\SQL\PDO 
+     *
+     * @var string table name we work on 
      */
-    public $stDB = null;
-
-    public function getCounts($package)
-    {
-        $installs = $this->stDB->queryToValue(sprintf(
-                "SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/%s%%' AND agent LIKE 'Debian APT%%' ",
-                $package));
-
-        $downloads = $this->stDB->queryToValue(sprintf(
-                "SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/%s%%' AND agent NOT LIKE 'Debian APT%%' "
-                , $package));
-        return ['installs' => $installs, 'downloads' => $downloads];
-    }
+    public $myTable = 'vs_access_log';
 
     /**
      * 
@@ -40,21 +29,18 @@ class NewPackages extends \Ease\Html\Span
      */
     public function __construct($content = null, $properties = array())
     {
-
-        $this->stDB = new \Ease\SQL\PDO([
-            'dbType' => constant('STATS_TYPE'),
-            'server' => constant('STATS_SERVER'),
-            'username' => constant('STATS_USERNAME'),
-            'password' => constant('STATS_PASSWORD'),
-            'database' => constant('STATS_DATABASE'),
-            'port' => constant('STATS_PORT')
-        ]);
+        $this->dbType   = constant('STATS_TYPE');
+        $this->server   = constant('STATS_SERVER');
+        $this->username = constant('STATS_USERNAME');
+        $this->password = constant('STATS_PASSWORD');
+        $this->database = constant('STATS_DATABASE');
+        $this->port     = constant('STATS_PORT');
 
 
         $packages = [];
         $pName    = null;
-        $handle   = @fopen("/var/lib/apt/lists/v.s.cz_dists_stable_main_binary-amd64_Packages",
-                "r");
+        $handle   = fopen("/var/lib/apt/lists/v.s.cz_dists_stable_main_binary-amd64_Packages",
+            "r");
         $position = 0;
         if ($handle) {
             while (($buffer = fgets($handle, 4096)) !== false) {
@@ -100,7 +86,7 @@ class NewPackages extends \Ease\Html\Span
             fclose($handle);
         }
 
-        $packagesByTime = self::reindexArrayBy($packages, 'fileMtime');
+        $packagesByTime = \Ease\Functions::reindexArrayBy($packages, 'fileMtime');
 
         krsort($packagesByTime);
 
@@ -127,7 +113,7 @@ class NewPackages extends \Ease\Html\Span
         if (!file_exists($icon)) {
             $icon = 'img/deb-package.png';
         }
-        $counts = $this->getCounts($pProps['Filename'], $pProps['Version']);
+        $counts = $this->getPullCounts($pProps['Filename'], $pProps['Version']);
 
 
         $download = new \Ease\Html\ATag($pProps['Filename'],
@@ -142,5 +128,21 @@ class NewPackages extends \Ease\Html\Span
             new \Ease\Html\DivTag($pProps['Description']),
             new \Ease\Html\DivTag($download, ['style' => 'text-align: center;'])
         ];
+    }
+
+    /**
+     * Get Package pull counts
+     * 
+     * @param string $package package base name
+     * 
+     * @return array of int
+     */
+    public function getPullCounts($package)
+    {
+        $installs  = $this->getFluentPDO()->from('vs_access_log')->select('COUNT(*)')->where(sprintf('request_uri LIKE \'/%s%%\'',
+                    $package))->where('agent LIKE \'Debian APT%%\'');
+        $downloads = $this->getFluentPDO()->from('vs_access_log')->select('COUNT(*)')->where(sprintf('request_uri LIKE \'/%s%%\'',
+                    $package))->where('agent NOT LIKE \'Debian APT%%\'');
+        return ['installs' => $installs, 'downloads' => $downloads];
     }
 }

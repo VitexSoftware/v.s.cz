@@ -12,7 +12,7 @@ namespace VSCZ\ui;
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
-class PackageInfo extends \Ease\TWB\Panel
+class PackageInfo extends \Ease\TWB4\Panel
 {
 
     //put your code here
@@ -55,7 +55,7 @@ class PackageInfo extends \Ease\TWB\Panel
             ['class' => 'btn btn-lg btn-success']);
 
 
-        $heading = new \Ease\TWB\Row();
+        $heading = new \Ease\TWB4\Row();
         $heading->addColumn(2,
             self::packageLogo($pName, ['style' => ' height: 90px;']));
         $heading->addColumn(14,
@@ -64,7 +64,7 @@ class PackageInfo extends \Ease\TWB\Panel
         parent::__construct($heading, 'info', null,
             [$packageDownloadLink, $packageInstallLink]);
 
-        $this->addItem(new \Ease\TWB\Well($pProps['Description']));
+        $this->addItem(new \Ease\TWB4\Well($pProps['Description']));
 
         $infotable = new \Ease\Html\TableTag(null, ['class' => 'table']);
 
@@ -113,7 +113,7 @@ class PackageInfo extends \Ease\TWB\Panel
         }
 
 
-        $infoColumns = new \Ease\TWB\Row();
+        $infoColumns = new \Ease\TWB4\Row();
         $infoColumns->addColumn(8, $infotable);
 
         $rightColumn = new \Ease\Html\DivTag();
@@ -144,7 +144,7 @@ class PackageInfo extends \Ease\TWB\Panel
         }
 
 
-        $packageTabs     = new \Ease\TWB\Tabs('PkgInfoTabs');
+        $packageTabs     = new \Ease\TWB4\Tabs('PkgInfoTabs');
         $packageTabs->addTab(_('Info'), $infoColumns);
         $packageContents = shell_exec('dpkg-query -L '.$pName);
         if (strlen($packageContents)) {

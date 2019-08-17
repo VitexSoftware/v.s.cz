@@ -29,40 +29,40 @@ if ($login) {
 $oPage->addItem(new ui\PageTop(_('Sign in')));
 $oPage->addPageColumns();
 
-$loginFace = new \Ease\Html\Div(null,['id'=>'LoginFace']);
+$loginFace = new \Ease\Html\DivTag(null,['id'=>'LoginFace']);
 
 
 $oPage->container->addItem($loginFace);
 
 
-$loginRow = new \Ease\TWB\Row();
-$infoColumn = $loginRow->addItem(new \Ease\TWB\Col(4));
+$loginRow = new \Ease\TWB4\Row();
+$infoColumn = $loginRow->addItem(new \Ease\TWB4\Col(4));
 
-$infoBlock = $infoColumn->addItem(new \Ease\TWB\Well(new \Ease\Html\ImgTag('img/password.png')));
+$infoBlock = $infoColumn->addItem(new \Ease\TWB4\Well(new \Ease\Html\ImgTag('img/password.png')));
 $infoBlock->addItem(_('Welcome to VitexSoftware.cz'));
 
 
-$loginColumn = $loginRow->addItem(new \Ease\TWB\Col(4));
+$loginColumn = $loginRow->addItem(new \Ease\TWB4\Col(4));
 
 
-$submit = new \Ease\TWB\SubmitButton(_('Sign in'), 'success');
+$submit = new \Ease\TWB4\SubmitButton(_('Sign in'), 'success');
 
-$loginPanel = new \Ease\TWB\Panel(new \Ease\Html\ImgTag('img/vitexsoftwarelogo.png',
+$loginPanel = new \Ease\TWB4\Panel(new \Ease\Html\ImgTag('img/vitexsoftwarelogo.png',
     null, ['style' => 'width: 100px;']), 'success', null, $submit);
-$loginPanel->addItem(new \Ease\TWB\FormGroup(_('Username'), new \Ease\Html\InputTextTag('login', $login)));
-$loginPanel->addItem(new \Ease\TWB\FormGroup(_('Login'), new \Ease\Html\InputPasswordTag('password')));
+$loginPanel->addItem(new \Ease\TWB4\FormGroup(_('Username'), new \Ease\Html\InputTextTag('login', $login)));
+$loginPanel->addItem(new \Ease\TWB4\FormGroup(_('Login'), new \Ease\Html\InputPasswordTag('password')));
 
 
 $loginColumn->addItem($loginPanel);
 
-$passRecoveryColumn = $loginRow->addItem(new \Ease\TWB\Col(4, new \Ease\TWB\LinkButton('passwordrecovery.php', '<i class="fa fa-key"></i>
+$passRecoveryColumn = $loginRow->addItem(new \Ease\TWB4\Col(4, new \Ease\TWB4\LinkButton('passwordrecovery.php', '<i class="fa fa-key"></i>
 ' . _('Password recovery'), 'warning')));
 
 
-$passRecoveryColumn->additem(new \Ease\TWB\LinkButton('createaccount.php', '<i class="fa fa-user"></i>
+$passRecoveryColumn->additem(new \Ease\TWB4\LinkButton('createaccount.php', '<i class="fa fa-user"></i>
 ' . _('Create account'), 'success'));
 
-$oPage->container->addItem(new \Ease\TWB\Form('Login', null, 'POST', $loginRow));
+$oPage->container->addItem(new \Ease\TWB4\Form('Login', null, 'POST', $loginRow));
 
 $oPage->addItem(new ui\PageBottom());
 

@@ -22,7 +22,7 @@ $oPage->addItem(new ui\PageTop(_('Sign off')));
 
 
 $oPage->container->addItem('<br/><br/><br/><br/>');
-$oPage->container->addItem(new \Ease\Html\Div(  new \Ease\Html\ATag('login.php', _('Good bye & next time'), ['class' => 'jumbotron'])));
+$oPage->container->addItem(new \Ease\Html\DivTag(  new \Ease\Html\ATag('login.php', _('Good bye & next time'), ['class' => 'jumbotron'])));
 $oPage->container->addItem('<br/><br/><br/><br/>');
 
 $oPage->addItem(new ui\PageBottom());

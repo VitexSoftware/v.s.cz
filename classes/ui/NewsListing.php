@@ -24,7 +24,7 @@ class NewsListing extends \Ease\Html\UlTag
                     $article['title']));
             }
         } else {
-            $this->addItem(new \Ease\TWB\Label('warning', _('No articles')));
+            $this->addItem(new \Ease\TWB4\Label('warning', _('No articles')));
         }
     }
 }

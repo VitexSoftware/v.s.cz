@@ -26,7 +26,7 @@ class PageTop extends \Ease\Html\DivTag
     {
         parent::__construct();
         if ($pageTitle) {
-            \Ease\Shared::webPage()->setPageTitle($pageTitle);
+            \Ease\WebPage::singleton()->setPageTitle($pageTitle);
         }
         $this->setTagID('header');
     }

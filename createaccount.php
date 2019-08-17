@@ -106,15 +106,15 @@ if (isset($_POST) && count($_POST)) {
             $email = $oPage->addItem(new EaseMail($NewOUser->getDataValue('email'),
                     'Potvrzení'));
             $email->SetMailHeaders(['From' => EMAIL_FROM]);
-            $email->addItem(new \Ease\Html\Div("Právě jste byl/a zaregistrován/a do Apl   ikace LB s těmito přihlašovacími údaji:\n"));
-            $email->addItem(new \Ease\Html\Div(' Login: '.$NewOUser->GetUserLogin()."\n"));
-            $email->addItem(new \Ease\Html\Div(' Heslo: '.$_POST['password']."\n"));
+            $email->addItem(new \Ease\Html\DivTag("Právě jste byl/a zaregistrován/a do Apl   ikace LB s těmito přihlašovacími údaji:\n"));
+            $email->addItem(new \Ease\Html\DivTag(' Login: '.$NewOUser->GetUserLogin()."\n"));
+            $email->addItem(new \Ease\Html\DivTag(' Heslo: '.$_POST['password']."\n"));
             $email->Send();
 
             $email = $oPage->addItem(new \Ease\Mailer(SEND_ORDERS_TO,
                     'Nová registrace do v.s.cz: '.$NewOUser->getUserLogin()));
             $email->SetMailHeaders(['From' => EMAIL_FROM]);
-            $email->addItem(new \Ease\Html\Div("Do id právě zaregistrován nový uživatel:\n"));
+            $email->addItem(new \Ease\Html\DivTag("Do id právě zaregistrován nový uživatel:\n"));
             $email->addItem(new \Ease\Html\DivTag('login',
                     ' Login: '.$NewOUser->getUserLogin()."\n"));
             $email->addItem($NewOUser->CustomerAddress);

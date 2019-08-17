@@ -3,7 +3,7 @@
  * Init aplikace
  *
  * @author    Vitex <vitex@hippy.cz>
- * @copyright Vitex@hippy.cz (G) 2010
+ * @copyright Vitex@hippy.cz (G) 2010-2019
  */
 
 namespace VSCZ;
@@ -15,11 +15,11 @@ if (!defined('EASE_APPNAME')) {
     define('EASE_APPNAME', 'VitexSoftwareWEB');
 }
 
-\Ease\Shared::initializeGetText('vscz','cs_CZ','i18n');
+\Ease\Locale::singleton(null,'./i18n','vscz');
 
 session_start();
 
-if (\Ease\Shared::isCli()) {
+if (php_sapi_name() == 'cli') {
     if (!defined('EASE_LOGGER')) {
         define('EASE_LOGGER', 'syslog|console|email');
     }
@@ -32,9 +32,9 @@ if (\Ease\Shared::isCli()) {
  * Objekt uživatele User nebo Anonym
  * @global \Ease\User
  */
-$oUser = \Ease\Shared::user();
+$oUser = \Ease\User::singleton();
 
 
 /* @var $oPage VSWebPage */
-$oPage = new \VSCZ\ui\WebPage( );
+$oPage = new ui\WebPage( );
 

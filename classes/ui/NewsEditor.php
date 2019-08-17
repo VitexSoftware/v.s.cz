@@ -12,7 +12,7 @@ namespace VSCZ\ui;
  *
  * @author vitex
  */
-class NewsEditor extends \Ease\Html\Div
+class NewsEditor extends \Ease\Html\DivTag
 {
     /**
      * News 
@@ -53,7 +53,7 @@ class NewsEditor extends \Ease\Html\Div
             $listRow->addItem('&nbsp;(');
 
             $listRow->addItem(
-                new \Ease\TWB\LinkButton('?delete='.$articleID, _('Delete'),
+                new \Ease\TWB4\LinkButton('?delete='.$articleID, _('Delete'),
                 'warning btn-xs'));
 
             $listRow->addItem(')');
@@ -65,7 +65,7 @@ class NewsEditor extends \Ease\Html\Div
 
     public function finalize()
     {
-        $row = new \Ease\TWB\Row();
+        $row = new \Ease\TWB4\Row();
         $row->addColumn(8, $this->articleForm());
         $row->addColumn(4, $this->articleListing());
         $this->addItem($row);
@@ -73,14 +73,14 @@ class NewsEditor extends \Ease\Html\Div
 
     public function articleForm()
     {
-        $form = new \Ease\TWB\Form('NewsArticle');
+        $form = new \Ease\TWB4\Form('NewsArticle');
         $form->addItem(new \Ease\Html\InputHiddenTag('id',
             $this->newsEngine->getMyKey()));
         $form->addInput(new \Ease\Html\InputTextTag('title'), _('Name'));
         $form->addInput(new WISWYG('text'), _('Text'));
         $form->addInput(new \Ease\Html\Select('language',
             [ 'cs' => _('Czech'), 'en' => _('English')]), _('Language'));
-        $form->addItem(new \Ease\TWB\SubmitButton('Ok', 'success'));
+        $form->addItem(new \Ease\TWB4\SubmitButton('Ok', 'success'));
         $form->fillUp($this->newsEngine->getData());
         return $form;
     }

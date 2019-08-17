@@ -7,28 +7,30 @@ namespace VSCZ\ui;
  *
  * @package   VitexSoftware
  * @author    Vitex <vitex@hippy.cz>
- * @copyright 2009-2016 Vitex@hippy.cz (G)
+ * @copyright 2009-2019 Vitex@hippy.cz (G)
  */
-class WebPage extends \Ease\TWB\WebPage
+class WebPage extends \Ease\TWB4\WebPage
 {
+    public $bootstrapThemeCSS = 'css/freelancer.min.css';
 
-    public $bootstrapThemeCSS = 'css/theme.css';
-
+    /**
+     *
+     * @var \Ease\TWB4\Container 
+     */
+    public $container         = null;
 
     /**
      * Základní objekt stránky
-     *
-     * @param VSUser $userObject
      */
-    function __construct(&$userObject = null)
+    function __construct()
     {
-        parent::__construct('Vitex Software', $userObject);
-        $this->includeCss('css/theme.css');
+        parent::__construct('Vitex Software');
+        $this->includeCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
+        $this->includeCss('css/freelancer.min.css');
         $this->includeCss('css/default.css');
-        \Ease\Shared::webPage()->head->addItem('<link rel="icon" type="image/png"
- href="img/tux-server.png" />');
-        \Ease\Shared::webPage()->head->addItem('<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">');
-        \Ease\Shared::webPage()->head->addItem('<script type="text/javascript">
+        \Ease\WebPage::singleton()->head->addItem('<link rel="icon" type="image/png" href="img/tux-server.png" />');
+        \Ease\WebPage::singleton()->head->addItem('<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">');
+        \Ease\WebPage::singleton()->head->addItem('<script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push([\'_setAccount\', \'UA-35526048-1\']);
   _gaq.push([\'_trackPageview\']);
@@ -40,18 +42,9 @@ class WebPage extends \Ease\TWB\WebPage
   })();
 
 </script>            ');
-    }
 
-    function AddPageColumns()
-    {
-        $this->container = $this->addItem(new \Ease\TWB\Container());
-        $row             = $this->container->addItem(new \Ease\TWB\Row());
-        $this->column1   = $row->addItem(new \Ease\Html\DivTag(null,
-            ['class' => 'col-md-4']));
-        $this->column2   = $row->addItem(new \Ease\Html\DivTag(null,
-            ['class' => 'col-md-4']));
-        $this->column3   = $row->addItem(new \Ease\Html\DivTag(null,
-            ['class' => 'col-md-4']));
+        $this->body->setTagID('page-top');
+        $this->container = $this->addItem(new \Ease\TWB4\Container(new \Ease\Html\DivTag('<p><br clear="all"><br clear="all"></p>')));
     }
 
     static function _format_bytes($a_bytes)

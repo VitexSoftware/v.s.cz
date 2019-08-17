@@ -129,19 +129,7 @@ code { font-size: 9px; font-weight: bolder; }
     border-color: #111111;
 }
 
-.mpicon { width: 150px; height: 150px; z-index: auto; }
-
-.mpicon:hover { width: 150px; height: 150px; 
-
-                -moz-box-shadow:    3px 3px 5px 6px #0fc;
-                -webkit-box-shadow: 3px 3px 5px 6px #0fc;
-                box-shadow:         3px 3px 5px 6px #0fc;
-                -moz-border-radius: 20px;
-                -webkit-border-radius: 20px;
-                -khtml-border-radius: 20px;
-                border-radius: 20px; 
-
-}
+.mpicon { width: 150px; height: 150px;}
 
 #packs th {cursor:n-resize;}
 

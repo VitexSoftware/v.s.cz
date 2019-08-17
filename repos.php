@@ -13,10 +13,10 @@ $oPage->addJavaScript('$("#packs").tablesorter();');
 $oPage->addItem(new \VSCZ\ui\PageTop(_('Deb Repository')));
 
 
-$packTabs = new Ease\TWB\Tabs('PackTabs');
+$packTabs = new Ease\TWB4\Tabs('PackTabs');
 
 
-$reposinfo = new \Ease\TWB\Well(new \Ease\Html\H3Tag(_('How to use repository')));
+$reposinfo = new \Ease\TWB4\Well(new \Ease\Html\H3Tag(_('How to use repository')));
 
 $steps = $reposinfo->addItem(new \Ease\Html\UlTag(null,
     ['class' => 'list-group']));
@@ -110,7 +110,7 @@ $pTab = $packTabs->addTab(_('Packages'), $ptable);
 
 $packTabs->addTab(_('Instructions'), $reposinfo);
 
-$oPage->addItem(new \Ease\TWB\Container($packTabs))->addItem(new Ease\TWB\LinkButton('repostats.php',
+$oPage->addItem(new \Ease\TWB4\Container($packTabs))->addItem(new Ease\TWB4\LinkButton('repostats.php',
     _('download count details').' ('._('please wait').')', 'info'));
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
