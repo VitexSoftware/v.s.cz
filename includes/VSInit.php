@@ -9,7 +9,7 @@
 namespace VSCZ;
 
 require_once 'includes/Configure.php';
-require_once '/var/lib/v.s.cz/autoload.php';
+require_once '/var/lib/vitexsoftware.cz/autoload.php';
 
 if (!defined('EASE_APPNAME')) {
     define('EASE_APPNAME', 'VitexSoftwareWEB');

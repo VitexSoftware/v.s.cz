@@ -10,7 +10,7 @@
     ],
     "minimum-stability": "dev",
     "config": {
-        "vendor-dir": "/var/lib/v.s.cz/"
+        "vendor-dir": "/var/lib/vitexsoftware.cz/"
     },
     "autoload": {
         "psr-4": {

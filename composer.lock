@@ -112,9 +112,9 @@
             "authors": [
                 {
                     "name": "Colin O'Dell",
+                    "role": "Lead Developer",
                     "email": "colinodell@gmail.com",
-                    "homepage": "https://www.colinodell.com",
-                    "role": "Lead Developer"
+                    "homepage": "https://www.colinodell.com"
                 }
             ],
             "description": "PHP Markdown parser based on the CommonMark spec",
@@ -156,18 +156,18 @@
             "authors": [
                 {
                     "name": "Greg Beaver",
-                    "email": "cellog@php.net",
-                    "role": "Helper"
+                    "role": "Helper",
+                    "email": "cellog@php.net"
                 },
                 {
                     "name": "Andrei Zmievski",
-                    "email": "andrei@php.net",
-                    "role": "Lead"
+                    "role": "Lead",
+                    "email": "andrei@php.net"
                 },
                 {
                     "name": "Stig Bakken",
-                    "email": "stig@php.net",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "stig@php.net"
                 }
             ],
             "description": "More info available on: http://pear.php.net/package/Console_Getopt",
@@ -314,8 +314,8 @@
             "authors": [
                 {
                     "name": "Christian Weiske",
-                    "email": "cweiske@php.net",
-                    "role": "Lead"
+                    "role": "Lead",
+                    "email": "cweiske@php.net"
                 }
             ],
             "description": "Minimal set of PEAR core files to be used as composer dependency",
@@ -423,12 +423,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/ease-core.git",
-                "reference": "3f7c95aba6abe4805edd699f07c88cc668834f0c"
+                "reference": "98e7c7bbd943179b78b21174627083b9b28116df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/ease-core/zipball/3f7c95aba6abe4805edd699f07c88cc668834f0c",
-                "reference": "3f7c95aba6abe4805edd699f07c88cc668834f0c",
+                "url": "https://api.github.com/repos/VitexSoftware/ease-core/zipball/98e7c7bbd943179b78b21174627083b9b28116df",
+                "reference": "98e7c7bbd943179b78b21174627083b9b28116df",
                 "shasum": ""
             },
             "require": {
@@ -467,7 +467,7 @@
             ],
             "description": "An PHP Framework for writing Applications",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2019-08-18T18:32:10+00:00"
+            "time": "2019-08-18T21:06:04+00:00"
         },
         {
             "name": "vitexsoftware/ease-fluentpdo",
@@ -512,12 +512,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/ease-html.git",
-                "reference": "65c0412f61b3287aa7d5df5fae5d2b888d3b5b63"
+                "reference": "0913c7cf1dbd5768d00e62f4af0eeb9d5b5e5cf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/ease-html/zipball/65c0412f61b3287aa7d5df5fae5d2b888d3b5b63",
-                "reference": "65c0412f61b3287aa7d5df5fae5d2b888d3b5b63",
+                "url": "https://api.github.com/repos/VitexSoftware/ease-html/zipball/0913c7cf1dbd5768d00e62f4af0eeb9d5b5e5cf1",
+                "reference": "0913c7cf1dbd5768d00e62f4af0eeb9d5b5e5cf1",
                 "shasum": ""
             },
             "require": {
@@ -544,7 +544,7 @@
                 }
             ],
             "description": "Set of HTML rendering objects",
-            "time": "2019-08-18T20:11:25+00:00"
+            "time": "2019-08-18T20:15:10+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4",
@@ -552,12 +552,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/ease-twbootstrap4.git",
-                "reference": "0955b2d5484e57c17d529ae0d4f12b7f72c9f91f"
+                "reference": "5a85a6acaf0d2d151c3aae3dec8361b2899ffa19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/ease-twbootstrap4/zipball/0955b2d5484e57c17d529ae0d4f12b7f72c9f91f",
-                "reference": "0955b2d5484e57c17d529ae0d4f12b7f72c9f91f",
+                "url": "https://api.github.com/repos/VitexSoftware/ease-twbootstrap4/zipball/5a85a6acaf0d2d151c3aae3dec8361b2899ffa19",
+                "reference": "5a85a6acaf0d2d151c3aae3dec8361b2899ffa19",
                 "shasum": ""
             },
             "require": {
@@ -583,7 +583,7 @@
                 }
             ],
             "description": "Set of Twitter Bootstrap 4 rendering objects",
-            "time": "2019-08-17T22:06:58+00:00"
+            "time": "2019-08-18T21:06:57+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4-widgets",
@@ -591,12 +591,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Vitexus/php-ease-twbootstrap4-widgets.git",
-                "reference": "eed07eac1e53cc23fe859ca6e82b0120c2a8b917"
+                "reference": "be9b243207aa5e41ae44c39c76df129e50ee61dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Vitexus/php-ease-twbootstrap4-widgets/zipball/eed07eac1e53cc23fe859ca6e82b0120c2a8b917",
-                "reference": "eed07eac1e53cc23fe859ca6e82b0120c2a8b917",
+                "url": "https://api.github.com/repos/Vitexus/php-ease-twbootstrap4-widgets/zipball/be9b243207aa5e41ae44c39c76df129e50ee61dc",
+                "reference": "be9b243207aa5e41ae44c39c76df129e50ee61dc",
                 "shasum": ""
             },
             "require": {
@@ -624,7 +624,7 @@
             ],
             "description": "EasePHP framework addons and code snipplets",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2019-07-04T12:03:55+00:00"
+            "time": "2019-08-18T21:59:35+00:00"
         }
     ],
     "packages-dev": [],
