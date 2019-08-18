@@ -124,7 +124,6 @@ $libMenu->addMenuItem('img/deb/php-datamolino.png', _('Datamolino'),
     new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/php-datamolino',
         'vitexsoftware/datamolino'));
 
-$oPage->container->addItem( new \Ease\TWB4\Card()); 
 
 $oPage->container->addItem(new \Ease\Html\H1Tag(_('Applications')));
 
@@ -145,7 +144,7 @@ $newsColumn = $newsRow->addColumn(8,
     new \Ease\TWB4\Well([new ui\NewsShow(new News()), new \Ease\TWB4\LinkButton('articles.php',
             '<img src="img/news.svg" style="height: 20px"> '._('More articles').' <i class="fa fa-angle-double-right" aria-hidden="true"></i>',
             'info')]));
-$newsRow->addColumn(4, new \Ease\TWB4\Well(new ui\NewPackages()));
+$newsRow->addColumn(4, new ui\NewPackages());
 
 $newsColumn->addItem(new \Ease\TWB4\Well('<h1>'._('Languages used last week').'</h1><figure><embed src="https://wakatime.com/share/@5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7/993cf4a7-8296-4820-96c3-c4caf210b3bf.svg"></embed></figure>'));
 

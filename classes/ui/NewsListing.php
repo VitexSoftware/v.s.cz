@@ -12,12 +12,13 @@ namespace VSCZ\ui;
  */
 class NewsListing extends \Ease\Html\UlTag
 {
-    function __construct($datasource)
+    function __construct($datasource,$authorId = null)
     {
-
-        parent::__construct();
-        $news = $datasource->dblink->queryToArray('SELECT id,title FROM '.$datasource->getMyTable().' ORDER BY id DESC',
-            'id', 'id');
+        $news = $datasource->listingQuery(); //->orderBy('id DESC');
+        if (!is_null($authorId)) {
+            $news->where('author.id',$authorId);
+        }
+        
         if (count($news)) {
             foreach ($news as $article) {
                 $this->addItemSmart(new \Ease\Html\ATag('article.php?id='.$article['id'],
@@ -27,4 +28,8 @@ class NewsListing extends \Ease\Html\UlTag
             $this->addItem(new \Ease\TWB4\Label('warning', _('No articles')));
         }
     }
+    
+    
+    
+    
 }

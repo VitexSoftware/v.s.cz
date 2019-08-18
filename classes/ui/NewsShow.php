@@ -19,12 +19,15 @@ class NewsShow extends \Ease\Container
      * @param \VSCZ\News $datasource
      * @param int $id Only Author with id
      */
-    function __construct($datasource, $id = null)
+    function __construct($datasource, $id = null, $authorId = null)
     {
         parent::__construct();
         $news = $datasource->listingQuery();
+        if (!is_null($authorId)) {
+            $news->where('author.id',$authorId);
+        }
         if (!is_null($id)) {
-            $news->where('author.id',$id);
+            $news->where('news.id',$id);
         }
         if (count($news)) {
             foreach ($news as $article) {

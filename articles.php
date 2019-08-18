@@ -18,9 +18,8 @@ namespace VSCZ;
 require_once 'includes/VSInit.php';
 
 $oPage->addItem(new ui\PageTop(_('Articles')));
-$oPage->addPageColumns();
 
-$oPage->container->addItem(new \Ease\TWB4\Well(new ui\NewsListing(new ui\News())));
+$oPage->container->addItem(new \Ease\TWB4\Well(new ui\NewsListing(new News())));
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
 

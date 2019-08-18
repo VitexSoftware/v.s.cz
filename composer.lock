@@ -423,12 +423,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/ease-core.git",
-                "reference": "b8cfcee26dabc0844fdc5b91e87e7cce762c6664"
+                "reference": "3f7c95aba6abe4805edd699f07c88cc668834f0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/ease-core/zipball/b8cfcee26dabc0844fdc5b91e87e7cce762c6664",
-                "reference": "b8cfcee26dabc0844fdc5b91e87e7cce762c6664",
+                "url": "https://api.github.com/repos/VitexSoftware/ease-core/zipball/3f7c95aba6abe4805edd699f07c88cc668834f0c",
+                "reference": "3f7c95aba6abe4805edd699f07c88cc668834f0c",
                 "shasum": ""
             },
             "require": {
@@ -467,7 +467,7 @@
             ],
             "description": "An PHP Framework for writing Applications",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2019-08-08T23:54:03+00:00"
+            "time": "2019-08-18T18:32:10+00:00"
         },
         {
             "name": "vitexsoftware/ease-fluentpdo",
@@ -475,12 +475,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-fluentpdo.git",
-                "reference": "8fdbca8eb0cbfe4346e1a69bfb5048f0a1c1d8b0"
+                "reference": "ddf6b591777efde5d0acdfd7c8af9f1a3528a4ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-fluentpdo/zipball/8fdbca8eb0cbfe4346e1a69bfb5048f0a1c1d8b0",
-                "reference": "8fdbca8eb0cbfe4346e1a69bfb5048f0a1c1d8b0",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-fluentpdo/zipball/ddf6b591777efde5d0acdfd7c8af9f1a3528a4ce",
+                "reference": "ddf6b591777efde5d0acdfd7c8af9f1a3528a4ce",
                 "shasum": ""
             },
             "require": {
@@ -504,7 +504,7 @@
                 }
             ],
             "description": "Description of project ease-fluentpdo.",
-            "time": "2019-08-02T19:45:35+00:00"
+            "time": "2019-08-18T20:04:15+00:00"
         },
         {
             "name": "vitexsoftware/ease-html",
@@ -512,12 +512,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/ease-html.git",
-                "reference": "4440e4cdc5b32d5d43d76588d7847f2d428b41a4"
+                "reference": "65c0412f61b3287aa7d5df5fae5d2b888d3b5b63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/ease-html/zipball/4440e4cdc5b32d5d43d76588d7847f2d428b41a4",
-                "reference": "4440e4cdc5b32d5d43d76588d7847f2d428b41a4",
+                "url": "https://api.github.com/repos/VitexSoftware/ease-html/zipball/65c0412f61b3287aa7d5df5fae5d2b888d3b5b63",
+                "reference": "65c0412f61b3287aa7d5df5fae5d2b888d3b5b63",
                 "shasum": ""
             },
             "require": {
@@ -544,7 +544,7 @@
                 }
             ],
             "description": "Set of HTML rendering objects",
-            "time": "2019-08-07T23:37:40+00:00"
+            "time": "2019-08-18T20:11:25+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4",
@@ -552,12 +552,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/ease-twbootstrap4.git",
-                "reference": "ae9ace0a934937c67fb6de6c89e8bd76008cbfc1"
+                "reference": "0955b2d5484e57c17d529ae0d4f12b7f72c9f91f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/ease-twbootstrap4/zipball/ae9ace0a934937c67fb6de6c89e8bd76008cbfc1",
-                "reference": "ae9ace0a934937c67fb6de6c89e8bd76008cbfc1",
+                "url": "https://api.github.com/repos/VitexSoftware/ease-twbootstrap4/zipball/0955b2d5484e57c17d529ae0d4f12b7f72c9f91f",
+                "reference": "0955b2d5484e57c17d529ae0d4f12b7f72c9f91f",
                 "shasum": ""
             },
             "require": {
@@ -583,7 +583,7 @@
                 }
             ],
             "description": "Set of Twitter Bootstrap 4 rendering objects",
-            "time": "2019-07-18T21:38:37+00:00"
+            "time": "2019-08-17T22:06:58+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4-widgets",

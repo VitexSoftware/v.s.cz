@@ -120,16 +120,37 @@ class NewPackages extends \Ease\Html\SpanTag
             '<img style="width: 30px;" src="img/deb-package.png">&nbsp;'.' '.\VSCZ\ui\WebPage::_format_bytes(intval($pProps['Size'])),
             ['class' => 'btn btn-success']);
 
-        return ['<br clear="all">',
-            new \Ease\Html\H3Tag('<a href="package.php?package='.$pName.'">'.$pName.' '.$pProps['Version'].'</a>',
-                ['style' => 'text-align: center;']),
-            '<div style="text-align: center;"><small>'._('Installed').': '.$counts['installs'].'&nbsp&nbsp;'._('Downloaded').': '.$counts['downloads'].'</small></div>'.
-            '<a href="package.php?package='.$pName.'"><img style="width: 50%; display: block; margin: 0 auto;" class="img-responsive" src="'.$icon.'"></a>',
-            new \Ease\Html\DivTag($pProps['Description']),
-            new \Ease\Html\DivTag($download, ['style' => 'text-align: center;'])
-        ];
+        
+         $icon = new \Ease\Html\ImgTag( $icon, $pName, ['alt'=>$pName,'class'=>'card-img-top']);
+         new \Ease\Html\H5Tag($pName.' '.$pProps['Version']);
+         $cardBody = new \Ease\Html\DivTag( null  ,['class'=>'card-body'] );
+         
+         
+         
+         $cardBody->addItem( $icon );
+         $cardBody->addItem( new \Ease\Html\PTag( $pProps['Description'] ,['class'=>'card-text'] ) );
+         $cardBody->addItem( $download );
+         $packageCard = new \Ease\TWB4\Card( new \Ease\Html\DivTag( new \Ease\Html\H5Tag($pName) , ['class'=>'card-header'] ) );
+         $packageCard->addItem($cardBody) ;
+         
+         
+         
+         $packageCard->addItem( new \Ease\Html\DivTag( '<small>'._('Installed').': '.$counts['installs'].'&nbsp&nbsp;'._('Downloaded').': '.$counts['downloads'].'</small>' ,['class'=>'card-footer'] ) );
+        
+         
+        return $packageCard;
+        
+//            new \Ease\Html\H3Tag('<a href="package.php?package='.$pName.'">'.$pName.' '.$pProps['Version'].'</a>',
+//                ['style' => 'text-align: center;']),
+//            .
+//            '<a href="package.php?package='.$pName.'"><img style="width: 50%; display: block; margin: 0 auto;" class="img-responsive" src="'.$icon.'"></a>',
+//            new \Ease\Html\DivTag($pProps['Description']),
+//            new \Ease\Html\DivTag($download, ['style' => 'text-align: center;'])
+//        ];
     }
-
+    
+    
+    
     /**
      * Get Package pull counts
      * 
@@ -140,9 +161,9 @@ class NewPackages extends \Ease\Html\SpanTag
     public function getPullCounts($package)
     {
         $installs  = $this->getFluentPDO()->from('vs_access_log')->select('COUNT(*)')->where(sprintf('request_uri LIKE \'/%s%%\'',
-                    $package))->where('agent LIKE \'Debian APT%%\'');
+                    $package))->where('agent LIKE \'Debian APT%%\'')->fetch();
         $downloads = $this->getFluentPDO()->from('vs_access_log')->select('COUNT(*)')->where(sprintf('request_uri LIKE \'/%s%%\'',
-                    $package))->where('agent NOT LIKE \'Debian APT%%\'');
+                    $package))->where('agent NOT LIKE \'Debian APT%%\'')->fetch();
         return ['installs' => $installs, 'downloads' => $downloads];
     }
 }
