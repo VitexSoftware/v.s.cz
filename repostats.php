@@ -10,16 +10,7 @@ namespace VSCZ;
 
 require_once 'includes/VSInit.php';
 
-
-
-$stDB = new \Ease\SQL\PDO([
-    'dbType' => constant('STATS_TYPE'),
-    'server' => constant('STATS_SERVER'),
-    'username' => constant('STATS_USERNAME'),
-    'password' => constant('STATS_PASSWORD'),
-    'database' => constant('STATS_DATABASE'),
-    'port' => constant('STATS_PORT')
-    ]);
+$repostats = new AccessLog();
 
 
 $oPage->includeJavaScript('js/jquery.tablesorter.min.js');
@@ -32,8 +23,8 @@ $packTabs = new \Ease\TWB4\Tabs('PackTabs');
 
 
 $reposinfo = new \Ease\TWB4\Well(new \Ease\Html\H3Tag(_('How to use repository')));
-$reposinfo->addItem( new \Ease\Html\EmTag(  _('On current debian or ubuntu')));
-$steps = $reposinfo->addItem(new \Ease\Html\UlTag(null,
+$reposinfo->addItem(new \Ease\Html\EmTag(_('On current debian or ubuntu')));
+$steps     = $reposinfo->addItem(new \Ease\Html\UlTag(null,
         ['class' => 'list-group']));
 
 $steps->addItemSmart('wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key | sudo apt-key add - ',
@@ -44,8 +35,8 @@ $steps->addItemSmart('sudo apt update', ['class' => 'list-group-item']);
 $steps->addItemSmart('sudo apt install <em>package(s)</em>',
     ['class' => 'list-group-item']);
 
-$updated = $stDB->queryToValue('SELECT count(*) FROM `vs_access_log` WHERE `request_uri` = \'/dists/stable/InRelease\'');
-$reposinfo->addItem(sprintf(_('apt-get update feeded %d times'), $updated));
+$reposinfo->addItem(sprintf(_('apt-get update feeded %d times'),
+        $repostats->getUpdatedCount()));
 
 
 $packages = ui\PackageInfo::getPackagesInfo();
@@ -68,13 +59,9 @@ foreach ($packages as $pName => $pProps) {
         continue;
     }
 
-    $installs = $stDB->queryToValue(sprintf(
-            "SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' AND agent LIKE 'Debian APT%%' ",
-            $pName));
+    $installs = $repostats->getPackageInstalls($pName);
 
-    $downloads = $stDB->queryToValue(sprintf(
-            "SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' AND agent NOT LIKE 'Debian APT%%' "
-            , $pName));
+    $downloads = $repostats->getPackageDownloads($pName);
 
     $fileMtime = filemtime($packFile);
     $incTime   = date("Y m. d.", $fileMtime);

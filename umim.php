@@ -18,7 +18,13 @@ namespace VSCZ;
 require_once 'includes/VSInit.php';
 
 $oPage->addItem(new ui\PageTop(_('Co umím')));
-$oPage->AddPageColumns();
+
+$pageCols = $oPage->container->addItem( new \Ease\TWB4\Row() );
+
+$oPage->column1 = $pageCols->addColumn(4);
+$oPage->column2 = $pageCols->addColumn(4);
+$oPage->column3 = $pageCols->addColumn(4);
+
 
 $oPage->column1->addItem(new \Ease\Html\H2Tag(_('Správa serverů')));
 

@@ -62,12 +62,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "1593e235056de67185946f93b1a9805dc30938e9"
+                "reference": "6ed589d2e98621985ba8e4884335cf35e625dbb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/1593e235056de67185946f93b1a9805dc30938e9",
-                "reference": "1593e235056de67185946f93b1a9805dc30938e9",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/6ed589d2e98621985ba8e4884335cf35e625dbb1",
+                "reference": "6ed589d2e98621985ba8e4884335cf35e625dbb1",
                 "shasum": ""
             },
             "require": {
@@ -124,7 +124,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2019-07-13T01:16:59+00:00"
+            "time": "2019-08-26T16:41:49+00:00"
         },
         {
             "name": "pear/console_getopt",
@@ -382,12 +382,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Spoje-NET/php-flexibee.git",
-                "reference": "11a4b6427fe2e631fdfdd280258dca0fa3140693"
+                "reference": "c01b689b04eaf77869799823d74fdfa28159b3a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spoje-NET/php-flexibee/zipball/11a4b6427fe2e631fdfdd280258dca0fa3140693",
-                "reference": "11a4b6427fe2e631fdfdd280258dca0fa3140693",
+                "url": "https://api.github.com/repos/Spoje-NET/php-flexibee/zipball/c01b689b04eaf77869799823d74fdfa28159b3a7",
+                "reference": "c01b689b04eaf77869799823d74fdfa28159b3a7",
                 "shasum": ""
             },
             "require": {
@@ -415,7 +415,7 @@
                 }
             ],
             "description": "PHP Based Library for easy interaction with czech accounting system FlexiBee.",
-            "time": "2019-07-29T12:23:46+00:00"
+            "time": "2019-09-04T15:51:24+00:00"
         },
         {
             "name": "vitexsoftware/ease-core",
@@ -423,12 +423,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/ease-core.git",
-                "reference": "98e7c7bbd943179b78b21174627083b9b28116df"
+                "reference": "3277c0dc653b80eeeda9e952178ff7c5e89ffb5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/ease-core/zipball/98e7c7bbd943179b78b21174627083b9b28116df",
-                "reference": "98e7c7bbd943179b78b21174627083b9b28116df",
+                "url": "https://api.github.com/repos/VitexSoftware/ease-core/zipball/3277c0dc653b80eeeda9e952178ff7c5e89ffb5c",
+                "reference": "3277c0dc653b80eeeda9e952178ff7c5e89ffb5c",
                 "shasum": ""
             },
             "require": {
@@ -444,8 +444,7 @@
                 "jakub-onderka/php-console-highlighter": "*",
                 "jakub-onderka/php-parallel-lint": "*",
                 "php-coveralls/php-coveralls": "*",
-                "phpunit/phpunit": "*",
-                "squizlabs/php_codesniffer": "*"
+                "phpunit/phpunit": "*"
             },
             "type": "library",
             "autoload": {
@@ -467,7 +466,7 @@
             ],
             "description": "An PHP Framework for writing Applications",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2019-08-18T21:06:04+00:00"
+            "time": "2019-09-03T00:21:11+00:00"
         },
         {
             "name": "vitexsoftware/ease-fluentpdo",
@@ -475,12 +474,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-fluentpdo.git",
-                "reference": "ddf6b591777efde5d0acdfd7c8af9f1a3528a4ce"
+                "reference": "c8eb9e58c98ba2a02a82b8e352087f415509a8aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-fluentpdo/zipball/ddf6b591777efde5d0acdfd7c8af9f1a3528a4ce",
-                "reference": "ddf6b591777efde5d0acdfd7c8af9f1a3528a4ce",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-fluentpdo/zipball/c8eb9e58c98ba2a02a82b8e352087f415509a8aa",
+                "reference": "c8eb9e58c98ba2a02a82b8e352087f415509a8aa",
                 "shasum": ""
             },
             "require": {
@@ -504,7 +503,7 @@
                 }
             ],
             "description": "Description of project ease-fluentpdo.",
-            "time": "2019-08-18T20:04:15+00:00"
+            "time": "2019-08-25T18:31:45+00:00"
         },
         {
             "name": "vitexsoftware/ease-html",
@@ -512,12 +511,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/ease-html.git",
-                "reference": "0913c7cf1dbd5768d00e62f4af0eeb9d5b5e5cf1"
+                "reference": "9eb0346fde1227f5b174656a95a65e3f428067bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/ease-html/zipball/0913c7cf1dbd5768d00e62f4af0eeb9d5b5e5cf1",
-                "reference": "0913c7cf1dbd5768d00e62f4af0eeb9d5b5e5cf1",
+                "url": "https://api.github.com/repos/VitexSoftware/ease-html/zipball/9eb0346fde1227f5b174656a95a65e3f428067bd",
+                "reference": "9eb0346fde1227f5b174656a95a65e3f428067bd",
                 "shasum": ""
             },
             "require": {
@@ -544,7 +543,7 @@
                 }
             ],
             "description": "Set of HTML rendering objects",
-            "time": "2019-08-18T20:15:10+00:00"
+            "time": "2019-08-27T13:15:33+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4",
@@ -552,12 +551,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/ease-twbootstrap4.git",
-                "reference": "5a85a6acaf0d2d151c3aae3dec8361b2899ffa19"
+                "reference": "a41260273613708caf41acdcadf7cf9b976f5415"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/ease-twbootstrap4/zipball/5a85a6acaf0d2d151c3aae3dec8361b2899ffa19",
-                "reference": "5a85a6acaf0d2d151c3aae3dec8361b2899ffa19",
+                "url": "https://api.github.com/repos/VitexSoftware/ease-twbootstrap4/zipball/a41260273613708caf41acdcadf7cf9b976f5415",
+                "reference": "a41260273613708caf41acdcadf7cf9b976f5415",
                 "shasum": ""
             },
             "require": {
@@ -583,7 +582,7 @@
                 }
             ],
             "description": "Set of Twitter Bootstrap 4 rendering objects",
-            "time": "2019-08-18T21:06:57+00:00"
+            "time": "2019-08-27T16:38:47+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4-widgets",
