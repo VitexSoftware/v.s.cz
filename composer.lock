@@ -233,16 +233,16 @@
         },
         {
             "name": "pear/mail_mime",
-            "version": "1.10.2",
+            "version": "1.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/Mail_Mime.git",
-                "reference": "7b2f93fa5219da99e9997f497b916b5bb27eb57a"
+                "reference": "ff6ccf2611f645ee158269bd8910046c1faf806b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/Mail_Mime/zipball/7b2f93fa5219da99e9997f497b916b5bb27eb57a",
-                "reference": "7b2f93fa5219da99e9997f497b916b5bb27eb57a",
+                "url": "https://api.github.com/repos/pear/Mail_Mime/zipball/ff6ccf2611f645ee158269bd8910046c1faf806b",
+                "reference": "ff6ccf2611f645ee158269bd8910046c1faf806b",
                 "shasum": ""
             },
             "require": {
@@ -264,18 +264,18 @@
             "authors": [
                 {
                     "name": "Cipriano Groenendal",
-                    "role": "Lead",
-                    "email": "cipri@php.net"
+                    "email": "cipri@php.net",
+                    "role": "Lead"
                 },
                 {
                     "name": "Aleksander Machniak",
-                    "role": "Lead",
-                    "email": "alec@php.net"
+                    "email": "alec@php.net",
+                    "role": "Lead"
                 }
             ],
             "description": "Mail_Mime provides classes to create MIME messages",
             "homepage": "http://pear.php.net/package/Mail_Mime",
-            "time": "2017-11-17T09:21:45+00:00"
+            "time": "2019-09-25T06:00:47+00:00"
         },
         {
             "name": "pear/pear-core-minimal",
@@ -382,12 +382,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Spoje-NET/php-flexibee.git",
-                "reference": "c01b689b04eaf77869799823d74fdfa28159b3a7"
+                "reference": "9c0dd309d40a9c5ce1ff8c69332788f9538c9e1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spoje-NET/php-flexibee/zipball/c01b689b04eaf77869799823d74fdfa28159b3a7",
-                "reference": "c01b689b04eaf77869799823d74fdfa28159b3a7",
+                "url": "https://api.github.com/repos/Spoje-NET/php-flexibee/zipball/9c0dd309d40a9c5ce1ff8c69332788f9538c9e1b",
+                "reference": "9c0dd309d40a9c5ce1ff8c69332788f9538c9e1b",
                 "shasum": ""
             },
             "require": {
@@ -415,7 +415,7 @@
                 }
             ],
             "description": "PHP Based Library for easy interaction with czech accounting system FlexiBee.",
-            "time": "2019-09-04T15:51:24+00:00"
+            "time": "2019-09-27T10:11:31+00:00"
         },
         {
             "name": "vitexsoftware/ease-core",
@@ -423,12 +423,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/ease-core.git",
-                "reference": "3277c0dc653b80eeeda9e952178ff7c5e89ffb5c"
+                "reference": "d36ee318eb8b7f46a9af1e63daf31d303870e879"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/ease-core/zipball/3277c0dc653b80eeeda9e952178ff7c5e89ffb5c",
-                "reference": "3277c0dc653b80eeeda9e952178ff7c5e89ffb5c",
+                "url": "https://api.github.com/repos/VitexSoftware/ease-core/zipball/d36ee318eb8b7f46a9af1e63daf31d303870e879",
+                "reference": "d36ee318eb8b7f46a9af1e63daf31d303870e879",
                 "shasum": ""
             },
             "require": {
@@ -466,7 +466,7 @@
             ],
             "description": "An PHP Framework for writing Applications",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2019-09-03T00:21:11+00:00"
+            "time": "2019-09-23T19:38:37+00:00"
         },
         {
             "name": "vitexsoftware/ease-fluentpdo",
@@ -511,12 +511,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/ease-html.git",
-                "reference": "9eb0346fde1227f5b174656a95a65e3f428067bd"
+                "reference": "5ba0a438fe5444b6b08ef077a54a4898fc962da8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/ease-html/zipball/9eb0346fde1227f5b174656a95a65e3f428067bd",
-                "reference": "9eb0346fde1227f5b174656a95a65e3f428067bd",
+                "url": "https://api.github.com/repos/VitexSoftware/ease-html/zipball/5ba0a438fe5444b6b08ef077a54a4898fc962da8",
+                "reference": "5ba0a438fe5444b6b08ef077a54a4898fc962da8",
                 "shasum": ""
             },
             "require": {
@@ -543,7 +543,7 @@
                 }
             ],
             "description": "Set of HTML rendering objects",
-            "time": "2019-08-27T13:15:33+00:00"
+            "time": "2019-10-01T10:06:31+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4",
@@ -551,12 +551,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/ease-twbootstrap4.git",
-                "reference": "a41260273613708caf41acdcadf7cf9b976f5415"
+                "reference": "9a750a06f25fe90879fa3bf5d4bbe6f2cc6e6a51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/ease-twbootstrap4/zipball/a41260273613708caf41acdcadf7cf9b976f5415",
-                "reference": "a41260273613708caf41acdcadf7cf9b976f5415",
+                "url": "https://api.github.com/repos/VitexSoftware/ease-twbootstrap4/zipball/9a750a06f25fe90879fa3bf5d4bbe6f2cc6e6a51",
+                "reference": "9a750a06f25fe90879fa3bf5d4bbe6f2cc6e6a51",
                 "shasum": ""
             },
             "require": {
@@ -582,7 +582,7 @@
                 }
             ],
             "description": "Set of Twitter Bootstrap 4 rendering objects",
-            "time": "2019-08-27T16:38:47+00:00"
+            "time": "2019-09-05T13:09:05+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4-widgets",

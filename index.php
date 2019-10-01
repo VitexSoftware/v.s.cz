@@ -16,22 +16,26 @@ $oPage->addItem(new ui\PageTop(_('Vitex Software')));
 
 $appMenu = new ui\MainPageMenu();
 $libMenu = new ui\MainPageMenu();
+$utilsMenu = new ui\MainPageMenu();
 
 //$mainPageMenu->addMenuItem('img/deb-package.png', _('Repozitář'), 'repos.php',
 //    _('Repozitář balíčků pro Debian & Ubuntu'));
 
-$easeLib = $libMenu->addMenuItem('img/ease-framework-logo.png', _('EasePHP'),
-    'ease.php', _('Framework for easy writing of PHP applications'),
-    new \Ease\TWB4\Label('info', \Ease\Atom::$frameworkVersion).new ui\PackagistBadge('VitexSoftware/EaseFramework',
-        'vitexsoftware/ease-framework'));
 
-
-$libMenu->addMenuItem('img/ease-bricks-logo.png', _('EaseBricks'),
-    'https://github.com/VitexSoftware/Ease-PHP-Bricks',
-    _('Common Widgets for EasePHP Framework'),
-    new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/Ease-PHP-Bricks',
-        'vitexsoftware/ease-bricks'));
-
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-core', _('Ease Core') , _('Core of Framework for easy writing of PHP applications') , 'img/ease-core.svg' );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-html', _('Ease HTML') , _('HTML 5 Tags for Ease Framework')                         , 'img/ease-html-logo.png');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap', _('Ease Twbootstrap'),_('Twitter Bootstrap 3 support for Ease Framework') );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets', _('Ease Twbootstrap Widgets'),  _('Twitter Bootstrap 3 Widgets for Ease Framework') );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap4', _('Ease Twbootstrap4'),_('Twitter Bootstrap 4 support for Ease Framework') );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets', _('Ease Twbootstrap4 FlexiBee widgets '),  _('Twitter Bootstrap 4 Widgets for Ease Framework')  );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-fluentpdo', _('Ease FluentPDO'), _('FluentPDO support for Ease Framework')  );
+$libMenu->addLibraryItem('https://github.com/Spoje-NET/php-flexibee', _('FlexiBee'), _('FlexiBee client library') );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-flexibee-bricks' , _('FlexiBee Bricks'), _('Addons for FlexiBee PHP apps')  );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets-flexibee', _('Bootstrap 3 FlexiBee widgets'), _('Several Bootstrap3 Widgets for FlexiBee'));
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets-flexibee',  _('Bootstrap 4 FlexiBee widgets') , _('Several Bootstrap4 Widgets for FlexiBee')   );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-flexibee-datatables', _('FlexiBee datables') , _('Show FlexiBee data in Datatables widget') );
+$libMenu->addLibraryItem('https://github.com/Spoje-NET/ipex-b2b', _('IPEX B2B'),  _('Library for interaction with restapi.ipex.cz'),'img/ipex-b2b-logo.png');
+$libMenu->addLibraryItem('https://github.com/Spoje-NET/php-subreg',_('php-Subreg'), _('Easy interaction with subreg.cz'),'img/php-subreg-logo.png');
 
 if (file_exists('/usr/share/icinga-editor/composer.json')) {
     $composerInfo = json_decode(file_get_contents('/usr/share/icinga-editor/composer.json'));
@@ -45,23 +49,10 @@ $appMenu->addMenuItem('img/icinga_editor-logo.png', _('Icinga Editor'),
     'http://monitoring.vitexsoftware.cz/', _('Editor Konfigurace monitoringu'),
     new \Ease\TWB4\Label('info', $version));
 
-
-$libMenu->addMenuItem('img/flexipeehp-logo.png', _('FlexiPeeHP'),
-    _('flexipeehp.php'), _('PHP Knihovna pro komunikaci s FlexiBee'),
-    new \Ease\TWB4\Label('info',
-        \FlexiPeeHP\FlexiBeeRO::$libVersion.' (FlexiBee '.\FlexiPeeHP\EvidenceList::$version.')').new ui\PackagistBadge('Spoje-NET/FlexiPeeHP',
-        'spoje.net/flexipeehp'));
-
 if (file_exists('/usr/share/flexplorer/composer.json')) {
     $composerInfo = json_decode(file_get_contents('/usr/share/flexplorer/composer.json'));
     $version      = $composerInfo->version;
 }
-
-$libMenu->addMenuItem('img/flexipeehp-bricks-logo.png', _('FlexiPeeHP Bricks'),
-    _('https://github.com/VitexSoftware/FlexiPeeHP-Bricks'),
-    _('Widgets & Code snipplets for FlexiPeeHP'),
-    new \Ease\TWB4\Label('info', '0.2').new ui\PackagistBadge('VitexSoftware/FlexiPeeHP-Bricks',
-        'vitexsoftware/flexipeehp-bricks'));
 
 
 $appMenu->addMenuItem('img/flexplorer-logo.png', _('Flexplorer'),
@@ -94,36 +85,6 @@ $appMenu->addMenuItem('img/shop4flexibee-logo.svg', _('FlexiBee ClientZone'),
 //    _('Specializovaný hosting'));
 
 
-$libMenu->addMenuItem('img/ipex-b2b-logo.png', _('IPEX B2B'),
-    'https://github.com/Spoje-NET/ipex-b2b',
-    _('Library for interaction with restapi.ipex.cz'),
-    new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge('Spoje-NET/ipex-b2b',
-        'spoje.net/ipexb2b'));
-
-$libMenu->addMenuItem('img/php-subreg-logo.png', _('php-subreg'),
-    'https://github.com/Spoje-NET/php-subreg',
-    _('Easy interaction with subreg.cz'),
-    new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge('Spoje-NET/php-subreg',
-        'spoje.net/subreg'));
-
-$libMenu->addMenuItem('img/ease-fuelux-logo.png', _('Ease FuelUX'),
-    'https://github.com/VitexSoftware/ease-fuelux',
-    _('FuelUX componets for EasePHP FrameWork '),
-    new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/ease-fuelux',
-        'vitexsoftware/ease-fuelux'));
-
-$libMenu->addMenuItem('img/php-primaerp-logo.png', _('PrimaERP'),
-    'https://github.com/VitexSoftware/php-primaERP',
-    _('Library for interaction with API primaerp.com'),
-    new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/php-primaERP',
-        'vitexsoftware/primaerp'));
-
-$libMenu->addMenuItem('img/deb/php-datamolino.png', _('Datamolino'),
-    'https://github.com/VitexSoftware/phplib-datamolino',
-    _('Library for interaction with Datamolino API'),
-    new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/php-datamolino',
-        'vitexsoftware/datamolino'));
-
 
 $oPage->container->addItem(new \Ease\Html\H1Tag(_('Applications')));
 
@@ -135,7 +96,7 @@ $oPage->container->addItem($libMenu);
 
 $oPage->container->addItem(new \Ease\Html\H1Tag(_('News')));
 
-$newsRow    = new \Ease\TWB4\Row();
+$newsRow = new \Ease\TWB4\Row();
 
 
 

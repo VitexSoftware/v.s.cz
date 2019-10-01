@@ -6,7 +6,6 @@ namespace VSCZ\ui;
  * Vršek stránky
  *
  * @package    VitexSoftware
- * @subpackage WebUI
  * @author     Vitex <vitex@hippy.cz>
  */
 class PageTop extends \Ease\Html\DivTag

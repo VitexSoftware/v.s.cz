@@ -47,11 +47,11 @@ class MainMenu extends \Ease\TWB4\Navbar
         $this->addMenuItem(new \Ease\Html\ATag('articles.php',
             '<img style="height: 19px;" src="img/news.svg"> '._('Articles')));
 
-
+        $this->addMenuItem(new \Ease\Html\ATag('attic.php','<img style="height: 19px;" src="img/Treasure_chest.svg"> '. _('Old projects')));
 
         $this->addMenuItem(new \Ease\Html\ATag('umim.php', _('My Skills')));
         $this->addMenuItem(new \Ease\Html\ATag('reference.php', _('Reference')));
-        $this->addMenuItem(new \Ease\Html\ATag('cenik.php', _('Pricelist')));
+//        $this->addMenuItem(new \Ease\Html\ATag('cenik.php', _('Pricelist')));
         $this->addMenuItem(new \Ease\Html\ATag('kontakt.php', _('Contact')),
             'left');
 
