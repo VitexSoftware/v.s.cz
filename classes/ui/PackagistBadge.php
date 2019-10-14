@@ -27,7 +27,7 @@ class PackagistBadge extends \Ease\Html\ATag
     {
         $label = str_replace(['dt','v'], [_('Packagist Downloads'),_('Packagist Version')], $type) ;
         
-        parent::__construct($this->baseUrl.$github,
+        parent::__construct($this->baseUrl.$packagist,
             new ShieldsBadge('packagist/'.$type.'/'.$packagist,
             $label), $properties);
     }

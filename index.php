@@ -22,9 +22,9 @@ $utilsMenu = new ui\MainPageMenu();
 //    _('Repozitář balíčků pro Debian & Ubuntu'));
 
 
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-core', _('Ease Core') , _('Core of Framework for easy writing of PHP applications') , 'img/ease-core.svg' );
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-html', _('Ease HTML') , _('HTML 5 Tags for Ease Framework')                         , 'img/ease-html-logo.png');
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap', _('Ease Twbootstrap'),_('Twitter Bootstrap 3 support for Ease Framework') );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-core', _('Ease Core') , _('Core of Framework for easy writing of PHP applications'));
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-html', _('Ease HTML') , _('HTML 5 Tags for Ease Framework'));
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap', _('Ease Twbootstrap'),_('Twitter Bootstrap 3 support for Ease Framework'));
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets', _('Ease Twbootstrap Widgets'),  _('Twitter Bootstrap 3 Widgets for Ease Framework') );
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap4', _('Ease Twbootstrap4'),_('Twitter Bootstrap 4 support for Ease Framework') );
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets', _('Ease Twbootstrap4 FlexiBee widgets '),  _('Twitter Bootstrap 4 Widgets for Ease Framework')  );

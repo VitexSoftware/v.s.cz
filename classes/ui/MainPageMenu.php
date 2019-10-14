@@ -21,9 +21,9 @@ class MainPageMenu extends \Ease\TWB4\Widgets\MainPageMenu
     public function addLibraryItem($url, $title, $description, $image = null)
     {
         $vendorProject = substr(parse_url($url, PHP_URL_PATH),1);
-        $packagist     = strtolower($vendorProject);
+        $packagist     = str_replace(['spoje-net','php-flexibee'], ['spoje.net','flexibee'], strtolower($vendorProject));
         if (is_null($image)) {
-            $image = basename($vendorProject).'.png';
+            $image = 'img/'.basename($vendorProject).'.svg';
         }
         
         $libItem = parent::addMenuItem($title, $url, $image, $description, $vendorProject );
