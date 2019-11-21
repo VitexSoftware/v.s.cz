@@ -39,7 +39,7 @@ class NewPackages extends \Ease\Html\SpanTag
 
         $packages = [];
         $pName    = null;
-        $handle   = fopen("/var/lib/apt/lists/v.s.cz_dists_stable_main_binary-amd64_Packages",
+        $handle   = fopen("/var/lib/apt/lists/repo.vitexsoftware.cz_dists_buster_main_binary-amd64_Packages",
             "r");
         $position = 0;
         if ($handle) {
