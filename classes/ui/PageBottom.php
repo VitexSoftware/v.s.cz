@@ -24,11 +24,11 @@ class PageBottom extends \Ease\TWB4\Container
                 ['style' => 'list-style-type: none']));
         $listA1->addItemSmart(new \Ease\Html\ATag('/redmine', 'Redmine'));
         $listA1->addItemSmart(new \Ease\Html\ATag('https://github.com/VitexSoftware',
-            'GitHub'));
+                'GitHub'));
         $listA1->addItemSmart(new \Ease\Html\ATag('https://hub.docker.com/u/vitexsoftware/',
-            'DockerHUB'));
+                'DockerHUB'));
         $listA1->addItemSmart(new \Ease\Html\ATag('https://atlas.hashicorp.com/vitexsoftware/',
-            'Vagrant'));
+                'Vagrant'));
 
 
 
@@ -38,10 +38,10 @@ class PageBottom extends \Ease\TWB4\Container
                 ['style' => 'list-style-type: none']));
         $listB1->addItemSmart(new \Ease\Html\ATag('cease.php', 'Ease Framework'));
         $listB1->addItemSmart(new \Ease\Html\ATag('monitoring.php',
-            'Icinga Editor'));
+                'Icinga Editor'));
         $listB1->addItemSmart(new \Ease\Html\ATag('/flexplorer', 'FlexPlorer'));
         $listB1->addItemSmart(new \Ease\Html\ATag('http://flexiproxy.vitexsoftware.cz/',
-            'FlexyProxy'));
+                'FlexyProxy'));
 
         $colC   = $rowFluid1->addItem(new \Ease\TWB4\Col(2));
         $listC1 = $colC->addItem(new \Ease\Html\UlTag(_('Services'),
@@ -60,17 +60,17 @@ class PageBottom extends \Ease\TWB4\Container
         $listE1 = $colE->addItem(new \Ease\Html\UlTag(_('Related'),
                 ['style' => 'list-style-type: none']));
         $listE1->addItemSmart(new \Ease\Html\ATag('http://murka.cz',
-            _('Murka.cz')));
+                _('Murka.cz')));
         $listE1->addItemSmart(new \Ease\Html\ATag('http://spoje.net',
-            _('Spoje.Net')));
+                _('Spoje.Net')));
         $listE1->addItemSmart(new \Ease\Html\ATag('http://rclick.cz',
-            _('Rclick.cz')));
+                _('Rclick.cz')));
 
         $colF   = $rowFluid1->addItem(new \Ease\TWB4\Col(2));
         $listF1 = $colF->addItem(new \Ease\Html\UlTag(_('More'),
                 ['style' => 'list-style-type: none']));
         $listF1->addItemSmart(new \Ease\Html\ATag('reference.php',
-            _('Reference')));
+                _('Reference')));
         $listF1->addItemSmart(new \Ease\Html\ATag('cenik.php', _('Pricelist')));
         $listF1->addItemSmart(new \Ease\Html\ATag('kontakt.php', _('Contacts')));
 
@@ -86,15 +86,17 @@ class PageBottom extends \Ease\TWB4\Container
         ';
 
         $rowFluid2->addItem(new \Ease\TWB4\Col(12,
-            [new \Ease\TWB4\Col(8, $socialIcons), new \Ease\TWB4\Col(4,
-                _('&copy; 2012-2017 Vitex Software'))]));
+                [new \Ease\TWB4\Col(8, $socialIcons), new \Ease\TWB4\Col(4,
+                    _('&copy; 2012-2017 Vitex Software'))]));
 
         $mainBottomRow = new \Ease\TWB4\Row();
-        $mainBottomRow->addColumn(10,[$rowFluid1,$rowFluid2]);
-        $mainBottomRow->addColumn(2,new \Ease\Html\ATag('https://www.debian.org/', new \Ease\Html\ImgTag('img/poweredbydebian.png', _('Powered by debian'),['class'=>'img-responsive'])));
-        
+        $mainBottomRow->addColumn(10, [$rowFluid1, $rowFluid2]);
+        $mainBottomRow->addColumn(2,
+            new \Ease\Html\ATag('https://www.debian.org/',
+                new \Ease\Html\ImgTag('img/poweredbydebian.png',
+                    _('Powered by debian'), ['class' => 'img-responsive', 'style'=>'width: 100%'])));
+
         $this->addItem($mainBottomRow);
-               
     }
 
     /**

@@ -17,9 +17,10 @@ class Repositor extends \Ease\Html\DivTag
     /**
      * @var array supported distro list 
      */
-    public $distributions = ['bionic', 'buster', 'ilegal', 'natty', 'sid', 'stretch'];
-    public $repodir       = null;
-    public $packages      = [];
+    public static $distributions = ['bionic' => 'ubuntu', 'buster' => 'debian', 'natty' => 'ubuntu',
+        'sid' => 'debian', 'stretch' => 'debian'];
+    public $repodir              = null;
+    public $packages             = [];
 
     /**
      * 
@@ -28,16 +29,80 @@ class Repositor extends \Ease\Html\DivTag
     public function __construct($repodir)
     {
         parent::__construct();
+
         $this->repodir = $repodir;
-        foreach ($this->distributions as $distroname) {
+        foreach (array_keys(self::$distributions) as $distroname) {
             $this->loadInRelease($distroname);
         }
-
-        $this->addItem('<pre>'.var_dump(self::flatPackageListing($this->packages),
-                true).'</pre>');
     }
 
-    public function flatPackageListing($packagesTree)
+    public function finalize()
+    {
+        $repostats = new \VSCZ\AccessLog();
+        $this->includeJavaScript('js/jquery.tablesorter.min.js');
+        $this->addJavaScript('$("#packs").tablesorter();');
+
+
+        $packages = self::flatPackageListing($this->packages);
+
+        $ptable = new \Ease\Html\TableTag(null,
+            ['class' => 'table', 'id' => 'packs']);
+        $ptable->setHeader([_('Package name'), _('Version'), _('Age'), _('Release date'),
+            _('Size'),
+            _('Package'), _('Installs'), _('Downloads')]);
+
+        $this->addJavascript('$(".hinter").popover();', null, true);
+        $this->addCss('.hinter { font-weight: bold; font-size: large; }');
+
+        foreach ($packages as $pName => $pProps) {
+            $packFile = trim($pProps['Filename']);
+            $icon     = 'img/deb/'.$pName.'.png';
+            if (!file_exists($icon)) {
+                $icon = 'img/deb-package.png';
+            }
+
+            $installs = $repostats->getPackageInstalls($pName);
+
+            $downloads = $repostats->getPackageDownloads($pName);
+
+            $fileMtime = $pProps['fileMtime'];
+            $incTime   = date("Y m. d.", $fileMtime);
+            $packAge   = WebPage::secondsToTime(doubleval(time() - $fileMtime));
+
+            $package = new \Ease\Html\ATag($pProps['Filename'],
+                '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'.$pProps['Architecture'],
+                ['class' => 'btn btn-xs btn-success']);
+            $pInfo   = new \Ease\Html\ATag('package.php?package='.$pName.'#',
+                $pName,
+                ['tabindex' => 0, 'class' => 'hinter', 'data-toggle' => 'popover',
+                'data-trigger' => 'hover',
+                'data-content' => $pProps['Description']]);
+            $ptable->addRowColumns(['<img class="debicon" src="'.$icon.'"> '.$pInfo,
+                $pProps['Version'],
+                $packAge, $incTime, WebPage::_format_bytes($pProps['Size']),
+                $package, $installs, $downloads]);
+        }
+
+        $this->addItem($ptable);
+    }
+
+    public static function htmlize($tableData)
+    {
+        $htmlized = [];
+        foreach ($tableData as $packageRow) {
+            $htmlized[] = self::htmlizeRow($packageRow);
+        }
+        return $htmlized;
+    }
+
+    public static function htmlizeRow($packageData)
+    {
+        unset($packageData['Maintainer']);
+        $packageData['Depends'];
+        return $packageData;
+    }
+
+    public static function flatPackageListing($packagesTree)
     {
         $packages = [];
         foreach ($packagesTree as $distro => $inDistro) {

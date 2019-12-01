@@ -12,21 +12,14 @@ namespace VSCZ\ui;
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
-class PackageInfo extends \Ease\TWB4\Panel
+class PackageInfo extends \Ease\Html\DivTag
 {
 
-    //put your code here
     public function __construct($pName)
     {
         $projectUrl = null;
-        $this->stDB = new \Ease\SQL\PDO([
-            'dbType' => constant('STATS_TYPE'),
-            'server' => constant('STATS_SERVER'),
-            'username' => constant('STATS_USERNAME'),
-            'password' => constant('STATS_PASSWORD'),
-            'database' => constant('STATS_DATABASE'),
-            'port' => constant('STATS_PORT')
-        ]);
+
+        $repostats = new \VSCZ\AccessLog();
 
 
         $pProps = $this->packageInfo($pName);
@@ -34,15 +27,10 @@ class PackageInfo extends \Ease\TWB4\Panel
         $packFile = trim($pProps['Filename']);
 
 
-        $installs = $this->stDB->queryToValue(sprintf(
-                "SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' AND agent LIKE 'Debian APT%%' ",
-                $pName));
+        $installs  = $repostats->getPackageInstalls($pName);
+        $downloads = $repostats->getPackageDownloads($pName);
 
-        $downloads = $this->stDB->queryToValue(sprintf(
-                "SELECT COUNT(*) FROM vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' AND agent NOT LIKE 'Debian APT%%' "
-                , $pName));
-
-        $fileMtime = filemtime($packFile);
+        $fileMtime = $pProps['fileMtime'];
         $incTime   = date("Y m. d.", $fileMtime);
         $packAge   = WebPage::secondsToTime(doubleval(time() - $fileMtime));
 
@@ -61,8 +49,7 @@ class PackageInfo extends \Ease\TWB4\Panel
         $heading->addColumn(14,
             new \Ease\Html\H1Tag($pName.' '.$pProps['Version']));
 
-        parent::__construct($heading, 'info', null,
-            [$packageDownloadLink, $packageInstallLink]);
+        parent::__construct([$heading,$packageDownloadLink, $packageInstallLink]);
 
         $this->addItem(new \Ease\TWB4\Well($pProps['Description']));
 
@@ -76,39 +63,35 @@ class PackageInfo extends \Ease\TWB4\Panel
         $infotable->addRowColumns([_('Installs'), $installs]);
         $infotable->addRowColumns([_('Downloads'), $downloads]);
         $depIcons = '';
-        $pDetails = explode(PHP_EOL, shell_exec('LC_ALL=C dpkg -I '.$packFile));
-        if (count($pDetails)) {
-            foreach ($pDetails as $row) {
-                if (strstr($row, ': ')) {
-                    list($key, $value) = explode(': ', $row);
-                    switch (trim($key)) {
-                        case 'Version':
-                            $version  = $value;
-                            break;
-                        case 'Depends':
-                        case 'Suggests':
-                        case 'Recommends':
-                        case 'Conflicts':
-                        case 'Replaces':
-                            $infotable->addRowColumns([
-                                _($key),
-                                self::addPackageLinks($value)
-                            ]);
-                            $depIcons .= self::packagesIcons(self::DependsToArray($value));
 
-                            break;
-                        case 'Homepage':
-                            $projectUrl = $value;
-                            $infotable->addRowColumns([
-                                _('Homepage'),
-                                '<a href="'.$value.'">'.$value.'</a>'
-                            ]);
-                            break;
-                        default:
-                            $infotable->addRowColumns([_($key), trim($value)]);
-                            break;
-                    }
-                }
+        foreach ($pProps as $key => $value) {
+            switch ($key) {
+                case 'Version':
+                    $version  = $value;
+                    break;
+                case 'Depends':
+                case 'Suggests':
+                case 'Recommends':
+                case 'Conflicts':
+                case 'Replaces':
+                    $infotable->addRowColumns([
+                        _($key),
+                        self::addPackageLinks($value)
+                    ]);
+                    $depIcons .= self::packagesIcons(self::DependsToArray($value));
+
+                    break;
+                case 'Homepage':
+                    $projectUrl = $value;
+                    $infotable->addRowColumns([
+                        _('Homepage'),
+                        '<a href="'.$value.'">'.$value.'</a>'
+                    ]);
+                    break;
+                default:
+                    $infotable->addRowColumns([_($key), is_array($value) ? implode(',',
+                                $value) : $value]);
+                    break;
             }
         }
 
@@ -128,24 +111,18 @@ class PackageInfo extends \Ease\TWB4\Panel
         $this->includeJavaScript('js/jquery.tablesorter.min.js');
         $this->addJavaScript('$("#dwlstats").tablesorter();');
 
-        $howmuch = "SELECT REPLACE( request_uri, '_all.deb','' ) AS ver, COUNT(*) AS howmuch, from_unixtime(time_stamp) FROM vs_access_log WHERE request_uri LIKE '/pool/main/%%/%s_%%' GROUP BY request_uri ORDER BY request_uri DESC ";
-
         $popularityTable = new \Ease\Html\TableTag(null,
             ['class' => 'table', 'id' => 'dwlstats']);
 
         $popularityTable->addRowHeaderColumns([_('Version'), _('Download/Install count'),
             _('Last hit')]);
 
-        $installs = $this->stDB->queryToArray(sprintf($howmuch, $pName));
 
-        foreach ($installs as $iinfo) {
-            $iinfo['ver'] = basename($iinfo['ver']);
+        foreach ($repostats->getPackageVersionInstalls($pName) as $iinfo) {
             $popularityTable->addRowColumns($iinfo);
         }
 
-
-        $packageTabs     = new \Ease\TWB4\Tabs('PkgInfoTabs');
-        $packageTabs->addTab(_('Info'), $infoColumns);
+        $packageTabs     = new \Ease\TWB4\Tabs([_('Info')=>$infoColumns], ['id' => 'ptabs']);
         $packageContents = shell_exec('dpkg-query -L '.$pName);
         if (strlen($packageContents)) {
             $packageTabs->addTab(_('Files'),
@@ -157,6 +134,7 @@ class PackageInfo extends \Ease\TWB4\Panel
         }
         $packageTabs->addTab(_('Download stats'), $popularityTable);
         $this->addItem($packageTabs);
+
     }
 
     static public function packagesIcons($packs)
@@ -222,44 +200,8 @@ class PackageInfo extends \Ease\TWB4\Panel
 
     static public function getPackagesInfo()
     {
-        $packages = [];
-        $pName    = null;
-        $handle   = @fopen("/var/lib/apt/lists/v.s.cz_dists_stable_main_binary-amd64_Packages",
-                "r");
-        if ($handle) {
-            while (($buffer = fgets($handle, 4096)) !== false) {
-                if (!strstr($buffer, ':')) {
-                    continue;
-                }
-                list( $key, $value ) = explode(':', trim($buffer));
-                switch ($key) {
-                    case 'Package':
-                        $pName                  = trim($value);
-                        break;
-                    case 'Description':
-                        $packages[$pName][$key] = $value;
-                        while (($buffer                 = fgets($handle, 4096)) !== false) {
-                            if (strlen(trim($buffer))) {
-                                if (trim($buffer) == '.') {
-                                    $buffer = "\n";
-                                }
-                                $packages[$pName][$key] .= $buffer;
-                            } else {
-                                break;
-                            }
-                        }
-                        break;
-                    default:
-                        $packages[$pName][$key] = $value;
-                        break;
-                }
-            }
-            if (!feof($handle)) {
-                echo "Error: unexpected fgets() fail\n";
-            }
-            fclose($handle);
-            return $packages;
-        }
+        $engine = new Repositor('/home/vitex/WWW/repo.vitexsoftware.cz');
+        return Repositor::flatPackageListing($engine->packages);
     }
 
     /**
