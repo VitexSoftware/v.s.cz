@@ -23,6 +23,7 @@
         "league/commonmark": "*",
         "spoje.net/flexibee": "*",
         "vitexsoftware/ease-core": "dev-master",
+        "vitexsoftware/ease-twbootstrap4": "dev-master",
         "vitexsoftware/ease-twbootstrap4-widgets": "dev-master",
         "vitexsoftware/ease-fluentpdo": "dev-master"
 

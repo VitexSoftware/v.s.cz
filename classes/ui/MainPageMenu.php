@@ -18,6 +18,15 @@ class MainPageMenu extends \Ease\TWB4\Widgets\MainPageMenu
                 empty($version) ? null : _('View').' '._('Version').': '.$version);
     }
 
+    /**
+     * 
+     * @param type $url
+     * @param type $title
+     * @param type $description
+     * @param string $image
+     * 
+     * @return type
+     */
     public function addLibraryItem($url, $title, $description, $image = null)
     {
         $vendorProject = substr(parse_url($url, PHP_URL_PATH),1);

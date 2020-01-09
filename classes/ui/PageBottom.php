@@ -87,7 +87,7 @@ class PageBottom extends \Ease\TWB4\Container
 
         $rowFluid2->addItem(new \Ease\TWB4\Col(12,
                 [new \Ease\TWB4\Col(8, $socialIcons), new \Ease\TWB4\Col(4,
-                    _('&copy; 2012-2017 Vitex Software'))]));
+                    _('&copy; 2012-2019 Vitex Software'))]));
 
         $mainBottomRow = new \Ease\TWB4\Row();
         $mainBottomRow->addColumn(10, [$rowFluid1, $rowFluid2]);

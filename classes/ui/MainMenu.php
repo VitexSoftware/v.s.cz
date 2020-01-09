@@ -23,7 +23,7 @@ class MainMenu extends \Ease\TWB4\Navbar
         parent::__construct($brand, $properties);
         $this->addTagClass('navbar-expand-lg bg-secondary text-uppercase fixed-top');
         
-        $this->addMenuItem(new \Ease\Html\ATag('debs.php',
+        $this->addMenuItem(new \Ease\Html\ATag('debs.html',
             '<img style="height: 19px;" src="img/deb-package.png"> '._('Debian Repository')));
 //
 //        $this->addDropDownMenu(

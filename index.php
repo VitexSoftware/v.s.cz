@@ -102,15 +102,16 @@ $newsRow = new \Ease\TWB4\Row();
 
 
 $newsColumn = $newsRow->addColumn(8,
-    new \Ease\TWB4\Well([new ui\NewsShow(new News()), new \Ease\TWB4\LinkButton('articles.php',
-            '<img src="img/news.svg" style="height: 20px"> '._('More articles').' <i class="fa fa-angle-double-right" aria-hidden="true"></i>',
-            'info')]));
+//    new \Ease\TWB4\Well([new ui\NewsShow(new News()), new \Ease\TWB4\LinkButton('articles.php',
+//            '<img src="img/news.svg" style="height: 20px"> '._('More articles').' <i class="fa fa-angle-double-right" aria-hidden="true"></i>',
+//            'info')])
+);
 
 //$newsRow->addColumn(4, new ui\NewPackages());
 
-$newsColumn->addItem(new \Ease\TWB4\Well('<h1>'._('Languages used last week').'</h1><figure><embed src="https://wakatime.com/share/@5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7/993cf4a7-8296-4820-96c3-c4caf210b3bf.svg"></embed></figure>'));
+$newsColumn->addItem(new \Ease\TWB4\Well('<h1>'._('Languages used last week').'</h1><figure><embed src="https://wakatime.com/share/@Vitex/f11768fc-15a3-4bdb-a419-32c058346b7e.svg"></embed></figure>'));
 
-$newsColumn->addItem(new \Ease\TWB4\Well('<h1>'._('Coding activity last week').'</h1><figure><embed src="https://wakatime.com/share/@5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7/04de33a5-c65a-4447-a93a-d5294dd85c73.svg"></embed></figure>'));
+$newsColumn->addItem(new \Ease\TWB4\Well('<h1>'._('Coding activity last week').'</h1><figure><embed src="https://wakatime.com/share/@Vitex/5c5862c7-25c7-452d-a381-591ba73f9501.svg"></embed></figure>'));
 
 $newsColumn->addItem(new \Ease\Html\DivTag(null, ['id' => 'ghfeed']));
 $oPage->includeCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css');

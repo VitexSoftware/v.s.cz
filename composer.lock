@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba1740f912ead90bf335789d37cc0468",
+    "content-hash": "44f4a2d868ec23cbcbf0d2ada313a126",
     "packages": [
         {
             "name": "fpdo/fluentpdo",
@@ -62,12 +62,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "1a28e6e68171a7286018b9832b15c674777a8636"
+                "reference": "addce828a53101b80732b882c32ba5ddc2ea8e99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/1a28e6e68171a7286018b9832b15c674777a8636",
-                "reference": "1a28e6e68171a7286018b9832b15c674777a8636",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/addce828a53101b80732b882c32ba5ddc2ea8e99",
+                "reference": "addce828a53101b80732b882c32ba5ddc2ea8e99",
                 "shasum": ""
             },
             "require": {
@@ -125,7 +125,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2019-11-11T23:02:19+00:00"
+            "time": "2019-12-13T01:00:34+00:00"
         },
         {
             "name": "pear/console_getopt",
@@ -328,12 +328,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/PEAR_Exception.git",
-                "reference": "8c18719fdae000b690e3912be401c76e406dd13b"
+                "reference": "dbb42a5a0e45f3adcf99babfb2a1ba77b8ac36a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/PEAR_Exception/zipball/8c18719fdae000b690e3912be401c76e406dd13b",
-                "reference": "8c18719fdae000b690e3912be401c76e406dd13b",
+                "url": "https://api.github.com/repos/pear/PEAR_Exception/zipball/dbb42a5a0e45f3adcf99babfb2a1ba77b8ac36a7",
+                "reference": "dbb42a5a0e45f3adcf99babfb2a1ba77b8ac36a7",
                 "shasum": ""
             },
             "require": {
@@ -349,9 +349,9 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "PEAR": ""
-                }
+                "classmap": [
+                    "PEAR/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "include-path": [
@@ -375,7 +375,7 @@
             "keywords": [
                 "exception"
             ],
-            "time": "2015-02-10T20:07:52+00:00"
+            "time": "2019-12-10T10:24:42+00:00"
         },
         {
             "name": "spoje.net/flexibee",
@@ -424,12 +424,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-core.git",
-                "reference": "02fcfa3f9aba30a488d91f7b2d85bb91b706c064"
+                "reference": "32174157ac71aceaf3aed4476d5e16cfcc7320d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-core/zipball/02fcfa3f9aba30a488d91f7b2d85bb91b706c064",
-                "reference": "02fcfa3f9aba30a488d91f7b2d85bb91b706c064",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-core/zipball/32174157ac71aceaf3aed4476d5e16cfcc7320d3",
+                "reference": "32174157ac71aceaf3aed4476d5e16cfcc7320d3",
                 "shasum": ""
             },
             "require": {
@@ -467,7 +467,7 @@
             ],
             "description": "An PHP Framework for writing Applications",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2019-11-05T20:52:48+00:00"
+            "time": "2019-11-18T09:43:17+00:00"
         },
         {
             "name": "vitexsoftware/ease-fluentpdo",
@@ -552,12 +552,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-twbootstrap4.git",
-                "reference": "73d4f1002d32d122f49b176b41b9fa7294c990f4"
+                "reference": "f25f93c403ffd5c98d36646cb81249be66b41af6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-twbootstrap4/zipball/73d4f1002d32d122f49b176b41b9fa7294c990f4",
-                "reference": "73d4f1002d32d122f49b176b41b9fa7294c990f4",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-twbootstrap4/zipball/f25f93c403ffd5c98d36646cb81249be66b41af6",
+                "reference": "f25f93c403ffd5c98d36646cb81249be66b41af6",
                 "shasum": ""
             },
             "require": {
@@ -583,7 +583,7 @@
                 }
             ],
             "description": "Set of Twitter Bootstrap 4 rendering objects",
-            "time": "2019-10-28T02:10:29+00:00"
+            "time": "2019-12-13T18:02:37+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4-widgets",
@@ -632,6 +632,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "vitexsoftware/ease-core": 20,
+        "vitexsoftware/ease-twbootstrap4": 20,
         "vitexsoftware/ease-twbootstrap4-widgets": 20,
         "vitexsoftware/ease-fluentpdo": 20
     },

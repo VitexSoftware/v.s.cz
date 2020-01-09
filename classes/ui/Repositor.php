@@ -68,18 +68,27 @@ class Repositor extends \Ease\Html\DivTag
             $fileMtime = $pProps['fileMtime'];
             $incTime   = date("Y m. d.", $fileMtime);
             $packAge   = WebPage::secondsToTime(doubleval(time() - $fileMtime));
+            
+            $pathParts = explode('/', $pProps['Filename']);
+            $packFileBase = str_replace($pathParts[0].'/'.$pathParts[1], '', $pProps['Filename']);
+            
+            $pkgs = [];
+            
+            foreach ($pProps['Distro'] as $distro) {
+                $pkgs['pool/'.$distro.$packFileBase] = $distro;
+            }
 
-            $package = new \Ease\Html\ATag($pProps['Filename'],
-                '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'.$pProps['Architecture'],
-                ['class' => 'btn btn-xs btn-success']);
-            $pInfo   = new \Ease\Html\ATag('package.php?package='.$pName.'#',
+            $package = new \Ease\TWB4\DropdownButton( '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'. _('Download'), 'success', $pkgs );
+            
+            
+            $pInfo = new \Ease\Html\ATag('package.php?package='.$pName.'#',
                 $pName,
                 ['tabindex' => 0, 'class' => 'hinter', 'data-toggle' => 'popover',
                 'data-trigger' => 'hover',
                 'data-content' => $pProps['Description']]);
             $ptable->addRowColumns(['<img class="debicon" src="'.$icon.'"> '.$pInfo,
                 $pProps['Version'],
-                $packAge, $incTime, WebPage::_format_bytes($pProps['Size']),
+                $packAge, $incTime, \Ease\Functions::humanFilesize($pProps['Size']),
                 $package, $installs, $downloads]);
         }
 
