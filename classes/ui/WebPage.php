@@ -28,6 +28,8 @@ class WebPage extends \Ease\TWB4\WebPage
         $this->includeCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
         $this->includeCss('css/freelancer.min.css');
         $this->includeCss('css/default.css');
+        $this->includeCSS('css/github-activity.css');
+        
         \Ease\WebPage::singleton()->head->addItem('<link rel="icon" type="image/png" href="img/tux-server.png" />');
         \Ease\WebPage::singleton()->head->addItem('<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">');
         \Ease\WebPage::singleton()->head->addItem('<script type="text/javascript">

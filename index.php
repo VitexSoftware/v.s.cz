@@ -10,6 +10,10 @@ namespace VSCZ;
  */
 require_once 'includes/VSInit.php';
 
+
+$oPage->includeJavaScript('js/github-activity.js');
+
+
 //echo _('');
 
 $oPage->addItem(new ui\PageTop(_('Vitex Software')));
@@ -117,8 +121,6 @@ $newsColumn->addItem(new \Ease\Html\DivTag(null, ['id' => 'ghfeed']));
 $oPage->includeCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css');
 $oPage->includeJavaScript('//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js');
 
-$oPage->includeJavaScript('js/github-activity-0.1.5.min.js');
-$oPage->includeCSS('css/github-activity-0.1.5.min.css');
 $oPage->addJavaScript('
  GitHubActivity.feed({
 	username: "Vitexus",

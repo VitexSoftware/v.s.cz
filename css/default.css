@@ -154,3 +154,4 @@ code { font-size: 9px; font-weight: bolder; }
     background: linear-gradient(left, black 50%, white 50%);
 }
 
+.gha-gravatar { width: 100px; }

@@ -59,7 +59,7 @@ class PackageInfo extends \Ease\Html\DivTag
         $infotable->addRowColumns([_('Version'), $pProps['Version']]);
         $infotable->addRowColumns([_('Age in days'), intval($packAge)]);
         $infotable->addRowColumns([_('Release date'), $incTime]);
-        $infotable->addRowColumns([_('Size'), WebPage::_format_bytes($pProps['Size'])]);
+        $infotable->addRowColumns([_('Size'), \Ease\Functions::humanFilesize($pProps['Size'])]);
         $infotable->addRowColumns([_('Installs'), $installs]);
         $infotable->addRowColumns([_('Downloads'), $downloads]);
         $depIcons = '';

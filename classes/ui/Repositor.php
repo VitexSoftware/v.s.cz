@@ -21,6 +21,7 @@ class Repositor extends \Ease\Html\DivTag
         'sid' => 'debian', 'stretch' => 'debian'];
     public $repodir              = null;
     public $packages             = [];
+    public $repoUrl              = 'https://repo.vitexsoftware.cz/';
 
     /**
      * 
@@ -75,7 +76,7 @@ class Repositor extends \Ease\Html\DivTag
             $pkgs = [];
             
             foreach ($pProps['Distro'] as $distro) {
-                $pkgs['pool/'.$distro.$packFileBase] = $distro;
+                $pkgs[$this->repoUrl . 'pool/'.$distro.$packFileBase] = $distro;
             }
 
             $package = new \Ease\TWB4\DropdownButton( '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'. _('Download'), 'success', $pkgs );
