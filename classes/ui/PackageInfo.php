@@ -184,6 +184,9 @@ class PackageInfo extends \Ease\Html\DivTag
     {
         $icon = 'img/deb/'.$package.'.png';
         if (!file_exists($icon)) {
+            $icon = 'img/deb/'.$package.'.svg';
+        }
+        if (!file_exists($icon)) {
             $icon = 'img/deb-package.png';
         }
         return $icon;
@@ -191,7 +194,7 @@ class PackageInfo extends \Ease\Html\DivTag
 
     public static function packageLogo($pName,
                                        $properties = ['class' => 'img-responsive',
-            'style' => 'margin: auto auto;'])
+            'style' => 'margin: auto auto; width: 200px;'])
     {
 
         return new \Ease\Html\ImgTag(self::getPackageIcon($pName), $pName,

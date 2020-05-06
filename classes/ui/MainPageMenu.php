@@ -11,12 +11,15 @@ namespace VSCZ\ui;
 class MainPageMenu extends \Ease\TWB4\Widgets\MainPageMenu
 {
 
-    public function addMenuItem($image, $title, $url, $hint = null,
-                                $version = null)
-    {
-        return parent::addMenuItem($title, $url, $image, $hint,
-                empty($version) ? null : _('View').' '._('Version').': '.$version);
-    }
+    
+//    ($title, $url, $image, $description, $buttonText = NULL, $properties = Array) 
+//    
+//    public function addMenuItem($image, $title, $url, $hint = null,
+//                                $version = null)
+//    {
+//        return parent::addMenuItem($title, $url, $image, $hint,
+//                empty($version) ? null : _('View').' '._('Version').': '.$version);
+//    }
 
     /**
      * 
@@ -35,7 +38,7 @@ class MainPageMenu extends \Ease\TWB4\Widgets\MainPageMenu
             $image = 'img/'.basename($vendorProject).'.svg';
         }
         
-        $libItem = parent::addMenuItem($title, $url, $image, $description, $vendorProject );
+        $libItem = parent::addMenuItem($title, $url, $image, $description, $vendorProject, ['class'=>'text-white bg-secondary'] );
         
         $libItem->addItem(new PackagistBadge($vendorProject, $packagist, 'v'));
         $libItem->addItem(new PackagistBadge($vendorProject, $packagist, 'dt'));

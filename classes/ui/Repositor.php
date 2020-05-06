@@ -59,6 +59,9 @@ class Repositor extends \Ease\Html\DivTag
             $packFile = trim($pProps['Filename']);
             $icon     = 'img/deb/'.$pName.'.png';
             if (!file_exists($icon)) {
+                $icon     = 'img/deb/'.$pName.'.svg';
+            }
+            if (!file_exists($icon)) {
                 $icon = 'img/deb-package.png';
             }
 

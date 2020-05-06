@@ -81,13 +81,12 @@ class PageBottom extends \Ease\TWB4\Container
         <a class = "btn btn-primary social-login-btn social-facebook" href = "https://www.facebook.com/vitexsoftware"><i class = "fa fa-facebook"></i></a>
         <a class = "btn btn-primary social-login-btn social-twitter" href = "https://twitter.com/Vitexus"><i class = "fa fa-twitter"></i></a>
         <a class = "btn btn-primary social-login-btn social-linkedin" href = "https://www.linkedin.com/in/vitexsoftware"><i class = "fa fa-linkedin"></i></a>
-        <a class = "btn btn-primary social-login-btn social-google" href = "https://plus.google.com/u/1/b/100397009727603037623/113673736565726235005"><i class = "fa fa-google-plus"></i></a>
         <a class = "btn btn-primary social-login-btn social-github" href = "https://github.com/Vitexus/"><i class = "fa fa-github"></i></a>
         ';
 
         $rowFluid2->addItem(new \Ease\TWB4\Col(12,
                 [new \Ease\TWB4\Col(8, $socialIcons), new \Ease\TWB4\Col(4,
-                    _('&copy; 2012-2019 Vitex Software'))]));
+                    _('&copy; 2012-2020 Vitex Software'))]));
 
         $mainBottomRow = new \Ease\TWB4\Row();
         $mainBottomRow->addColumn(10, [$rowFluid1, $rowFluid2]);

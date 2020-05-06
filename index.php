@@ -26,20 +26,20 @@ $utilsMenu = new ui\MainPageMenu();
 //    _('Repozitář balíčků pro Debian & Ubuntu'));
 
 
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-core', _('Ease Core') , _('Core of Framework for easy writing of PHP applications'));
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-html', _('Ease HTML') , _('HTML 5 Tags for Ease Framework'));
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap', _('Ease Twbootstrap'),_('Twitter Bootstrap 3 support for Ease Framework'));
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets', _('Ease Twbootstrap Widgets'),  _('Twitter Bootstrap 3 Widgets for Ease Framework') );
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap4', _('Ease Twbootstrap4'),_('Twitter Bootstrap 4 support for Ease Framework') );
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets', _('Ease Twbootstrap4 FlexiBee widgets '),  _('Twitter Bootstrap 4 Widgets for Ease Framework')  );
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-fluentpdo', _('Ease FluentPDO'), _('FluentPDO support for Ease Framework')  );
 $libMenu->addLibraryItem('https://github.com/Spoje-NET/php-flexibee', _('FlexiBee'), _('FlexiBee client library') );
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-flexibee-bricks' , _('FlexiBee Bricks'), _('Addons for FlexiBee PHP apps')  );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets', _('TWB4 FlexiBee widgets'),  _('Twitter Bootstrap 4 Widgets for Ease Framework')  );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-core', _('Ease Core') , _('Core of Framework for easy writing of PHP applications'));
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-html', _('Ease HTML') , _('HTML 5 Tags for Ease Framework'));
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap4', _('Ease Twbootstrap4'),_('Twitter Bootstrap 4 support for Ease Framework') );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-fluentpdo', _('Ease FluentPDO'), _('FluentPDO support for Ease Framework')  );
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets-flexibee', _('Bootstrap 3 FlexiBee widgets'), _('Several Bootstrap3 Widgets for FlexiBee'));
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets-flexibee',  _('Bootstrap 4 FlexiBee widgets') , _('Several Bootstrap4 Widgets for FlexiBee')   );
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-flexibee-datatables', _('FlexiBee datables') , _('Show FlexiBee data in Datatables widget') );
 $libMenu->addLibraryItem('https://github.com/Spoje-NET/ipex-b2b', _('IPEX B2B'),  _('Library for interaction with restapi.ipex.cz'),'img/ipex-b2b-logo.png');
 $libMenu->addLibraryItem('https://github.com/Spoje-NET/php-subreg',_('php-Subreg'), _('Easy interaction with subreg.cz'),'img/php-subreg-logo.png');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets', _('Ease Twbootstrap Widgets'),  _('Twitter Bootstrap 3 Widgets for Ease Framework') );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap', _('Ease Twbootstrap'),_('Twitter Bootstrap 3 support for Ease Framework'));
 
 if (file_exists('/usr/share/icinga-editor/composer.json')) {
     $composerInfo = json_decode(file_get_contents('/usr/share/icinga-editor/composer.json'));
@@ -94,11 +94,39 @@ $appMenu->addMenuItem('img/shop4flexibee-logo.svg', _('FlexiBee ClientZone'),
 //
 //$oPage->container->addItem($appMenu);
 
-$oPage->container->addItem(new \Ease\Html\H1Tag(_('Libraries')));
 
-$oPage->container->addItem($libMenu);
+$mainPageRow = new \Ease\TWB4\Row();
 
-$oPage->container->addItem(new \Ease\Html\H1Tag(_('News')));
+$activityColumn = $mainPageRow->addColumn(3, new \Ease\Html\H1Tag(_('Activity')));
+
+$activityColumn->addItem(new \Ease\TWB4\Well('<h3>'._('Languages used last week').'</h3><figure><embed src="https://wakatime.com/share/@Vitex/f11768fc-15a3-4bdb-a419-32c058346b7e.svg"></embed></figure>'));
+
+$activityColumn->addItem(new \Ease\TWB4\Well('<h3>'._('Coding activity last week').'</h3><figure><embed src="https://wakatime.com/share/@Vitex/5c5862c7-25c7-452d-a381-591ba73f9501.svg"></embed></figure>'));
+
+$activityColumn->addItem(new \Ease\Html\DivTag(null, ['id' => 'ghfeed']));
+
+
+$mainPageRow->addColumn(7, [new \Ease\Html\H1Tag(_('Libraries')), $libMenu ] );
+$mainPageRow->addColumn(2, new ui\NewPackages());
+
+
+$oPage->includeCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css');
+$oPage->includeJavaScript('//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js');
+
+$oPage->addJavaScript('
+ GitHubActivity.feed({
+	username: "Vitexus",
+	selector: "#ghfeed",
+});   
+');
+
+
+$oPage->container->addItem($mainPageRow);
+
+
+
+
+//$oPage->container->addItem(new \Ease\Html\H1Tag(_('News')));
 
 $newsRow = new \Ease\TWB4\Row();
 
@@ -111,22 +139,7 @@ $newsColumn = $newsRow->addColumn(8,
 //            'info')])
 );
 
-//$newsRow->addColumn(4, new ui\NewPackages());
 
-$newsColumn->addItem(new \Ease\TWB4\Well('<h1>'._('Languages used last week').'</h1><figure><embed src="https://wakatime.com/share/@Vitex/f11768fc-15a3-4bdb-a419-32c058346b7e.svg"></embed></figure>'));
-
-$newsColumn->addItem(new \Ease\TWB4\Well('<h1>'._('Coding activity last week').'</h1><figure><embed src="https://wakatime.com/share/@Vitex/5c5862c7-25c7-452d-a381-591ba73f9501.svg"></embed></figure>'));
-
-$newsColumn->addItem(new \Ease\Html\DivTag(null, ['id' => 'ghfeed']));
-$oPage->includeCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css');
-$oPage->includeJavaScript('//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js');
-
-$oPage->addJavaScript('
- GitHubActivity.feed({
-	username: "Vitexus",
-	selector: "#ghfeed",
-});   
-');
 
 
 $oPage->container->addItem($newsRow);

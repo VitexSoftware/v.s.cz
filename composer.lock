@@ -62,43 +62,37 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "addce828a53101b80732b882c32ba5ddc2ea8e99"
+                "reference": "7e04f3dd0f6f3cdae966e3a34e132a3a1914afff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/addce828a53101b80732b882c32ba5ddc2ea8e99",
-                "reference": "addce828a53101b80732b882c32ba5ddc2ea8e99",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/7e04f3dd0f6f3cdae966e3a34e132a3a1914afff",
+                "reference": "7e04f3dd0f6f3cdae966e3a34e132a3a1914afff",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": "^7.1"
+                "php": "^7.2.5"
             },
-            "replace": {
-                "colinodell/commonmark-php": "*"
+            "conflict": {
+                "scrutinizer/ocular": "1.7.*"
             },
             "require-dev": {
                 "cebe/markdown": "~1.0",
-                "commonmark/commonmark.js": "0.29.0",
+                "commonmark/commonmark.js": "0.29.1",
                 "erusev/parsedown": "~1.0",
                 "ext-json": "*",
+                "github/gfm": "0.29.0",
                 "michelf/php-markdown": "~1.4",
-                "mikehaertl/php-shellcommand": "^1.4",
-                "phpstan/phpstan-shim": "^0.11.5",
-                "phpunit/phpunit": "^7.5",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8.5",
                 "scrutinizer/ocular": "^1.5",
                 "symfony/finder": "^4.2"
             },
-            "suggest": {
-                "league/commonmark-extras": "Library of useful extensions including smart punctuation"
-            },
-            "bin": [
-                "bin/commonmark"
-            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -118,14 +112,45 @@
                     "role": "Lead Developer"
                 }
             ],
-            "description": "PHP Markdown parser based on the CommonMark spec",
+            "description": "Highly-extensible PHP Markdown parser which fully supports the CommonMark spec and Github-Flavored Markdown (GFM)",
             "homepage": "https://commonmark.thephpleague.com",
             "keywords": [
                 "commonmark",
+                "flavored",
+                "gfm",
+                "github",
+                "github-flavored",
                 "markdown",
+                "md",
                 "parser"
             ],
-            "time": "2019-12-13T01:00:34+00:00"
+            "funding": [
+                {
+                    "url": "https://enjoy.gitstore.app/repositories/thephpleague/commonmark",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.colinodell.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.paypal.me/colinpodell/10.00",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/colinodell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/colinodell",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/league/commonmark",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-05-04T22:18:41+00:00"
         },
         {
             "name": "pear/console_getopt",
@@ -214,18 +239,18 @@
             "authors": [
                 {
                     "name": "Chuck Hagenbuch",
-                    "role": "Lead",
-                    "email": "chuck@horde.org"
+                    "email": "chuck@horde.org",
+                    "role": "Lead"
                 },
                 {
                     "name": "Richard Heyes",
-                    "role": "Developer",
-                    "email": "richard@phpguru.org"
+                    "email": "richard@phpguru.org",
+                    "role": "Developer"
                 },
                 {
                     "name": "Aleksander Machniak",
-                    "role": "Developer",
-                    "email": "alec@alec.pl"
+                    "email": "alec@alec.pl",
+                    "role": "Developer"
                 }
             ],
             "description": "Class that provides multiple interfaces for sending emails.",
@@ -234,16 +259,16 @@
         },
         {
             "name": "pear/mail_mime",
-            "version": "1.10.4",
+            "version": "1.10.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/Mail_Mime.git",
-                "reference": "36ab96ff17c098f65f58adb31c089beb12868ece"
+                "reference": "4b4c1f9c2850e9fd646ea6a25f11d4735b36edbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/Mail_Mime/zipball/36ab96ff17c098f65f58adb31c089beb12868ece",
-                "reference": "36ab96ff17c098f65f58adb31c089beb12868ece",
+                "url": "https://api.github.com/repos/pear/Mail_Mime/zipball/4b4c1f9c2850e9fd646ea6a25f11d4735b36edbd",
+                "reference": "4b4c1f9c2850e9fd646ea6a25f11d4735b36edbd",
                 "shasum": ""
             },
             "require": {
@@ -276,7 +301,7 @@
             ],
             "description": "Mail_Mime provides classes to create MIME messages",
             "homepage": "http://pear.php.net/package/Mail_Mime",
-            "time": "2019-10-13T09:02:10+00:00"
+            "time": "2020-03-01T07:54:36+00:00"
         },
         {
             "name": "pear/pear-core-minimal",
@@ -328,19 +353,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/PEAR_Exception.git",
-                "reference": "dbb42a5a0e45f3adcf99babfb2a1ba77b8ac36a7"
+                "reference": "abf2c21ed0180752c2e38655c7998678131dd05b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/PEAR_Exception/zipball/dbb42a5a0e45f3adcf99babfb2a1ba77b8ac36a7",
-                "reference": "dbb42a5a0e45f3adcf99babfb2a1ba77b8ac36a7",
+                "url": "https://api.github.com/repos/pear/PEAR_Exception/zipball/abf2c21ed0180752c2e38655c7998678131dd05b",
+                "reference": "abf2c21ed0180752c2e38655c7998678131dd05b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=4.4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "*"
+                "phpunit/phpunit": "<6"
             },
             "type": "class",
             "extra": {
@@ -375,7 +400,7 @@
             "keywords": [
                 "exception"
             ],
-            "time": "2019-12-10T10:24:42+00:00"
+            "time": "2020-04-19T14:25:26+00:00"
         },
         {
             "name": "spoje.net/flexibee",
@@ -383,17 +408,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Spoje-NET/php-flexibee.git",
-                "reference": "bb14c8f21b0999771784eb0d8192bd24c024c21e"
+                "reference": "691bd4214af34f1297729b260e775354e6361d48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spoje-NET/php-flexibee/zipball/bb14c8f21b0999771784eb0d8192bd24c024c21e",
-                "reference": "bb14c8f21b0999771784eb0d8192bd24c024c21e",
+                "url": "https://api.github.com/repos/Spoje-NET/php-flexibee/zipball/691bd4214af34f1297729b260e775354e6361d48",
+                "reference": "691bd4214af34f1297729b260e775354e6361d48",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "vitexsoftware/ease-core": "dev-master"
+                "vitexsoftware/ease-core": ">=0.37"
+            },
+            "replace": {
+                "spoje.net/flexipeehp": ">1.32"
             },
             "require-dev": {
                 "phing/phing": "*",
@@ -407,7 +435,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0"
+                "MIT"
             ],
             "authors": [
                 {
@@ -415,8 +443,8 @@
                     "email": "vitex@arachne.cz"
                 }
             ],
-            "description": "PHP Based Library for easy interaction with czech accounting system FlexiBee.",
-            "time": "2019-11-15T09:40:29+00:00"
+            "description": "Library for easy interaction with czech accounting system FlexiBee.",
+            "time": "2020-05-02T20:51:21+00:00"
         },
         {
             "name": "vitexsoftware/ease-core",
@@ -424,16 +452,15 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-core.git",
-                "reference": "32174157ac71aceaf3aed4476d5e16cfcc7320d3"
+                "reference": "3edd98a3ace6bb38b2d5032837a14392d3bb8236"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-core/zipball/32174157ac71aceaf3aed4476d5e16cfcc7320d3",
-                "reference": "32174157ac71aceaf3aed4476d5e16cfcc7320d3",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-core/zipball/3edd98a3ace6bb38b2d5032837a14392d3bb8236",
+                "reference": "3edd98a3ace6bb38b2d5032837a14392d3bb8236",
                 "shasum": ""
             },
             "require": {
-                "ext-pdo": "*",
                 "pear/mail": "~1.3",
                 "pear/mail_mime": "~1.10",
                 "php": ">=7"
@@ -467,7 +494,7 @@
             ],
             "description": "An PHP Framework for writing Applications",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2019-11-18T09:43:17+00:00"
+            "time": "2020-04-10T08:17:50+00:00"
         },
         {
             "name": "vitexsoftware/ease-fluentpdo",
@@ -475,12 +502,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-fluentpdo.git",
-                "reference": "7e1e56ddd2988d9aceff0835538ac1de819dd6e5"
+                "reference": "d394157bbda3840857f01bb123e4471d8333bc76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-fluentpdo/zipball/7e1e56ddd2988d9aceff0835538ac1de819dd6e5",
-                "reference": "7e1e56ddd2988d9aceff0835538ac1de819dd6e5",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-fluentpdo/zipball/d394157bbda3840857f01bb123e4471d8333bc76",
+                "reference": "d394157bbda3840857f01bb123e4471d8333bc76",
                 "shasum": ""
             },
             "require": {
@@ -503,8 +530,8 @@
                     "email": "info@vitexsoftware.cz"
                 }
             ],
-            "description": "Description of project ease-fluentpdo.",
-            "time": "2019-11-06T08:29:58+00:00"
+            "description": "SQL/PDO support for Ease Framework based on FluentPDO",
+            "time": "2020-05-04T19:49:32+00:00"
         },
         {
             "name": "vitexsoftware/ease-html",
@@ -512,12 +539,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-html.git",
-                "reference": "0488dc6ea7dd35949e8ddebefe438020da30d24d"
+                "reference": "85bf1ec825922bdd8509de8bc8450b6d3ec7ed56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-html/zipball/0488dc6ea7dd35949e8ddebefe438020da30d24d",
-                "reference": "0488dc6ea7dd35949e8ddebefe438020da30d24d",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-html/zipball/85bf1ec825922bdd8509de8bc8450b6d3ec7ed56",
+                "reference": "85bf1ec825922bdd8509de8bc8450b6d3ec7ed56",
                 "shasum": ""
             },
             "require": {
@@ -544,7 +571,7 @@
                 }
             ],
             "description": "Set of HTML rendering objects",
-            "time": "2019-11-17T05:42:32+00:00"
+            "time": "2020-04-11T19:13:49+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4",
@@ -552,12 +579,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-twbootstrap4.git",
-                "reference": "f25f93c403ffd5c98d36646cb81249be66b41af6"
+                "reference": "2719e756e6532fbd9bdaf5ccedee5f5f18507796"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-twbootstrap4/zipball/f25f93c403ffd5c98d36646cb81249be66b41af6",
-                "reference": "f25f93c403ffd5c98d36646cb81249be66b41af6",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-twbootstrap4/zipball/2719e756e6532fbd9bdaf5ccedee5f5f18507796",
+                "reference": "2719e756e6532fbd9bdaf5ccedee5f5f18507796",
                 "shasum": ""
             },
             "require": {
@@ -583,7 +610,7 @@
                 }
             ],
             "description": "Set of Twitter Bootstrap 4 rendering objects",
-            "time": "2019-12-13T18:02:37+00:00"
+            "time": "2020-03-15T19:37:01+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4-widgets",
@@ -591,12 +618,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets.git",
-                "reference": "9b45c6fc2528aa88b5b3f44e0a47a4fb07df0ca2"
+                "reference": "2d8215b0203f40a99298c3294e903a00e21c9e95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-twbootstrap4-widgets/zipball/9b45c6fc2528aa88b5b3f44e0a47a4fb07df0ca2",
-                "reference": "9b45c6fc2528aa88b5b3f44e0a47a4fb07df0ca2",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-twbootstrap4-widgets/zipball/2d8215b0203f40a99298c3294e903a00e21c9e95",
+                "reference": "2d8215b0203f40a99298c3294e903a00e21c9e95",
                 "shasum": ""
             },
             "require": {
@@ -624,7 +651,7 @@
             ],
             "description": "EasePHP framework addons and code snipplets",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2019-10-28T02:14:27+00:00"
+            "time": "2020-04-30T18:05:53+00:00"
         }
     ],
     "packages-dev": [],
@@ -641,5 +668,6 @@
     "platform": {
         "php": ">= 7.1"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

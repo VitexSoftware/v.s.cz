@@ -47,6 +47,7 @@ class WebPage extends \Ease\TWB4\WebPage
 
         $this->body->setTagID('page-top');
         $this->container = $this->addItem(new \Ease\TWB4\Container(new \Ease\Html\DivTag('<p><br clear="all"><br clear="all"></p>')));
+        $this->container->setTagClass('container-fluid');
     }
 
     public static function secondsToTime($seconds)
