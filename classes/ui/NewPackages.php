@@ -102,7 +102,7 @@ class NewPackages extends \Ease\Html\SpanTag {
 
         $this->addItem(new \Ease\Html\PTag('<br>'));
 
-        $this->addItem(new \Ease\Html\PTag(new \Ease\Html\ATag('repostats.php',
+        $this->addItem(new \Ease\Html\PTag(new \Ease\Html\ATag('debs.html',
                                 '<img style="width: 30px;" src="img/deb-package.png">&nbsp;' . ' ' . _('All Packages') . ' <i class="fa fa-angle-double-right" aria-hidden="true"></i>
 ', ['class' => 'btn btn-info btn-lg btn-block']),
                         ['style' => 'text-align: center;']));
@@ -121,7 +121,7 @@ class NewPackages extends \Ease\Html\SpanTag {
         $counts = $this->getPullCounts($pProps['Filename'], $pProps['Version']);
 
 
-        $download = new \Ease\Html\ATag($pProps['Filename'],
+        $download = new \Ease\Html\ATag('http://repo.vitexsoftware.cz/'. $pProps['Filename'],
                 '<img style="width: 30px;" src="img/deb-package.png">&nbsp;' . ' ' . \Ease\Functions::formatBytes(intval($pProps['Size'])),
                 ['class' => 'btn btn-success']);
 

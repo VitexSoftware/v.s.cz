@@ -47,10 +47,10 @@ class Repositor extends \Ease\Html\DivTag
         $packages = self::flatPackageListing($this->packages);
 
         $ptable = new \Ease\Html\TableTag(null,
-            ['class' => 'table', 'id' => 'packs']);
+            ['class' => 'table table-dark table-striped', 'id' => 'packs']);
         $ptable->setHeader([_('Package name'), _('Version'), _('Age'), _('Release date'),
             _('Size'),
-            _('Package'), _('Installs'), _('Downloads')]);
+            _('Package'), _('Installs'), _('Downloads')],['class'=>'thead-dark']);
 
         $this->addJavascript('$(".hinter").popover();', null, true);
         $this->addCss('.hinter { font-weight: bold; font-size: large; }');
@@ -96,6 +96,8 @@ class Repositor extends \Ease\Html\DivTag
                 $package, $installs, $downloads]);
         }
 
+        $ptable->setTagProperty('style','background-color:rgba(0, 0, 0, 0.5); color: white;');
+        
         $this->addItem($ptable);
     }
 
@@ -216,8 +218,8 @@ class Repositor extends \Ease\Html\DivTag
                             break;
                     }
                     $packages[$pName]['Name'] = $pName;
-                    if (isset($packages[$pName]['Filename']) && file_exists($packages[$pName]['Filename'])) {
-                        $packages[$pName]['fileMtime'] = filemtime($packages[$pName]['Filename'])
+                    if (isset($packages[$pName]['Filename']) && file_exists($this->repodir.'/'.$packages[$pName]['Filename'])) {
+                        $packages[$pName]['fileMtime'] = filemtime($this->repodir.'/'.$packages[$pName]['Filename'])
                             + $position;
                     } else {
                         $packages[$pName]['fileMtime'] = time();

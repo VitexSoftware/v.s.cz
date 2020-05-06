@@ -33,12 +33,12 @@ $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-core', _('Ease C
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-html', _('Ease HTML') , _('HTML 5 Tags for Ease Framework'));
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap4', _('Ease Twbootstrap4'),_('Twitter Bootstrap 4 support for Ease Framework') );
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-fluentpdo', _('Ease FluentPDO'), _('FluentPDO support for Ease Framework')  );
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets-flexibee', _('Bootstrap 3 FlexiBee widgets'), _('Several Bootstrap3 Widgets for FlexiBee'));
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets-flexibee',  _('Bootstrap 4 FlexiBee widgets') , _('Several Bootstrap4 Widgets for FlexiBee')   );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets-flexibee', _('TWB3 FlexiBee widgets'), _('Several Bootstrap3 Widgets for FlexiBee'));
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets-flexibee',  _('TWB4 FlexiBee widgets') , _('Several Bootstrap4 Widgets for FlexiBee')   );
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-flexibee-datatables', _('FlexiBee datables') , _('Show FlexiBee data in Datatables widget') );
 $libMenu->addLibraryItem('https://github.com/Spoje-NET/ipex-b2b', _('IPEX B2B'),  _('Library for interaction with restapi.ipex.cz'),'img/ipex-b2b-logo.png');
 $libMenu->addLibraryItem('https://github.com/Spoje-NET/php-subreg',_('php-Subreg'), _('Easy interaction with subreg.cz'),'img/php-subreg-logo.png');
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets', _('Ease Twbootstrap Widgets'),  _('Twitter Bootstrap 3 Widgets for Ease Framework') );
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets', _('TWB3 Widgets'),  _('Twitter Bootstrap 3 Widgets for Ease Framework') );
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap', _('Ease Twbootstrap'),_('Twitter Bootstrap 3 support for Ease Framework'));
 
 if (file_exists('/usr/share/icinga-editor/composer.json')) {

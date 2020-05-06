@@ -71,7 +71,7 @@ if ($handle) {
     fclose($handle);
 }
 
-$ptable = new \Ease\Html\TableTag(null, ['class' => 'table', 'id' => 'packs']);
+$ptable = new \Ease\Html\TableTag(null, ['class' => 'table', 'style'=>'background-color:rgba(0, 0, 0, 0.5);' , 'id' => 'packs']);
 $ptable->setHeader([_('Package name'), _('Version'), _('Age'), _('Release date'),
     _('Size'),
     _('Package')]);
