@@ -1,8 +1,9 @@
 <?php
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * VitexSoftware Homepage - News Handler
+ *
+ * @author Vítězslav Dvořák <info@vitexsoftware.cz>
+ * @copyright  2015-2020 Vitex Software
  */
 
 namespace VSCZ;

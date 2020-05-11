@@ -9,6 +9,7 @@
 date_default_timezone_set('Europe/Prague');
 
 define('EASE_APPNAME', 'vscz');
+define('EASE_LOGGER', 'syslog');
 
 /**
  * Adresa odesilatele  

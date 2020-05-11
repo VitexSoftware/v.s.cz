@@ -21,6 +21,6 @@ class ShieldsBadge extends \Ease\Html\ImgTag
 
     public function __construct($image, $alt = null, $tagProperties = array())
     {
-        parent::__construct($this->baseUrl.$image.'.'.$this->format.'?format='.$this->format, $alt, $tagProperties);
+        parent::__construct($this->baseUrl.$image.'.'.$this->format.'?colorB=272d32&style=flat&format='.$this->format, $alt, $tagProperties);
     }
 }

@@ -132,12 +132,14 @@ class NewPackages extends \Ease\Html\SpanTag {
 
 
 
-        $cardBody->addItem($icon);
+        $cardBody->addItem( new \Ease\Html\ATag('package.php?package='.$pName,  $icon));
+        
         $cardBody->addItem(new \Ease\Html\PTag($pProps['Description'], ['class' => 'card-text']));
         $cardBody->addItem($download);
-        $packageCard = new \Ease\TWB4\Card(new \Ease\Html\DivTag(new \Ease\Html\H5Tag($pName), ['class' => 'card-header']),['class'=>'text-black bg-warning']);
+        $packageCard = new \Ease\TWB4\Card(new \Ease\Html\DivTag(new \Ease\Html\H5Tag($pName.' '.$pProps['Version']), ['class' => 'card-header']),['class'=>'text-black bg-warning']);
         $packageCard->addItem($cardBody);
 
+            
 
 
         $packageCard->addItem(new \Ease\Html\DivTag('<small>' . _('Installed') . ': ' . $counts['installs'] . '&nbsp&nbsp;' . _('Downloaded') . ': ' . $counts['downloads'] . '</small>', ['class' => 'card-footer']));
@@ -145,13 +147,7 @@ class NewPackages extends \Ease\Html\SpanTag {
 
         return $packageCard;
 
-//            new \Ease\Html\H3Tag('<a href="package.php?package='.$pName.'">'.$pName.' '.$pProps['Version'].'</a>',
-//                ['style' => 'text-align: center;']),
-//            .
-//            '<a href="package.php?package='.$pName.'"><img style="width: 50%; display: block; margin: 0 auto;" class="img-responsive" src="'.$icon.'"></a>',
-//            new \Ease\Html\DivTag($pProps['Description']),
-//            new \Ease\Html\DivTag($download, ['style' => 'text-align: center;'])
-//        ];
+        
     }
 
     /**

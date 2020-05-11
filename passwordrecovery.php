@@ -1,74 +1,99 @@
 <?php
+
 /**
- * Reset hesla
+ * VitexSoftware - Recovery password.
  *
- * @package VS
- * @author    Vitex <vitex@hippy.cz>
- * @copyright 2012 Vitex@hippy.cz (G)
+ * @author Vítězslav Dvořák <info@vitexsoftware.cz>
+ * @copyright  2012-2020 Vitex Software
  */
-require_once 'includes/LBBegin.php';
-require_once 'Ease/EaseMail.php';
-require_once 'Ease/\Ease\Html\Form.php';
-$Success = false;
 
-$EmailTo = $oPage->GetPostValue('Email');
+namespace VSCZ\ui;
 
-if ($EmailTo) {
-    $oPage->TakeMyTable();
-    $UserEmail = $oPage->EaseAddSlashes($EmailTo);
-    $UserFound = $oPage->MyDbLink->QueryToArray('SELECT u_id,u_username FROM users WHERE email=\''.$UserEmail.'\'');
-    if (count($UserFound)) {
-        $UserID      = intval($UserFound[0]['u_id']);
-        $UserLogin   = $UserFound[0]['u_username'];
-        $NewPassword = $oPage->RandomString(8);
+require_once 'includes/VSInit.php';
 
-        $PassChanger = new LBUser($UserID);
-        $PassChanger->PasswordChange($NewPassword);
+$success = false;
 
-        $email = $oPage->addItem(new EaseShopMail($UserEmail,
-            _('Nové heslo pro ').$_SERVER['SERVER_NAME']));
-        $email->addItem(_("Tvoje přihlašovací údaje byly změněny:\n"));
+$emailTo = $oPage->getPostValue('Email');
 
-        $email->addItem(' Login: '.$UserLogin."\n");
-        $email->addItem(' Heslo: '.$NewPassword."\n");
+if (empty($emailTo)) {
+    $oUser->addStatusMessage(_('Please enter your email.'));
+} else {
+    $userEmail = addSlashes($emailTo);
 
-        $email->Send();
+    $controlUser = new \VSCZ\User();
+    $controlData = $controlUser->getColumnsFromSql([$controlUser->getkeyColumn()],
+            ['email' => $userEmail]);
 
-        $OUser->addStatusMessage('Tvoje nové heslo vám bylo odesláno mailem na zadanou adresu <strong>'.$_REQUEST['Email'].'</strong>');
-        $Success = true;
+    if (empty($controlData)) {
+        \Ease\Shared::user()->addStatusMessage(sprintf(_('unknow email address %s'),
+                        '<strong>' . $_REQUEST['Email'] . '</strong>'), 'warning');
     } else {
-        $OUser->addStatusMessage('Promiňnte, ale email <strong>'.$_REQUEST['Email'].'</strong> nebyl v databázi nalezen',
-            'warning');
+
+        $controlUser->loadFromSQL((int) $controlData[0][$controlUser->getkeyColumn()]);
+        $userLogin = $controlUser->getUserLogin();
+        $newPassword = \Ease\Functions::randomString(8);
+
+        if ($controlUser->passwordChange($newPassword)) {
+
+            $email = $oPage->addItem(new \Ease\HtmlMailer($userEmail,
+                            constant('EASE_APPNAME') . ' -' . sprintf(_('New password for %s'),
+                                    $_SERVER['SERVER_NAME'])));
+
+            $email->setMailHeaders(['From' => constant('EMAIL_FROM')]);
+            $email->addItem(_('Sign On informations was changed') . ":\n");
+
+            $email->addItem(_('Username') . ': ' . $userLogin . "\n");
+            $email->addItem(_('Password') . ': ' . $newPassword . "\n");
+
+            $email->send();
+
+            $oUser->addStatusMessage(sprintf(_('Your new password was sent to %s'),
+                            '<strong>' . $emailTo . '</strong>'));
+            $success = true;
+        }
     }
-} else {
-    $OUser->addStatusMessage('Zadejte prosím váš eMail.');
 }
 
+$oPage->addItem(new PageTop(_('Lost password recovery')));
 
-$oPage->addItem(new LBPageTop('Obnova zapomenutého hesla'));
+$pageRow = new \Ease\TWB4\Row();
 
+$columnI = $pageRow->addColumn('4');
+$columnII = $pageRow->addColumn('4');
+$columnIII = $pageRow->addColumn('4');
 
+$oPage->addItem($pageRow);
 
-if (!$Success) {
-    $oPage->addItem('<h1>Zapoměl jsem své heslo!</h1>');
+if (!$success) {
+    $columnIII->addItem(new \Ease\TWB4\Label('info', _('Tip')));
 
-    $oPage->addItem('Zapoměl jste heslo? Vložte svou e-mailovou adresu, kterou jste zadal při registraci a my Vám pošleme nové.');
+    $columnIII->addItem(new \Ease\TWB4\Well(
+                    _('Forgot your password? Enter your e-mail address you entered during the registration and we will send you a new one.')));
 
-    $EmailForm = $oPage->addItem(new \Ease\Html\Form('PassworRecovery'));
-    $EmailForm->addItem('Email: ');
-    $EmailForm->addItem(new \Ease\Html\InputTextTag('Email', null,
-        ['size' => '40']));
-    $EmailForm->addItem(new \Ease\Html\InputSubmitTag('ok',
-        _('Zaslat nové heslo')));
+    $titlerow = new \Ease\TWB4\Row();
+    $titlerow->addColumn(4, new \Ease\Html\ImgTag('img/keys.svg', _('Password'), ['style' => 'height: 40px;']));
+    $titlerow->addColumn(8, new \Ease\Html\H3Tag(_('Password Recovery')));
 
-    if (isset($_POST)) {
-        $EmailForm->FillUp($_POST);
+    $loginPanel = new \Ease\TWB4\Panel(new \Ease\TWB4\Container($titlerow),
+            'success', null,
+            new \Ease\TWB4\SubmitButton(_('Sent New Password'), 'success'));
+    $loginPanel->addItem(new \Ease\TWB4\FormGroup(_('Email'),
+                    new \Ease\Html\InputTextTag('Email', $emailTo,
+                            ['type' => 'email'])));
+    $loginPanel->body->setTagProperties(['style' => 'margin: 20px']);
+
+    $mailForm = $columnII->addItem(new \Ease\TWB4\Form(['name' => 'PasswordRecovery']));
+    $mailForm->addItem($loginPanel);
+
+    if ($oPage->isPosted()) {
+        $mailForm->fillUp($_POST);
     }
 } else {
-    $oPage->addItem(new \Ease\Html\ATag('Login.php', _('Pokračovat')));
+    $columnII->addItem(new \Ease\TWB4\LinkButton('login.php',
+                    _('Continue')));
+    $oPage->redirect('login.php');
 }
 
-$oPage->addItem(new LBPageBottom());
+$oPage->addItem(new PageBottom());
 
 $oPage->draw();
-?>
