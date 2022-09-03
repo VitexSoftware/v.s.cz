@@ -77,8 +77,8 @@ msgid "Imap2MX webmail plugins"
 msgstr "Imap2MX webmail plugins"
 
 #: classes/ui/MainMenu.php:46 flexibee.php:13
-msgid "FlexiBee"
-msgstr "FlexiBee"
+msgid "AbraFlexi"
+msgstr "AbraFlexi"
 
 #: classes/ui/MainMenu.php:53
 msgid "My Skills"
@@ -336,8 +336,8 @@ msgid "Latest change"
 msgstr ""
 
 #: flexibee.php:21
-msgid "Go to FlexiBee site"
-msgstr "Go to FlexiBee site"
+msgid "Go to AbraFlexi site"
+msgstr "Go to AbraFlexi site"
 
 #: flexibee.php:23
 msgid ""
@@ -363,7 +363,7 @@ msgstr ""
 
 #: flexibee.php:52
 msgid ""
-"Senzory pro sledování stavu FlexiBee. Použitelné v monitorovacích systémech "
+"Senzory pro sledování stavu AbraFlexi. Použitelné v monitorovacích systémech "
 "Nagios/Icinga."
 msgstr ""
 
@@ -385,7 +385,7 @@ msgstr "Video presentation"
 
 #: flexibee.php:85
 msgid ""
-"Vývojářský nástroj a editor pro FlexiBee API. Napsaný s využitím knihovny "
+"Vývojářský nástroj a editor pro AbraFlexi API. Napsaný s využitím knihovny "
 "FlexiPeeHP:"
 msgstr ""
 
@@ -394,8 +394,8 @@ msgid "See in action"
 msgstr "See in action"
 
 #: flexibee.php:95
-msgid "FlexiBee Git History"
-msgstr "FlexiBee Git History"
+msgid "AbraFlexi Git History"
+msgstr "AbraFlexi Git History"
 
 #: flexibee.php:96
 msgid ""
@@ -407,9 +407,9 @@ msgstr ""
 
 #: flexibee.php:105
 msgid ""
-"Transparent Proxy for filering and modification communictation with FlexiBee "
+"Transparent Proxy for filering and modification communictation with AbraFlexi "
 msgstr ""
-"Transparent Proxy for filering and modification communictation with FlexiBee "
+"Transparent Proxy for filering and modification communictation with AbraFlexi "
 
 #: flexibee.php:109
 msgid "Live Demo"
@@ -432,8 +432,8 @@ msgid "Live Admin Demo"
 msgstr "Live Admin Demo"
 
 #: flexibee.php:140
-msgid "FlexiBee enhancenments"
-msgstr "FlexiBee enhancenments"
+msgid "AbraFlexi enhancenments"
+msgstr "AbraFlexi enhancenments"
 
 #: flexibee.php:141
 msgid ""
@@ -530,8 +530,8 @@ msgid "flexipeehp.php"
 msgstr ""
 
 #: index.php:60
-msgid "PHP Knihovna pro komunikaci s FlexiBee"
-msgstr "PHP Knihovna pro komunikaci s FlexiBee"
+msgid "PHP Knihovna pro komunikaci s AbraFlexi"
+msgstr "PHP Knihovna pro komunikaci s AbraFlexi"
 
 #: index.php:69
 #, fuzzy
@@ -551,7 +551,7 @@ msgid "Flexplorer"
 msgstr "Flexplorer"
 
 #: index.php:76
-msgid "Vývojářský nástroj pro FlexiBee REST API"
+msgid "Vývojářský nástroj pro AbraFlexi REST API"
 msgstr ""
 
 #: index.php:88
@@ -559,8 +559,8 @@ msgid "FlexiProxy"
 msgstr "FlexiProxy"
 
 #: index.php:89
-msgid "FlexiBee modifikátor"
-msgstr "FlexiBee modifikátor"
+msgid "AbraFlexi modifikátor"
+msgstr "AbraFlexi modifikátor"
 
 #: index.php:98
 msgid "Shopping App for Flexibee"
@@ -943,20 +943,20 @@ msgstr ""
 #~ msgstr "Changes API"
 
 #~ msgid ""
-#~ "If it is turned on , FlexiBee records all changes made ​​to the database "
+#~ "If it is turned on , AbraFlexi records all changes made ​​to the database "
 #~ "company in the changelog and provides a list of changes recovered"
 #~ msgstr ""
-#~ "If it is turned on , FlexiBee records all changes made ​​to the database "
+#~ "If it is turned on , AbraFlexi records all changes made ​​to the database "
 #~ "company in the changelog and provides a list of changes recovered"
 
 #~ msgid "Web Hook"
 #~ msgstr "Web Hook"
 
 #~ msgid ""
-#~ "When the database FlexiBee to change the POST HTTP request sent to all "
+#~ "When the database AbraFlexi to change the POST HTTP request sent to all "
 #~ "registered URL"
 #~ msgstr ""
-#~ "When the database FlexiBee to change the POST HTTP request sent to all "
+#~ "When the database AbraFlexi to change the POST HTTP request sent to all "
 #~ "registered URL"
 
 #~ msgid "Data format"
@@ -1307,10 +1307,10 @@ msgstr ""
 #~ msgstr "Build change"
 
 #~ msgid ""
-#~ "When the database FlexiBee is changed the POST HTTP request sent to all "
+#~ "When the database AbraFlexi is changed the POST HTTP request sent to all "
 #~ "registered URL"
 #~ msgstr ""
-#~ "When the database FlexiBee is changed the POST HTTP request sent to all "
+#~ "When the database AbraFlexi is changed the POST HTTP request sent to all "
 #~ "registered URL"
 
 #~ msgid "Response"
@@ -1337,8 +1337,8 @@ msgstr ""
 #~ msgid "Login History"
 #~ msgstr "Login History"
 
-#~ msgid "FlexiBee server URL. ex.: https://localhost:5434"
-#~ msgstr "FlexiBee server URL. ex.: https://localhost:5434"
+#~ msgid "AbraFlexi server URL. ex.: https://localhost:5434"
+#~ msgstr "AbraFlexi server URL. ex.: https://localhost:5434"
 
 #~ msgid "Login name"
 #~ msgstr "Login name"
@@ -1361,8 +1361,8 @@ msgstr ""
 #~ msgid "set up ChangesAPI and add WebHooks"
 #~ msgstr "set up ChangesAPI and add WebHooks"
 
-#~ msgid "Test WebHook script processing changes from FlexiBee answers"
-#~ msgstr "Test WebHook script processing changes from FlexiBee answers"
+#~ msgid "Test WebHook script processing changes from AbraFlexi answers"
+#~ msgstr "Test WebHook script processing changes from AbraFlexi answers"
 
 #~ msgid "Collectively establish and abolish the accounting period"
 #~ msgstr "Collectively establish and abolish the accounting period"
@@ -1370,8 +1370,8 @@ msgstr ""
 #~ msgid "Evidnece distinguish which are inaccessible because of the license"
 #~ msgstr "Evidnece distinguish which are inaccessible because of the license"
 
-#~ msgid "Shown next to json result of the request and page FlexiBee"
-#~ msgstr "Shown next to json result of the request and page FlexiBee"
+#~ msgid "Shown next to json result of the request and page AbraFlexi"
+#~ msgstr "Shown next to json result of the request and page AbraFlexi"
 
 #~ msgid "Edit External ID numbers"
 #~ msgstr "Edit External ID numbers"
@@ -1490,5 +1490,5 @@ msgstr ""
 #~ msgstr "Dotaz nebyl zatím odeslán"
 
 #, fuzzy
-#~ msgid "Uložit do FlexiBee"
-#~ msgstr "FlexiBee"
+#~ msgid "Uložit do AbraFlexi"
+#~ msgstr "AbraFlexi"

@@ -4,25 +4,175 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44f4a2d868ec23cbcbf0d2ada313a126",
+    "content-hash": "8acc20c18105e2c6f86eeaf676589785",
     "packages": [
         {
-            "name": "fpdo/fluentpdo",
-            "version": "dev-master",
+            "name": "deb/abraflexi",
+            "version": "2.6",
+            "dist": {
+                "type": "path",
+                "url": "/usr/share/php/AbraFlexi",
+                "reference": "3fcb93a68fe7323e901b04dfa472411dd4658d68"
+            },
+            "require": {
+                "deb/ease-core": "*",
+                "ext-curl": "*",
+                "ext-json": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AbraFlexi\\": "."
+                }
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Vítězslav Dvořák",
+                    "email": "vitex@arachne.cz"
+                }
+            ],
+            "description": "Library for easy interaction with czech accounting system AbraFlexi.",
+            "homepage": "https://github.com/Spoje-NET/php-abraflexi",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "deb/ease-core",
+            "version": "1.14",
+            "dist": {
+                "type": "path",
+                "url": "/usr/share/php/EaseCore",
+                "reference": "55fc77d71f2cdc779ef727265c0aaf78e01d7d7e"
+            },
+            "require": {
+                "php": ">=7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ease\\": ".",
+                    "Ease\\Logger\\": "Logger"
+                }
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Vítězslav Dvořák",
+                    "email": "info@vitexsoftware.cz",
+                    "homepage": "http://v.s.cz/"
+                }
+            ],
+            "description": "An Core of PHP Framework for Ease of writing Applications (debianized)",
+            "homepage": "http://v.s.cz/ease.php",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "dflydev/dot-access-data",
+            "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/envms/fluentpdo.git",
-                "reference": "ed842a6731b95477976b0271573e885994fb6702"
+                "url": "https://github.com/dflydev/dflydev-dot-access-data.git",
+                "reference": "e04ff030d24a33edc2421bef305e32919dd78fc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/envms/fluentpdo/zipball/ed842a6731b95477976b0271573e885994fb6702",
-                "reference": "ed842a6731b95477976b0271573e885994fb6702",
+                "url": "https://api.github.com/repos/dflydev/dflydev-dot-access-data/zipball/e04ff030d24a33edc2421bef305e32919dd78fc3",
+                "reference": "e04ff030d24a33edc2421bef305e32919dd78fc3",
                 "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.42",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.3",
+                "scrutinizer/ocular": "1.6.0",
+                "squizlabs/php_codesniffer": "^3.5",
+                "vimeo/psalm": "^3.14"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dflydev\\DotAccessData\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dragonfly Development Inc.",
+                    "email": "info@dflydev.com",
+                    "homepage": "http://dflydev.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com",
+                    "homepage": "http://beausimensen.com"
+                },
+                {
+                    "name": "Carlos Frutos",
+                    "email": "carlos@kiwing.it",
+                    "homepage": "https://github.com/cfrutos"
+                },
+                {
+                    "name": "Colin O'Dell",
+                    "email": "colinodell@gmail.com",
+                    "homepage": "https://www.colinodell.com"
+                }
+            ],
+            "description": "Given a deep data structure, access data by dot notation.",
+            "homepage": "https://github.com/dflydev/dflydev-dot-access-data",
+            "keywords": [
+                "access",
+                "data",
+                "dot",
+                "notation"
+            ],
+            "support": {
+                "issues": "https://github.com/dflydev/dflydev-dot-access-data/issues",
+                "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.0"
+            },
+            "time": "2021-01-01T22:08:42+00:00"
+        },
+        {
+            "name": "fpdo/fluentpdo",
+            "version": "v2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/envms/fluentpdo.git",
+                "reference": "90048d9ae637278ccde922f197b11483df3a48ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/envms/fluentpdo/zipball/90048d9ae637278ccde922f197b11483df3a48ea",
+                "reference": "90048d9ae637278ccde922f197b11483df3a48ea",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": "^7.1"
             },
             "require-dev": {
                 "envms/fluent-test": "^1.0",
-                "phpunit/phpunit": "^7.0"
+                "phpunit/phpunit": "^8.0"
             },
             "type": "library",
             "autoload": {
@@ -38,7 +188,7 @@
             "authors": [
                 {
                     "name": "envms",
-                    "homepage": "http://env.ms"
+                    "homepage": "https://env.ms"
                 }
             ],
             "description": "FluentPDO is a quick and light PHP library for rapid query building. It features a smart join builder, which automatically creates table joins.",
@@ -54,45 +204,62 @@
                 "pdo",
                 "query"
             ],
-            "time": "2019-04-27T20:21:50+00:00"
+            "support": {
+                "issues": "https://github.com/envms/fluentpdo/issues",
+                "source": "https://github.com/envms/fluentpdo/tree/v2.2.1"
+            },
+            "time": "2021-02-22T23:26:57+00:00"
         },
         {
             "name": "league/commonmark",
-            "version": "dev-master",
+            "version": "dev-latest",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "7e04f3dd0f6f3cdae966e3a34e132a3a1914afff"
+                "reference": "fc5a673be231c0a42fecc133fd273218a6a95f4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/7e04f3dd0f6f3cdae966e3a34e132a3a1914afff",
-                "reference": "7e04f3dd0f6f3cdae966e3a34e132a3a1914afff",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/fc5a673be231c0a42fecc133fd273218a6a95f4a",
+                "reference": "fc5a673be231c0a42fecc133fd273218a6a95f4a",
                 "shasum": ""
             },
             "require": {
+                "dflydev/dot-access-data": "^3.0",
                 "ext-mbstring": "*",
-                "php": "^7.2.5"
+                "nette/schema": "^1.1",
+                "php": "^7.2.5 || ^8.0",
+                "psr/event-dispatcher": "^1.0",
+                "symfony/polyfill-php80": "^1.15"
             },
             "conflict": {
-                "scrutinizer/ocular": "1.7.*"
+                "scrutinizer/ocular": "1.7.*",
+                "vimeo/psalm": "3.15.0"
             },
             "require-dev": {
                 "cebe/markdown": "~1.0",
-                "commonmark/commonmark.js": "0.29.1",
+                "commonmark/commonmark.js": "0.29.2",
+                "composer/package-versions-deprecated": "^1.8",
                 "erusev/parsedown": "~1.0",
                 "ext-json": "*",
                 "github/gfm": "0.29.0",
                 "michelf/php-markdown": "~1.4",
-                "phpstan/phpstan": "^0.12",
-                "phpunit/phpunit": "^8.5",
+                "phpstan/phpstan": "^0.12.70",
+                "phpunit/phpunit": "^8.5 || ^9.2",
                 "scrutinizer/ocular": "^1.5",
-                "symfony/finder": "^4.2"
+                "symfony/finder": "^5.1",
+                "symfony/yaml": "^2.3 | ^3.0 | ^4.0 | ^5.0",
+                "unleashedtech/php-coding-standard": "^2.5",
+                "vimeo/psalm": "^4.4.1"
             },
+            "suggest": {
+                "symfony/yaml": "v2.3+ required if using the Front Matter extension"
+            },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-latest": "2.0-dev"
                 }
             },
             "autoload": {
@@ -112,7 +279,7 @@
                     "role": "Lead Developer"
                 }
             ],
-            "description": "Highly-extensible PHP Markdown parser which fully supports the CommonMark spec and Github-Flavored Markdown (GFM)",
+            "description": "Highly-extensible PHP Markdown parser which fully supports the CommonMark spec and GitHub-Flavored Markdown (GFM)",
             "homepage": "https://commonmark.thephpleague.com",
             "keywords": [
                 "commonmark",
@@ -124,6 +291,12 @@
                 "md",
                 "parser"
             ],
+            "support": {
+                "docs": "https://commonmark.thephpleague.com/",
+                "issues": "https://github.com/thephpleague/commonmark/issues",
+                "rss": "https://github.com/thephpleague/commonmark/releases.atom",
+                "source": "https://github.com/thephpleague/commonmark"
+            },
             "funding": [
                 {
                     "url": "https://enjoy.gitstore.app/repositories/thephpleague/commonmark",
@@ -150,7 +323,154 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-04T22:18:41+00:00"
+            "time": "2021-05-08T16:19:14+00:00"
+        },
+        {
+            "name": "nette/schema",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/schema.git",
+                "reference": "f5ed39fc96358f922cedfd1e516f0dadf5d2be0d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/schema/zipball/f5ed39fc96358f922cedfd1e516f0dadf5d2be0d",
+                "reference": "f5ed39fc96358f922cedfd1e516f0dadf5d2be0d",
+                "shasum": ""
+            },
+            "require": {
+                "nette/utils": "^3.1.4 || ^4.0",
+                "php": ">=7.1 <8.1"
+            },
+            "require-dev": {
+                "nette/tester": "^2.3 || ^2.4",
+                "phpstan/phpstan-nette": "^0.12",
+                "tracy/tracy": "^2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "📐 Nette Schema: validating data structures against a given Schema.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "config",
+                "nette"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/schema/issues",
+                "source": "https://github.com/nette/schema/tree/v1.2.1"
+            },
+            "time": "2021-03-04T17:51:11+00:00"
+        },
+        {
+            "name": "nette/utils",
+            "version": "v3.2.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/utils.git",
+                "reference": "1706a345b22c8d0f251ac3f1aeaaf31d4f661e53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/utils/zipball/1706a345b22c8d0f251ac3f1aeaaf31d4f661e53",
+                "reference": "1706a345b22c8d0f251ac3f1aeaaf31d4f661e53",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2 <8.1"
+            },
+            "conflict": {
+                "nette/di": "<3.0.6"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "phpstan/phpstan": "^0.12",
+                "tracy/tracy": "^2.3"
+            },
+            "suggest": {
+                "ext-gd": "to use Image",
+                "ext-iconv": "to use Strings::webalize(), toAscii(), chr() and reverse()",
+                "ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
+                "ext-json": "to use Nette\\Utils\\Json",
+                "ext-mbstring": "to use Strings::lower() etc...",
+                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()",
+                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🛠  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "array",
+                "core",
+                "datetime",
+                "images",
+                "json",
+                "nette",
+                "paginator",
+                "password",
+                "slugify",
+                "string",
+                "unicode",
+                "utf-8",
+                "utility",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/utils/issues",
+                "source": "https://github.com/nette/utils/tree/v3.2"
+            },
+            "time": "2021-04-22T16:22:43+00:00"
         },
         {
             "name": "pear/console_getopt",
@@ -197,6 +517,10 @@
                 }
             ],
             "description": "More info available on: http://pear.php.net/package/Console_Getopt",
+            "support": {
+                "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Console_Getopt",
+                "source": "https://github.com/pear/Console_Getopt"
+            },
             "time": "2019-11-20T18:27:48+00:00"
         },
         {
@@ -255,24 +579,29 @@
             ],
             "description": "Class that provides multiple interfaces for sending emails.",
             "homepage": "http://pear.php.net/package/Mail",
+            "support": {
+                "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Mail",
+                "source": "https://github.com/pear/Mail"
+            },
             "time": "2017-04-11T17:27:29+00:00"
         },
         {
             "name": "pear/mail_mime",
-            "version": "1.10.7",
+            "version": "1.10.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/Mail_Mime.git",
-                "reference": "4b4c1f9c2850e9fd646ea6a25f11d4735b36edbd"
+                "reference": "ede6128af4c1474394a65f44bf20358c0bf1977f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/Mail_Mime/zipball/4b4c1f9c2850e9fd646ea6a25f11d4735b36edbd",
-                "reference": "4b4c1f9c2850e9fd646ea6a25f11d4735b36edbd",
+                "url": "https://api.github.com/repos/pear/Mail_Mime/zipball/ede6128af4c1474394a65f44bf20358c0bf1977f",
+                "reference": "ede6128af4c1474394a65f44bf20358c0bf1977f",
                 "shasum": ""
             },
             "require": {
-                "pear/pear-core-minimal": "*"
+                "pear/pear-core-minimal": "*",
+                "php": ">=5.2.0"
             },
             "type": "library",
             "autoload": {
@@ -301,7 +630,11 @@
             ],
             "description": "Mail_Mime provides classes to create MIME messages",
             "homepage": "http://pear.php.net/package/Mail_Mime",
-            "time": "2020-03-01T07:54:36+00:00"
+            "support": {
+                "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Mail_Mime",
+                "source": "https://github.com/pear/Mail_Mime"
+            },
+            "time": "2021-01-17T08:30:22+00:00"
         },
         {
             "name": "pear/pear-core-minimal",
@@ -345,6 +678,10 @@
                 }
             ],
             "description": "Minimal set of PEAR core files to be used as composer dependency",
+            "support": {
+                "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=PEAR",
+                "source": "https://github.com/pear/pear-core-minimal"
+            },
             "time": "2019-11-19T19:00:24+00:00"
         },
         {
@@ -353,20 +690,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/PEAR_Exception.git",
-                "reference": "abf2c21ed0180752c2e38655c7998678131dd05b"
+                "reference": "b14fbe2ddb0b9f94f5b24cf08783d599f776fff0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/PEAR_Exception/zipball/abf2c21ed0180752c2e38655c7998678131dd05b",
-                "reference": "abf2c21ed0180752c2e38655c7998678131dd05b",
+                "url": "https://api.github.com/repos/pear/PEAR_Exception/zipball/b14fbe2ddb0b9f94f5b24cf08783d599f776fff0",
+                "reference": "b14fbe2ddb0b9f94f5b24cf08783d599f776fff0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=4.4.0"
+                "php": ">=5.2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "<6"
+                "phpunit/phpunit": "<9"
             },
+            "default-branch": true,
             "type": "class",
             "extra": {
                 "branch-alias": {
@@ -400,37 +738,42 @@
             "keywords": [
                 "exception"
             ],
-            "time": "2020-04-19T14:25:26+00:00"
+            "support": {
+                "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=PEAR_Exception",
+                "source": "https://github.com/pear/PEAR_Exception"
+            },
+            "time": "2021-03-21T15:43:46+00:00"
         },
         {
-            "name": "spoje.net/flexibee",
+            "name": "psr/event-dispatcher",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Spoje-NET/php-flexibee.git",
-                "reference": "691bd4214af34f1297729b260e775354e6361d48"
+                "url": "https://github.com/php-fig/event-dispatcher.git",
+                "reference": "aa4f89e91c423b516ff226c50dc83f824011c253"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spoje-NET/php-flexibee/zipball/691bd4214af34f1297729b260e775354e6361d48",
-                "reference": "691bd4214af34f1297729b260e775354e6361d48",
+                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/aa4f89e91c423b516ff226c50dc83f824011c253",
+                "reference": "aa4f89e91c423b516ff226c50dc83f824011c253",
                 "shasum": ""
             },
             "require": {
-                "ext-curl": "*",
-                "vitexsoftware/ease-core": ">=0.37"
+                "php": ">=7.2.0"
             },
-            "replace": {
-                "spoje.net/flexipeehp": ">1.32"
+            "suggest": {
+                "fig/event-dispatcher-util": "Provides some useful PSR-14 utilities"
             },
-            "require-dev": {
-                "phing/phing": "*",
-                "phpunit/phpunit": "*"
-            },
+            "default-branch": true,
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "FlexiPeeHP\\": "src/FlexiPeeHP/"
+                    "Psr\\EventDispatcher\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -439,25 +782,117 @@
             ],
             "authors": [
                 {
-                    "name": "Vítězslav Dvořák",
-                    "email": "vitex@arachne.cz"
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Library for easy interaction with czech accounting system FlexiBee.",
-            "time": "2020-05-02T20:51:21+00:00"
+            "description": "Standard interfaces for event handling.",
+            "keywords": [
+                "events",
+                "psr",
+                "psr-14"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/event-dispatcher/tree/master"
+            },
+            "time": "2021-02-08T21:15:39+00:00"
         },
         {
-            "name": "vitexsoftware/ease-core",
-            "version": "dev-master",
+            "name": "symfony/polyfill-php80",
+            "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/VitexSoftware/php-ease-core.git",
-                "reference": "3edd98a3ace6bb38b2d5032837a14392d3bb8236"
+                "url": "https://github.com/symfony/polyfill-php80.git",
+                "reference": "eca0bf41ed421bed1b57c4958bab16aa86b757d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-core/zipball/3edd98a3ace6bb38b2d5032837a14392d3bb8236",
-                "reference": "3edd98a3ace6bb38b2d5032837a14392d3bb8236",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/eca0bf41ed421bed1b57c4958bab16aa86b757d0",
+                "reference": "eca0bf41ed421bed1b57c4958bab16aa86b757d0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.23-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ion Bazan",
+                    "email": "ion.bazan@gmail.com"
+                },
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-02-19T12:13:01+00:00"
+        },
+        {
+            "name": "vitexsoftware/ease-core",
+            "version": "1.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/VitexSoftware/php-ease-core.git",
+                "reference": "cd2ab87958c5ec73511816a42d13e81ea364102e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-core/zipball/cd2ab87958c5ec73511816a42d13e81ea364102e",
+                "reference": "cd2ab87958c5ec73511816a42d13e81ea364102e",
                 "shasum": ""
             },
             "require": {
@@ -469,10 +904,8 @@
                 "vitexsoftware/ease-framework": "*"
             },
             "require-dev": {
-                "jakub-onderka/php-console-highlighter": "*",
-                "jakub-onderka/php-parallel-lint": "*",
-                "php-coveralls/php-coveralls": "*",
-                "phpunit/phpunit": "*"
+                "phpunit/phpunit": "^9",
+                "roave/security-advisories": "dev-latest"
             },
             "type": "library",
             "autoload": {
@@ -483,7 +916,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0-or-later"
+                "MIT"
             ],
             "authors": [
                 {
@@ -494,29 +927,45 @@
             ],
             "description": "An PHP Framework for writing Applications",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2020-04-10T08:17:50+00:00"
+            "support": {
+                "issues": "https://github.com/VitexSoftware/php-ease-core/issues",
+                "source": "https://github.com/VitexSoftware/php-ease-core/tree/1.12"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/VitexSoftware",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-03-02T10:59:13+00:00"
         },
         {
             "name": "vitexsoftware/ease-fluentpdo",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-fluentpdo.git",
-                "reference": "d394157bbda3840857f01bb123e4471d8333bc76"
+                "reference": "dd791f11e7e28cc5a9e706bf93237453dd2c877d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-fluentpdo/zipball/d394157bbda3840857f01bb123e4471d8333bc76",
-                "reference": "d394157bbda3840857f01bb123e4471d8333bc76",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-fluentpdo/zipball/dd791f11e7e28cc5a9e706bf93237453dd2c877d",
+                "reference": "dd791f11e7e28cc5a9e706bf93237453dd2c877d",
                 "shasum": ""
             },
             "require": {
-                "fpdo/fluentpdo": "dev-master",
-                "vitexsoftware/ease-core": "dev-master"
+                "fpdo/fluentpdo": "^2.1",
+                "vitexsoftware/ease-core": "^1.1"
             },
             "conflict": {
                 "vitexsoftware/ease-framework": "*"
             },
+            "require-dev": {
+                "phpunit/phpunit": "^9",
+                "robmorgan/phinx": "^0.12.3",
+                "vlucas/phpdotenv": "^3"
+            },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -524,6 +973,9 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Vitex",
@@ -531,28 +983,39 @@
                 }
             ],
             "description": "SQL/PDO support for Ease Framework based on FluentPDO",
-            "time": "2020-05-04T19:49:32+00:00"
+            "support": {
+                "issues": "https://github.com/VitexSoftware/php-ease-fluentpdo/issues",
+                "source": "https://github.com/VitexSoftware/php-ease-fluentpdo/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/VitexSoftware",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-04-11T09:45:46+00:00"
         },
         {
             "name": "vitexsoftware/ease-html",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-html.git",
-                "reference": "85bf1ec825922bdd8509de8bc8450b6d3ec7ed56"
+                "reference": "d980f432b8283420f8ed91da938cf83ce826b2a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-html/zipball/85bf1ec825922bdd8509de8bc8450b6d3ec7ed56",
-                "reference": "85bf1ec825922bdd8509de8bc8450b6d3ec7ed56",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-html/zipball/d980f432b8283420f8ed91da938cf83ce826b2a8",
+                "reference": "d980f432b8283420f8ed91da938cf83ce826b2a8",
                 "shasum": ""
             },
             "require": {
-                "vitexsoftware/ease-core": "dev-master"
+                "vitexsoftware/ease-core": ">= 1.8"
             },
             "require-dev": {
                 "phpunit/phpunit": "*"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -571,24 +1034,34 @@
                 }
             ],
             "description": "Set of HTML rendering objects",
-            "time": "2020-04-11T19:13:49+00:00"
+            "support": {
+                "issues": "https://github.com/VitexSoftware/php-ease-html/issues",
+                "source": "https://github.com/VitexSoftware/php-ease-html/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/VitexSoftware",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-03-28T18:25:11+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4",
-            "version": "dev-master",
+            "version": "1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-twbootstrap4.git",
-                "reference": "2719e756e6532fbd9bdaf5ccedee5f5f18507796"
+                "reference": "8ca159c923a03d8b5af4e89cc046f22ba1539b65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-twbootstrap4/zipball/2719e756e6532fbd9bdaf5ccedee5f5f18507796",
-                "reference": "2719e756e6532fbd9bdaf5ccedee5f5f18507796",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-twbootstrap4/zipball/8ca159c923a03d8b5af4e89cc046f22ba1539b65",
+                "reference": "8ca159c923a03d8b5af4e89cc046f22ba1539b65",
                 "shasum": ""
             },
             "require": {
-                "vitexsoftware/ease-html": "dev-master"
+                "vitexsoftware/ease-html": ">= 1.25"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8"
@@ -610,7 +1083,11 @@
                 }
             ],
             "description": "Set of Twitter Bootstrap 4 rendering objects",
-            "time": "2020-03-15T19:37:01+00:00"
+            "support": {
+                "issues": "https://github.com/VitexSoftware/php-ease-twbootstrap4/issues",
+                "source": "https://github.com/VitexSoftware/php-ease-twbootstrap4/tree/1.1"
+            },
+            "time": "2020-10-15T23:13:08+00:00"
         },
         {
             "name": "vitexsoftware/ease-twbootstrap4-widgets",
@@ -618,20 +1095,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets.git",
-                "reference": "2d8215b0203f40a99298c3294e903a00e21c9e95"
+                "reference": "c8c5811cf9292628b836a6e1d4cef59e724be62f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VitexSoftware/php-ease-twbootstrap4-widgets/zipball/2d8215b0203f40a99298c3294e903a00e21c9e95",
-                "reference": "2d8215b0203f40a99298c3294e903a00e21c9e95",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-twbootstrap4-widgets/zipball/c8c5811cf9292628b836a6e1d4cef59e724be62f",
+                "reference": "c8c5811cf9292628b836a6e1d4cef59e724be62f",
                 "shasum": ""
             },
             "require": {
-                "vitexsoftware/ease-twbootstrap4": "dev-master"
+                "vitexsoftware/ease-twbootstrap4": "^1.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -651,23 +1129,28 @@
             ],
             "description": "EasePHP framework addons and code snipplets",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2020-04-30T18:05:53+00:00"
+            "support": {
+                "issues": "https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets/issues",
+                "source": "https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets/tree/1.3"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/VitexSoftware",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-03-11T15:15:27+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "vitexsoftware/ease-core": 20,
-        "vitexsoftware/ease-twbootstrap4": 20,
-        "vitexsoftware/ease-twbootstrap4-widgets": 20,
-        "vitexsoftware/ease-fluentpdo": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">= 7.1"
+        "ext-fileinfo": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

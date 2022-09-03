@@ -65,7 +65,7 @@ $oPage->addItem('
                     <img src="img/reference/flexplorer_main.jpeg" alt="Flexplorer">
                     <div class="carousel-caption">
                       <h4><a href="/flexplorer/">FlexPlorer</a></h4>
-                      <p>Developers tool for <a href="http://flexibee.eu/">FlexiBee</a> API/JSON</p>
+                      <p>Developers tool for <a href="http://flexibee.eu/">AbraFlexi</a> API/JSON</p>
                     </div>
                   </div>
                 </div>

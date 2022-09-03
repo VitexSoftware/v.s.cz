@@ -19,37 +19,20 @@ $libMenu = new ui\MainPageMenu();
 //$mainPageMenu->addMenuItem('img/deb-package.png', _('Repozitář'), 'repos.php',
 //    _('Repozitář balíčků pro Debian & Ubuntu'));
 
-$easeLib = $libMenu->addMenuItem('img/ease-framework-logo.png', _('EasePHP'),
-    'ease.php', _('Framework for easy writing of PHP applications'),
-    new \Ease\TWB4\Label('info', \Ease\Atom::$frameworkVersion).new ui\PackagistBadge('VitexSoftware/EaseFramework',
-        'vitexsoftware/ease-framework'));
 
 
-$libMenu->addMenuItem('img/ease-bricks-logo.png', _('EaseBricks'),
-    'https://github.com/VitexSoftware/Ease-PHP-Bricks',
-    _('Common Widgets for EasePHP Framework'),
-    new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/Ease-PHP-Bricks',
-        'vitexsoftware/ease-bricks'));
+$libMenu->addLibraryItem('https://github.com/Spoje-NET/FlexiPeeHP', _('FlexiPeeHP'), _('FlexiBee client library'), 'img/flexipeehp-logo.png' );
+
+$libMenu->addLibraryItem('https://github.com/vitexsoftware/ease-framework', _('EasePHP'), _('Framework for easy writing of PHP applications'),  'img/ease-framework-logo.png' );
+
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/phplib-datamolino', _('PHP Datamolino'), _('support for accounting scanner API'),'img/deb/php-datamolino.png');
 
 
-if (file_exists('/usr/share/icinga-editor/composer.json')) {
-    $composerInfo = json_decode(file_get_contents('/usr/share/icinga-editor/composer.json'));
-    $version      = $composerInfo->version;
-} else {
-    $version = 'n/a';
-}
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/Ease-PHP-Bricks', _('EaseBricks'), _('Common Widgets for EasePHP Framework'), 'img/ease-bricks-logo.png',);
+    
+    
 
-
-$appMenu->addMenuItem('img/icinga_editor-logo.png', _('Icinga Editor'),
-    'http://monitoring.vitexsoftware.cz/', _('Editor Konfigurace monitoringu'),
-    new \Ease\TWB4\Label('info', $version));
-
-
-$libMenu->addMenuItem('img/flexipeehp-logo.png', _('FlexiPeeHP'),
-    _('flexipeehp.php'), _('PHP Knihovna pro komunikaci s FlexiBee'),
-    new \Ease\TWB4\Label('info',
-        \FlexiPeeHP\FlexiBeeRO::$libVersion.' (FlexiBee '.\FlexiPeeHP\EvidenceList::$version.')').new ui\PackagistBadge('Spoje-NET/FlexiPeeHP',
-        'spoje.net/flexipeehp'));
+$appMenu->addMenuItem('Icinga Editor','https://github.com/VitexSoftware/Icinga-Editor/',   'img/icinga_editor-logo.png' , _('Icinga 1x configuration Editor'));
 
 if (file_exists('/usr/share/flexplorer/composer.json')) {
     $composerInfo = json_decode(file_get_contents('/usr/share/flexplorer/composer.json'));
@@ -63,12 +46,9 @@ $libMenu->addMenuItem('img/flexipeehp-bricks-logo.png', _('FlexiPeeHP Bricks'),
         'vitexsoftware/flexipeehp-bricks'));
 
 
-$appMenu->addMenuItem('img/flexplorer-logo.png', _('Flexplorer'),
-    '/flexplorer/', _('Vývojářský nástroj pro FlexiBee REST API'),
-    new \Ease\TWB4\Label('info', $version));
-//$mainPageMenu->addMenuItem('img/flexihubee-logo.png', _('FlexiHUBee'),
-//    'https://www.vitexsoftware.cz/redmine/projects/flexihubee',
-//    _('Webová aplikace pro vzájemnou synchronizaci FlexiBee serverů (zatím neveřejné)'));
+$appMenu->addMenuItem( _('Flexplorer'),'/flexplorer/', 'img/flexplorer-logo.png',
+     _('Developer for FlexiBee REST API'),
+    _('Visit'));
 
 
 if (file_exists('/usr/share/flexiproxy/composer.json')) {
@@ -76,18 +56,17 @@ if (file_exists('/usr/share/flexiproxy/composer.json')) {
     $version      = $composerInfo->version;
 }
 
-$appMenu->addMenuItem('img/flexiproxy-logo.png', _('FlexiProxy'),
-    'https://flexiproxy.vitexsoftware.cz/c/demo', _('FlexiBee modifikátor'),
-    new \Ease\TWB4\Label('info', $version));
+$appMenu->addMenuItem(_('FlexiProxy'), 'https://github.com/VitexSoftware/FlexiProxy','img/flexiproxy-logo.png',
+     _('FlexiBee modifikátor'),_('Visit'));
 
 if (file_exists('/usr/share/shop4flexibee/composer.json')) {
     $composerInfo = json_decode(file_get_contents('/usr/share/shop4flexibee/composer.json'));
     $version      = $composerInfo->version;
 }
 
-$appMenu->addMenuItem('img/shop4flexibee-logo.svg', _('FlexiBee ClientZone'),
-    'https://clientzone.vitexsoftware.cz/clientzone/login.php?email=demo@vitexsoftware.cz&password=demo',
-    _('ClientZone App for FlexiBee'), new \Ease\TWB4\Label('info', $version));
+$appMenu->addMenuItem( _('FlexiBee ClientZone'),'https://clientzone.vitexsoftware.cz/clientzone/login.php?email=demo@vitexsoftware.cz&password=demo', 'img/shop4flexibee-logo.svg',
+    
+    _('ClientZone App for FlexiBee'), _('Visit'));
 
 //$mainPageMenu->addMenuItem('img/tux-server.png', _('Hosting'), 'hosting.php',
 //    _('Specializovaný hosting'));
@@ -117,11 +96,7 @@ $libMenu->addMenuItem('img/php-primaerp-logo.png', _('PrimaERP'),
     new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/php-primaERP',
         'vitexsoftware/primaerp'));
 
-$libMenu->addMenuItem('img/deb/php-datamolino.png', _('Datamolino'),
-    'https://github.com/VitexSoftware/phplib-datamolino',
-    _('Library for interaction with Datamolino API'),
-    new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge('VitexSoftware/php-datamolino',
-        'vitexsoftware/datamolino'));
+
 
 
 $oPage->container->addItem(new \Ease\Html\H1Tag(_('Applications')));

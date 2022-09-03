@@ -1,8 +1,10 @@
 <?php
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+/**
+ * VitexSoftware - Repository contents
+ *
+ * @author     Vitex <vitex@hippy.cz>
+ * @copyright  2012-2021 Vitex@hippy.cz (G)
  */
 
 namespace VSCZ\ui;
@@ -12,97 +14,91 @@ namespace VSCZ\ui;
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
-class Repositor extends \Ease\Html\DivTag
-{
+class Repositor extends \Ease\Html\DivTag {
+
     /**
      * @var array supported distro list 
      */
     public static $distributions = ['bionic' => 'ubuntu', 'buster' => 'debian', 'natty' => 'ubuntu',
         'sid' => 'debian', 'stretch' => 'debian'];
-    public $repodir              = null;
-    public $packages             = [];
-    public $repoUrl              = 'https://repo.vitexsoftware.cz/';
+    public $repodir = null;
+    public $packages = [];
+    public $repoUrl = 'https://repo.vitexsoftware.cz/';
+
+    /**
+     * 
+     * @var \VSCZ\Packages
+     */
+    private $packager;
 
     /**
      * 
      * @param string $repodir
      */
-    public function __construct($repodir)
-    {
+    public function __construct($repodir) {
         parent::__construct();
-
+        $this->packager = new \VSCZ\Packages();
         $this->repodir = $repodir;
         foreach (array_keys(self::$distributions) as $distroname) {
             $this->loadInRelease($distroname);
         }
     }
 
-    public function finalize()
-    {
+    public function finalize() {
         $repostats = new \VSCZ\AccessLog();
         $this->includeJavaScript('js/jquery.tablesorter.min.js');
         $this->addJavaScript('$("#packs").tablesorter();');
 
-
         $packages = self::flatPackageListing($this->packages);
 
         $ptable = new \Ease\Html\TableTag(null,
-            ['class' => 'table table-dark table-striped', 'id' => 'packs']);
+                ['class' => 'table table-dark table-striped', 'id' => 'packs']);
         $ptable->setHeader([_('Package name'), _('Version'), _('Age'), _('Release date'),
             _('Size'),
-            _('Package'), _('Installs'), _('Downloads')],['class'=>'thead-dark']);
+            _('Package'), _('Installs'), _('Downloads')], ['class' => 'thead-dark']);
 
         $this->addJavascript('$(".hinter").popover();', null, true);
         $this->addCss('.hinter { font-weight: bold; font-size: large; }');
 
         foreach ($packages as $pName => $pProps) {
             $packFile = trim($pProps['Filename']);
-            $icon     = 'img/deb/'.$pName.'.png';
-            if (!file_exists($icon)) {
-                $icon     = 'img/deb/'.$pName.'.svg';
-            }
-            if (!file_exists($icon)) {
-                $icon = 'img/deb-package.png';
-            }
+            $icon = \VSCZ\Deb::getIcon($pName);
+            $installs = 0; //$repostats->getPackageInstalls($pName);
 
-            $installs = $repostats->getPackageInstalls($pName);
+            $downloads = 0; //$repostats->getPackageDownloads($pName);
 
-            $downloads = $repostats->getPackageDownloads($pName);
+            $fileMtime = new \DateTime($pProps['fileMtime']);
+            $incTime = $fileMtime->format("Y m. d.");
+            $packAge = WebPage::secondsToTime(doubleval(time() - $fileMtime->getTimestamp()));
 
-            $fileMtime = $pProps['fileMtime'];
-            $incTime   = date("Y m. d.", $fileMtime);
-            $packAge   = WebPage::secondsToTime(doubleval(time() - $fileMtime));
-            
             $pathParts = explode('/', $pProps['Filename']);
-            $packFileBase = str_replace($pathParts[0].'/'.$pathParts[1], '', $pProps['Filename']);
-            
+            $packFileBase = str_replace($pathParts[0] . '/' . $pathParts[1], '', $pProps['Filename']);
+
             $pkgs = [];
-            
+
             foreach ($pProps['Distro'] as $distro) {
-                $pkgs[$this->repoUrl . 'pool/'.$distro.$packFileBase] = $distro;
+                $pkgs[$this->repoUrl . 'pool/' . $distro . $packFileBase] = $distro;
             }
 
-            $package = new \Ease\TWB4\DropdownButton( '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'. _('Download'), 'success', $pkgs );
-            
-            
-            $pInfo = new \Ease\Html\ATag('package.php?package='.$pName.'#',
-                $pName,
-                ['tabindex' => 0, 'class' => 'hinter', 'data-toggle' => 'popover',
+            $package = new \Ease\TWB4\DropdownButton('<img style="width: 18px;" src="img/deb-package.png">&nbsp;' . _('Download'), 'success', $pkgs);
+
+            $pInfo = new \Ease\Html\ATag('package.php?package=' . $pName . '#',
+                    $pName,
+                    ['tabindex' => 0, 'class' => 'hinter', 'data-toggle' => 'popover',
                 'data-trigger' => 'hover',
                 'data-content' => $pProps['Description']]);
-            $ptable->addRowColumns(['<img class="debicon" src="'.$icon.'"> '.$pInfo,
+            $ptable->addRowColumns(['<img class="debicon" src="' . $icon . '"> ' . $pInfo,
                 $pProps['Version'],
                 $packAge, $incTime, \Ease\Functions::humanFilesize($pProps['Size']),
                 $package, $installs, $downloads]);
         }
 
-        $ptable->setTagProperty('style','background-color:rgba(0, 0, 0, 0.5); color: white;');
-        
+        $ptable->setTagProperty('style', 'background-color:rgba(0, 0, 0, 0.5); color: white;');
+
         $this->addItem($ptable);
     }
 
-    public static function htmlize($tableData)
-    {
+    public static function htmlize($tableData) {
         $htmlized = [];
         foreach ($tableData as $packageRow) {
             $htmlized[] = self::htmlizeRow($packageRow);
@@ -110,15 +106,13 @@ class Repositor extends \Ease\Html\DivTag
         return $htmlized;
     }
 
-    public static function htmlizeRow($packageData)
-    {
+    public static function htmlizeRow($packageData) {
         unset($packageData['Maintainer']);
         $packageData['Depends'];
         return $packageData;
     }
 
-    public static function flatPackageListing($packagesTree)
-    {
+    public static function flatPackageListing($packagesTree) {
         $packages = [];
         foreach ($packagesTree as $distro => $inDistro) {
             foreach ($inDistro as $component => $inComponent) {
@@ -127,9 +121,9 @@ class Repositor extends \Ease\Html\DivTag
                         if (!array_key_exists($packageName, $packages)) {
                             $packages[$packageName] = $packageInfo;
                         }
-                        $packages[$packageName]['Distro'][$distro]       = $distro;
+                        $packages[$packageName]['Distro'][$distro] = $distro;
                         $packages[$packageName]['Component'][$component] = $component;
-                        $packages[$packageName]['Arch'][$arch]           = $arch;
+                        $packages[$packageName]['Arch'][$arch] = $arch;
                     }
                 }
             }
@@ -142,29 +136,12 @@ class Repositor extends \Ease\Html\DivTag
      * 
      * @param string $distroname
      */
-    function loadInRelease($distroname)
-    {
-        $inReleaseFile       = $this->repodir.'/dists/'.$distroname.'/InRelease';
-        $inRelease           = file($inReleaseFile);
-        $inReleaseProperties = [];
-        foreach ($inRelease as $inReleaseLine) {
-            if (strstr($inReleaseLine, ':')) {
-                list($key, $value) = explode(':', trim($inReleaseLine));
-                if ($value) {
-                    $inReleaseProperties[$key] = trim($value);
-                }
+    function loadInRelease($distroname) {
+        $candidates = $this->packager->listingQuery()->where('Distribution', $distroname);
+        if ($candidates->count()) {
+            foreach ($candidates as $candidat) {
+                $this->packages[$distroname][$candidat['Suite']][$candidat['Architecture']][$candidat['Name']] = $candidat;
             }
-        }
-
-        foreach (explode(' ', trim($inReleaseProperties['Components'])) as $component) {
-            $componentDir = $this->repodir.'/dists/'.$distroname.'/'.$component;
-            $d            = dir($componentDir);
-            while (false !== ($arch         = $d->read())) {
-                if ($arch[0] != '.') {
-                    $this->packages[$distroname][$component][$arch] = $this->loadPackages($componentDir.'/'.$arch);
-                }
-            }
-            $d->close();
         }
     }
 
@@ -174,64 +151,11 @@ class Repositor extends \Ease\Html\DivTag
      * 
      * @return array packages in Distro/Arch
      */
-    public function loadPackages($distroArchDir)
-    {
+    public function loadPackages($distroArchDir) {
         $packages = [];
-        $pName    = null;
-
-        if (file_exists($distroArchDir.'/Packages')) {
-            $handle   = fopen($distroArchDir.'/Packages', "r");
-            $position = 0;
-            if ($handle) {
-                while (($buffer = fgets($handle, 4096)) !== false) {
-                    if (!strstr($buffer, ':')) {
-                        continue;
-                    }
-                    list( $key, $value ) = explode(':', trim($buffer));
-                    switch ($key) {
-                        case 'Package':
-                            $pName                               = trim($value);
-                            $position++;
-                            break;
-                        case 'Description':
-                            $packages[$pName][$key]              = trim($value);
-                            $packages[$pName]['LongDescription'] = '';
-                            while (($buffer                              = fgets($handle,
-                            4096)) !== false) {
-                                if (strlen(trim($buffer))) {
-                                    if (strstr($buffer, ': ')) {
-                                        list( $key, $value ) = explode(':',
-                                            trim($buffer));
-                                        $packages[$pName][$key] = trim($value);
-                                        break;
-                                    } else {
-                                        $packages[$pName]['LongDescription'] .= $buffer;
-                                        $packages[$pName]['LongDescription'] = trim($packages[$pName]['LongDescription']);
-                                    }
-                                } else {
-                                    break;
-                                }
-                            }
-                            break;
-                        default:
-                            $packages[$pName][$key] = trim($value);
-                            break;
-                    }
-                    $packages[$pName]['Name'] = $pName;
-                    if (isset($packages[$pName]['Filename']) && file_exists($this->repodir.'/'.$packages[$pName]['Filename'])) {
-                        $packages[$pName]['fileMtime'] = filemtime($this->repodir.'/'.$packages[$pName]['Filename'])
-                            + $position;
-                    } else {
-                        $packages[$pName]['fileMtime'] = time();
-                    }
-                }
-                if (!feof($handle)) {
-                    echo "Error: unexpected fgets() fail\n";
-                }
-                fclose($handle);
-            }
-        }
+        $pName = null;
 
         return $packages;
     }
+
 }

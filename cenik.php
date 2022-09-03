@@ -1,12 +1,12 @@
 <?php
 
 /**
- * VitexSoftware - titulní strana
+ * VitexSoftware - Pricelist
  * 
  * @package    VS
  * @subpackage WebUI
  * @author     Vitex <vitex@hippy.cz>
- * @copyright  2012 Vitex@hippy.cz (G)
+ * @copyright  2020 Vitex@hippy.cz (G)
  */
 require_once 'includes/VSInit.php';
 

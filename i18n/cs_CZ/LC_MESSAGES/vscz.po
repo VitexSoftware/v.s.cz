@@ -61,7 +61,7 @@ msgid "flexipeehp.php"
 msgstr ""
 
 #: attic.php:49
-msgid "PHP Knihovna pro komunikaci s FlexiBee"
+msgid "PHP Knihovna pro komunikaci s AbraFlexi"
 msgstr ""
 
 #: attic.php:59
@@ -81,7 +81,7 @@ msgid "Flexplorer"
 msgstr "Flexplorer"
 
 #: attic.php:67 index.php:63
-msgid "Vývojářský nástroj pro FlexiBee REST API"
+msgid "Vývojářský nástroj pro AbraFlexi REST API"
 msgstr ""
 
 #: attic.php:79 index.php:75
@@ -89,18 +89,18 @@ msgid "FlexiProxy"
 msgstr "FlexiProxy"
 
 #: attic.php:80 index.php:76
-msgid "FlexiBee modifikátor"
+msgid "AbraFlexi modifikátor"
 msgstr ""
 
 #: attic.php:88 index.php:84
-msgid "FlexiBee ClientZone"
-msgstr "Klientská zóna FlexiBee"
+msgid "AbraFlexi ClientZone"
+msgstr "Klientská zóna AbraFlexi"
 
 #: attic.php:90 index.php:86
 #, fuzzy
 #| msgid "Shopping App for Flexibee"
-msgid "ClientZone App for FlexiBee"
-msgstr "Nákupní aplikace pro FlexiBee"
+msgid "ClientZone App for AbraFlexi"
+msgstr "Nákupní aplikace pro AbraFlexi"
 
 #: attic.php:96 index.php:41
 msgid "IPEX B2B"
@@ -165,8 +165,8 @@ msgid "Debian Repository"
 msgstr "Deb Repozitář"
 
 #: classes/ui/MainMenu.php:45 flexibee.php:18 index.php:36
-msgid "FlexiBee"
-msgstr "FlexiBee"
+msgid "AbraFlexi"
+msgstr "AbraFlexi"
 
 #: classes/ui/MainMenu.php:50
 msgid "Old projects"
@@ -524,8 +524,8 @@ msgid "Latest change"
 msgstr "Poslední změna"
 
 #: flexibee.php:26
-msgid "Go to FlexiBee site"
-msgstr "Jít na stránky FlexiBee"
+msgid "Go to AbraFlexi site"
+msgstr "Jít na stránky AbraFlexi"
 
 #: flexibee.php:28
 msgid ""
@@ -534,8 +534,8 @@ msgid ""
 msgstr ""
 
 #: flexibee.php:77
-msgid "FlexiBee enhancenments"
-msgstr "Rozšíření FlexiBee"
+msgid "AbraFlexi enhancenments"
+msgstr "Rozšíření AbraFlexi"
 
 #: flexibee.php:78
 msgid ""
@@ -544,8 +544,8 @@ msgid ""
 msgstr ""
 
 #: flexibee.php:84
-msgid "FlexiBee Server"
-msgstr "FlexiBee server"
+msgid "AbraFlexi Server"
+msgstr "AbraFlexi server"
 
 #: flexibee.php:86
 msgid ""
@@ -560,8 +560,8 @@ msgstr "Více informací"
 
 #: flexibee.php:94
 #, fuzzy
-msgid "FlexiBee server backup"
-msgstr "FlexiBee servr URL. např.: https://localhost:5434"
+msgid "AbraFlexi server backup"
+msgstr "AbraFlexi servr URL. např.: https://localhost:5434"
 
 #: flexibee.php:94
 msgid "Backup"
@@ -576,7 +576,7 @@ msgid "Testing Tools"
 msgstr ""
 
 #: flexibee.php:102
-msgid "Set of commandline tools related to testing FlexiBee functionality"
+msgid "Set of commandline tools related to testing AbraFlexi functionality"
 msgstr ""
 
 #: flexibee.php:109
@@ -585,18 +585,18 @@ msgstr "Monitoring"
 
 #: flexibee.php:111
 msgid ""
-"Senzory pro sledování stavu FlexiBee. Použitelné v monitorovacích systémech "
+"Senzory pro sledování stavu AbraFlexi. Použitelné v monitorovacích systémech "
 "Nagios/Icinga."
 msgstr ""
 
 #: flexibee.php:120
 #, fuzzy
-#| msgid "FlexiBee"
-msgid "FlexiBee Digest"
-msgstr "FlexiBee"
+#| msgid "AbraFlexi"
+msgid "AbraFlexi Digest"
+msgstr "AbraFlexi"
 
 #: flexibee.php:122
-msgid "FlexiBee company status digest every  day, week, month,year or alltime"
+msgid "AbraFlexi company status digest every  day, week, month,year or alltime"
 msgstr ""
 
 #: flexibee.php:133
@@ -607,7 +607,7 @@ msgstr "Flexplorer"
 
 #: flexibee.php:135
 msgid ""
-"Vývojářský nástroj a editor pro FlexiBee API. Napsaný s využitím knihovny "
+"Vývojářský nástroj a editor pro AbraFlexi API. Napsaný s využitím knihovny "
 "FlexiPeeHP:"
 msgstr ""
 
@@ -616,8 +616,8 @@ msgid "See in action"
 msgstr "Ukaž v akci"
 
 #: flexibee.php:147
-msgid "FlexiBee Reminder"
-msgstr "FlexiBee upomínač"
+msgid "AbraFlexi Reminder"
+msgstr "AbraFlexi upomínač"
 
 #: flexibee.php:148
 msgid ""
@@ -625,8 +625,8 @@ msgid ""
 msgstr ""
 
 #: flexibee.php:157
-msgid "FlexiBee Matcher"
-msgstr "FlexiBee párovač"
+msgid "AbraFlexi Matcher"
+msgstr "AbraFlexi párovač"
 
 #: flexibee.php:158
 msgid "Match invoices"
@@ -634,8 +634,8 @@ msgstr ""
 
 #: flexibee.php:170
 msgid ""
-"Transparent Proxy for filering and modification communictation with FlexiBee "
-msgstr "Transparentní proxy pro filtrování a modifikaci komunikace s FlexiBee"
+"Transparent Proxy for filering and modification communictation with AbraFlexi "
+msgstr "Transparentní proxy pro filtrování a modifikaci komunikace s AbraFlexi"
 
 #: flexibee.php:174
 msgid "Live Demo"
@@ -739,7 +739,7 @@ msgid "Twitter Bootstrap 4 support for Ease Framework"
 msgstr "Twitter Bootstrap pro Debian"
 
 #: index.php:34
-msgid "Ease Twbootstrap4 FlexiBee widgets "
+msgid "Ease Twbootstrap4 AbraFlexi widgets "
 msgstr ""
 
 #: index.php:34
@@ -759,41 +759,41 @@ msgid "FluentPDO support for Ease Framework"
 msgstr "Sdílené widgety pro EasePHP Framework"
 
 #: index.php:36
-msgid "FlexiBee client library"
-msgstr "Klientská knihovna pro FlexiBee"
+msgid "AbraFlexi client library"
+msgstr "Klientská knihovna pro AbraFlexi"
 
 #: index.php:37
 #, fuzzy
 #| msgid "FlexiPeeHP Bricks"
-msgid "FlexiBee Bricks"
+msgid "AbraFlexi Bricks"
 msgstr "FlexiPeeHP Bricks"
 
 #: index.php:37
-msgid "Addons for FlexiBee PHP apps"
+msgid "Addons for AbraFlexi PHP apps"
 msgstr ""
 
 #: index.php:38
-msgid "Bootstrap 3 FlexiBee widgets"
+msgid "Bootstrap 3 AbraFlexi widgets"
 msgstr ""
 
 #: index.php:38
-msgid "Several Bootstrap3 Widgets for FlexiBee"
+msgid "Several Bootstrap3 Widgets for AbraFlexi"
 msgstr ""
 
 #: index.php:39
-msgid "Bootstrap 4 FlexiBee widgets"
+msgid "Bootstrap 4 AbraFlexi widgets"
 msgstr ""
 
 #: index.php:39
-msgid "Several Bootstrap4 Widgets for FlexiBee"
+msgid "Several Bootstrap4 Widgets for AbraFlexi"
 msgstr ""
 
 #: index.php:40
-msgid "FlexiBee datables"
-msgstr "FlexiBee datagrid"
+msgid "AbraFlexi datables"
+msgstr "AbraFlexi datagrid"
 
 #: index.php:40
-msgid "Show FlexiBee data in Datatables widget"
+msgid "Show AbraFlexi data in Datatables widget"
 msgstr ""
 
 #: index.php:42
@@ -1102,7 +1102,7 @@ msgstr ""
 #~ msgid ""
 #~ "Solution for saving all flexibee changes into git repository with json "
 #~ "files in"
-#~ msgstr "Řešení pro ukládání všech změn FlexiBee do souborů v GIT repozitáři"
+#~ msgstr "Řešení pro ukládání všech změn AbraFlexi do souborů v GIT repozitáři"
 
 #~ msgid ""
 #~ "Basic app for order pricelist items and reaction after incoming payment"
@@ -1256,20 +1256,20 @@ msgstr ""
 #~ msgstr "API Změn"
 
 #~ msgid ""
-#~ "If it is turned on , FlexiBee records all changes made ​​to the database "
+#~ "If it is turned on , AbraFlexi records all changes made ​​to the database "
 #~ "company in the changelog and provides a list of changes recovered"
 #~ msgstr ""
-#~ "Je-li to zapnuto, FlexiBee zaznamenává všechny změny provedené v databázi "
+#~ "Je-li to zapnuto, AbraFlexi zaznamenává všechny změny provedené v databázi "
 #~ "firmy do changelogu a umožňuje seznam změn zpětně získat."
 
 #~ msgid "Web Hook"
 #~ msgstr "Web Hook"
 
 #~ msgid ""
-#~ "When the database FlexiBee to change the POST HTTP request sent to all "
+#~ "When the database AbraFlexi to change the POST HTTP request sent to all "
 #~ "registered URL"
 #~ msgstr ""
-#~ "dyž dojde v databázi FlexiBee ke změně, je odeslán POST HTTP request na "
+#~ "dyž dojde v databázi AbraFlexi ke změně, je odeslán POST HTTP request na "
 #~ "všechna zaregistrovaná URL"
 
 #~ msgid "Data format"
@@ -1635,10 +1635,10 @@ msgstr ""
 #~ msgstr "Zvol registrovaný"
 
 #~ msgid ""
-#~ "When the database FlexiBee is changed the POST HTTP request sent to all "
+#~ "When the database AbraFlexi is changed the POST HTTP request sent to all "
 #~ "registered URL"
 #~ msgstr ""
-#~ "Když dojde v databázi FlexiBee ke změně, je odeslán POST HTTP request na "
+#~ "Když dojde v databázi AbraFlexi ke změně, je odeslán POST HTTP request na "
 #~ "všechna zaregistrovaná URL"
 
 #~ msgid "Response"
@@ -1683,8 +1683,8 @@ msgstr ""
 #~ msgid "set up ChangesAPI and add WebHooks"
 #~ msgstr "Nastavovat ChangesAPI a přidávat WebHooks"
 
-#~ msgid "Test WebHook script processing changes from FlexiBee answers"
-#~ msgstr "Test odpovědi WebHook skriptu zpracovávajícího změny z FlexiBee"
+#~ msgid "Test WebHook script processing changes from AbraFlexi answers"
+#~ msgstr "Test odpovědi WebHook skriptu zpracovávajícího změny z AbraFlexi"
 
 #~ msgid "Collectively establish and abolish the accounting period"
 #~ msgstr "Hromadně zakládat a rušit účetní období"
@@ -1692,8 +1692,8 @@ msgstr ""
 #~ msgid "Evidnece distinguish which are inaccessible because of the license"
 #~ msgstr "Rozlišit evidnece které jsou z důvodu licence nedostupné"
 
-#~ msgid "Shown next to json result of the request and page FlexiBee"
-#~ msgstr "Zobrazovat vedle json výsledku požadavku i stránku z FlexiBee"
+#~ msgid "Shown next to json result of the request and page AbraFlexi"
+#~ msgstr "Zobrazovat vedle json výsledku požadavku i stránku z AbraFlexi"
 
 #~ msgid "Edit External ID numbers"
 #~ msgstr "Upravovat Externí ID záznamů"
@@ -1807,5 +1807,5 @@ msgstr ""
 #~ msgstr "Dotaz nebyl zatím odeslán"
 
 #, fuzzy
-#~ msgid "Uložit do FlexiBee"
-#~ msgstr "FlexiBee"
+#~ msgid "Uložit do AbraFlexi"
+#~ msgstr "AbraFlexi"

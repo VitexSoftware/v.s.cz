@@ -19,26 +19,26 @@
         }
     },
     "require": {
-        "php": ">= 7.1",
+        "ext-fileinfo": "*",
         "league/commonmark": "*",
-        "spoje.net/flexibee": "*",
-        "vitexsoftware/ease-core": "dev-master",
-        "vitexsoftware/ease-twbootstrap4": "dev-master",
-        "vitexsoftware/ease-twbootstrap4-widgets": "dev-master",
-        "vitexsoftware/ease-fluentpdo": "dev-master"
+        "deb/abraflexi": "*",
+        "vitexsoftware/ease-core": "*",
+        "vitexsoftware/ease-twbootstrap4": "*",
+        "vitexsoftware/ease-twbootstrap4-widgets": "*",
+        "vitexsoftware/ease-fluentpdo": "*"
 
     },
     "repositories": [
         {
             "type": "path",
-            "url": "/usr/share/php/Ease",
+            "url": "/usr/share/php/EaseCore",
             "options": {
                 "symlink": true
             }
         },
         {
             "type": "path",
-            "url": "/usr/share/php/FlexiPeeHP",
+            "url": "/usr/share/php/AbraFlexi",
             "options": {
                 "symlink": true
             }

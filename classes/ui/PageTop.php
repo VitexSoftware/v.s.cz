@@ -35,7 +35,7 @@ class PageTop extends \Ease\Html\DivTag
      */
     function finalize()
     {
-        $this->addItem(new MainMenu('menu', 'Vitex Software'));
+        $this->addItem(new MainMenu('menu', new \Ease\Html\ATag('https://vitexsoftware.cz/','Vitex Software')));
     }
 
 }

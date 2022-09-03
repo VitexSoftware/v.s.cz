@@ -8,22 +8,22 @@ use VSCZ\ui\PageTop;
 use VSCZ\ui\SlideImage;
 
 /**
- * VitexSoftware FlexiBee
+ * VitexSoftware AbraFlexi
  *
  * @author     Vitex <vitex@hippy.cz>
  * @copyright  2017-2018 vitex@hippy.cz (G)
  */
 require_once 'includes/VSInit.php';
 
-$oPage->addItem(new PageTop(_('FlexiBee')));
+$oPage->addItem(new PageTop(_('AbraFlexi')));
 $oPage->container = $oPage->addItem(new \Ease\TWB4\Container());
 
 
 
 $oPage->container->addItem(new \Ease\Html\ATag('https://flexibee.eu/',
-        new \Ease\Html\ImgTag('img/abra-flexibee.png', 'Abra FlexiBee',
+        new \Ease\Html\ImgTag('img/abra-flexibee.png', 'Abra AbraFlexi',
             ['class' => 'img-fluid', 'style' => 'margin: 10px']),
-        ['title' => _('Go to FlexiBee site')]));
+        ['title' => _('Go to AbraFlexi site')]));
 
 $oPage->container->addItem(new \Ease\Html\DivTag('<center>'._('Účetní a ekonomický systém pro menší firmy a živnostníky s bohatými možnostmi integrace.').'</center>',
         ['class' => 'jumbotron']));
@@ -36,7 +36,7 @@ $oPage->container->addItem(new \Ease\Html\DivTag('<center>'._('Účetní a ekono
 //$column2 = $productRow->addColumn(4);
 //
 //
-//$column2->addItem(new \Ease\Html\H3Tag(_('FlexiBee Git History')));
+//$column2->addItem(new \Ease\Html\H3Tag(_('AbraFlexi Git History')));
 //$column2->addItem(new \Ease\Html\DivTag(_('Solution for saving all flexibee changes into git repository with json files in'),
 //    ['style' => 'margin: 5px;']));
 //
@@ -46,9 +46,9 @@ $oPage->container->addItem(new \Ease\Html\DivTag('<center>'._('Účetní a ekono
 //
 //$column3 = $productRow->addColumn(4);
 //
-//$column3->addItem(new \Ease\Html\H3Tag(_('FlexiBee ClientZone')));
+//$column3->addItem(new \Ease\Html\H3Tag(_('AbraFlexi ClientZone')));
 //$column3->addItem(new \Ease\Html\ImgTag('img/shop4flexibee-logo.svg',
-//    _('FlexiBee ClientZone'), ['class' => 'img-responsive']));
+//    _('AbraFlexi ClientZone'), ['class' => 'img-responsive']));
 //$column3->addItem(new \Ease\Html\DivTag(_('Basic app for order pricelist items and reaction after incoming payment'),
 //    ['style' => 'margin: 5px;']));
 //
@@ -66,7 +66,7 @@ $oPage->container->addItem(new \Ease\Html\DivTag('<center>'._('Účetní a ekono
 //        ['style' => 'height: 30px;']), ' ', _('Live Admin Demo').' »'],
 //    'success btn-lg'));
 //
-//$column3->addItem(new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/FlexiBee-ClientZone',
+//$column3->addItem(new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/AbraFlexi-ClientZone',
 //    '<i class = "fa fa-github"></i> '._('Source codes').' »', 'info'));
 //
 
@@ -74,24 +74,24 @@ $oPage->container->addItem(new \Ease\Html\DivTag('<center>'._('Účetní a ekono
 
 
 
-$oPage->container->addItem(new \Ease\Html\H2Tag(_('FlexiBee enhancenments')));
+$oPage->container->addItem(new \Ease\Html\H2Tag(_('AbraFlexi enhancenments')));
 $oPage->container->addItem(new \Ease\Html\DivTag(_('Díky několikaleté praxi s tímto systémem vám přinášíme tyto naše vylepšení, integrace a nástroje').':'));
 //$oPage->container->addItem($productRow);
 
 $flexiCarousel = new \Ease\TWB4\Carousel(true, true, true, ['id' => 'FlexiCarousel']);
 
 $flexiCarousel->addSlide(new SlideImage('img/deb/flexibee-server.png',
-        'FlexiBee server'), _('FlexiBee Server'),
+        'AbraFlexi server'), _('AbraFlexi Server'),
     [
         new \Ease\Html\DivTag(_('Abra poskytuje pouze instalační balíčkek grafického klienta pro desktop a nebo klienta se serverem. Kdo si ale nechce na server instalovat nepotřebné grafické knihovny, ten si nainstaluje náš balíček.'),
             ['style' => 'margin: 5px;']), new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/flexibee-server-deb',
             [new \Ease\Html\ImgTag('img/abra-flexibee-square.png',
-                'FlexiBee logo', ['style' => 'height: 30px;']), ' ', _('More informations').' »'],
+                'AbraFlexi logo', ['style' => 'height: 30px;']), ' ', _('More informations').' »'],
             'success btn-lg')]);
 
 
 $flexiCarousel->addSlide(new SlideImage('img/deb/flexibee-server-backup.png',
-        _('FlexiBee server backup')), _('Backup'),
+        _('AbraFlexi server backup')), _('Backup'),
     [new \Ease\Html\DivTag(_('Snadno nastavitelná utilita pro každodení zálohování vašich účetních dat'),
             ['style' => 'margin: 5px;']), new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/flexibee-server-deb',
             _('More informations').' »', 'success btn-lg')]);
@@ -99,8 +99,8 @@ $flexiCarousel->addSlide(new SlideImage('img/deb/flexibee-server-backup.png',
 
 $flexiCarousel->addSlide(new SlideImage('img/deb/flexibee-testing-tools.png',
         _("Testing Tools")), _("Testing Tools"),
-    [new \Ease\Html\DivTag(_('Set of commandline tools related to testing FlexiBee functionality'),
-            ['style' => 'margin: 5px;']), new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/FlexiBee-TestingTools',
+    [new \Ease\Html\DivTag(_('Set of commandline tools related to testing AbraFlexi functionality'),
+            ['style' => 'margin: 5px;']), new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/AbraFlexi-TestingTools',
             '<i class = "fa fa-github"></i> '._('Source codes').' »', 'info')]);
 
 
@@ -108,7 +108,7 @@ $flexiCarousel->addSlide(new SlideImage('img/deb/flexibee-testing-tools.png',
 $flexiCarousel->addSlide(new SlideImage('img/deb/monitoring-plugins-flexibee.png',
         _('Monitoring')), _('Monitoring'),
     [
-        new \Ease\Html\DivTag(_('Senzory pro sledování stavu FlexiBee. Použitelné v monitorovacích systémech Nagios/Icinga.'),
+        new \Ease\Html\DivTag(_('Senzory pro sledování stavu AbraFlexi. Použitelné v monitorovacích systémech Nagios/Icinga.'),
             ['style' => 'margin: 5px;'])
         ,
         new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/monitoring-plugins-flexibee',
@@ -117,12 +117,12 @@ $flexiCarousel->addSlide(new SlideImage('img/deb/monitoring-plugins-flexibee.png
 );
 
 $flexiCarousel->addSlide(new SlideImage('img/deb/flexibee-digest.png',
-        _('FlexiBee Digest')), _('FlexiBee Digest'),
+        _('AbraFlexi Digest')), _('AbraFlexi Digest'),
     [
-        new \Ease\Html\DivTag(_('FlexiBee company status digest every  day, week, month,year or alltime'),
+        new \Ease\Html\DivTag(_('AbraFlexi company status digest every  day, week, month,year or alltime'),
             ['style' => 'margin: 5px;'])
         ,
-        new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/FlexiBee-Digest',
+        new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/AbraFlexi-Digest',
             '<i class = "fa fa-github"></i> '._('Source codes').' »', 'info')
     ]
 );
@@ -132,7 +132,7 @@ $flexiCarousel->addSlide(new SlideImage('img/deb/flexibee-digest.png',
 $flexiCarousel->addSlide(new SlideImage('img/deb/flexplorer.png',
         _('FlexPlorer')), _('FlexPlorer'),
     [
-        new \Ease\Html\DivTag(_('Vývojářský nástroj a editor pro FlexiBee API. Napsaný s využitím knihovny FlexiPeeHP:'),
+        new \Ease\Html\DivTag(_('Vývojářský nástroj a editor pro AbraFlexi API. Napsaný s využitím knihovny FlexiPeeHP:'),
             ['style' => 'margin: 5px;']),
         new \Ease\TWB4\LinkButton('https://flexplorer.vitexsoftware.cz/',
             [new \Ease\Html\ImgTag('img/flexplorer-logo.png', 'Flexplorer logo',
@@ -144,21 +144,21 @@ $flexiCarousel->addSlide(new SlideImage('img/deb/flexplorer.png',
 );
 
 $flexiCarousel->addSlide(new SlideImage('img/deb/php-flexibee-reminder.png',
-        _('FlexiBee Reminder')), _('FlexiBee Reminder'),
+        _('AbraFlexi Reminder')), _('AbraFlexi Reminder'),
     [new \Ease\Html\DivTag(_('Reminds your customers by email with invoices in attachment as pdf and isdoc')),
         new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/php-flexibee-reminder',
             [new \Ease\Html\ImgTag('img/deb/php-flexibee-reminder.png',
-                'FlexiBee Reminder', ['style' => 'height: 30px;']), ' ', _('More informations').' »'],
+                'AbraFlexi Reminder', ['style' => 'height: 30px;']), ' ', _('More informations').' »'],
             'success btn-lg')
     ]
 );
 
 $flexiCarousel->addSlide(new SlideImage('img/deb/php-flexibee-matcher.png',
-        _('FlexiBee Matcher')), _('FlexiBee Matcher'),
+        _('AbraFlexi Matcher')), _('AbraFlexi Matcher'),
     [new \Ease\Html\DivTag(_('Match invoices')),
         new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/php-flexibee-matcher',
             [new \Ease\Html\ImgTag('img/deb/php-flexibee-matcher.png',
-                'FlexiBee Matcher', ['style' => 'height: 30px;']), ' ', _('More informations').' »'],
+                'AbraFlexi Matcher', ['style' => 'height: 30px;']), ' ', _('More informations').' »'],
             'success btn-lg')
     ]
 );
@@ -167,7 +167,7 @@ $flexiCarousel->addSlide(new SlideImage('img/deb/php-flexibee-matcher.png',
 $flexiCarousel->addSlide(new SlideImage('img/flexiproxy-logo.png',
         'FlexiProXY'), 'FlexiProXY',
     [
-        new \Ease\Html\DivTag(_('Transparent Proxy for filering and modification communictation with FlexiBee '),
+        new \Ease\Html\DivTag(_('Transparent Proxy for filering and modification communictation with AbraFlexi '),
             ['style' => 'margin: 5px;']),
         new \Ease\TWB4\LinkButton('https://flexiproxy.vitexsoftware.cz/c/demo',
             [new \Ease\Html\ImgTag('img/flexiproxy-logo.png', 'FlexiProxy logo',
@@ -220,7 +220,7 @@ $pListing->addItemSmart( new PackageInfo('multi-flexibee-setup') );
 $pListing->addItemSmart( new PackageInfo('multi-flexibee-setup-mysql') );
 $pListing->addItemSmart( new PackageInfo('multi-flexibee-setup-pgsql') );
 $pListing->addItemSmart( new PackageInfo('multi-flexibee-setup-sqlite') );
-$pListing->addItemSmart( new PackageInfo('php-ease-twbootstrap4-widgets-flexibee') );
+$pListing->addItemSmart( new PackageInfo('php-ease-bootstrap4-widgets-flexibee') );
 $pListing->addItemSmart( new PackageInfo('php-flexibee') );
 $pListing->addItemSmart( new PackageInfo('php-flexibee-bricks') );
 $pListing->addItemSmart( new PackageInfo('php-flexibee-config') );
@@ -228,26 +228,26 @@ $pListing->addItemSmart( new PackageInfo('php-flexibee-config') );
 $oPage->container->addItem($pListing);
 
 
-dark-flexibee-client - Launch FlexiBee in dark mode
+dark-flexibee-client - Launch AbraFlexi in dark mode
 flexibee - 
-flexibee-client - Ekonomický systém ABRA FlexiBee -
-flexibee-contract-invoices - Trigger FlexiBee contracts to generate invoices
-flexibee-digest - digest for FlexiBee
-flexibee-matcher - External matcher for FlexiBee
-flexibee-reminder - Reminder sender for FlexiBee
-flexibee-reminder-gnokii - Gnokii helper for Reminder sender for FlexiBee
-flexibee-reminder-papermail - Paper mail support for Reminder sender for FlexiBee
-flexibee-reminder-sms - SMS Suppot for Reminder sender for FlexiBee
-flexibee-server - Ekonomický systém ABRA FlexiBee - REST API a HTML rozhraní
+flexibee-client - Ekonomický systém ABRA AbraFlexi -
+flexibee-contract-invoices - Trigger AbraFlexi contracts to generate invoices
+flexibee-digest - digest for AbraFlexi
+flexibee-matcher - External matcher for AbraFlexi
+flexibee-reminder - Reminder sender for AbraFlexi
+flexibee-reminder-gnokii - Gnokii helper for Reminder sender for AbraFlexi
+flexibee-reminder-papermail - Paper mail support for Reminder sender for AbraFlexi
+flexibee-reminder-sms - SMS Suppot for Reminder sender for AbraFlexi
+flexibee-server - Ekonomický systém ABRA AbraFlexi - REST API a HTML rozhraní
 flexibee-server-backup - Každodení záloha dat
-flexibee-testing-tools - several FlexiBee testing tools
+flexibee-testing-tools - several AbraFlexi testing tools
 multi-flexibee-setup - run several tools on defined flexibee servers
 multi-flexibee-setup-mysql - mariadb support for multiflexibee setup
 multi-flexibee-setup-pgsql - postgres support for multiflexibee setup
 multi-flexibee-setup-sqlite - sqlite support for multiflexibee setup
-php-ease-twbootstrap4-widgets-flexibee - PHP Based FlexiBee RestAPI/Json library AddOns
-php-flexibee - PHP Based FlexiBee RestAPI/Json library
-php-flexibee-bricks - PHP Based FlexiBee RestAPI/Json library AddOns
+php-ease-bootstrap4-widgets-flexibee - PHP Based AbraFlexi RestAPI/Json library AddOns
+php-flexibee - PHP Based AbraFlexi RestAPI/Json library
+php-flexibee-bricks - PHP Based AbraFlexi RestAPI/Json library AddOns
 php-flexibee-config - config and configurator for php-flexibee
 */
 
