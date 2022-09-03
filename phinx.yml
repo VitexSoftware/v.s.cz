@@ -1,6 +1,6 @@
 paths:
-    migrations: %%PHINX_CONFIG_DIR%%/db/migrations
-    seeds: %%PHINX_CONFIG_DIR%%/db/seeds
+    migrations: '%%PHINX_CONFIG_DIR%%/db/migrations'
+    seeds: '%%PHINX_CONFIG_DIR%%/db/seeds'
 
 environments:
     default_migration_table: phinxlog
@@ -8,8 +8,8 @@ environments:
     production:
         adapter: mysql
         host: localhost
-        name: vscz
-        user: vscz
+        name: vitexsoftware
+        user: vitexsoftware
         pass: TusVecFer.ow5
         port: 3306
         charset: utf8
@@ -17,8 +17,8 @@ environments:
     development:
         adapter: mysql
         host: localhost
-        name: vscz
-        user: vscz
+        name: vitexsoftware
+        user: vitexsoftware
         pass: TusVecFer.ow5
         port: 3306
         charset: utf8
@@ -26,8 +26,8 @@ environments:
     testing:
         adapter: pgsql
         host: localhost
-        name: vscz
-        user: vscz
-        pass: vscz
+        name: vitexsoftware
+        user: vitexsoftware
+        pass: vitexsoftware
         port: 5432
         charset: utf8
