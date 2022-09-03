@@ -36,7 +36,7 @@ class User extends AbstractMigration {
                 ->addColumn('lastname', 'string', ['null' => true, 'limit' => 32])
                 ->addColumn('password', 'string', ['limit' => 40])
                 ->addColumn('login', 'string', ['limit' => 32])
-                ->addColumn('DatCreate', 'datetime', [])
+                ->addColumn('DatCreate', 'datetime', ['default' => 'CURRENT_TIMESTAMP'])
                 ->addColumn('DatSave', 'datetime', ['null' => true])
                 ->addColumn('last_modifier_id', 'integer', ['null' => true, 'signed' => false])
                 ->addIndex(['login', 'email'], ['unique' => true])
