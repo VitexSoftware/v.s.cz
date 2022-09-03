@@ -8,7 +8,7 @@
  */
 date_default_timezone_set('Europe/Prague');
 
-define('EASE_APPNAME', 'vscz');
+define('EASE_APPNAME', 'vsweb');
 define('EASE_LOGGER', 'syslog');
 
 /**
@@ -35,6 +35,6 @@ define('LOG_DIRECTORY', '/var/tmp/');
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
 define('DB_PORT', 3306);
-define('DB_DATABASE', 'vscz');
-define('DB_USERNAME', 'vscz');
+define('DB_DATABASE', 'vitexsoftware');
+define('DB_USERNAME', 'vitexsoftware');
 define('DB_PASSWORD', 'TusVecFer.ow5');
