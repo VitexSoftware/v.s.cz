@@ -22,26 +22,41 @@
         "ext-fileinfo": "*",
         "league/commonmark": "*",
         "deb/abraflexi": "*",
-        "vitexsoftware/ease-core": "*",
-        "vitexsoftware/ease-twbootstrap4": "*",
-        "vitexsoftware/ease-twbootstrap4-widgets": "*",
-        "vitexsoftware/ease-fluentpdo": "*"
-
+        "deb/ease-bootstrap4-widgets": "*",
+	"deb/ease-fluentpdo": "*"
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/usr/share/php/EaseCore",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "/usr/share/php/AbraFlexi",
-            "options": {
-                "symlink": true
-            }
-        }
-    ]
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseCore/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseHtml/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/AbraFlexi/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseBricks/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseTWB4/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseFluentPDO/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/AbraFlexiBricks/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseTWB4Widgets/"
+    }
+  ]
 }
