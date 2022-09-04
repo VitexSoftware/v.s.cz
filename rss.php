@@ -14,7 +14,7 @@ use VSCZ\ui\NewPackages;
 require_once 'includes/VSInit.php';
 
 
-$packages = new NewPackages();
+$packages = []; //TODO:  new NewPackages();
 
 
 #header("Content-Type: application/xml; charset=UTF-8");
