@@ -123,8 +123,14 @@ class PackageInfo extends \Ease\Html\DivTag {
         $packageContents = $filer->getPackageFiles($pProps['Name']);
 
         if ($packageContents) {
-            $packageTabs->addTab(_('Files'),
-                    new \Ease\Html\TableTag($packageContents));
+
+            $fileTable = new \Ease\Html\TableTag();
+            $fileTable->addRowHeaderColumns(_('Path'), _('Size'));
+            foreach ($packageContents as $pc) {
+                $fileTable->addRowColumns(['path' => $pc['path'], 'size' => $pc['size']]);
+            }
+
+            $packageTabs->addTab(_('Files'), $fileTable);
         }
         if (strstr($projectUrl, 'github.com')) {
             $packageTabs->addTab(_('Read Me'),
