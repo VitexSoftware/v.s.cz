@@ -24,8 +24,8 @@ class PackageInfo extends \Ease\Html\DivTag {
 
         $packFile = trim($pProps['Filename']);
 
-        $installs = $repostats->getPackageInstalls($pName);
-        $downloads = $repostats->getPackageDownloads($pName);
+//        $installs = $repostats->getPackageInstalls($pName);
+//        $downloads = $repostats->getPackageDownloads($pName);
 
         $fileMtime = $pProps['fileMtime'];
         $incTime = date("Y m. d.", strtotime($fileMtime));
@@ -56,8 +56,8 @@ class PackageInfo extends \Ease\Html\DivTag {
         $infotable->addRowColumns([_('Age in days'), intval($packAge)]);
         $infotable->addRowColumns([_('Release date'), $incTime]);
         $infotable->addRowColumns([_('Size'), \Ease\Functions::humanFilesize(intval($pProps['Size']))]);
-        $infotable->addRowColumns([_('Installs'), $installs]);
-        $infotable->addRowColumns([_('Downloads'), $downloads]);
+//        $infotable->addRowColumns([_('Installs'), $installs]);
+//        $infotable->addRowColumns([_('Downloads'), $downloads]);
         $depIcons = '';
 
         foreach ($pProps as $key => $value) {
@@ -124,7 +124,7 @@ class PackageInfo extends \Ease\Html\DivTag {
 
         if ($packageContents) {
             $packageTabs->addTab(_('Files'),
-                    print_r($packageContents, true));
+                    new \Ease\Html\UlTag($packageContents, true));
         }
         if (strstr($projectUrl, 'github.com')) {
             $packageTabs->addTab(_('Read Me'),

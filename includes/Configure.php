@@ -4,7 +4,7 @@
  * VitexSoftware 
  *
  * @author    Vitex <vitex@hippy.cz>
- * @copyright 2010-2016 Vitex@vitexsoftware.cz (G)
+ * @copyright 2010-2022 Vitex@vitexsoftware.cz (G)
  */
 date_default_timezone_set('Europe/Prague');
 
