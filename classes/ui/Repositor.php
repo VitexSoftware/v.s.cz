@@ -23,7 +23,7 @@ class Repositor extends \Ease\Html\DivTag {
         'sid' => 'debian', 'stretch' => 'debian'];
     public $repodir = null;
     public $packages = [];
-    public $repoUrl = 'https://repo.vitexsoftware.cz/';
+    public $repoUrl = 'https://repo.vitexsoftware.com/';
 
     /**
      * 
