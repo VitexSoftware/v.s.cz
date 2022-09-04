@@ -104,7 +104,7 @@ $activityColumn->addItem(new \Ease\Html\DivTag(null, ['id' => 'ghfeed']));
 
 
 $mainPageRow->addColumn(7, [new \Ease\Html\H1Tag(_('Libraries')), $libMenu]);
-$mainPageRow->addColumn(2, new ui\NewPackages(10));
+//TODO: enable $mainPageRow->addColumn(2, new ui\NewPackages(10));
 
 
 $oPage->includeCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css');
