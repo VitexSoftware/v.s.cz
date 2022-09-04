@@ -124,7 +124,7 @@ class PackageInfo extends \Ease\Html\DivTag {
 
         if ($packageContents) {
             $packageTabs->addTab(_('Files'),
-                    new \Ease\Html\UlTag($packageContents));
+                    new \Ease\Html\TableTag($packageContents));
         }
         if (strstr($projectUrl, 'github.com')) {
             $packageTabs->addTab(_('Read Me'),

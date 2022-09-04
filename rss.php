@@ -14,7 +14,7 @@ use VSCZ\ui\NewPackages;
 require_once 'includes/VSInit.php';
 
 
-$packages = []; //TODO:  new NewPackages();
+$packages = [['title'=>'n/a','description'=>'','icon'=>'','date'=>'']]; //TODO:  new NewPackages();
 
 
 #header("Content-Type: application/xml; charset=UTF-8");
@@ -27,7 +27,7 @@ $xml->addAttribute("version", "2.0");
 $channel = $xml->addChild("channel");
 
 $channel->addChild("title", _('VitexSoftware Package feed'));
-$channel->addChild("link", "https://vitexsoftware.cz/");
+$channel->addChild("link", "https://vitexsoftware.com/");
 $channel->addChild("description", "Fresh packages in our repository");
 $channel->addChild("language", "en-us");
 
