@@ -25,6 +25,7 @@ $utilsMenu = new ui\MainPageMenu();
 
 $libMenu->addLibraryItem('https://github.com/Spoje-NET/php-flexibee', _('PHP AbraFlexi'), _('AbraFlexi client library'), null, 'spojenet/flexibee');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-vitexsoftware-rbczpremiumapi', _('PHP RBczPremiumAPI'), _('Raiffeisenbank Premium API client library'), null, 'vitexsoftware/rbczpremiumapi');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/PHP-Pohoda-Connector', _('PHPmServer'), _('client library for Sormware\'s Pohoda mServer'),'img/phpmserver.svg','vitexsoftware/pohoda-connector');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-flexibee-bricks', _('AbraFlexi Bricks'), _('Addons for AbraFlexi PHP apps'));
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets', _('TWB4 AbraFlexi widgets'), _('Twitter Bootstrap 4 Widgets for Ease Framework'), 'img/deb/php-ease-bootstrap4-widgets.svg', 'vitexsoftware/ease-twbootstrap4-widgets');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-core', _('Ease Core'), _('Core of Framework for easy writing of PHP applications'));
