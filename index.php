@@ -29,6 +29,8 @@ $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-flexibee-bricks',
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets', _('TWB4 AbraFlexi widgets'), _('Twitter Bootstrap 4 Widgets for Ease Framework'), 'img/deb/php-ease-bootstrap4-widgets.svg', 'vitexsoftware/ease-twbootstrap4-widgets');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-core', _('Ease Core'), _('Core of Framework for easy writing of PHP applications'));
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-html', _('Ease HTML'), _('HTML 5 Tags for Ease Framework'));
+$libMenu->addLibraryItem('https://github.com/Spoje-NET/PHP-Realpad-Takeout', _('RealPad Takeout'), _('Realpad document exporter'),'img/realpad-takeout.svg','spojenet/realpad-takeout');
+
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap4', _('Ease Twbootstrap4'), _('Twitter Bootstrap 4 support for Ease Framework'), null, 'vitexsoftware/ease-twbootstrap4');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-fluentpdo', _('Ease FluentPDO'), _('FluentPDO support for Ease Framework'), null, 'vitexsoftware/ease-fluentpdo');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets-flexibee', _('TWB3 AbraFlexi widgets'), _('Several Bootstrap3 Widgets for AbraFlexi'), null, 'vitexsoftware/ease-twbootstrap-widgets-flexibee');
@@ -55,6 +57,15 @@ $appMenu->addMenuItem(
         _('FlexiBee company status digest every day, week, month or year'),
         new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-digest/composer.json'))
 );
+
+$appMenu->addMenuItem(
+        _('Debs To SQL'),
+        'https://github.com/VitexSoftware/DEBs-to-SQL',
+        'img/debs2sql.svg',
+        _('Index Debian package repository into SQL'),
+        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/debs2sql/composer.json'))
+);
+
 
 $utilsMenu->addMenuItem(
         _('Jasper Compiler'),
