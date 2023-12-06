@@ -15,9 +15,10 @@ use League\CommonMark\CommonMarkConverter;
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
-class HtmlMarkdownReadme extends \Ease\Html\DivTag {
-
-    public function __construct($homepage, $version) {
+class HtmlMarkdownReadme extends \Ease\Html\DivTag
+{
+    public function __construct($homepage, $version)
+    {
         $cached = sys_get_temp_dir() . '/' . md5($homepage . $version) . '.md';
         if (!file_exists($cached)) {
             $raw = str_replace('github', 'raw.githubusercontent', $homepage) . '/master/README.md';
@@ -31,5 +32,4 @@ class HtmlMarkdownReadme extends \Ease\Html\DivTag {
             $this->addItem($readme->__toString(), ['class' => 'jumbotron']);
         }
     }
-
 }

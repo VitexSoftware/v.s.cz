@@ -23,6 +23,7 @@
         "league/commonmark": "*",
         "deb/abraflexi": "*",
         "deb/ease-bootstrap4-widgets": "*",
+	"deb/ease-html": "*",
 	"deb/ease-fluentpdo": "*"
     },
   "repositories": [

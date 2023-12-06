@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Init aplikace
  *
@@ -15,7 +16,7 @@ if (!defined('EASE_APPNAME')) {
     define('EASE_APPNAME', 'VitexSoftwareWEB');
 }
 
-\Ease\Locale::singleton(null,'./i18n','vscz');
+\Ease\Locale::singleton(null, './i18n', 'vscz');
 
 session_start();
 
@@ -36,5 +37,4 @@ $oUser = \Ease\User::singleton();
 
 
 /* @var $oPage VSWebPage */
-$oPage = new ui\WebPage( );
-
+$oPage = new ui\WebPage();

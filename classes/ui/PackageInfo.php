@@ -13,9 +13,10 @@ namespace VSCZ\ui;
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
-class PackageInfo extends \Ease\Html\DivTag {
-
-    public function __construct($pName) {
+class PackageInfo extends \Ease\Html\DivTag
+{
+    public function __construct($pName)
+    {
         $projectUrl = null;
 
         $repostats = new \VSCZ\AccessLog();
@@ -31,19 +32,27 @@ class PackageInfo extends \Ease\Html\DivTag {
         $incTime = date("Y m. d.", strtotime($fileMtime));
         $packAge = WebPage::secondsToTime(doubleval(time() - strtotime($fileMtime)));
 
-        $packageDownloadLink = new \Ease\Html\ATag('https://repo.vitexsoftware.cz/' . $pProps['Filename'],
-                '<img style="width: 18px;" src="img/deb-package.png">&nbsp;' . $pProps['Filename'],
-                ['class' => 'btn btn-lg btn-default']);
+        $packageDownloadLink = new \Ease\Html\ATag(
+            'https://repo.vitexsoftware.cz/' . $pProps['Filename'],
+            '<img style="width: 18px;" src="img/deb-package.png">&nbsp;' . $pProps['Filename'],
+            ['class' => 'btn btn-lg btn-default']
+        );
 
-        $packageInstallLink = new \Ease\Html\ATag('install.php?package=' . $pName,
-                '<img style="width: 18px;" src="img/deb-package.png">&nbsp;' . $pName,
-                ['class' => 'btn btn-lg btn-success']);
+        $packageInstallLink = new \Ease\Html\ATag(
+            'install.php?package=' . $pName,
+            '<img style="width: 18px;" src="img/deb-package.png">&nbsp;' . $pName,
+            ['class' => 'btn btn-lg btn-success']
+        );
 
         $heading = new \Ease\TWB4\Row();
-        $heading->addColumn(2,
-                self::packageLogo($pName, ['style' => ' height: 90px;']));
-        $heading->addColumn(14,
-                new \Ease\Html\H1Tag($pName . ' ' . $pProps['Version']));
+        $heading->addColumn(
+            2,
+            self::packageLogo($pName, ['style' => ' height: 90px;'])
+        );
+        $heading->addColumn(
+            14,
+            new \Ease\Html\H1Tag($pName . ' ' . $pProps['Version'])
+        );
 
         parent::__construct([$heading, $packageDownloadLink, $packageInstallLink]);
 
@@ -85,8 +94,10 @@ class PackageInfo extends \Ease\Html\DivTag {
                     ]);
                     break;
                 default:
-                    $infotable->addRowColumns([_($key), is_array($value) ? implode(',',
-                                        $value) : $value]);
+                    $infotable->addRowColumns([_($key), is_array($value) ? implode(
+                        ',',
+                        $value
+                    ) : $value]);
                     break;
             }
         }
@@ -107,8 +118,10 @@ class PackageInfo extends \Ease\Html\DivTag {
         $this->includeJavaScript('js/jquery.tablesorter.min.js');
         $this->addJavaScript('$("#dwlstats").tablesorter();');
 
-        $popularityTable = new \Ease\Html\TableTag(null,
-                ['class' => 'table', 'id' => 'dwlstats']);
+        $popularityTable = new \Ease\Html\TableTag(
+            null,
+            ['class' => 'table', 'id' => 'dwlstats']
+        );
 
         $popularityTable->addRowHeaderColumns([_('Version'), _('Download/Install count'),
             _('Last hit')]);
@@ -123,7 +136,6 @@ class PackageInfo extends \Ease\Html\DivTag {
         $packageContents = $filer->getPackageFiles($pProps['Name']);
 
         if ($packageContents) {
-
             $fileTable = new \Ease\Html\TableTag();
             $fileTable->addRowHeaderColumns(_('Path'), _('Size'));
             foreach ($packageContents as $pc) {
@@ -133,14 +145,17 @@ class PackageInfo extends \Ease\Html\DivTag {
             $packageTabs->addTab(_('Files'), $fileTable);
         }
         if (strstr($projectUrl, 'github.com')) {
-            $packageTabs->addTab(_('Read Me'),
-                    new HtmlMarkdownReadme($projectUrl, $version));
+            $packageTabs->addTab(
+                _('Read Me'),
+                new HtmlMarkdownReadme($projectUrl, $version)
+            );
         }
         $packageTabs->addTab(_('Download stats'), $popularityTable);
         $this->addItem($packageTabs);
     }
 
-    static public function packagesIcons($packs) {
+    public static function packagesIcons($packs)
+    {
         $packIcons = [];
         foreach (array_keys($packs) as $packName) {
             $icon = 'img/deb/' . $packName . '.png';
@@ -152,7 +167,8 @@ class PackageInfo extends \Ease\Html\DivTag {
         return implode('', $packIcons);
     }
 
-    public static function DependsToArray($dependsRaw) {
+    public static function DependsToArray($dependsRaw)
+    {
         $packagesRaw = explode(',', str_replace('|', ',', $dependsRaw));
         foreach ($packagesRaw as $pid => $package) {
             $package = trim($package);
@@ -166,7 +182,8 @@ class PackageInfo extends \Ease\Html\DivTag {
         return $packages;
     }
 
-    public static function addPackageLinks($dependsRaw) {
+    public static function addPackageLinks($dependsRaw)
+    {
         $packs = self::DependsToArray($dependsRaw);
         foreach ($packs as $pack => $name) {
             $icon = 'img/deb/' . $pack . '.png';
@@ -180,7 +197,8 @@ class PackageInfo extends \Ease\Html\DivTag {
         return implode(' , ', $packs);
     }
 
-    public static function getPackageIcon($package) {
+    public static function getPackageIcon($package)
+    {
         $icon = 'img/deb/' . $package . '.png';
         if (!file_exists($icon)) {
             $icon = 'img/deb/' . $package . '.svg';
@@ -191,27 +209,32 @@ class PackageInfo extends \Ease\Html\DivTag {
         return $icon;
     }
 
-    public static function packageLogo($pName,
-            $properties = ['class' => 'img-responsive',
-                'style' => 'margin: auto auto; width: 200px;']) {
+    public static function packageLogo(
+        $pName,
+        $properties = ['class' => 'img-responsive',
+                'style' => 'margin: auto auto; width: 200px;']
+    ) {
 
-        return new \Ease\Html\ImgTag(self::getPackageIcon($pName), $pName,
-                $properties);
+        return new \Ease\Html\ImgTag(
+            self::getPackageIcon($pName),
+            $pName,
+            $properties
+        );
     }
 
     /**
      * Obtain DPKG info for given package
-     * 
+     *
      * @param string $pName package-name
-     * 
+     *
      * @return array dpkg info
      */
-    public function packageInfo($pName) {
+    public function packageInfo($pName)
+    {
         $packager = new \VSCZ\Packages($pName, ['autoload' => true]);
 
         $candidates = $packager->getData();
 
         return $candidates[0];
     }
-
 }

@@ -2,17 +2,18 @@
 
 /**
  * VitexSoftware - titulní strana
- * 
+ *
  * @package    VS
  * @subpackage WebUI
  * @author     Vitex <vitex@hippy.cz>
  * @copyright  2012 Vitex@hippy.cz (G)
  */
+
 require_once 'includes/VSInit.php';
 
 $oPage->addItem(new \VSCZ\ui\PageTop(_('Vitex Software')));
 
-$oPage->addJavaScript('$(\'.carousel\').carousel();',null,true);
+$oPage->addJavaScript('$(\'.carousel\').carousel();', null, true);
 $oPage->includeJavaScript('js/bootstrap-carousel.js');
 
 $oPage->addItem('
@@ -93,4 +94,3 @@ $oPage->addItem(new \VSCZ\ui\PageBottom());
 
 
 $oPage->draw();
-

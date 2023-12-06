@@ -10,6 +10,7 @@ namespace VSCZ;
  * @author     Vitex <vitex@hippy.cz>
  * @copyright  2012 Vitex@hippy.cz (G)
  */
+
 //if (!strstr($_SERVER['SERVER_NAME'], 'www.vitexsoftware.cz') || ($_SERVER['SERVER_PORT'] != 443)) {
 //    header('Location: https://www.vitexsoftware.cz/');
 //    exit;
@@ -19,7 +20,7 @@ require_once 'includes/VSInit.php';
 
 $oPage->addItem(new ui\PageTop(_('Co umím')));
 
-$pageCols = $oPage->container->addItem( new \Ease\TWB4\Row() );
+$pageCols = $oPage->container->addItem(new \Ease\TWB4\Row());
 
 $oPage->column1 = $pageCols->addColumn(4);
 $oPage->column2 = $pageCols->addColumn(4);
@@ -58,6 +59,7 @@ $UpdateSkills->addItemSmart('úprava pro mobilní použití');
 
 $oPage->column2->addItem('<div style="text-align: center;"><img src="img/tux-server.png"></div>');
 
+$oPage->column2->addItem(new \Ease\Html\ATag('https://wakatime.com/@5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7', new \Ease\Html\ImgTag('https://wakatime.com/badge/user/5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7.svg')));
 
 $oPage->column1->addItem(new \Ease\Html\H2Tag(_('Bezpečnostní audity')));
 $serverSkills = $oPage->column1->addItem(new \Ease\Html\UlTag());
@@ -70,4 +72,3 @@ $oPage->addItem(new \VSCZ\ui\PageBottom());
 
 
 $oPage->draw();
-

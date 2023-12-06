@@ -10,8 +10,8 @@ use Ease\SQL\Orm;
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  * @copyright  2015-2020 Vitex Software
  */
-class User extends \Ease\User {
-
+class User extends \Ease\User
+{
     use Orm;
 
     public $useKeywords = [
@@ -74,7 +74,8 @@ class User extends \Ease\User {
      *
      * @return string
      */
-    public function getIcon() {
+    public function getIcon()
+    {
         $Icon = $this->GetSettingValue('icon');
         if (is_null($Icon)) {
             return parent::getIcon();
@@ -88,7 +89,8 @@ class User extends \Ease\User {
      *
      * @return int
      */
-    public function getId() {
+    public function getId()
+    {
         return (int) $this->getMyKey();
     }
 
@@ -97,7 +99,8 @@ class User extends \Ease\User {
      *
      * @return string
      */
-    public function getUserName() {
+    public function getUserName()
+    {
         $longname = trim($this->getDataValue('firstname') . ' ' . $this->getDataValue('lastname'));
         if (strlen($longname)) {
             return $longname;
@@ -106,7 +109,8 @@ class User extends \Ease\User {
         }
     }
 
-    public function getEmail() {
+    public function getEmail()
+    {
         return $this->getDataValue('email');
     }
 
@@ -118,7 +122,8 @@ class User extends \Ease\User {
      *
      * @return null|boolean
      */
-    public function tryToLogin($formData) {
+    public function tryToLogin($formData)
+    {
         if (empty($formData)) {
             return;
         }
@@ -136,8 +141,12 @@ class User extends \Ease\User {
         }
         if ($this->loadFromSQL([$this->loginColumn => $login])) {
             $this->setObjectName();
-            if ($this->passwordValidation($password,
-                            $this->getDataValue($this->passwordColumn))) {
+            if (
+                $this->passwordValidation(
+                    $password,
+                    $this->getDataValue($this->passwordColumn)
+                )
+            ) {
                 if ($this->isAccountEnabled()) {
                     return $this->loginSuccess();
                 } else {
@@ -155,8 +164,11 @@ class User extends \Ease\User {
                 return false;
             }
         } else {
-            $this->addStatusMessage(sprintf(_('user %s does not exist'), $login,
-                            'error'));
+            $this->addStatusMessage(sprintf(
+                _('user %s does not exist'),
+                $login,
+                'error'
+            ));
 
             return false;
         }
@@ -171,7 +183,8 @@ class User extends \Ease\User {
      *
      * @return bool
      */
-    public static function passwordValidation($plainPassword, $encryptedPassword) {
+    public static function passwordValidation($plainPassword, $encryptedPassword)
+    {
         if ($plainPassword && $encryptedPassword) {
             $passwordStack = explode(':', $encryptedPassword);
             if (sizeof($passwordStack) != 2) {
@@ -192,7 +205,8 @@ class User extends \Ease\User {
      *
      * @return string Encrypted password
      */
-    public static function encryptPassword($plainTextPassword) {
+    public static function encryptPassword($plainTextPassword)
+    {
         $encryptedPassword = '';
         for ($i = 0; $i < 10; ++$i) {
             $encryptedPassword .= \Ease\Functions::randomNumber();
@@ -210,20 +224,21 @@ class User extends \Ease\User {
      *
      * @return string password hash
      */
-    public function passwordChange($newPassword) {
+    public function passwordChange($newPassword)
+    {
         return $this->dbsync([$this->passwordColumn => $this->encryptPassword($newPassword), $this->getKeyColumn() => $this->getUserID()]);
     }
 
     /**
      * Common instance of User class
-     * 
+     *
      * @return User
      */
-    public static function singleton($user = null) {
+    public static function singleton($user = null)
+    {
         if (!isset(self::$instance)) {
             self::$instance = is_null($user) ? new self() : $user;
         }
         return self::$instance;
     }
-
 }

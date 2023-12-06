@@ -1,4 +1,5 @@
 <?php
+
 /**
  * VitexSoftware Homepage - News Handler
  *
@@ -34,6 +35,4 @@ class Packages extends \Ease\SQL\Engine
      * @var string
      */
     public $myLastModifiedColumn = 'updated';
-
-    
 }

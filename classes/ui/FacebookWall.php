@@ -9,7 +9,6 @@ namespace VSCZ\ui;
  */
 class FacebookWall extends \Ease\Html\DivTag
 {
-
     public function __construct($content = 'VitexSoftware', $properties = null)
     {
         $properties['class'] = 'fb-page';
@@ -22,8 +21,10 @@ class FacebookWall extends \Ease\Html\DivTag
         $properties['data-hide-cover']            = 'false';
         $properties['data-show-facepile']         = 'true';
 
-        parent::__construct(new \Ease\Html\DivTag('<blockquote cite="'.$properties['data-href'].'"><a href="'.$properties['data-href'].'">'.$content.'</a></blockquote>',
-            ['class' => 'fb-xfbml-parse-ignore']), $properties);
+        parent::__construct(new \Ease\Html\DivTag(
+            '<blockquote cite="' . $properties['data-href'] . '"><a href="' . $properties['data-href'] . '">' . $content . '</a></blockquote>',
+            ['class' => 'fb-xfbml-parse-ignore']
+        ), $properties);
     }
 
     public function finalize()

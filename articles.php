@@ -10,6 +10,7 @@ namespace VSCZ;
  * @author     Vitex <vitex@hippy.cz>
  * @copyright  2012 Vitex@hippy.cz (G)
  */
+
 //if (!strstr($_SERVER['SERVER_NAME'], 'www.vitexsoftware.cz') || ($_SERVER['SERVER_PORT'] != 443)) {
 //    header('Location: https://www.vitexsoftware.cz/');
 //    exit;
@@ -25,4 +26,3 @@ $oPage->addItem(new \VSCZ\ui\PageBottom());
 
 
 $oPage->draw();
-

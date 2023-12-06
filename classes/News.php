@@ -1,4 +1,5 @@
 <?php
+
 /**
  * VitexSoftware Homepage - News Handler
  *
@@ -31,7 +32,7 @@ class News extends \Ease\SQL\Engine
     public $myLastModifiedColumn = 'DatSave';
 
 
-    
+
     /**
      * News listing query
      * @return \Envms\FluentPDO
@@ -39,6 +40,5 @@ class News extends \Ease\SQL\Engine
     public function listingQuery()
     {
         return parent::listingQuery()->select('user.login')->leftJoin('user ON user.id = author');
-    }    
-    
+    }
 }

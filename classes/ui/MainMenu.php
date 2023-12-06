@@ -8,8 +8,8 @@ namespace VSCZ\ui;
  * @package    VitexSoftware
  * @author     Vitex <vitex@hippy.cz>
  */
-class MainMenu extends \Ease\TWB4\Navbar {
-
+class MainMenu extends \Ease\TWB4\Navbar
+{
     /**
      * Menu aplikace
      *
@@ -17,12 +17,15 @@ class MainMenu extends \Ease\TWB4\Navbar {
      * @param string $brand
      * @param array  $properties
      */
-    function __construct($name = null, $brand = null, $properties = null) {
+    function __construct($name = null, $brand = null, $properties = null)
+    {
         parent::__construct($brand, $properties);
         $this->addTagClass('navbar-inverse bg-inverse navbar-toggleable-sm  navbar-expand-lg bg-secondary text-uppercase fixed-top');
 
-        $this->addMenuItem(new \Ease\Html\ATag('debs.php',
-                        '<img style="height: 19px;" src="img/deb-package.png"> ' . _('Debian Packages')));
+        $this->addMenuItem(new \Ease\Html\ATag(
+            'debs.php',
+            '<img style="height: 19px;" src="img/deb-package.png"> ' . _('Debian Packages')
+        ));
         //
 //        $this->addDropDownMenu(
 //            _('Projects'),
@@ -43,8 +46,8 @@ class MainMenu extends \Ease\TWB4\Navbar {
 
 
         $this->addDropDownMenu(
-                '<img style="height: 19px;" src="img/abra-flexibee-square.png"> ' . _('AbraFlexi'),
-                [
+            '<img style="height: 19px;" src="img/abra-flexibee-square.png"> ' . _('AbraFlexi'),
+            [
                     'flexibee.php' => '<img style="height: 20px;" src="https://repo.vitexsoftware.cz/imgdeb/flexibee-server.png"> ' . _('Overview'),
                     '/multi-abraflexi-setup/login.php?login=demo&password=demo' => '<img style="height: 20px;" src="https://repo.vitexsoftware.cz/imgdeb/multi-abraflexi-setup.svg"> ' . _('Multi Setup'),
                     '/abraflexi-digest/' => '<img style="height: 20px" src="https://repo.vitexsoftware.cz/imgdeb/abraflexi-digest.svg"> ' . _('Digest'),
@@ -53,22 +56,25 @@ class MainMenu extends \Ease\TWB4\Navbar {
         );
 
         $this->addDropDownMenu(
-                '<img style="height: 19px;" src="img/docs.svg"> ' . _('Docs'),
-                [
+            '<img style="height: 19px;" src="img/docs.svg"> ' . _('Docs'),
+            [
                     '/php-spojenet-abraflexi-doc/namespaces/abraflexi.html' => '<img style="height: 20px" src="https://repo.vitexsoftware.cz/imgdeb/php-abraflexi.svg"> ' . _('PHP AbraFlexi'),
                     '/php-vitexsoftware-ease-core-doc/namespaces/ease.html' => '<img style="height: 20px;" src="https://repo.vitexsoftware.cz/imgdeb/php-ease-core.png"> ' . _('EaseCore'),
                     '/php-vitexsoftware-abraflexi-bricks-doc/namespaces/abraflexi-bricks.html' => '<img style="height: 20px;" src="https://www.vitexsoftware.cz/img/php-flexibee-bricks.svg"> PHP Based AbraFlexi RestAPI/Json library Addons',
-//                    '/php-vitexsoftware-ease-bootstrap-widgets-doc' => 'Ease Framework Widgets',
+            //                    '/php-vitexsoftware-ease-bootstrap-widgets-doc' => 'Ease Framework Widgets',
                     '/php-vitexsoftware-ease-bootstrap4-doc/namespaces/ease-twb4.html' => '<img style="height: 20px;"  src="/img/ease-twbootstrap4.svg"> EasePHP Framework Twitter Bootstrap4',
                     '/php-vitexsoftware-ease-bootstrap5-doc/namespaces/ease-twb5.html' => '<img style="height: 20px;"  src="/img/ease-twbootstrap5.svg"> EasePHP Framework Twitter Bootstrap5',
-//                    '/php-vitexsoftware-ease-bricks-doc' => 'Ease Framework Bricks',
+            //                    '/php-vitexsoftware-ease-bricks-doc' => 'Ease Framework Bricks',
                     '/php-vitexsoftware-ease-fluentpdo-doc/namespaces/ease-sql.html' => '<img src="/img/php-ease-fluentpdo.svg" style="height: 20px;"> Ease FluentPDO',
                     '/php-vitexsoftware-ease-html-doc/namespaces/ease.html' => '<img src="/img/ease-html.svg" style="width: 20px;"> EasePHP Framework HTML',
+                    '/php-vitexsoftware-rbczpremiumapi/html/' => '<img src="/img/php-rbczpremiumapi.svg" style="width: 20px;"> ' . _('Raiffeisenbank Premium API client library'),
                 ]
         );
 
-        $this->addMenuItem(new \Ease\Html\ATag('articles.php',
-                        '<img style="height: 19px;" src="img/news.svg"> ' . _('Articles')));
+        $this->addMenuItem(new \Ease\Html\ATag(
+            'articles.php',
+            '<img style="height: 19px;" src="img/news.svg"> ' . _('Articles')
+        ));
 
         $this->addMenuItem(new \Ease\Html\ATag('attic.php', '<img style="height: 19px;" src="img/Treasure_chest.svg"> ' . _('Old projects')));
 
@@ -87,7 +93,8 @@ class MainMenu extends \Ease\TWB4\Navbar {
     /**
      * Přidá do stránky javascript pro skrývání oblasti stavových zpráv.
      */
-    public function finalize() {
+    public function finalize()
+    {
 
         WebPage::singleton()->addCss('
 .navbar-toggler-icon {
@@ -95,7 +102,6 @@ class MainMenu extends \Ease\TWB4\Navbar {
 }
 ');
         if (!empty(\Ease\Shared::logger()->getMessages())) {
-
             WebPage::singleton()->addCss('
 
 #smdrag { height: 8px; 
@@ -113,12 +119,14 @@ class MainMenu extends \Ease\TWB4\Navbar {
             $this->addItem(new \Ease\Html\DivTag(null, ['id' => 'smdrag', 'style' => 'margin-bottom: 5px']));
             //\Ease\Shared::singleton()->cleanMessages();
             WebPage::singleton()->addCss('.dropdown-menu { overflow-y: auto } ');
-            WebPage::singleton()->addJavaScript("$('.dropdown-menu').css('max-height',$(window).height()-100);",
-                    null, true);
+            WebPage::singleton()->addJavaScript(
+                "$('.dropdown-menu').css('max-height',$(window).height()-100);",
+                null,
+                true
+            );
             $this->includeJavaScript('js/slideupmessages.js');
         }
 
         parent::finalize();
     }
-
 }

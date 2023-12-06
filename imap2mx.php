@@ -1,4 +1,5 @@
 <?php
+
 /**
  * VitexSoftware - další balíčky
  *
@@ -7,6 +8,7 @@
  * @author     Vitex <vitex@hippy.cz>
  * @copyright  2012 Vitex@hippy.cz (G)
  */
+
 require_once 'includes/VSInit.php';
 
 $oPage->addItem(new \VSCZ\ui\PageTop(_('Imap2MX for Roundcube and Squirrelmail')));
@@ -30,7 +32,7 @@ while (false !== ($entry     = $d->read())) {
     if ($entry[0] == '.') {
         continue;
     }
-    $downloads[$entry] = \VSCZ\ui\WebPage::_format_bytes(filesize($dwDir.$entry));
+    $downloads[$entry] = \VSCZ\ui\WebPage::_format_bytes(filesize($dwDir . $entry));
 }
 $d->close();
 ksort($downloads);
@@ -46,9 +48,11 @@ foreach ($downloads as $file => $size) {
 
 //echo '<pre>'; print_r($Downloads); echo '</pre>';
 
-$oPage->column1->addItem(new \Ease\Html\ATag('download/'.key($SquirelPackage),
-    '<img style="width: 42px;" src="img/deb-package.png">&nbsp;'.key($SquirelPackage).' '.current($SquirelPackage),
-    ['class' => 'btn btn-success']));
+$oPage->column1->addItem(new \Ease\Html\ATag(
+    'download/' . key($SquirelPackage),
+    '<img style="width: 42px;" src="img/deb-package.png">&nbsp;' . key($SquirelPackage) . ' ' . current($SquirelPackage),
+    ['class' => 'btn btn-success']
+));
 
 $oPage->column1->addItem('</div>');
 
@@ -67,7 +71,7 @@ while (false !== ($entry     = $d->read())) {
     if ($entry[0] == '.') {
         continue;
     }
-    $downloads[$entry] = VSCZ\ui\WebPage::_format_bytes(filesize($dwDir.$entry));
+    $downloads[$entry] = VSCZ\ui\WebPage::_format_bytes(filesize($dwDir . $entry));
 }
 $d->close();
 ksort($downloads);
@@ -82,9 +86,11 @@ foreach ($downloads as $file => $size) {
 
 //echo '<pre>'; print_r($Downloads); echo '</pre>';
 
-$oPage->column3->addItem(new \Ease\Html\ATag('download/'.key($SquirelPackage),
-    '<img style="width: 42px;" src="img/deb-package.png">&nbsp;'.key($SquirelPackage).' '.current($SquirelPackage),
-    ['class' => 'btn btn-success']));
+$oPage->column3->addItem(new \Ease\Html\ATag(
+    'download/' . key($SquirelPackage),
+    '<img style="width: 42px;" src="img/deb-package.png">&nbsp;' . key($SquirelPackage) . ' ' . current($SquirelPackage),
+    ['class' => 'btn btn-success']
+));
 
 $oPage->column3->addItem('</div>');
 
@@ -104,15 +110,18 @@ $oPage->column2->addItem('<a href="http://debian.org/"><img style="width: 60px;"
 $oPage->column2->addItem('<a href="http://ubuntu.com/"><img style="width: 60px;" title="Ubuntu Linux" src="img/ubuntulogo.png"></a>');
 
 
-$oPage->column1->addItem(new \Ease\Html\ATag('http://squirrelmail.org/',
+$oPage->column1->addItem(new \Ease\Html\ATag(
+    'http://squirrelmail.org/',
     '<img style="height: 32px;" src="img/sm_logo.png">&nbsp; Official project homepage',
-    ['class' => 'btn btn-info']));
-$oPage->column3->addItem(new \Ease\Html\ATag('http://www.roundcube.net/',
+    ['class' => 'btn btn-info']
+));
+$oPage->column3->addItem(new \Ease\Html\ATag(
+    'http://www.roundcube.net/',
     '<img style="height: 32px;" src="img/rc_logo.png">&nbsp; Official project homepage',
-    ['class' => 'btn btn-info']));
+    ['class' => 'btn btn-info']
+));
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
 
 
 $oPage->draw();
-

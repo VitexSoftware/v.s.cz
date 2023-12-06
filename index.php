@@ -10,9 +10,7 @@ namespace VSCZ;
  */
 require_once 'includes/VSInit.php';
 
-
 $oPage->includeJavaScript('js/github-activity.js');
-
 
 //echo _('');
 
@@ -25,13 +23,13 @@ $utilsMenu = new ui\MainPageMenu();
 //$mainPageMenu->addMenuItem('img/deb-package.png', _('Repozitář'), 'repos.php',
 //    _('Repozitář balíčků pro Debian & Ubuntu'));
 
-
-$libMenu->addLibraryItem('https://github.com/Spoje-NET/php-flexibee', _('AbraFlexi'), _('AbraFlexi client library'));
+$libMenu->addLibraryItem('https://github.com/Spoje-NET/php-flexibee', _('PHP AbraFlexi'), _('AbraFlexi client library'), null, 'spojenet/flexibee');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-vitexsoftware-rbczpremiumapi', _('PHP RBczPremiumAPI'), _('Raiffeisenbank Premium API client library'), null, 'vitexsoftware/rbczpremiumapi');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-flexibee-bricks', _('AbraFlexi Bricks'), _('Addons for AbraFlexi PHP apps'));
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets', _('TWB4 AbraFlexi widgets'), _('Twitter Bootstrap 4 Widgets for Ease Framework'), 'img/deb/php-ease-bootstrap4-widgets.svg', 'vitexsoftware/ease-twbootstrap4-widgets');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-core', _('Ease Core'), _('Core of Framework for easy writing of PHP applications'));
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-html', _('Ease HTML'), _('HTML 5 Tags for Ease Framework'));
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap4', _('Ease Twbootstrap4'), _('Twitter Bootstrap 4 support for Ease Framework'),null,'vitexsoftware/ease-twbootstrap4');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap4', _('Ease Twbootstrap4'), _('Twitter Bootstrap 4 support for Ease Framework'), null, 'vitexsoftware/ease-twbootstrap4');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-fluentpdo', _('Ease FluentPDO'), _('FluentPDO support for Ease Framework'), null, 'vitexsoftware/ease-fluentpdo');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets-flexibee', _('TWB3 AbraFlexi widgets'), _('Several Bootstrap3 Widgets for AbraFlexi'), null, 'vitexsoftware/ease-twbootstrap-widgets-flexibee');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets-flexibee', _('TWB4 AbraFlexi widgets'), _('Several Bootstrap4 Widgets for AbraFlexi'), null, 'vitexsoftware/ease-twbootstrap4-widgets-flexibee');
@@ -42,56 +40,89 @@ $libMenu->addLibraryItem('https://github.com/Spoje-NET/PohodaSQL', _('PohodaSQL'
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets', _('TWB3 Widgets'), _('Twitter Bootstrap 3 Widgets for Ease Framework'), null, 'vitexsoftware/ease-twbootstrap-widgets');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap', _('Ease Twbootstrap'), _('Twitter Bootstrap 3 support for Ease Framework'), null, 'vitexsoftware/ease-twbootstrap');
 
-if (file_exists('/usr/share/icinga-editor/composer.json')) {
-    $composerInfo = json_decode(file_get_contents('/usr/share/icinga-editor/composer.json'));
-    $version = $composerInfo->version;
-} else {
-    $version = 'n/a';
-}
+$appMenu->addMenuItem(
+        _('MultiFlexi'),
+        'https://github.com/VitexSoftware/MultiFlexi',
+        'img/multiflexi.svg',
+        _('Run various tools on top of AbraFlexi and Stormware Pohoda '),
+        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/multiflexi/composer.json') )
+);
 
+$appMenu->addMenuItem(
+        _('AbraFlexi Digest'),
+        'https://github.com/VitexSoftware/AbraFlexi-Digest',
+        'img/abraflexi-digest.svg',
+        _('FlexiBee company status digest every day, week, month or year'),
+        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-digest/composer.json'))
+);
 
-$appMenu->addMenuItem('img/icinga_editor-logo.png', _('Icinga Editor'),
-        'http://monitoring.vitexsoftware.cz/', _('Editor Konfigurace monitoringu'),
-        new \Ease\TWB4\Label('info', $version));
+$utilsMenu->addMenuItem(
+        _('Jasper Compiler'),
+        'https://github.com/VitexSoftware/jaspercompiler',
+        'img/jaspercompiler.svg',
+        _('Commandline Jasper compiler with AbraFlexi custom reports support'),
+        new \Ease\TWB4\Label('info', sprintf(_('Current version %s'), '0.4'))
+);
 
-if (file_exists('/usr/share/flexplorer/composer.json')) {
-    $composerInfo = json_decode(file_get_contents('/usr/share/flexplorer/composer.json'));
-    $version = $composerInfo->version;
-}
+$utilsMenu->addMenuItem(
+        _('AbraFlexi Report Tools'),
+        'https://github.com/VitexSoftware/AbraFlexi-Report-Tools',
+        'img/abraflexi-report-tools.svg',
+        _('Commandline tools related to AbraFlexi custom reports '),
+        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-report-tools/composer.json'))
+);
 
+$utilsMenu->addMenuItem(
+        _('AbraFlexi Tools'),
+        'https://github.com/VitexSoftware/AbraFlexi-Tools',
+        'img/abraflexitools.svg',
+        _('Set of commandline tools related to testing AbraFlexi functionality'),
+        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-tools/composer.json'))
+);
 
-$appMenu->addMenuItem('img/flexplorer-logo.png', _('Flexplorer'),
-        '/flexplorer/', _('Vývojářský nástroj pro AbraFlexi REST API'),
-        new \Ease\TWB4\Label('info', $version));
-//$mainPageMenu->addMenuItem('img/flexihubee-logo.png', _('FlexiHUBee'),
-//    'https://www.vitexsoftware.cz/redmine/projects/flexihubee',
-//    _('Webová aplikace pro vzájemnou synchronizaci AbraFlexi serverů (zatím neveřejné)'));
+$utilsMenu->addMenuItem(
+        _('AbraFlexi Raiffeisen Bank'),
+        'https://github.com/VitexSoftware/Redmine2AbraFlexi',
+        'img/abraflexi-raiffeisenbank.svg',
+        _('Raiffeisen Bank Transaction / Statement puller for AbraFlexi'),
+        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-raiffeisenbank/composer.json'))
+);
 
+$utilsMenu->addMenuItem(
+        _('Redmine To AbraFlexi'),
+        'https://github.com/VitexSoftware/Redmine2AbraFlexi',
+        'img/abraflexi-raiffeisenbank.svg',
+        _('It generates an invoice in FlexiBee from the hours worked in Redmine'),
+        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-raiffeisenbank/composer.json'))
+);
 
-if (file_exists('/usr/share/flexiproxy/composer.json')) {
-    $composerInfo = json_decode(file_get_contents('/usr/share/flexiproxy/composer.json'));
-    $version = $composerInfo->version;
-}
+$utilsMenu->addMenuItem(
+        _('AbraFlexi Matcher'),
+        'https://github.com/VitexSoftware/abraflexi-matcher',
+        'img/abraflexi-matcher.svg',
+        _('It generates an invoice in FlexiBee from the hours worked in Redmine'),
+        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-matcher/composer.json'))
+);
 
-$appMenu->addMenuItem('img/flexiproxy-logo.png', _('FlexiProxy'),
-        'https://flexiproxy.vitexsoftware.cz/c/demo', _('AbraFlexi modifikátor'),
-        new \Ease\TWB4\Label('info', $version));
+$utilsMenu->addMenuItem(
+        _('AbraFlexi Reminder'),
+        'https://github.com/VitexSoftware/abraflexi-reminder',
+        'img/abraflexi-reminder.svg',
+        _('It generates an invoice in FlexiBee from the hours worked in Redmine'),
+        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-reminder/composer.json'))
+);
 
-if (file_exists('/usr/share/shop4flexibee/composer.json')) {
-    $composerInfo = json_decode(file_get_contents('/usr/share/shop4flexibee/composer.json'));
-    $version = $composerInfo->version;
-}
+$utilsMenu->addMenuItem(
+        _('Discomp To AbraFlexi'),
+        'https://github.com/Spoje-NET/discomp2abraflexi',
+        'img/discomp2abraflexi.svg',
+        _('Import Discomp pricelist into AbraFlexi'),
+        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/discomp2abraflexi/composer.json'))
+);
 
-$appMenu->addMenuItem('img/shop4flexibee-logo.svg', _('AbraFlexi ClientZone'),
-        'https://clientzone.vitexsoftware.cz/clientzone/login.php?email=demo@vitexsoftware.cz&password=demo',
-        _('ClientZone App for AbraFlexi'), new \Ease\TWB4\Label('info', $version));
 
 //$mainPageMenu->addMenuItem('img/tux-server.png', _('Hosting'), 'hosting.php',
 //    _('Specializovaný hosting'));
-//$oPage->container->addItem(new \Ease\Html\H1Tag(_('Applications')));
-//$oPage->container->addItem($appMenu);
-
-
 $mainPageRow = new \Ease\TWB4\Row();
 
 $activityColumn = $mainPageRow->addColumn(3, new \Ease\Html\H1Tag(_('Activity')));
@@ -102,8 +133,9 @@ $activityColumn->addItem(new \Ease\TWB4\Well('<h3>' . _('Coding activity last we
 
 $activityColumn->addItem(new \Ease\Html\DivTag(null, ['id' => 'ghfeed']));
 
+$activityColumn->setTagCss(['background-image' => 'url(img/magnetic-nymph-head.png)', 'background-repeat' => 'no-repeat', 'background-position' => 'bottom left', 'background-attachment' => 'fixed']);
 
-$mainPageRow->addColumn(7, [new \Ease\Html\H1Tag(_('Libraries')), $libMenu]);
+$mainPageRow->addColumn(7, [new \Ease\Html\H1Tag(_('Applications')), $appMenu, new \Ease\Html\H1Tag(_('Utilities')), $utilsMenu, new \Ease\Html\H1Tag(_('Libraries')), $libMenu]);
 //TODO: enable $mainPageRow->addColumn(2, new ui\NewPackages(10));
 
 
@@ -117,18 +149,11 @@ $oPage->addJavaScript('
 });   
 ');
 
-
 $oPage->container->addItem($mainPageRow);
-
-
-
 
 //$oPage->container->addItem(new \Ease\Html\H1Tag(_('News')));
 
 $newsRow = new \Ease\TWB4\Row();
-
-
-
 
 $newsColumn = $newsRow->addColumn(8,
 //    new \Ease\TWB4\Well([new ui\NewsShow(new News()), new \Ease\TWB4\LinkButton('articles.php',
@@ -136,12 +161,8 @@ $newsColumn = $newsRow->addColumn(8,
 //            'info')])
 );
 
-
-
-
 $oPage->container->addItem($newsRow);
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
-
 
 $oPage->draw();

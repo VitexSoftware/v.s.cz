@@ -1,10 +1,14 @@
 .footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: $secondary;
-  color: $white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: $secondary;
+    color: $white;
+    background-image: url(img/magnetic-nymph-head.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-attachment: fixed;
 }
 
 .copyright {
-  background-color: darken($secondary, 10%);
+    background-color: darken($secondary, 10%);
 }

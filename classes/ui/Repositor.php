@@ -14,10 +14,10 @@ namespace VSCZ\ui;
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
-class Repositor extends \Ease\Html\DivTag {
-
+class Repositor extends \Ease\Html\DivTag
+{
     /**
-     * @var array supported distro list 
+     * @var array supported distro list
      */
     public static $distributions = ['bionic' => 'ubuntu', 'buster' => 'debian', 'natty' => 'ubuntu',
         'sid' => 'debian', 'stretch' => 'debian'];
@@ -26,16 +26,17 @@ class Repositor extends \Ease\Html\DivTag {
     public $repoUrl = 'https://repo.vitexsoftware.com/';
 
     /**
-     * 
+     *
      * @var \VSCZ\Packages
      */
     private $packager;
 
     /**
-     * 
+     *
      * @param string $repodir
      */
-    public function __construct($repodir) {
+    public function __construct($repodir)
+    {
         parent::__construct();
         $this->packager = new \VSCZ\Packages();
         $this->repodir = $repodir;
@@ -44,15 +45,18 @@ class Repositor extends \Ease\Html\DivTag {
         }
     }
 
-    public function finalize() {
+    public function finalize()
+    {
         $repostats = new \VSCZ\AccessLog();
         $this->includeJavaScript('js/jquery.tablesorter.min.js');
         $this->addJavaScript('$("#packs").tablesorter();');
 
         $packages = self::flatPackageListing($this->packages);
 
-        $ptable = new \Ease\Html\TableTag(null,
-                ['class' => 'table table-dark table-striped', 'id' => 'packs']);
+        $ptable = new \Ease\Html\TableTag(
+            null,
+            ['class' => 'table table-dark table-striped', 'id' => 'packs']
+        );
         $ptable->setHeader([_('Package name'), _('Version'), _('Age'), _('Release date'),
             _('Size'),
             _('Package'), _('Installs'), _('Downloads')], ['class' => 'thead-dark']);
@@ -82,11 +86,13 @@ class Repositor extends \Ease\Html\DivTag {
 
             $package = new \Ease\TWB4\DropdownButton('<img style="width: 18px;" src="img/deb-package.png">&nbsp;' . _('Download'), 'success', $pkgs);
 
-            $pInfo = new \Ease\Html\ATag('package.php?package=' . $pName . '#',
-                    $pName,
-                    ['tabindex' => 0, 'class' => 'hinter', 'data-toggle' => 'popover',
+            $pInfo = new \Ease\Html\ATag(
+                'package.php?package=' . $pName . '#',
+                $pName,
+                ['tabindex' => 0, 'class' => 'hinter', 'data-toggle' => 'popover',
                 'data-trigger' => 'hover',
-                'data-content' => $pProps['Description']]);
+                'data-content' => $pProps['Description']]
+            );
             $ptable->addRowColumns(['<img class="debicon" src="' . $icon . '"> ' . $pInfo,
                 $pProps['Version'],
                 $packAge, $incTime, \Ease\Functions::humanFilesize($pProps['Size']),
@@ -98,7 +104,8 @@ class Repositor extends \Ease\Html\DivTag {
         $this->addItem($ptable);
     }
 
-    public static function htmlize($tableData) {
+    public static function htmlize($tableData)
+    {
         $htmlized = [];
         foreach ($tableData as $packageRow) {
             $htmlized[] = self::htmlizeRow($packageRow);
@@ -106,13 +113,15 @@ class Repositor extends \Ease\Html\DivTag {
         return $htmlized;
     }
 
-    public static function htmlizeRow($packageData) {
+    public static function htmlizeRow($packageData)
+    {
         unset($packageData['Maintainer']);
         $packageData['Depends'];
         return $packageData;
     }
 
-    public static function flatPackageListing($packagesTree) {
+    public static function flatPackageListing($packagesTree)
+    {
         $packages = [];
         foreach ($packagesTree as $distro => $inDistro) {
             foreach ($inDistro as $component => $inComponent) {
@@ -133,10 +142,11 @@ class Repositor extends \Ease\Html\DivTag {
 
     /**
      * Release loader
-     * 
+     *
      * @param string $distroname
      */
-    function loadInRelease($distroname) {
+    function loadInRelease($distroname)
+    {
         $candidates = $this->packager->listingQuery()->where('Distribution', $distroname);
         if ($candidates->count()) {
             foreach ($candidates as $candidat) {
@@ -146,16 +156,16 @@ class Repositor extends \Ease\Html\DivTag {
     }
 
     /**
-     * 
+     *
      * @param string $packagesFile
-     * 
+     *
      * @return array packages in Distro/Arch
      */
-    public function loadPackages($distroArchDir) {
+    public function loadPackages($distroArchDir)
+    {
         $packages = [];
         $pName = null;
 
         return $packages;
     }
-
 }

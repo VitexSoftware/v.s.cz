@@ -1,4 +1,5 @@
 <?php
+
 /**
  * VitexSoftware - monitoring
  *
@@ -43,4 +44,3 @@ $oPage->container->addItem(new ui\NewsEditor($news));
 $oPage->addItem(new ui\PageBottom());
 
 $oPage->draw();
-

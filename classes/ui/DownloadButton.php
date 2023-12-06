@@ -9,7 +9,6 @@ namespace VSCZ\ui;
  */
 class DownloadButton extends \Ease\Html\ATag
 {
-
     /**
      * Tlačítko ke stažení balíčku
      *
@@ -22,15 +21,17 @@ class DownloadButton extends \Ease\Html\ATag
             $properties = ['class' => 'btn btn-sexy'];
         } else {
             if (isset($properties['class'])) {
-                $properties['class'] = 'btn btn-sexy '.$properties['class'];
+                $properties['class'] = 'btn btn-sexy ' . $properties['class'];
             } else {
                 $properties['class'] = 'btn btn-sexy';
             }
         }
         $properties['style'] = 'margin-right: 5px;';
-        parent::__construct('download/'.key($packageInfo),
-            '<img style="width: 42px;" src="img/deb-package.png">&nbsp;'.key($packageInfo).'<br><small>'.current($packageInfo).'</small>',
-            $properties);
+        parent::__construct(
+            'download/' . key($packageInfo),
+            '<img style="width: 42px;" src="img/deb-package.png">&nbsp;' . key($packageInfo) . '<br><small>' . current($packageInfo) . '</small>',
+            $properties
+        );
     }
 
     function finalize()

@@ -1,4 +1,5 @@
 <?php
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,7 +13,6 @@ namespace VSCZ\ui;
  */
 class FBLikeButton extends \Ease\Html\IframeTag
 {
-
     /**
      * Like Button facebooku
      *
@@ -22,8 +22,9 @@ class FBLikeButton extends \Ease\Html\IframeTag
     {
         $Properties['scrcolling']  = 'no';
         $Properties['frameborder'] = 'no';
-        parent::__construct('http://www.facebook.com/plugins/like.php?href='.$src,
-            $Properties);
+        parent::__construct(
+            'http://www.facebook.com/plugins/like.php?href=' . $src,
+            $Properties
+        );
     }
-
 }

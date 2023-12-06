@@ -13,9 +13,10 @@ namespace VSCZ;
  *
  * @author vitex
  */
-class Deb extends \Ease\Brick {
-
-    static function getIcon($package) {
+class Deb extends \Ease\Brick
+{
+    static function getIcon($package)
+    {
         $icon = 'img/deb/' . $package . '.svg';
         if (!file_exists($icon)) {
             $icon = 'img/deb/' . $package . '.png';
@@ -26,8 +27,8 @@ class Deb extends \Ease\Brick {
         return $icon;
     }
 
-    static function getIconUrl($package) {
+    static function getIconUrl($package)
+    {
         return dirname(ui\WebPage::getUri()) . self::getIcon($package);
     }
-
 }

@@ -13,17 +13,18 @@ namespace VSCZ;
  *
  * @author vitex
  */
-class Files extends \Ease\SQL\Engine {
-
+class Files extends \Ease\SQL\Engine
+{
     public $myTable = 'files';
 
-    public function packageFiles($package) {
+    public function packageFiles($package)
+    {
         return $this->listingQuery()->leftJoin('packages ON packages.id = files.packages_id')->where('packages.Name', $package);
     }
 
-    public function getPackageFiles($package) {
+    public function getPackageFiles($package)
+    {
         $contents = $this->packageFiles($package);
         return $contents->count() ? $contents->fetchAll() : [];
     }
-
 }

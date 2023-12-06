@@ -1,4 +1,5 @@
 <?php
+
 /**
  * VitexSoftware - titulní strana
  *
@@ -7,6 +8,7 @@
  * @author     Vitex <vitex@hippy.cz>
  * @copyright  2012 Vitex@hippy.cz (G)
  */
+
 require_once 'includes/VSInit.php';
 
 $dwDir     = "/var/www/html/download/";
@@ -16,7 +18,7 @@ while (false !== ($entry     = $d->read())) {
     if ($entry[0] == '.') {
         continue;
     }
-    $downloads[$entry] = VSCZ\ui\WebPage::_format_bytes(filesize($dwDir.$entry));
+    $downloads[$entry] = VSCZ\ui\WebPage::_format_bytes(filesize($dwDir . $entry));
 }
 $d->close();
 ksort($downloads);
@@ -55,38 +57,61 @@ $packTabs     = new \Ease\TWB4\Tabs('PackTabs');
 $bootStrapTab = $packTabs->addTab('Twitter Bootstrap');
 
 
-$bootStrapTab->addItem(new \Ease\Html\DivTag(new VSCZ\ui\DownloadButton($tbPackage),
-    ['style' => 'float:left;']));
-$bootStrapTab->addItem(new \Ease\Html\DivTag(new \Ease\Html\ATag('http://twitter.github.com/bootstrap/',
+$bootStrapTab->addItem(new \Ease\Html\DivTag(
+    new VSCZ\ui\DownloadButton($tbPackage),
+    ['style' => 'float:left;']
+));
+$bootStrapTab->addItem(new \Ease\Html\DivTag(new \Ease\Html\ATag(
+    'http://twitter.github.com/bootstrap/',
     '<img style="height: 32px;" src="img/twitter-bootstrap.png">&nbsp; Official project homepage',
-    ['class' => 'btn btn-info']), ['style' => 'float:right;']));
+    ['class' => 'btn btn-info']
+), ['style' => 'float:right;']));
 $bootStrapTab->addItem('is a free collection of tools for creating websites and web applications. It contains HTML and CSS-based design templates for typography, forms, buttons, charts, navigation and other interface components, as well as optional JavaScript extensions.');
 
 $fuelUXTab = $packTabs->addTab('Fuel UX');
-$fuelUXTab->addItem(new \Ease\Html\DivTag(new VSCZ\ui\DownloadButton($fuelUXPackage),
-    ['style' => 'float:left;']));
-$fuelUXTab->addItem(new \Ease\Html\DivTag(new \Ease\Html\ATag('http://getfuelux.com/',
-    '<img style="height: 32px;" src="img/fuelux.png">',
-    ['class' => 'btn btn-info', 'style' => 'margin-left: 5px;']),
-    ['style' => 'float:right;']));
+$fuelUXTab->addItem(new \Ease\Html\DivTag(
+    new VSCZ\ui\DownloadButton($fuelUXPackage),
+    ['style' => 'float:left;']
+));
+$fuelUXTab->addItem(new \Ease\Html\DivTag(
+    new \Ease\Html\ATag(
+        'http://getfuelux.com/',
+        '<img style="height: 32px;" src="img/fuelux.png">',
+        ['class' => 'btn btn-info', 'style' => 'margin-left: 5px;']
+    ),
+    ['style' => 'float:right;']
+));
 $fuelUXTab->addItem('extends Twitter Bootstrap with additional lightweight JavaScript controls. Other benefits include easy installation into web projects, integrated scripts for customizing Bootstrap and Fuel UX, simple updates, and solid optimization for deployment. All functionality is covered by live documentation and unit tests.');
 
 
 $bsSwitchTab = $packTabs->addTab('Bootstrap Switch');
-$bsSwitchTab->addItem(new \Ease\Html\DivTag(new VSCZ\ui\DownloadButton($tbSwPackage),
-    ['style' => 'float:left;']));
-$bsSwitchTab->addItem(new \Ease\Html\DivTag(new \Ease\Html\ATag('http://www.bootstrap-switch.org/',
-    'Project Homepage', ['class' => 'btn btn-info']),
-    ['style' => 'float:right;']));
+$bsSwitchTab->addItem(new \Ease\Html\DivTag(
+    new VSCZ\ui\DownloadButton($tbSwPackage),
+    ['style' => 'float:left;']
+));
+$bsSwitchTab->addItem(new \Ease\Html\DivTag(
+    new \Ease\Html\ATag(
+        'http://www.bootstrap-switch.org/',
+        'Project Homepage',
+        ['class' => 'btn btn-info']
+    ),
+    ['style' => 'float:right;']
+));
 $bsSwitchTab->addItem('extends Twitter Bootstrap with switch widget.');
 
 $jqueryTab = $packTabs->addTab('jQuery');
-$jqueryTab->addItem(new \Ease\Html\DivTag(new VSCZ\ui\DownloadButton($jqueryPackage),
-    ['style' => 'float:left;']));
-$jqueryTab->addItem(new \Ease\Html\DivTag(new \Ease\Html\ATag('http://jquery.com/',
-    '<img style="height: 32px;" src="img/logo-jquery.png">',
-    ['class' => 'btn btn-info', 'style' => 'margin-left: 5px;']),
-    ['style' => 'float:right;']));
+$jqueryTab->addItem(new \Ease\Html\DivTag(
+    new VSCZ\ui\DownloadButton($jqueryPackage),
+    ['style' => 'float:left;']
+));
+$jqueryTab->addItem(new \Ease\Html\DivTag(
+    new \Ease\Html\ATag(
+        'http://jquery.com/',
+        '<img style="height: 32px;" src="img/logo-jquery.png">',
+        ['class' => 'btn btn-info', 'style' => 'margin-left: 5px;']
+    ),
+    ['style' => 'float:right;']
+));
 $jqueryTab->addItem('jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.');
 
 
@@ -104,22 +129,33 @@ $tabs = new \Ease\TWB4\Tabs('infotabs');
 
 $steps = new \Ease\Html\UlTag(null, ['class' => 'list-group']);
 
-$steps->addItemSmart('wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key | sudo apt-key add -',
-    ['class' => 'list-group-item']);
-$steps->addItemSmart('echo deb http://v.s.cz/ stable main | sudo tee /etc/apt/sources.list.d/vitexsoftware.list ',
-    ['class' => 'list-group-item']);
+$steps->addItemSmart(
+    'wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key | sudo apt-key add -',
+    ['class' => 'list-group-item']
+);
+$steps->addItemSmart(
+    'echo deb http://v.s.cz/ stable main | sudo tee /etc/apt/sources.list.d/vitexsoftware.list ',
+    ['class' => 'list-group-item']
+);
 $steps->addItemSmart('sudo aptitude update', ['class' => 'list-group-item']);
 
-$steps->addItemSmart('aptitude install libjs-twitter-bootstrap',
-    ['class' => 'list-group-item']);
-$steps->addItemSmart('aptitude install libjs-fuelux',
-    ['class' => 'list-group-item']);
-$steps->addItemSmart('aptitude install libjs-twitter-bootstrap-switch',
-    ['class' => 'list-group-item']);
+$steps->addItemSmart(
+    'aptitude install libjs-twitter-bootstrap',
+    ['class' => 'list-group-item']
+);
+$steps->addItemSmart(
+    'aptitude install libjs-fuelux',
+    ['class' => 'list-group-item']
+);
+$steps->addItemSmart(
+    'aptitude install libjs-twitter-bootstrap-switch',
+    ['class' => 'list-group-item']
+);
 
 
 $tabs->addTab(_('Debian installation'), $steps);
-$tabs->addTab(_('Usage'),
+$tabs->addTab(
+    _('Usage'),
     ('
 
 In order to make use of twitter bootstrap in your html, include the following lines in
@@ -147,7 +183,8 @@ your html header:
 </code>
 
 
-'));
+')
+);
 
 $container2->addItem($tabs);
 
@@ -160,13 +197,14 @@ $container2->addItem('<a href="http://debian.org/"><img style="width: 60px;" tit
 $container2->addItem('<a href="http://ubuntu.com/"><img style="width: 60px;" title="Ubuntu Linux" src="img/ubuntulogo.png"></a>');
 
 
-$container2->addItem(new \Ease\Html\ATag('http://bootsnipp.com/',
+$container2->addItem(new \Ease\Html\ATag(
+    'http://bootsnipp.com/',
     '<img style="height: 32px;" src="img/bootsnip.png">&nbsp; Design elements and code snippets',
-    ['class' => 'btn btn-info']));
+    ['class' => 'btn btn-info']
+));
 
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
 
 
 $oPage->draw();
-

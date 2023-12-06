@@ -9,9 +9,10 @@
 
 namespace VSCZ\ui;
 
-class MainPageMenu extends \Ease\TWB4\Widgets\MainPageMenu {
-//    ($title, $url, $image, $description, $buttonText = NULL, $properties = Array) 
-//    
+class MainPageMenu extends \Ease\TWB4\Widgets\MainPageMenu
+{
+//    ($title, $url, $image, $description, $buttonText = NULL, $properties = Array)
+//
 //    public function addMenuItem($image, $title, $url, $hint = null,
 //                                $version = null)
 //    {
@@ -20,16 +21,17 @@ class MainPageMenu extends \Ease\TWB4\Widgets\MainPageMenu {
 //    }
 
     /**
-     * 
-     * 
+     *
+     *
      * @param string $url
      * @param string $title
      * @param string $description
      * @param string $image
-     * 
+     *
      * @return \Ease\TWB4\Col
      */
-    public function addLibraryItem($url, $title, $description, $image = null, $packagist = null) {
+    public function addLibraryItem($url, $title, $description, $image = null, $packagist = null)
+    {
         $gitHubURL = str_replace('https://github.com/', '', $url);
         $vendorProject = substr(parse_url($url, PHP_URL_PATH), 1);
         $packagist = is_null($packagist) ? str_replace(['spoje-net', 'php-flexibee'], ['spoje.net', 'flexibee'], strtolower($vendorProject)) : $packagist;
@@ -40,24 +42,30 @@ class MainPageMenu extends \Ease\TWB4\Widgets\MainPageMenu {
         $this->includeJavaScript("https://buttons.github.io/buttons.js");
 
         $bottom = [new \Ease\Html\DivTag([
-                new \Ease\Html\ATag($url, _('Star'),
-                        [
+                new \Ease\Html\ATag(
+                    $url,
+                    _('Star'),
+                    [
                     'class' => "github-button",
                     'data-icon' => "octicon-star",
                     'data-color-scheme' => "no-preference: dark; light: dark; dark: dark;",
                     'data-size' => "large",
                     'data-show-count' => 'true',
                     'aria-label' => _(sprintf("Star %s on GitHub", $gitHubURL))
-                        ]),
+                    ]
+                ),
                 '&nbsp;',
-                new \Ease\Html\ATag($url . '/fork', _('Fork'),
-                        [
+                new \Ease\Html\ATag(
+                    $url . '/fork',
+                    _('Fork'),
+                    [
                     'class' => "github-button",
                     'data-icon' => "octicon-repo-forked",
                     'data-color-scheme' => "no-preference: dark; light: dark; dark: dark;",
                     'data-size' => "large", 'data-show-count' => 'true',
                     'aria-label' => _(sprintf("Fork %s on GitHub", $gitHubURL))
-                        ]),
+                    ]
+                ),
                 '<br clear="all"/>',
                 new PackagistBadge($vendorProject, $packagist, 'v'),
                 '<br>',
@@ -72,4 +80,14 @@ class MainPageMenu extends \Ease\TWB4\Widgets\MainPageMenu {
         return $this->addItem(new \Ease\TWB4\Col(3, $menuCard));
     }
 
+    /**
+     *
+     * @param string $composerPath
+     *
+     * @return string
+     */
+    static function composerVersion($composerPath)
+    {
+        return sprintf(_('Current version %s'), file_exists($composerPath) ? json_decode(file_get_contents($composerPath))->version : 'n/a');
+    }
 }

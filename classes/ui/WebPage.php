@@ -9,20 +9,26 @@ namespace VSCZ\ui;
  * @author    Vitex <vitex@hippy.cz>
  * @copyright 2009-2019 Vitex@hippy.cz (G)
  */
-class WebPage extends \Ease\TWB4\WebPage {
-
+class WebPage extends \Ease\TWB4\WebPage
+{
     public $bootstrapThemeCSS = 'css/freelancer.min.css';
 
     /**
      *
-     * @var \Ease\TWB4\Container 
+     * @var \Ease\TWB4\Container
      */
     public $container = null;
+
+    public $column1;
+    public $column2;
+    public $column3;
+
 
     /**
      * Základní objekt stránky
      */
-    function __construct() {
+    function __construct()
+    {
         parent::__construct('Vitex Software');
         $this->includeCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
         $this->includeCss('css/freelancer.min.css');
@@ -40,12 +46,13 @@ class WebPage extends \Ease\TWB4\WebPage {
 
     /**
      * Timestap to time convertor
-     * 
+     *
      * @param int|long $seconds
-     * 
+     *
      * @return Date
      */
-    public static function secondsToTime($seconds) {
+    public static function secondsToTime($seconds)
+    {
         $dtF = new \DateTime('@0');
         $dtT = new \DateTime("@$seconds");
         return $dtF->diff($dtT)->format('%a');
@@ -54,12 +61,12 @@ class WebPage extends \Ease\TWB4\WebPage {
     /**
      * Only Admin can continue
      */
-    function onlyForAdmin() {
+    function onlyForAdmin()
+    {
         if (!\Ease\Shared::user()->getSettingValue('admin')) {
             $this->addStatusMessage(_('Only for admin'), 'warning');
             $this->redirect('login.php');
             exit();
         }
     }
-
 }

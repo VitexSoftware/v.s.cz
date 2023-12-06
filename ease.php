@@ -1,4 +1,5 @@
 <?php
+
 /**
  * VitexSoftware - titulní strana
  *
@@ -29,13 +30,21 @@ $prehled->addItem('Jazykově závislé řetězce mají <a href="http://php.net/m
 
 $buttons = new \Ease\Container();
 
-$buttons->addItem(new \Ease\TWB4\LinkButton('/ease-framework/',
-        '<img src="img/apigen.png" width="20">'.' '._('Apigen documentation'),
-        'info btn-lg'));
-$buttons->addItem(new \Ease\TWB4\LinkButton('https://github.com/Vitexus/EaseFramework',
-        '<i class = "fa fa-github"></i>&nbsp;GitHub', 'info btn-lg'));
-$buttons->addItem(new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/EaseFramework/commits/master.atom',
-        '<i class = "fa fa-rss-square"></i>&nbsp;'._('RSS Feed'), 'info btn-lg'));
+$buttons->addItem(new \Ease\TWB4\LinkButton(
+    '/ease-framework/',
+    '<img src="img/apigen.png" width="20">' . ' ' . _('Apigen documentation'),
+    'info btn-lg'
+));
+$buttons->addItem(new \Ease\TWB4\LinkButton(
+    'https://github.com/Vitexus/EaseFramework',
+    '<i class = "fa fa-github"></i>&nbsp;GitHub',
+    'info btn-lg'
+));
+$buttons->addItem(new \Ease\TWB4\LinkButton(
+    'https://github.com/VitexSoftware/EaseFramework/commits/master.atom',
+    '<i class = "fa fa-rss-square"></i>&nbsp;' . _('RSS Feed'),
+    'info btn-lg'
+));
 
 $prehled->addItem($buttons);
 
@@ -63,8 +72,10 @@ $readme = '/usr/share/doc/ease-framework/README.md';
 
 if (file_exists($readme)) {
     $converter = new CommonMarkConverter();
-    $container->addItem(new \Ease\Html\DivTag($converter->convertToHtml(file_get_contents($readme)),
-            ['class' => 'jumbotron']));
+    $container->addItem(new \Ease\Html\DivTag(
+        $converter->convertToHtml(file_get_contents($readme)),
+        ['class' => 'jumbotron']
+    ));
 }
 
 

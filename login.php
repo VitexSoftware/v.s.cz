@@ -38,7 +38,7 @@ $oPage->container->addItem($loginFace);
 $loginRow = new \Ease\TWB4\Row();
 $infoColumn = $loginRow->addItem(new \Ease\TWB4\Col(4));
 
-$infoBlock = $infoColumn->addItem(new \Ease\TWB4\Well(new \Ease\Html\ImgTag('img/keys.svg',_('Password'),['class'=>'img-fluid', 'style'=>'height: 300px'])));
+$infoBlock = $infoColumn->addItem(new \Ease\TWB4\Well(new \Ease\Html\ImgTag('img/keys.svg', _('Password'), ['class' => 'img-fluid', 'style' => 'height: 300px'])));
 $infoBlock->addItem(_('Welcome to VitexSoftware.cz'));
 
 
@@ -47,8 +47,11 @@ $loginColumn = $loginRow->addItem(new \Ease\TWB4\Col(4));
 
 $submit = new \Ease\TWB4\SubmitButton(_('Sign in'), 'success');
 
-$loginPanel = new \Ease\TWB4\Panel(new \Ease\Html\ImgTag('img/vitexsoftwarelogo.png',
-                null, ['style' => 'width: 100px;']), 'success', null, $submit);
+$loginPanel = new \Ease\TWB4\Panel(new \Ease\Html\ImgTag(
+    'img/vitexsoftwarelogo.png',
+    null,
+    ['style' => 'width: 100px;']
+), 'success', null, $submit);
 $loginPanel->addItem(new \Ease\TWB4\FormGroup(_('Username'), new \Ease\Html\InputTextTag('login', $login)));
 $loginPanel->addItem(new \Ease\TWB4\FormGroup(_('Login'), new \Ease\Html\InputPasswordTag('password')));
 
@@ -62,7 +65,7 @@ $passRecoveryColumn = $loginRow->addItem(new \Ease\TWB4\Col(4, new \Ease\TWB4\Li
 $passRecoveryColumn->additem(new \Ease\TWB4\LinkButton('createaccount.php', '<i class="fa fa-user"></i>
 ' . _('Create account'), 'success'));
 
-$oPage->container->addItem(new \Ease\TWB4\Form(['name'=>'login'], $loginRow));
+$oPage->container->addItem(new \Ease\TWB4\Form(['name' => 'login'], $loginRow));
 
 $oPage->addItem(new ui\PageBottom());
 

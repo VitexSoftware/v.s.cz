@@ -11,10 +11,11 @@ use VSCZ\ui\NewPackages;
  * @author     Vitex <vitex@hippy.cz>
  * @copyright  2012-2021 Vitex@hippy.cz (G)
  */
+
 require_once 'includes/VSInit.php';
 
 
-$packages = [['title'=>'n/a','description'=>'','icon'=>'','date'=>'']]; //TODO:  new NewPackages();
+$packages = [['title' => 'n/a','description' => '','icon' => '','date' => '']]; //TODO:  new NewPackages();
 
 
 #header("Content-Type: application/xml; charset=UTF-8");
@@ -36,13 +37,13 @@ foreach ($packages->getRssData(\Ease\WebPage::getRequestValue('search')) as $ent
     $item = $channel->addChild("item");
 
     $item->addChild("title", $entry['title']);
-    $item->addChild("link", 'https://vitexsoftware.cz/'. $entry['link']);
+    $item->addChild("link", 'https://vitexsoftware.cz/' . $entry['link']);
     $item->addChild("description", $entry['description']);
-    $item->addChild("pubDate",$entry['date']);
-    
+    $item->addChild("pubDate", $entry['date']);
+
     $enclosure = $item->addChild('enclosure');
     $enclosure->addAttribute('url', $entry['icon']);
-    $enclosure->addAttribute('type', mime_content_type($entry['icon']) );
+    $enclosure->addAttribute('type', mime_content_type($entry['icon']));
 }
 
 echo $xml->asXML();

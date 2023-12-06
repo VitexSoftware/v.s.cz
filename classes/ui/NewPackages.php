@@ -13,31 +13,32 @@ namespace VSCZ\ui;
  *
  * @author vitex
  */
-class NewPackages extends \Ease\Html\SpanTag {
-
+class NewPackages extends \Ease\Html\SpanTag
+{
     use \Ease\SQL\Orm;
 
     /**
      *
-     * @var string table name we work on 
+     * @var string table name we work on
      */
     public $myTable = 'vs_access_log';
     public $repobase = '/home/vitex/WWW/repo.vitexsoftware.cz/';
     public $libdir = '/var/lib/freight/apt';
 
     /**
-     * 
-     * @var array 
+     *
+     * @var array
      */
     private $packagesByTime = [];
 
     /**
-     * 
+     *
      * @param type $pkgFile
-     * 
+     *
      * @return type
      */
-    public function readpackages($pkgFile) {
+    public function readpackages($pkgFile)
+    {
         $packages = [];
         $pName = null;
         $handle = fopen($pkgFile, "r");
@@ -88,11 +89,12 @@ class NewPackages extends \Ease\Html\SpanTag {
     }
 
     /**
-     * 
+     *
      * @param mixed $content
      * @param array $properties
      */
-    public function __construct($howmuch=10, $properties = []) {
+    public function __construct($howmuch = 10, $properties = [])
+    {
 
 
         $packager = new \VSCZ\Packages($howmuch);
@@ -108,17 +110,20 @@ class NewPackages extends \Ease\Html\SpanTag {
             'port' => constant('STATS_PORT')
         ]);
 
-        parent::__construct(new \Ease\Html\H1Tag(_('Fresh Packages'),
-                        ['style' => 'text-align: center;']));
+        parent::__construct(new \Ease\Html\H1Tag(
+            _('Fresh Packages'),
+            ['style' => 'text-align: center;']
+        ));
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @param array $pProps
      * @return \Ease\TWB4\Card
      */
-    public function debInfoBlock($pProps) {
+    public function debInfoBlock($pProps)
+    {
         $pName = trim($pProps['Name']);
         $packFile = trim($pProps['Filename']);
         $icon = 'img/deb/' . $pName . '.svg';
@@ -130,9 +135,11 @@ class NewPackages extends \Ease\Html\SpanTag {
         }
         $counts = $this->getPullCounts($pProps['Filename'], $pProps['Version']);
 
-        $download = new \Ease\Html\ATag('http://repo.vitexsoftware.cz/' . $pProps['Filename'],
-                '<img style="width: 30px;" src="img/deb-package.png">&nbsp;' . ' ' . \Ease\Functions::formatBytes(intval($pProps['Size'])),
-                ['class' => 'btn btn-success']);
+        $download = new \Ease\Html\ATag(
+            'http://repo.vitexsoftware.cz/' . $pProps['Filename'],
+            '<img style="width: 30px;" src="img/deb-package.png">&nbsp;' . ' ' . \Ease\Functions::formatBytes(intval($pProps['Size'])),
+            ['class' => 'btn btn-success']
+        );
 
         $icon = new \Ease\Html\ImgTag($icon, $pName, ['alt' => $pName, 'class' => 'card-img-top']);
         new \Ease\Html\H5Tag($pName . ' ' . $pProps['Version']);
@@ -152,13 +159,13 @@ class NewPackages extends \Ease\Html\SpanTag {
 
     /**
      * RSS Feed data
-     * 
+     *
      * @return array
      */
-    public function getRssData($filter = null) {
+    public function getRssData($filter = null)
+    {
         $rssData = [];
         foreach ($this->packagesByTime as $packageInfo) {
-
             if (!is_null($filter) && (!strstr($packageInfo['Name'], $filter) && !strstr($packageInfo['Description'], $filter) )) {
                 continue;
             }
@@ -176,29 +183,35 @@ class NewPackages extends \Ease\Html\SpanTag {
 
     /**
      * Get Package pull counts
-     * 
+     *
      * @param string $package package base name
-     * 
+     *
      * @return array of int
      */
-    public function getPullCounts($package) {
+    public function getPullCounts($package)
+    {
         $params = [':package' => sprintf('%%%s%%', basename($package)), ':agent' => 'Debian APT%%'];
         $installs = $this->getFluentPDO()->from('repo_access_log')->where('request_uri LIKE :package AND agent LIKE :agent', $params)->count();
         $downloads = $this->getFluentPDO()->from('repo_access_log')->where('request_uri LIKE :package AND agent NOT LIKE :agent', $params)->count();
         return ['installs' => $installs, 'downloads' => $downloads];
     }
 
-    public function finalize() {
+    public function finalize()
+    {
         foreach ($this->packagesByTime as $pProps) {
             $this->addItem(new \Ease\Html\PTag($this->debInfoBlock($pProps)));
         }
 
         $this->addItem(new \Ease\Html\PTag('<br>'));
 
-        $this->addItem(new \Ease\Html\PTag(new \Ease\Html\ATag('debs.php',
-                                '<img style="width: 30px;" src="img/deb-package.png">&nbsp;' . ' ' . _('All Packages') . ' <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-', ['class' => 'btn btn-info btn-lg btn-block']),
-                        ['style' => 'text-align: center;']));
+        $this->addItem(new \Ease\Html\PTag(
+            new \Ease\Html\ATag(
+                'debs.php',
+                '<img style="width: 30px;" src="img/deb-package.png">&nbsp;' . ' ' . _('All Packages') . ' <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+',
+                ['class' => 'btn btn-info btn-lg btn-block']
+            ),
+            ['style' => 'text-align: center;']
+        ));
     }
-
 }

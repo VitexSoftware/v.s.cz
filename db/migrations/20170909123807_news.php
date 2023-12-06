@@ -36,7 +36,5 @@ class News extends AbstractMigration
             ->addColumn('author', 'integer')
             ->addColumn('language', 'string', ['limit' => 2])
             ->create();
-
-
     }
 }

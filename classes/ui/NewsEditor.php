@@ -1,4 +1,5 @@
 <?php
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,8 +16,8 @@ namespace VSCZ\ui;
 class NewsEditor extends \Ease\Html\DivTag
 {
     /**
-     * News 
-     * @var News 
+     * News
+     * @var News
      */
     public $newsEngine = null;
 
@@ -35,26 +36,37 @@ class NewsEditor extends \Ease\Html\DivTag
     {
         $oUser = \Ease\Shared::user();
         if ($oUser->getSettingValue('admin')) {
-            $articles = $this->newsEngine->getColumnsFromSQL('*', null, 'id',
-                'id');
+            $articles = $this->newsEngine->getColumnsFromSQL(
+                '*',
+                null,
+                'id',
+                'id'
+            );
         } else {
-            $articles = $this->newsEngine->dblink->queryToArray('SELECT * FROM '.$this->newsEngine->getMyTable().' WHERE author = '.$oUser->getUserID(),
-                'id', 'id');
+            $articles = $this->newsEngine->dblink->queryToArray(
+                'SELECT * FROM ' . $this->newsEngine->getMyTable() . ' WHERE author = ' . $oUser->getUserID(),
+                'id',
+                'id'
+            );
         }
         $list     = new \Ease\Html\OlTag();
         foreach ($articles as $articleID => $article) {
-
             $listRow = new \Ease\Html\Span();
 
             $listRow->addItem(
-                new \Ease\Html\ATag('?id='.$articleID, $article['title']));
+                new \Ease\Html\ATag('?id=' . $articleID, $article['title'])
+            );
 
 
             $listRow->addItem('&nbsp;(');
 
             $listRow->addItem(
-                new \Ease\TWB4\LinkButton('?delete='.$articleID, _('Delete'),
-                'warning btn-xs'));
+                new \Ease\TWB4\LinkButton(
+                    '?delete=' . $articleID,
+                    _('Delete'),
+                    'warning btn-xs'
+                )
+            );
 
             $listRow->addItem(')');
 
@@ -74,12 +86,16 @@ class NewsEditor extends \Ease\Html\DivTag
     public function articleForm()
     {
         $form = new \Ease\TWB4\Form('NewsArticle');
-        $form->addItem(new \Ease\Html\InputHiddenTag('id',
-            $this->newsEngine->getMyKey()));
+        $form->addItem(new \Ease\Html\InputHiddenTag(
+            'id',
+            $this->newsEngine->getMyKey()
+        ));
         $form->addInput(new \Ease\Html\InputTextTag('title'), _('Name'));
         $form->addInput(new WISWYG('text'), _('Text'));
-        $form->addInput(new \Ease\Html\Select('language',
-            [ 'cs' => _('Czech'), 'en' => _('English')]), _('Language'));
+        $form->addInput(new \Ease\Html\Select(
+            'language',
+            [ 'cs' => _('Czech'), 'en' => _('English')]
+        ), _('Language'));
         $form->addItem(new \Ease\TWB4\SubmitButton('Ok', 'success'));
         $form->fillUp($this->newsEngine->getData());
         return $form;
