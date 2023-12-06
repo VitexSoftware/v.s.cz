@@ -131,6 +131,13 @@ $utilsMenu->addMenuItem(
         new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/discomp2abraflexi/composer.json'))
 );
 
+$utilsMenu->addMenuItem(
+        _('Debs to Deb'),
+        'https://github.com/VitexSoftware/debs2deb',
+        'img/debs2deb.svg',
+        _('Gives you offline debian repository as debian package'),
+        new \Ease\TWB4\Label('info',  sprintf(_('Current version %s'),'1.1'))
+);
 
 //$mainPageMenu->addMenuItem('img/tux-server.png', _('Hosting'), 'hosting.php',
 //    _('Specializovaný hosting'));
