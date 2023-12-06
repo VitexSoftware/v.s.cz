@@ -67,7 +67,7 @@ class MainMenu extends \Ease\TWB4\Navbar
             //                    '/php-vitexsoftware-ease-bricks-doc' => 'Ease Framework Bricks',
                     '/php-vitexsoftware-ease-fluentpdo-doc/namespaces/ease-sql.html' => '<img src="/img/php-ease-fluentpdo.svg" style="height: 20px;"> Ease FluentPDO',
                     '/php-vitexsoftware-ease-html-doc/namespaces/ease.html' => '<img src="/img/ease-html.svg" style="width: 20px;"> EasePHP Framework HTML',
-                    '/php-vitexsoftware-rbczpremiumapi/html/' => '<img src="/img/php-rbczpremiumapi.svg" style="width: 20px;"> ' . _('Raiffeisenbank Premium API client library'),
+                    '/php-vitexsoftware-rbczpremiumapi/html/index.html' => '<img src="/img/php-rbczpremiumapi.svg" style="width: 20px;"> ' . _('Raiffeisenbank Premium API client library'),
                 ]
         );
 
