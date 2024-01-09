@@ -6,7 +6,7 @@ namespace VSCZ;
  * VitexSoftware - titulní strana
  *
  * @author     Vitex <vitex@hippy.cz>
- * @copyright  2012-2022 Vitex@hippy.cz (G)
+ * @copyright  2012-2023 Vitex@hippy.cz (G)
  */
 require_once 'includes/VSInit.php';
 
@@ -36,10 +36,10 @@ $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap4', _
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-fluentpdo', _('Ease FluentPDO'), _('FluentPDO support for Ease Framework'), null, 'vitexsoftware/ease-fluentpdo');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets-flexibee', _('TWB3 AbraFlexi widgets'), _('Several Bootstrap3 Widgets for AbraFlexi'), null, 'vitexsoftware/ease-twbootstrap-widgets-flexibee');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets-flexibee', _('TWB4 AbraFlexi widgets'), _('Several Bootstrap4 Widgets for AbraFlexi'), null, 'vitexsoftware/ease-twbootstrap4-widgets-flexibee');
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-flexibee-datatables', _('AbraFlexi datables'), _('Show AbraFlexi data in Datatables widget'), 'img/php-flexibee-datatables.png', 'vitexsoftware/php-datatables-flexibee');
-$libMenu->addLibraryItem('https://github.com/Spoje-NET/ipex-b2b', _('IPEX B2B'), _('Library for interaction with restapi.ipex.cz'), 'img/ipex-b2b-logo.png', 'spoje.net/ipexb2b');
-$libMenu->addLibraryItem('https://github.com/Spoje-NET/php-subreg', _('php-Subreg'), _('Easy interaction with subreg.cz'), 'img/php-subreg-logo.png', 'spoje.net/subreg');
-$libMenu->addLibraryItem('https://github.com/Spoje-NET/PohodaSQL', _('PohodaSQL'), _('PHP Library for Pohoda SQL Tables access '), 'img/php-pohoda-sql.png', 'spojenet/pohoda-sql');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-flexibee-datatables', _('AbraFlexi datables'), _('Show AbraFlexi data in Datatables widget'), 'img/php-flexibee-datatables.png', 'vitexsoftware/php-datatables-abraflexi');
+$libMenu->addLibraryItem('https://github.com/Spoje-NET/ipex-b2b', _('IPEX B2B'), _('Library for interaction with restapi.ipex.cz'), 'img/ipex-b2b-logo.png', 'spojenet/ipexb2b');
+$libMenu->addLibraryItem('https://github.com/Spoje-NET/php-subreg', _('php-Subreg'), _('Easy interaction with subreg.cz'), 'img/php-subreg-logo.png', 'spojenet/subreg');
+$libMenu->addLibraryItem('https://github.com/Spoje-NET/PohodaSQL', _('PohodaSQL'), _('PHP Library for Pohoda SQL Tables access '), 'img/pohodaSQL.svg', 'spojenet/pohoda-sql');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets', _('TWB3 Widgets'), _('Twitter Bootstrap 3 Widgets for Ease Framework'), null, 'vitexsoftware/ease-twbootstrap-widgets');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap', _('Ease Twbootstrap'), _('Twitter Bootstrap 3 support for Ease Framework'), null, 'vitexsoftware/ease-twbootstrap');
 
@@ -94,18 +94,18 @@ $utilsMenu->addMenuItem(
 
 $utilsMenu->addMenuItem(
         _('AbraFlexi Raiffeisen Bank'),
-        'https://github.com/VitexSoftware/Redmine2AbraFlexi',
+        'https://github.com/VitexSoftware/abraflexi-raiffeisenbank',
         'img/abraflexi-raiffeisenbank.svg',
         _('Raiffeisen Bank Transaction / Statement puller for AbraFlexi'),
         new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-raiffeisenbank/composer.json'))
 );
 
 $utilsMenu->addMenuItem(
-        _('Redmine To AbraFlexi'),
-        'https://github.com/VitexSoftware/Redmine2AbraFlexi',
-        'img/abraflexi-raiffeisenbank.svg',
-        _('It generates an invoice in FlexiBee from the hours worked in Redmine'),
-        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-raiffeisenbank/composer.json'))
+        _('AbraFlexi Revolut Bank'),
+        'https://github.com/VitexSoftware/AbraFlexi-Revolut',
+        'img/abraflexi-revolut.svg',
+        _('Revolut Bank Statement importer for AbraFlexi'),
+        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-revolut/composer.json'))
 );
 
 $utilsMenu->addMenuItem(
@@ -148,6 +148,15 @@ $utilsMenu->addMenuItem(
         _('Gives you offline debian repository as debian package'),
         new \Ease\TWB4\Label('info',  sprintf(_('Current version %s'),'1.1'))
 );
+
+$utilsMenu->addMenuItem(
+        _('Subreg to AbraFlexi'),
+        'https://github.com/Spoje-NET/subreg2abraflexi',
+        'img/subreg2abraflexi.svg',
+        _('Import Subreg Pricelist into AbraFlexi'),
+        new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/subreg2abraflexi/composer.json'))
+);
+
 
 //$mainPageMenu->addMenuItem('img/tux-server.png', _('Hosting'), 'hosting.php',
 //    _('Specializovaný hosting'));

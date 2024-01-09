@@ -46,16 +46,10 @@ class PageBottom extends \Ease\Html\FooterTag
             _('Applications'),
             ['style' => 'list-style-type: none']
         ));
-        $listB1->addItemSmart(new \Ease\Html\ATag('cease.php', 'Ease Framework'));
-        $listB1->addItemSmart(new \Ease\Html\ATag(
-            'monitoring.php',
-            'Icinga Editor'
-        ));
-        $listB1->addItemSmart(new \Ease\Html\ATag('/flexplorer', 'FlexPlorer'));
-        $listB1->addItemSmart(new \Ease\Html\ATag(
-            'http://flexiproxy.vitexsoftware.cz/',
-            'FlexyProxy'
-        ));
+//        $listB1->addItemSmart(new \Ease\Html\ATag('cease.php', 'Ease Framework'));
+//        $listB1->addItemSmart(new \Ease\Html\ATag('monitoring.php','Icinga Editor'));
+//        $listB1->addItemSmart(new \Ease\Html\ATag('/flexplorer', 'FlexPlorer'));
+        $listB1->addItemSmart(new \Ease\Html\ATag('https://multiflexi.vitexsoftware.com/','MultiFlexi'));
 
         $colC = $rowFluid1->addItem(new \Ease\TWB4\Col(2));
         $listC1 = $colC->addItem(new \Ease\Html\UlTag(

@@ -22,10 +22,10 @@ class MainMenu extends \Ease\TWB4\Navbar
         parent::__construct($brand, $properties);
         $this->addTagClass('navbar-inverse bg-inverse navbar-toggleable-sm  navbar-expand-lg bg-secondary text-uppercase fixed-top');
 
-        $this->addMenuItem(new \Ease\Html\ATag(
-            'debs.php',
-            '<img style="height: 19px;" src="img/deb-package.png"> ' . _('Debian Packages')
-        ));
+//        $this->addMenuItem(new \Ease\Html\ATag(
+//            'debs.php',
+//            '<img style="height: 19px;" src="img/deb-package.png"> ' . _('Debian Packages')
+//        ));
         //
 //        $this->addDropDownMenu(
 //            _('Projects'),
@@ -44,6 +44,7 @@ class MainMenu extends \Ease\TWB4\Navbar
 
 
 
+/*
 
         $this->addDropDownMenu(
             '<img style="height: 19px;" src="img/abra-flexibee-square.png"> ' . _('AbraFlexi'),
@@ -54,7 +55,7 @@ class MainMenu extends \Ease\TWB4\Navbar
                     '/flexplorer/' => '<img style="height: 20px" src="https://repo.vitexsoftware.cz/imgdeb/flexplorer.png"> ' . _('FlexPlorer'),
                 ]
         );
-
+*/
         $this->addDropDownMenu(
             '<img style="height: 19px;" src="img/docs.svg"> ' . _('Docs'),
             [
@@ -78,8 +79,8 @@ class MainMenu extends \Ease\TWB4\Navbar
 
         $this->addMenuItem(new \Ease\Html\ATag('attic.php', '<img style="height: 19px;" src="img/Treasure_chest.svg"> ' . _('Old projects')));
 
-        $this->addMenuItem(new \Ease\Html\ATag('umim.php', _('My Skills')));
-        $this->addMenuItem(new \Ease\Html\ATag('reference.php', _('Reference')));
+//        $this->addMenuItem(new \Ease\Html\ATag('umim.php', _('My Skills')));
+//        $this->addMenuItem(new \Ease\Html\ATag('reference.php', _('Reference')));
 //        $this->addMenuItem(new \Ease\Html\ATag('cenik.php', _('Pricelist')));
         $this->addMenuItem(new \Ease\Html\ATag('kontakt.php', _('Contact')), 'left');
 
