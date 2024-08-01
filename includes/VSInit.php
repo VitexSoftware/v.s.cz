@@ -38,3 +38,5 @@ $oUser = \Ease\User::singleton();
 
 /* @var $oPage VSWebPage */
 $oPage = new ui\WebPage();
+$oPage->includeJavaScript('js/matomo.js');
+
