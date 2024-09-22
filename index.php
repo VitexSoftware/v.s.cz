@@ -124,7 +124,7 @@ $utilsMenu->addMenuItem(
     _('AbraFlexi Matcher'),
     'https://github.com/VitexSoftware/abraflexi-matcher',
     'img/abraflexi-matcher.svg',
-    _('It generates an invoice in FlexiBee from the hours worked in Redmine'),
+    _('Match Invoices'),
     new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-matcher/composer.json')),
 );
 
@@ -132,7 +132,7 @@ $utilsMenu->addMenuItem(
     _('AbraFlexi Reminder'),
     'https://github.com/VitexSoftware/abraflexi-reminder',
     'img/abraflexi-reminder.svg',
-    _('It generates an invoice in FlexiBee from the hours worked in Redmine'),
+    _('Remind your customers'),
     new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-reminder/composer.json')),
 );
 
