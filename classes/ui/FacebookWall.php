@@ -1,9 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
+/**
+ * This file is part of the VitexSoftware package
+ *
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace VSCZ\ui;
 
 /**
- * Description of FacebookWall
+ * Description of FacebookWall.
  *
  * @author vitex
  */
@@ -13,28 +26,29 @@ class FacebookWall extends \Ease\Html\DivTag
     {
         $properties['class'] = 'fb-page';
 
-        $properties['data-href']                  = 'https://www.facebook.com/VitexSoftware/';
-        $properties['data-tabs']                  = 'timeline,events,messages';
-        $properties['data-width']                 = 1000;
-        $properties['data-small-header']          = 'true';
+        $properties['data-href'] = 'https://www.facebook.com/VitexSoftware/';
+        $properties['data-tabs'] = 'timeline,events,messages';
+        $properties['data-width'] = 1000;
+        $properties['data-small-header'] = 'true';
         $properties['data-adapt-container-width'] = 'true';
-        $properties['data-hide-cover']            = 'false';
-        $properties['data-show-facepile']         = 'true';
+        $properties['data-hide-cover'] = 'false';
+        $properties['data-show-facepile'] = 'true';
 
         parent::__construct(new \Ease\Html\DivTag(
-            '<blockquote cite="' . $properties['data-href'] . '"><a href="' . $properties['data-href'] . '">' . $content . '</a></blockquote>',
-            ['class' => 'fb-xfbml-parse-ignore']
+            '<blockquote cite="'.$properties['data-href'].'"><a href="'.$properties['data-href'].'">'.$content.'</a></blockquote>',
+            ['class' => 'fb-xfbml-parse-ignore'],
         ), $properties);
     }
 
-    public function finalize()
+    public function finalize(): void
     {
-        \Ease\Shared::webPage()->addJavaScript('
+        \Ease\Shared::webPage()->addJavaScript(<<<'EOD'
+
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : \'144742582740786\',
+      appId      : '144742582740786',
       xfbml      : true,
-      version    : \'v2.6\'
+      version    : 'v2.6'
     });
   };
 
@@ -44,6 +58,7 @@ class FacebookWall extends \Ease\Html\DivTag
      js = d.createElement(s); js.id = id;
      js.src = "//connect.facebook.net/cs_CZ/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
-   }(document, \'script\', \'facebook-jssdk\'));            ');
+   }(document, 'script', 'facebook-jssdk'));
+EOD);
     }
 }

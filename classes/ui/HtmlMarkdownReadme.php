@@ -1,9 +1,16 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+declare(strict_types=1);
+
+/**
+ * This file is part of the VitexSoftware package
+ *
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ\ui;
@@ -11,7 +18,7 @@ namespace VSCZ\ui;
 use League\CommonMark\CommonMarkConverter;
 
 /**
- * Description of HtmlMarkdownReadme
+ * Description of HtmlMarkdownReadme.
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
@@ -19,9 +26,10 @@ class HtmlMarkdownReadme extends \Ease\Html\DivTag
 {
     public function __construct($homepage, $version)
     {
-        $cached = sys_get_temp_dir() . '/' . md5($homepage . $version) . '.md';
+        $cached = sys_get_temp_dir().'/'.md5($homepage.$version).'.md';
+
         if (!file_exists($cached)) {
-            $raw = str_replace('github', 'raw.githubusercontent', $homepage) . '/master/README.md';
+            $raw = str_replace('github', 'raw.githubusercontent', $homepage).'/master/README.md';
             file_put_contents($cached, file_get_contents($raw));
         }
 

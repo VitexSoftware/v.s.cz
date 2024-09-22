@@ -1,11 +1,24 @@
 <?php
 
+declare(strict_types=1);
+
+/**
+ * This file is part of the VitexSoftware package
+ *
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace VSCZ;
 
 use Ease\SQL\Orm;
 
 /**
- * VitexSoftware Homepage - User Class
+ * VitexSoftware Homepage - User Class.
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  * @copyright  2015-2020 Vitex Software
@@ -13,7 +26,6 @@ use Ease\SQL\Orm;
 class User extends \Ease\User
 {
     use Orm;
-
     public $useKeywords = [
         'login' => 'STRING',
         'firstname' => 'STRING',
@@ -29,45 +41,33 @@ class User extends \Ease\User
 
     /**
      * Tabulka uživatelů.
-     *
-     * @var string
      */
-    public $myTable = 'user';
+    public string $myTable = 'user';
 
     /**
      * Sloupeček obsahující datum vložení záznamu do shopu.
-     *
-     * @var string
      */
-    public $createColumn = 'DatCreate';
+    public string $createColumn = 'DatCreate';
 
     /**
      * Slopecek obsahujici datum poslení modifikace záznamu do shopu.
-     *
-     * @var string
      */
-    public $lastModifiedColumn = 'DatSave';
+    public string $lastModifiedColumn = 'DatSave';
 
     /**
      * Budeme používat serializovaná nastavení uložená ve sloupečku.
-     *
-     * @var string
      */
-    public $settingsColumn = 'settings';
+    public string $settingsColumn = 'settings';
 
     /**
      * Klíčové slovo.
-     *
-     * @var string
      */
-    public $keyword = 'user';
+    public string $keyword = 'user';
 
     /**
      * Jmenný sloupec.
-     *
-     * @var string
      */
-    public $nameColumn = 'login';
+    public string $nameColumn = 'login';
 
     /**
      * Vrací odkaz na ikonu.
@@ -77,11 +77,12 @@ class User extends \Ease\User
     public function getIcon()
     {
         $Icon = $this->GetSettingValue('icon');
-        if (is_null($Icon)) {
+
+        if (null === $Icon) {
             return parent::getIcon();
-        } else {
-            return $Icon;
         }
+
+        return $Icon;
     }
 
     /**
@@ -101,12 +102,13 @@ class User extends \Ease\User
      */
     public function getUserName()
     {
-        $longname = trim($this->getDataValue('firstname') . ' ' . $this->getDataValue('lastname'));
-        if (strlen($longname)) {
+        $longname = trim($this->getDataValue('firstname').' '.$this->getDataValue('lastname'));
+
+        if (\strlen($longname)) {
             return $longname;
-        } else {
-            return parent::getUserName();
         }
+
+        return parent::getUserName();
     }
 
     public function getEmail()
@@ -120,58 +122,66 @@ class User extends \Ease\User
      *
      * @param array $formData pole dat z přihlaš. formuláře např. $_REQUEST
      *
-     * @return null|boolean
+     * @return null|bool
      */
     public function tryToLogin($formData)
     {
         if (empty($formData)) {
             return;
         }
-        $login = addSlashes($formData[$this->loginColumn]);
-        $password = addSlashes($formData[$this->passwordColumn]);
+
+        $login = addslashes($formData[$this->loginColumn]);
+        $password = addslashes($formData[$this->passwordColumn]);
+
         if (empty($login)) {
             $this->addStatusMessage(_('missing login'), 'error');
 
             return;
         }
+
         if (empty($password)) {
             $this->addStatusMessage(_('missing password'), 'error');
 
             return;
         }
+
         if ($this->loadFromSQL([$this->loginColumn => $login])) {
             $this->setObjectName();
+
             if (
                 $this->passwordValidation(
                     $password,
-                    $this->getDataValue($this->passwordColumn)
+                    $this->getDataValue($this->passwordColumn),
                 )
             ) {
                 if ($this->isAccountEnabled()) {
                     return $this->loginSuccess();
-                } else {
-                    $this->userID = null;
+                }
 
-                    return false;
-                }
-            } else {
                 $this->userID = null;
-                if (!empty($this->getData())) {
-                    $this->addStatusMessage(_('invalid password'), 'error');
-                }
-                $this->dataReset();
 
                 return false;
             }
-        } else {
-            $this->addStatusMessage(sprintf(
-                _('user %s does not exist'),
-                $login,
-                'error'
-            ));
+
+            $this->userID = null;
+
+            if (!empty($this->getData())) {
+                $this->addStatusMessage(_('invalid password'), 'error');
+            }
+
+            $this->dataReset();
 
             return false;
         }
+
+        $this->addStatusMessage(sprintf(
+            _('user %s does not exist'),
+            $login,
+            'error',
+        ));
+
+        return false;
+
         return $result;
     }
 
@@ -187,10 +197,12 @@ class User extends \Ease\User
     {
         if ($plainPassword && $encryptedPassword) {
             $passwordStack = explode(':', $encryptedPassword);
-            if (sizeof($passwordStack) != 2) {
+
+            if (\count($passwordStack) !== 2) {
                 return false;
             }
-            if (md5($passwordStack[1] . $plainPassword) == $passwordStack[0]) {
+
+            if (md5($passwordStack[1].$plainPassword) === $passwordStack[0]) {
                 return true;
             }
         }
@@ -208,13 +220,14 @@ class User extends \Ease\User
     public static function encryptPassword($plainTextPassword)
     {
         $encryptedPassword = '';
+
         for ($i = 0; $i < 10; ++$i) {
             $encryptedPassword .= \Ease\Functions::randomNumber();
         }
-        $passwordSalt = substr(md5($encryptedPassword), 0, 2);
-        $encryptedPassword = md5($passwordSalt . $plainTextPassword) . ':' . $passwordSalt;
 
-        return $encryptedPassword;
+        $passwordSalt = substr(md5($encryptedPassword), 0, 2);
+
+        return md5($passwordSalt.$plainTextPassword).':'.$passwordSalt;
     }
 
     /**
@@ -230,15 +243,18 @@ class User extends \Ease\User
     }
 
     /**
-     * Common instance of User class
+     * Common instance of User class.
+     *
+     * @param null|mixed $user
      *
      * @return User
      */
     public static function singleton($user = null)
     {
         if (!isset(self::$instance)) {
-            self::$instance = is_null($user) ? new self() : $user;
+            self::$instance = null === $user ? new self() : $user;
         }
+
         return self::$instance;
     }
 }

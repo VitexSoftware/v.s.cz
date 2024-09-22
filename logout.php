@@ -1,10 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * VitexSoftware - Logout page
+ * This file is part of the VitexSoftware package
  *
- * @author     Vitex <vitex@hippy.cz>
- * @copyright  2017 info@vitexsoftware.cz (G)
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ;
@@ -19,7 +25,6 @@ if ($oUser->getUserID()) {
 }
 
 $oPage->addItem(new ui\PageTop(_('Sign off')));
-
 
 $oPage->container->addItem('<br/><br/><br/><br/>');
 $oPage->container->addItem(new \Ease\Html\DivTag(new \Ease\Html\ATag('login.php', _('Good bye & next time'), ['class' => 'jumbotron'])));

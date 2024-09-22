@@ -1,30 +1,37 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+declare(strict_types=1);
+
+/**
+ * This file is part of the VitexSoftware package
+ *
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ\ui;
 
 /**
- * Like Button Facebooku
+ * Like Button Facebooku.
  */
 class FBLikeButton extends \Ease\Html\IframeTag
 {
     /**
-     * Like Button facebooku
+     * Like Button facebooku.
      *
      * @param string $src Url pro lajk facebooku
      */
-    function __construct($src)
+    public function __construct($src)
     {
-        $Properties['scrcolling']  = 'no';
+        $Properties['scrcolling'] = 'no';
         $Properties['frameborder'] = 'no';
         parent::__construct(
-            'http://www.facebook.com/plugins/like.php?href=' . $src,
-            $Properties
+            'http://www.facebook.com/plugins/like.php?href='.$src,
+            $Properties,
         );
     }
 }

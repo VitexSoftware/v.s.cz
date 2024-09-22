@@ -1,10 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * VitexSoftware - monitoring
+ * This file is part of the VitexSoftware package
  *
- * @author     Vitex <vitex@hippy.cz>
- * @copyright  2012 Vitex@hippy.cz (G)
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ;
@@ -19,6 +25,7 @@ $news = new ui\News($id);
 
 if ($oPage->isPosted()) {
     $news->takeData($_POST);
+
     if ($news->saveToSQL()) {
         $news->addStatusMessage(_('Article was saved'), 'success');
     } else {
@@ -26,7 +33,8 @@ if ($oPage->isPosted()) {
     }
 } else {
     $id = $oPage->getRequestValue('delete', 'int');
-    if (!is_null($id)) {
+
+    if (null !== $id) {
         if ($news->deleteFromSQL($id)) {
             $news->addStatusMessage(_('Article was deleted'), 'success');
         } else {
@@ -34,7 +42,6 @@ if ($oPage->isPosted()) {
         }
     }
 }
-
 
 $oPage->addItem(new ui\PageTop(_('Vitex Software news editor')));
 $oPage->addPageColumns();

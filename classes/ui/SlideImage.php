@@ -1,15 +1,22 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+declare(strict_types=1);
+
+/**
+ * This file is part of the VitexSoftware package
+ *
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ\ui;
 
 /**
- * Description of SlideImage
+ * Description of SlideImage.
  *
  * @author vitex
  */
@@ -21,9 +28,9 @@ class SlideImage extends \Ease\Html\DivTag
             new \Ease\Html\ImgTag(
                 $img,
                 $label,
-                ['class' => 'img-responsive', 'style' => ' display: block; margin-left: auto;margin-right: auto;']
+                ['class' => 'img-responsive', 'style' => ' display: block; margin-left: auto;margin-right: auto;'],
             ),
-            ['style' => 'padding-bottom: 200px;']
+            ['style' => 'padding-bottom: 200px;'],
         );
     }
 }

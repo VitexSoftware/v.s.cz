@@ -10,7 +10,10 @@
     ],
     "minimum-stability": "dev",
     "config": {
-        "vendor-dir": "/var/lib/vitexsoftware.cz/"
+        "vendor-dir": "/var/lib/vitexsoftware.cz/",
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
     },
     "autoload": {
         "psr-4": {
@@ -25,6 +28,13 @@
         "deb/ease-bootstrap4-widgets": "*",
 	"deb/ease-html": "*",
 	"deb/ease-fluentpdo": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "phpstan/phpstan": "*",
+        "friendsofphp/php-cs-fixer": "^3.61",
+        "ergebnis/composer-normalize": "^2.43",
+        "ergebnis/php-cs-fixer-config": "^6.34"
     },
   "repositories": [
     {

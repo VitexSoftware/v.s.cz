@@ -1,12 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * VitexSoftware - titulní strana
+ * This file is part of the VitexSoftware package
  *
- * @package    VS
- * @subpackage WebUI
- * @author     Vitex <vitex@hippy.cz>
- * @copyright  2012 Vitex@hippy.cz (G)
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 require_once 'includes/VSInit.php';
@@ -16,8 +20,9 @@ $oPage->addItem(new \VSCZ\ui\PageTop(_('Vitex Software')));
 $oPage->addJavaScript('$(\'.carousel\').carousel();', null, true);
 $oPage->includeJavaScript('js/bootstrap-carousel.js');
 
-$oPage->addItem('
-    
+$oPage->addItem(<<<'EOD'
+
+
 <div id="myCarousel" class="carousel slide">
                 <div class="carousel-inner">
                   <div class="item active">
@@ -73,8 +78,8 @@ $oPage->addItem('
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
               </div>
-');
 
+EOD);
 
 /*
 $OPage->column3->addItem(new \Ease\Html\H3Tag(_('Reference')));
@@ -87,10 +92,8 @@ $Leg = $Reference->addItem(new \Ease\Html\ATag('http://www.magazin-legalizace.cz
 $Leg->addItem(new \Ease\Html\ImgTag('img/magazin-legalizace.png', 'Registrace',200));
 
 $Reference->addItem(new \Ease\Html\ATag('http://l.q.cz/', _('zkracovač adres LinkQuick')));
-*/
-
+ */
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
-
 
 $oPage->draw();

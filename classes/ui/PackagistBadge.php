@@ -1,15 +1,22 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+declare(strict_types=1);
+
+/**
+ * This file is part of the VitexSoftware package
+ *
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ\ui;
 
 /**
- * Description of PackagistBadge
+ * Description of PackagistBadge.
  *
  * @author vitex
  */
@@ -18,23 +25,22 @@ class PackagistBadge extends \Ease\Html\ATag
     public $baseUrl = 'https://packagist.org/packages/';
 
     /**
-     *
      * @param string $github
      * @param string $packagist
-     * @param string $type        dt|v
-     * @param array $properties
+     * @param string $type       dt|v
+     * @param array  $properties
      */
-    public function __construct($github, $packagist, $type = 'dt', $properties = array())
+    public function __construct($github, $packagist, $type = 'dt', $properties = [])
     {
-        $label = str_replace(['dt','v'], [_('Packagist Downloads'),_('Packagist Version')], $type) ;
+        $label = str_replace(['dt', 'v'], [_('Packagist Downloads'), _('Packagist Version')], $type);
 
         parent::__construct(
-            $this->baseUrl . $packagist,
+            $this->baseUrl.$packagist,
             new ShieldsBadge(
-                'packagist/' . $type . '/' . $packagist,
-                $label
+                'packagist/'.$type.'/'.$packagist,
+                $label,
             ),
-            $properties
+            $properties,
         );
     }
 }

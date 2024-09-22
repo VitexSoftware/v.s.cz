@@ -1,16 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * VitexSoftware - Pricelist
+ * This file is part of the VitexSoftware package
  *
- * @package    VS
- * @subpackage WebUI
- * @author     Vitex <vitex@hippy.cz>
- * @copyright  2020 Vitex@hippy.cz (G)
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 require_once 'includes/VSInit.php';
-
 
 $oPage->addItem(new \VSCZ\ui\PageTop(_('Vitex Software')));
 
@@ -34,8 +37,6 @@ $serverSkills->addItemSmart('Small scale work: CZK 500 per hour');
 $serverSkills->addItemSmart('Medium work: CZK 3,000 per day');
 $serverSkills->addItemSmart('Flat fee 45000 CZK per month');
 
-
 $oPage->addItem(new \VSCZ\ui\PageBottom());
-
 
 $oPage->draw();

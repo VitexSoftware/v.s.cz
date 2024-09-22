@@ -1,26 +1,28 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * VitexSoftware - titulní strana
+ * This file is part of the VitexSoftware package
  *
- * @package    VS
- * @subpackage WebUI
- * @author     Vitex <vitex@hippy.cz>
- * @copyright  2012 Vitex@hippy.cz (G)
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 require_once 'includes/VSInit.php';
 
-
 $oPage->addItem(new \VSCZ\ui\PageTop(_('Fakturační systém Moloch')));
-//$oPage->AddItem('<a href="https://github.com/Vitexus/EaseFramework" class="ribbon bg-teal">Forkni na GitHubu</a>');
+// $oPage->AddItem('<a href="https://github.com/Vitexus/EaseFramework" class="ribbon bg-teal">Forkni na GitHubu</a>');
 
 /*
   $oPage->column2->addItem('<h4>Poslední změna:</h4>');
   $oPage->column2->addItem(file('molochlastmsg.txt'));
   $oPage->column2->addItem('<hr>');
  */
-
 
 $container = new \Ease\TWB4\Container();
 
@@ -35,68 +37,67 @@ $infopanel->addItem(new \Ease\Html\ImgTag(
     'Moloch',
     null,
     null,
-    ['class' => 'img-responsive img-rounded']
+    ['class' => 'img-responsive img-rounded'],
 ));
 
-////$oPage->column3->addItem('<div style="background-color: #CAAAAA; margin: 2px; padding: 5px;">Zdrojové kody EaseFrameworku<br>');
+// //$oPage->column3->addItem('<div style="background-color: #CAAAAA; margin: 2px; padding: 5px;">Zdrojové kody EaseFrameworku<br>');
 //
-//$dwDir     = "/var/www/download/";
-//$d         = dir($dwDir);
-//$downloads = [];
-//while (false !== ($entry     = $d->read())) {
+// $dwDir     = "/var/www/download/";
+// $d         = dir($dwDir);
+// $downloads = [];
+// while (false !== ($entry     = $d->read())) {
 //    if ($entry[0] == '.') {
 //        continue;
 //    }
 //    $downloads[$entry] = VSWebPage::_format_bytes(filesize($dwDir.$entry));
-//}
-//$d->close();
-//ksort($downloads);
-//$package = [];
-//foreach ($downloads as $file => $size) {
+// }
+// $d->close();
+// ksort($downloads);
+// $package = [];
+// foreach ($downloads as $file => $size) {
 //    if (strstr($file, 'moloch_')) {
 //        $package = [$file => $size];
 //    }
-//}
+// }
 //
-////echo '<pre>'; print_r($Downloads); echo '</pre>';
+// //echo '<pre>'; print_r($Downloads); echo '</pre>';
 //
-//$row = $container->addItem(new \Ease\TWB4\Row);
-//
-//
-//$install = new \Ease\TWB4\Well(new \Ease\Html\H3Tag(_('Ke stažení')));
-//
-//$install->addItem(new VSDownloadButton($package));
+// $row = $container->addItem(new \Ease\TWB4\Row);
 //
 //
-//$install->addItem('<hr><h4>Instalace zdroje</h4>');
+// $install = new \Ease\TWB4\Well(new \Ease\Html\H3Tag(_('Ke stažení')));
 //
-//$install->addItem('<li><code>wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key|sudo apt-key add -</code></li>');
-//$install->addItem('<li><code>echo deb http://v.s.cz/ stable main &gt; /etc/apt/sources.list.d/ease.list </code></li>');
-//$install->addItem('<li><code>aptitude update</code></li>');
-//$install->addItem('<li><code>aptitude install moloch</code></li>');
-//
-//$install->addItem('<hr><a href="http://debian.org/"><img style="width: 60px;" title="Debian Linux" src="img/debian.png"></a>');
-//$install->addItem('<a href="http://ubuntu.com/"><img style="width: 60px;" title="Ubuntu Linux" src="img/ubuntulogo.png"></a><p></p>');
+// $install->addItem(new VSDownloadButton($package));
 //
 //
-//$row->addItem(new \Ease\TWB4\Col(6, $install));
+// $install->addItem('<hr><h4>Instalace zdroje</h4>');
 //
-//$loginFace = new \Ease\Html\DivTag('LoginFace');
+// $install->addItem('<li><code>wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key|sudo apt-key add -</code></li>');
+// $install->addItem('<li><code>echo deb http://v.s.cz/ stable main &gt; /etc/apt/sources.list.d/ease.list </code></li>');
+// $install->addItem('<li><code>aptitude update</code></li>');
+// $install->addItem('<li><code>aptitude install moloch</code></li>');
 //
-////$loginForm = new loginbox('/moloch/login.php', 'login', 'heslo');
+// $install->addItem('<hr><a href="http://debian.org/"><img style="width: 60px;" title="Debian Linux" src="img/debian.png"></a>');
+// $install->addItem('<a href="http://ubuntu.com/"><img style="width: 60px;" title="Ubuntu Linux" src="img/ubuntulogo.png"></a><p></p>');
 //
-//$loginFrame = new \Ease\Html\Div('<span class="label label-danger">'._('testovací provoz').'</span>',
+//
+// $row->addItem(new \Ease\TWB4\Col(6, $install));
+//
+// $loginFace = new \Ease\Html\DivTag('LoginFace');
+//
+// //$loginForm = new loginbox('/moloch/login.php', 'login', 'heslo');
+//
+// $loginFrame = new \Ease\Html\Div('<span class="label label-danger">'._('testovací provoz').'</span>',
 //    ['class' => 'alert alert-warning']);
 //
-//$loginFrame->addItem(new \Ease\Html\DivTag('WelcomeHint',
+// $loginFrame->addItem(new \Ease\Html\DivTag('WelcomeHint',
 //    _('Zadejte, prosím, Vaše přihlašovací údaje:')));
 //
-////$loginFrame->addItem($loginForm);
+// //$loginFrame->addItem($loginForm);
 //
-//$row->addItem(new \Ease\TWB4\Col(6, new \Ease\TWB4\Well($loginFrame)));
+// $row->addItem(new \Ease\TWB4\Col(6, new \Ease\TWB4\Well($loginFrame)));
 //
-//$oPage->addItem($container);
-
+// $oPage->addItem($container);
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
 

@@ -1,38 +1,42 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * VitexSoftware Homepage - News Handler
+ * This file is part of the VitexSoftware package
  *
- * @author Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright  2015-2020 Vitex Software
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ;
 
 /**
- * Description of News
+ * Description of News.
  *
  * @author vitex
  */
 class Packages extends \Ease\SQL\Engine
 {
     public $myKeyColumn = 'id';
-    public $myTable     = 'packages';
-    /**
-     * Where to look for record's name
-     * @var string
-     */
-    public $nameColumn  = 'Name';
+    public $myTable = 'packages';
 
     /**
-     * Sloupeček obsahující datum vložení záznamu do shopu
-     * @var string
+     * Where to look for record's name.
      */
-    public $myCreateColumn = 'created';
+    public string $nameColumn = 'Name';
 
     /**
-     * Slopecek obsahujici datum poslení modifikace záznamu do shopu
-     * @var string
+     * Sloupeček obsahující datum vložení záznamu do shopu.
      */
-    public $myLastModifiedColumn = 'updated';
+    public string $myCreateColumn = 'created';
+
+    /**
+     * Slopecek obsahujici datum poslení modifikace záznamu do shopu.
+     */
+    public string $myLastModifiedColumn = 'updated';
 }

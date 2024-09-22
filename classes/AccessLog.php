@@ -1,16 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * VitexSoftware Homepage - AccessLog handler
+ * This file is part of the VitexSoftware package
  *
- * @author Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright  2015-2020 Vitex Software
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ;
 
 /**
- * Description of AccessLog
+ * Description of AccessLog.
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
@@ -18,7 +24,7 @@ class AccessLog extends \Ease\SQL\Engine
 {
     public $myTable = 'vs_access_log';
 
-    public function setUp($options = [])
+    public function setUp($options = []): void
     {
         $this->setupProperty($options, 'dbType', 'STATS_TYPE');
         $this->setupProperty($options, 'server', 'STATS_SERVER');
@@ -30,14 +36,13 @@ class AccessLog extends \Ease\SQL\Engine
     }
 
     /**
-     *
      * @return int
      */
     public function getUpdatedCount()
     {
         return $this->listingQuery()->select('count(*) as count')->where(
             'request_uri',
-            '/dists/stable/InRelease'
+            '/dists/stable/InRelease',
         )->fetch()['count'];
     }
 
@@ -45,7 +50,7 @@ class AccessLog extends \Ease\SQL\Engine
     {
         return $this->listingQuery()->select('count(*) as count')->where(sprintf(
             "request_uri LIKE '/pool/main/%%/%s_%%'",
-            $pName
+            $pName,
         ))->where("agent LIKE 'Debian APT%%'")->fetch()['count'];
     }
 
@@ -53,7 +58,7 @@ class AccessLog extends \Ease\SQL\Engine
     {
         return $this->listingQuery()->select('count(*) as count')->where(sprintf(
             "request_uri LIKE '/pool/main/%%/%s_%%'",
-            $pName
+            $pName,
         ))->where("agent  NOT LIKE 'Debian APT%%'")->fetch()['count'];
     }
 
@@ -62,10 +67,12 @@ class AccessLog extends \Ease\SQL\Engine
         $allInstalls = [];
         $viRaw = $this->listingQuery()->select('COUNT(*) as count')->select('FROM_UNIXTIME(time_stamp) as last')->
                 where(sprintf("request_uri LIKE '/pool/main/%%/%s_%%'", $pName))->where("agent LIKE 'Debian APT%%'")->groupBy('request_uri')->orderBy('request_uri DESC');
+
         foreach ($viRaw as $installs) {
-            list( $tmp, $ver, $tmp ) = explode('_', $installs['request_uri']);
-            $allInstalls[] = [ 'count' => $installs['count'], 'ver' => $ver, 'last' => $installs['last']];
+            [$tmp, $ver, $tmp] = explode('_', $installs['request_uri']);
+            $allInstalls[] = ['count' => $installs['count'], 'ver' => $ver, 'last' => $installs['last']];
         }
+
         return $allInstalls;
     }
 }

@@ -1,20 +1,31 @@
 <?php
 
+declare(strict_types=1);
+
+/**
+ * This file is part of the VitexSoftware package
+ *
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace VSCZ;
 
 /**
- * VitexSoftware - titulní strana
+ * VitexSoftware - titulní strana.
  *
- * @package    VS
- * @subpackage WebUI
  * @author     Vitex <vitex@hippy.cz>
  * @copyright  2012 Vitex@hippy.cz (G)
  */
 
-//if (!strstr($_SERVER['SERVER_NAME'], 'www.vitexsoftware.cz') || ($_SERVER['SERVER_PORT'] != 443)) {
+// if (!strstr($_SERVER['SERVER_NAME'], 'www.vitexsoftware.cz') || ($_SERVER['SERVER_PORT'] != 443)) {
 //    header('Location: https://www.vitexsoftware.cz/');
 //    exit;
-//}
+// }
 
 require_once 'includes/VSInit.php';
 
@@ -25,7 +36,6 @@ $pageCols = $oPage->container->addItem(new \Ease\TWB4\Row());
 $oPage->column1 = $pageCols->addColumn(4);
 $oPage->column2 = $pageCols->addColumn(4);
 $oPage->column3 = $pageCols->addColumn(4);
-
 
 $oPage->column1->addItem(new \Ease\Html\H2Tag(_('Správa serverů')));
 
@@ -42,7 +52,6 @@ $NetworkSkills = $oPage->column2->addItem(new \Ease\Html\UlTag());
 $NetworkSkills->addItemSmart('stavba metalických a bezdrátových sítí');
 $NetworkSkills->addItemSmart('tunelování, routovaní');
 $NetworkSkills->addItemSmart('Sledování stavu sítě');
-
 
 $oPage->column3->addItem(new \Ease\Html\H2Tag(_('Vývoj aplikací')));
 $DevelSkills = $oPage->column3->addItem(new \Ease\Html\UlTag());
@@ -67,8 +76,6 @@ $serverSkills->addItemSmart('Test vašich počítačů na známé zranitelnosti'
 $serverSkills->addItemSmart('Zabezpečení webových aplikací');
 $serverSkills->addItemSmart('Zabezpečení serverů');
 
-
 $oPage->addItem(new \VSCZ\ui\PageBottom());
-
 
 $oPage->draw();

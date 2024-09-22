@@ -1,40 +1,43 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * VitexSoftware Homepage - News Handler
+ * This file is part of the VitexSoftware package
  *
- * @author Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright  2015-2020 Vitex Software
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ;
 
 /**
- * Description of News
+ * Description of News.
  *
  * @author vitex
  */
 class News extends \Ease\SQL\Engine
 {
     public $myKeyColumn = 'id';
-    public $myTable     = 'news';
+    public $myTable = 'news';
 
     /**
-     * Sloupeček obsahující datum vložení záznamu do shopu
-     * @var string
+     * Sloupeček obsahující datum vložení záznamu do shopu.
      */
-    public $myCreateColumn = 'DatCreate';
+    public string $myCreateColumn = 'DatCreate';
 
     /**
-     * Slopecek obsahujici datum poslení modifikace záznamu do shopu
-     * @var string
+     * Slopecek obsahujici datum poslení modifikace záznamu do shopu.
      */
-    public $myLastModifiedColumn = 'DatSave';
-
-
+    public string $myLastModifiedColumn = 'DatSave';
 
     /**
-     * News listing query
+     * News listing query.
+     *
      * @return \Envms\FluentPDO
      */
     public function listingQuery()

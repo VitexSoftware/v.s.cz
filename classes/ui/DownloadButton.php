@@ -1,42 +1,57 @@
 <?php
 
+declare(strict_types=1);
+
+/**
+ * This file is part of the VitexSoftware package
+ *
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace VSCZ\ui;
 
 /**
- * Description of VSDownloadButton
+ * Description of VSDownloadButton.
  *
  * @author vitex
  */
 class DownloadButton extends \Ease\Html\ATag
 {
     /**
-     * Tlačítko ke stažení balíčku
+     * Tlačítko ke stažení balíčku.
      *
      * @param array $packageInfo
      * @param array $properties
      */
     public function __construct($packageInfo, $properties = null)
     {
-        if (is_null($properties)) {
+        if (null === $properties) {
             $properties = ['class' => 'btn btn-sexy'];
         } else {
             if (isset($properties['class'])) {
-                $properties['class'] = 'btn btn-sexy ' . $properties['class'];
+                $properties['class'] = 'btn btn-sexy '.$properties['class'];
             } else {
                 $properties['class'] = 'btn btn-sexy';
             }
         }
+
         $properties['style'] = 'margin-right: 5px;';
         parent::__construct(
-            'download/' . key($packageInfo),
-            '<img style="width: 42px;" src="img/deb-package.png">&nbsp;' . key($packageInfo) . '<br><small>' . current($packageInfo) . '</small>',
-            $properties
+            'download/'.key($packageInfo),
+            '<img style="width: 42px;" src="img/deb-package.png">&nbsp;'.key($packageInfo).'<br><small>'.current($packageInfo).'</small>',
+            $properties,
         );
     }
 
-    function finalize()
+    public function finalize(): void
     {
-        $this->addCss('
+        $this->addCss(<<<'EOD'
+
 .btn-sexy {
 color:#08233e;
 font:0.8em Futura, ‘Century Gothic’, AppleGothic, sans-serif;
@@ -61,6 +76,7 @@ border-color:#a7dd32;
 .btn-sexy.save:hover{
 background-color:rgba(167,221,50,0.8);
 }
-            ');
+
+EOD);
     }
 }

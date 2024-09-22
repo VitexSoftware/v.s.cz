@@ -1,10 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * VitexSoftware - titulní strana
+ * This file is part of the VitexSoftware package
  *
- * @author     Vitex <vitex@hippy.cz>
- * @copyright  2012 Vitex@hippy.cz (G)
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ;
@@ -16,9 +22,7 @@ require_once 'includes/VSInit.php';
 $oPage->addItem(new ui\PageTop(_('Ease Framework')));
 $container = $oPage->addItem(new \Ease\TWB4\Container());
 
-
 $oPage->AddItem('<a href="https://github.com/Vitexus/EaseFramework" class="ribbon bg-teal">Forkni na GitHubu</a>');
-
 
 $prehled = new \Ease\TWB4\Well();
 $prehled->addItem('<strong>Ease Framework</strong> je aktívně vyvíjen od roku 2008. ');
@@ -27,27 +31,25 @@ $prehled->addItem(' a <a href="http://www.phpunit.de/manual/current/en/index.htm
 $prehled->addItem('Snaží se o přehledně psaný kod s <a href="http://pear.php.net/">PEAR</a> upravou. ');
 $prehled->addItem('Jazykově závislé řetězce mají <a href="http://php.net/manual/en/book.gettext.php">gettext</a> překlad do Anglického jazyka.<hr>');
 
-
 $buttons = new \Ease\Container();
 
 $buttons->addItem(new \Ease\TWB4\LinkButton(
     '/ease-framework/',
-    '<img src="img/apigen.png" width="20">' . ' ' . _('Apigen documentation'),
-    'info btn-lg'
+    '<img src="img/apigen.png" width="20"> '._('Apigen documentation'),
+    'info btn-lg',
 ));
 $buttons->addItem(new \Ease\TWB4\LinkButton(
     'https://github.com/Vitexus/EaseFramework',
     '<i class = "fa fa-github"></i>&nbsp;GitHub',
-    'info btn-lg'
+    'info btn-lg',
 ));
 $buttons->addItem(new \Ease\TWB4\LinkButton(
     'https://github.com/VitexSoftware/EaseFramework/commits/master.atom',
-    '<i class = "fa fa-rss-square"></i>&nbsp;' . _('RSS Feed'),
-    'info btn-lg'
+    '<i class = "fa fa-rss-square"></i>&nbsp;'._('RSS Feed'),
+    'info btn-lg',
 ));
 
 $prehled->addItem($buttons);
-
 
 if (file_exists('easelastmsg.txt')) {
     $prehled->addItem('<hr>');
@@ -58,15 +60,11 @@ if (file_exists('easelastmsg.txt')) {
 $efRow = new \Ease\TWB4\Row();
 $efRow->addColumn(8, $prehled);
 
-
-
 $download = new \Ease\Html\DivTag();
-
 
 $efRow->addColumn(4, '<img src="img/graf-timecost.png" class="img-responsive">');
 
 $container->addItem($efRow);
-
 
 $readme = '/usr/share/doc/ease-framework/README.md';
 
@@ -74,10 +72,9 @@ if (file_exists($readme)) {
     $converter = new CommonMarkConverter();
     $container->addItem(new \Ease\Html\DivTag(
         $converter->convertToHtml(file_get_contents($readme)),
-        ['class' => 'jumbotron']
+        ['class' => 'jumbotron'],
     ));
 }
-
 
 $oPage->addItem(new ui\PageBottom());
 

@@ -1,17 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * VitexSoftware - install helper
+ * This file is part of the VitexSoftware package
  *
- * @author     Vitex <vitex@hippy.cz>
- * @copyright  2018 Vitex@hippy.cz (G)
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 $package = $_REQUEST['package'];
 
-header('Location: apt:' . $package);
-
+header('Location: apt:'.$package);
 
 echo _('Installing Package  - If your install does not start automatically, type in terminal');
-echo "<p><br/></p>";
-echo '              sudo apt-get install ' . $package;
+echo '<p><br/></p>';
+echo '              sudo apt-get install '.$package;

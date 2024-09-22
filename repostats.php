@@ -1,10 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * VitexSoftware - titulní strana
+ * This file is part of the VitexSoftware package
  *
- * @author     Vitex <vitex@hippy.cz>
- * @copyright  2012 Vitex@hippy.cz (G)
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ;
@@ -13,42 +19,38 @@ require_once 'includes/VSInit.php';
 
 $repostats = new AccessLog();
 
-
 $oPage->includeJavaScript('js/jquery.tablesorter.min.js');
 $oPage->addJavaScript('$("#packs").tablesorter();');
 
 $oPage->addItem(new ui\PageTop(_('Deb Repository')));
 
-
 $packTabs = new \Ease\TWB4\Tabs('PackTabs');
-
 
 $reposinfo = new \Ease\TWB4\Well(new \Ease\Html\H3Tag(_('How to use repository')));
 $reposinfo->addItem(new \Ease\Html\EmTag(_('On current debian or ubuntu')));
-$steps     = $reposinfo->addItem(new \Ease\Html\UlTag(
+$steps = $reposinfo->addItem(new \Ease\Html\UlTag(
     null,
-    ['class' => 'list-group']
+    ['class' => 'list-group'],
 ));
 
 $steps->addItemSmart(
     'wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key | sudo apt-key add - ',
-    ['class' => 'list-group-item']
+    ['class' => 'list-group-item'],
 );
 $steps->addItemSmart(
     'echo deb http://v.s.cz/ stable main | sudo tee /etc/apt/sources.list.d/vitexsoftware.list ',
-    ['class' => 'list-group-item']
+    ['class' => 'list-group-item'],
 );
 $steps->addItemSmart('sudo apt update', ['class' => 'list-group-item']);
 $steps->addItemSmart(
     'sudo apt install <em>package(s)</em>',
-    ['class' => 'list-group-item']
+    ['class' => 'list-group-item'],
 );
 
 $reposinfo->addItem(sprintf(
     _('apt-get update feeded %d times'),
-    $repostats->getUpdatedCount()
+    $repostats->getUpdatedCount(),
 ));
-
 
 $packages = ui\PackageInfo::getPackagesInfo();
 
@@ -62,10 +64,12 @@ $oPage->addCss('.hinter { font-weight: bold; font-size: large; }');
 
 foreach ($packages as $pName => $pProps) {
     $packFile = trim($pProps['Filename']);
-    $icon     = 'img/deb/' . $pName . '.png';
+    $icon = 'img/deb/'.$pName.'.png';
+
     if (!file_exists($icon)) {
         $icon = 'img/deb-package.png';
     }
+
     if (!file_exists($packFile)) {
         continue;
     }
@@ -75,21 +79,21 @@ foreach ($packages as $pName => $pProps) {
     $downloads = $repostats->getPackageDownloads($pName);
 
     $fileMtime = filemtime($packFile);
-    $incTime   = date("Y m. d.", $fileMtime);
-    $packAge   = ui\WebPage::secondsToTime(doubleval(time() - $fileMtime));
+    $incTime = date('Y m. d.', $fileMtime);
+    $packAge = ui\WebPage::secondsToTime((float) (time() - $fileMtime));
 
     $package = new \Ease\Html\ATag(
         $pProps['Filename'],
-        '<img style="width: 18px;" src="img/deb-package.png">&nbsp;' . $pProps['Architecture'],
-        ['class' => 'btn btn-xs btn-success']
+        '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'.$pProps['Architecture'],
+        ['class' => 'btn btn-xs btn-success'],
     );
-    $pInfo   = new \Ease\Html\ATag(
-        'package.php?package=' . $pName . '#',
+    $pInfo = new \Ease\Html\ATag(
+        'package.php?package='.$pName.'#',
         $pName,
         ['tabindex' => 0, 'class' => 'hinter', 'data-toggle' => 'popover', 'data-trigger' => 'hover',
-        'data-content' => $pProps['Description']]
+            'data-content' => $pProps['Description']],
     );
-    $ptable->addRowColumns(['<img class="debicon" src="' . $icon . '"> ' . $pInfo, $pProps['Version'],
+    $ptable->addRowColumns(['<img class="debicon" src="'.$icon.'"> '.$pInfo, $pProps['Version'],
         $packAge, $incTime, ui\WebPage::_format_bytes($pProps['Size']),
         $package, $installs, $downloads]);
 }

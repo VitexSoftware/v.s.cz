@@ -1,30 +1,40 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * VitexSoftware Site
+ * This file is part of the VitexSoftware package
+ *
+ * https://vitexsoftware.com/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ\ui;
 
 /**
- * Description of NewsShow
+ * Description of NewsShow.
  *
  * @author vitex
  */
 class NewsListing extends \Ease\Html\UlTag
 {
-    function __construct($datasource, $authorId = null)
+    public function __construct($datasource, $authorId = null)
     {
-        $news = $datasource->listingQuery(); //->orderBy('id DESC');
-        if (!is_null($authorId)) {
+        $news = $datasource->listingQuery(); // ->orderBy('id DESC');
+
+        if (null !== $authorId) {
             $news->where('author.id', $authorId);
         }
 
-        if (count($news)) {
+        if (\count($news)) {
             foreach ($news as $article) {
                 $this->addItemSmart(new \Ease\Html\ATag(
-                    'article.php?id=' . $article['id'],
-                    $article['title']
+                    'article.php?id='.$article['id'],
+                    $article['title'],
                 ));
             }
         } else {
