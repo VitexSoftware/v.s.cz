@@ -25,7 +25,7 @@ class WebPage extends \Ease\TWB4\WebPage
 {
     public string $bootstrapThemeCSS = 'css/freelancer.min.css';
 
-    public \Ease\TWB4\Container $container = null;
+    public \Ease\TWB4\Container $container;
     public $column1;
     public $column2;
     public $column3;
@@ -36,7 +36,7 @@ class WebPage extends \Ease\TWB4\WebPage
     public function __construct()
     {
         parent::__construct('Vitex Software');
-        $this->includeCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
+        $this->includeCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
         $this->includeCss('css/freelancer.min.css');
         $this->includeCss('css/default.css');
         $this->includeCSS('css/github-activity.css');

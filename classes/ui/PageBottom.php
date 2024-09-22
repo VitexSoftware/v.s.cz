@@ -105,11 +105,11 @@ class PageBottom extends \Ease\Html\FooterTag
         $rowFluid2 = new \Ease\TWB4\Row();
 
         $socialIcons = <<<'EOD'
-
-        <a class = "btn btn-primary social-login-btn social-facebook" href = "https://www.facebook.com/vitexsoftware"><i class = "fa fa-facebook"></i></a>
-        <a class = "btn btn-primary social-login-btn social-twitter" href = "https://twitter.com/Vitexus"><i class = "fa fa-twitter"></i></a>
-        <a class = "btn btn-primary social-login-btn social-linkedin" href = "https://www.linkedin.com/in/vitexsoftware"><i class = "fa fa-linkedin"></i></a>
-        <a class = "btn btn-primary social-login-btn social-github" href = "https://github.com/VitexSoftware/"><i class = "fa fa-github"></i></a>
+        <a class = "btn btn-primary social-login-btn social-mastodon" href="https://f.cz/@vitexsoftware"><i class = "fa fa-mastodon"></i></a>
+        <a class = "btn btn-primary social-login-btn social-facebook" href="https://www.facebook.com/vitexsoftware"><i class = "fa fa-facebook"></i></a>
+        <a class = "btn btn-primary social-login-btn social-twitter" href="https://twitter.com/Vitexus"><i class = "fa fa-twitter"></i></a>
+        <a class = "btn btn-primary social-login-btn social-linkedin" href="https://www.linkedin.com/in/vitexsoftware"><i class = "fa fa-linkedin"></i></a>
+        <a class = "btn btn-primary social-login-btn social-github" href="https://github.com/VitexSoftware/"><i class = "fa fa-github"></i></a>
 
 EOD;
 

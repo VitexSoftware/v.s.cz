@@ -23,7 +23,7 @@ namespace VSCZ;
 class News extends \Ease\SQL\Engine
 {
     public $myKeyColumn = 'id';
-    public $myTable = 'news';
+    public string $myTable = 'news';
 
     /**
      * Sloupeček obsahující datum vložení záznamu do shopu.

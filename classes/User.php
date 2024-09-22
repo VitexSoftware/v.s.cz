@@ -55,20 +55,17 @@ class User extends \Ease\User
     public string $lastModifiedColumn = 'DatSave';
 
     /**
-     * Budeme používat serializovaná nastavení uložená ve sloupečku.
-     */
-    public string $settingsColumn = 'settings';
-
-    /**
      * Klíčové slovo.
      */
     public string $keyword = 'user';
 
-    /**
-     * Jmenný sloupec.
-     */
-    public string $nameColumn = 'login';
-
+    public function __construct($userID = null) {
+        $this->settingsColumn = 'settings';
+        $this->nameColumn = 'login';
+        
+        parent::__construct($userID);
+    }
+    
     /**
      * Vrací odkaz na ikonu.
      *
