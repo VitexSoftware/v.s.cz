@@ -24,7 +24,6 @@ namespace VSCZ\ui;
 class WebPage extends \Ease\TWB4\WebPage
 {
     public string $bootstrapThemeCSS = 'css/freelancer.min.css';
-
     public \Ease\TWB4\Container $container;
     public $column1;
     public $column2;

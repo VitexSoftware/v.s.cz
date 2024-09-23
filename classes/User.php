@@ -59,13 +59,14 @@ class User extends \Ease\User
      */
     public string $keyword = 'user';
 
-    public function __construct($userID = null) {
+    public function __construct($userID = null)
+    {
         $this->settingsColumn = 'settings';
         $this->nameColumn = 'login';
-        
+
         parent::__construct($userID);
     }
-    
+
     /**
      * Vrací odkaz na ikonu.
      *

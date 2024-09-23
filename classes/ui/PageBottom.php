@@ -73,8 +73,17 @@ class PageBottom extends \Ease\Html\FooterTag
             _('Documentation'),
             ['style' => 'list-style-type: none'],
         ));
-        $listD1->addItemSmart(new \Ease\Html\ATag('/EaseDoc', 'Ease Framework'));
-        $listD1->addItemSmart(new \Ease\Html\ATag('/IciEditDoc', 'Icinga Editor'));
+
+        $listD1->addItemSmart(new \Ease\Html\ATag('/php-spojenet-abraflexi-doc/namespaces/abraflexi.html', '<img style="height: 20px" src="img/php-flexibee.svg"> '._('PHP AbraFlexi')));
+        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-doc/namespaces/ease.html', '<img style="height: 20px;" src="img/ease-core.svg"> '._('EasePHP Framework Core')));
+        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-twb4-doc/namespaces/ease-twb4.html', '<img style="height: 20px;" src="img/ease-twbootstrap4.svg"> '._('EasePHP Framework Twitter Bootstrap4')));
+        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-twb5-doc/namespaces/ease-twb5.html', '<img style="height: 20px;" src="img/php-ease-twbootstrap5.svg"> '._('EasePHP Framework Twitter Bootstrap5')));
+        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-abraflexi-bricks-doc/namespaces/abraflexi-bricks.html', '<img style="height: 20px;" src="img/php-flexibee-bricks.svg"> PHP Based AbraFlexi RestAPI/Json library Addons'));
+
+        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-fluentpdo-doc/namespaces/ease-sql.html', '<img src="img/php-ease-fluentpdo.svg" style="height: 20px;"> Ease FluentPDO'));
+        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-html-doc/namespaces/ease.html', '<img src="img/ease-html.svg" style="width: 20px;"> EasePHP Framework HTML'));
+        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-rbczpremiumapi/index.html', '<img src="img/php-rbczpremiumapi.svg" style="width: 20px;"> '._('Raiffeisenbank Premium API client library')));
+        $listD1->addItemSmart(new \Ease\Html\ATag('https://multiflexi.readthedocs.io/en/latest/', '<img src="https://multiflexi.readthedocs.io/en/latest/_images/project-logo.svg" style="width: 20px;"> '._('MultiFlexi')));
 
         $colE = $rowFluid1->addItem(new \Ease\TWB4\Col(2));
         $listE1 = $colE->addItem(new \Ease\Html\UlTag(

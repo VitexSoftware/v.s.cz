@@ -30,7 +30,6 @@ class NewPackages extends \Ease\Html\SpanTag
     public string $myTable = 'vs_access_log';
     public $repobase = '/home/vitex/WWW/repo.vitexsoftware.cz/';
     public $libdir = '/var/lib/freight/apt';
-
     private array $packagesByTime = [];
 
     /**

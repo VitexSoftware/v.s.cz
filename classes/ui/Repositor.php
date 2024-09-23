@@ -30,7 +30,6 @@ class Repositor extends \Ease\Html\DivTag
     public $repodir;
     public $packages = [];
     public $repoUrl = 'https://repo.vitexsoftware.com/';
-
     private \VSCZ\Packages $packager;
 
     /**
