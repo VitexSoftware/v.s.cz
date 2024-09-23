@@ -45,7 +45,8 @@ $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-core', _('Ease C
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-html', _('Ease HTML'), _('HTML 5 Tags for Ease Framework'));
 $libMenu->addLibraryItem('https://github.com/Spoje-NET/PHP-Realpad-Takeout', _('RealPad Takeout'), _('Realpad document exporter'), 'img/realpad-takeout.svg', 'spojenet/realpad-takeout');
 
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap4', _('Ease Twbootstrap4'), _('Twitter Bootstrap 4 support for Ease Framework'), null, 'vitexsoftware/ease-twbootstrap4');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap4', _('Ease TWBootstrap4'), _('Twitter Bootstrap 4 support for Ease Framework'), null, 'vitexsoftware/ease-twbootstrap4');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap5', _('Ease TWBootstrap5'), _('Twitter Bootstrap 5 support for Ease Framework'), null, 'vitexsoftware/ease-twbootstrap5');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-fluentpdo', _('Ease FluentPDO'), _('FluentPDO support for Ease Framework'), null, 'vitexsoftware/ease-fluentpdo');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets-flexibee', _('TWB3 AbraFlexi widgets'), _('Several Bootstrap3 Widgets for AbraFlexi'), null, 'vitexsoftware/ease-twbootstrap-widgets-flexibee');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets-flexibee', _('TWB4 AbraFlexi widgets'), _('Several Bootstrap4 Widgets for AbraFlexi'), null, 'vitexsoftware/ease-twbootstrap4-widgets-flexibee');
