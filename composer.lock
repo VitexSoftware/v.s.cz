@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a5cab312067840693d0044d17750617",
+    "content-hash": "85e44362609125d5d3f50ad874cce15a",
     "packages": [
         {
             "name": "deb/abraflexi",
@@ -75,11 +75,11 @@
         },
         {
             "name": "deb/ease-bootstrap4-widgets",
-            "version": "1.3",
+            "version": "1.4.0",
             "dist": {
                 "type": "path",
                 "url": "/usr/share/php/EaseTWB4Widgets",
-                "reference": "6bc9446615d68f39aade8522dcc7c8558c233356"
+                "reference": "6c8491214a8af5c88fe3c8a3b381e680985b9b0a"
             },
             "require": {
                 "deb/ease-bootstrap4": "*"
@@ -100,7 +100,7 @@
                     "homepage": "http://v.s.cz/"
                 }
             ],
-            "description": "Twitter bootstrap4 Widgets for PHP Framework (debianized)",
+            "description": "Twitter Bootstrap4 Widgets for PHP Framework (debianized)",
             "homepage": "http://v.s.cz/ease.php",
             "transport-options": {
                 "relative": false
@@ -455,12 +455,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/config.git",
-                "reference": "d6bad59dff19800882bead71bf50bbe85d6f5879"
+                "reference": "708b87250055f20a21cc6dbe232369b79a71a4fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/config/zipball/d6bad59dff19800882bead71bf50bbe85d6f5879",
-                "reference": "d6bad59dff19800882bead71bf50bbe85d6f5879",
+                "url": "https://api.github.com/repos/thephpleague/config/zipball/708b87250055f20a21cc6dbe232369b79a71a4fa",
+                "reference": "708b87250055f20a21cc6dbe232369b79a71a4fa",
                 "shasum": ""
             },
             "require": {
@@ -530,7 +530,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-20T13:34:54+00:00"
+            "time": "2024-09-23T00:17:42+00:00"
         },
         {
             "name": "nette/schema",
@@ -2353,12 +2353,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "d7246a02958cd0bf913f29c5c53834302375b5e3"
+                "reference": "838310ad1b4fe0eb837c8caaa7017babf2b334a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d7246a02958cd0bf913f29c5c53834302375b5e3",
-                "reference": "d7246a02958cd0bf913f29c5c53834302375b5e3",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/838310ad1b4fe0eb837c8caaa7017babf2b334a2",
+                "reference": "838310ad1b4fe0eb837c8caaa7017babf2b334a2",
                 "shasum": ""
             },
             "require": {
@@ -2404,7 +2404,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-09-22T19:33:30+00:00"
+            "time": "2024-09-25T10:49:00+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -4418,12 +4418,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "e57e6e0355bf231a6befd5d8ff2940308f0005eb"
+                "reference": "300899a19db417c7be602aff998525e831545787"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/e57e6e0355bf231a6befd5d8ff2940308f0005eb",
-                "reference": "e57e6e0355bf231a6befd5d8ff2940308f0005eb",
+                "url": "https://api.github.com/repos/symfony/console/zipball/300899a19db417c7be602aff998525e831545787",
+                "reference": "300899a19db417c7be602aff998525e831545787",
                 "shasum": ""
             },
             "require": {
@@ -4503,7 +4503,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-21T09:40:03+00:00"
+            "time": "2024-09-24T10:58:43+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -5605,7 +5605,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "phpstan/phpstan": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

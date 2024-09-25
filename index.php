@@ -184,7 +184,11 @@ $activityColumn->addItem(new \Ease\Html\DivTag(null, ['id' => 'ghfeed']));
 $activityColumn->setTagCss(['background-image' => 'url(img/magnetic-nymph-head.png)', 'background-repeat' => 'no-repeat', 'background-position' => 'bottom left', 'background-attachment' => 'fixed']);
 
 $mainPageRow->addColumn(7, [new \Ease\Html\H1Tag(_('Applications')), $appMenu, new \Ease\Html\H1Tag(_('Utilities')), $utilsMenu, new \Ease\Html\H1Tag(_('Libraries')), $libMenu]);
-// TODO: enable $mainPageRow->addColumn(2, new ui\NewPackages(10));
+
+$mainPageRow->addColumn(2, new \Ease\Html\DivTag(
+    '<h3>' . _('Latest Packages') . '</h3><div id="rss-feed"></div>',
+    ['class' => 'rss-widget']
+));
 
 $oPage->includeCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css');
 $oPage->includeJavaScript('//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js');
@@ -209,7 +213,28 @@ $newsColumn = $newsRow->addColumn(
     //    new \Ease\TWB4\Well([new ui\NewsShow(new News()), new \Ease\TWB4\LinkButton('articles.php',
     //            '<img src="img/news.svg" style="height: 20px"> '._('More articles').' <i class="fa fa-angle-double-right" aria-hidden="true"></i>',
     //            'info')])
+    ''
 );
+
+
+$oPage->addJavaScript(<<<'EOD'
+fetch('https://repo.vitexsoftware.com/rss.php')
+    .then(response => response.text())
+    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+    .then(data => {
+        const items = data.querySelectorAll("item");
+        let html = "";
+        items.forEach(el => {
+            html += `<div class="card" style="width: 18rem;">`;
+            html += `<h5 class="card-title">📦${el.querySelector("title").innerHTML}.deb</h5>`;
+            html += `<p class="card-text">${el.querySelector("description").innerHTML}</p>`;
+            html += `<!-- a class="btn btn-xsm btn-success" href="${el.querySelector("link").innerHTML}">💾</a -->`;
+            html += `</div>`; 
+        });
+        document.getElementById("rss-feed").innerHTML = html;
+    });
+EOD);
+
 
 $oPage->container->addItem($newsRow);
 
