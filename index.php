@@ -148,7 +148,7 @@ $utilsMenu->addMenuItem(
 $utilsMenu->addMenuItem(
     _('Redmine To AbraFlexi'),
     'https://github.com/VitexSoftware/Redmine2AbraFlexi',
-    'img/redmine2abraflexi.png',
+    'img/redmine2abraflexi.svg',
     _('It generates an invoice in FlexiBee from the hours worked in Redmine'),
     new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/redmine2abraflexi/composer.json')),
 );
