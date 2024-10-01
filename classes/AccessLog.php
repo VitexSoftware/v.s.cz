@@ -22,7 +22,7 @@ namespace VSCZ;
  */
 class AccessLog extends \Ease\SQL\Engine
 {
-    public $myTable = 'vs_access_log';
+    public string $myTable = 'vs_access_log';
 
     public function setUp($options = []): void
     {
