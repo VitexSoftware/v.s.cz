@@ -138,6 +138,14 @@ $utilsMenu->addMenuItem(
 );
 
 $utilsMenu->addMenuItem(
+    _('Mailer for AbraFlexi'),
+    'https://github.com/VitexSoftware/abraflexi-mailer',
+    'img/abraflexi-mailer.svg',
+    _('Document Sender for AbraFlexi'),
+    new \Ease\TWB4\Label('info', ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-mailer/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
     _('Discomp To AbraFlexi'),
     'https://github.com/Spoje-NET/discomp2abraflexi',
     'img/discomp2abraflexi.svg',
