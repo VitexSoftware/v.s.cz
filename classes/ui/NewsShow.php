@@ -55,7 +55,7 @@ class NewsShow extends \Ease\Container
                 ).'</small></div>'));
             }
         } else {
-            $this->addItem(new \Ease\TWB4\Label('warning', _('No articles')));
+            $this->addItem(new \Ease\TWB5\Label('warning', _('No articles')));
         }
     }
 }

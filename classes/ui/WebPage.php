@@ -21,10 +21,10 @@ namespace VSCZ\ui;
  * @author    Vitex <vitex@hippy.cz>
  * @copyright 2009-2019 Vitex@hippy.cz (G)
  */
-class WebPage extends \Ease\TWB4\WebPage
+class WebPage extends \Ease\TWB5\WebPage
 {
     public string $bootstrapThemeCSS = 'css/freelancer.min.css';
-    public \Ease\TWB4\Container $container;
+    public \Ease\TWB5\Container $container;
     public $column1;
     public $column2;
     public $column3;
@@ -45,7 +45,7 @@ class WebPage extends \Ease\TWB4\WebPage
         $this->head->addItem('<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.php">');
 
         $this->body->setTagID('page-top');
-        $this->container = $this->addItem(new \Ease\TWB4\Container(new \Ease\Html\DivTag('<p><br clear="all"><br clear="all"></p>')));
+        $this->container = $this->addItem(new \Ease\TWB5\Container(new \Ease\Html\DivTag('<p><br clear="all"><br clear="all"></p>')));
         $this->container->setTagClass('container-fluid');
     }
 

@@ -17,7 +17,7 @@ require_once 'includes/VSInit.php';
 
 $oPage->addItem(new \VSCZ\ui\PageTop(_('Vitex Software')));
 
-$pageCols = $oPage->container->addItem(new \Ease\TWB4\Row());
+$pageCols = $oPage->container->addItem(new \Ease\TWB5\Row());
 
 $oPage->column1 = $pageCols->addColumn(4);
 $oPage->column2 = $pageCols->addColumn(4);

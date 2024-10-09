@@ -24,9 +24,9 @@ $oPage->addItem(new \VSCZ\ui\PageTop(_('Fakturační systém Moloch')));
   $oPage->column2->addItem('<hr>');
  */
 
-$container = new \Ease\TWB4\Container();
+$container = new \Ease\TWB5\Container();
 
-$infopanel = $container->addItem(new \Ease\TWB4\Panel(new \Ease\Html\H2Tag('Moloch')));
+$infopanel = $container->addItem(new \Ease\TWB5\Panel(new \Ease\Html\H2Tag('Moloch')));
 
 $prehled = $infopanel->addItem(new \Ease\Html\UlTag());
 $prehled->addItemSmart('byl vyvíjen od roku 2000 jako intranetový IS společnosti <a href="http://arachne.cz/">Arachne Labs</a>. ');
@@ -62,10 +62,10 @@ $infopanel->addItem(new \Ease\Html\ImgTag(
 //
 // //echo '<pre>'; print_r($Downloads); echo '</pre>';
 //
-// $row = $container->addItem(new \Ease\TWB4\Row);
+// $row = $container->addItem(new \Ease\TWB5\Row);
 //
 //
-// $install = new \Ease\TWB4\Well(new \Ease\Html\H3Tag(_('Ke stažení')));
+// $install = new \Ease\TWB5\Card(new \Ease\Html\H3Tag(_('Ke stažení')));
 //
 // $install->addItem(new VSDownloadButton($package));
 //
@@ -81,7 +81,7 @@ $infopanel->addItem(new \Ease\Html\ImgTag(
 // $install->addItem('<a href="http://ubuntu.com/"><img style="width: 60px;" title="Ubuntu Linux" src="img/ubuntulogo.png"></a><p></p>');
 //
 //
-// $row->addItem(new \Ease\TWB4\Col(6, $install));
+// $row->addItem(new \Ease\TWB5\Col(6, $install));
 //
 // $loginFace = new \Ease\Html\DivTag('LoginFace');
 //
@@ -95,7 +95,7 @@ $infopanel->addItem(new \Ease\Html\ImgTag(
 //
 // //$loginFrame->addItem($loginForm);
 //
-// $row->addItem(new \Ease\TWB4\Col(6, new \Ease\TWB4\Well($loginFrame)));
+// $row->addItem(new \Ease\TWB5\Col(6, new \Ease\TWB5\Card($loginFrame)));
 //
 // $oPage->addItem($container);
 

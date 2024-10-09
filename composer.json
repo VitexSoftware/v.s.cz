@@ -25,9 +25,10 @@
         "ext-fileinfo": "*",
         "league/commonmark": "*",
         "deb/abraflexi": "*",
-        "deb/ease-bootstrap4-widgets": "*",
+        "deb/ease-bootstrap5-widgets": "*",
 	"deb/ease-html": "*",
-	"deb/ease-fluentpdo": "*"
+	"deb/ease-fluentpdo": "*",
+        "deb/ease-bricks": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "*",
@@ -55,7 +56,7 @@
     },
     {
       "type": "path",
-      "url": "/usr/share/php/EaseTWB4/"
+      "url": "/usr/share/php/EaseTWB5/"
     },
     {
       "type": "path",
@@ -67,7 +68,11 @@
     },
     {
       "type": "path",
-      "url": "/usr/share/php/EaseTWB4Widgets/"
+      "url": "/usr/share/php/EaseTWB5Widgets/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseBricks/ui/"      
     }
   ]
 }

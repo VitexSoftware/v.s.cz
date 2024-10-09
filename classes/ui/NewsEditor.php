@@ -69,7 +69,7 @@ class NewsEditor extends \Ease\Html\DivTag
             $listRow->addItem('&nbsp;(');
 
             $listRow->addItem(
-                new \Ease\TWB4\LinkButton(
+                new \Ease\TWB5\LinkButton(
                     '?delete='.$articleID,
                     _('Delete'),
                     'warning btn-xs',
@@ -86,7 +86,7 @@ class NewsEditor extends \Ease\Html\DivTag
 
     public function finalize(): void
     {
-        $row = new \Ease\TWB4\Row();
+        $row = new \Ease\TWB5\Row();
         $row->addColumn(8, $this->articleForm());
         $row->addColumn(4, $this->articleListing());
         $this->addItem($row);
@@ -94,7 +94,7 @@ class NewsEditor extends \Ease\Html\DivTag
 
     public function articleForm()
     {
-        $form = new \Ease\TWB4\Form('NewsArticle');
+        $form = new \Ease\TWB5\Form('NewsArticle');
         $form->addItem(new \Ease\Html\InputHiddenTag(
             'id',
             $this->newsEngine->getMyKey(),
@@ -105,7 +105,7 @@ class NewsEditor extends \Ease\Html\DivTag
             'language',
             ['cs' => _('Czech'), 'en' => _('English')],
         ), _('Language'));
-        $form->addItem(new \Ease\TWB4\SubmitButton('Ok', 'success'));
+        $form->addItem(new \Ease\TWB5\SubmitButton('Ok', 'success'));
         $form->fillUp($this->newsEngine->getData());
 
         return $form;

@@ -20,11 +20,11 @@ use League\CommonMark\CommonMarkConverter;
 require_once 'includes/VSInit.php';
 
 $oPage->addItem(new ui\PageTop(_('Ease Framework')));
-$container = $oPage->addItem(new \Ease\TWB4\Container());
+$container = $oPage->addItem(new \Ease\TWB5\Container());
 
 $oPage->AddItem('<a href="https://github.com/Vitexus/EaseFramework" class="ribbon bg-teal">Forkni na GitHubu</a>');
 
-$prehled = new \Ease\TWB4\Well();
+$prehled = new \Ease\TWB5\Card();
 $prehled->addItem('<strong>Ease Framework</strong> je aktívně vyvíjen od roku 2008. ');
 $prehled->addItem('Podporuje <a href="http://html5.org">HTML5</a> či <a href="http://getbootstrap.com/">Twitter Bootstrap</a>');
 $prehled->addItem(' a <a href="http://www.phpunit.de/manual/current/en/index.html">PHPUnit</a> testy. ');
@@ -33,17 +33,17 @@ $prehled->addItem('Jazykově závislé řetězce mají <a href="http://php.net/m
 
 $buttons = new \Ease\Container();
 
-$buttons->addItem(new \Ease\TWB4\LinkButton(
+$buttons->addItem(new \Ease\TWB5\LinkButton(
     '/ease-framework/',
     '<img src="img/apigen.png" width="20"> '._('Apigen documentation'),
     'info btn-lg',
 ));
-$buttons->addItem(new \Ease\TWB4\LinkButton(
+$buttons->addItem(new \Ease\TWB5\LinkButton(
     'https://github.com/Vitexus/EaseFramework',
     '<i class = "fa fa-github"></i>&nbsp;GitHub',
     'info btn-lg',
 ));
-$buttons->addItem(new \Ease\TWB4\LinkButton(
+$buttons->addItem(new \Ease\TWB5\LinkButton(
     'https://github.com/VitexSoftware/EaseFramework/commits/master.atom',
     '<i class = "fa fa-rss-square"></i>&nbsp;'._('RSS Feed'),
     'info btn-lg',
@@ -57,7 +57,7 @@ if (file_exists('easelastmsg.txt')) {
     $prehled->addItem(file('easelastmsg.txt'));
 }
 
-$efRow = new \Ease\TWB4\Row();
+$efRow = new \Ease\TWB5\Row();
 $efRow->addColumn(8, $prehled);
 
 $download = new \Ease\Html\DivTag();
