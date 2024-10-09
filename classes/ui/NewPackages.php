@@ -130,7 +130,7 @@ class NewPackages extends \Ease\Html\SpanTag
     /**
      * @param array $pProps
      *
-     * @return \Ease\TWB4\Card
+     * @return \Ease\TWB5\Card
      */
     public function debInfoBlock($pProps)
     {
@@ -162,7 +162,7 @@ class NewPackages extends \Ease\Html\SpanTag
 
         $cardBody->addItem(new \Ease\Html\PTag($pProps['Description'], ['class' => 'card-text']));
         $cardBody->addItem($download);
-        $packageCard = new \Ease\TWB4\Card(new \Ease\Html\DivTag(new \Ease\Html\H5Tag($pName.' '.$pProps['Version']), ['class' => 'card-header']), ['class' => 'text-black bg-warning']);
+        $packageCard = new \Ease\TWB5\Card(new \Ease\Html\DivTag(new \Ease\Html\H5Tag($pName.' '.$pProps['Version']), ['class' => 'card-header']), ['class' => 'text-black bg-warning']);
         $packageCard->addItem($cardBody);
 
         //   $packageCard->addItem(new \Ease\Html\DivTag('<small>' . _('Installed') . ': ' . $counts['installs'] . '&nbsp&nbsp;' . _('Downloaded') . ': ' . $counts['downloads'] . '</small>', ['class' => 'card-footer']));

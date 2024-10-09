@@ -31,8 +31,8 @@ require_once 'includes/VSInit.php';
 
 $oPage->addItem(new ui\PageTop(_('Articles')));
 
-$oPage->container->addItem(new \Ease\TWB4\Well([new ui\NewsShow(new News(), $oPage->getRequestValue('id', 'int')),
-    new \Ease\TWB4\LinkButton(
+$oPage->container->addItem(new \Ease\TWB5\Card([new ui\NewsShow(new News(), $oPage->getRequestValue('id', 'int')),
+    new \Ease\TWB5\LinkButton(
         'articles.php',
         '<img src="img/news.svg" style="height: 20px"> '._('More articles').' <i class="fa fa-angle-double-right" aria-hidden="true"></i>',
         'info',

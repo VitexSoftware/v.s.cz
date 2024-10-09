@@ -85,7 +85,7 @@ class Repositor extends \Ease\Html\DivTag
                 $pkgs[$this->repoUrl.'pool/'.$distro.$packFileBase] = $distro;
             }
 
-            $package = new \Ease\TWB4\DropdownButton('<img style="width: 18px;" src="img/deb-package.png">&nbsp;'._('Download'), 'success', $pkgs);
+            $package = new \Ease\TWB5\DropdownButton('<img style="width: 18px;" src="img/deb-package.png">&nbsp;'._('Download'), 'success', $pkgs);
 
             $pInfo = new \Ease\Html\ATag(
                 'package.php?package='.$pName.'#',

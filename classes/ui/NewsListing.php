@@ -38,7 +38,7 @@ class NewsListing extends \Ease\Html\UlTag
                 ));
             }
         } else {
-            $this->addItem(new \Ease\TWB4\Label('warning', _('No articles')));
+            $this->addItem(new \Ease\TWB5\Label('warning', _('No articles')));
         }
     }
 }

@@ -24,9 +24,9 @@ $oPage->addJavaScript('$("#packs").tablesorter();');
 
 $oPage->addItem(new ui\PageTop(_('Deb Repository')));
 
-$packTabs = new \Ease\TWB4\Tabs('PackTabs');
+$packTabs = new \Ease\TWB5\Tabs('PackTabs');
 
-$reposinfo = new \Ease\TWB4\Well(new \Ease\Html\H3Tag(_('How to use repository')));
+$reposinfo = new \Ease\TWB5\Card(new \Ease\Html\H3Tag(_('How to use repository')));
 $reposinfo->addItem(new \Ease\Html\EmTag(_('On current debian or ubuntu')));
 $steps = $reposinfo->addItem(new \Ease\Html\UlTag(
     null,
@@ -101,7 +101,7 @@ foreach ($packages as $pName => $pProps) {
 $packTabs->addTab(_('Packages'), $ptable);
 $packTabs->addTab(_('Instructions'), $reposinfo);
 
-$oPage->addItem(new \Ease\TWB4\Container($packTabs));
+$oPage->addItem(new \Ease\TWB5\Container($packTabs));
 
 $oPage->addItem(new ui\PageBottom());
 

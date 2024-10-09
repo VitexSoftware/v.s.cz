@@ -15,7 +15,7 @@ declare(strict_types=1);
 
 namespace VSCZ\ui;
 
-class MainPageMenu extends \Ease\TWB4\Widgets\MainPageMenu
+class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
 {
     //    ($title, $url, $image, $description, $buttonText = NULL, $properties = Array)
     //
@@ -33,7 +33,7 @@ class MainPageMenu extends \Ease\TWB4\Widgets\MainPageMenu
      * @param string     $image
      * @param null|mixed $packagist
      *
-     * @return \Ease\TWB4\Col
+     * @return \Ease\TWB5\Col
      */
     public function addLibraryItem($url, $title, $description, $image = null, $packagist = null)
     {
@@ -81,9 +81,9 @@ class MainPageMenu extends \Ease\TWB4\Widgets\MainPageMenu
         $icon = new \Ease\Html\ImgTag($image, $title, ['alt' => $title, 'class' => 'card-img-top']);
         $cardHeader = new \Ease\Html\DivTag(new \Ease\Html\StrongTag($title), ['class' => 'card-header text-dark']);
         $cardBody = new \Ease\Html\DivTag(new \Ease\Html\PTag($description, ['class' => 'card-text text-dark']), ['class' => 'card-body', 'style' => 'align-text-bottom']);
-        $menuCard = new \Ease\TWB4\Card([new \Ease\Html\ATag($url, $cardHeader), new \Ease\Html\ATag($url, $icon), $cardBody, $bottom], ['class' => 'text-white bg-light mp-menu-item ']);
+        $menuCard = new \Ease\TWB5\Card([new \Ease\Html\ATag($url, $cardHeader), new \Ease\Html\ATag($url, $icon), $cardBody, $bottom], ['class' => 'text-white bg-light mp-menu-item ']);
 
-        return $this->addItem(new \Ease\TWB4\Col(3, $menuCard));
+        return $this->addItem(new \Ease\TWB5\Col(3, $menuCard));
     }
 
     /**

@@ -51,7 +51,7 @@ class PackageInfo extends \Ease\Html\DivTag
             ['class' => 'btn btn-lg btn-success'],
         );
 
-        $heading = new \Ease\TWB4\Row();
+        $heading = new \Ease\TWB5\Row();
         $heading->addColumn(
             2,
             self::packageLogo($pName, ['style' => ' height: 90px;']),
@@ -63,7 +63,7 @@ class PackageInfo extends \Ease\Html\DivTag
 
         parent::__construct([$heading, $packageDownloadLink, $packageInstallLink]);
 
-        $this->addItem(new \Ease\TWB4\Well($pProps['Description']));
+        $this->addItem(new \Ease\TWB5\Card($pProps['Description']));
 
         $infotable = new \Ease\Html\TableTag(null, ['class' => 'table']);
 
@@ -113,7 +113,7 @@ class PackageInfo extends \Ease\Html\DivTag
             }
         }
 
-        $infoColumns = new \Ease\TWB4\Row();
+        $infoColumns = new \Ease\TWB5\Row();
         $infoColumns->addColumn(8, $infotable);
 
         $rightColumn = new \Ease\Html\DivTag();
@@ -140,7 +140,7 @@ class PackageInfo extends \Ease\Html\DivTag
             $popularityTable->addRowColumns($iinfo);
         }
 
-        $packageTabs = new \Ease\TWB4\Tabs([_('Info') => $infoColumns], ['id' => 'ptabs']);
+        $packageTabs = new \Ease\TWB5\Tabs([_('Info') => $infoColumns], ['id' => 'ptabs']);
 
         $filer = new \VSCZ\Files();
         $packageContents = $filer->getPackageFiles($pProps['Name']);

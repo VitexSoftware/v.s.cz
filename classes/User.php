@@ -72,7 +72,7 @@ class User extends \Ease\User
      *
      * @return string
      */
-    public function getIcon()
+    public function getIcon(): string
     {
         $Icon = $this->GetSettingValue('icon');
 
@@ -98,7 +98,7 @@ class User extends \Ease\User
      *
      * @return string
      */
-    public function getUserName()
+    public function getUserName(): string
     {
         $longname = trim($this->getDataValue('firstname').' '.$this->getDataValue('lastname'));
 
@@ -109,7 +109,7 @@ class User extends \Ease\User
         return parent::getUserName();
     }
 
-    public function getEmail()
+    public function getEmail(): string
     {
         return $this->getDataValue('email');
     }

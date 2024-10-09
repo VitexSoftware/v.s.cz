@@ -34,17 +34,17 @@ class loginbox extends \Ease\Html\DivTag
             ['class' => 'form-vertical'],
         ));
 
-        $loginForm->addItem(new \Ease\TWB4\FormGroup(
+        $loginForm->addItem(new \Ease\TWB5\FormGroup(
             _('Username'),
             new \Ease\Html\InputTextTag($logincolumn),
         ));
-        $loginForm->addItem(new \Ease\TWB4\FormGroup(
+        $loginForm->addItem(new \Ease\TWB5\FormGroup(
             _('Password'),
             new \Ease\Html\InputPasswordTag($passcolumn),
         ));
 
-        $loginForm->addItem(new \Ease\TWB4\SubmitButton(
-            \Ease\TWB4\Part::GlyphIcon('log-in').'&nbsp;'._('Sign In'),
+        $loginForm->addItem(new \Ease\TWB5\SubmitButton(
+            \Ease\TWB5\Part::GlyphIcon('log-in').'&nbsp;'._('Sign In'),
             'success',
         ));
     }
