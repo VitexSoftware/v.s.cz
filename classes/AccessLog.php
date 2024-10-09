@@ -24,7 +24,7 @@ class AccessLog extends \Ease\SQL\Engine
 {
     public string $myTable = 'vs_access_log';
 
-    public function setUp($options = []): void
+    public function setUp($options = []): bool
     {
         $this->setupProperty($options, 'dbType', 'STATS_TYPE');
         $this->setupProperty($options, 'server', 'STATS_SERVER');
@@ -33,6 +33,7 @@ class AccessLog extends \Ease\SQL\Engine
         $this->setupProperty($options, 'database', 'STATS_DATABASE');
         $this->setupProperty($options, 'port', 'STATS_PORT');
         $this->setupProperty($options, 'connectionSettings', 'STATS_SETUP');
+        return true;
     }
 
     /**
