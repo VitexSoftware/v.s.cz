@@ -72,7 +72,7 @@ class User extends \Ease\User
      *
      * @return string
      */
-    public function getIcon()
+    public function getIcon(): string
     {
         $Icon = $this->GetSettingValue('icon');
 
