@@ -56,9 +56,9 @@ foreach ($downloads as $file => $size) {
 
 $oPage->addItem(new \VSCZ\ui\PageTop(_('unofficial Twitter Bootstrap Debian/Ubuntu packages')));
 
-$container = $oPage->addItem(new \Ease\TWB4\Container());
+$container = $oPage->addItem(new \Ease\TWB5\Container());
 
-$packTabs = new \Ease\TWB4\Tabs('PackTabs');
+$packTabs = new \Ease\TWB5\Tabs('PackTabs');
 $bootStrapTab = $packTabs->addTab('Twitter Bootstrap');
 
 $bootStrapTab->addItem(new \Ease\Html\DivTag(
@@ -119,9 +119,9 @@ $jqueryTab->addItem('jQuery is a fast, small, and feature-rich JavaScript librar
 
 $container->addItem($packTabs);
 
-$container2 = $oPage->addItem(new \Ease\TWB4\Container('<p><br></p>'));
+$container2 = $oPage->addItem(new \Ease\TWB5\Container('<p><br></p>'));
 
-$tabs = new \Ease\TWB4\Tabs('infotabs');
+$tabs = new \Ease\TWB5\Tabs('infotabs');
 
 $steps = new \Ease\Html\UlTag(null, ['class' => 'list-group']);
 

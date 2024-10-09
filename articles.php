@@ -31,7 +31,7 @@ require_once 'includes/VSInit.php';
 
 $oPage->addItem(new ui\PageTop(_('Articles')));
 
-$oPage->container->addItem(new \Ease\TWB4\Well(new ui\NewsListing(new News())));
+$oPage->container->addItem(new \Ease\TWB5\Card(new ui\NewsListing(new News())));
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
 

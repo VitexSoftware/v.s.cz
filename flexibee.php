@@ -30,7 +30,7 @@ use VSCZ\ui\SlideImage;
 require_once 'includes/VSInit.php';
 
 $oPage->addItem(new PageTop(_('AbraFlexi')));
-$oPage->container = $oPage->addItem(new \Ease\TWB4\Container());
+$oPage->container = $oPage->addItem(new \Ease\TWB5\Container());
 
 $oPage->container->addItem(new \Ease\Html\ATag(
     'https://flexibee.eu/',
@@ -48,7 +48,7 @@ $oPage->container->addItem(new \Ease\Html\DivTag(
 ));
 
 //
-// $productRow = new \Ease\TWB4\Row();
+// $productRow = new \Ease\TWB5\Row();
 //
 // $column1 = $productRow->addColumn(4);
 //
@@ -59,7 +59,7 @@ $oPage->container->addItem(new \Ease\Html\DivTag(
 // $column2->addItem(new \Ease\Html\DivTag(_('Solution for saving all flexibee changes into git repository with json files in'),
 //    ['style' => 'margin: 5px;']));
 //
-// $column2->addItem(new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/flexibee-history',
+// $column2->addItem(new \Ease\TWB5\LinkButton('https://github.com/VitexSoftware/flexibee-history',
 //    '<i class = "fa fa-github"></i> '._('Source codes').' »', 'info'));
 //
 //
@@ -71,7 +71,7 @@ $oPage->container->addItem(new \Ease\Html\DivTag(
 // $column3->addItem(new \Ease\Html\DivTag(_('Basic app for order pricelist items and reaction after incoming payment'),
 //    ['style' => 'margin: 5px;']));
 //
-// $column3->addItem(new \Ease\TWB4\LinkButton('https://shop4flexibee.vitexsoftware.cz/',
+// $column3->addItem(new \Ease\TWB5\LinkButton('https://shop4flexibee.vitexsoftware.cz/',
 //    [new \Ease\Html\ImgTag('img/shop4flexibee-logo.svg', 'Shop4FlexiBee logo',
 //        ['style' => 'height: 30px;']), ' ', _('Live Customer Demo').' »'],
 //    'success btn-lg'));
@@ -80,12 +80,12 @@ $oPage->container->addItem(new \Ease\Html\DivTag(
 //    ['style' => 'margin: 5px;']));
 //
 //
-// $column3->addItem(new \Ease\TWB4\LinkButton('https://shop4flexibee.vitexsoftware.cz/adminlogin.php',
+// $column3->addItem(new \Ease\TWB5\LinkButton('https://shop4flexibee.vitexsoftware.cz/adminlogin.php',
 //    [new \Ease\Html\ImgTag('img/shop4flexibee-logo.svg', 'Shop4FlexiBee logo',
 //        ['style' => 'height: 30px;']), ' ', _('Live Admin Demo').' »'],
 //    'success btn-lg'));
 //
-// $column3->addItem(new \Ease\TWB4\LinkButton('https://github.com/VitexSoftware/AbraFlexi-ClientZone',
+// $column3->addItem(new \Ease\TWB5\LinkButton('https://github.com/VitexSoftware/AbraFlexi-ClientZone',
 //    '<i class = "fa fa-github"></i> '._('Source codes').' »', 'info'));
 //
 
@@ -93,7 +93,7 @@ $oPage->container->addItem(new \Ease\Html\H2Tag(_('AbraFlexi enhancenments')));
 $oPage->container->addItem(new \Ease\Html\DivTag(_('Díky několikaleté praxi s tímto systémem vám přinášíme tyto naše vylepšení, integrace a nástroje').':'));
 // $oPage->container->addItem($productRow);
 
-$flexiCarousel = new \Ease\TWB4\Carousel(true, true, true, ['id' => 'FlexiCarousel']);
+$flexiCarousel = new \Ease\TWB5\Carousel(true, true, true, ['id' => 'FlexiCarousel']);
 
 $flexiCarousel->addSlide(
     new SlideImage(
@@ -105,7 +105,7 @@ $flexiCarousel->addSlide(
         new \Ease\Html\DivTag(
             _('Abra poskytuje pouze instalační balíčkek grafického klienta pro desktop a nebo klienta se serverem. Kdo si ale nechce na server instalovat nepotřebné grafické knihovny, ten si nainstaluje náš balíček.'),
             ['style' => 'margin: 5px;'],
-        ), new \Ease\TWB4\LinkButton(
+        ), new \Ease\TWB5\LinkButton(
             'https://github.com/VitexSoftware/flexibee-server-deb',
             [new \Ease\Html\ImgTag(
                 'img/abra-flexibee-square.png',
@@ -125,7 +125,7 @@ $flexiCarousel->addSlide(
     [new \Ease\Html\DivTag(
         _('Snadno nastavitelná utilita pro každodení zálohování vašich účetních dat'),
         ['style' => 'margin: 5px;'],
-    ), new \Ease\TWB4\LinkButton(
+    ), new \Ease\TWB5\LinkButton(
         'https://github.com/VitexSoftware/flexibee-server-deb',
         _('More informations').' »',
         'success btn-lg',
@@ -141,7 +141,7 @@ $flexiCarousel->addSlide(
     [new \Ease\Html\DivTag(
         _('Set of commandline tools related to testing AbraFlexi functionality'),
         ['style' => 'margin: 5px;'],
-    ), new \Ease\TWB4\LinkButton(
+    ), new \Ease\TWB5\LinkButton(
         'https://github.com/VitexSoftware/AbraFlexi-TestingTools',
         '<i class = "fa fa-github"></i> '._('Source codes').' »',
         'info',
@@ -159,7 +159,7 @@ $flexiCarousel->addSlide(
             _('Senzory pro sledování stavu AbraFlexi. Použitelné v monitorovacích systémech Nagios/Icinga.'),
             ['style' => 'margin: 5px;'],
         ),
-        new \Ease\TWB4\LinkButton(
+        new \Ease\TWB5\LinkButton(
             'https://github.com/VitexSoftware/monitoring-plugins-flexibee',
             '<i class = "fa fa-github"></i> '._('Source codes').' »',
             'info',
@@ -178,7 +178,7 @@ $flexiCarousel->addSlide(
             _('AbraFlexi company status digest every  day, week, month,year or alltime'),
             ['style' => 'margin: 5px;'],
         ),
-        new \Ease\TWB4\LinkButton(
+        new \Ease\TWB5\LinkButton(
             'https://github.com/VitexSoftware/AbraFlexi-Digest',
             '<i class = "fa fa-github"></i> '._('Source codes').' »',
             'info',
@@ -197,7 +197,7 @@ $flexiCarousel->addSlide(
             _('Vývojářský nástroj a editor pro AbraFlexi API. Napsaný s využitím knihovny FlexiPeeHP:'),
             ['style' => 'margin: 5px;'],
         ),
-        new \Ease\TWB4\LinkButton(
+        new \Ease\TWB5\LinkButton(
             'https://flexplorer.vitexsoftware.cz/',
             [new \Ease\Html\ImgTag(
                 'img/flexplorer-logo.png',
@@ -206,7 +206,7 @@ $flexiCarousel->addSlide(
             ), ' ', _('See in action').' »'],
             'success btn-lg',
         ),
-        new \Ease\TWB4\LinkButton(
+        new \Ease\TWB5\LinkButton(
             'https://github.com/VitexSoftware/Flexplorer/',
             '<i class = "fa fa-github"></i> '._('Source codes').' »',
             'info',
@@ -221,7 +221,7 @@ $flexiCarousel->addSlide(
     ),
     _('AbraFlexi Reminder'),
     [new \Ease\Html\DivTag(_('Reminds your customers by email with invoices in attachment as pdf and isdoc')),
-        new \Ease\TWB4\LinkButton(
+        new \Ease\TWB5\LinkButton(
             'https://github.com/VitexSoftware/php-flexibee-reminder',
             [new \Ease\Html\ImgTag(
                 'img/deb/php-flexibee-reminder.png',
@@ -240,7 +240,7 @@ $flexiCarousel->addSlide(
     ),
     _('AbraFlexi Matcher'),
     [new \Ease\Html\DivTag(_('Match invoices')),
-        new \Ease\TWB4\LinkButton(
+        new \Ease\TWB5\LinkButton(
             'https://github.com/VitexSoftware/php-flexibee-matcher',
             [new \Ease\Html\ImgTag(
                 'img/deb/php-flexibee-matcher.png',
@@ -263,7 +263,7 @@ $flexiCarousel->addSlide(
             _('Transparent Proxy for filering and modification communictation with AbraFlexi '),
             ['style' => 'margin: 5px;'],
         ),
-        new \Ease\TWB4\LinkButton(
+        new \Ease\TWB5\LinkButton(
             'https://flexiproxy.vitexsoftware.cz/c/demo',
             [new \Ease\Html\ImgTag(
                 'img/flexiproxy-logo.png',
@@ -272,7 +272,7 @@ $flexiCarousel->addSlide(
             ), ' ', _('Live Demo').' »'],
             'success btn-lg',
         ),
-        new \Ease\TWB4\LinkButton(
+        new \Ease\TWB5\LinkButton(
             'https://github.com/VitexSoftware/FlexiProxy',
             '<i class = "fa fa-github"></i> '._('Source codes').' »',
             'info',
@@ -286,7 +286,7 @@ $flexiPeeHPInfo->addItem(new \Ease\Html\DivTag(
     ['style' => 'margin: 5px;'],
 ));
 
-$flexiPeeHPInfo->addItem(new \Ease\TWB4\LinkButton(
+$flexiPeeHPInfo->addItem(new \Ease\TWB5\LinkButton(
     'https://www.youtube.com/watch?time_continue=23158&v=LTxascj6uv8',
     [new \Ease\Html\ImgTag(
         'img/flexipeehp-logo.png',
@@ -296,7 +296,7 @@ $flexiPeeHPInfo->addItem(new \Ease\TWB4\LinkButton(
     'success btn-lg',
 ));
 
-$flexiPeeHPInfo->addItem(new \Ease\TWB4\LinkButton(
+$flexiPeeHPInfo->addItem(new \Ease\TWB5\LinkButton(
     'https://github.com/Spoje-NET/FlexiPeeHP',
     '<i class = "fa fa-github"></i> '._('Source codes').' »',
     'info',

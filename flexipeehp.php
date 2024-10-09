@@ -20,26 +20,26 @@ use League\CommonMark\CommonMarkConverter;
 require_once 'includes/VSInit.php';
 
 $oPage->addItem(new ui\PageTop(_('FlexiPeeHP')));
-$container = $oPage->addItem(new \Ease\TWB4\Container());
+$container = $oPage->addItem(new \Ease\TWB5\Container());
 
 $oPage->AddItem('<a href="https://github.com/Spoje-NET/FlexiPeeHP" class="ribbon bg-teal">Forkni na GitHubu</a>');
 
-$prehled = new \Ease\TWB4\Well();
+$prehled = new \Ease\TWB5\Card();
 $prehled->addItem(new \Ease\Html\DivTag('<strong>FlexiPeeHP</strong> je aktívně vyvíjen od roku 2015. '));
 
 $buttons = new \Ease\Container();
 
-$buttons->addItem(new \Ease\TWB4\LinkButton(
+$buttons->addItem(new \Ease\TWB5\LinkButton(
     '/flexipeehp/',
     '<img src="img/apigen.png" width="20"> '._('Apigen documentation'),
     'info btn-lg',
 ));
-$buttons->addItem(new \Ease\TWB4\LinkButton(
+$buttons->addItem(new \Ease\TWB5\LinkButton(
     'https://github.com/Spoje-NET/FlexiPeeHP',
     '<i class = "fa fa-github"></i>&nbsp;GitHub',
     'info btn-lg',
 ));
-$buttons->addItem(new \Ease\TWB4\LinkButton(
+$buttons->addItem(new \Ease\TWB5\LinkButton(
     'https://github.com/Spoje-NET/FlexiPeeHP/commits/master.atom',
     '<i class = "fa fa-rss-square"></i>&nbsp;'._('RSS Feed'),
     'info btn-lg',
@@ -53,7 +53,7 @@ if (file_exists('easelastmsg.txt')) {
     $prehled->addItem(file('flexipeehplastlog'));
 }
 
-$efRow = new \Ease\TWB4\Row();
+$efRow = new \Ease\TWB5\Row();
 $efRow->addColumn(8, $prehled);
 
 $download = new \Ease\Html\DivTag();

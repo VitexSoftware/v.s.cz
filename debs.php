@@ -25,7 +25,7 @@ namespace VSCZ;
 require_once 'includes/VSInit.php';
 $oPage->addItem(new ui\PageTop(_('Debian Repository')));
 $repodir = 'repo';
-$reposinfo = new \Ease\TWB4\Well(new \Ease\Html\H3Tag(_('How to use repository')));
+$reposinfo = new \Ease\TWB5\Card(new \Ease\Html\H3Tag(_('How to use repository')));
 $reposinfo->addItem(new \Ease\Html\EmTag(_('On current debian or ubuntu')));
 $steps = $reposinfo->addItem(new \Ease\Html\UlTag(
     null,
@@ -44,7 +44,7 @@ $steps->addItemSmart(
     'sudo apt install <em>package(s)</em>',
     ['class' => 'list-group-item'],
 );
-$pTabs = new \Ease\TWB4\Tabs([_('Packages') => new ui\Repositor($repodir), _('How to use') => $reposinfo]);
+$pTabs = new \Ease\TWB5\Tabs([_('Packages') => new ui\Repositor($repodir), _('How to use') => $reposinfo]);
 $oPage->container->addItem($pTabs);
 $oPage->addItem(new \VSCZ\ui\PageBottom());
 $oPage->draw();

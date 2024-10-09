@@ -26,7 +26,7 @@ require_once 'includes/VSInit.php';
 
 $oPage->addItem(new ui\PageTop(_('Hosting - Vitex Software')));
 
-$oPage->addItem(new \Ease\TWB4\Container(_('Nabízíme hosting na těchto platformách:')));
+$oPage->addItem(new \Ease\TWB5\Container(_('Nabízíme hosting na těchto platformách:')));
 $oPage->addPageColumns();
 
 $oPage->column1->addItem(new \Ease\Html\H2Tag(_('NodeJS')));

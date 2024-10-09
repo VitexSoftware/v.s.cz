@@ -29,8 +29,8 @@ class PageBottom extends \Ease\Html\FooterTag
         $this->addTagClass('footer');
         $this->addItem('<hr>');
 
-        $rowFluid1 = new \Ease\TWB4\Row();
-        $colA = $rowFluid1->addItem(new \Ease\TWB4\Col(2));
+        $rowFluid1 = new \Ease\TWB5\Row();
+        $colA = $rowFluid1->addItem(new \Ease\TWB5\Col(2));
         $listA1 = $colA->addItem(new \Ease\Html\UlTag(
             _('Source codes'),
             ['style' => 'list-style-type: none'],
@@ -49,7 +49,7 @@ class PageBottom extends \Ease\Html\FooterTag
             'Vagrant',
         ));
 
-        $colB = $rowFluid1->addItem(new \Ease\TWB4\Col(2));
+        $colB = $rowFluid1->addItem(new \Ease\TWB5\Col(2));
         $listB1 = $colB->addItem(new \Ease\Html\UlTag(
             _('Applications'),
             ['style' => 'list-style-type: none'],
@@ -59,7 +59,7 @@ class PageBottom extends \Ease\Html\FooterTag
         //        $listB1->addItemSmart(new \Ease\Html\ATag('/flexplorer', 'FlexPlorer'));
         $listB1->addItemSmart(new \Ease\Html\ATag('https://multiflexi.vitexsoftware.com/', 'MultiFlexi'));
 
-        $colC = $rowFluid1->addItem(new \Ease\TWB4\Col(2));
+        $colC = $rowFluid1->addItem(new \Ease\TWB5\Col(2));
         $listC1 = $colC->addItem(new \Ease\Html\UlTag(
             _('Services'),
             ['style' => 'list-style-type: none'],
@@ -68,7 +68,7 @@ class PageBottom extends \Ease\Html\FooterTag
         $listC1->addItemSmart(new \Ease\Html\ATag('repos.php', _('Repository')));
         $listC1->addItemSmart(new \Ease\Html\ATag('hosting.php', _('Hosting')));
 
-        $colD = $rowFluid1->addItem(new \Ease\TWB4\Col(2));
+        $colD = $rowFluid1->addItem(new \Ease\TWB5\Col(2));
         $listD1 = $colD->addItem(new \Ease\Html\UlTag(
             _('Documentation'),
             ['style' => 'list-style-type: none'],
@@ -76,7 +76,7 @@ class PageBottom extends \Ease\Html\FooterTag
 
         $listD1->addItemSmart(new \Ease\Html\ATag('/php-spojenet-abraflexi-doc/namespaces/abraflexi.html', '<img style="height: 20px" src="img/php-flexibee.svg"> '._('PHP AbraFlexi')));
         $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-doc/namespaces/ease.html', '<img style="height: 20px;" src="img/ease-core.svg"> '._('EasePHP Framework Core')));
-        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-twb4-doc/namespaces/ease-twb4.html', '<img style="height: 20px;" src="img/ease-twbootstrap4.svg"> '._('EasePHP Framework Twitter Bootstrap4')));
+        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-TWB5-doc/namespaces/ease-TWB5.html', '<img style="height: 20px;" src="img/ease-twbootstrap4.svg"> '._('EasePHP Framework Twitter Bootstrap4')));
         $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-twb5-doc/namespaces/ease-twb5.html', '<img style="height: 20px;" src="img/php-ease-twbootstrap5.svg"> '._('EasePHP Framework Twitter Bootstrap5')));
         $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-abraflexi-bricks-doc/namespaces/abraflexi-bricks.html', '<img style="height: 20px;" src="img/php-flexibee-bricks.svg"> PHP Based AbraFlexi RestAPI/Json library Addons'));
 
@@ -85,7 +85,7 @@ class PageBottom extends \Ease\Html\FooterTag
         $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-rbczpremiumapi/index.html', '<img src="img/php-rbczpremiumapi.svg" style="width: 20px;"> '._('Raiffeisenbank Premium API client library')));
         $listD1->addItemSmart(new \Ease\Html\ATag('https://multiflexi.readthedocs.io/en/latest/', '<img src="https://multiflexi.readthedocs.io/en/latest/_images/project-logo.svg" style="width: 20px;"> '._('MultiFlexi')));
 
-        $colE = $rowFluid1->addItem(new \Ease\TWB4\Col(2));
+        $colE = $rowFluid1->addItem(new \Ease\TWB5\Col(2));
         $listE1 = $colE->addItem(new \Ease\Html\UlTag(
             _('Related'),
             ['style' => 'list-style-type: none'],
@@ -99,7 +99,7 @@ class PageBottom extends \Ease\Html\FooterTag
             _('Spoje.Net'),
         ));
 
-        $colF = $rowFluid1->addItem(new \Ease\TWB4\Col(2));
+        $colF = $rowFluid1->addItem(new \Ease\TWB5\Col(2));
         $listF1 = $colF->addItem(new \Ease\Html\UlTag(
             _('More'),
             ['style' => 'list-style-type: none'],
@@ -111,7 +111,7 @@ class PageBottom extends \Ease\Html\FooterTag
         $listF1->addItemSmart(new \Ease\Html\ATag('cenik.php', _('Pricelist')));
         $listF1->addItemSmart(new \Ease\Html\ATag('kontakt.php', _('Contacts')));
 
-        $rowFluid2 = new \Ease\TWB4\Row();
+        $rowFluid2 = new \Ease\TWB5\Row();
 
         $socialIcons = <<<'EOD'
         <a class = "btn btn-primary social-login-btn social-mastodon" href="https://f.cz/@vitexsoftware"><i class = "fa fa-mastodon"></i></a>
@@ -122,15 +122,15 @@ class PageBottom extends \Ease\Html\FooterTag
 
 EOD;
 
-        $rowFluid2->addItem(new \Ease\TWB4\Col(
+        $rowFluid2->addItem(new \Ease\TWB5\Col(
             12,
-            [new \Ease\TWB4\Col(8, $socialIcons), new \Ease\TWB4\Col(
+            [new \Ease\TWB5\Col(8, $socialIcons), new \Ease\TWB5\Col(
                 4,
                 _('&copy; 2012-2023 Vitex Software'),
             )],
         ));
 
-        $mainBottomRow = new \Ease\TWB4\Row();
+        $mainBottomRow = new \Ease\TWB5\Row();
         $mainBottomRow->addColumn(10, [$rowFluid1, $rowFluid2]);
         $mainBottomRow->addColumn(
             2,

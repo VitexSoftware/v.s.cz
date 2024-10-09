@@ -20,7 +20,7 @@ namespace VSCZ\ui;
  *
  * @author     Vitex <vitex@hippy.cz>
  */
-class MainMenu extends \Ease\TWB4\Navbar
+class MainMenu extends \Ease\TWB5\Navbar
 {
     /**
      * Menu aplikace.
@@ -72,7 +72,7 @@ class MainMenu extends \Ease\TWB4\Navbar
                 '/php-vitexsoftware-ease-core-doc/namespaces/ease.html' => '<img style="height: 20px;" src="img/ease-core.svg"> '._('EaseCore'),
                 '/php-vitexsoftware-abraflexi-bricks-doc/namespaces/abraflexi-bricks.html' => '<img style="height: 20px;" src="https://www.vitexsoftware.cz/img/php-flexibee-bricks.svg"> PHP Based AbraFlexi RestAPI/Json library Addons',
                 //                    '/php-vitexsoftware-ease-bootstrap-widgets-doc' => 'Ease Framework Widgets',
-                '/php-vitexsoftware-ease-bootstrap4-doc/namespaces/ease-twb4.html' => '<img style="height: 20px;"  src="img/ease-twbootstrap4.svg">EasePHP Framework Twitter Bootstrap4',
+                '/php-vitexsoftware-ease-bootstrap4-doc/namespaces/ease-TWB5.html' => '<img style="height: 20px;"  src="img/ease-twbootstrap4.svg">EasePHP Framework Twitter Bootstrap4',
                 '/php-vitexsoftware-ease-bootstrap5-doc/namespaces/ease-twb5.html' => '<img style="height: 20px;"  src="img/php-ease-twbootstrap5.svg">EasePHP Framework Twitter Bootstrap5',
                 //                    '/php-vitexsoftware-ease-bricks-doc' => 'Ease Framework Bricks',
                 '/php-vitexsoftware-ease-fluentpdo-doc/namespaces/ease-sql.html' => '<img src="img/php-ease-fluentpdo.svg" style="height: 20px;"> Ease FluentPDO',
@@ -99,7 +99,7 @@ class MainMenu extends \Ease\TWB4\Navbar
             $this->addMenuItem(new \Ease\Html\ATag('newsedit.php', _('News Editor')), 'left');
         }
 
-        $this->addMenuItem(new \Ease\TWB4\Widgets\LangLinks(), 'right');
+        $this->addMenuItem(new \Ease\ui\LangLinks(), 'right');
     }
 
     /**

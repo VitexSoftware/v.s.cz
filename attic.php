@@ -51,7 +51,7 @@ $libMenu->addMenuItem(
     _('FlexiPeeHP Bricks'),
     _('https://github.com/VitexSoftware/FlexiPeeHP-Bricks'),
     _('Widgets & Code snipplets for FlexiPeeHP'),
-    new \Ease\TWB4\Label('info', '0.2').new ui\PackagistBadge(
+    new \Ease\TWB5\Badge( '0.2').new ui\PackagistBadge(
         'VitexSoftware/FlexiPeeHP-Bricks',
         'vitexsoftware/flexipeehp-bricks',
     ),
@@ -99,7 +99,7 @@ $libMenu->addMenuItem(
     _('IPEX B2B'),
     'https://github.com/Spoje-NET/ipex-b2b',
     _('Library for interaction with restapi.ipex.cz'),
-    new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge(
+    new \Ease\TWB5\Badge( '0.1').new ui\PackagistBadge(
         'Spoje-NET/ipex-b2b',
         'spoje.net/ipexb2b',
     ),
@@ -110,7 +110,7 @@ $libMenu->addMenuItem(
     _('php-subreg'),
     'https://github.com/Spoje-NET/php-subreg',
     _('Easy interaction with subreg.cz'),
-    new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge(
+    new \Ease\TWB5\Badge( '0.1').new ui\PackagistBadge(
         'Spoje-NET/php-subreg',
         'spoje.net/subreg',
     ),
@@ -121,7 +121,7 @@ $libMenu->addMenuItem(
     _('Ease FuelUX'),
     'https://github.com/VitexSoftware/ease-fuelux',
     _('FuelUX componets for EasePHP FrameWork '),
-    new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge(
+    new \Ease\TWB5\Badge( '0.1').new ui\PackagistBadge(
         'VitexSoftware/ease-fuelux',
         'vitexsoftware/ease-fuelux',
     ),
@@ -132,7 +132,7 @@ $libMenu->addMenuItem(
     _('PrimaERP'),
     'https://github.com/VitexSoftware/php-primaERP',
     _('Library for interaction with API primaerp.com'),
-    new \Ease\TWB4\Label('info', '0.1').new ui\PackagistBadge(
+    new \Ease\TWB5\Badge( '0.1').new ui\PackagistBadge(
         'VitexSoftware/php-primaERP',
         'vitexsoftware/primaerp',
     ),
