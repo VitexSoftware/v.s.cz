@@ -125,7 +125,7 @@ class User extends \Ease\User
     public function tryToLogin(array $formData): bool
     {
         if (empty($formData)) {
-            return;
+            return false;
         }
 
         $login = addslashes($formData[$this->loginColumn]);
@@ -134,13 +134,13 @@ class User extends \Ease\User
         if (empty($login)) {
             $this->addStatusMessage(_('missing login'), 'error');
 
-            return;
+            return false;
         }
 
         if (empty($password)) {
             $this->addStatusMessage(_('missing password'), 'error');
 
-            return;
+            return false;
         }
 
         if ($this->loadFromSQL([$this->loginColumn => $login])) {
@@ -179,8 +179,6 @@ class User extends \Ease\User
         ));
 
         return false;
-
-        return $result;
     }
 
     /**
