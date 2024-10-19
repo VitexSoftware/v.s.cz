@@ -16,23 +16,21 @@ declare(strict_types=1);
 namespace VSCZ\ui;
 
 /**
- * Vršek stránky.
- *
- * @author     Vitex <vitex@hippy.cz>
+ * Page TOP.
  */
 class PageTop extends \Ease\Html\DivTag
 {
     /**
      * Titulek stránky.
      */
-    public string $pageTitle = 'Page Heading';
+    public string $pageTitle = '';
 
     /**
      * Nastavuje titulek.
      *
      * @param string $pageTitle
      */
-    public function __construct($pageTitle = null)
+    public function __construct($pageTitle = '')
     {
         parent::__construct();
 

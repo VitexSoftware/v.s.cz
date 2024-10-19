@@ -122,7 +122,7 @@ class User extends \Ease\User
      *
      * @return null|bool
      */
-    public function tryToLogin($formData)
+    public function tryToLogin(array $formData): bool
     {
         if (empty($formData)) {
             return;
