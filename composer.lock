@@ -75,11 +75,11 @@
         },
         {
             "name": "deb/ease-bootstrap5-widgets",
-            "version": "1.3",
+            "version": "1.4.0.5",
             "dist": {
                 "type": "path",
                 "url": "/usr/share/php/EaseTWB5Widgets",
-                "reference": "40e4d7faed9f3b911ab49720c89e6163cca7fe9e"
+                "reference": "92f5828e9a516e70bb905763381b1d01115c3d7d"
             },
             "require": {
                 "deb/ease-bootstrap5": "*"
@@ -141,11 +141,11 @@
         },
         {
             "name": "deb/ease-core",
-            "version": "1.44.0.221",
+            "version": "1.44.0.222",
             "dist": {
                 "type": "path",
                 "url": "/usr/share/php/EaseCore",
-                "reference": "77f7b88c0e9b0689f836698c8ab188b9ff2d4f8a"
+                "reference": "2e28fc4a543225182764e1ce622ecfe3fcc728e5"
             },
             "require": {
                 "composer-runtime-api": "*",
@@ -209,11 +209,11 @@
         },
         {
             "name": "deb/ease-html",
-            "version": "1.40.0.80",
+            "version": "1.40.0.81",
             "dist": {
                 "type": "path",
                 "url": "/usr/share/php/EaseHtml",
-                "reference": "2d8fb5b54df672dfae8b484433b4aa8c4b74a0fa"
+                "reference": "d893416a676a28ad3feeef7b2d89a69cfd6c29c0"
             },
             "require": {
                 "deb/ease-core": "*"

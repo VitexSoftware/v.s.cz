@@ -198,6 +198,7 @@ $mainPageRow->addColumn(2, new \Ease\Html\DivTag(
     ['class' => 'rss-widget']
 ));
 
+\Ease\Part::jQueryze();
 $oPage->includeCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css');
 $oPage->includeJavaScript('//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js');
 
