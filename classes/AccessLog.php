@@ -26,17 +26,21 @@ class AccessLog extends \Ease\SQL\Engine
     
     public string $username = '';
     public string $password = '';
-    public ?string $port = '';
 
     public function setUp($options = []): bool
     {
-        $this->setupProperty($options, 'dbType', 'STATS_TYPE');
-        $this->setupProperty($options, 'server', 'STATS_SERVER');
-        $this->setupProperty($options, 'username', 'STATS_USERNAME');
-        $this->setupProperty($options, 'password', 'STATS_PASSWORD');
+        
+        $this->setupProperty($options, 'dbType', 'STATS_TYPE');       //Ease
+        $this->setupProperty($options, 'dbType', 'STATS_CONNECTION'); //Laralvel
+        $this->setupProperty($options, 'server', 'STATS_HOST');
+        $this->setupProperty($options, 'dbLogin', 'STATS_USERNAME');
+        $this->setupProperty($options, 'dbPass', 'STATS_PASSWORD');
         $this->setupProperty($options, 'database', 'STATS_DATABASE');
         $this->setupProperty($options, 'port', 'STATS_PORT');
-        $this->setupProperty($options, 'connectionSettings', 'STATS_SETUP');
+        $this->setupProperty($options, 'connectionSetup', 'STATS_SETUP');
+        $this->setupProperty($options, 'dbSettings', 'STATS_SETTINGS');
+        $this->setupProperty($options, 'myTable');
+        $this->setupProperty($options, 'debug', 'STATS_DEBUG');
         return true;
     }
 

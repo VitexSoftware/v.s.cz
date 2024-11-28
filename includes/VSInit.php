@@ -15,13 +15,20 @@ declare(strict_types=1);
 
 namespace VSCZ;
 
-require_once 'includes/Configure.php';
+
 
 require_once '/var/lib/vitexsoftware.cz/autoload.php';
 
 if (!\defined('EASE_APPNAME')) {
     \define('EASE_APPNAME', 'VitexSoftwareWEB');
 }
+
+
+date_default_timezone_set('Europe/Prague');
+
+
+\Ease\Shared::init([],'/etc/vscz.env');
+
 
 \Ease\Locale::singleton(null, './i18n', 'vscz');
 
