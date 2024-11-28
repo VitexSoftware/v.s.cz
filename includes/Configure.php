@@ -31,7 +31,7 @@ date_default_timezone_set('Europe/Prague');
 \define('STATS_PASSWORD', 'TeacPets4');
 \define('STATS_DATABASE', 'apachelogs');
 \define('STATS_TYPE', 'mysql');
-\define('STATS_PORT', 3306);
+\define('STATS_PORT', '3306');
 
 /**
  * Adresář pro zápis logů.
@@ -40,7 +40,7 @@ date_default_timezone_set('Europe/Prague');
 
 \define('DB_TYPE', 'mysql');
 \define('DB_HOST', 'localhost');
-\define('DB_PORT', 3306);
+\define('DB_PORT', '3306');
 \define('DB_DATABASE', 'vitexsoftware');
 \define('DB_USERNAME', 'vitexsoftware');
 \define('DB_PASSWORD', 'TusVecFer.ow5');
