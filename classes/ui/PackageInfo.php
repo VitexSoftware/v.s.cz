@@ -22,7 +22,7 @@ namespace VSCZ\ui;
  */
 class PackageInfo extends \Ease\Html\DivTag
 {
-    public function __construct($pName)
+    public function __construct(string $pName)
     {
         $projectUrl = null;
 
@@ -87,12 +87,10 @@ class PackageInfo extends \Ease\Html\DivTag
                 case 'Recommends':
                 case 'Conflicts':
                 case 'Replaces':
-                    $infotable->addRowColumns([
-                        _($key),
-                        self::addPackageLinks($value),
-                    ]);
-                    $depIcons .= self::packagesIcons(self::DependsToArray($value));
-
+                    if($value){
+                        $infotable->addRowColumns([_($key),self::addPackageLinks($value)]);
+                        $depIcons .= self::packagesIcons(self::DependsToArray($value));
+                    }
                     break;
                 case 'Homepage':
                     $projectUrl = $value;
@@ -183,7 +181,7 @@ class PackageInfo extends \Ease\Html\DivTag
         return implode('', $packIcons);
     }
 
-    public static function DependsToArray($dependsRaw)
+    public static function DependsToArray(string $dependsRaw)
     {
         $packagesRaw = explode(',', str_replace('|', ',', $dependsRaw));
 

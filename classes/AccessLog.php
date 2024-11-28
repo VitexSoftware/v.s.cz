@@ -23,6 +23,9 @@ namespace VSCZ;
 class AccessLog extends \Ease\SQL\Engine
 {
     public string $myTable = 'vs_access_log';
+    
+    public string $username = '';
+    public string $password = '';
 
     public function setUp($options = []): bool
     {

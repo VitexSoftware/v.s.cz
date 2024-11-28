@@ -23,7 +23,7 @@ namespace VSCZ;
 class Packages extends \Ease\SQL\Engine
 {
     public $myKeyColumn = 'id';
-    public $myTable = 'packages';
+    public string $myTable = 'packages';
 
     /**
      * Where to look for record's name.

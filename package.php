@@ -19,12 +19,12 @@ namespace VSCZ;
  * VitexSoftware - titulní strana.
  *
  * @author     Vitex <vitex@hippy.cz>
- * @copyright  2012-2019 Vitex@hippy.cz (G)
+ * @copyright  2012-2024 Vitex@hippy.cz (G)
  */
 
 require_once 'includes/VSInit.php';
 
-$package = $oPage->getRequestValue('package');
+$package = $oPage->getRequestValue('package','string');
 
 $oPage->addItem(new ui\PageTop(sprintf(_('Package %s details'), $package)));
 
