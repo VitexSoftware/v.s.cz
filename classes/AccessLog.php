@@ -26,6 +26,7 @@ class AccessLog extends \Ease\SQL\Engine
     
     public string $username = '';
     public string $password = '';
+    public int $port = 0;
 
     public function setUp($options = []): bool
     {
