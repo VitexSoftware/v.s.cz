@@ -22,7 +22,7 @@ namespace VSCZ;
  */
 class Files extends \Ease\SQL\Engine
 {
-    public $myTable = 'files';
+    public string $myTable = 'files';
 
     public function packageFiles($package)
     {
