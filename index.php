@@ -194,7 +194,10 @@ $activityColumn->setTagCss(['background-image' => 'url(img/magnetic-nymph-head.p
 $mainPageRow->addColumn(7, [new \Ease\Html\H1Tag(_('Applications')), $appMenu, new \Ease\Html\H1Tag(_('Utilities')), $utilsMenu, new \Ease\Html\H1Tag(_('Libraries')), $libMenu]);
 
 $mainPageRow->addColumn(2, new \Ease\Html\DivTag(
-    '<h3>' . _('Latest Packages') . '</h3><div id="rss-feed"></div>',
+    [
+        '<h3>' . _('Latest Packages') . '</h3><div id="rss-feed"></div>',
+      '<iframe allowfullscreen sandbox="allow-top-navigation allow-scripts allow-popups allow-popups-to-escape-sandbox" width="400" height="800" src="https://mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Ff.cz%2Fusers%2Fvitexsoftware&theme=dark&size=100&header=false&replies=true&boosts=true"></iframe>'
+    ],
     ['class' => 'rss-widget']
 ));
 
