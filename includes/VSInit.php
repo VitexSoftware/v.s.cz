@@ -17,7 +17,32 @@ namespace VSCZ;
 
 
 
-require_once '/var/lib/vitexsoftware.cz/autoload.php';
+// Try to load autoload from different locations
+if (file_exists('/var/lib/vitexsoftware.cz/autoload.php')) {
+    require_once '/var/lib/vitexsoftware.cz/autoload.php';
+} elseif (file_exists(__DIR__ . '/../vendor/autoload.php')) {
+    require_once __DIR__ . '/../vendor/autoload.php';
+} elseif (file_exists(__DIR__ . '/../../vendor/autoload.php')) {
+    require_once __DIR__ . '/../../vendor/autoload.php';
+} else {
+    // For development - try to include basic EaseFramework if available
+    if (file_exists('/usr/share/php/EaseCore/autoload.php')) {
+        require_once '/usr/share/php/EaseCore/autoload.php';
+    }
+    if (file_exists('/usr/share/php/EaseTWB5/autoload.php')) {
+        require_once '/usr/share/php/EaseTWB5/autoload.php';
+    }
+    // Create a simple fallback autoloader
+    spl_autoload_register(function ($class) {
+        $file = str_replace('\\', '/', $class) . '.php';
+        if (strpos($class, 'VSCZ\\') === 0) {
+            $file = __DIR__ . '/../classes/' . substr($file, 5);
+            if (file_exists($file)) {
+                include $file;
+            }
+        }
+    });
+}
 
 if (!\defined('EASE_APPNAME')) {
     \define('EASE_APPNAME', 'VitexSoftwareWEB');
