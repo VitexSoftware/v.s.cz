@@ -103,6 +103,14 @@ cd /var/www/html/vitexsoftware
 git pull
 ```
 
+## Package Database Integration
+
+- **Database Sync**: Package information is automatically synchronized from repositories using `debs2sql`
+- **Automation**: The VSAnsible `multiflexi-repo-republish.yml` playbook triggers database updates after repository changes
+- **Database**: Uses `vscz` database with `packages` table containing Debian package metadata
+- **Error Handling**: PackageInfo class gracefully handles missing packages with user-friendly messages
+- **Manual Update**: Can manually run `debs2sql` to refresh package database if needed
+
 ## External Integrations
 
 - GitHub API for repository stars/forks
