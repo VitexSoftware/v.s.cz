@@ -237,8 +237,11 @@ fetch('https://repo.vitexsoftware.com/rss.php')
         const items = data.querySelectorAll("item");
         let html = "";
         items.forEach(el => {
+            const title = el.querySelector("title").innerHTML;
+            // Extract package name by removing version and .deb suffix
+            const packageName = title.replace(/\s+[0-9]+\.[0-9]+.*\.deb$/, '');
             html += `<div class="card" style="width: 18rem;">`;
-            html += `<h5 class="card-title">📦${el.querySelector("title").innerHTML}.deb</h5>`;
+            html += `<h5 class="card-title"><a href="package.php?package=${encodeURIComponent(packageName)}" style="text-decoration: none; color: inherit;">📦${title}.deb</a></h5>`;
             html += `<p class="card-text">${el.querySelector("description").innerHTML}</p>`;
             html += `<!-- a class="btn btn-xsm btn-success" href="${el.querySelector("link").innerHTML}">💾</a -->`;
             html += `</div>`; 
