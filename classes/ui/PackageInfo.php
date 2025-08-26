@@ -30,6 +30,16 @@ class PackageInfo extends \Ease\Html\DivTag
 
         $pProps = $this->packageInfo($pName);
 
+        if ($pProps === null) {
+            parent::__construct();
+            $this->addItem(new \Ease\TWB5\Card(
+                '<h2>'.sprintf(_('Package "%s" not found'), $pName).'</h2>'
+                .'<p>'._('This package may not be indexed in our database yet. Please try again later or check the package repository directly.').'</p>'
+                .'<p><a href="https://repo.vitexsoftware.com/" class="btn btn-primary">'._('Browse Repository').'</a></p>'
+            ));
+            return;
+        }
+
         $packFile = trim($pProps['Filename']);
 
         //        $installs = $repostats->getPackageInstalls($pName);
@@ -249,13 +259,17 @@ class PackageInfo extends \Ease\Html\DivTag
      *
      * @param string $pName package-name
      *
-     * @return array dpkg info
+     * @return array|null dpkg info
      */
     public function packageInfo($pName)
     {
         $packager = new \VSCZ\Packages($pName, ['autoload' => true]);
 
         $candidates = $packager->getData();
+
+        if (empty($candidates)) {
+            return null;
+        }
 
         return $candidates[0];
     }
