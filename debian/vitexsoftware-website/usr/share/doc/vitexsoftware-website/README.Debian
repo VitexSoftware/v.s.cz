@@ -1,0 +1,17 @@
+vitexsoftware-website for Debian
+---------------------------------
+
+This package installs the VitexSoftware company website.
+
+After installation:
+- The website is available at /vitexsoftware.cz via Apache
+- Files are installed in /usr/share/vitexsoftware.cz/
+- PHP classes are in /usr/lib/vitexsoftware.cz/classes/
+- Apache configuration in /etc/apache2/conf-available/vitexsoftware.cz.conf
+- Dependencies managed via composer-debian
+
+Configuration:
+- Database and other settings should be configured in the application
+  configuration files after installation.
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Wed, 25 Dec 2024 22:12:00 +0100

@@ -1,0 +1,14 @@
+Package: vitexsoftware-website
+Version: 0.202.6
+Architecture: all
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Installed-Size: 20246
+Depends: composer-debian, php-intl, php-vitexsoftware-ease-bootstrap5-widgets, php-vitexsoftware-ease-bricks, php-vitexsoftware-ease-html, php-vitexsoftware-ease-html-widgets, php-vitexsoftware-ease-fluentpdo, php-vitexsoftware-abraflexi-bricks, php-spojenet-abraflexi, php-league-commonmark
+Section: web
+Priority: optional
+Homepage: https://vitexsoftware.cz/
+Description: VitexSoftware homepage
+ VitexSoftware company website with product catalog,
+ documentation, and package repository browser.
+ .
+ Built with EaseFramework for modern web development.

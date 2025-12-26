@@ -1,0 +1,8 @@
+vitexsoftware-website (0.202.6) trixie; urgency=medium
+
+  * Initial Debian package release
+  * Website with product catalog and documentation
+  * Package repository browser
+  * Built with EaseFramework
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Wed, 25 Dec 2024 22:12:00 +0100

@@ -1,0 +1,13 @@
+Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=143
+Upstream-Name: VitexSoftware-Website
+Upstream-Source: https://vitexsoftware.cz/
+
+Files: *
+Homepage: https://vitexsoftware.cz/
+Copyright:
+  (c) 2013-2025 Vítězslav Dvořák (vitexsoftware.cz)
+License: GPL-2 
+
+License: GPL-2
+ On Debian systems the full text of the GNU General Public License can be found
+ in the `/usr/share/common-licenses/GPL-2' file.

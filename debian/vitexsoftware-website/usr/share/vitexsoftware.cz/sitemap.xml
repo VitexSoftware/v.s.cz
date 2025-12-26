@@ -1,0 +1,2589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://vitexsoftware.cz/</loc>
+  <changefreq>daily</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/.</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/cenik.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/monitoring.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/ease.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/tbpackage.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/reference.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/kontakt.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/IcingaEditor/createaccount.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/</loc>
+  <lastmod>2012-10-25T11:53:29+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/IcingaEditor/index.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/IcingaEditor/login.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/package-EaseFrameWork.html</loc>
+  <lastmod>2012-10-25T11:53:31+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/package-EaseFrameWork.EaseHtml.html</loc>
+  <lastmod>2012-10-25T11:53:31+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/package-None.html</loc>
+  <lastmod>2012-10-25T11:53:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/package-PHP.html</loc>
+  <lastmod>2012-10-25T11:53:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseAjaxFileInput.html</loc>
+  <lastmod>2012-10-25T11:53:37+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseAnonym.html</loc>
+  <lastmod>2012-10-25T11:53:41+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseAtom.html</loc>
+  <lastmod>2012-10-25T11:53:43+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseBrick.html</loc>
+  <lastmod>2012-10-25T11:53:45+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseCheckboxToggler.html</loc>
+  <lastmod>2012-10-25T11:53:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseContainer.html</loc>
+  <lastmod>2012-10-25T11:53:55+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseCustomer.html</loc>
+  <lastmod>2012-10-25T11:53:58+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseDataGrid.html</loc>
+  <lastmod>2012-10-25T11:54:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseDateTimeSelector.html</loc>
+  <lastmod>2012-10-25T11:54:01+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseDbMSSQL.html</loc>
+  <lastmod>2012-10-25T11:54:04+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseDbMySqli.html</loc>
+  <lastmod>2012-10-25T11:54:08+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseFlash.html</loc>
+  <lastmod>2012-10-25T11:54:10+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlATag.html</loc>
+  <lastmod>2012-10-25T11:54:14+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlBodyTag.html</loc>
+  <lastmod>2012-10-25T11:54:18+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlButtonTag.html</loc>
+  <lastmod>2012-10-25T11:54:22+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlCheckboxGroup.html</loc>
+  <lastmod>2012-10-25T11:54:25+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlCheckboxTag.html</loc>
+  <lastmod>2012-10-25T11:54:29+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlDivTag.html</loc>
+  <lastmod>2012-10-25T11:54:33+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlEmbedTag.html</loc>
+  <lastmod>2012-10-25T11:54:36+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlFieldSet.html</loc>
+  <lastmod>2012-10-25T11:54:40+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlFieldSetCollapsable.html</loc>
+  <lastmod>2012-10-25T11:54:43+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlForm.html</loc>
+  <lastmod>2012-10-25T11:54:46+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlH1Tag.html</loc>
+  <lastmod>2012-10-25T11:54:49+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlH2Tag.html</loc>
+  <lastmod>2012-10-25T11:54:52+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlH3Tag.html</loc>
+  <lastmod>2012-10-25T11:54:56+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlH4Tag.html</loc>
+  <lastmod>2012-10-25T11:54:59+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlHeadTag.html</loc>
+  <lastmod>2012-10-25T11:55:03+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlHrTag.html</loc>
+  <lastmod>2012-10-25T11:55:06+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlHtmlTag.html</loc>
+  <lastmod>2012-10-25T11:55:10+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlIframeTag.html</loc>
+  <lastmod>2012-10-25T11:55:14+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlImgTag.html</loc>
+  <lastmod>2012-10-25T11:55:17+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlInputFileTag.html</loc>
+  <lastmod>2012-10-25T11:55:20+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlInputHiddenTag.html</loc>
+  <lastmod>2012-10-25T11:55:24+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlInputPasswordTag.html</loc>
+  <lastmod>2012-10-25T11:55:28+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlInputRadioTag.html</loc>
+  <lastmod>2012-10-25T11:55:31+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlInputSearchTag.html</loc>
+  <lastmod>2012-10-25T11:55:34+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlInputSubmitTag.html</loc>
+  <lastmod>2012-10-25T11:55:38+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlInputTag.html</loc>
+  <lastmod>2012-10-25T11:55:42+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlInputTextTag.html</loc>
+  <lastmod>2012-10-25T11:55:45+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlLabelTag.html</loc>
+  <lastmod>2012-10-25T11:55:49+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlLiTag.html</loc>
+  <lastmod>2012-10-25T11:55:53+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlOptionTag.html</loc>
+  <lastmod>2012-10-25T11:55:56+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlPairTag.html</loc>
+  <lastmod>2012-10-25T11:56:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlParamTag.html</loc>
+  <lastmod>2012-10-25T11:56:03+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlPTag.html</loc>
+  <lastmod>2012-10-25T11:56:06+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlRadiobuttonGroup.html</loc>
+  <lastmod>2012-10-25T11:56:10+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlSelect.html</loc>
+  <lastmod>2012-10-25T11:56:14+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlSimpleHeadTag.html</loc>
+  <lastmod>2012-10-25T11:56:17+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlSpanTag.html</loc>
+  <lastmod>2012-10-25T11:56:21+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlStrongTag.html</loc>
+  <lastmod>2012-10-25T11:56:25+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlTableTag.html</loc>
+  <lastmod>2012-10-25T11:56:28+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlTag.html</loc>
+  <lastmod>2012-10-25T11:56:33+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlTdTag.html</loc>
+  <lastmod>2012-10-25T11:56:36+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlTextareaTag.html</loc>
+  <lastmod>2012-10-25T11:56:40+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlThTag.html</loc>
+  <lastmod>2012-10-25T11:56:43+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlTitleTag.html</loc>
+  <lastmod>2012-10-25T11:56:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlTrTag.html</loc>
+  <lastmod>2012-10-25T11:56:52+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseHtmlUlTag.html</loc>
+  <lastmod>2012-10-25T11:56:56+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseImageSubbmit.html</loc>
+  <lastmod>2012-10-25T11:57:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseInPlaceEditor.html</loc>
+  <lastmod>2012-10-25T11:57:04+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseInputContainer.html</loc>
+  <lastmod>2012-10-25T11:57:08+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseJavaScript.html</loc>
+  <lastmod>2012-10-25T11:57:12+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseJQColorPicker.html</loc>
+  <lastmod>2012-10-25T11:57:18+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseJQConfirmedLinkButton.html</loc>
+  <lastmod>2012-10-25T11:57:26+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseJQueryDialog.html</loc>
+  <lastmod>2012-10-25T11:57:29+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseJQueryLinkButton.html</loc>
+  <lastmod>2012-10-25T11:57:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseJQueryPart.html</loc>
+  <lastmod>2012-10-25T11:57:35+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseJQueryRadiobuttonGroup.html</loc>
+  <lastmod>2012-10-25T11:57:36+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EasejQueryScroller.html</loc>
+  <lastmod>2012-10-25T11:57:39+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseJQuerySlider.html</loc>
+  <lastmod>2012-10-25T11:57:45+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseJQuerySubmitButton.html</loc>
+  <lastmod>2012-10-25T11:57:48+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseJQueryUIPart.html</loc>
+  <lastmod>2012-10-25T11:57:52+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/class-EaseJQueryUITabs.html</loc>
+  <lastmod>2012-10-25T11:57:53+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/tree.html</loc>
+  <lastmod>2012-10-25T11:53:30+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/.?</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/listing.php?repname=Ease+Framework</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/listing.php?repname=Ease+Framework+PHPUnit+Tests</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/IcingaEditor/passwordrecovery.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/EaseDoc/index.html</loc>
+  <lastmod>2012-10-25T11:53:29+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/listing.php?repname=Ease+Framework&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/listing.php?repname=Ease+Framework&amp;path=%2F&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/listing.php?repname=Ease+Framework&amp;rev=160</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;isdir=1&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/comp.php?repname=Ease+Framework&amp;compare[]=%2F@160&amp;compare[]=%2F@161</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2F&amp;isdir=1&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2F&amp;isdir=1&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/listing.php?repname=Ease+Framework&amp;path=%2Flocale%2F&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2Flocale%2F&amp;rev=150&amp;isdir=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2Flocale%2F&amp;isdir=1&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2Flocale%2F&amp;isdir=1&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/listing.php?repname=Ease+Framework&amp;path=%2Fshare%2F&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2Fshare%2F&amp;rev=151&amp;isdir=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2Fshare%2F&amp;isdir=1&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2Fshare%2F&amp;isdir=1&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseAtom.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseAtom.php&amp;rev=160</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseAtom.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseAtom.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseBase.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseBase.php&amp;rev=160</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseBase.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseBase.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseBrick.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseBrick.php&amp;rev=160</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseBrick.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseBrick.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseDataGrid.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseDataGrid.php&amp;rev=154</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseDataGrid.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseDataGrid.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseHtml.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseHtml.php&amp;rev=161</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseHtml.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseHtml.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseHtmlForm.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseHtmlForm.php&amp;rev=156</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseHtmlForm.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseHtmlForm.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseJQuery.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseJQuery.php&amp;rev=155</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseJQuery.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseJQuery.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseJQueryWidgets.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseJQueryWidgets.php&amp;rev=161</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseJQueryWidgets.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseJQueryWidgets.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseLogger.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseLogger.php&amp;rev=160</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseLogger.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseLogger.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseMail.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseMail.php&amp;rev=146</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseMail.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseMail.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseMSSQL.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseMSSQL.php&amp;rev=159</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseMSSQL.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseMSSQL.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseMySQL.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseMySQL.php&amp;rev=154</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseMySQL.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseMySQL.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEasePage.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEasePage.php&amp;rev=156</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEasePage.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEasePage.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEasePageWizard.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEasePageWizard.php&amp;rev=144</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEasePageWizard.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEasePageWizard.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEasePDF.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEasePDF.php&amp;rev=132</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEasePDF.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEasePDF.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseSand.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseSand.php&amp;rev=160</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseSand.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseSand.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseSaver.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseSaver.php&amp;rev=119</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseSaver.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseSaver.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseShared.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseShared.php&amp;rev=160</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseShared.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseShared.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseSQL.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseSQL.php&amp;rev=154</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseSQL.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseSQL.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseTWBootstrap.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseTWBootstrap.php&amp;rev=158</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseTWBootstrap.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseTWBootstrap.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseUser.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseUser.php&amp;rev=145</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseUser.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseUser.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework&amp;path=%2FEaseWebPage.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework&amp;path=%2FEaseWebPage.php&amp;rev=156</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework&amp;path=%2FEaseWebPage.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework&amp;path=%2FEaseWebPage.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/listing.php?repname=Ease+Framework+PHPUnit+Tests&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/listing.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2F&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/listing.php?repname=Ease+Framework+PHPUnit+Tests&amp;rev=2</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;isdir=1&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/comp.php?repname=Ease+Framework+PHPUnit+Tests&amp;compare[]=%2F@2&amp;compare[]=%2F@3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2F&amp;isdir=1&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2F&amp;isdir=1&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2Fbootstrap.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2Fbootstrap.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2Fbootstrap.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2Fbootstrap.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseAjaxFileInputTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseAjaxFileInputTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseAjaxFileInputTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseAjaxFileInputTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseAnonymTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseAnonymTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseAnonymTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseAnonymTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseAtomTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseAtomTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseAtomTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseAtomTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseBrickTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseBrickTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseBrickTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseBrickTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseCheckboxTogglerTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseCheckboxTogglerTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseCheckboxTogglerTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseCheckboxTogglerTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseContainerTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseContainerTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseContainerTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseContainerTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseCustomerTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseCustomerTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseCustomerTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseCustomerTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDateTimeSelectorTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDateTimeSelectorTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDateTimeSelectorTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDateTimeSelectorTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDbMSSQLTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDbMSSQLTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDbMSSQLTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDbMSSQLTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDbMySqliTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDbMySqliTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDbMySqliTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDbMySqliTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDbMySqlTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDbMySqlTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDbMySqlTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseDbMySqlTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseFlashTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseFlashTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseFlashTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseFlashTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlATagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlATagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlATagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlATagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlBodyTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlBodyTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlBodyTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlBodyTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlCheckboxGroupTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlCheckboxGroupTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlCheckboxGroupTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlCheckboxGroupTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlCheckboxTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlCheckboxTagTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlCheckboxTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlCheckboxTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlDivTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlDivTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlDivTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlDivTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlEmbedTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlEmbedTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlEmbedTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlEmbedTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlFieldSetCollapsableTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlFieldSetCollapsableTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlFieldSetCollapsableTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlFieldSetCollapsableTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlFieldSetTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlFieldSetTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlFieldSetTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlFieldSetTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlFormTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlFormTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlFormTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlFormTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH1TagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH1TagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH1TagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH1TagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH2TagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH2TagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH2TagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH2TagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH3TagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH3TagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH3TagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH3TagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH4TagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH4TagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH4TagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlH4TagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlHeadTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlHeadTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlHeadTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlHeadTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlHrTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlHrTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlHrTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlHrTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlHtmlTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlHtmlTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlHtmlTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlHtmlTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlIframeTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlIframeTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlIframeTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlIframeTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlImgTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlImgTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlImgTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlImgTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputFileTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputFileTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputFileTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputFileTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputHiddenTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputHiddenTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputHiddenTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputHiddenTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputPasswordTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputPasswordTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputPasswordTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputPasswordTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputRadioTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputRadioTagTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputRadioTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputRadioTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputSearchTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputSearchTagTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputSearchTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputSearchTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputSubmitTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputSubmitTagTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputSubmitTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputSubmitTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputTagTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputTextTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputTextTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputTextTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlInputTextTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlLabelTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlLabelTagTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlLabelTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlLabelTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlLiTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlLiTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlLiTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlLiTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlOptionTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlOptionTagTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlOptionTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlOptionTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlPairTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlPairTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlPairTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlPairTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlParamTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlParamTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlParamTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlParamTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlPTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlPTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlPTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlPTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlRadiobuttonGroupTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlRadiobuttonGroupTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlRadiobuttonGroupTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlRadiobuttonGroupTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlSelectTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlSelectTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlSelectTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlSelectTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlSimpleHeadTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlSimpleHeadTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlSimpleHeadTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlSimpleHeadTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlSpanTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlSpanTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlSpanTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlSpanTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlStrongTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlStrongTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlStrongTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlStrongTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTableTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTableTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTableTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTableTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTagTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTdTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTdTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTdTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTdTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTextareaTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTextareaTagTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTextareaTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTextareaTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlThTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlThTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlThTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlThTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTitleTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTitleTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTitleTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTitleTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTrTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTrTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTrTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlTrTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlUlTagTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlUlTagTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlUlTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseHtmlUlTagTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseImageSubbmitTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseImageSubbmitTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseImageSubbmitTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseImageSubbmitTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseInPlaceEditorTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseInPlaceEditorTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseInPlaceEditorTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseInPlaceEditorTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseInputContainerTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseInputContainerTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseInputContainerTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseInputContainerTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJavaScriptTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJavaScriptTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJavaScriptTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJavaScriptTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQColorPickerTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQColorPickerTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQColorPickerTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQColorPickerTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQConfirmedLinkButtonTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQConfirmedLinkButtonTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQConfirmedLinkButtonTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQConfirmedLinkButtonTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryDialogTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryDialogTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryDialogTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryDialogTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryLinkButtonTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryLinkButtonTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryLinkButtonTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryLinkButtonTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryPartTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryPartTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryPartTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryPartTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryRadiobuttonGroupTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryRadiobuttonGroupTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryRadiobuttonGroupTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryRadiobuttonGroupTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEasejQueryScrollerTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEasejQueryScrollerTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEasejQueryScrollerTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEasejQueryScrollerTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQuerySliderTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQuerySliderTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQuerySliderTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQuerySliderTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQuerySubmitButtonTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQuerySubmitButtonTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQuerySubmitButtonTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQuerySubmitButtonTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryUIPartTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryUIPartTest.php&amp;rev=3</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryUIPartTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryUIPartTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryUITabsTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/revision.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryUITabsTest.php&amp;rev=1</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/log.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryUITabsTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/rss.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseJQueryUITabsTest.php&amp;</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://vitexsoftware.cz/websvn/filedetails.php?repname=Ease+Framework+PHPUnit+Tests&amp;path=%2FEaseLabeledCheckboxTest.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+</urlset>

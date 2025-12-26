@@ -1,0 +1,69 @@
+{
+  "name": "vitexsoftware/vscz",
+  "description": "VitexSoftware homepage",
+  "version": "0.202.6",
+  "authors": [
+    {
+      "name": "vitex",
+      "email": "info@vitexsoftware.cz"
+    }
+  ],
+  "minimum-stability": "dev",
+  "config": {
+    "vendor-dir": "/var/lib/composer/vitexsoftware-website/"
+  },
+  "autoload": {
+    "psr-4": {
+      "VSCZ\\": "/usr/lib/vitexsoftware-website/classes/",
+      "VSCZ\\ui\\": "/usr/lib/vitexsoftware-website/classes/ui/"
+    }
+  },
+  "require": {
+    "ext-fileinfo": "*",
+    "league/commonmark": "*",
+    "deb/abraflexi": "*",
+    "deb/ease-bootstrap5-widgets": "*",
+    "deb/ease-html": "*",
+    "deb/ease-fluentpdo": "*",
+    "deb/ease-bricks": "*"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseCore/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseHtml/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseHtmlWidgets/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/AbraFlexi/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/AbraFlexiBricks/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseBricks/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseTWB5/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseTWB5Widgets/"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseFluentPDO/"
+    }
+  ],
+  "type": "library"
+}

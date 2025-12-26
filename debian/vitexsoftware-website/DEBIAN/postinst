@@ -1,0 +1,37 @@
+#!/bin/sh
+# postinst script for vitexsoftware-website
+
+set -e
+
+apache_install() {
+	COMMON_STATE=$(dpkg-query -f '${Status}' -W 'apache2.2-common' 2>/dev/null | awk '{print $3}' || true)
+
+	if [ -e /usr/share/apache2/apache2-maintscript-helper ] ; then
+		. /usr/share/apache2/apache2-maintscript-helper
+		apache2_invoke enconf vitexsoftware.cz
+	elif [ "$COMMON_STATE" = "installed" ] || [ "$COMMON_STATE" = "unpacked" ] ; then
+		[ -d /etc/apache2/conf.d/ ] && [ ! -L /etc/apache2/conf.d/vitexsoftware.cz.conf ] && ln -s ../conf-available/vitexsoftware.cz.conf /etc/apache2/conf.d/vitexsoftware.cz.conf
+	fi
+}
+
+if [ "$1" = "configure" ]; then
+
+    composer-debian vitexsoftware-website
+
+    apache_install $1
+    
+    # Reload webserver in any case, configuration might have changed
+    # Redirection of 3 is needed because Debconf uses it and it might 
+    # be inherited by webserver. See bug #446324.
+    if [ -f /etc/init.d/apache2 ] ; then
+        if [ -x /usr/sbin/invoke-rc.d ]; then
+            invoke-rc.d apache2 reload 3>/dev/null || true
+        else
+            /etc/init.d/apache2 reload 3>/dev/null || true
+        fi
+    fi
+fi
+
+
+
+exit 0
