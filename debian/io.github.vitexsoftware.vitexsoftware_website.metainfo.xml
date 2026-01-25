@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="web-application">
+  <id>io.github.vitexsoftware.vitexsoftware_website</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>GPL-2</project_license>
+  <name>vitexsoftware-website</name>
+  <summary>VitexSoftware homepage</summary>
+  <description>
+    <p>
+      VitexSoftware company website with product catalog, documentation, and package repository browser. Built with EaseFramework for modern web development.
+    </p>
+  </description>
+  <categories>
+    <category>Network</category>
+    <category>WebApplication</category>
+  </categories>
+  <url type="homepage">https://github.com/VitexSoftware/v.s.cz</url>
+  <url type="bugtracker">https://github.com/VitexSoftware/v.s.cz/issues</url>
+  <developer id="cz.vitexsoftware">
+    <name>VitexSoftware</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+</component>
