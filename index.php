@@ -32,6 +32,7 @@ $oPage->addItem(new ui\PageTop(_('Vitex Software')));
 $appMenu = new ui\MainPageMenu();
 $libMenu = new ui\MainPageMenu();
 $utilsMenu = new ui\MainPageMenu();
+$multiflexiMenu = new ui\MainPageMenu();
 
 // $mainPageMenu->addMenuItem('img/deb-package.png', _('Repozitář'), 'repos.php',
 //    _('Repozitář balíčků pro Debian & Ubuntu'));
@@ -56,13 +57,26 @@ $libMenu->addLibraryItem('https://github.com/Spoje-NET/php-subreg', _('php-Subre
 $libMenu->addLibraryItem('https://github.com/Spoje-NET/PohodaSQL', _('PohodaSQL'), _('PHP Library for Pohoda SQL Tables access '), 'img/pohodaSQL.svg', 'spojenet/pohoda-sql');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-twbootstrap-widgets', _('TWB3 Widgets'), _('Twitter Bootstrap 3 Widgets for Ease Framework'), null, 'vitexsoftware/ease-twbootstrap-widgets');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/ease-twbootstrap', _('Ease Twbootstrap'), _('Twitter Bootstrap 3 support for Ease Framework'), null, 'vitexsoftware/ease-twbootstrap');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-abraflexi-bricks', _('AbraFlexi Bricks'), _('Additional classes for php-abraflexi'), null, 'vitexsoftware/abraflexi-bricks');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-bricks', _('Ease Bricks'), _('Extending classes and widgets for EasePHP'), null, 'vitexsoftware/ease-bricks');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/mbank', _('mBank'), _('Library for accessing mBank transaction service'), null, 'vitexsoftware/mbank');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/php-primaERP', _('primaERP'), _('PHP Library for ABRA primaERP'), null, 'vitexsoftware/primaerp');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/python-abraflexi', _('Python AbraFlexi'), _('Python library for AbraFlexi REST API'), 'img/python.svg', 'vitexsoftware/python-abraflexi');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/python-multiflexi', _('Python MultiFlexi'), _('MultiFlexi API client for Python'), 'img/python.svg', 'vitexsoftware/python-multiflexi');
 
 $appMenu->addMenuItem(
     _('MultiFlexi'),
     'https://github.com/VitexSoftware/MultiFlexi',
     'img/multiflexi.svg',
     _('Run various tools on top of AbraFlexi and Stormware Pohoda '),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/multiflexi/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi/composer.json')),
+);
+
+$appMenu->addMenuItem(
+    _('Repository'),
+    'https://repo.vitexsoftware.com',
+    'img/deb-package.png',
+    _('Debian & Ubuntu package repository'),
 );
 
 $appMenu->addMenuItem(
@@ -70,7 +84,7 @@ $appMenu->addMenuItem(
     'https://github.com/VitexSoftware/AbraFlexi-Digest',
     'img/abraflexi-digest.svg',
     _('FlexiBee company status digest every day, week, month or year'),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-digest/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-digest/composer.json')),
 );
 
 $appMenu->addMenuItem(
@@ -78,7 +92,23 @@ $appMenu->addMenuItem(
     'https://github.com/VitexSoftware/DEBs-to-SQL',
     'img/debs2sql.svg',
     _('Index Debian package repository into SQL'),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/debs2sql/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/debs2sql/composer.json')),
+);
+
+$appMenu->addMenuItem(
+    _('Flexplorer'),
+    'https://github.com/VitexSoftware/Flexplorer',
+    'img/multiflexi.svg',
+    _('Developer tool for AbraFlexi API JSON/XML'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/flexplorer/composer.json')),
+);
+
+$appMenu->addMenuItem(
+    _('Pohoda Digest'),
+    'https://github.com/VitexSoftware/Pohoda-Digest',
+    'img/phpmserver.svg',
+    _('Analytical digest generator for Stormware Pohoda'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/pohoda-digest/composer.json')),
 );
 
 $utilsMenu->addMenuItem(
@@ -86,7 +116,7 @@ $utilsMenu->addMenuItem(
     'https://github.com/VitexSoftware/jaspercompiler',
     'img/jaspercompiler.svg',
     _('Commandline Jasper compiler with AbraFlexi custom reports support'),
-    new \Ease\TWB5\Badge( sprintf(_('Current version %s'), '0.4')),
+    new \Ease\TWB5\Badge(sprintf(_('Current version %s'), '0.4')),
 );
 
 $utilsMenu->addMenuItem(
@@ -94,7 +124,7 @@ $utilsMenu->addMenuItem(
     'https://github.com/VitexSoftware/AbraFlexi-Report-Tools',
     'img/abraflexi-report-tools.svg',
     _('Commandline tools related to AbraFlexi custom reports '),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-report-tools/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-report-tools/composer.json')),
 );
 
 $utilsMenu->addMenuItem(
@@ -102,7 +132,7 @@ $utilsMenu->addMenuItem(
     'https://github.com/VitexSoftware/AbraFlexi-Tools',
     'img/abraflexitools.svg',
     _('Set of commandline tools related to testing AbraFlexi functionality'),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-tools/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-tools/composer.json')),
 );
 
 $utilsMenu->addMenuItem(
@@ -110,7 +140,7 @@ $utilsMenu->addMenuItem(
     'https://github.com/VitexSoftware/abraflexi-raiffeisenbank',
     'img/abraflexi-raiffeisenbank.svg',
     _('Raiffeisen Bank Transaction / Statement puller for AbraFlexi'),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-raiffeisenbank/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-raiffeisenbank/composer.json')),
 );
 
 $utilsMenu->addMenuItem(
@@ -118,7 +148,7 @@ $utilsMenu->addMenuItem(
     'https://github.com/VitexSoftware/AbraFlexi-Revolut',
     'img/abraflexi-revolut.svg',
     _('Revolut Bank Statement importer for AbraFlexi'),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-revolut/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-revolut/composer.json')),
 );
 
 $utilsMenu->addMenuItem(
@@ -126,7 +156,7 @@ $utilsMenu->addMenuItem(
     'https://github.com/VitexSoftware/abraflexi-matcher',
     'img/abraflexi-matcher.svg',
     _('Match Invoices'),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-matcher/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-matcher/composer.json')),
 );
 
 $utilsMenu->addMenuItem(
@@ -134,7 +164,7 @@ $utilsMenu->addMenuItem(
     'https://github.com/VitexSoftware/abraflexi-reminder',
     'img/abraflexi-reminder.svg',
     _('Remind your customers'),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-reminder/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-reminder/composer.json')),
 );
 
 $utilsMenu->addMenuItem(
@@ -142,7 +172,7 @@ $utilsMenu->addMenuItem(
     'https://github.com/VitexSoftware/abraflexi-mailer',
     'img/abraflexi-mailer.svg',
     _('Document Sender for AbraFlexi'),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-mailer/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-mailer/composer.json')),
 );
 
 $utilsMenu->addMenuItem(
@@ -150,7 +180,7 @@ $utilsMenu->addMenuItem(
     'https://github.com/Spoje-NET/discomp2abraflexi',
     'img/discomp2abraflexi.svg',
     _('Import Discomp pricelist into AbraFlexi'),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/discomp2abraflexi/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/discomp2abraflexi/composer.json')),
 );
 
 $utilsMenu->addMenuItem(
@@ -158,7 +188,7 @@ $utilsMenu->addMenuItem(
     'https://github.com/VitexSoftware/Redmine2AbraFlexi',
     'img/redmine2abraflexi.svg',
     _('It generates an invoice in FlexiBee from the hours worked in Redmine'),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/redmine2abraflexi/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/redmine2abraflexi/composer.json')),
 );
 
 $utilsMenu->addMenuItem(
@@ -166,7 +196,7 @@ $utilsMenu->addMenuItem(
     'https://github.com/VitexSoftware/debs2deb',
     'img/debs2deb.svg',
     _('Gives you offline debian repository as debian package'),
-    new \Ease\TWB5\Badge( sprintf(_('Current version %s'), '1.1')),
+    new \Ease\TWB5\Badge(sprintf(_('Current version %s'), '1.1')),
 );
 
 $utilsMenu->addMenuItem(
@@ -174,7 +204,184 @@ $utilsMenu->addMenuItem(
     'https://github.com/Spoje-NET/subreg2abraflexi',
     'img/subreg2abraflexi.svg',
     _('Import Subreg Pricelist into AbraFlexi'),
-    new \Ease\TWB5\Badge( ui\MainPageMenu::composerVersion('/usr/lib/subreg2abraflexi/composer.json')),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/subreg2abraflexi/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('AbraFlexi Backup'),
+    'https://github.com/VitexSoftware/abraflexi-backup',
+    'img/abraflexi-matcher.svg',
+    _('Save AbraFlexi backup to disk'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-backup/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('AbraFlexi CLI'),
+    'https://github.com/VitexSoftware/abraflexi-cli',
+    'img/abraflexitools.svg',
+    _('Manage AbraFlexi service using commandline'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-cli/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('AbraFlexi Config'),
+    'https://github.com/VitexSoftware/abraflexi-config',
+    'img/abraflexi-matcher.svg',
+    _('Shared configuration for AbraFlexi applications'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-config/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('AbraFlexi Confirmation Sender'),
+    'https://github.com/VitexSoftware/abraflexi-confirmation-sender',
+    'img/abraflexi-mailer.svg',
+    _('Listens to webhooks and sends transaction confirmations'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-confirmation-sender/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('AbraFlexi Contract Invoices'),
+    'https://github.com/VitexSoftware/abraflexi-contract-invoices',
+    'img/abraflexi-matcher.svg',
+    _('Trigger contracts to generate invoices'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-contract-invoices/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('AbraFlexi Contractor'),
+    'https://github.com/VitexSoftware/AbraFlexi-Contractor',
+    'img/abraflexi-matcher.svg',
+    _('Customize and print AbraFlexi contracts'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-contractor/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('AbraFlexi Email Importer'),
+    'https://github.com/VitexSoftware/AbraFlexi-email-importer',
+    'img/abraflexi-mailer.svg',
+    _('Import invoices from email inbox'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-email-importer/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('AbraFlexi ISDS'),
+    'https://github.com/VitexSoftware/abraflexi-isds',
+    'img/abraflexi-matcher.svg',
+    _('Synchronize Czech ISDS to AbraFlexi events'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-isds/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('AbraFlexi Webhook Acceptor'),
+    'https://github.com/VitexSoftware/abraflexi-webhook-acceptor',
+    'img/abraflexi-matcher.svg',
+    _('Accept and process incoming AbraFlexi webhooks'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-webhook-acceptor/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('AbraFlexi Zabbix'),
+    'https://github.com/VitexSoftware/abraflexi-zabbix',
+    'img/abraflexi-matcher.svg',
+    _('Monitor AbraFlexi using Zabbix'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-zabbix/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('Kimai to AbraFlexi'),
+    'https://github.com/VitexSoftware/Kimai2AbraFlexi',
+    'img/redmine2abraflexi.svg',
+    _('Convert Kimai timesheets into AbraFlexi invoices'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/kimai2abraflexi/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('Toggl to AbraFlexi'),
+    'https://github.com/VitexSoftware/Toggl-to-AbraFlexi',
+    'img/redmine2abraflexi.svg',
+    _('Generate AbraFlexi invoices from Toggl records'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/toggl2abraflexi/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('WakaTime to AbraFlexi'),
+    'https://github.com/VitexSoftware/Wakatime2AbraFlexi',
+    'img/redmine2abraflexi.svg',
+    _('Generate invoices from WakaTime entries'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/wakatime2abraflexi/composer.json')),
+);
+
+$utilsMenu->addMenuItem(
+    _('XLS to AbraFlexi'),
+    'https://github.com/VitexSoftware/xls2abraflexi',
+    'img/abraflexi-matcher.svg',
+    _('Custom XLS invoice importer for AbraFlexi'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/xls2abraflexi/composer.json')),
+);
+
+// MultiFlexi Components
+$multiflexiMenu->addMenuItem(
+    _('MultiFlexi CLI'),
+    'https://github.com/VitexSoftware/multiflexi-cli',
+    'img/multiflexi.svg',
+    _('Command line interface for MultiFlexi'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-cli/composer.json')),
+);
+
+$multiflexiMenu->addMenuItem(
+    _('MultiFlexi TUI'),
+    'https://github.com/VitexSoftware/multiflexi-tui',
+    'img/multiflexi.svg',
+    _('Modern terminal user interface for MultiFlexi CLI'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-tui/composer.json')),
+);
+
+$multiflexiMenu->addMenuItem(
+    _('MultiFlexi Executor'),
+    'https://github.com/VitexSoftware/multiflexi-executor',
+    'img/multiflexi.svg',
+    _('Execute MultiFlexi jobs'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-executor/composer.json')),
+);
+
+$multiflexiMenu->addMenuItem(
+    _('MultiFlexi Scheduler'),
+    'https://github.com/VitexSoftware/multiflexi-scheduler',
+    'img/multiflexi.svg',
+    _('Schedule MultiFlexi jobs'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-scheduler/composer.json')),
+);
+
+$multiflexiMenu->addMenuItem(
+    _('MultiFlexi Probe'),
+    'https://github.com/VitexSoftware/multiflexi-probe',
+    'img/multiflexi.svg',
+    _('Probe tool for testing MultiFlexi task launcher'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-probe/composer.json')),
+);
+
+$multiflexiMenu->addMenuItem(
+    _('MultiFlexi Database'),
+    'https://github.com/VitexSoftware/multiflexi-database',
+    'img/multiflexi.svg',
+    _('Database migrations for MultiFlexi'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-migrations/composer.json')),
+);
+
+$multiflexiMenu->addLibraryItem(
+    'https://github.com/VitexSoftware/php-vitexsoftware-multiflexi-core',
+    _('MultiFlexi Core'),
+    _('Core PHP classes for MultiFlexi'),
+    'img/multiflexi.svg',
+    'vitexsoftware/multiflexi-core',
+);
+
+$multiflexiMenu->addLibraryItem(
+    'https://github.com/VitexSoftware/multiflexi-server',
+    _('MultiFlexi Server'),
+    _('PHP Slim 4 Server library for MultiFlexi API'),
+    'img/multiflexi.svg',
+    'vitexsoftware/multiflexi-server',
 );
 
 // $mainPageMenu->addMenuItem('img/tux-server.png', _('Hosting'), 'hosting.php',
@@ -191,14 +398,14 @@ $activityColumn->addItem(new \Ease\Html\DivTag(null, ['id' => 'ghfeed']));
 
 $activityColumn->setTagCss(['background-image' => 'url(img/magnetic-nymph-head.png)', 'background-repeat' => 'no-repeat', 'background-position' => 'bottom left', 'background-attachment' => 'fixed']);
 
-$mainPageRow->addColumn(7, [new \Ease\Html\H1Tag(_('Applications')), $appMenu, new \Ease\Html\H1Tag(_('Utilities')), $utilsMenu, new \Ease\Html\H1Tag(_('Libraries')), $libMenu]);
+$mainPageRow->addColumn(7, [new \Ease\Html\H1Tag(_('Applications')), $appMenu, new \Ease\Html\H1Tag(_('MultiFlexi Components')), $multiflexiMenu, new \Ease\Html\H1Tag(_('Utilities')), $utilsMenu, new \Ease\Html\H1Tag(_('Libraries')), $libMenu]);
 
 $mainPageRow->addColumn(2, new \Ease\Html\DivTag(
     [
-        '<h3>' . _('Latest Packages') . '</h3><div id="rss-feed"></div>',
-      '<iframe allowfullscreen sandbox="allow-top-navigation allow-scripts allow-popups allow-popups-to-escape-sandbox" width="400" height="800" src="https://mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Ff.cz%2Fusers%2Fvitexsoftware&theme=dark&size=100&header=false&replies=true&boosts=true"></iframe>'
+        '<h3>'._('Latest Packages').'</h3><div id="rss-feed"></div>',
+        '<iframe allowfullscreen sandbox="allow-top-navigation allow-scripts allow-popups allow-popups-to-escape-sandbox" width="400" height="800" src="https://mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Ff.cz%2Fusers%2Fvitexsoftware&theme=dark&size=100&header=false&replies=true&boosts=true"></iframe>',
     ],
-    ['class' => 'rss-widget']
+    ['class' => 'rss-widget'],
 ));
 
 \Ease\Part::jQueryze();
@@ -225,9 +432,8 @@ $newsColumn = $newsRow->addColumn(
     //    new \Ease\TWB5\Card([new ui\NewsShow(new News()), new \Ease\TWB5\LinkButton('articles.php',
     //            '<img src="img/news.svg" style="height: 20px"> '._('More articles').' <i class="fa fa-angle-double-right" aria-hidden="true"></i>',
     //            'info')])
-    ''
+    '',
 );
-
 
 $oPage->addJavaScript(<<<'EOD'
 fetch('https://repo.vitexsoftware.com/rss.php')
@@ -245,12 +451,11 @@ fetch('https://repo.vitexsoftware.com/rss.php')
             html += `<h5 class="card-title"><a href="package.php?package=${encodeURIComponent(packageName)}" style="text-decoration: none; color: inherit;">📦${title}.deb</a></h5>`;
             html += `<p class="card-text">${el.querySelector("description").innerHTML}</p>`;
             html += `<!-- a class="btn btn-xsm btn-success" href="${el.querySelector("link").innerHTML}">💾</a -->`;
-            html += `</div>`; 
+            html += `</div>`;
         });
         document.getElementById("rss-feed").innerHTML = html;
     });
 EOD);
-
 
 $oPage->container->addItem($newsRow);
 
