@@ -10,7 +10,6 @@
   ],
   "minimum-stability": "dev",
   "config": {
-    "vendor-dir": "/var/lib/vitexsoftware.cz/",
     "allow-plugins": {
       "ergebnis/composer-normalize": true
     }
@@ -32,43 +31,5 @@
     "ergebnis/composer-normalize": "^2.43",
     "ergebnis/php-cs-fixer-config": "^6.34"
   },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "/usr/share/php/EaseCore/"
-    },
-    {
-      "type": "path",
-      "url": "/usr/share/php/EaseHtml/"
-    },
-    {
-      "type": "path",
-      "url": "/usr/share/php/AbraFlexi/"
-    },
-    {
-      "type": "path",
-      "url": "/usr/share/php/EaseBricks/"
-    },
-    {
-      "type": "path",
-      "url": "/usr/share/php/EaseTWB5/"
-    },
-    {
-      "type": "path",
-      "url": "/usr/share/php/EaseFluentPDO/"
-    },
-    {
-      "type": "path",
-      "url": "/usr/share/php/AbraFlexiBricks/"
-    },
-    {
-      "type": "path",
-      "url": "/usr/share/php/EaseTWB5Widgets/"
-    },
-    {
-      "type": "path",
-      "url": "/usr/share/php/EaseBricks/ui/"
-    }
-  ],
-  "type": "library"
+  "type": "project"
 }

@@ -4,3 +4,4 @@
 /pool/
 /.build/
 debian/vitexsoftware-website/
+.vendor/

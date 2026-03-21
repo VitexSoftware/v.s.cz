@@ -1,6 +1,6 @@
 phpcomposer:name=vitexsoftware/vscz
 phpcomposer:description=VitexSoftware homepage
-phpcomposer:Debian-require=php-common, php-league-commonmark, php-deb-abraflexi, php-deb-ease-bootstrap5-widgets, php-deb-ease-html, php-deb-ease-fluentpdo, php-deb-ease-bricks
+phpcomposer:Debian-require=php-common, php-league-commonmark
 phpcomposer:Debian-require-dev=phpunit, php-phpstan, php-friendsofphp-php-cs-fixer (>= 3.61), php-friendsofphp-php-cs-fixer (<< 4~~), php-ergebnis-composer-normalize (>= 2.43), php-ergebnis-composer-normalize (<< 3~~), php-ergebnis-php-cs-fixer-config (>= 6.34), php-ergebnis-php-cs-fixer-config (<< 7~~)
 misc:Depends=
 misc:Pre-Depends=

@@ -100,7 +100,7 @@ $config->getFinder()
     ->append([
         __DIR__.'/debian/autoload.php',
     ])
-    ->in('.');
+    ->in('src');
 
 $config->setCacheFile(__DIR__.'/.build/php-cs-fixer/.php-cs-fixer.cache');
 
