@@ -16,8 +16,8 @@
   },
   "autoload": {
     "psr-4": {
-      "VSCZ\\": "classes/",
-      "VSCZ\\ui\\": "classes/ui/"
+      "VSCZ\\": "src/classes/",
+      "VSCZ\\ui\\": "src/classes/ui/"
     }
   },
   "require": {

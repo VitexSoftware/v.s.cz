@@ -22,7 +22,7 @@ spl_autoload_register(function ($class): void {
     $file = str_replace('\\', '/', $class).'.php';
 
     if (strpos($class, 'VSCZ\\') === 0) {
-        $file = __DIR__.'/../classes/'.substr($file, 5);
+        $file = '/usr/lib/vitexsoftware-website/classes/'.substr($file, 5);
 
         if (file_exists($file)) {
             include $file;
