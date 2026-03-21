@@ -16,8 +16,6 @@ apache_install() {
 
 if [ "$1" = "configure" ]; then
 
-    composer-debian vitexsoftware-website
-
     apache_install $1
     
     # Reload webserver in any case, configuration might have changed
