@@ -1,14 +1,12 @@
 src/*.php                           usr/share/vitexsoftware.cz/
 src/*.ico                           usr/share/vitexsoftware.cz/
-src/*.asc                           usr/share/vitexsoftware.cz/
 src/robots.txt                      usr/share/vitexsoftware.cz/
 src/sitemap.xml                     usr/share/vitexsoftware.cz/
-src/README.md                       usr/share/vitexsoftware.cz/
+README.md                           usr/share/vitexsoftware.cz/
 src/css/*.css                       usr/share/vitexsoftware.cz/css/
 src/fonts/*                         usr/share/vitexsoftware.cz/fonts/
 src/js/*.js                         usr/share/vitexsoftware.cz/js/
 src/img/*                           usr/share/vitexsoftware.cz/img/
-src/static/*                        usr/share/vitexsoftware.cz/static/
 src/download/*                      usr/share/vitexsoftware.cz/download/
 src/classes/*.php                   usr/lib/vitexsoftware-website/classes/
 src/classes/ui/*.php                usr/lib/vitexsoftware-website/classes/ui/
@@ -18,3 +16,4 @@ i18n/en_US/LC_MESSAGES/*.mo     usr/share/locale/en_US/LC_MESSAGES
 db/*                            usr/share/vitexsoftware.cz/db/
 debian/conf/vitexsoftware.cz.conf    etc/apache2/conf-available/
 debian/conf/composer.json       usr/lib/vitexsoftware-website/
+debian/autoload.php		usr/lib/vitexsoftware-website/

@@ -15,7 +15,7 @@ declare(strict_types=1);
 
 namespace VSCZ;
 
-require_once __DIR__.'/../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 if (!\defined('EASE_APPNAME')) {
     \define('EASE_APPNAME', 'VitexSoftwareWEB');
@@ -25,7 +25,7 @@ date_default_timezone_set('Europe/Prague');
 
 \Ease\Shared::init([], '/etc/vscz.env');
 
-\Ease\Locale::singleton(null, './i18n', 'vscz');
+\Ease\Locale::singleton(null, '../i18n', 'vscz');
 
 session_start();
 

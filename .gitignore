@@ -4,4 +4,5 @@
 /pool/
 /.build/
 debian/vitexsoftware-website/
-.vendor/
+vendor/
+debian/vitexsoftware-website.debhelper.log
