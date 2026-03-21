@@ -9,9 +9,6 @@
     }
   ],
   "minimum-stability": "dev",
-  "config": {
-    "vendor-dir": "/var/lib/composer/vitexsoftware-website/"
-  },
   "autoload": {
     "psr-4": {
       "VSCZ\\": "/usr/lib/vitexsoftware-website/classes/",

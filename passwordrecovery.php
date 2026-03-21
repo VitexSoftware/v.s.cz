@@ -79,7 +79,7 @@ $columnIII = $pageRow->addColumn('4');
 $oPage->addItem($pageRow);
 
 if (!$success) {
-    $columnIII->addItem(new \Ease\TWB5\Badge( _('Tip')));
+    $columnIII->addItem(new \Ease\TWB5\Badge(_('Tip')));
 
     $columnIII->addItem(new \Ease\TWB5\Card(
         _('Forgot your password? Enter your e-mail address you entered during the registration and we will send you a new one.'),

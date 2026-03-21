@@ -23,15 +23,13 @@ namespace VSCZ;
 class AccessLog extends \Ease\SQL\Engine
 {
     public string $myTable = 'vs_access_log';
-    
     public string $username = '';
     public string $password = '';
 
     public function setUp($options = []): bool
     {
-        
-        $this->setupProperty($options, 'dbType', 'STATS_TYPE');       //Ease
-        $this->setupProperty($options, 'dbType', 'STATS_CONNECTION'); //Laralvel
+        $this->setupProperty($options, 'dbType', 'STATS_TYPE');       // Ease
+        $this->setupProperty($options, 'dbType', 'STATS_CONNECTION'); // Laralvel
         $this->setupProperty($options, 'server', 'STATS_HOST');
         $this->setupProperty($options, 'dbLogin', 'STATS_USERNAME');
         $this->setupProperty($options, 'dbPass', 'STATS_PASSWORD');
@@ -41,6 +39,7 @@ class AccessLog extends \Ease\SQL\Engine
         $this->setupProperty($options, 'dbSettings', 'STATS_SETTINGS');
         $this->setupProperty($options, 'myTable');
         $this->setupProperty($options, 'debug', 'STATS_DEBUG');
+
         return true;
     }
 

@@ -1,42 +1,42 @@
 {
-    "name": "vitexsoftware/vscz",
-    "description": "VitexSoftware homepage",
-    "version": "0.202.6",
-    "authors": [
-        {
-            "name": "vitex",
-            "email": "info@vitexsoftware.cz"
-        }
-    ],
-    "minimum-stability": "dev",
-    "config": {
-        "vendor-dir": "/var/lib/vitexsoftware.cz/",
-        "allow-plugins": {
-            "ergebnis/composer-normalize": true
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "VSCZ\\": "classes/",
-            "VSCZ\\ui\\": "classes/ui/"
-        }
-    },
-    "require": {
-        "ext-fileinfo": "*",
-        "league/commonmark": "*",
-        "deb/abraflexi": "*",
-        "deb/ease-bootstrap5-widgets": "*",
-	"deb/ease-html": "*",
-	"deb/ease-fluentpdo": "*",
-        "deb/ease-bricks": "*"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "*",
-        "phpstan/phpstan": "2.0.x-dev",
-        "friendsofphp/php-cs-fixer": "^3.61",
-        "ergebnis/composer-normalize": "^2.43",
-        "ergebnis/php-cs-fixer-config": "^6.34"
-    },
+  "name": "vitexsoftware/vscz",
+  "description": "VitexSoftware homepage",
+  "version": "0.202.6",
+  "authors": [
+    {
+      "name": "vitex",
+      "email": "info@vitexsoftware.cz"
+    }
+  ],
+  "minimum-stability": "dev",
+  "config": {
+    "vendor-dir": "/var/lib/vitexsoftware.cz/",
+    "allow-plugins": {
+      "ergebnis/composer-normalize": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "VSCZ\\": "classes/",
+      "VSCZ\\ui\\": "classes/ui/"
+    }
+  },
+  "require": {
+    "ext-fileinfo": "*",
+    "league/commonmark": "*",
+    "deb/abraflexi": "*",
+    "deb/ease-bootstrap5-widgets": "*",
+    "deb/ease-html": "*",
+    "deb/ease-fluentpdo": "*",
+    "deb/ease-bricks": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*",
+    "phpstan/phpstan": "*",
+    "friendsofphp/php-cs-fixer": "^3.61",
+    "ergebnis/composer-normalize": "^2.43",
+    "ergebnis/php-cs-fixer-config": "^6.34"
+  },
   "repositories": [
     {
       "type": "path",
@@ -72,7 +72,8 @@
     },
     {
       "type": "path",
-      "url": "/usr/share/php/EaseBricks/ui/"      
+      "url": "/usr/share/php/EaseBricks/ui/"
     }
-  ]
+  ],
+  "type": "library"
 }

@@ -97,6 +97,9 @@ $config->getFinder()
     ->append([
         __DIR__.'/.php-cs-fixer.dist.php',
     ])
+    ->append([
+        __DIR__.'/debian/autoload.php',
+    ])
     ->in('.');
 
 $config->setCacheFile(__DIR__.'/.build/php-cs-fixer/.php-cs-fixer.cache');

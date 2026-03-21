@@ -4,7 +4,7 @@ repoversion=$(shell LANG=C aptitude show vitexsoftware-website | grep Version: |
 nextversion=$(shell echo $(repoversion) | perl -ne 'chomp; print join(".", splice(@{[split/\./,$$_]}, 0, -1), map {++$$_} pop @{[split/\./,$$_]}), "\n";')
 
 %:
-	dh $@
+	dh $@ --with phpcomposer
 
 override_dh_install:
 	dh_install

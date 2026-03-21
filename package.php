@@ -24,7 +24,7 @@ namespace VSCZ;
 
 require_once 'includes/VSInit.php';
 
-$package = $oPage->getRequestValue('package','string');
+$package = $oPage->getRequestValue('package', 'string');
 
 $oPage->addItem(new ui\PageTop(sprintf(_('Package %s details'), $package)));
 

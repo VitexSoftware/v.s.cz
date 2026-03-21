@@ -35,8 +35,9 @@ class PackageInfo extends \Ease\Html\DivTag
             $this->addItem(new \Ease\TWB5\Card(
                 '<h2>'.sprintf(_('Package "%s" not found'), $pName).'</h2>'
                 .'<p>'._('This package may not be indexed in our database yet. Please try again later or check the package repository directly.').'</p>'
-                .'<p><a href="https://repo.vitexsoftware.com/" class="btn btn-primary">'._('Browse Repository').'</a></p>'
+                .'<p><a href="https://repo.vitexsoftware.com/" class="btn btn-primary">'._('Browse Repository').'</a></p>',
             ));
+
             return;
         }
 
@@ -97,10 +98,11 @@ class PackageInfo extends \Ease\Html\DivTag
                 case 'Recommends':
                 case 'Conflicts':
                 case 'Replaces':
-                    if($value){
-                        $infotable->addRowColumns([_($key),self::addPackageLinks($value)]);
+                    if ($value) {
+                        $infotable->addRowColumns([_($key), self::addPackageLinks($value)]);
                         $depIcons .= self::packagesIcons(self::DependsToArray($value));
                     }
+
                     break;
                 case 'Homepage':
                     $projectUrl = $value;
@@ -259,7 +261,7 @@ class PackageInfo extends \Ease\Html\DivTag
      *
      * @param string $pName package-name
      *
-     * @return array|null dpkg info
+     * @return null|array dpkg info
      */
     public function packageInfo($pName)
     {

@@ -69,8 +69,6 @@ class User extends \Ease\User
 
     /**
      * Vrací odkaz na ikonu.
-     *
-     * @return string
      */
     public function getIcon(): string
     {
@@ -95,8 +93,6 @@ class User extends \Ease\User
 
     /**
      * Give you user name.
-     *
-     * @return string
      */
     public function getUserName(): string
     {
