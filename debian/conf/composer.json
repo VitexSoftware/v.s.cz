@@ -17,12 +17,7 @@
   },
   "require": {
     "ext-fileinfo": "*",
-    "league/commonmark": "*",
-    "deb/abraflexi": "*",
-    "deb/ease-bootstrap5-widgets": "*",
-    "deb/ease-html": "*",
-    "deb/ease-fluentpdo": "*",
-    "deb/ease-bricks": "*"
+    "league/commonmark": "*"
   },
   "repositories": [
     {
