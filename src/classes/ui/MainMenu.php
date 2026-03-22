@@ -15,12 +15,19 @@ declare(strict_types=1);
 
 namespace VSCZ\ui;
 
+use Ease\Html\ATag;
+use Ease\Html\DivTag;
+use Ease\Shared;
+use Ease\TWB5\Navbar;
+use Ease\TWB5\Widgets\LangLinks;
+use VSCZ\User;
+
 /**
  * Hlavní menu.
  *
  * @author     Vitex <vitex@hippy.cz>
  */
-class MainMenu extends \Ease\TWB5\Navbar
+class MainMenu extends Navbar
 {
     /**
      * Menu aplikace.
@@ -83,23 +90,23 @@ class MainMenu extends \Ease\TWB5\Navbar
             ],
         );
 
-        $this->addMenuItem(new \Ease\Html\ATag(
+        $this->addMenuItem(new ATag(
             'articles.php',
             '<img style="height: 19px;" src="img/news.svg"> '._('Articles'),
         ));
 
-        $this->addMenuItem(new \Ease\Html\ATag('attic.php', '<img style="height: 19px;" src="img/Treasure_chest.svg"> '._('Old projects')));
+        $this->addMenuItem(new ATag('attic.php', '<img style="height: 19px;" src="img/Treasure_chest.svg"> '._('Old projects')));
 
         //        $this->addMenuItem(new \Ease\Html\ATag('umim.php', _('My Skills')));
         //        $this->addMenuItem(new \Ease\Html\ATag('reference.php', _('Reference')));
         //        $this->addMenuItem(new \Ease\Html\ATag('cenik.php', _('Pricelist')));
-        $this->addMenuItem(new \Ease\Html\ATag('kontakt.php', _('Contact')), 'left');
+        $this->addMenuItem(new ATag('kontakt.php', _('Contact')), 'left');
 
-        if (\VSCZ\User::singleton()->getUserLogin()) {
-            $this->addMenuItem(new \Ease\Html\ATag('newsedit.php', _('News Editor')), 'left');
+        if (User::singleton()->getUserLogin()) {
+            $this->addMenuItem(new ATag('newsedit.php', _('News Editor')), 'left');
         }
 
-        $this->addMenuItem(new \Ease\ui\LangLinks(), 'right');
+        $this->addMenuItem(new LangLinks(), 'right');
     }
 
     /**
@@ -115,7 +122,7 @@ class MainMenu extends \Ease\TWB5\Navbar
 
 EOD);
 
-        if (!empty(\Ease\Shared::logger()->getMessages())) {
+        if (!empty(Shared::logger()->getMessages())) {
             WebPage::singleton()->addCss(<<<'EOD'
 
 
@@ -132,7 +139,7 @@ EOD);
 EOD);
 
             $this->addItem(WebPage::singleton()->getStatusMessagesBlock(['id' => 'status-messages', 'title' => _('Click to hide messages')]));
-            $this->addItem(new \Ease\Html\DivTag(null, ['id' => 'smdrag', 'style' => 'margin-bottom: 5px']));
+            $this->addItem(new DivTag(null, ['id' => 'smdrag', 'style' => 'margin-bottom: 5px']));
             // \Ease\Shared::singleton()->cleanMessages();
             WebPage::singleton()->addCss('.dropdown-menu { overflow-y: auto } ');
             WebPage::singleton()->addJavaScript(
