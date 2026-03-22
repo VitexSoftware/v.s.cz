@@ -13,9 +13,8 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-require_once '/usr/share/php/Ease/autoload.php';
-
-require_once '/usr/share/php/EaseTWB5/autoload.php';
+require_once '/usr/share/php/EaseTWB5Widgets/autoload.php';
+require_once '/usr/share/php/EaseFluentPDO/autoload.php';
 
 // Create a simple fallback autoloader
 spl_autoload_register(function ($class): void {

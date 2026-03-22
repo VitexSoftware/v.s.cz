@@ -1,8 +1,15 @@
+vitexsoftware-website (0.202.7) UNRELEASED; urgency=medium
+
+  * debian native php autoloader use
+
+ -- vitex <info@vitexsoftware.cz>  Sun, 22 Mar 2026 08:01:01 +0100
+
 vitexsoftware-website (0.202.6) trixie; urgency=medium
 
+  [ Vítězslav Dvořák ]
   * Initial Debian package release
   * Website with product catalog and documentation
   * Package repository browser
   * Built with EaseFramework
 
- -- Vítězslav Dvořák <info@vitexsoftware.cz>  Wed, 25 Dec 2024 22:12:00 +0100
+ -- vitex <info@vitexsoftware.cz>  Sun, 22 Mar 2026 08:00:43 +0100
