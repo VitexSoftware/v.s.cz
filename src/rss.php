@@ -28,6 +28,8 @@ require_once 'includes/VSInit.php';
 
 $packages = [['title' => 'n/a', 'description' => '', 'icon' => '', 'date' => '']]; // TODO:  new NewPackages();
 
+$packager = new NewPackages();
+
 // header("Content-Type: application/xml; charset=UTF-8");
 header('Content-Type: application/rss+xml; charset=UTF-8');
 
@@ -41,7 +43,7 @@ $channel->addChild('link', 'https://vitexsoftware.com/');
 $channel->addChild('description', 'Fresh packages in our repository');
 $channel->addChild('language', 'en-us');
 
-foreach ($packages->getRssData(\Ease\WebPage::getRequestValue('search')) as $entry) {
+foreach ($packager->getRssData(\Ease\WebPage::getRequestValue('search')) as $entry) {
     $item = $channel->addChild('item');
 
     $item->addChild('title', $entry['title']);
