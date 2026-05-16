@@ -10,7 +10,6 @@ Package: vitexsoftware-website
 Depends: ${misc:Depends},
  php-intl,
  php-vitexsoftware-ease-bootstrap5-widgets,
- php-vitexsoftware-ease-bricks,
  php-vitexsoftware-ease-html,
  php-vitexsoftware-ease-html-widgets,
  php-vitexsoftware-ease-fluentpdo,
