@@ -17,16 +17,41 @@ namespace VSCZ\ui;
 
 class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
 {
-    //    ($title, $url, $image, $description, $buttonText = NULL, $properties = Array)
-    //
-    //    public function addMenuItem($image, $title, $url, $hint = null,
-    //                                $version = null)
-    //    {
-    //        return parent::addMenuItem($title, $url, $image, $hint,
-    //                empty($version) ? null : _('View').' '._('Version').': '.$version);
-    //    }
+    /**
+     * Modern horizontal card: icon left, title/description/action right.
+     */
+    public function addMenuItem($title, $url, $image, $description, $buttonText = null, $properties = []): \Ease\TWB5\Col
+    {
+        $icon = new \Ease\Html\ImgTag($image, $title, [
+            'alt'   => $title,
+            'style' => 'width:72px;height:72px;object-fit:contain;',
+        ]);
+
+        $iconWrap = new \Ease\Html\DivTag(
+            new \Ease\Html\ATag($url, $icon),
+            ['class' => 'flex-shrink-0 d-flex align-items-center justify-content-center p-3 border-end', 'style' => 'width:100px;background:#fff;'],
+        );
+
+        $body = new \Ease\Html\DivTag(null, ['class' => 'flex-grow-1 p-3']);
+        $body->addItem(new \Ease\Html\H5Tag(
+            new \Ease\Html\ATag($url, $title, ['class' => 'stretched-link text-dark text-decoration-none']),
+            ['class' => 'mb-1'],
+        ));
+        $body->addItem(new \Ease\Html\PTag($description, ['class' => 'text-muted small mb-0']));
+
+        if ($buttonText !== null) {
+            $body->addItem(new \Ease\Html\DivTag($buttonText, ['class' => 'mt-2']));
+        }
+
+        $wrap     = new \Ease\Html\DivTag([$iconWrap, $body], ['class' => 'd-flex align-items-stretch']);
+        $menuCard = new \Ease\TWB5\Card($wrap, array_merge(['class' => 'mp-menu-item overflow-hidden'], $properties));
+
+        return $this->addItem(new \Ease\TWB5\Col(3, $menuCard));
+    }
 
     /**
+     * Horizontal card for library items (GitHub star/fork + registry badges).
+     *
      * @param string     $url
      * @param string     $title
      * @param string     $description
@@ -37,9 +62,11 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
      */
     public function addLibraryItem($url, $title, $description, $image = null, $packagist = null, string $registry = 'packagist')
     {
-        $gitHubURL = str_replace('https://github.com/', '', $url);
+        $gitHubURL     = str_replace('https://github.com/', '', $url);
         $vendorProject = substr(parse_url($url, \PHP_URL_PATH), 1);
-        $packagist = null === $packagist ? str_replace(['spoje-net', 'php-flexibee'], ['spoje.net', 'flexibee'], strtolower($vendorProject)) : $packagist;
+        $packagist     = null === $packagist
+            ? str_replace(['spoje-net', 'php-flexibee'], ['spoje.net', 'flexibee'], strtolower($vendorProject))
+            : $packagist;
 
         if (null === $image) {
             $image = 'img/'.basename($vendorProject).'.svg';
@@ -47,17 +74,34 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
 
         $this->includeJavaScript('https://buttons.github.io/buttons.js');
 
-        $bottom = [new \Ease\Html\DivTag([
+        $icon = new \Ease\Html\ImgTag($image, $title, [
+            'alt'   => $title,
+            'style' => 'width:72px;height:72px;object-fit:contain;',
+        ]);
+
+        $iconWrap = new \Ease\Html\DivTag(
+            new \Ease\Html\ATag($url, $icon),
+            ['class' => 'flex-shrink-0 d-flex align-items-center justify-content-center p-3 border-end', 'style' => 'width:100px;background:#fff;'],
+        );
+
+        $body = new \Ease\Html\DivTag(null, ['class' => 'flex-grow-1 p-3']);
+        $body->addItem(new \Ease\Html\H5Tag(
+            new \Ease\Html\ATag($url, $title, ['class' => 'text-dark text-decoration-none']),
+            ['class' => 'mb-1'],
+        ));
+        $body->addItem(new \Ease\Html\PTag($description, ['class' => 'text-muted small mb-2']));
+
+        $body->addItem(new \Ease\Html\DivTag([
             new \Ease\Html\ATag(
                 $url,
                 _('Star'),
                 [
-                    'class' => 'github-button',
-                    'data-icon' => 'octicon-star',
+                    'class'             => 'github-button',
+                    'data-icon'         => 'octicon-star',
                     'data-color-scheme' => 'no-preference: dark; light: dark; dark: dark;',
-                    'data-size' => 'large',
-                    'data-show-count' => 'true',
-                    'aria-label' => _(sprintf('Star %s on GitHub', $gitHubURL)),
+                    'data-size'         => 'large',
+                    'data-show-count'   => 'true',
+                    'aria-label'        => _(sprintf('Star %s on GitHub', $gitHubURL)),
                 ],
             ),
             '&nbsp;',
@@ -65,27 +109,28 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
                 $url.'/fork',
                 _('Fork'),
                 [
-                    'class' => 'github-button',
-                    'data-icon' => 'octicon-repo-forked',
+                    'class'             => 'github-button',
+                    'data-icon'         => 'octicon-repo-forked',
                     'data-color-scheme' => 'no-preference: dark; light: dark; dark: dark;',
-                    'data-size' => 'large', 'data-show-count' => 'true',
-                    'aria-label' => _(sprintf('Fork %s on GitHub', $gitHubURL)),
+                    'data-size'         => 'large',
+                    'data-show-count'   => 'true',
+                    'aria-label'        => _(sprintf('Fork %s on GitHub', $gitHubURL)),
                 ],
             ),
-            '<br clear="all"/>',
+        ], ['class' => 'mb-1']));
+
+        $body->addItem(new \Ease\Html\DivTag([
             $registry === 'pypi'
                 ? new PyPIBadge($packagist, 'v')
                 : new PackagistBadge($vendorProject, $packagist, 'v'),
-            '<br>',
+            '&nbsp;',
             $registry === 'pypi'
                 ? new PyPIBadge($packagist, 'dm')
                 : new PackagistBadge($vendorProject, $packagist, 'dt'),
-        ], ['class' => 'card-footer'])];
+        ]));
 
-        $icon = new \Ease\Html\ImgTag($image, $title, ['alt' => $title, 'class' => 'card-img-top']);
-        $cardHeader = new \Ease\Html\DivTag(new \Ease\Html\StrongTag($title), ['class' => 'card-header text-dark']);
-        $cardBody = new \Ease\Html\DivTag(new \Ease\Html\PTag($description, ['class' => 'card-text text-dark']), ['class' => 'card-body', 'style' => 'align-text-bottom']);
-        $menuCard = new \Ease\TWB5\Card([new \Ease\Html\ATag($url, $cardHeader), new \Ease\Html\ATag($url, $icon), $cardBody, $bottom], ['class' => 'text-white bg-light mp-menu-item ']);
+        $wrap     = new \Ease\Html\DivTag([$iconWrap, $body], ['class' => 'd-flex align-items-stretch']);
+        $menuCard = new \Ease\TWB5\Card($wrap, ['class' => 'mp-menu-item overflow-hidden']);
 
         return $this->addItem(new \Ease\TWB5\Col(3, $menuCard));
     }
@@ -114,9 +159,10 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
     {
         $version = 'n/a';
         if (file_exists($composerPath)) {
-            $data = json_decode(file_get_contents($composerPath));
+            $data    = json_decode(file_get_contents($composerPath));
             $version = $data->version ?? 'n/a';
         }
+
         return sprintf(_('Current version %s'), $version);
     }
 }

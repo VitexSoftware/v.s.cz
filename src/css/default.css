@@ -156,7 +156,6 @@ code { font-size: 9px; font-weight: bolder; }
 
 .gha-gravatar { width: 100px; }
 
-.mp-menu-item { 
-    min-height: 500px;
+.mp-menu-item {
     margin-bottom: 10px;
 }
