@@ -40,10 +40,10 @@ class MainMenu extends Navbar
         parent::__construct($brand, $name, $properties);
         $this->addTagClass('navbar navbar-dark bg-secondary navbar-expand-lg text-uppercase fixed-top');
 
-        //        $this->addMenuItem(new \Ease\Html\ATag(
-        //            'debs.php',
-        //            '<img style="height: 19px;" src="img/deb-package.png"> ' . _('Debian Packages')
-        //        ));
+        $this->addMenuItem(new ATag(
+            'debs.php',
+            '<img style="height: 19px;" src="img/deb-package.png"> '._('Packages'),
+        ));
         //
         //        $this->addDropDownMenu(
         //            _('Projects'),
