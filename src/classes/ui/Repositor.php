@@ -79,13 +79,14 @@ class Repositor extends \Ease\Html\DivTag
             $pathParts = explode('/', $pProps['Filename']);
             $packFileBase = str_replace($pathParts[0].'/'.$pathParts[1], '', $pProps['Filename']);
 
-            $pkgs = [];
+            $firstDistro = reset($pProps['Distro']);
+            $downloadUrl = $this->repoUrl.'pool/'.$firstDistro.$packFileBase;
 
-            foreach ($pProps['Distro'] as $distro) {
-                $pkgs[$this->repoUrl.'pool/'.$distro.$packFileBase] = $distro;
-            }
-
-            $package = new \Ease\TWB5\DropdownButton('<img style="width: 18px;" src="img/deb-package.png">&nbsp;'._('Download'), 'success', $pkgs);
+            $package = new \Ease\TWB5\LinkButton(
+                $downloadUrl,
+                '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'._('Download'),
+                'success',
+            );
 
             $pInfo = new \Ease\Html\ATag(
                 'package.php?package='.$pName.'#',
@@ -96,7 +97,7 @@ class Repositor extends \Ease\Html\DivTag
             );
             $ptable->addRowColumns(['<img class="debicon" src="'.$icon.'"> '.$pInfo,
                 $pProps['Version'],
-                $packAge, $incTime, \Ease\Functions::humanFilesize($pProps['Size']),
+                $packAge, $incTime, \Ease\Functions::humanFilesize((int) $pProps['Size']),
                 $package, $installs, $downloads]);
         }
 

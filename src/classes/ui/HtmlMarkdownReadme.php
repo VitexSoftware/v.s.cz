@@ -15,7 +15,7 @@ declare(strict_types=1);
 
 namespace VSCZ\ui;
 
-use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\GithubFlavoredMarkdownConverter;
 
 /**
  * Description of HtmlMarkdownReadme.
@@ -26,6 +26,7 @@ class HtmlMarkdownReadme extends \Ease\Html\DivTag
 {
     public function __construct($homepage, $version)
     {
+        parent::__construct();
         $cached = sys_get_temp_dir().'/'.md5($homepage.$version).'.md';
 
         if (!file_exists($cached)) {
@@ -34,7 +35,7 @@ class HtmlMarkdownReadme extends \Ease\Html\DivTag
         }
 
         if (file_exists($cached)) {
-            $converter = new CommonMarkConverter();
+            $converter = new GithubFlavoredMarkdownConverter();
             $readme = $converter->convertToHtml(file_get_contents($cached));
 
             $this->addItem($readme->__toString(), ['class' => 'jumbotron']);

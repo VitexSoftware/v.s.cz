@@ -81,7 +81,7 @@ $appMenu->addMenuItem(
 
 $appMenu->addMenuItem(
     _('AbraFlexi Digest'),
-    'https://github.com/VitexSoftware/AbraFlexi-Digest',
+    'deb.php?package=abraflexi-digest',
     'img/abraflexi-digest.svg',
     _('FlexiBee company status digest every day, week, month or year'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-digest/composer.json')),
@@ -89,7 +89,7 @@ $appMenu->addMenuItem(
 
 $appMenu->addMenuItem(
     _('Debs To SQL'),
-    'https://github.com/VitexSoftware/DEBs-to-SQL',
+    'deb.php?package=debs2sql',
     'img/debs2sql.svg',
     _('Index Debian package repository into SQL'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/debs2sql/composer.json')),
@@ -105,7 +105,7 @@ $appMenu->addMenuItem(
 
 $appMenu->addMenuItem(
     _('Pohoda Digest'),
-    'https://github.com/VitexSoftware/Pohoda-Digest',
+    'deb.php?package=pohoda-digest',
     'img/phpmserver.svg',
     _('Analytical digest generator for Stormware Pohoda'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/pohoda-digest/composer.json')),
@@ -129,7 +129,7 @@ $utilsMenu->addMenuItem(
 
 $utilsMenu->addMenuItem(
     _('AbraFlexi Tools'),
-    'https://github.com/VitexSoftware/AbraFlexi-Tools',
+    'deb.php?package=abraflexi-tools',
     'img/abraflexitools.svg',
     _('Set of commandline tools related to testing AbraFlexi functionality'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-tools/composer.json')),
@@ -137,7 +137,7 @@ $utilsMenu->addMenuItem(
 
 $utilsMenu->addMenuItem(
     _('AbraFlexi Raiffeisen Bank'),
-    'https://github.com/VitexSoftware/abraflexi-raiffeisenbank',
+    'deb.php?package=abraflexi-raiffeisenbank',
     'img/abraflexi-raiffeisenbank.svg',
     _('Raiffeisen Bank Transaction / Statement puller for AbraFlexi'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-raiffeisenbank/composer.json')),
@@ -153,7 +153,7 @@ $utilsMenu->addMenuItem(
 
 $utilsMenu->addMenuItem(
     _('AbraFlexi Matcher'),
-    'https://github.com/VitexSoftware/abraflexi-matcher',
+    'deb.php?package=abraflexi-matcher',
     'img/abraflexi-matcher.svg',
     _('Match Invoices'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-matcher/composer.json')),
@@ -169,7 +169,7 @@ $utilsMenu->addMenuItem(
 
 $utilsMenu->addMenuItem(
     _('Mailer for AbraFlexi'),
-    'https://github.com/VitexSoftware/abraflexi-mailer',
+    'deb.php?package=abraflexi-mailer',
     'img/abraflexi-mailer.svg',
     _('Document Sender for AbraFlexi'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-mailer/composer.json')),
@@ -177,7 +177,7 @@ $utilsMenu->addMenuItem(
 
 $utilsMenu->addMenuItem(
     _('Discomp To AbraFlexi'),
-    'https://github.com/Spoje-NET/discomp2abraflexi',
+    'deb.php?package=discomp2abraflexi',
     'img/discomp2abraflexi.svg',
     _('Import Discomp pricelist into AbraFlexi'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/discomp2abraflexi/composer.json')),
@@ -185,7 +185,7 @@ $utilsMenu->addMenuItem(
 
 $utilsMenu->addMenuItem(
     _('Redmine To AbraFlexi'),
-    'https://github.com/VitexSoftware/Redmine2AbraFlexi',
+    'deb.php?package=redmine2abraflexi',
     'img/redmine2abraflexi.svg',
     _('It generates an invoice in FlexiBee from the hours worked in Redmine'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/redmine2abraflexi/composer.json')),
@@ -201,7 +201,7 @@ $utilsMenu->addMenuItem(
 
 $utilsMenu->addMenuItem(
     _('Subreg to AbraFlexi'),
-    'https://github.com/Spoje-NET/subreg2abraflexi',
+    'deb.php?package=subreg2abraflexi',
     'img/subreg2abraflexi.svg',
     _('Import Subreg Pricelist into AbraFlexi'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/subreg2abraflexi/composer.json')),
@@ -241,7 +241,7 @@ $utilsMenu->addMenuItem(
 
 $utilsMenu->addMenuItem(
     _('AbraFlexi Contract Invoices'),
-    'https://github.com/VitexSoftware/abraflexi-contract-invoices',
+    'deb.php?package=abraflexi-contract-invoices',
     'img/abraflexi-matcher.svg',
     _('Trigger contracts to generate invoices'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-contract-invoices/composer.json')),
@@ -257,7 +257,7 @@ $utilsMenu->addMenuItem(
 
 $utilsMenu->addMenuItem(
     _('AbraFlexi Email Importer'),
-    'https://github.com/VitexSoftware/AbraFlexi-email-importer',
+    'deb.php?package=abraflexi-email-importer',
     'img/abraflexi-mailer.svg',
     _('Import invoices from email inbox'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/abraflexi-email-importer/composer.json')),
@@ -338,7 +338,7 @@ $multiflexiMenu->addMenuItem(
 
 $multiflexiMenu->addMenuItem(
     _('MultiFlexi Executor'),
-    'https://github.com/VitexSoftware/multiflexi-executor',
+    'deb.php?package=multiflexi-executor',
     'img/multiflexi.svg',
     _('Execute MultiFlexi jobs'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-executor/composer.json')),
@@ -354,7 +354,7 @@ $multiflexiMenu->addMenuItem(
 
 $multiflexiMenu->addMenuItem(
     _('MultiFlexi Probe'),
-    'https://github.com/VitexSoftware/multiflexi-probe',
+    'deb.php?package=multiflexi-probe',
     'img/multiflexi.svg',
     _('Probe tool for testing MultiFlexi task launcher'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-probe/composer.json')),
@@ -362,7 +362,7 @@ $multiflexiMenu->addMenuItem(
 
 $multiflexiMenu->addMenuItem(
     _('MultiFlexi Database'),
-    'https://github.com/VitexSoftware/multiflexi-database',
+    'deb.php?package=multiflexi-migrations',
     'img/multiflexi.svg',
     _('Database migrations for MultiFlexi'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-migrations/composer.json')),

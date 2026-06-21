@@ -15,7 +15,8 @@ Depends: ${misc:Depends},
  php-vitexsoftware-ease-fluentpdo,
  php-vitexsoftware-abraflexi-bricks,
  php-spojenet-abraflexi,
- php-league-commonmark
+ php-league-commonmark,
+ php-yaml
 Architecture: all
 Section: web
 Priority: optional

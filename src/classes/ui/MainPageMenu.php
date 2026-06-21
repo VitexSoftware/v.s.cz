@@ -93,6 +93,11 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
      */
     public static function composerVersion($composerPath)
     {
-        return sprintf(_('Current version %s'), file_exists($composerPath) ? json_decode(file_get_contents($composerPath))->version : 'n/a');
+        $version = 'n/a';
+        if (file_exists($composerPath)) {
+            $data = json_decode(file_get_contents($composerPath));
+            $version = $data->version ?? 'n/a';
+        }
+        return sprintf(_('Current version %s'), $version);
     }
 }
