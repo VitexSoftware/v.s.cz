@@ -398,7 +398,16 @@ $activityColumn->addItem(new \Ease\Html\DivTag(null, ['id' => 'ghfeed']));
 
 $activityColumn->setTagCss(['background-image' => 'url(img/magnetic-nymph-head.png)', 'background-repeat' => 'no-repeat', 'background-position' => 'bottom left', 'background-attachment' => 'fixed']);
 
-$mainPageRow->addColumn(7, [new \Ease\Html\H1Tag(_('Applications')), $appMenu, new \Ease\Html\H1Tag(_('MultiFlexi Components')), $multiflexiMenu, new \Ease\Html\H1Tag(_('Utilities')), $utilsMenu, new \Ease\Html\H1Tag(_('Libraries')), $libMenu]);
+$mainPageRow->addColumn(7, [
+    new \Ease\Html\H1Tag(_('Applications')),
+    $appMenu->toCarousel('carousel-apps'),
+    new \Ease\Html\H1Tag(_('MultiFlexi Components')),
+    $multiflexiMenu->toCarousel('carousel-multiflexi'),
+    new \Ease\Html\H1Tag(_('Utilities')),
+    $utilsMenu->toCarousel('carousel-utils'),
+    new \Ease\Html\H1Tag(_('Libraries')),
+    $libMenu->toCarousel('carousel-libs', 3),
+]);
 
 $mainPageRow->addColumn(2, new \Ease\Html\DivTag(
     [

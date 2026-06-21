@@ -90,6 +90,17 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
         return $this->addItem(new \Ease\TWB5\Col(3, $menuCard));
     }
 
+    public function toCarousel(string $id, int $perSlide = 4): CardCarousel
+    {
+        $carousel = new CardCarousel($id, $perSlide);
+
+        foreach ($this->pageParts as $col) {
+            $carousel->addCard($col);
+        }
+
+        return $carousel;
+    }
+
     /**
      * @param string $composerPath
      *
