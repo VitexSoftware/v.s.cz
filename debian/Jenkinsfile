@@ -5,7 +5,7 @@
 // debian:forky disabled: Forky is still unstable/research-only.
 // The full Debian package ecosystem is not yet available for Forky.
 // Re-enable once the stack builds cleanly for Forky.
-String[] distributions = ['debian:bookworm', 'debian:trixie', 'ubuntu:jammy', 'ubuntu:noble']
+String[] distributions = ['debian:trixie']
 
 String vendor = 'vitexsoftware'
 //String distroFamily = ''
