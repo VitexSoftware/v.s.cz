@@ -22,6 +22,7 @@ properties([
 node() {
     ansiColor('xterm') {
         stage('SCM Checkout') {
+            sh 'sudo rm -rf debian/.debhelper/ debian/tmp/ || true'
             checkout scm
         }
     }
