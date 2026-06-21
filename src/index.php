@@ -406,7 +406,7 @@ $mainPageRow->addColumn(7, [
     new \Ease\Html\H1Tag(_('Utilities')),
     $utilsMenu->toCarousel('carousel-utils'),
     new \Ease\Html\H1Tag(_('Libraries')),
-    $libMenu->toCarousel('carousel-libs', 3),
+    $libMenu->toCarousel('carousel-libs'),
 ]);
 
 $mainPageRow->addColumn(2, new \Ease\Html\DivTag(

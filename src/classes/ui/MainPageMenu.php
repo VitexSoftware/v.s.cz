@@ -90,12 +90,16 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
         return $this->addItem(new \Ease\TWB5\Col(3, $menuCard));
     }
 
-    public function toCarousel(string $id, int $perSlide = 4): CardCarousel
+    public function toCarousel(string $id, int $perSlide = 1): CardCarousel
     {
         $carousel = new CardCarousel($id, $perSlide);
 
         foreach ($this->pageParts as $col) {
-            $carousel->addCard($col);
+            // Unwrap Col wrapper so CardCarousel controls the column layout
+            $card = ($col instanceof \Ease\Html\DivTag && !empty($col->pageParts))
+                ? reset($col->pageParts)
+                : $col;
+            $carousel->addCard($card);
         }
 
         return $carousel;

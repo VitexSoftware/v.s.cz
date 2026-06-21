@@ -25,7 +25,7 @@ class CardCarousel extends \Ease\Html\DivTag
     private string $carouselId;
     private bool $carouselBuilt = false;
 
-    public function __construct(string $id, int $perSlide = 4)
+    public function __construct(string $id, int $perSlide = 1)
     {
         parent::__construct(null, [
             'id'               => $id,
@@ -67,13 +67,17 @@ class CardCarousel extends \Ease\Html\DivTag
         // Slides
         $inner = '<div class="carousel-inner">';
 
+        $colClass = $this->perSlide <= 1
+            ? 'col-12'
+            : 'col-md-'.(12 / $this->perSlide);
+
         foreach ($chunks as $i => $chunk) {
             $active  = $i === 0 ? ' active' : '';
             $inner  .= "<div class=\"carousel-item$active\">"
                      .'<div class="row g-3 px-5">';
 
-            foreach ($chunk as $col) {
-                $inner .= (string) $col;
+            foreach ($chunk as $card) {
+                $inner .= '<div class="'.$colClass.'">'.(string) $card.'</div>';
             }
 
             $inner .= '</div></div>';
