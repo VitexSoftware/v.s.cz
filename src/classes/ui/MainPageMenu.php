@@ -35,7 +35,7 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
      *
      * @return \Ease\TWB5\Col
      */
-    public function addLibraryItem($url, $title, $description, $image = null, $packagist = null)
+    public function addLibraryItem($url, $title, $description, $image = null, $packagist = null, string $registry = 'packagist')
     {
         $gitHubURL = str_replace('https://github.com/', '', $url);
         $vendorProject = substr(parse_url($url, \PHP_URL_PATH), 1);
@@ -73,9 +73,13 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
                 ],
             ),
             '<br clear="all"/>',
-            new PackagistBadge($vendorProject, $packagist, 'v'),
+            $registry === 'pypi'
+                ? new PyPIBadge($packagist, 'v')
+                : new PackagistBadge($vendorProject, $packagist, 'v'),
             '<br>',
-            new PackagistBadge($vendorProject, $packagist, 'dt'),
+            $registry === 'pypi'
+                ? new PyPIBadge($packagist, 'dm')
+                : new PackagistBadge($vendorProject, $packagist, 'dt'),
         ], ['class' => 'card-footer'])];
 
         $icon = new \Ease\Html\ImgTag($image, $title, ['alt' => $title, 'class' => 'card-img-top']);

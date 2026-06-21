@@ -61,8 +61,8 @@ $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-abraflexi-bricks'
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-ease-bricks', _('Ease Bricks'), _('Extending classes and widgets for EasePHP'), null, 'vitexsoftware/ease-bricks');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/mbank', _('mBank'), _('Library for accessing mBank transaction service'), null, 'vitexsoftware/mbank');
 $libMenu->addLibraryItem('https://github.com/VitexSoftware/php-primaERP', _('primaERP'), _('PHP Library for ABRA primaERP'), null, 'vitexsoftware/primaerp');
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/python-abraflexi', _('Python AbraFlexi'), _('Python library for AbraFlexi REST API'), 'img/python.svg', 'vitexsoftware/python-abraflexi');
-$libMenu->addLibraryItem('https://github.com/VitexSoftware/python-multiflexi', _('Python MultiFlexi'), _('MultiFlexi API client for Python'), 'img/python.svg', 'vitexsoftware/python-multiflexi');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/python-abraflexi', _('Python AbraFlexi'), _('Python library for AbraFlexi REST API'), 'img/python.svg', 'abraflexi', 'pypi');
+$libMenu->addLibraryItem('https://github.com/VitexSoftware/python-multiflexi', _('Python MultiFlexi'), _('MultiFlexi API client for Python'), 'img/python.svg', 'multiflexi', 'pypi');
 
 $appMenu->addMenuItem(
     _('MultiFlexi'),
