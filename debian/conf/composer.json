@@ -17,6 +17,7 @@
   },
   "require": {
     "ext-fileinfo": "*",
+    "ext-yaml": "*",
     "league/commonmark": "*"
   },
   "repositories": [
