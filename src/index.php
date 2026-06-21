@@ -70,6 +70,8 @@ $appMenu->addMenuItem(
     'img/multiflexi.svg',
     _('Run various tools on top of AbraFlexi and Stormware Pohoda '),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi/composer.json')),
+    [],
+    'multiflexi',
 );
 
 $appMenu->addMenuItem(
@@ -101,6 +103,8 @@ $appMenu->addMenuItem(
     'img/multiflexi.svg',
     _('Developer tool for AbraFlexi API JSON/XML'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/flexplorer/composer.json')),
+    [],
+    'flexplorer',
 );
 
 $appMenu->addMenuItem(
