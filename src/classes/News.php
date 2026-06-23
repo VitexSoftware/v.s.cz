@@ -40,7 +40,7 @@ class News extends \Ease\SQL\Engine
      *
      * @return \Envms\FluentPDO
      */
-    public function listingQuery()
+    public function listingQuery(): \Envms\FluentPDO\Queries\Select
     {
         return parent::listingQuery()->select('user.login')->leftJoin('user ON user.id = author');
     }

@@ -24,6 +24,7 @@ class NewsListing extends \Ease\Html\UlTag
 {
     public function __construct($datasource, $authorId = null)
     {
+        parent::__construct();
         $news = $datasource->listingQuery(); // ->orderBy('id DESC');
 
         if (null !== $authorId) {
