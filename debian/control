@@ -16,7 +16,8 @@ Depends: ${misc:Depends},
  php-vitexsoftware-abraflexi-bricks,
  php-spojenet-abraflexi,
  php-league-commonmark,
- php-yaml
+ php-yaml,
+ php-cakephp-phinx
 Architecture: all
 Section: web
 Priority: optional

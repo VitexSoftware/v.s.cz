@@ -17,9 +17,14 @@ apache_install() {
 if [ "$1" = "configure" ]; then
 
     apache_install $1
-    
+
+    # Run database migrations
+    if [ -x /usr/bin/phinx ] && [ -f /usr/share/vitexsoftware.cz/phinx.php ]; then
+        phinx migrate -c /usr/share/vitexsoftware.cz/phinx.php -e production || true
+    fi
+
     # Reload webserver in any case, configuration might have changed
-    # Redirection of 3 is needed because Debconf uses it and it might 
+    # Redirection of 3 is needed because Debconf uses it and it might
     # be inherited by webserver. See bug #446324.
     if [ -f /etc/init.d/apache2 ] ; then
         if [ -x /usr/sbin/invoke-rc.d ]; then

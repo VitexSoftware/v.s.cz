@@ -13,6 +13,7 @@ src/classes/ui/*.php                usr/lib/vitexsoftware-website/classes/ui/
 src/includes/*.php                  usr/share/vitexsoftware.cz/includes/
 i18n/cs_CZ/LC_MESSAGES/*.mo     usr/share/locale/cs_CZ/LC_MESSAGES
 i18n/en_US/LC_MESSAGES/*.mo     usr/share/locale/en_US/LC_MESSAGES
+phinx.php                       usr/share/vitexsoftware.cz/
 db/*                            usr/share/vitexsoftware.cz/db/
 debian/conf/vitexsoftware.cz.conf    etc/apache2/conf-available/
 debian/conf/composer.json       usr/lib/vitexsoftware-website/
