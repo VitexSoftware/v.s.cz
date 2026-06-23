@@ -38,7 +38,7 @@ class NewsListing extends \Ease\Container
                 $this->addItem($this->renderCard($article));
             }
         } else {
-            $this->addItem(new \Ease\TWB5\Alert(_('No articles'), 'info'));
+            $this->addItem(new \Ease\TWB5\Alert('info', _('No articles')));
         }
     }
 

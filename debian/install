@@ -1,4 +1,5 @@
 src/*.php                           usr/share/vitexsoftware.cz/
+src/data/github_repos.php          usr/share/vitexsoftware.cz/data/
 src/*.ico                           usr/share/vitexsoftware.cz/
 src/robots.txt                      usr/share/vitexsoftware.cz/
 src/sitemap.xml                     usr/share/vitexsoftware.cz/

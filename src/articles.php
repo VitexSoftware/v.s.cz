@@ -53,8 +53,8 @@ try {
     );
 } catch (\Throwable $e) {
     $oPage->container->addItem(new \Ease\TWB5\Alert(
-        _('Articles temporarily unavailable.'),
         'warning',
+        _('Articles temporarily unavailable.'),
     ));
 }
 
