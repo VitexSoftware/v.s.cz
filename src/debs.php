@@ -38,7 +38,7 @@ $steps->addItemSmart(
     ['class' => 'list-group-item'],
 );
 $steps->addItemSmart(
-    'sudo wget -O /etc/apt/trusted.gpg.d/vitexsoftware.gpg http://repo.vitexsoftware.cz/keyring.gpg',
+    'sudo wget -O /etc/apt/trusted.gpg.d/vitexsoftware.gpg https://repo.vitexsoftware.com/KEY.gpg',
     ['class' => 'list-group-item'],
 );
 $steps->addItemSmart('sudo apt update', ['class' => 'list-group-item']);
