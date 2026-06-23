@@ -15,6 +15,7 @@ declare(strict_types=1);
 
 require_once '/usr/share/php/EaseTWB5Widgets/autoload.php';
 require_once '/usr/share/php/EaseFluentPDO/autoload.php';
+require_once '/usr/share/php/League/CommonMark/autoload.php';
 
 // Create a simple fallback autoloader
 spl_autoload_register(function ($class): void {
