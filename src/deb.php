@@ -191,15 +191,19 @@ if ($comp) {
 // ── Tabs: README + package info ───────────────────────────────────────────────
 $tabItems = [];
 
-// README tab — use vcs-browser or packages.Homepage (if GitHub)
-$readmeUrl = $vcsUrl;
+// README tab — prefer vcs-browser, fall back to AppStream homepage, then DB
+$readmeUrl = $vcsUrl ?? ($comp['Url']['homepage'] ?? null);
 
 if (!$readmeUrl) {
-    $pkgObj = new Packages($package);
-    $props  = $pkgObj->getData();
+    try {
+        $pkgObj = new Packages($package);
+        $props  = $pkgObj->getData();
 
-    if ($props && str_contains((string) ($props['Homepage'] ?? ''), 'github.com')) {
-        $readmeUrl = $props['Homepage'];
+        if ($props && str_contains((string) ($props['Homepage'] ?? ''), 'github.com')) {
+            $readmeUrl = $props['Homepage'];
+        }
+    } catch (\Throwable $e) {
+        // DB unavailable — skip README URL detection
     }
 }
 
@@ -207,7 +211,14 @@ if ($readmeUrl && str_contains($readmeUrl, 'github.com')) {
     $tabItems[_('README')] = new ui\HtmlMarkdownReadme($readmeUrl, '');
 }
 
-$tabItems[_('Package info')] = new ui\PackageInfo(urlencode($package));
+try {
+    $tabItems[_('Package info')] = new ui\PackageInfo(urlencode($package));
+} catch (\Throwable $e) {
+    $tabItems[_('Package info')] = new \Ease\Html\DivTag(
+        _('Package database temporarily unavailable.'),
+        ['class' => 'alert alert-warning'],
+    );
+}
 
 $tabs = new \Ease\TWB5\Tabs($tabItems, ['id' => 'debtabs']);
 $container->addItem($tabs);

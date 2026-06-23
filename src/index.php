@@ -330,6 +330,8 @@ $multiflexiMenu->addMenuItem(
     'img/multiflexi.svg',
     _('Command line interface for MultiFlexi'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-cli/composer.json')),
+    [],
+    'multiflexi-cli',
 );
 
 $multiflexiMenu->addMenuItem(

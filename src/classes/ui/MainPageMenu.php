@@ -119,7 +119,7 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
         // Auto-detect GitHub repo path from URL
         $githubRepo = '';
 
-        if (preg_match('#github\.com/([^/?#]+/[^/?#]+)#', $url, $m)) {
+        if (preg_match('~github\.com/([^/?#]+/[^/?#]+)~', $url, $m)) {
             $githubRepo = $m[1];
         }
 

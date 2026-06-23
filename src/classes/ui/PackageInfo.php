@@ -265,9 +265,12 @@ class PackageInfo extends \Ease\Html\DivTag
      */
     public function packageInfo($pName)
     {
-        $packager = new \VSCZ\Packages($pName, ['autoload' => true]);
-
-        $candidates = $packager->getData();
+        try {
+            $packager   = new \VSCZ\Packages($pName, ['autoload' => true]);
+            $candidates = $packager->getData();
+        } catch (\Throwable $e) {
+            return null;
+        }
 
         if (empty($candidates)) {
             return null;
