@@ -44,6 +44,11 @@ class MainMenu extends Navbar
             'debs.php',
             '<img style="height: 19px;" src="img/deb-package.png"> '._('Packages'),
         ));
+
+        $this->addMenuItem(new ATag(
+            'projects.php',
+            '<img style="height: 19px;" src="img/github.svg"> '._('Projects'),
+        ));
         //
         //        $this->addDropDownMenu(
         //            _('Projects'),
