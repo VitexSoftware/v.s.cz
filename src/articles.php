@@ -40,8 +40,11 @@ $oPage->container->addItem(new \Ease\Html\DivTag(
     ['class' => 'blog-header'],
 ));
 
+$lang2    = \Ease\Locale::singleton()->get2Code();
+$language = (\in_array($lang2, ['cs', 'en'], true)) ? $lang2 : null;
+
 try {
-    $listing = new ui\NewsListing(new News());
+    $listing = new ui\NewsListing(new News(), null, $language);
     $oPage->container->addItem(
         new \Ease\Html\DivTag(
             $listing,

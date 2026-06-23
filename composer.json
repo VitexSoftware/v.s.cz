@@ -24,7 +24,9 @@
     "ext-fileinfo": "*",
     "league/commonmark": "*",
     "vitexsoftware/ease-bootstrap5-widgets": "1.4.2",
-    "vitexsoftware/ease-fluentpdo": "1.4.2"
+    "vitexsoftware/ease-fluentpdo": "1.4.2",
+    "robmorgan/phinx": "0.x-dev",
+    "symfony/yaml": "8.2.x-dev"
   },
   "require-dev": {
     "phpunit/phpunit": "*",

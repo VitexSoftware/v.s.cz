@@ -17,14 +17,18 @@ namespace VSCZ\ui;
 
 class NewsListing extends \Ease\Container
 {
-    public function __construct($datasource, $authorId = null)
+    public function __construct($datasource, $authorId = null, $language = null)
     {
         parent::__construct();
 
-        $news = $datasource->listingQuery()->orderBy('id DESC');
+        $news = $datasource->listingQuery()->orderBy('DatCreate DESC, id DESC');
 
         if (null !== $authorId) {
             $news->where('author.id', $authorId);
+        }
+
+        if (null !== $language) {
+            $news->where('language', $language);
         }
 
         $articles = $news->fetchAll();
