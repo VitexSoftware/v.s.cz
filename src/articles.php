@@ -31,7 +31,14 @@ require_once 'includes/VSInit.php';
 
 $oPage->addItem(new ui\PageTop(_('Articles')));
 
-$oPage->container->addItem(new \Ease\TWB5\Card(new ui\NewsListing(new News())));
+try {
+    $oPage->container->addItem(new \Ease\TWB5\Card(new ui\NewsListing(new News())));
+} catch (\Throwable $e) {
+    $oPage->container->addItem(new \Ease\TWB5\Alert(
+        _('Articles temporarily unavailable.'),
+        'warning',
+    ));
+}
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
 
