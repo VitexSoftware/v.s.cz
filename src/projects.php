@@ -64,13 +64,7 @@ $langBadge = static function (string $lang) use ($langColors): string {
 $oPage->container->addItem(new \Ease\Html\H1Tag(_('Open Source Projects')));
 
 $filterBar = new \Ease\Html\DivTag(null, ['class' => 'mb-3']);
-$filterBar->addItem(new \Ease\Html\InputTag(null, [
-    'id'          => 'project-search',
-    'class'       => 'form-control mb-2',
-    'type'        => 'search',
-    'placeholder' => _('Search projects…'),
-    'oninput'     => 'filterProjects()',
-]));
+$filterBar->addItem('<input id="project-search" class="form-control mb-2" type="search" placeholder="'.htmlspecialchars(_('Search projects…')).'" oninput="filterProjects()">');
 
 $langBtns = new \Ease\Html\DivTag(null, ['class' => 'd-flex flex-wrap gap-1', 'id' => 'lang-filters']);
 $langBtns->addItem('<button class="btn btn-sm btn-dark active" data-lang="" onclick="setLang(this)">'._('All').' <span class="badge bg-secondary">'.count($vsRepos).'</span></button>');
