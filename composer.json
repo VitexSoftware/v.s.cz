@@ -24,16 +24,16 @@
     "ext-fileinfo": "*",
     "league/commonmark": "*",
     "vitexsoftware/ease-bootstrap5-widgets": "1.4.2",
-    "vitexsoftware/ease-fluentpdo": "1.4.2",
-    "robmorgan/phinx": "0.x-dev",
-    "symfony/yaml": "8.2.x-dev"
+    "vitexsoftware/ease-fluentpdo": "1.4.2"
   },
   "require-dev": {
     "phpunit/phpunit": "*",
     "phpstan/phpstan": "*",
     "friendsofphp/php-cs-fixer": "^3.61",
     "ergebnis/composer-normalize": "^2.43",
-    "ergebnis/php-cs-fixer-config": "^6.34"
+    "ergebnis/php-cs-fixer-config": "^6.34",
+    "robmorgan/phinx": "0.x-dev",
+    "symfony/yaml": "8.2.x-dev"
   },
   "type": "project"
 }
