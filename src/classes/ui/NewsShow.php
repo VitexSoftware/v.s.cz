@@ -37,7 +37,7 @@ class NewsShow extends \Ease\Container
                 $this->addItem($this->renderArticle($article));
             }
         } else {
-            $this->addItem(new \Ease\TWB5\Alert(_('No articles'), 'warning'));
+            $this->addItem(new \Ease\TWB5\Alert('warning', _('No articles')));
         }
     }
 
