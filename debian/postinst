@@ -18,6 +18,11 @@ if [ "$1" = "configure" ]; then
 
     apache_install $1
 
+    # Ensure DB_TYPE is present in /etc/vscz.env (may be missing on pre-existing installs)
+    if [ -f /etc/vscz.env ] && ! grep -q '^DB_TYPE=' /etc/vscz.env; then
+        echo 'DB_TYPE=mysql' >> /etc/vscz.env
+    fi
+
     # Run database migrations
     if [ -x /usr/bin/phinx ] && [ -f /usr/share/vitexsoftware.cz/phinx.php ]; then
         phinx migrate -c /usr/share/vitexsoftware.cz/phinx.php -e production || true
