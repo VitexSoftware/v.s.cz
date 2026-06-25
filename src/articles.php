@@ -52,6 +52,7 @@ try {
         ),
     );
 } catch (\Throwable $e) {
+    error_log('articles.php: ' . $e->getMessage() . ' in ' . $e->getFile() . ':' . $e->getLine());
     $oPage->container->addItem(new \Ease\TWB5\Alert(
         'warning',
         _('Articles temporarily unavailable.'),
