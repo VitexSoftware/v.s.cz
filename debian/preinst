@@ -1,0 +1,17 @@
+#!/bin/sh
+# preinst script for vitexsoftware-website
+
+set -e
+
+if [ "$1" = "upgrade" ] || [ "$1" = "install" ]; then
+    if [ -f /etc/vscz.env ]; then
+        _pass=$(grep '^DB_PASSWORD=' /etc/vscz.env | sed 's/^DB_PASSWORD=//')
+        if [ -n "$_pass" ]; then
+            printf '%s' "$_pass" > /run/vscz-db-password.tmp
+        fi
+    fi
+fi
+
+#DEBHELPER#
+
+exit 0

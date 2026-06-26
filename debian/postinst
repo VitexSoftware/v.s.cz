@@ -18,6 +18,15 @@ if [ "$1" = "configure" ]; then
 
     apache_install $1
 
+    # Restore DB_PASSWORD saved by preinst before dpkg replaced the conffile
+    if [ -f /run/vscz-db-password.tmp ]; then
+        _pass=$(cat /run/vscz-db-password.tmp)
+        rm -f /run/vscz-db-password.tmp
+        if [ -n "$_pass" ] && [ -f /etc/vscz.env ]; then
+            sed -i "s|^DB_PASSWORD=.*|DB_PASSWORD=$_pass|" /etc/vscz.env
+        fi
+    fi
+
     # Ensure DB_TYPE is present in /etc/vscz.env (may be missing on pre-existing installs)
     if [ -f /etc/vscz.env ] && ! grep -q '^DB_TYPE=' /etc/vscz.env; then
         echo 'DB_TYPE=mysql' >> /etc/vscz.env
