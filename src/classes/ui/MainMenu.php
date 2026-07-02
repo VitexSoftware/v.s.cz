@@ -80,6 +80,8 @@ class MainMenu extends Navbar
         $this->addDropDownMenu(
             '<img style="height: 19px;" src="img/docs.svg"> '._('Docs'),
             [
+                '/abraflexi-api-doc-cs/' => '<img style="height: 20px;" src="img/abra-flexibee-square.png"> '._('AbraFlexi REST API (CS)'),
+                '/abraflexi-api-doc-en/' => '<img style="height: 20px;" src="img/abra-flexibee-square.png"> '._('AbraFlexi REST API (EN)'),
                 '/php-spojenet-abraflexi-doc/namespaces/abraflexi.html' => '<img style="height: 20px" src="img/php-flexibee.svg"> '._('PHP AbraFlexi'),
                 '/php-vitexsoftware-ease-core-doc/namespaces/ease.html' => '<img style="height: 20px;" src="img/ease-core.svg"> '._('EaseCore'),
                 '/php-vitexsoftware-abraflexi-bricks-doc/namespaces/abraflexi-bricks.html' => '<img style="height: 20px;" src="https://www.vitexsoftware.cz/img/php-flexibee-bricks.svg"> PHP Based AbraFlexi RestAPI/Json library Addons',

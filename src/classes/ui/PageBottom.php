@@ -45,6 +45,10 @@ class PageBottom extends \Ease\Html\FooterTag
             'DockerHUB',
         ));
         $listA1->addItemSmart(new \Ease\Html\ATag(
+            'https://pypi.org/user/vitex/',
+            'PyPI',
+        ));
+        $listA1->addItemSmart(new \Ease\Html\ATag(
             'https://atlas.hashicorp.com/vitexsoftware/',
             'Vagrant',
         ));

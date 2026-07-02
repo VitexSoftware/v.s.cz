@@ -18,6 +18,8 @@ Depends: ${misc:Depends},
  php-league-commonmark,
  php-yaml,
  php-cakephp-phinx
+Recommends: abraflexi-api-doc-cs,
+ abraflexi-api-doc-en
 Architecture: all
 Section: web
 Priority: optional
