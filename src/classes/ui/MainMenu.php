@@ -49,6 +49,11 @@ class MainMenu extends Navbar
             'projects.php',
             '<img style="height: 19px;" src="img/github.svg"> '._('Projects'),
         ));
+
+        $this->addMenuItem(new ATag(
+            'automatizace.php',
+            '<img style="height: 19px;" src="img/abraflexitools.svg"> '._('Automation'),
+        ));
         //
         //        $this->addDropDownMenu(
         //            _('Projects'),
