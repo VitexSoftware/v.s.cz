@@ -71,11 +71,11 @@ $oPage->head->addItem('<meta property="og:type" content="website">');
 $oPage->head->addItem('<meta property="og:title" content="'.htmlspecialchars($ogTitle).'">');
 $oPage->head->addItem('<meta property="og:description" content="'.htmlspecialchars($ogDesc).'">');
 $oPage->head->addItem('<meta property="og:url" content="https://vitexsoftware.cz/automatizace.php">');
-$oPage->head->addItem('<meta property="og:image" content="https://vitexsoftware.cz/img/abra-flexibee.png">');
+$oPage->head->addItem('<meta property="og:image" content="https://vitexsoftware.cz/img/magnetic-nymph-vitexsoftware.png">');
 $oPage->head->addItem('<meta name="twitter:card" content="summary_large_image">');
 $oPage->head->addItem('<meta name="twitter:title" content="'.htmlspecialchars($ogTitle).'">');
 $oPage->head->addItem('<meta name="twitter:description" content="'.htmlspecialchars($ogDesc).'">');
-$oPage->head->addItem('<meta name="twitter:image" content="https://vitexsoftware.cz/img/abra-flexibee.png">');
+$oPage->head->addItem('<meta name="twitter:image" content="https://vitexsoftware.cz/img/magnetic-nymph-vitexsoftware.png">');
 
 $oPage->addItem(new ui\PageTop(_('Automatizace na klíč — Vitex Software')));
 

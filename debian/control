@@ -16,6 +16,7 @@ Depends: ${misc:Depends},
  php-vitexsoftware-abraflexi-bricks,
  php-spojenet-abraflexi,
  php-league-commonmark,
+ php-symfony-deprecation-contracts,
  php-yaml,
  php-cakephp-phinx
 Recommends: abraflexi-api-doc-cs,

@@ -32,17 +32,38 @@ $vcsUrl   = AppStream::vcsBrowserUrl($package);
 $pageTitle = $comp ? ($comp['Name']['C'] ?? $package) : $package;
 $oPage->addItem(new ui\PageTop($pageTitle));
 
+$ogImage = null;
+
 if ($iconUrl) {
-    $oPage->head->addItem('<meta property="og:image" content="'.htmlspecialchars($iconUrl).'"/>');
+    $ogImage = $iconUrl;
 } elseif (file_exists('img/deb/'.$package.'.png')) {
-    $oPage->head->addItem('<meta property="og:image" content="img/deb/'.$package.'.png"/>');
+    $ogImage = 'https://vitexsoftware.com/img/deb/'.$package.'.png';
 }
 
+$ogDescription = $comp ? strip_tags($comp['Summary']['C'] ?? '') : '';
+$ogUrl         = 'https://vitexsoftware.com/deb.php?package='.urlencode($package);
+
+$oPage->head->addItem('<meta property="og:type" content="website">');
+$oPage->head->addItem('<meta property="og:url" content="'.htmlspecialchars($ogUrl).'">');
 $oPage->head->addItem('<meta property="og:title" content="'.htmlspecialchars($pageTitle).'"/>');
 
-if ($comp) {
-    $summary = $comp['Summary']['C'] ?? '';
-    $oPage->head->addItem('<meta property="og:description" content="'.htmlspecialchars(strip_tags($summary)).'"/>');
+if ($ogDescription) {
+    $oPage->head->addItem('<meta property="og:description" content="'.htmlspecialchars($ogDescription).'"/>');
+}
+
+if ($ogImage) {
+    $oPage->head->addItem('<meta property="og:image" content="'.htmlspecialchars($ogImage).'"/>');
+}
+
+$oPage->head->addItem('<meta name="twitter:card" content="summary">');
+$oPage->head->addItem('<meta name="twitter:title" content="'.htmlspecialchars($pageTitle).'">');
+
+if ($ogDescription) {
+    $oPage->head->addItem('<meta name="twitter:description" content="'.htmlspecialchars($ogDescription).'">');
+}
+
+if ($ogImage) {
+    $oPage->head->addItem('<meta name="twitter:image" content="'.htmlspecialchars($ogImage).'">');
 }
 
 $container = new \Ease\TWB5\Container();
