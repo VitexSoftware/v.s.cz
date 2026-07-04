@@ -198,7 +198,7 @@ $flexiCarousel->addSlide(
             ['style' => 'margin: 5px;'],
         ),
         new \Ease\TWB5\LinkButton(
-            'https://flexplorer.vitexsoftware.cz/',
+            'https://flexplorer.vitexsoftware.com/',
             [new \Ease\Html\ImgTag(
                 'img/flexplorer-logo.png',
                 'Flexplorer logo',
@@ -210,6 +210,29 @@ $flexiCarousel->addSlide(
             'https://github.com/VitexSoftware/Flexplorer/',
             '<i class = "fa fa-github"></i> '._('Source codes').' »',
             'info',
+        ),
+    ],
+);
+
+$flexiCarousel->addSlide(
+    new SlideImage(
+        'img/abra-flexibee-square.png',
+        'ROK',
+    ),
+    'ROK',
+    [
+        new \Ease\Html\DivTag(
+            _('Nástroj pro účetní, který pomáhá se správným předělem účetních období v AbraFlexi.'),
+            ['style' => 'margin: 5px;'],
+        ),
+        new \Ease\TWB5\LinkButton(
+            'https://rok.vitexsoftware.com/',
+            [new \Ease\Html\ImgTag(
+                'img/abra-flexibee-square.png',
+                'ROK logo',
+                ['style' => 'height: 30px;'],
+            ), ' ', _('See in action').' »'],
+            'success btn-lg',
         ),
     ],
 );

@@ -417,8 +417,8 @@ $mainPageRow->addColumn(7, [
 
 $mainPageRow->addColumn(2, new \Ease\Html\DivTag(
     [
-        '<h3>'._('Latest Packages').'</h3><div id="rss-feed"></div>',
-        '<iframe allowfullscreen sandbox="allow-top-navigation allow-scripts allow-popups allow-popups-to-escape-sandbox" width="400" height="800" src="https://mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Ff.cz%2Fusers%2Fvitexsoftware&theme=dark&size=100&header=false&replies=true&boosts=true"></iframe>',
+        '<h3>'._('Mastodon Feed').'</h3><div id="rss-feed"></div>',
+        '<iframe allowfullscreen sandbox="allow-top-navigation allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 100%; max-width: 100%;" height="800" src="https://mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Ff.cz%2Fusers%2Fvitexsoftware&theme=dark&size=100&header=false&replies=true&boosts=true"></iframe>',
     ],
     ['class' => 'rss-widget'],
 ));

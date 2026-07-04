@@ -19,7 +19,10 @@
 
 body {
     background: #f5f6f8;
+    overflow-x: hidden;
 }
+
+iframe, embed { max-width: 100%; }
 
 .avatar { width: 100px; }
 
