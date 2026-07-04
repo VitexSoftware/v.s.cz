@@ -97,7 +97,6 @@ class MainMenu extends Navbar
                 '/php-vitexsoftware-ease-fluentpdo-doc/namespaces/ease-sql.html' => '<img src="img/php-ease-fluentpdo.svg" style="height: 20px;"> Ease FluentPDO',
                 '/php-vitexsoftware-ease-html-doc/namespaces/ease.html' => '<img src="img/ease-html.svg" style="width: 20px;"> EasePHP Framework HTML',
                 '/php-vitexsoftware-rbczpremiumapi/index.html' => '<img src="img/php-rbczpremiumapi.svg" style="width: 20px;"> '._('Raiffeisenbank Premium API client library'),
-                '' => '',
                 'https://multiflexi.readthedocs.io/en/latest/' => '<img src="https://multiflexi.readthedocs.io/en/latest/_images/project-logo.svg" style="width: 20px;"> '._('MultiFlexi'),
             ],
         );

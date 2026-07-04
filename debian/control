@@ -20,7 +20,15 @@ Depends: ${misc:Depends},
  php-yaml,
  php-cakephp-phinx
 Recommends: abraflexi-api-doc-cs,
- abraflexi-api-doc-en
+ abraflexi-api-doc-en,
+ php-spojenet-abraflexi-doc,
+ php-vitexsoftware-ease-core-doc,
+ php-vitexsoftware-abraflexi-bricks-doc,
+ php-vitexsoftware-ease-bootstrap4-doc,
+ php-vitexsoftware-ease-bootstrap5-doc,
+ php-vitexsoftware-ease-fluentpdo-doc,
+ php-vitexsoftware-ease-html-doc,
+ php-vitexsoftware-rbczpremiumapi
 Architecture: all
 Section: web
 Priority: optional

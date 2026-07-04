@@ -17,23 +17,13 @@
 
 }
 
-body { background:
-           linear-gradient(to bottom right, transparent,
-           #99ff99  25%,  #ccff33  50%);
-}
-
-.navbar {
-    opacity: 0.9;
-    filter: alpha(opacity=90);
-    -moz-opacity: 0.9;
-    -khtml-opacity: 0.9;
+body {
+    background: #f5f6f8;
 }
 
 .avatar { width: 100px; }
 
 a { margin-top: 2px;  }
-
-.navbar .brand { color: gold; }
 
 .item img { margin-left: 200px; }
 
@@ -158,4 +148,33 @@ code { font-size: 9px; font-weight: bolder; }
 
 .mp-menu-item {
     margin-bottom: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    border: 0;
+}
+
+/* Carousel prev/next controls: keep them narrow and click-through so they
+   stop covering the package icon/links sitting under the full-height strip. */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 3rem;
+    pointer-events: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    pointer-events: auto;
+}
+
+@media (max-width: 767.98px) {
+    /* Stack the package icon above the text instead of squeezing it into
+       a fixed 100px-wide column next to the description. */
+    .mp-menu-item .d-flex.align-items-stretch {
+        flex-direction: column;
+    }
+
+    .mp-menu-item .flex-shrink-0 {
+        width: 100% !important;
+        border-right: 0 !important;
+        border-bottom: 1px solid #dee2e6;
+    }
 }
