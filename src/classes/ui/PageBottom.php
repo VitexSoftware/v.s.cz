@@ -128,7 +128,7 @@ EOD;
             12,
             [new \Ease\TWB5\Col(8, $socialIcons), new \Ease\TWB5\Col(
                 4,
-                _('&copy; 2012-2023 Vitex Software'),
+                _('&copy; 2012-2026 Vitex Software'),
             )],
         ));
 
