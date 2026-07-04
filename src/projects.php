@@ -61,6 +61,27 @@ $langBadge = static function (string $lang) use ($langColors): string {
     return '<span class="badge bg-'.$color.' me-1">'.htmlspecialchars($lang).'</span>';
 };
 
+$langIcons = [
+    'PHP'        => 'fa-brands fa-php',
+    'Python'     => 'fa-brands fa-python',
+    'JavaScript' => 'fa-brands fa-js',
+    'TypeScript' => 'fa-brands fa-js',
+    'CSS'        => 'fa-brands fa-css3-alt',
+    'HTML'       => 'fa-brands fa-html5',
+    'Shell'      => 'fa-solid fa-terminal',
+    'Dockerfile' => 'fa-brands fa-docker',
+    'Rust'       => 'fa-brands fa-rust',
+    'Ruby'       => 'fa-solid fa-gem',
+    'Makefile'   => 'fa-solid fa-gears',
+];
+
+$langIcon = static function (string $lang) use ($langColors, $langIcons): string {
+    $color = $langColors[$lang] ?? 'secondary';
+    $icon  = $langIcons[$lang] ?? 'fa-solid fa-code';
+
+    return '<span class="project-icon bg-'.$color.' text-white rounded-circle d-inline-flex align-items-center justify-content-center flex-shrink-0" style="width:36px;height:36px;"><i class="'.$icon.'"></i></span>';
+};
+
 $oPage->container->addItem(new \Ease\Html\H1Tag(_('Open Source Projects')));
 
 $filterBar = new \Ease\Html\DivTag(null, ['class' => 'mb-3']);
@@ -106,9 +127,12 @@ foreach ($vsRepos as $repoPath => $meta) {
 
     $title = new \Ease\Html\H5Tag(
         new \Ease\Html\ATag($ghUrl, htmlspecialchars($name), ['class' => 'text-decoration-none stretched-link']),
-        ['class' => 'card-title mb-1'],
+        ['class' => 'card-title mb-0'],
     );
-    $body->addItem($title);
+    $titleRow = new \Ease\Html\DivTag(null, ['class' => 'd-flex align-items-center gap-2 mb-1']);
+    $titleRow->addItem($langIcon($language));
+    $titleRow->addItem($title);
+    $body->addItem($titleRow);
 
     if ($description) {
         $body->addItem(new \Ease\Html\PTag(htmlspecialchars($description), ['class' => 'card-text text-muted small flex-grow-1']));
@@ -145,15 +169,15 @@ $oPage->container->addItem(new \Ease\TWB5\Container($grid));
 
 $oPage->addJavaScript(<<<'JS'
 var activeLang = '';
-function filterProjects() {
+window.filterProjects = function() {
     var q = document.getElementById('project-search').value.toLowerCase();
     document.querySelectorAll('.project-card').forEach(function(c) {
         var matchSearch = !q || c.dataset.search.includes(q);
         var matchLang   = !activeLang || c.dataset.lang === activeLang;
         c.style.display = (matchSearch && matchLang) ? '' : 'none';
     });
-}
-function setLang(btn) {
+};
+window.setLang = function(btn) {
     activeLang = btn.dataset.lang;
     document.querySelectorAll('#lang-filters button').forEach(function(b) {
         b.classList.remove('active');
@@ -163,9 +187,9 @@ function setLang(btn) {
         }
     });
     btn.classList.add('active');
-    filterProjects();
-}
-JS);
+    window.filterProjects();
+};
+JS, null, false);
 
 $oPage->addItem(new ui\PageBottom());
 $oPage->draw();
