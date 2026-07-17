@@ -28,6 +28,17 @@ $comp     = AppStream::get($package);
 $iconUrl  = AppStream::iconUrl($package);
 $vcsUrl   = AppStream::vcsBrowserUrl($package);
 
+// Fall back to the locally stocked AppStream icon when no remote icon is cached
+if (!$iconUrl) {
+    foreach (['svg', 'png'] as $ext) {
+        if (file_exists('img/deb/'.$package.'.'.$ext)) {
+            $iconUrl = 'img/deb/'.$package.'.'.$ext;
+
+            break;
+        }
+    }
+}
+
 // Page title & OG tags
 $pageTitle = $comp ? ($comp['Name']['C'] ?? $package) : $package;
 $oPage->addItem(new ui\PageTop($pageTitle));
@@ -35,9 +46,9 @@ $oPage->addItem(new ui\PageTop($pageTitle));
 $ogImage = null;
 
 if ($iconUrl) {
-    $ogImage = $iconUrl;
-} elseif (file_exists('img/deb/'.$package.'.png')) {
-    $ogImage = 'https://vitexsoftware.com/img/deb/'.$package.'.png';
+    $ogImage = str_starts_with($iconUrl, 'http')
+        ? $iconUrl
+        : 'https://vitexsoftware.com/'.$iconUrl;
 }
 
 $ogDescription = $comp ? strip_tags($comp['Summary']['C'] ?? '') : '';

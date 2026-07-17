@@ -100,7 +100,7 @@ $appMenu->addMenuItem(
 $appMenu->addMenuItem(
     _('Flexplorer'),
     'https://github.com/VitexSoftware/Flexplorer',
-    'img/multiflexi.svg',
+    'img/flexplorer.svg',
     _('Developer tool for AbraFlexi API JSON/XML'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/flexplorer/composer.json')),
     [],
@@ -327,7 +327,7 @@ $utilsMenu->addMenuItem(
 $multiflexiMenu->addMenuItem(
     _('MultiFlexi CLI'),
     'https://github.com/VitexSoftware/multiflexi-cli',
-    'img/multiflexi.svg',
+    'img/multiflexi-cli.svg',
     _('Command line interface for MultiFlexi'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-cli/composer.json')),
     [],
@@ -337,7 +337,7 @@ $multiflexiMenu->addMenuItem(
 $multiflexiMenu->addMenuItem(
     _('MultiFlexi TUI'),
     'https://github.com/VitexSoftware/multiflexi-tui',
-    'img/multiflexi.svg',
+    'img/multiflexi-tui.svg',
     _('Modern terminal user interface for MultiFlexi CLI'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-tui/composer.json')),
 );
@@ -345,7 +345,7 @@ $multiflexiMenu->addMenuItem(
 $multiflexiMenu->addMenuItem(
     _('MultiFlexi Executor'),
     'deb.php?package=multiflexi-executor',
-    'img/multiflexi.svg',
+    'img/multiflexi-executor.svg',
     _('Execute MultiFlexi jobs'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-executor/composer.json')),
 );
@@ -353,7 +353,7 @@ $multiflexiMenu->addMenuItem(
 $multiflexiMenu->addMenuItem(
     _('MultiFlexi Scheduler'),
     'https://github.com/VitexSoftware/multiflexi-scheduler',
-    'img/multiflexi.svg',
+    'img/multiflexi-scheduler.svg',
     _('Schedule MultiFlexi jobs'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-scheduler/composer.json')),
 );
@@ -361,7 +361,7 @@ $multiflexiMenu->addMenuItem(
 $multiflexiMenu->addMenuItem(
     _('MultiFlexi Probe'),
     'deb.php?package=multiflexi-probe',
-    'img/multiflexi.svg',
+    'img/multiflexi-probe.svg',
     _('Probe tool for testing MultiFlexi task launcher'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-probe/composer.json')),
 );
@@ -369,7 +369,7 @@ $multiflexiMenu->addMenuItem(
 $multiflexiMenu->addMenuItem(
     _('MultiFlexi Database'),
     'deb.php?package=multiflexi-migrations',
-    'img/multiflexi.svg',
+    'img/multiflexi-migrations.svg',
     _('Database migrations for MultiFlexi'),
     new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/multiflexi-migrations/composer.json')),
 );
@@ -378,7 +378,7 @@ $multiflexiMenu->addLibraryItem(
     'https://github.com/VitexSoftware/php-vitexsoftware-multiflexi-core',
     _('MultiFlexi Core'),
     _('Core PHP classes for MultiFlexi'),
-    'img/multiflexi.svg',
+    'img/php-vitexsoftware-multiflexi-core.svg',
     'vitexsoftware/multiflexi-core',
 );
 
@@ -386,7 +386,7 @@ $multiflexiMenu->addLibraryItem(
     'https://github.com/VitexSoftware/multiflexi-server',
     _('MultiFlexi Server'),
     _('PHP Slim 4 Server library for MultiFlexi API'),
-    'img/multiflexi.svg',
+    'img/php-vitexsoftware-multiflexi-server.svg',
     'vitexsoftware/multiflexi-server',
 );
 
