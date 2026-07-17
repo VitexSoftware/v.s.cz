@@ -166,7 +166,7 @@ class PackageInfo extends \Ease\Html\DivTag
             $packageTabs->addTab(_('Files'), $fileTable);
         }
 
-        if (strstr($projectUrl, 'github.com')) {
+        if ($projectUrl && strstr($projectUrl, 'github.com')) {
             $packageTabs->addTab(
                 _('Read Me'),
                 new HtmlMarkdownReadme($projectUrl, $version),
