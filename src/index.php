@@ -75,6 +75,14 @@ $appMenu->addMenuItem(
 );
 
 $appMenu->addMenuItem(
+    _('mcprack'),
+    'deb.php?package=mcprack',
+    'img/mcprack.svg',
+    _('MCP Self-Service Server Catalog & Config Generator'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/mcprack/composer.json', 'mcprack')),
+);
+
+$appMenu->addMenuItem(
     _('Repository'),
     'https://repo.vitexsoftware.com',
     'img/deb-package.png',
