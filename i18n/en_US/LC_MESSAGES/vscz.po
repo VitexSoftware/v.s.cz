@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VitexSoftware\n"
-"POT-Creation-Date: 2018-01-31 15:46+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-16 11:26+0200\n"
 "PO-Revision-Date: 2018-01-31 15:47+0100\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
@@ -16,248 +17,787 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: vendor\n"
 
-#: article.php:20 articles.php:20 classes/ui/MainMenu.php:49
+#: src/article.php:20
+msgid "Article"
+msgstr ""
+
+#: src/article.php:40
+msgid "Back to articles"
+msgstr ""
+
+#: src/articles.php:20 src/articles.php:37 src/classes/ui/MainMenu.php:106
 msgid "Articles"
 msgstr "Articles"
 
-#: article.php:26 index.php:128
-msgid "More articles"
-msgstr "More articles"
+#: src/articles.php:38
+msgid "Notes, releases and thoughts from Vitex Software"
+msgstr ""
 
-#: cenik.php:14 index.php:13 kontakt.php:25 reference.php:13
+#: src/articles.php:58
+msgid "Articles temporarily unavailable."
+msgstr ""
+
+#. echo _('');
+#. https://outlook.office365.com/owa/calendar/SoftwaredevelopmentServeradministration@spojenet.cz/bookings/
+#: src/attic.php:26 src/cenik.php:18 src/index.php:30 src/kontakt.php:44
+#: src/reference.php:18
 msgid "Vitex Software"
 msgstr "Vitex Software"
 
-#: cenik.php:19
+#. $mainPageMenu->addMenuItem('img/deb-package.png', _('Repozitář'), 'repos.php',
+#. _('Repozitář balíčků pro Debian & Ubuntu'));
+#: src/attic.php:34 src/flexipeehp.php:22
+msgid "FlexiPeeHP"
+msgstr "FlexiPeeHP"
+
+#: src/attic.php:34
+msgid "FlexiBee client library"
+msgstr ""
+
+#: src/attic.php:36
+msgid "EasePHP"
+msgstr ""
+
+#: src/attic.php:36
+msgid "Framework for easy writing of PHP applications"
+msgstr ""
+
+#: src/attic.php:38
+msgid "PHP Datamolino"
+msgstr ""
+
+#: src/attic.php:38
+msgid "support for accounting scanner API"
+msgstr ""
+
+#: src/attic.php:40
+msgid "EaseBricks"
+msgstr ""
+
+#: src/attic.php:40
+msgid "Common Widgets for EasePHP Framework"
+msgstr ""
+
+#: src/attic.php:42
+msgid "Icinga 1x configuration Editor"
+msgstr ""
+
+#: src/attic.php:51
+#, fuzzy
+msgid "FlexiPeeHP Bricks"
+msgstr "FlexiPeeHP"
+
+#: src/attic.php:52
+msgid "https://github.com/VitexSoftware/FlexiPeeHP-Bricks"
+msgstr ""
+
+#: src/attic.php:53
+msgid "Widgets & Code snipplets for FlexiPeeHP"
+msgstr ""
+
+#: src/attic.php:61 src/index.php:109
+msgid "Flexplorer"
+msgstr "Flexplorer"
+
+#: src/attic.php:64
+msgid "Developer for FlexiBee REST API"
+msgstr ""
+
+#: src/attic.php:65 src/attic.php:78 src/attic.php:91
+msgid "Visit"
+msgstr ""
+
+#: src/attic.php:74
+msgid "FlexiProxy"
+msgstr "FlexiProxy"
+
+#: src/attic.php:77
+msgid "FlexiBee modifikátor"
+msgstr ""
+
+#: src/attic.php:87
+msgid "FlexiBee ClientZone"
+msgstr ""
+
+#: src/attic.php:90
+msgid "ClientZone App for FlexiBee"
+msgstr ""
+
+#: src/attic.php:99 src/index.php:55
+msgid "IPEX B2B"
+msgstr ""
+
+#: src/attic.php:101 src/index.php:55
+msgid "Library for interaction with restapi.ipex.cz"
+msgstr ""
+
+#: src/attic.php:110
+msgid "php-subreg"
+msgstr ""
+
+#: src/attic.php:112 src/index.php:56
+msgid "Easy interaction with subreg.cz"
+msgstr ""
+
+#: src/attic.php:121
+msgid "Ease FuelUX"
+msgstr ""
+
+#: src/attic.php:123
+msgid "FuelUX componets for EasePHP FrameWork "
+msgstr ""
+
+#: src/attic.php:132
+msgid "PrimaERP"
+msgstr ""
+
+#: src/attic.php:134
+msgid "Library for interaction with API primaerp.com"
+msgstr ""
+
+#: src/attic.php:141 src/classes/ui/PageBottom.php:58 src/index.php:416
+msgid "Applications"
+msgstr "Applications"
+
+#: src/attic.php:145 src/index.php:422
+#, fuzzy
+msgid "Libraries"
+msgstr "Used Libraries"
+
+#: src/automatizace.php:26
+msgid "Start"
+msgstr ""
+
+#: src/automatizace.php:27
+msgid "vyzkoušet 1 automatizaci"
+msgstr ""
+
+#: src/automatizace.php:32
+msgid "1 automatizace dle výběru"
+msgstr ""
+
+#: src/automatizace.php:33
+msgid "hostování v ceně"
+msgstr ""
+
+#: src/automatizace.php:34
+msgid "aktualizace nástroje"
+msgstr ""
+
+#: src/automatizace.php:35
+msgid "podpora e-mailem"
+msgstr ""
+
+#: src/automatizace.php:39
+msgid "Provoz"
+msgstr ""
+
+#: src/automatizace.php:40
+msgid "běžná firma na AbraFlexi / Pohodě"
+msgstr ""
+
+#: src/automatizace.php:45
+msgid "2–3 automatizace dle výběru"
+msgstr ""
+
+#: src/automatizace.php:46
+msgid "hostování + monitoring"
+msgstr ""
+
+#: src/automatizace.php:47
+msgid "automatické aktualizace"
+msgstr ""
+
+#: src/automatizace.php:48
+msgid "přednostní podpora"
+msgstr ""
+
+#: src/automatizace.php:52
+msgid "Na klíč"
+msgstr ""
+
+#: src/automatizace.php:53
+msgid "složitější provoz a úpravy"
+msgstr ""
+
+#: src/automatizace.php:54 src/automatizace.php:55
+msgid "od"
+msgstr ""
+
+#: src/automatizace.php:58
+msgid "neomezeně automatizací"
+msgstr ""
+
+#: src/automatizace.php:59
+msgid "úpravy na míru"
+msgstr ""
+
+#: src/automatizace.php:60
+msgid "prioritní SLA + telefon"
+msgstr ""
+
+#: src/automatizace.php:61
+msgid "měsíční report"
+msgstr ""
+
+#. ── SEO / Open Graph (náhled při sdílení na sociálních sítích) ────────────────
+#: src/automatizace.php:67
+msgid "Automatizace účetnictví na klíč — VitexSoftware"
+msgstr ""
+
+#: src/automatizace.php:68
+msgid ""
+"Automatizace AbraFlexi i Pohody: import bankovních výpisů a párování plateb, "
+"přijaté faktury z e-mailu, rozesílání dokladů, digest stavu firmy. 78 "
+"hotových automatizací — nastavím a provozuji za vás."
+msgstr ""
+
+#: src/automatizace.php:80
+msgid "Automatizace na klíč — Vitex Software"
+msgstr ""
+
+#: src/automatizace.php:85
+msgid "Automatizace účetnictví na klíč"
+msgstr ""
+
+#: src/automatizace.php:87
+msgid ""
+"Přestaňte dělat ručně to, co zvládne stroj. Nastavím to a provozuji za vás — "
+"vy jen koukáte na výsledek."
+msgstr ""
+
+#: src/automatizace.php:91
+msgid "78 hotových automatizací"
+msgstr ""
+
+#: src/automatizace.php:91
+msgid "AbraFlexi i Pohoda"
+msgstr ""
+
+#: src/automatizace.php:91
+msgid "hostováno na MultiFlexi"
+msgstr ""
+
+#: src/automatizace.php:94 src/automatizace.php:220
+msgid "Nezávazně poptat"
+msgstr ""
+
+#. ── SCHOPNOSTI ───────────────────────────────────────────────────────────────
+#: src/automatizace.php:97
+msgid "Co to umí"
+msgstr ""
+
+#: src/automatizace.php:102
+msgid "Banka → účetnictví"
+msgstr ""
+
+#: src/automatizace.php:104
+msgid "stažení výpisů: Fio, Raiffeisen, Česká spořitelna, Revolut"
+msgstr ""
+
+#: src/automatizace.php:105
+msgid "import výpisů a transakcí do AbraFlexi i Pohody"
+msgstr ""
+
+#: src/automatizace.php:106
+msgid "automatické párování plateb (VS, specifický symbol)"
+msgstr ""
+
+#: src/automatizace.php:111
+msgid "AbraFlexi automatizace"
+msgstr ""
+
+#: src/automatizace.php:113
+msgid "digest stavu firmy (pohledávky, cashflow)"
+msgstr ""
+
+#: src/automatizace.php:114
+msgid "import přijatých faktur z e-mailu"
+msgstr ""
+
+#: src/automatizace.php:115
+msgid "rozesílání dokladů, opakovaná fakturace, upomínky"
+msgstr ""
+
+#: src/automatizace.php:120
+msgid "Pohoda automatizace"
+msgstr ""
+
+#: src/automatizace.php:122
+msgid "digesty a přehledy stavu"
+msgstr ""
+
+#: src/automatizace.php:123
+msgid "transakční reporty"
+msgstr ""
+
+#: src/automatizace.php:124
+msgid "import bankovních výpisů"
+msgstr ""
+
+#: src/automatizace.php:129
+msgid "Další integrace"
+msgstr ""
+
+#: src/automatizace.php:131
+msgid "Office 365 / SharePoint"
+msgstr ""
+
+#: src/automatizace.php:132
+msgid "Subreg, Discomp (ceníky, kredit)"
+msgstr ""
+
+#: src/automatizace.php:133
+msgid "monitoring Zabbix, CRM Mailkit / Realpad"
+msgstr ""
+
+#. ── PODPOROVANÉ SYSTÉMY ──────────────────────────────────────────────────────
+#: src/automatizace.php:159
+msgid "Podporované systémy"
+msgstr ""
+
+#: src/automatizace.php:161
+msgid "Přístupy spravuje MultiFlexi bezpečně na jednom místě."
+msgstr ""
+
+#: src/automatizace.php:166
+msgid "databáze (PDO)"
+msgstr ""
+
+#: src/automatizace.php:166
+msgid "SMTP mail"
+msgstr ""
+
+#. ── CENÍK ────────────────────────────────────────────────────────────────────
+#: src/automatizace.php:176
+msgid "Ceník"
+msgstr ""
+
+#: src/automatizace.php:178
+msgid ""
+"Roční platba předem = 2 měsíce provozu zdarma. Ceny jsou bez DPH (neplátce → "
+"finální)."
+msgstr ""
+
+#: src/automatizace.php:188
+msgid "nejoblíbenější"
+msgstr ""
+
+#: src/automatizace.php:194
+msgid "měsíčně"
+msgstr ""
+
+#: src/automatizace.php:198
+msgid "nastavení"
+msgstr ""
+
+#: src/automatizace.php:198
+msgid "jednorázově"
+msgstr ""
+
+#: src/automatizace.php:206
+msgid "Mám zájem"
+msgstr ""
+
+#: src/automatizace.php:215
+msgid "Ušetřete si ruční práci"
+msgstr ""
+
+#: src/automatizace.php:217
+msgid ""
+"Jedna automatizace obvykle ušetří víc hodin práce za měsíc, než stojí za "
+"rok. Ozvěte se, 15 minut vám to ukážu na vašich datech."
+msgstr ""
+
+#: src/cenik.php:28
 msgid "Remote programming / administration work"
 msgstr "Remote programming / administration work"
 
-#: cenik.php:25
+#: src/cenik.php:34
 msgid "On-site programming / administration work"
 msgstr "On-site programming / administration work"
 
-#: classes/ui/MainMenu.php:26
-msgid "Debian Repository"
-msgstr "Debian Repository"
+#: src/classes/ui/loginbox.php:38 src/createaccount.php:212 src/login.php:60
+#: src/passwordrecovery.php:57
+msgid "Username"
+msgstr "Username"
 
-#: classes/ui/MainMenu.php:29
+#: src/classes/ui/loginbox.php:42 src/createaccount.php:216 src/login.php:48
+#: src/passwordrecovery.php:58 src/passwordrecovery.php:89
+msgid "Password"
+msgstr "Password"
+
+#: src/classes/ui/loginbox.php:47
+msgid "Sign In"
+msgstr "Sign In"
+
+#: src/classes/ui/MainMenu.php:45 src/repos.php:141 src/repostats.php:101
+msgid "Packages"
+msgstr "Packages"
+
+#: src/classes/ui/MainMenu.php:50 src/projects.php:20
 msgid "Projects"
 msgstr "Projects"
 
-#: classes/ui/MainMenu.php:32
-msgid "Monitoring"
-msgstr "Monitoring"
+#: src/classes/ui/MainMenu.php:55
+msgid "Automation"
+msgstr ""
 
-#: classes/ui/MainMenu.php:33
-msgid "PHP Ease Framework"
-msgstr "PHP Ease Framework"
+#: src/classes/ui/MainMenu.php:86
+msgid "Docs"
+msgstr "Docs"
 
-#: classes/ui/MainMenu.php:34
-msgid "FlexiPeeHP PHP Library"
-msgstr "FlexiPeeHP PHP Library"
+#: src/classes/ui/MainMenu.php:88
+msgid "AbraFlexi REST API (CS)"
+msgstr ""
 
-#: classes/ui/MainMenu.php:35
-msgid "Flexplorer REST API Developer tool"
-msgstr "Flexplorer REST API Developer tool"
+#: src/classes/ui/MainMenu.php:89
+msgid "AbraFlexi REST API (EN)"
+msgstr ""
 
-#: classes/ui/MainMenu.php:36
-msgid "FlexyProXY"
-msgstr "FlexyProXY"
+#. $mainPageMenu->addMenuItem('img/deb-package.png', _('Repozitář'), 'repos.php',
+#. _('Repozitář balíčků pro Debian & Ubuntu'));
+#: src/classes/ui/MainMenu.php:90 src/classes/ui/PageBottom.php:81
+#: src/index.php:40
+msgid "PHP AbraFlexi"
+msgstr ""
 
-#: classes/ui/MainMenu.php:37 index.php:97
-msgid "Shop4FlexiBee"
-msgstr "Shop4FlexiBee"
+#: src/classes/ui/MainMenu.php:91
+msgid "EaseCore"
+msgstr ""
 
-#: classes/ui/MainMenu.php:40
-msgid "Twitter Bootstrap pro Debian"
-msgstr "Twitter Bootstrap pro Debian"
+#: src/classes/ui/MainMenu.php:99 src/classes/ui/PageBottom.php:89
+#: src/index.php:41
+msgid "Raiffeisenbank Premium API client library"
+msgstr ""
 
-#: classes/ui/MainMenu.php:41
-msgid "Imap2MX webmail plugins"
-msgstr "Imap2MX webmail plugins"
+#: src/classes/ui/MainMenu.php:100 src/classes/ui/PageBottom.php:90
+#: src/index.php:68
+msgid "MultiFlexi"
+msgstr ""
 
-#: classes/ui/MainMenu.php:46 flexibee.php:13
-msgid "AbraFlexi"
-msgstr "AbraFlexi"
+#: src/classes/ui/MainMenu.php:109
+msgid "Old projects"
+msgstr ""
 
-#: classes/ui/MainMenu.php:53
-msgid "My Skills"
-msgstr "My Skills"
-
-#: classes/ui/MainMenu.php:54 classes/ui/PageBottom.php:73
-msgid "Reference"
-msgstr "Reference"
-
-#: classes/ui/MainMenu.php:55 classes/ui/PageBottom.php:74
-msgid "Pricelist"
-msgstr "Pricelist"
-
-#: classes/ui/MainMenu.php:56
+#. $this->addMenuItem(new \Ease\Html\ATag('umim.php', _('My Skills')));
+#. $this->addMenuItem(new \Ease\Html\ATag('reference.php', _('Reference')));
+#. $this->addMenuItem(new \Ease\Html\ATag('cenik.php', _('Pricelist')));
+#: src/classes/ui/MainMenu.php:114
 msgid "Contact"
 msgstr "Contact"
 
-#: classes/ui/MainMenu.php:61
+#: src/classes/ui/MainMenu.php:117
 msgid "News Editor"
 msgstr "News Editor"
 
-#: classes/ui/NewPackages.php:106
+#: src/classes/ui/MainMenu.php:152
+msgid "Click to hide messages"
+msgstr "Click to hide messages"
+
+#: src/classes/ui/MainPageMenu.php:190 src/deb.php:180
+msgid "Package details"
+msgstr ""
+
+#: src/classes/ui/MainPageMenu.php:196
+msgid "View on GitHub"
+msgstr ""
+
+#: src/classes/ui/MainPageMenu.php:266
+msgid "Star"
+msgstr ""
+
+#: src/classes/ui/MainPageMenu.php:279
+msgid "Fork"
+msgstr ""
+
+#: src/classes/ui/MainPageMenu.php:332 src/classes/ui/MainPageMenu.php:340
+#: src/classes/ui/MainPageMenu.php:349 src/classes/ui/MainPageMenu.php:353
+#: src/index.php:131 src/index.php:211
+#, php-format
+msgid "Current version %s"
+msgstr ""
+
+#: src/classes/ui/NewPackages.php:55
 msgid "Fresh Packages"
 msgstr "Fresh Packages"
 
-#: classes/ui/NewPackages.php:116
+#: src/classes/ui/NewPackages.php:228
 msgid "All Packages"
 msgstr "All Packages"
 
-#: classes/ui/NewPackages.php:140
-#, fuzzy
-msgid "Installed"
-msgstr "Installs"
-
-#: classes/ui/NewPackages.php:140
-#, fuzzy
-msgid "Downloaded"
-msgstr "Download"
-
-#: classes/ui/NewsEditor.php:56
+#: src/classes/ui/NewsEditor.php:74
 msgid "Delete"
 msgstr "Delete"
 
-#: classes/ui/NewsEditor.php:79
+#: src/classes/ui/NewsEditor.php:102
 msgid "Name"
 msgstr "Name"
 
-#: classes/ui/NewsEditor.php:80
+#: src/classes/ui/NewsEditor.php:103
 msgid "Text"
 msgstr "Text"
 
-#: classes/ui/NewsEditor.php:82
+#: src/classes/ui/NewsEditor.php:106
 msgid "Czech"
 msgstr "Czech"
 
-#: classes/ui/NewsEditor.php:82
+#: src/classes/ui/NewsEditor.php:106
 msgid "English"
 msgstr "English"
 
-#: classes/ui/NewsEditor.php:82
+#: src/classes/ui/NewsEditor.php:107
 msgid "Language"
 msgstr "Language"
 
-#: classes/ui/NewsListing.php:27 classes/ui/NewsShow.php:34
+#: src/classes/ui/NewsListing.php:41 src/classes/ui/NewsShow.php:40
 msgid "No articles"
 msgstr "No articles"
 
-#: classes/ui/PackagistBadge.php:23
+#: src/classes/ui/NewsListing.php:68
+msgid "Read more"
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:36
+#, php-format
+msgid "Package \"%s\" not found"
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:37
+msgid ""
+"This package may not be indexed in our database yet. Please try again later "
+"or check the package repository directly."
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:38
+msgid "Browse Repository"
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:81
+msgid "Filename"
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:82 src/classes/ui/PackageInfo.php:146
+#: src/classes/ui/Repositor.php:61 src/repos.php:101 src/repostats.php:58
+msgid "Version"
+msgstr "Version"
+
+#: src/classes/ui/PackageInfo.php:83
+msgid "Age in days"
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:84 src/classes/ui/Repositor.php:61
+#: src/repos.php:101 src/repostats.php:58
+msgid "Release date"
+msgstr "Release date"
+
+#: src/classes/ui/PackageInfo.php:85 src/classes/ui/PackageInfo.php:160
+#: src/classes/ui/Repositor.php:62 src/repos.php:102 src/repostats.php:59
+msgid "Size"
+msgstr "Size"
+
+#: src/classes/ui/PackageInfo.php:110 src/deb.php:155
+msgid "Homepage"
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:133
+msgid "see also"
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:146
+msgid "Download/Install count"
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:147
+msgid "Last hit"
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:153
+msgid "Info"
+msgstr "Info"
+
+#: src/classes/ui/PackageInfo.php:160
+msgid "Path"
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:166
+msgid "Files"
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:171
+msgid "Read Me"
+msgstr ""
+
+#: src/classes/ui/PackageInfo.php:176
+msgid "Download stats"
+msgstr ""
+
+#: src/classes/ui/PackagistBadge.php:35
 #, fuzzy
 msgid "Packagist Downloads"
 msgstr "Downloads"
 
-#: classes/ui/PageBottom.php:23 flexibee.php:56 flexibee.php:80 flexibee.php:93
-#: flexibee.php:100 flexibee.php:112 flexibee.php:136
+#: src/classes/ui/PackagistBadge.php:35
+msgid "Packagist Version"
+msgstr ""
+
+#: src/classes/ui/PageBottom.php:35 src/flexibee.php:146 src/flexibee.php:164
+#: src/flexibee.php:183 src/flexibee.php:211 src/flexibee.php:300
+#: src/flexibee.php:324
 msgid "Source codes"
 msgstr "Source codes"
 
-#: classes/ui/PageBottom.php:37 index.php:115
-msgid "Applications"
-msgstr "Applications"
-
-#: classes/ui/PageBottom.php:47
+#: src/classes/ui/PageBottom.php:68
 msgid "Services"
 msgstr "Services"
 
-#: classes/ui/PageBottom.php:50
+#: src/classes/ui/PageBottom.php:72 src/index.php:86
 #, fuzzy
 msgid "Repository"
 msgstr "How to use repository"
 
-#: classes/ui/PageBottom.php:51
+#: src/classes/ui/PageBottom.php:73
 msgid "Hosting"
 msgstr "Hosting"
 
-#: classes/ui/PageBottom.php:54
+#: src/classes/ui/PageBottom.php:77
 msgid "Documentation"
 msgstr "Documentation"
 
-#: classes/ui/PageBottom.php:60
+#: src/classes/ui/PageBottom.php:82
+msgid "EasePHP Framework Core"
+msgstr ""
+
+#: src/classes/ui/PageBottom.php:83
+msgid "EasePHP Framework Twitter Bootstrap4"
+msgstr ""
+
+#: src/classes/ui/PageBottom.php:84
+msgid "EasePHP Framework Twitter Bootstrap5"
+msgstr ""
+
+#: src/classes/ui/PageBottom.php:94
 msgid "Related"
 msgstr "Related"
 
-#: classes/ui/PageBottom.php:63
+#: src/classes/ui/PageBottom.php:99
 msgid "Murka.cz"
 msgstr "Murka.cz"
 
-#: classes/ui/PageBottom.php:65
+#: src/classes/ui/PageBottom.php:103
 msgid "Spoje.Net"
 msgstr "Spoje.Net"
 
-#: classes/ui/PageBottom.php:67
-msgid "Rclick.cz"
-msgstr "Rclick.cz"
-
-#: classes/ui/PageBottom.php:70
+#: src/classes/ui/PageBottom.php:108
 msgid "More"
 msgstr "More"
 
-#: classes/ui/PageBottom.php:75
+#: src/classes/ui/PageBottom.php:113
+msgid "Reference"
+msgstr "Reference"
+
+#: src/classes/ui/PageBottom.php:115
+msgid "Pricelist"
+msgstr "Pricelist"
+
+#: src/classes/ui/PageBottom.php:116
 msgid "Contacts"
 msgstr "Contacts"
 
-#: classes/ui/PageBottom.php:90
-msgid "&copy; 2012-2017 Vitex Software"
-msgstr "&copy; 2012-2017 Vitex Software"
+#: src/classes/ui/PageBottom.php:131
+msgid "&copy; 2012-2026 Vitex Software"
+msgstr ""
 
-#: classes/ui/PageBottom.php:94
+#: src/classes/ui/PageBottom.php:143
 msgid "Powered by debian"
 msgstr ""
 
-#: classes/ui/WebPage.php:91
+#: src/classes/ui/PyPIBadge.php:30
+msgid "PyPI Version"
+msgstr ""
+
+#: src/classes/ui/PyPIBadge.php:31
+msgid "PyPI Downloads"
+msgstr ""
+
+#: src/classes/ui/Repositor.php:61 src/repos.php:101 src/repostats.php:58
+msgid "Package name"
+msgstr "Package name"
+
+#: src/classes/ui/Repositor.php:61 src/repos.php:101 src/repostats.php:58
+msgid "Age"
+msgstr "Age"
+
+#: src/classes/ui/Repositor.php:63 src/repos.php:103 src/repostats.php:60
+msgid "Package"
+msgstr "Package"
+
+#: src/classes/ui/Repositor.php:63 src/repostats.php:60
+msgid "Installs"
+msgstr "Installs"
+
+#: src/classes/ui/Repositor.php:63 src/repostats.php:60
+msgid "Downloads"
+msgstr "Downloads"
+
+#: src/classes/ui/Repositor.php:87 src/imap2mx.php:26 src/imap2mx.php:63
+msgid "Download"
+msgstr "Download"
+
+#: src/classes/ui/WebPage.php:73
 msgid "Only for admin"
 msgstr "Only for admin"
 
-#: classes/ui/loginbox.php:20 createaccount.php:184 login.php:52
-msgid "Username"
-msgstr "Username"
+#: src/classes/User.php:131
+msgid "missing login"
+msgstr ""
 
-#: classes/ui/loginbox.php:22 createaccount.php:186
-msgid "Password"
-msgstr "Password"
+#: src/classes/User.php:137
+msgid "missing password"
+msgstr ""
 
-#: classes/ui/loginbox.php:25
-msgid "Sign In"
-msgstr "Sign In"
+#: src/classes/User.php:163
+msgid "invalid password"
+msgstr ""
 
-#: createaccount.php:39
+#: src/classes/User.php:172
+#, php-format
+msgid "user %s does not exist"
+msgstr ""
+
+#: src/createaccount.php:55
 msgid "Name is too short"
 msgstr "Name is too short"
 
-#: createaccount.php:44
+#: src/createaccount.php:60
 msgid "Lastname is too short"
 msgstr "Lastname is too short"
 
-#: createaccount.php:49
+#: src/createaccount.php:65
 msgid "the names are too long together"
 msgstr "the names are too long together"
 
-#: createaccount.php:54
+#: src/createaccount.php:70
 msgid "mail address is too short"
 msgstr "mail address is too short"
 
-#: createaccount.php:58
+#: src/createaccount.php:74
 msgid "email address check error"
 msgstr "email address check error"
 
-#: createaccount.php:63
+#: src/createaccount.php:81
 msgid "email address allready registred"
 msgstr "email address allready registred"
 
-#: createaccount.php:73
+#: src/createaccount.php:90
 msgid "the password is too short"
 msgstr "the password is too short"
 
-#: createaccount.php:76
+#: src/createaccount.php:93
 msgid "password check disagrees"
 msgstr "password check disagrees"
 
-#: createaccount.php:82
+#: src/createaccount.php:101
 #, php-format
 msgid ""
 "The specified username %s is already in the database. Please choose another "
@@ -266,632 +806,1231 @@ msgstr ""
 "The specified username %s is already in the database. Please choose another "
 "one."
 
-#: createaccount.php:103
+#: src/createaccount.php:122
 msgid "účet byl vytvořen"
 msgstr ""
 
-#: createaccount.php:127
+#: src/createaccount.php:154
 msgid "Database entry failed!"
 msgstr "Database entry failed!"
 
-#: createaccount.php:176
+#: src/createaccount.php:202
 msgid "Sign On"
 msgstr "Sign On"
 
-#: createaccount.php:183
+#: src/createaccount.php:211
 msgid "Account"
 msgstr "Account"
 
-#: createaccount.php:188
+#: src/createaccount.php:221
 msgid "Password confirmation"
 msgstr "Password confirmation"
 
-#: createaccount.php:190
+#: src/createaccount.php:225
 msgid "Osobní"
 msgstr ""
 
-#: createaccount.php:191
+#: src/createaccount.php:226
 msgid "jméno"
 msgstr ""
 
-#: createaccount.php:192
+#: src/createaccount.php:227
 msgid "příjmení"
 msgstr ""
 
-#: createaccount.php:194
+#: src/createaccount.php:231
 msgid "emailová adresa"
 msgstr ""
 
-#: createaccount.php:194
+#: src/createaccount.php:231
 msgid "lowercase letters only"
 msgstr "lowercase letters only"
 
-#: createaccount.php:199
+#: src/createaccount.php:238
 msgid "Register"
 msgstr "Register"
 
-#: createaccount.php:199
+#: src/createaccount.php:238
 msgid "finish"
 msgstr "finish"
 
-#: createaccount.php:202
+#: src/createaccount.php:243
 msgid "Letsgo"
 msgstr "Letsgo"
 
-#: ease.php:15
+#: src/deb.php:129
+msgid "Install"
+msgstr ""
+
+#: src/deb.php:144
+msgid "Description"
+msgstr ""
+
+#: src/deb.php:173
+msgid "Issues"
+msgstr ""
+
+#: src/deb.php:243
+msgid "README"
+msgstr ""
+
+#: src/deb.php:247 src/deb.php:249
+msgid "Package info"
+msgstr ""
+
+#: src/deb.php:250
+msgid "Package database temporarily unavailable."
+msgstr ""
+
+#: src/debs.php:26
+msgid "Debian Repository"
+msgstr "Debian Repository"
+
+#. ── How to use card ───────────────────────────────────────────────────────────
+#: src/debs.php:30 src/repos.php:25 src/repostats.php:29
+msgid "How to use repository"
+msgstr "How to use repository"
+
+#: src/debs.php:31 src/repostats.php:30
+msgid "On current debian or ubuntu"
+msgstr ""
+
+#: src/debs.php:85
+msgid "VitexSoftware"
+msgstr ""
+
+#: src/debs.php:86
+msgid "All packages"
+msgstr ""
+
+#: src/debs.php:87
+msgid "How to use"
+msgstr ""
+
+#: src/ease.php:22
 msgid "Ease Framework"
 msgstr "Ease Framework"
 
-#: ease.php:33 flexipeehp.php:29
+#: src/ease.php:38 src/flexipeehp.php:34
 #, fuzzy
 msgid "Apigen documentation"
 msgstr "Documentation"
 
-#: ease.php:38 flexipeehp.php:34
+#: src/ease.php:48 src/flexipeehp.php:44
 msgid "RSS Feed"
 msgstr ""
 
-#: ease.php:45 flexipeehp.php:41
+#: src/ease.php:56 src/flexipeehp.php:52
 msgid "Latest change"
 msgstr ""
 
-#: flexibee.php:21
+#: src/flexibee.php:32
+msgid "AbraFlexi"
+msgstr "AbraFlexi"
+
+#: src/flexibee.php:42
 msgid "Go to AbraFlexi site"
 msgstr "Go to AbraFlexi site"
 
-#: flexibee.php:23
+#: src/flexibee.php:46
 msgid ""
-"Účetní a ekonomický systém pro menší firmy a živnostníky s bohatými možnostmi "
-"integrace."
+"Účetní a ekonomický systém pro menší firmy a živnostníky s bohatými "
+"možnostmi integrace."
 msgstr ""
 
-#: flexibee.php:32
+#.
+#. $productRow = new \Ease\TWB5\Row();
+#.
+#. $column1 = $productRow->addColumn(4);
+#.
+#. $column2 = $productRow->addColumn(4);
+#.
+#.
+#. $column2->addItem(new \Ease\Html\H3Tag(_('AbraFlexi Git History')));
+#. $column2->addItem(new \Ease\Html\DivTag(_('Solution for saving all flexibee changes into git repository with json files in'),
+#. ['style' => 'margin: 5px;']));
+#.
+#. $column2->addItem(new \Ease\TWB5\LinkButton('https://github.com/VitexSoftware/flexibee-history',
+#. '<i class = "fa fa-github"></i> '._('Source codes').' »', 'info'));
+#.
+#.
+#. $column3 = $productRow->addColumn(4);
+#.
+#. $column3->addItem(new \Ease\Html\H3Tag(_('AbraFlexi ClientZone')));
+#. $column3->addItem(new \Ease\Html\ImgTag('img/shop4flexibee-logo.svg',
+#. _('AbraFlexi ClientZone'), ['class' => 'img-responsive']));
+#. $column3->addItem(new \Ease\Html\DivTag(_('Basic app for order pricelist items and reaction after incoming payment'),
+#. ['style' => 'margin: 5px;']));
+#.
+#. $column3->addItem(new \Ease\TWB5\LinkButton('https://shop4flexibee.vitexsoftware.cz/',
+#. [new \Ease\Html\ImgTag('img/shop4flexibee-logo.svg', 'Shop4FlexiBee logo',
+#. ['style' => 'height: 30px;']), ' ', _('Live Customer Demo').' »'],
+#. 'success btn-lg'));
+#.
+#. $column3->addItem(new \Ease\Html\DivTag(_('Username: admin Password: admin'),
+#. ['style' => 'margin: 5px;']));
+#.
+#.
+#. $column3->addItem(new \Ease\TWB5\LinkButton('https://shop4flexibee.vitexsoftware.cz/adminlogin.php',
+#. [new \Ease\Html\ImgTag('img/shop4flexibee-logo.svg', 'Shop4FlexiBee logo',
+#. ['style' => 'height: 30px;']), ' ', _('Live Admin Demo').' »'],
+#. 'success btn-lg'));
+#.
+#. $column3->addItem(new \Ease\TWB5\LinkButton('https://github.com/VitexSoftware/AbraFlexi-ClientZone',
+#. '<i class = "fa fa-github"></i> '._('Source codes').' »', 'info'));
+#.
+#: src/flexibee.php:92
+msgid "AbraFlexi enhancenments"
+msgstr "AbraFlexi enhancenments"
+
+#: src/flexibee.php:93
+msgid ""
+"Díky několikaleté praxi s tímto systémem vám přinášíme tyto naše vylepšení, "
+"integrace a nástroje"
+msgstr ""
+
+#: src/flexibee.php:103
+msgid "AbraFlexi Server"
+msgstr ""
+
+#: src/flexibee.php:106
 msgid ""
 "Abra poskytuje pouze instalační balíčkek grafického klienta pro desktop a "
 "nebo klienta se serverem. Kdo si ale nechce na server instalovat nepotřebné "
 "grafické knihovny, ten si nainstaluje náš balíček."
 msgstr ""
 
-#: flexibee.php:39 flexibee.php:48 flexibee.php:64
+#: src/flexibee.php:114 src/flexibee.php:130 src/flexibee.php:253
+#: src/flexibee.php:272
 #, fuzzy
 msgid "More informations"
 msgstr "Password confirmation"
 
-#: flexibee.php:45
-msgid "Snadno nastavitelná utilita pro každodení zálohování vašich účetních dat"
+#: src/flexibee.php:122
+msgid "AbraFlexi server backup"
 msgstr ""
 
-#: flexibee.php:52
+#: src/flexibee.php:124
+msgid "Backup"
+msgstr ""
+
+#: src/flexibee.php:126
+msgid ""
+"Snadno nastavitelná utilita pro každodení zálohování vašich účetních dat"
+msgstr ""
+
+#: src/flexibee.php:138 src/flexibee.php:140
+msgid "Testing Tools"
+msgstr ""
+
+#: src/flexibee.php:142 src/index.php:146
+msgid "Set of commandline tools related to testing AbraFlexi functionality"
+msgstr ""
+
+#: src/flexibee.php:154 src/flexibee.php:156
+msgid "Monitoring"
+msgstr "Monitoring"
+
+#: src/flexibee.php:159
 msgid ""
 "Senzory pro sledování stavu AbraFlexi. Použitelné v monitorovacích systémech "
 "Nagios/Icinga."
 msgstr ""
 
-#: flexibee.php:59
-msgid "Odesílač upomínek"
+#: src/flexibee.php:173 src/flexibee.php:175 src/index.php:93
+msgid "AbraFlexi Digest"
 msgstr ""
 
-#: flexibee.php:70
-msgid "Library FlexiPeeHP"
-msgstr "Library FlexiPeeHP"
-
-#: flexibee.php:71
-msgid "PHP Knihovna pro snadnou integraci vašich aplikací a systémů"
+#: src/flexibee.php:178
+msgid "AbraFlexi company status digest every  day, week, month,year or alltime"
 msgstr ""
 
-#: flexibee.php:76
-msgid "Video presentation"
-msgstr "Video presentation"
+#: src/flexibee.php:192 src/flexibee.php:194
+msgid "FlexPlorer"
+msgstr ""
 
-#: flexibee.php:85
+#: src/flexibee.php:197
 msgid ""
 "Vývojářský nástroj a editor pro AbraFlexi API. Napsaný s využitím knihovny "
 "FlexiPeeHP:"
 msgstr ""
 
-#: flexibee.php:89
+#: src/flexibee.php:206 src/flexibee.php:234
 msgid "See in action"
 msgstr "See in action"
 
-#: flexibee.php:95
-msgid "AbraFlexi Git History"
-msgstr "AbraFlexi Git History"
-
-#: flexibee.php:96
+#: src/flexibee.php:225
 msgid ""
-"Solution for saving all flexibee changes into git repository with json files "
-"in"
+"Nástroj pro účetní, který pomáhá se správným předělem účetních období v "
+"AbraFlexi."
 msgstr ""
-"Solution for saving all flexibee changes into git repository with json files "
-"in"
 
-#: flexibee.php:105
+#: src/flexibee.php:243 src/flexibee.php:245 src/index.php:175
+msgid "AbraFlexi Reminder"
+msgstr ""
+
+#: src/flexibee.php:246
 msgid ""
-"Transparent Proxy for filering and modification communictation with AbraFlexi "
+"Reminds your customers by email with invoices in attachment as pdf and isdoc"
 msgstr ""
-"Transparent Proxy for filering and modification communictation with AbraFlexi "
 
-#: flexibee.php:109
+#: src/flexibee.php:262 src/flexibee.php:264 src/index.php:167
+msgid "AbraFlexi Matcher"
+msgstr ""
+
+#: src/flexibee.php:265
+msgid "Match invoices"
+msgstr ""
+
+#: src/flexibee.php:286
+msgid ""
+"Transparent Proxy for filering and modification communictation with "
+"AbraFlexi "
+msgstr ""
+"Transparent Proxy for filering and modification communictation with "
+"AbraFlexi "
+
+#: src/flexibee.php:295
 msgid "Live Demo"
 msgstr "Live Demo"
 
-#: flexibee.php:115
-msgid "Basic app for order pricelist items and reaction after incoming payment"
-msgstr "Basic app for order pricelist items and reaction after incoming payment"
-
-#: flexibee.php:120
-msgid "Live Customer Demo"
-msgstr "Live Customer Demo"
-
-#: flexibee.php:123
-msgid "Username: admin Password: admin"
-msgstr "Username: admin Password: admin"
-
-#: flexibee.php:129
-msgid "Live Admin Demo"
-msgstr "Live Admin Demo"
-
-#: flexibee.php:140
-msgid "AbraFlexi enhancenments"
-msgstr "AbraFlexi enhancenments"
-
-#: flexibee.php:141
-msgid ""
-"Díky několikaleté praxi s tímto systémem vám přinášíme tyto naše vylepšení, "
-"integrace a nástroje"
+#: src/flexibee.php:308
+msgid "PHP Knihovna pro snadnou integraci vašich aplikací a systémů"
 msgstr ""
 
-#: flexipeehp.php:15 index.php:59
-msgid "FlexiPeeHP"
-msgstr "FlexiPeeHP"
+#: src/flexibee.php:318
+msgid "Video presentation"
+msgstr "Video presentation"
 
-#: hosting.php:15
+#: src/flexibee.php:330 src/flexibee.php:331
+msgid "Library FlexiPeeHP"
+msgstr "Library FlexiPeeHP"
+
+#: src/hosting.php:27
 msgid "Hosting - Vitex Software"
 msgstr "Hosting - Vitex Software"
 
-#: hosting.php:17
+#: src/hosting.php:29
 msgid "Nabízíme hosting na těchto platformách:"
 msgstr ""
 
-#: hosting.php:20
+#: src/hosting.php:32
 msgid "NodeJS"
 msgstr "NodeJS"
 
-#: hosting.php:21
+#: src/hosting.php:33
 msgid "Javascript on backend and frontend"
 msgstr "Javascript on backend and frontend"
 
-#: hosting.php:26
+#: src/hosting.php:39
 msgid "Ruby on Rails"
 msgstr "Ruby on Rails"
 
-#: hosting.php:27
+#: src/hosting.php:40
 msgid "Most poplular Ruby WebAPPs framework"
 msgstr "Most poplular Ruby WebAPPs framework"
 
-#: hosting.php:31
+#: src/hosting.php:46
 msgid "Python Django"
 msgstr "Python Django"
 
-#: hosting.php:32
+#: src/hosting.php:47
 msgid "Most Popular Python WebAPPs framework"
 msgstr "Most Popular Python WebAPPs framework"
 
-#: imap2mx.php:12
+#: src/imap2mx.php:18
 msgid "Imap2MX for Roundcube and Squirrelmail"
 msgstr "Imap2MX for Roundcube and Squirrelmail"
 
-#: imap2mx.php:21 imap2mx.php:58
-msgid "Download"
-msgstr "Download"
-
-#: index.php:18 monitoring.php:55
-msgid "Open Source"
-msgstr "Open Source"
-
-#: index.php:19
-msgid "IT Mangement"
+#: src/index.php:40
+msgid "AbraFlexi client library"
 msgstr ""
 
-#: index.php:20
-msgid "Linux"
+#: src/index.php:41
+msgid "PHP RBczPremiumAPI"
 msgstr ""
 
-#: index.php:21
-msgid "PHP Development"
+#: src/index.php:42
+msgid "PHPmServer"
 msgstr ""
 
-#: index.php:35
-msgid "EasePHP"
+#: src/index.php:42
+msgid "client library for Sormware's Pohoda mServer"
 msgstr ""
 
-#: index.php:36
-msgid "Framework pro snadné psaní PHP aplikací"
+#: src/index.php:43 src/index.php:60
+msgid "AbraFlexi Bricks"
 msgstr ""
 
-#: index.php:40
-msgid "EaseBricks"
+#: src/index.php:43
+msgid "Addons for AbraFlexi PHP apps"
 msgstr ""
 
-#: index.php:42
-msgid "Common Widgets for EasePHP Framework"
+#: src/index.php:44 src/index.php:53
+msgid "TWB5 AbraFlexi widgets"
 msgstr ""
 
-#: index.php:54
-msgid "Icinga Editor"
-msgstr "Icinga Editor"
-
-#: index.php:55
-msgid "Editor Konfigurace monitoringu"
+#: src/index.php:44
+msgid "Twitter Bootstrap 4 Widgets for Ease Framework"
 msgstr ""
 
-#: index.php:60
-msgid "flexipeehp.php"
+#: src/index.php:45
+msgid "Ease Core"
 msgstr ""
 
-#: index.php:60
-msgid "PHP Knihovna pro komunikaci s AbraFlexi"
-msgstr "PHP Knihovna pro komunikaci s AbraFlexi"
-
-#: index.php:69
-#, fuzzy
-msgid "FlexiPeeHP Bricks"
-msgstr "FlexiPeeHP"
-
-#: index.php:70
-msgid "https://github.com/VitexSoftware/FlexiPeeHP-Bricks"
+#: src/index.php:45
+msgid "Core of Framework for easy writing of PHP applications"
 msgstr ""
 
-#: index.php:71
-msgid "Widgets & Code snipplets for FlexiPeeHP"
+#: src/index.php:46
+msgid "Ease HTML"
 msgstr ""
 
-#: index.php:75
-msgid "Flexplorer"
-msgstr "Flexplorer"
-
-#: index.php:76
-msgid "Vývojářský nástroj pro AbraFlexi REST API"
+#: src/index.php:46
+msgid "HTML 5 Tags for Ease Framework"
 msgstr ""
 
-#: index.php:88
-msgid "FlexiProxy"
-msgstr "FlexiProxy"
-
-#: index.php:89
-msgid "AbraFlexi modifikátor"
-msgstr "AbraFlexi modifikátor"
-
-#: index.php:98
-msgid "Shopping App for Flexibee"
-msgstr "Shopping App for Flexibee;"
-
-#: index.php:105
-msgid "IPEX B2B"
+#: src/index.php:47
+msgid "RealPad Takeout"
 msgstr ""
 
-#: index.php:107
-msgid "Library for interaction with restapi.ipex.cz"
+#: src/index.php:47
+msgid "Realpad document exporter"
 msgstr ""
 
-#: index.php:110
-msgid "PrimaERP"
+#: src/index.php:49
+msgid "Ease TWBootstrap4"
 msgstr ""
 
-#: index.php:112
-msgid "Library for interaction with API primaerp.com"
+#: src/index.php:49
+msgid "Twitter Bootstrap 4 support for Ease Framework"
 msgstr ""
 
-#: index.php:119
-#, fuzzy
-msgid "Libraries"
-msgstr "Used Libraries"
+#: src/index.php:50
+msgid "Ease TWBootstrap5"
+msgstr ""
 
-#: index.php:123
-#, fuzzy
-msgid "News"
-msgstr "Actual news"
+#: src/index.php:50
+msgid "Twitter Bootstrap 5 support for Ease Framework"
+msgstr ""
 
-#: index.php:132
+#: src/index.php:51
+msgid "Ease FluentPDO"
+msgstr ""
+
+#: src/index.php:51
+msgid "FluentPDO support for Ease Framework"
+msgstr ""
+
+#: src/index.php:52
+msgid "TWB3 AbraFlexi widgets"
+msgstr ""
+
+#: src/index.php:52
+msgid "Several Bootstrap3 Widgets for AbraFlexi"
+msgstr ""
+
+#: src/index.php:53
+msgid "Several Bootstrap4 Widgets for AbraFlexi"
+msgstr ""
+
+#: src/index.php:54
+msgid "AbraFlexi datables"
+msgstr ""
+
+#: src/index.php:54
+msgid "Show AbraFlexi data in Datatables widget"
+msgstr ""
+
+#: src/index.php:56
+msgid "php-Subreg"
+msgstr ""
+
+#: src/index.php:57
+msgid "PohodaSQL"
+msgstr ""
+
+#: src/index.php:57
+msgid "PHP Library for Pohoda SQL Tables access "
+msgstr ""
+
+#: src/index.php:58
+msgid "TWB3 Widgets"
+msgstr ""
+
+#: src/index.php:58
+msgid "Twitter Bootstrap 3 Widgets for Ease Framework"
+msgstr ""
+
+#: src/index.php:59
+msgid "Ease Twbootstrap"
+msgstr ""
+
+#: src/index.php:59
+msgid "Twitter Bootstrap 3 support for Ease Framework"
+msgstr ""
+
+#: src/index.php:60
+msgid "Additional classes for php-abraflexi"
+msgstr ""
+
+#: src/index.php:61
+msgid "Ease Bricks"
+msgstr ""
+
+#: src/index.php:61
+msgid "Extending classes and widgets for EasePHP"
+msgstr ""
+
+#: src/index.php:62
+msgid "mBank"
+msgstr ""
+
+#: src/index.php:62
+msgid "Library for accessing mBank transaction service"
+msgstr ""
+
+#: src/index.php:63
+msgid "primaERP"
+msgstr ""
+
+#: src/index.php:63
+msgid "PHP Library for ABRA primaERP"
+msgstr ""
+
+#: src/index.php:64
+msgid "Python AbraFlexi"
+msgstr ""
+
+#: src/index.php:64
+msgid "Python library for AbraFlexi REST API"
+msgstr ""
+
+#: src/index.php:65
+msgid "Python MultiFlexi"
+msgstr ""
+
+#: src/index.php:65
+msgid "MultiFlexi API client for Python"
+msgstr ""
+
+#: src/index.php:71
+msgid "Run various tools on top of AbraFlexi and Stormware Pohoda "
+msgstr ""
+
+#: src/index.php:78
+msgid "mcprack"
+msgstr ""
+
+#: src/index.php:81
+msgid "MCP Self-Service Server Catalog & Config Generator"
+msgstr ""
+
+#: src/index.php:89
+msgid "Debian & Ubuntu package repository"
+msgstr ""
+
+#: src/index.php:96
+msgid "FlexiBee company status digest every day, week, month or year"
+msgstr ""
+
+#: src/index.php:101
+msgid "Debs To SQL"
+msgstr ""
+
+#: src/index.php:104
+msgid "Index Debian package repository into SQL"
+msgstr ""
+
+#: src/index.php:112
+msgid "Developer tool for AbraFlexi API JSON/XML"
+msgstr ""
+
+#: src/index.php:119
+msgid "Pohoda Digest"
+msgstr ""
+
+#: src/index.php:122
+msgid "Analytical digest generator for Stormware Pohoda"
+msgstr ""
+
+#: src/index.php:127
+msgid "Jasper Compiler"
+msgstr ""
+
+#: src/index.php:130
+msgid "Commandline Jasper compiler with AbraFlexi custom reports support"
+msgstr ""
+
+#: src/index.php:135
+msgid "AbraFlexi Report Tools"
+msgstr ""
+
+#: src/index.php:138
+msgid "Commandline tools related to AbraFlexi custom reports "
+msgstr ""
+
+#: src/index.php:143
+msgid "AbraFlexi Tools"
+msgstr ""
+
+#: src/index.php:151
+msgid "AbraFlexi Raiffeisen Bank"
+msgstr ""
+
+#: src/index.php:154
+msgid "Raiffeisen Bank Transaction / Statement puller for AbraFlexi"
+msgstr ""
+
+#: src/index.php:159
+msgid "AbraFlexi Revolut Bank"
+msgstr ""
+
+#: src/index.php:162
+msgid "Revolut Bank Statement importer for AbraFlexi"
+msgstr ""
+
+#: src/index.php:170
+msgid "Match Invoices"
+msgstr ""
+
+#: src/index.php:178
+msgid "Remind your customers"
+msgstr ""
+
+#: src/index.php:183
+msgid "Mailer for AbraFlexi"
+msgstr ""
+
+#: src/index.php:186
+msgid "Document Sender for AbraFlexi"
+msgstr ""
+
+#: src/index.php:191
+msgid "Discomp To AbraFlexi"
+msgstr ""
+
+#: src/index.php:194
+msgid "Import Discomp pricelist into AbraFlexi"
+msgstr ""
+
+#: src/index.php:199
+msgid "Redmine To AbraFlexi"
+msgstr ""
+
+#: src/index.php:202
+msgid "It generates an invoice in FlexiBee from the hours worked in Redmine"
+msgstr ""
+
+#: src/index.php:207
+msgid "Debs to Deb"
+msgstr ""
+
+#: src/index.php:210
+msgid "Gives you offline debian repository as debian package"
+msgstr ""
+
+#: src/index.php:215
+msgid "Subreg to AbraFlexi"
+msgstr ""
+
+#: src/index.php:218
+msgid "Import Subreg Pricelist into AbraFlexi"
+msgstr ""
+
+#: src/index.php:223
+msgid "AbraFlexi Backup"
+msgstr ""
+
+#: src/index.php:226
+msgid "Save AbraFlexi backup to disk"
+msgstr ""
+
+#: src/index.php:231
+msgid "AbraFlexi CLI"
+msgstr ""
+
+#: src/index.php:234
+msgid "Manage AbraFlexi service using commandline"
+msgstr ""
+
+#: src/index.php:239
+msgid "AbraFlexi Config"
+msgstr ""
+
+#: src/index.php:242
+msgid "Shared configuration for AbraFlexi applications"
+msgstr ""
+
+#: src/index.php:247
+msgid "AbraFlexi Confirmation Sender"
+msgstr ""
+
+#: src/index.php:250
+msgid "Listens to webhooks and sends transaction confirmations"
+msgstr ""
+
+#: src/index.php:255
+msgid "AbraFlexi Contract Invoices"
+msgstr ""
+
+#: src/index.php:258
+msgid "Trigger contracts to generate invoices"
+msgstr ""
+
+#: src/index.php:263
+msgid "AbraFlexi Contractor"
+msgstr ""
+
+#: src/index.php:266
+msgid "Customize and print AbraFlexi contracts"
+msgstr ""
+
+#: src/index.php:271
+msgid "AbraFlexi Email Importer"
+msgstr ""
+
+#: src/index.php:274
+msgid "Import invoices from email inbox"
+msgstr ""
+
+#: src/index.php:279
+msgid "AbraFlexi ISDS"
+msgstr ""
+
+#: src/index.php:282
+msgid "Synchronize Czech ISDS to AbraFlexi events"
+msgstr ""
+
+#: src/index.php:287
+msgid "AbraFlexi Webhook Acceptor"
+msgstr ""
+
+#: src/index.php:290
+msgid "Accept and process incoming AbraFlexi webhooks"
+msgstr ""
+
+#: src/index.php:295
+msgid "AbraFlexi Zabbix"
+msgstr ""
+
+#: src/index.php:298
+msgid "Monitor AbraFlexi using Zabbix"
+msgstr ""
+
+#: src/index.php:303
+msgid "Kimai to AbraFlexi"
+msgstr ""
+
+#: src/index.php:306
+msgid "Convert Kimai timesheets into AbraFlexi invoices"
+msgstr ""
+
+#: src/index.php:311
+msgid "Toggl to AbraFlexi"
+msgstr ""
+
+#: src/index.php:314
+msgid "Generate AbraFlexi invoices from Toggl records"
+msgstr ""
+
+#: src/index.php:319
+msgid "WakaTime to AbraFlexi"
+msgstr ""
+
+#: src/index.php:322
+msgid "Generate invoices from WakaTime entries"
+msgstr ""
+
+#: src/index.php:327
+msgid "XLS to AbraFlexi"
+msgstr ""
+
+#: src/index.php:330
+msgid "Custom XLS invoice importer for AbraFlexi"
+msgstr ""
+
+#: src/index.php:336
+msgid "MultiFlexi CLI"
+msgstr ""
+
+#: src/index.php:339
+msgid "Command line interface for MultiFlexi"
+msgstr ""
+
+#: src/index.php:346
+msgid "MultiFlexi TUI"
+msgstr ""
+
+#: src/index.php:349
+msgid "Modern terminal user interface for MultiFlexi CLI"
+msgstr ""
+
+#: src/index.php:354
+msgid "MultiFlexi Executor"
+msgstr ""
+
+#: src/index.php:357
+msgid "Execute MultiFlexi jobs"
+msgstr ""
+
+#: src/index.php:362
+msgid "MultiFlexi Scheduler"
+msgstr ""
+
+#: src/index.php:365
+msgid "Schedule MultiFlexi jobs"
+msgstr ""
+
+#: src/index.php:370
+msgid "MultiFlexi Probe"
+msgstr ""
+
+#: src/index.php:373
+msgid "Probe tool for testing MultiFlexi task launcher"
+msgstr ""
+
+#: src/index.php:378
+msgid "MultiFlexi Database"
+msgstr ""
+
+#: src/index.php:381
+msgid "Database migrations for MultiFlexi"
+msgstr ""
+
+#: src/index.php:387
+msgid "MultiFlexi Core"
+msgstr ""
+
+#: src/index.php:388
+msgid "Core PHP classes for MultiFlexi"
+msgstr ""
+
+#: src/index.php:395
+msgid "MultiFlexi Server"
+msgstr ""
+
+#: src/index.php:396
+msgid "PHP Slim 4 Server library for MultiFlexi API"
+msgstr ""
+
+#: src/index.php:405
+msgid "Activity"
+msgstr ""
+
+#: src/index.php:407
 msgid "Languages used last week"
 msgstr "Languages used last week"
 
-#: index.php:134
+#: src/index.php:409
 msgid "Coding activity last week"
 msgstr "Coding activity last week"
 
-#: kontakt.php:13
+#: src/index.php:418
+msgid "MultiFlexi Components"
+msgstr ""
+
+#: src/index.php:420
+msgid "Utilities"
+msgstr ""
+
+#: src/index.php:428
+msgid "Mastodon Feed"
+msgstr ""
+
+#: src/install.php:20
+msgid ""
+"Installing Package  - If your install does not start automatically, type in "
+"terminal"
+msgstr ""
+
+#: src/kontakt.php:27
 msgid "contacts"
 msgstr "contacts"
 
-#: kontakt.php:15
+#: src/kontakt.php:34
 msgid "Vítězslav Dvořák"
 msgstr "Vítězslav Dvořák"
 
-#: kontakt.php:36
-msgid "Bitcoins accepted"
-msgstr "Bitcoins accepted"
-
-#: login.php:14
+#: src/login.php:21
 msgid "Cookies required"
 msgstr "Cookies required"
 
-#: login.php:26 monitoring.php:51
+#: src/login.php:36 src/monitoring.php:61
 msgid "Please enter your login and password"
 msgstr "Please enter your login and password"
 
-#: login.php:29 login.php:48
+#: src/login.php:39 src/login.php:53
 msgid "Sign in"
 msgstr "Sign in"
 
-#: login.php:42
+#: src/login.php:49
 msgid "Welcome to VitexSoftware.cz"
 msgstr "Welcome to VitexSoftware.cz"
 
-#: login.php:53
+#: src/login.php:61
 msgid "Login"
 msgstr "Login"
 
-#: login.php:59
+#: src/login.php:68
 msgid "Password recovery"
 msgstr "Password recovery"
 
-#: login.php:63
+#: src/login.php:73
 msgid "Create account"
 msgstr "Create account"
 
-#: logout.php:21
+#: src/logout.php:27
 msgid "Sign off"
 msgstr "Sign off"
 
-#: logout.php:25
+#: src/logout.php:30
 msgid "Good bye & next time"
 msgstr "Good bye & next time"
 
-#: moloch.php:14
+#: src/moloch.php:18
 msgid "Fakturační systém Moloch"
 msgstr ""
 
-#: moloch.php:60
-msgid "Ke stažení"
-msgstr ""
-
-#: moloch.php:82 monitoring.php:48
-msgid "testovací provoz"
-msgstr ""
-
-#: moloch.php:86
-msgid "Zadejte, prosím, Vaše přihlašovací údaje:"
-msgstr ""
-
-#: monitoring.php:10
+#: src/monitoring.php:18
 msgid "Icinga Configurator"
 msgstr "Icinga Configurator"
 
-#: monitoring.php:19
+#: src/monitoring.php:25
 msgid "Monitor your network"
 msgstr "Monitor your network"
 
-#: monitoring.php:24
+#: src/monitoring.php:30
 msgid "Servers & Services Monitoring"
 msgstr "Servers & Services Monitoring"
 
-#: monitoring.php:26
+#: src/monitoring.php:32
 msgid "Windows behind NATem/firewallem monitoring"
 msgstr "Windows behind NATem/firewallem monitoring"
 
-#: monitoring.php:31
+#: src/monitoring.php:36
 msgid "Sign Up"
 msgstr "Sign Up"
 
-#: monitoring.php:32
+#: src/monitoring.php:37
 msgid "Služba jako taková je nabízena do deseti monitorovaných služeb zdarma."
 msgstr ""
 
-#: monitoring.php:33
+#: src/monitoring.php:38
 msgid ""
 "Nad deset monitorovaných služeb požadujeme deset korun za každý host na měsíc"
 msgstr ""
 
-#: monitoring.php:34
+#: src/monitoring.php:39
 msgid "Zpoplatněny jsou i notifikační SMS a to dvěmi korunami za jednu zprávu."
 msgstr ""
 
-#: monitoring.php:37
+#: src/monitoring.php:43
 msgid "Sign IN"
 msgstr "Sign IN"
 
-#: monitoring.php:56
+#: src/monitoring.php:57
+msgid "testovací provoz"
+msgstr ""
+
+#: src/monitoring.php:66
+msgid "Open Source"
+msgstr "Open Source"
+
+#: src/monitoring.php:67
 msgid "Freedom first"
 msgstr "Freedom first"
 
-#: monitoring.php:57
+#: src/monitoring.php:68
 msgid ""
 "Ctíme myšlenku že software má být svobodný a proto jsou k dispozici zdrojové "
 "kódy i instalační balíčky pro debian a odvozené distribuce."
 msgstr ""
 
-#: monitoring.php:58
+#: src/monitoring.php:69
 msgid "Instalace zdroje a balíčku"
 msgstr ""
 
-#: monitoring.php:59
+#: src/monitoring.php:70
 msgid ""
 "Bude pro nás výrazem uznání kvality naší práce pokud se rozhodnete používat "
 "naše konfigurační rozhraní monitoringu i na vašem serveru."
 msgstr ""
 
-#: monitoring.php:64
+#: src/monitoring.php:75
 msgid "Veřejně dostupné zdrojové kódy"
 msgstr ""
 
-#: monitoring.php:66
+#: src/monitoring.php:77
 msgid ""
 "Pro všechny zájemce o nahlédnutí nebo i přispění do zdrojových kódů jsou "
 "dveře otevřené."
 msgstr ""
 
-#: monitoring.php:88
+#: src/monitoring.php:108
 msgid "Podpora"
 msgstr ""
 
-#: monitoring.php:89
+#: src/monitoring.php:109
 msgid "Snadný start"
 msgstr ""
 
-#: monitoring.php:90
+#: src/monitoring.php:110
 msgid ""
 "Ke spuštění monitoringu nejsou třeba žádné zvláštní znalosti. I přes to jsme "
 "pro vás připravili tento stručný ale názorný návod"
 msgstr ""
 
-#: monitoring.php:92
+#: src/monitoring.php:113
 msgid "Začínáme"
 msgstr ""
 
-#: monitoring.php:94
+#: src/monitoring.php:117
 msgid "Zajímá nás váš názor"
 msgstr ""
 
-#: monitoring.php:95
+#: src/monitoring.php:118
 msgid ""
 "Náš systém je neustále ve vývoji a tak se může stát že něco přestane "
 "fungovat. Proto oceníme pokud nám toto oznámíte. Stejně tak oceníme vaše "
 "přání a připomínky."
 msgstr ""
 
-#: newsedit.php:22
+#: src/newsedit.php:30
 msgid "Article was saved"
 msgstr "Article was saved"
 
-#: newsedit.php:24
+#: src/newsedit.php:32
 msgid "Article was not saved"
 msgstr "Article was not saved"
 
-#: newsedit.php:30
+#: src/newsedit.php:39
 msgid "Article was deleted"
 msgstr "Article was deleted"
 
-#: newsedit.php:32
+#: src/newsedit.php:41
 msgid "Article was not deleted"
 msgstr "Article was not deleted"
 
-#: newsedit.php:38
+#: src/newsedit.php:46
 msgid "Vitex Software news editor"
 msgstr "Vitex Software news editor"
 
-#: passwordrecovery.php:29
-msgid "Nové heslo pro "
+#: src/package.php:29
+#, php-format
+msgid "Package %s details"
 msgstr ""
 
-#: passwordrecovery.php:30
-msgid "Tvoje přihlašovací údaje byly změněny:\n"
+#: src/passwordrecovery.php:25
+msgid "Please enter your email."
 msgstr ""
 
-#: passwordrecovery.php:62
-msgid "Zaslat nové heslo"
+#: src/passwordrecovery.php:37
+#, php-format
+msgid "unknow email address %s"
 msgstr ""
 
-#: passwordrecovery.php:68
-msgid "Pokračovat"
+#: src/passwordrecovery.php:49
+#, php-format
+msgid "New password for %s"
 msgstr ""
 
-#: repos.php:13 repostats.php:23
+#: src/passwordrecovery.php:55
+msgid "Sign On informations was changed"
+msgstr ""
+
+#: src/passwordrecovery.php:63
+#, php-format
+msgid "Your new password was sent to %s"
+msgstr ""
+
+#: src/passwordrecovery.php:71
+msgid "Lost password recovery"
+msgstr ""
+
+#: src/passwordrecovery.php:82
+msgid "Tip"
+msgstr ""
+
+#: src/passwordrecovery.php:85
+msgid ""
+"Forgot your password? Enter your e-mail address you entered during the "
+"registration and we will send you a new one."
+msgstr ""
+
+#: src/passwordrecovery.php:90
+msgid "Password Recovery"
+msgstr ""
+
+#: src/passwordrecovery.php:96
+msgid "Sent New Password"
+msgstr ""
+
+#: src/passwordrecovery.php:99
+msgid "Email"
+msgstr ""
+
+#: src/passwordrecovery.php:117
+msgid "Continue"
+msgstr ""
+
+#: src/projects.php:85
+msgid "Open Source Projects"
+msgstr ""
+
+#: src/projects.php:88
+msgid "Search projects…"
+msgstr ""
+
+#: src/projects.php:91
+msgid "All"
+msgstr ""
+
+#: src/repos.php:21 src/repostats.php:25
 msgid "Deb Repository"
 msgstr "Deb Repository"
 
-#: repos.php:19 repostats.php:29
-msgid "How to use repository"
-msgstr "How to use repository"
-
-#: repos.php:33 repostats.php:43
+#: src/repos.php:47 src/repostats.php:51
 #, php-format
 msgid "apt-get update feeded %d times"
 msgstr "apt-get update feeded %d times"
 
-#: repos.php:75 repostats.php:85
-msgid "Package name"
-msgstr "Package name"
-
-#: repos.php:75 repostats.php:85
-msgid "Version"
-msgstr "Version"
-
-#: repos.php:75 repostats.php:85
-msgid "Age"
-msgstr "Age"
-
-#: repos.php:75 repostats.php:85
-msgid "Release date"
-msgstr "Release date"
-
-#: repos.php:76 repostats.php:86
-msgid "Size"
-msgstr "Size"
-
-#: repos.php:77 repostats.php:87
-msgid "Package"
-msgstr "Package"
-
-#: repos.php:108 repostats.php:125
-msgid "Packages"
-msgstr "Packages"
-
-#: repos.php:111 repostats.php:126
+#: src/repos.php:143 src/repostats.php:102
 msgid "Instructions"
 msgstr "Instructions"
 
-#: repos.php:114
+#: src/repos.php:147
 msgid "download count details"
 msgstr "download count details"
 
-#: repos.php:114
+#: src/repos.php:147
 msgid "please wait"
 msgstr "please wait"
 
-#: repostats.php:87
-msgid "Installs"
-msgstr "Installs"
+#: src/rss.php:41
+msgid "VitexSoftware Package feed"
+msgstr ""
 
-#: repostats.php:87
-msgid "Downloads"
-msgstr "Downloads"
-
-#: tbpackage.php:48
+#. $oPage->head->addItem('<link rel="alternate" type="application/rss+xml" title="Ease Framework SVN" href="/websvn/rss.php?repname=Ease+Framework" />');
+#: src/tbpackage.php:57
 msgid "unofficial Twitter Bootstrap Debian/Ubuntu packages"
 msgstr "unofficial Twitter Bootstrap Debian/Ubuntu packages"
 
-#: tbpackage.php:121
+#: src/tbpackage.php:151
 msgid "Debian installation"
 msgstr "Debian installation"
 
-#: tbpackage.php:122
+#: src/tbpackage.php:153
 msgid "Usage"
 msgstr "Usage"
 
-#: umim.php:20
+#: src/umim.php:32
 msgid "Co umím"
 msgstr ""
 
-#: umim.php:23
+#: src/umim.php:40
 msgid "Správa serverů"
 msgstr ""
 
-#: umim.php:32
+#: src/umim.php:49
 msgid "Správa sítě"
 msgstr ""
 
-#: umim.php:40
+#: src/umim.php:56
 msgid "Vývoj aplikací"
 msgstr ""
 
-#: umim.php:46
+#: src/umim.php:62
 msgid "Servis aplikací"
 msgstr ""
 
-#: umim.php:56
+#: src/umim.php:73
 msgid "Bezpečnostní audity"
 msgstr ""
+
+#~ msgid "More articles"
+#~ msgstr "More articles"
+
+#~ msgid "PHP Ease Framework"
+#~ msgstr "PHP Ease Framework"
+
+#~ msgid "FlexiPeeHP PHP Library"
+#~ msgstr "FlexiPeeHP PHP Library"
+
+#~ msgid "Flexplorer REST API Developer tool"
+#~ msgstr "Flexplorer REST API Developer tool"
+
+#~ msgid "FlexyProXY"
+#~ msgstr "FlexyProXY"
+
+#~ msgid "Shop4FlexiBee"
+#~ msgstr "Shop4FlexiBee"
+
+#~ msgid "Twitter Bootstrap pro Debian"
+#~ msgstr "Twitter Bootstrap pro Debian"
+
+#~ msgid "Imap2MX webmail plugins"
+#~ msgstr "Imap2MX webmail plugins"
+
+#~ msgid "My Skills"
+#~ msgstr "My Skills"
+
+#, fuzzy
+#~ msgid "Installed"
+#~ msgstr "Installs"
+
+#, fuzzy
+#~ msgid "Downloaded"
+#~ msgstr "Download"
+
+#~ msgid "Rclick.cz"
+#~ msgstr "Rclick.cz"
+
+#~ msgid "&copy; 2012-2017 Vitex Software"
+#~ msgstr "&copy; 2012-2017 Vitex Software"
+
+#~ msgid "AbraFlexi Git History"
+#~ msgstr "AbraFlexi Git History"
+
+#~ msgid ""
+#~ "Solution for saving all flexibee changes into git repository with json "
+#~ "files in"
+#~ msgstr ""
+#~ "Solution for saving all flexibee changes into git repository with json "
+#~ "files in"
+
+#~ msgid ""
+#~ "Basic app for order pricelist items and reaction after incoming payment"
+#~ msgstr ""
+#~ "Basic app for order pricelist items and reaction after incoming payment"
+
+#~ msgid "Live Customer Demo"
+#~ msgstr "Live Customer Demo"
+
+#~ msgid "Username: admin Password: admin"
+#~ msgstr "Username: admin Password: admin"
+
+#~ msgid "Live Admin Demo"
+#~ msgstr "Live Admin Demo"
+
+#~ msgid "Icinga Editor"
+#~ msgstr "Icinga Editor"
+
+#~ msgid "PHP Knihovna pro komunikaci s AbraFlexi"
+#~ msgstr "PHP Knihovna pro komunikaci s AbraFlexi"
+
+#~ msgid "AbraFlexi modifikátor"
+#~ msgstr "AbraFlexi modifikátor"
+
+#~ msgid "Shopping App for Flexibee"
+#~ msgstr "Shopping App for Flexibee;"
+
+#, fuzzy
+#~ msgid "News"
+#~ msgstr "Actual news"
+
+#~ msgid "Bitcoins accepted"
+#~ msgstr "Bitcoins accepted"
 
 #~ msgid "Source Codes"
 #~ msgstr "Source Codes"
@@ -984,12 +2123,14 @@ msgstr ""
 
 #~ msgid ""
 #~ "Any string (eg. %s) that will be sent with each change notifications in "
-#~ "the HTTP header. Used to easily verify that include incoming notifications "
-#~ "you registered Hook. Key name is in the HTTP header X-FB-Hook-SecKey ."
+#~ "the HTTP header. Used to easily verify that include incoming "
+#~ "notifications you registered Hook. Key name is in the HTTP header X-FB-"
+#~ "Hook-SecKey ."
 #~ msgstr ""
 #~ "Any string (eg. %s) that will be sent with each change notifications in "
-#~ "the HTTP header. Used to easily verify that include incoming notifications "
-#~ "you registered Hook. Key name is in the HTTP header X-FB-Hook-SecKey ."
+#~ "the HTTP header. Used to easily verify that include incoming "
+#~ "notifications you registered Hook. Key name is in the HTTP header X-FB-"
+#~ "Hook-SecKey ."
 
 #~ msgid "Perform operation"
 #~ msgstr "Perform operation"
@@ -1044,9 +2185,6 @@ msgstr ""
 
 #~ msgid "Settings"
 #~ msgstr "Settings"
-
-#~ msgid "Click to hide messages"
-#~ msgstr "Click to hide messages"
 
 #~ msgid "Save"
 #~ msgstr "Save"
@@ -1165,9 +2303,6 @@ msgstr ""
 #~ msgid "Support"
 #~ msgstr "Support"
 
-#~ msgid "Docs"
-#~ msgstr "Docs"
-
 #~ msgid "Author"
 #~ msgstr "Author"
 
@@ -1254,9 +2389,6 @@ msgstr ""
 
 #~ msgid "Allowed by license"
 #~ msgstr "Allowed by license"
-
-#~ msgid "Info"
-#~ msgstr "Info"
 
 #~ msgid "Evidences"
 #~ msgstr "Evidences"

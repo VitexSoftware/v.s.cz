@@ -40,7 +40,7 @@ if (!$iconUrl) {
 }
 
 // Page title & OG tags
-$pageTitle = $comp ? ($comp['Name']['C'] ?? $package) : $package;
+$pageTitle = $comp ? (AppStream::localized($comp['Name'] ?? []) ?: $package) : $package;
 $oPage->addItem(new ui\PageTop($pageTitle));
 
 $ogImage = null;
@@ -51,7 +51,7 @@ if ($iconUrl) {
         : 'https://vitexsoftware.com/'.$iconUrl;
 }
 
-$ogDescription = $comp ? strip_tags($comp['Summary']['C'] ?? '') : '';
+$ogDescription = $comp ? strip_tags(AppStream::localized($comp['Summary'] ?? [])) : '';
 $ogUrl         = 'https://vitexsoftware.com/deb.php?package='.urlencode($package);
 
 $oPage->head->addItem('<meta property="og:type" content="website">');
@@ -97,7 +97,7 @@ if ($comp) {
     $titleCol = new \Ease\Html\DivTag();
     $titleCol->addItem(new \Ease\Html\H1Tag($pageTitle));
 
-    $summary = $comp['Summary']['C'] ?? '';
+    $summary = AppStream::localized($comp['Summary'] ?? []);
 
     if ($summary) {
         $titleCol->addItem(new \Ease\Html\PTag($summary, ['class' => 'lead']));
@@ -137,7 +137,7 @@ if ($comp) {
     ));
 
     // ── Description ──────────────────────────────────────────────────────────
-    $description = $comp['Description']['C'] ?? '';
+    $description = AppStream::localized($comp['Description'] ?? []);
 
     if ($description) {
         $container->addItem(new \Ease\TWB5\Card(

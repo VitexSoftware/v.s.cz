@@ -50,15 +50,15 @@ $steps->addItemSmart(
 // ── VitexSoftware projects card grid ─────────────────────────────────────────
 $components = AppStream::all();
 uasort($components, fn($a, $b) => strcasecmp(
-    $a['Name']['C'] ?? $a['Package'] ?? '',
-    $b['Name']['C'] ?? $b['Package'] ?? '',
+    AppStream::localized($a['Name'] ?? []) ?: ($a['Package'] ?? ''),
+    AppStream::localized($b['Name'] ?? []) ?: ($b['Package'] ?? ''),
 ));
 
 $grid = new \Ease\Html\DivTag(null, ['class' => 'row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 mt-1']);
 
 foreach ($components as $pkg => $comp) {
-    $name    = $comp['Name']['C'] ?? $pkg;
-    $summary = $comp['Summary']['C'] ?? '';
+    $name    = AppStream::localized($comp['Name'] ?? []) ?: $pkg;
+    $summary = AppStream::localized($comp['Summary'] ?? []);
     $iconUrl = AppStream::iconUrl($pkg);
 
     $icon = $iconUrl

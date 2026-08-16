@@ -149,4 +149,27 @@ class AppStream
 
         return $comp['Url']['vcs-browser'] ?? null;
     }
+
+    /**
+     * Picks the best-matching localized value from a DEP-11 locale map
+     * (e.g. a component's Name/Summary/Description field), preferring the
+     * site's current language and falling back to English/neutral.
+     *
+     * @param array<string, string> $field  locale => value map
+     * @param null|string           $locale2 ISO 639-1 code (e.g. 'cs'); current site locale when null
+     */
+    public static function localized(array $field, ?string $locale2 = null): string
+    {
+        if ($locale2 === null) {
+            $locale2 = \Ease\Locale::singleton()->get2Code();
+        }
+
+        foreach ([$locale2, 'en-US', 'en', 'C'] as $loc) {
+            if (!empty($field[$loc])) {
+                return $field[$loc];
+            }
+        }
+
+        return '';
+    }
 }

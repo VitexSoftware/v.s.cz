@@ -19,17 +19,13 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
 {
     /**
      * Extract first plain-text paragraph from AppStream HTML description.
-     * AppStream locale keys: 'en-US', 'en', 'C' (neutral).
+     * Prefers the site's current language, falling back to English/neutral.
      */
     private static function appStreamExcerpt(array $comp, int $maxLen = 280): string
     {
-        foreach (['en-US', 'en', 'C'] as $locale) {
-            $html = $comp['Description'][$locale] ?? $comp['Summary'][$locale] ?? '';
-
-            if ($html) {
-                break;
-            }
-        }
+        $locale2 = \Ease\Locale::singleton()->get2Code();
+        $html    = \VSCZ\AppStream::localized($comp['Description'] ?? [], $locale2)
+            ?: \VSCZ\AppStream::localized($comp['Summary'] ?? [], $locale2);
 
         if (empty($html)) {
             return '';
