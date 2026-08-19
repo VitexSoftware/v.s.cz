@@ -29,6 +29,11 @@ $vsRepos = array_filter(
 
 ksort($vsRepos);
 
+// Manual overrides for live demo instances not present in the auto-generated GitHub data.
+$demoLinks = [
+    'VitexSoftware/thermoservice' => 'https://thermoservice.vitexsoftware.com/',
+];
+
 $languages = [];
 
 foreach ($vsRepos as $meta) {
@@ -82,6 +87,23 @@ $langIcon = static function (string $lang) use ($langColors, $langIcons): string
     return '<span class="project-icon bg-'.$color.' text-white rounded-circle d-inline-flex align-items-center justify-content-center flex-shrink-0" style="width:36px;height:36px;"><i class="'.$icon.'"></i></span>';
 };
 
+// Curated per-project logos already used elsewhere on the site (e.g. the homepage
+// app carousel). Reuse them here when a project has one, falling back to the
+// generic language icon above when it doesn't.
+$logoExts = ['svg', 'png', 'jpg', 'gif'];
+
+$projectLogo = static function (string $name) use ($logoExts): ?string {
+    $base = strtolower($name);
+
+    foreach ($logoExts as $ext) {
+        if (is_file(__DIR__.'/img/'.$base.'.'.$ext)) {
+            return 'img/'.$base.'.'.$ext;
+        }
+    }
+
+    return null;
+};
+
 $oPage->container->addItem(new \Ease\Html\H1Tag(_('Open Source Projects')));
 
 $filterBar = new \Ease\Html\DivTag(null, ['class' => 'mb-3']);
@@ -129,8 +151,12 @@ foreach ($vsRepos as $repoPath => $meta) {
         new \Ease\Html\ATag($ghUrl, htmlspecialchars($name), ['class' => 'text-decoration-none stretched-link']),
         ['class' => 'card-title mb-0'],
     );
+    $logoPath = $projectLogo($name);
+
     $titleRow = new \Ease\Html\DivTag(null, ['class' => 'd-flex align-items-center gap-2 mb-1']);
-    $titleRow->addItem($langIcon($language));
+    $titleRow->addItem($logoPath !== null
+        ? new \Ease\Html\ImgTag($logoPath, $name, ['class' => 'flex-shrink-0', 'style' => 'width:36px;height:36px;object-fit:contain;'])
+        : $langIcon($language));
     $titleRow->addItem($title);
     $body->addItem($titleRow);
 
@@ -157,6 +183,14 @@ foreach ($vsRepos as $repoPath => $meta) {
 
     if ($pushedAt) {
         $footer->addItem('<span>'.htmlspecialchars($pushedAt).'</span>');
+    }
+
+    if (isset($demoLinks[$repoPath])) {
+        $body->addItem(new \Ease\Html\ATag(
+            $demoLinks[$repoPath],
+            '▶ '._('Live demo'),
+            ['class' => 'btn btn-sm btn-outline-success position-relative mt-2', 'style' => 'z-index:2;'],
+        ));
     }
 
     $inner->addItem($body);

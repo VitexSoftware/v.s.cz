@@ -104,7 +104,7 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
      *                           starts with "deb.php?package=". Supply explicitly for
      *                           items that use a GitHub URL.
      */
-    public function addMenuItem($title, $url, $image, $description, $buttonText = null, $properties = [], string $debPackage = ''): \Ease\TWB5\Col
+    public function addMenuItem($title, $url, $image, $description, $buttonText = null, $properties = [], string $debPackage = '', string $demoUrl = ''): \Ease\TWB5\Col
     {
         // Auto-detect deb package from URL
         if (!$debPackage && str_starts_with($url, 'deb.php?package=')) {
@@ -195,6 +195,14 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
                 $url,
                 '↗ '._('View on GitHub'),
                 ['class' => 'btn btn-sm btn-outline-secondary'],
+            ));
+        }
+
+        if ($demoUrl) {
+            $footer->addItem(new \Ease\Html\ATag(
+                $demoUrl,
+                '▶ '._('Live demo'),
+                ['class' => 'btn btn-sm btn-outline-success'],
             ));
         }
 

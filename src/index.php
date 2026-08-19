@@ -90,6 +90,17 @@ $appMenu->addMenuItem(
 );
 
 $appMenu->addMenuItem(
+    _('Thermoservice'),
+    'https://github.com/VitexSoftware/thermoservice',
+    'img/python.svg',
+    _('Temperature sharing service for DS18B20'),
+    new \Ease\TWB5\Badge(ui\MainPageMenu::composerVersion('/usr/lib/thermoservice/composer.json', 'thermoservice')),
+    [],
+    'thermoservice',
+    'https://thermoservice.vitexsoftware.com/',
+);
+
+$appMenu->addMenuItem(
     _('AbraFlexi Digest'),
     'deb.php?package=abraflexi-digest',
     'img/abraflexi-digest.svg',
