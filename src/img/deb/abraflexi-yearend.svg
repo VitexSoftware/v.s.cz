@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400" height="400"
+   viewBox="0 0 400 400"
+   version="1.2"
+   id="svg-yearend-fireworks">
+  <title>abraflexi-yearend s ohnostrojem</title>
+
+  <!-- ============================================================= -->
+  <!-- Ohnostroj kolem loga - zcela mimo puvodni graficke prvky      -->
+  <!-- ============================================================= -->
+  <g id="g-fireworks">
+    <line x1="48.99" y1="54.79" x2="56.91" y2="54.37" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="56.91" cy="54.37" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="48.37" y1="57.15" x2="53.33" y2="60.32" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="53.33" cy="60.32" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="46.96" y1="58.49" x2="53.59" y2="70.26" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="53.59" cy="70.26" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="45.53" y1="58.96" x2="47.80" y2="76.01" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="47.80" cy="76.01" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="43.50" y1="58.71" x2="37.76" y2="72.86" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="37.76" cy="72.86" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="41.82" y1="57.43" x2="36.77" y2="61.29" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="36.77" cy="61.29" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="41.00" y1="55.09" x2="15.51" y2="55.67" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="15.51" cy="55.67" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="41.33" y1="53.40" x2="32.34" y2="49.49" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="32.34" cy="49.49" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="43.13" y1="51.46" x2="29.77" y2="26.13" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="29.77" cy="26.13" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="45.09" y1="51.00" x2="45.42" y2="36.69" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="45.42" cy="36.69" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="47.47" y1="51.86" x2="50.69" y2="47.76" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="50.69" cy="47.76" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="48.66" y1="53.38" x2="59.20" y2="48.72" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="59.20" cy="48.72" r="2.0" fill="#faba01" opacity="0.95" />
+    <circle cx="45.00" cy="55.00" r="2.80" fill="#faba01" opacity="1.00" />
+    <line x1="357.98" y1="49.68" x2="363.31" y2="49.11" stroke="#16324f" stroke-width="2.0" stroke-linecap="round" opacity="0.90" />
+    <circle cx="363.31" cy="49.11" r="1.8" fill="#16324f" opacity="0.90" />
+    <line x1="357.52" y1="51.62" x2="373.78" y2="62.06" stroke="#16324f" stroke-width="2.0" stroke-linecap="round" opacity="0.90" />
+    <circle cx="373.78" cy="62.06" r="1.8" fill="#16324f" opacity="0.90" />
+    <line x1="356.20" y1="52.75" x2="362.03" y2="66.17" stroke="#16324f" stroke-width="2.0" stroke-linecap="round" opacity="0.90" />
+    <circle cx="362.03" cy="66.17" r="1.8" fill="#16324f" opacity="0.90" />
+    <line x1="353.95" y1="52.81" x2="350.32" y2="62.61" stroke="#16324f" stroke-width="2.0" stroke-linecap="round" opacity="0.90" />
+    <circle cx="350.32" cy="62.61" r="1.8" fill="#16324f" opacity="0.90" />
+    <line x1="352.55" y1="51.73" x2="349.07" y2="54.18" stroke="#16324f" stroke-width="2.0" stroke-linecap="round" opacity="0.90" />
+    <circle cx="349.07" cy="54.18" r="1.8" fill="#16324f" opacity="0.90" />
+    <line x1="352.03" y1="50.40" x2="344.97" y2="51.33" stroke="#16324f" stroke-width="2.0" stroke-linecap="round" opacity="0.90" />
+    <circle cx="344.97" cy="51.33" r="1.8" fill="#16324f" opacity="0.90" />
+    <line x1="352.67" y1="48.11" x2="343.71" y2="40.82" stroke="#16324f" stroke-width="2.0" stroke-linecap="round" opacity="0.90" />
+    <circle cx="343.71" cy="40.82" r="1.8" fill="#16324f" opacity="0.90" />
+    <line x1="353.92" y1="47.20" x2="348.60" y2="33.49" stroke="#16324f" stroke-width="2.0" stroke-linecap="round" opacity="0.90" />
+    <circle cx="348.60" cy="33.49" r="1.8" fill="#16324f" opacity="0.90" />
+    <line x1="355.89" y1="47.13" x2="358.55" y2="38.54" stroke="#16324f" stroke-width="2.0" stroke-linecap="round" opacity="0.90" />
+    <circle cx="358.55" cy="38.54" r="1.8" fill="#16324f" opacity="0.90" />
+    <line x1="357.57" y1="48.46" x2="372.14" y2="39.73" stroke="#16324f" stroke-width="2.0" stroke-linecap="round" opacity="0.90" />
+    <circle cx="372.14" cy="39.73" r="1.8" fill="#16324f" opacity="0.90" />
+    <circle cx="355.00" cy="50.00" r="2.10" fill="#16324f" opacity="1.00" />
+    <line x1="53.49" y1="349.73" x2="69.01" y2="348.54" stroke="#ffffff" stroke-width="2.0" stroke-linecap="round" opacity="0.85" />
+    <circle cx="69.01" cy="348.54" r="1.8" fill="#ffffff" opacity="0.85" />
+    <line x1="52.93" y1="351.91" x2="71.24" y2="363.88" stroke="#ffffff" stroke-width="2.0" stroke-linecap="round" opacity="0.85" />
+    <circle cx="71.24" cy="363.88" r="1.8" fill="#ffffff" opacity="0.85" />
+    <line x1="51.23" y1="353.28" x2="54.59" y2="362.21" stroke="#ffffff" stroke-width="2.0" stroke-linecap="round" opacity="0.85" />
+    <circle cx="54.59" cy="362.21" r="1.8" fill="#ffffff" opacity="0.85" />
+    <line x1="49.01" y1="353.36" x2="47.32" y2="359.09" stroke="#ffffff" stroke-width="2.0" stroke-linecap="round" opacity="0.85" />
+    <circle cx="47.32" cy="359.09" r="1.8" fill="#ffffff" opacity="0.85" />
+    <line x1="47.77" y1="352.70" x2="35.43" y2="367.67" stroke="#ffffff" stroke-width="2.0" stroke-linecap="round" opacity="0.85" />
+    <circle cx="35.43" cy="367.67" r="1.8" fill="#ffffff" opacity="0.85" />
+    <line x1="46.76" y1="351.33" x2="34.03" y2="356.57" stroke="#ffffff" stroke-width="2.0" stroke-linecap="round" opacity="0.85" />
+    <circle cx="34.03" cy="356.57" r="1.8" fill="#ffffff" opacity="0.85" />
+    <line x1="46.54" y1="349.49" x2="29.20" y2="346.91" stroke="#ffffff" stroke-width="2.0" stroke-linecap="round" opacity="0.85" />
+    <circle cx="29.20" cy="346.91" r="1.8" fill="#ffffff" opacity="0.85" />
+    <line x1="47.92" y1="347.18" x2="38.72" y2="334.67" stroke="#ffffff" stroke-width="2.0" stroke-linecap="round" opacity="0.85" />
+    <circle cx="38.72" cy="334.67" r="1.8" fill="#ffffff" opacity="0.85" />
+    <line x1="49.89" y1="346.50" x2="49.59" y2="336.42" stroke="#ffffff" stroke-width="2.0" stroke-linecap="round" opacity="0.85" />
+    <circle cx="49.59" cy="336.42" r="1.8" fill="#ffffff" opacity="0.85" />
+    <line x1="51.64" y1="346.91" x2="59.12" y2="332.78" stroke="#ffffff" stroke-width="2.0" stroke-linecap="round" opacity="0.85" />
+    <circle cx="59.12" cy="332.78" r="1.8" fill="#ffffff" opacity="0.85" />
+    <line x1="52.99" y1="348.18" x2="64.16" y2="341.37" stroke="#ffffff" stroke-width="2.0" stroke-linecap="round" opacity="0.85" />
+    <circle cx="64.16" cy="341.37" r="1.8" fill="#ffffff" opacity="0.85" />
+    <circle cx="50.00" cy="350.00" r="2.45" fill="#ffffff" opacity="1.00" />
+    <line x1="361.98" y1="355.41" x2="388.51" y2="358.12" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="388.51" cy="358.12" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="361.56" y1="356.83" x2="379.28" y2="365.96" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="379.28" cy="365.96" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="360.69" y1="357.96" x2="374.67" y2="373.41" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="374.67" cy="373.41" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="358.31" y1="358.99" x2="360.44" y2="386.74" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="360.44" cy="386.74" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="356.23" y1="358.59" x2="351.43" y2="368.29" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="351.43" cy="368.29" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="355.10" y1="357.75" x2="340.56" y2="371.55" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="340.56" cy="371.55" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="354.29" y1="356.50" x2="340.32" y2="362.16" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="340.32" cy="362.16" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="354.04" y1="354.43" x2="347.30" y2="353.47" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="347.30" cy="353.47" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="354.68" y1="352.77" x2="336.07" y2="340.23" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="336.07" cy="340.23" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="356.18" y1="351.44" x2="351.64" y2="342.59" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="351.64" cy="342.59" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="358.35" y1="351.02" x2="360.54" y2="326.20" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="360.54" cy="326.20" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="359.84" y1="351.45" x2="366.64" y2="338.33" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="366.64" cy="338.33" r="2.0" fill="#faba01" opacity="0.95" />
+    <line x1="361.57" y1="353.19" x2="384.05" y2="341.81" stroke="#faba01" stroke-width="2.2" stroke-linecap="round" opacity="0.95" />
+    <circle cx="384.05" cy="341.81" r="2.0" fill="#faba01" opacity="0.95" />
+    <circle cx="358.00" cy="355.00" r="2.80" fill="#faba01" opacity="1.00" />
+    <line x1="202.49" y1="20.24" x2="216.16" y2="21.55" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="216.16" cy="21.55" r="1.4" fill="#ffffff" opacity="0.80" />
+    <line x1="202.02" y1="21.48" x2="208.39" y2="26.14" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="208.39" cy="26.14" r="1.4" fill="#ffffff" opacity="0.80" />
+    <line x1="200.54" y1="22.44" x2="203.55" y2="36.11" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="203.55" cy="36.11" r="1.4" fill="#ffffff" opacity="0.80" />
+    <line x1="198.47" y1="21.97" x2="195.73" y2="25.50" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="195.73" cy="25.50" r="1.4" fill="#ffffff" opacity="0.80" />
+    <line x1="197.74" y1="21.08" x2="192.77" y2="23.46" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="192.77" cy="23.46" r="1.4" fill="#ffffff" opacity="0.80" />
+    <line x1="197.59" y1="19.34" x2="189.10" y2="16.99" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="189.10" cy="16.99" r="1.4" fill="#ffffff" opacity="0.80" />
+    <line x1="198.81" y1="17.80" x2="195.99" y2="12.60" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="195.99" cy="12.60" r="1.4" fill="#ffffff" opacity="0.80" />
+    <line x1="200.06" y1="17.50" x2="200.27" y2="9.56" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="200.27" cy="9.56" r="1.4" fill="#ffffff" opacity="0.80" />
+    <line x1="201.85" y1="18.32" x2="209.15" y2="11.69" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="209.15" cy="11.69" r="1.4" fill="#ffffff" opacity="0.80" />
+    <circle cx="200.00" cy="20.00" r="1.75" fill="#ffffff" opacity="0.95" />
+    <line x1="22.48" y1="200.34" x2="33.85" y2="201.89" stroke="#16324f" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="33.85" cy="201.89" r="1.4" fill="#16324f" opacity="0.75" />
+    <line x1="21.91" y1="201.62" x2="29.94" y2="208.42" stroke="#16324f" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="29.94" cy="208.42" r="1.4" fill="#16324f" opacity="0.75" />
+    <line x1="20.30" y1="202.48" x2="20.69" y2="205.66" stroke="#16324f" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="20.69" cy="205.66" r="1.4" fill="#16324f" opacity="0.75" />
+    <line x1="18.50" y1="202.00" x2="10.92" y2="212.11" stroke="#16324f" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="10.92" cy="212.11" r="1.4" fill="#16324f" opacity="0.75" />
+    <line x1="17.57" y1="200.59" x2="5.06" y2="203.60" stroke="#16324f" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="5.06" cy="203.60" r="1.4" fill="#16324f" opacity="0.75" />
+    <line x1="17.62" y1="199.22" x2="10.32" y2="196.83" stroke="#16324f" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="10.32" cy="196.83" r="1.4" fill="#16324f" opacity="0.75" />
+    <line x1="18.50" y1="198.00" x2="12.06" y2="189.40" stroke="#16324f" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="12.06" cy="189.40" r="1.4" fill="#16324f" opacity="0.75" />
+    <line x1="20.11" y1="197.50" x2="20.25" y2="194.13" stroke="#16324f" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="20.25" cy="194.13" r="1.4" fill="#16324f" opacity="0.75" />
+    <line x1="21.77" y1="198.23" x2="25.03" y2="194.97" stroke="#16324f" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="25.03" cy="194.97" r="1.4" fill="#16324f" opacity="0.75" />
+    <circle cx="20.00" cy="200.00" r="1.75" fill="#16324f" opacity="0.90" />
+    <line x1="382.50" y1="204.88" x2="385.68" y2="204.73" stroke="#faba01" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="385.68" cy="204.73" r="1.4" fill="#faba01" opacity="0.80" />
+    <line x1="382.13" y1="206.30" x2="385.95" y2="208.63" stroke="#faba01" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="385.95" cy="208.63" r="1.4" fill="#faba01" opacity="0.80" />
+    <line x1="380.72" y1="207.39" x2="382.82" y2="214.31" stroke="#faba01" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="382.82" cy="214.31" r="1.4" fill="#faba01" opacity="0.80" />
+    <line x1="379.07" y1="207.32" x2="373.91" y2="220.19" stroke="#faba01" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="373.91" cy="220.19" r="1.4" fill="#faba01" opacity="0.80" />
+    <line x1="377.62" y1="205.77" x2="373.41" y2="207.15" stroke="#faba01" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="373.41" cy="207.15" r="1.4" fill="#faba01" opacity="0.80" />
+    <line x1="377.59" y1="204.32" x2="370.84" y2="202.42" stroke="#faba01" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="370.84" cy="202.42" r="1.4" fill="#faba01" opacity="0.80" />
+    <line x1="378.66" y1="202.89" x2="376.47" y2="199.43" stroke="#faba01" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="376.47" cy="199.43" r="1.4" fill="#faba01" opacity="0.80" />
+    <line x1="380.69" y1="202.60" x2="384.94" y2="187.78" stroke="#faba01" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="384.94" cy="187.78" r="1.4" fill="#faba01" opacity="0.80" />
+    <line x1="381.90" y1="203.37" x2="388.57" y2="197.66" stroke="#faba01" stroke-width="1.6" stroke-linecap="round" opacity="0.80" />
+    <circle cx="388.57" cy="197.66" r="1.4" fill="#faba01" opacity="0.80" />
+    <circle cx="380.00" cy="205.00" r="1.75" fill="#faba01" opacity="0.95" />
+    <line x1="207.48" y1="382.69" x2="211.48" y2="382.19" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="211.48" cy="382.19" r="1.4" fill="#ffffff" opacity="0.75" />
+    <line x1="206.99" y1="384.51" x2="212.14" y2="388.44" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="212.14" cy="388.44" r="1.4" fill="#ffffff" opacity="0.75" />
+    <line x1="205.19" y1="385.49" x2="205.56" y2="390.40" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="205.56" cy="390.40" r="1.4" fill="#ffffff" opacity="0.75" />
+    <line x1="204.07" y1="385.32" x2="197.84" y2="400.89" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="197.84" cy="400.89" r="1.4" fill="#ffffff" opacity="0.75" />
+    <line x1="202.64" y1="383.84" x2="198.21" y2="385.40" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="198.21" cy="385.40" r="1.4" fill="#ffffff" opacity="0.75" />
+    <line x1="202.66" y1="382.11" x2="199.94" y2="381.09" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="199.94" cy="381.09" r="1.4" fill="#ffffff" opacity="0.75" />
+    <line x1="203.77" y1="380.82" x2="195.31" y2="365.88" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="195.31" cy="365.88" r="1.4" fill="#ffffff" opacity="0.75" />
+    <line x1="205.70" y1="380.60" x2="209.32" y2="368.17" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="209.32" cy="368.17" r="1.4" fill="#ffffff" opacity="0.75" />
+    <line x1="206.80" y1="381.26" x2="212.54" y2="375.69" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.75" />
+    <circle cx="212.54" cy="375.69" r="1.4" fill="#ffffff" opacity="0.75" />
+    <circle cx="205.00" cy="383.00" r="1.75" fill="#ffffff" opacity="0.90" />
+    <path d="M 90 21 L 90.88 24.12 L 94 25 L 90.88 25.88 L 90 29 L 89.12 25.88 L 86 25 L 89.12 24.12 Z" fill="#ffffff" opacity="0.85" />
+    <path d="M 310 24.5 L 310.77 27.23 L 313.5 28 L 310.77 28.77 L 310 31.5 L 309.23 28.77 L 306.5 28 L 309.23 27.23 Z" fill="#faba01" opacity="0.85" />
+    <path d="M 25 117 L 25.66 119.34 L 28 120 L 25.66 120.66 L 25 123 L 24.34 120.66 L 22 120 L 24.34 119.34 Z" fill="#16324f" opacity="0.85" />
+    <path d="M 378 116 L 378.88 119.12 L 382 120 L 378.88 120.88 L 378 124 L 377.12 120.88 L 374 120 L 377.12 119.12 Z" fill="#ffffff" opacity="0.85" />
+    <path d="M 30 276.5 L 30.77 279.23 L 33.5 280 L 30.77 280.77 L 30 283.5 L 29.23 280.77 L 26.5 280 L 29.23 279.23 Z" fill="#faba01" opacity="0.85" />
+    <path d="M 372 275 L 372.66 277.34 L 375 278 L 372.66 278.66 L 372 281 L 371.34 278.66 L 369 278 L 371.34 277.34 Z" fill="#16324f" opacity="0.85" />
+    <path d="M 110 374 L 110.88 377.12 L 114 378 L 110.88 378.88 L 110 382 L 109.12 378.88 L 106 378 L 109.12 377.12 Z" fill="#ffffff" opacity="0.85" />
+    <path d="M 285 377 L 285.66 379.34 L 288 380 L 285.66 380.66 L 285 383 L 284.34 380.66 L 282 380 L 284.34 379.34 Z" fill="#faba01" opacity="0.85" />
+    <path d="M 15 42.5 L 15.55 44.45 L 17.5 45 L 15.55 45.55 L 15 47.5 L 14.45 45.55 L 12.5 45 L 14.45 44.45 Z" fill="#ffffff" opacity="0.85" />
+    <path d="M 390 42.5 L 390.55 44.45 L 392.5 45 L 390.55 45.55 L 390 47.5 L 389.45 45.55 L 387.5 45 L 389.45 44.45 Z" fill="#16324f" opacity="0.85" />
+    <path d="M 18 357.5 L 18.55 359.45 L 20.5 360 L 18.55 360.55 L 18 362.5 L 17.45 360.55 L 15.5 360 L 17.45 359.45 Z" fill="#faba01" opacity="0.85" />
+    <path d="M 388 359.5 L 388.55 361.45 L 390.5 362 L 388.55 362.55 L 388 364.5 L 387.45 362.55 L 385.5 362 L 387.45 361.45 Z" fill="#ffffff" opacity="0.85" />
+    <path d="M 150 7.5 L 150.55 9.45 L 152.5 10 L 150.55 10.55 L 150 12.5 L 149.45 10.55 L 147.5 10 L 149.45 9.45 Z" fill="#faba01" opacity="0.85" />
+    <path d="M 250 389.5 L 250.55 391.45 L 252.5 392 L 250.55 392.55 L 250 394.5 L 249.45 392.55 L 247.5 392 L 249.45 391.45 Z" fill="#16324f" opacity="0.85" />
+    <circle cx="213.65" cy="380.16" r="1.17" fill="#16324f" opacity="0.64" />
+    <circle cx="40.10" cy="110.98" r="1.71" fill="#ffffff" opacity="0.53" />
+    <circle cx="219.45" cy="396.88" r="1.27" fill="#16324f" opacity="0.64" />
+    <circle cx="93.62" cy="72.93" r="1.43" fill="#16324f" opacity="0.59" />
+    <circle cx="388.68" cy="218.01" r="0.96" fill="#16324f" opacity="0.42" />
+    <circle cx="235.94" cy="12.11" r="1.07" fill="#16324f" opacity="0.76" />
+    <circle cx="335.46" cy="70.88" r="1.72" fill="#ffffff" opacity="0.76" />
+    <circle cx="25.88" cy="108.63" r="0.93" fill="#ffffff" opacity="0.45" />
+    <circle cx="310.49" cy="326.88" r="1.77" fill="#ffffff" opacity="0.79" />
+    <circle cx="308.07" cy="61.08" r="1.63" fill="#16324f" opacity="0.58" />
+    <circle cx="43.21" cy="107.18" r="1.70" fill="#16324f" opacity="0.86" />
+    <circle cx="367.87" cy="230.56" r="1.41" fill="#16324f" opacity="0.48" />
+    <circle cx="325.96" cy="48.98" r="1.70" fill="#16324f" opacity="0.45" />
+    <circle cx="97.04" cy="47.44" r="1.79" fill="#ffffff" opacity="0.54" />
+    <circle cx="377.35" cy="274.72" r="1.79" fill="#faba01" opacity="0.57" />
+    <circle cx="377.34" cy="278.88" r="0.82" fill="#ffffff" opacity="0.78" />
+    <circle cx="312.71" cy="84.08" r="1.41" fill="#faba01" opacity="0.59" />
+    <circle cx="45.07" cy="106.56" r="1.72" fill="#ffffff" opacity="0.65" />
+    <circle cx="371.76" cy="198.39" r="0.88" fill="#16324f" opacity="0.67" />
+    <circle cx="386.85" cy="137.85" r="1.09" fill="#ffffff" opacity="0.48" />
+    <circle cx="386.16" cy="250.85" r="1.11" fill="#faba01" opacity="0.85" />
+    <circle cx="72.31" cy="323.29" r="1.32" fill="#16324f" opacity="0.83" />
+    <circle cx="131.12" cy="51.28" r="1.77" fill="#16324f" opacity="0.54" />
+    <circle cx="75.58" cy="60.14" r="1.74" fill="#ffffff" opacity="0.89" />
+    <circle cx="20.75" cy="176.06" r="0.81" fill="#ffffff" opacity="0.89" />
+    <circle cx="130.90" cy="360.03" r="1.39" fill="#faba01" opacity="0.43" />
+
+  </g>
+
+  <!-- ============================================================= -->
+  <!-- Originalni AbraFlexi logo (vc. odznaku) - beze zmeny,         -->
+  <!-- pouze posunuto na stred platna                                -->
+  <!-- ============================================================= -->
+  <g id="g-logo-original" transform="translate(58.267725,58.267725)">
+  <rect
+     style="fill:#faba01;fill-opacity:1;stroke:#979797;stroke-width:0.46198857;stroke-opacity:1"
+     id="rect875"
+     width="279.11725"
+     height="279.11725"
+     x="2.4846437"
+     y="2.181092"
+     ry="60.056908" />
+  <g
+     id="g873"
+     transform="matrix(2.4972635,0,0,2.4972635,-525.21189,-380.20486)"
+     style="">
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;"
+       d="m 253.52734,186.60156 -26.73828,46.32813 h 26.73828 l 26.73047,-46.32813 h -26.73047"
+       id="path28"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;"
+       d="m 285.9375,225.54687 -4.23438,7.38282 h 25.29297 l -12.66406,-21.94532 -8.39453,14.5625"
+       id="path30"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;"
+       d="m 267.88281,211.48047 12.08985,20.95703 12.09765,-20.95703 z m 0,0"
+       id="path32"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;"
+       d="M 268.96094,209.76172 H 293.625 l -12.32813,-21.375 z m 0,0"
+       id="path34"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g id="g-yearend-badge">
+    <circle id="badge-ring" cx="225" cy="225" r="33" style="fill:#ffffff;fill-opacity:1" />
+    <circle id="badge-bg" cx="225" cy="225" r="30" style="fill:#16324f;fill-opacity:1" />
+    <rect id="badge-cal-body" x="214" y="217" width="22" height="19" rx="3" ry="3" style="fill:#ffffff;fill-opacity:1" />
+    <rect id="badge-cal-tab1" x="218.5" y="212" width="3" height="7" rx="1.5" style="fill:#16324f;fill-opacity:1" />
+    <rect id="badge-cal-tab2" x="228.5" y="212" width="3" height="7" rx="1.5" style="fill:#16324f;fill-opacity:1" />
+    <path id="badge-check" d="M 218.5,226.5 L 223,231 L 232,220.5" style="fill:none;stroke:#16324f;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round" />
+  </g>
+  </g>
+</svg>

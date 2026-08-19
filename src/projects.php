@@ -88,16 +88,20 @@ $langIcon = static function (string $lang) use ($langColors, $langIcons): string
 };
 
 // Curated per-project logos already used elsewhere on the site (e.g. the homepage
-// app carousel). Reuse them here when a project has one, falling back to the
-// generic language icon above when it doesn't.
+// app carousel, or the deb package pages' AppStream icon cache in img/deb). Reuse
+// them here when a project has one, falling back to the generic language icon
+// above when it doesn't.
 $logoExts = ['svg', 'png', 'jpg', 'gif'];
+$logoDirs = ['img', 'img/deb'];
 
-$projectLogo = static function (string $name) use ($logoExts): ?string {
+$projectLogo = static function (string $name) use ($logoExts, $logoDirs): ?string {
     $base = strtolower($name);
 
-    foreach ($logoExts as $ext) {
-        if (is_file(__DIR__.'/img/'.$base.'.'.$ext)) {
-            return 'img/'.$base.'.'.$ext;
+    foreach ($logoDirs as $dir) {
+        foreach ($logoExts as $ext) {
+            if (is_file(__DIR__.'/'.$dir.'/'.$base.'.'.$ext)) {
+                return $dir.'/'.$base.'.'.$ext;
+            }
         }
     }
 
