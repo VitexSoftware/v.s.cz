@@ -1,6 +1,8 @@
 /gitolite-shell
 /fsg84d1e.txt
 /nbproject/private/
+/nbproject/configs/Installed.properties
+src/php_errors.log
 /pool/
 /.build/
 debian/vitexsoftware-website/
