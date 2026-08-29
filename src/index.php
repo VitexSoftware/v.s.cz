@@ -425,6 +425,18 @@ $activityColumn->setTagCss(['background-image' => 'url(img/magnetic-nymph-head.p
 
 $mainPageRow->addColumn(7, [
     new \Ease\Html\H1Tag(_('Applications')),
+    new ui\PromoBanner(
+        _('MultiFlexi'),
+        _('Run various tools on top of AbraFlexi and Stormware Pohoda — schedule, monitor and manage all your integrations in one place.'),
+        'img/multiflexi.svg',
+        'https://multiflexi.eu/',
+    ),
+    new ui\PromoBanner(
+        _('MCPRack'),
+        _('MCP Self-Service Server Catalog & Config Generator — spin up and configure Model Context Protocol servers in minutes.'),
+        'img/mcprack.svg',
+        'mcprack.php',
+    ),
     $appMenu->toCarousel('carousel-apps'),
     new \Ease\Html\H1Tag(_('MultiFlexi Components')),
     $multiflexiMenu->toCarousel('carousel-multiflexi'),

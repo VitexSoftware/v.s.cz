@@ -155,6 +155,21 @@ code { font-size: 9px; font-weight: bolder; }
     border: 0;
 }
 
+.promo-banner {
+    margin-bottom: 16px;
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #eef2ff 100%);
+    border-left: 6px solid #0d6efd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767.98px) {
+    .promo-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 /* Carousel prev/next controls: keep them narrow and click-through so they
    stop covering the package icon/links sitting under the full-height strip. */
 .carousel-control-prev,
