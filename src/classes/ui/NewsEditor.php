@@ -108,7 +108,7 @@ class NewsEditor extends \Ease\Html\DivTag
             ['cs' => _('Czech'), 'en' => _('English')],
         ), _('Language'));
         $form->addItem(new \Ease\TWB5\SubmitButton('Ok', 'success'));
-        $form->fillUp($this->newsEngine->getData());
+        $form->fillUp($this->newsEngine->getData() ?? []);
 
         return $form;
     }
