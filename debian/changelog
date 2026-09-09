@@ -1,3 +1,10 @@
+vitexsoftware-website (0.202.15) trixie; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix HTTP 500 on password recovery for unknown email address
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 09 Sep 2026 17:45:35 +0200
+
 vitexsoftware-website (0.202.14) trixie; urgency=medium
 
   [ CyberVitexus ]
