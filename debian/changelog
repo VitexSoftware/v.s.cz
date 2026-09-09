@@ -1,3 +1,11 @@
+vitexsoftware-website (0.202.10) trixie; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix TypeError in login.php Form() call (second bug in same 500
+    chain)
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 09 Sep 2026 09:21:02 +0200
+
 vitexsoftware-website (0.202.9) trixie; urgency=medium
 
   * Fix HTTP 500 on login.php caused by passing null to Ease\Html\ImgTag
