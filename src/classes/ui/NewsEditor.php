@@ -46,7 +46,7 @@ class NewsEditor extends \Ease\Html\DivTag
 
         if ($oUser->getSettingValue('admin')) {
             $articles = $this->newsEngine->getColumnsFromSQL(
-                '*',
+                ['*'],
                 null,
                 'id',
                 'id',
@@ -103,7 +103,7 @@ class NewsEditor extends \Ease\Html\DivTag
         ));
         $form->addInput(new \Ease\Html\InputTextTag('title'), _('Name'));
         $form->addInput(new WISWYG('text'), _('Text'));
-        $form->addInput(new \Ease\Html\Select(
+        $form->addInput(new \Ease\Html\SelectTag(
             'language',
             ['cs' => _('Czech'), 'en' => _('English')],
         ), _('Language'));
