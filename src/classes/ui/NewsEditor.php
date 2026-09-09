@@ -96,7 +96,7 @@ class NewsEditor extends \Ease\Html\DivTag
 
     public function articleForm()
     {
-        $form = new \Ease\TWB5\Form('NewsArticle');
+        $form = new \Ease\TWB5\Form(['name' => 'NewsArticle']);
         $form->addItem(new \Ease\Html\InputHiddenTag(
             'id',
             $this->newsEngine->getMyKey(),
