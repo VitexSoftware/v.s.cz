@@ -54,7 +54,7 @@ $submit = new \Ease\TWB5\SubmitButton(_('Sign in'), 'success');
 
 $loginPanel = new \Ease\TWB5\Panel(new \Ease\Html\ImgTag(
     'img/vitexsoftwarelogo.png',
-    null,
+    _('VitexSoftware'),
     ['style' => 'width: 100px;'],
 ), 'success', null, $submit);
 $loginPanel->addItem(new \Ease\TWB5\FormGroup(_('Username'), new \Ease\Html\InputTextTag('login', $login)));
