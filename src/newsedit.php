@@ -27,6 +27,10 @@ if ($oPage->isPosted()) {
     $news->takeData($_POST);
 
     if (!$news->getMyKey()) {
+        // The hidden "id" field posts as an empty string for a new,
+        // unsaved article -- insertToSQL() would otherwise try to
+        // insert that literal '' into the int auto_increment column.
+        $news->unsetDataValue('id');
         $news->setDataValue('author', \Ease\Shared::user()->getUserID());
     }
 
