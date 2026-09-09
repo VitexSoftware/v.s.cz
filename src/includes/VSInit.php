@@ -17,6 +17,12 @@ namespace VSCZ;
 
 require_once '../vendor/autoload.php';
 
+// The vhost's Apache "php_value include_path" narrows include_path to the
+// app's own directories, which hides the system PEAR packages (php-mail,
+// php-mail-mime) that Ease\HtmlMailer loads via a bare require_once
+// 'Mail.php'. Restore access to them without touching server config.
+set_include_path(get_include_path().\PATH_SEPARATOR.'/usr/share/php');
+
 if (!\defined('EASE_APPNAME')) {
     \define('EASE_APPNAME', 'VitexSoftwareWEB');
 }
