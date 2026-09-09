@@ -1,3 +1,10 @@
+vitexsoftware-website (0.202.30) trixie; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix article edit links all pointing to id=0
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 09 Sep 2026 19:47:30 +0200
+
 vitexsoftware-website (0.202.29) trixie; urgency=medium
 
   [ CyberVitexus ]
