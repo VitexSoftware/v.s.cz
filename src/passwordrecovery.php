@@ -33,9 +33,9 @@ if (empty($emailTo)) {
     );
 
     if (empty($controlData)) {
-        \Ease\Shared::user()->addStatusMessage(sprintf(
+        $oUser->addStatusMessage(sprintf(
             _('unknow email address %s'),
-            '<strong>'.$_REQUEST['Email'].'</strong>',
+            '<strong>'.htmlspecialchars($emailTo, \ENT_QUOTES).'</strong>',
         ), 'warning');
     } else {
         $controlUser->loadFromSQL((int) $controlData[0][$controlUser->getkeyColumn()]);
