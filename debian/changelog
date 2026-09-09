@@ -1,3 +1,10 @@
+vitexsoftware-website (0.202.33) trixie; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix editing an existing article opening an empty form
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 09 Sep 2026 21:36:00 +0200
+
 vitexsoftware-website (0.202.32) trixie; urgency=medium
 
   [ CyberVitexus ]
