@@ -46,7 +46,7 @@ class NewsEditor extends \Ease\Html\DivTag
 
         if ($oUser->getSettingValue('admin')) {
             $articles = $this->newsEngine->getColumnsFromSQL(
-                ['*'],
+                ['news.*'],
                 null,
                 'news.id',
                 'id',
