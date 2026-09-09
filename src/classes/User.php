@@ -142,6 +142,21 @@ class User extends \Ease\User
         if ($this->loadFromSQL([$this->loginColumn => $login])) {
             $this->setObjectName();
 
+            // getSettingValue()/onlyForAdmin() read $this->settings, but
+            // loadFromSQL() only fills $this->data -- the serialized
+            // "settings" column is never unpacked into it anywhere else,
+            // so e.g. the admin flag was always seen as unset. Unpack it
+            // here, once, right after the row is loaded.
+            $storedSettings = $this->getDataValue($this->settingsColumn);
+
+            if (!empty($storedSettings)) {
+                $unpackedSettings = @unserialize($storedSettings);
+
+                if (\is_array($unpackedSettings)) {
+                    $this->setSettings($unpackedSettings);
+                }
+            }
+
             if (
                 $this->passwordValidation(
                     $password,

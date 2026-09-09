@@ -26,7 +26,6 @@ $login = $oPage->getRequestValue('login');
 if ($login) {
     $oUser = \Ease\Shared::user(new User());
 
-    //    \Ease\Shared::user()->SettingsColumn = 'settings';
     if ($oUser->tryToLogin($_POST)) {
         $oPage->redirect('newsedit.php');
 
