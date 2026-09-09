@@ -68,6 +68,36 @@ class User extends \Ease\User
     }
 
     /**
+     * Ease\User::__sleep() only preserves 'logged' and 'data' across PHP
+     * session serialization -- $this->settings (populated below) is not
+     * one of them, so it reverts to empty on every request after the one
+     * that logged in. Re-unpack it here each time the object is restored
+     * from the session, so getSettingValue('admin')/onlyForAdmin() keep
+     * seeing it.
+     */
+    public function __wakeup()
+    {
+        $this->unpackStoredSettings();
+    }
+
+    /**
+     * Unpack the serialized "settings" DB column into $this->settings,
+     * which is what getSettingValue() actually reads.
+     */
+    private function unpackStoredSettings(): void
+    {
+        $storedSettings = $this->getDataValue($this->settingsColumn);
+
+        if (!empty($storedSettings)) {
+            $unpackedSettings = @unserialize($storedSettings);
+
+            if (\is_array($unpackedSettings)) {
+                $this->setSettings($unpackedSettings);
+            }
+        }
+    }
+
+    /**
      * Vrací odkaz na ikonu.
      */
     public function getIcon(): string
@@ -141,21 +171,7 @@ class User extends \Ease\User
 
         if ($this->loadFromSQL([$this->loginColumn => $login])) {
             $this->setObjectName();
-
-            // getSettingValue()/onlyForAdmin() read $this->settings, but
-            // loadFromSQL() only fills $this->data -- the serialized
-            // "settings" column is never unpacked into it anywhere else,
-            // so e.g. the admin flag was always seen as unset. Unpack it
-            // here, once, right after the row is loaded.
-            $storedSettings = $this->getDataValue($this->settingsColumn);
-
-            if (!empty($storedSettings)) {
-                $unpackedSettings = @unserialize($storedSettings);
-
-                if (\is_array($unpackedSettings)) {
-                    $this->setSettings($unpackedSettings);
-                }
-            }
+            $this->unpackStoredSettings();
 
             if (
                 $this->passwordValidation(
