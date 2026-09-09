@@ -1,3 +1,10 @@
+vitexsoftware-website (0.202.21) trixie; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix newsedit.php crash (Form constructor argument type)
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 09 Sep 2026 19:15:06 +0200
+
 vitexsoftware-website (0.202.20) trixie; urgency=medium
 
   [ CyberVitexus ]
