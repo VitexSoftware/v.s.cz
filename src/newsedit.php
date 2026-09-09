@@ -26,6 +26,10 @@ $news = new News($id);
 if ($oPage->isPosted()) {
     $news->takeData($_POST);
 
+    if (!$news->getMyKey()) {
+        $news->setDataValue('author', \Ease\Shared::user()->getUserID());
+    }
+
     if ($news->saveToSQL()) {
         $news->addStatusMessage(_('Article was saved'), 'success');
     } else {
