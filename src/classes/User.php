@@ -231,7 +231,13 @@ class User extends \Ease\User
      */
     public function passwordChange($newPassword)
     {
-        return $this->dbsync([$this->passwordColumn => $this->encryptPassword($newPassword), $this->getKeyColumn() => $this->getUserID()]);
+        // Orm::saveToSQL() picks insert-vs-update via empty($data[$keyColumn]),
+        // which misfires for a falsy key value like id=0 and would try an
+        // insert missing required columns. Update explicitly by key instead.
+        return (bool) $this->updateToSQL(
+            [$this->passwordColumn => $this->encryptPassword($newPassword)],
+            [$this->getKeyColumn() => $this->getUserID()],
+        );
     }
 
     /**
