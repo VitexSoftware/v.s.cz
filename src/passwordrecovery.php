@@ -51,7 +51,7 @@ if (empty($emailTo)) {
                 ),
             ));
 
-            $email->setMailHeaders(['From' => \constant('EMAIL_FROM')]);
+            $email->setMailHeaders(['From' => \Ease\Shared::cfg('EMAIL_FROM')]);
             $email->addItem(_('Sign On informations was changed').":\n");
 
             $email->addItem(_('Username').': '.$userLogin."\n");
