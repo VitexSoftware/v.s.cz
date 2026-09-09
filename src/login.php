@@ -72,7 +72,7 @@ $passRecoveryColumn->additem(new \Ease\TWB5\LinkButton('createaccount.php', <<<'
 
 EOD._('Create account'), 'success'));
 
-$oPage->container->addItem(new \Ease\TWB5\Form(['name' => 'login'], $loginRow));
+$oPage->container->addItem(new \Ease\TWB5\Form(['name' => 'login'], [], $loginRow));
 
 $oPage->addItem(new ui\PageBottom());
 
