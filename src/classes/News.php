@@ -22,18 +22,18 @@ namespace VSCZ;
  */
 class News extends \Ease\SQL\Engine
 {
-    public $myKeyColumn = 'id';
+    public $keyColumn = 'id';
     public string $myTable = 'news';
 
     /**
      * Sloupeček obsahující datum vložení záznamu do shopu.
      */
-    public string $myCreateColumn = 'DatCreate';
+    public ?string $createColumn = 'DatCreate';
 
     /**
      * Slopecek obsahujici datum poslení modifikace záznamu do shopu.
      */
-    public string $myLastModifiedColumn = 'DatSave';
+    public ?string $lastModifiedColumn = 'DatSave';
 
     /**
      * News listing query.
