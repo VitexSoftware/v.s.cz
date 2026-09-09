@@ -92,6 +92,11 @@ class NewsEditor extends \Ease\Html\DivTag
         $row->addColumn(8, $this->articleForm());
         $row->addColumn(4, $this->articleListing());
         $this->addItem($row);
+
+        // PairTag::draw() calls finalize() again if $finalized is still
+        // false by render time -- without this, the form+listing row
+        // above gets built and appended twice.
+        parent::finalize();
     }
 
     public function articleForm()
