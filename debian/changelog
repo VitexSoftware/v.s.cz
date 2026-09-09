@@ -1,3 +1,11 @@
+vitexsoftware-website (0.202.11) trixie; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix HTTP 500 on passwordrecovery.php (ORM insert/update misdispatch
+    for user id=0)
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 09 Sep 2026 10:03:44 +0200
+
 vitexsoftware-website (0.202.10) trixie; urgency=medium
 
   [ CyberVitexus ]
