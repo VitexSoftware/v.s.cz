@@ -77,6 +77,9 @@ class User extends \Ease\User
      */
     public function __wakeup()
     {
+        // unserialize() never runs __construct(), so settingsColumn would
+        // otherwise still be sitting at Ease\User's default of '' here.
+        $this->settingsColumn = 'settings';
         $this->unpackStoredSettings();
     }
 
