@@ -1,3 +1,10 @@
+vitexsoftware-website (0.202.26) trixie; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix News keyColumn type fatal error
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 09 Sep 2026 19:34:58 +0200
+
 vitexsoftware-website (0.202.25) trixie; urgency=medium
 
   [ CyberVitexus ]
