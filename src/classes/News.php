@@ -22,7 +22,7 @@ namespace VSCZ;
  */
 class News extends \Ease\SQL\Engine
 {
-    public $keyColumn = 'id';
+    public string $keyColumn = 'id';
     public string $myTable = 'news';
 
     /**
