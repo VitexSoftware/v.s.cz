@@ -21,7 +21,7 @@ $oPage->onlyForAdmin();
 
 $id = $oPage->getRequestValue('id', 'int');
 
-$news = new ui\News($id);
+$news = new News($id);
 
 if ($oPage->isPosted()) {
     $news->takeData($_POST);
