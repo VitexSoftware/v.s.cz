@@ -1,3 +1,11 @@
+vitexsoftware-website (0.202.18) trixie; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix admin login bounce (settingsColumn not restored on session
+    wakeup)
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 09 Sep 2026 18:13:20 +0200
+
 vitexsoftware-website (0.202.17) trixie; urgency=medium
 
   [ CyberVitexus ]
