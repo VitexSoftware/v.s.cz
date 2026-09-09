@@ -21,7 +21,21 @@ $oPage->onlyForAdmin();
 
 $id = $oPage->getRequestValue('id', 'int');
 
-$news = new News($id);
+// Ease\SQL\Engine's default identifier handling only sets the key column
+// (useIdentifier()) -- it never actually fetches the row, which is why
+// editing an existing article opened an empty form. loadFromSQL()/the
+// 'autoload' option would fetch it, but both build an unqualified
+// "WHERE id = ..." that's ambiguous against News::listingQuery()'s join
+// with user. Load it explicitly with a qualified column instead.
+$news = new News();
+
+if ($id) {
+    $newsRow = $news->getColumnsFromSQL(['news.*'], ['news.id' => $id]);
+
+    if (!empty($newsRow)) {
+        $news->takeData($newsRow[0]);
+    }
+}
 
 if ($oPage->isPosted()) {
     $news->takeData($_POST);
