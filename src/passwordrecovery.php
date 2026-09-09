@@ -117,6 +117,8 @@ if (!$success) {
         _('Continue'),
     ));
     $oPage->redirect('login.php');
+
+    exit;
 }
 
 $oPage->addItem(new PageBottom());
