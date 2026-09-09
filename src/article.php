@@ -22,7 +22,7 @@ $id = $oPage->getRequestValue('id', 'int');
 // Fetch title/text/DatCreate directly (qualified columns -- News::listingQuery()
 // left-joins user, so an unqualified 'id' condition would be ambiguous).
 $articleRows = $id ? (new News())->getColumnsFromSQL(
-    ['title', 'text', 'DatCreate'],
+    ['news.title', 'news.text', 'news.DatCreate'],
     ['news.id' => $id],
 ) : [];
 $articleData = $articleRows[0] ?? null;
