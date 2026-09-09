@@ -15,6 +15,8 @@ declare(strict_types=1);
 
 namespace VSCZ\ui;
 
+use VSCZ\News;
+
 /**
  * Description of NewsEditor.
  *
@@ -25,7 +27,7 @@ class NewsEditor extends \Ease\Html\DivTag
     /**
      * News.
      */
-    public News $newsEngine = null;
+    public ?News $newsEngine = null;
 
     /**
      * Articles.
