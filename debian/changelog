@@ -1,3 +1,11 @@
+vitexsoftware-website (0.202.19) trixie; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix newsedit.php crash (wrong News namespace, missing
+    addPageColumns)
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 09 Sep 2026 19:08:37 +0200
+
 vitexsoftware-website (0.202.18) trixie; urgency=medium
 
   [ CyberVitexus ]
