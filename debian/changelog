@@ -1,3 +1,11 @@
+vitexsoftware-website (0.202.25) trixie; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix saving new articles in newsedit.php (wrong column property
+    names)
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 09 Sep 2026 19:33:32 +0200
+
 vitexsoftware-website (0.202.24) trixie; urgency=medium
 
   [ CyberVitexus ]
