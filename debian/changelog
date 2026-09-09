@@ -1,3 +1,11 @@
+vitexsoftware-website (0.202.17) trixie; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix admin login bounce persisting across requests (settings lost on
+    session restore)
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 09 Sep 2026 18:09:20 +0200
+
 vitexsoftware-website (0.202.16) trixie; urgency=medium
 
   [ CyberVitexus ]
