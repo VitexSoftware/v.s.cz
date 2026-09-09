@@ -1,3 +1,10 @@
+vitexsoftware-website (0.202.24) trixie; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix newsedit.php crash (ambiguous ORDER BY id from user join)
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 09 Sep 2026 19:24:50 +0200
+
 vitexsoftware-website (0.202.23) trixie; urgency=medium
 
   [ CyberVitexus ]
