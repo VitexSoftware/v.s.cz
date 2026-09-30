@@ -61,6 +61,31 @@ class WebPage extends \Ease\TWB5\WebPage
     }
 
     /**
+     * Human readable size (helper from the old Ease page class).
+     *
+     * @param int|string $bytes
+     */
+    public static function _format_bytes($bytes): string
+    {
+        return (string) \Ease\Functions::formatBytes((int) $bytes);
+    }
+
+    /**
+     * Three equal columns in the page container ($this->column1..3).
+     *
+     * The helper used to come with the old Ease Twitter Bootstrap WebPage.
+     */
+    public function addPageColumns(): \Ease\TWB5\Row
+    {
+        $row = $this->container->addItem(new \Ease\TWB5\Row(null, 0, ['class' => 'g-4']));
+        $this->column1 = $row->addColumn(4);
+        $this->column2 = $row->addColumn(4);
+        $this->column3 = $row->addColumn(4);
+
+        return $row;
+    }
+
+    /**
      * Locale for this request: ?locale= → session → browser language → English.
      *
      * Ease\Locale::langToLocale() compares "cs_CZ" from the browser with "cs", so it never matches.

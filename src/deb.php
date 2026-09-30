@@ -17,7 +17,7 @@ namespace VSCZ;
 
 require_once 'includes/VSInit.php';
 
-$package = trim($oPage->getRequestValue('package', 'string'));
+$package = trim((string) $oPage->getRequestValue('package', 'string'));
 
 if (empty($package)) {
     header('Location: debs.php');

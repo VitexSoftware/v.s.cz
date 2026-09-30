@@ -24,7 +24,7 @@ $oPage->addJavaScript('$("#packs").tablesorter();');
 
 $oPage->addItem(new ui\PageTop(_('Deb Repository')));
 
-$packTabs = new \Ease\TWB5\Tabs('PackTabs');
+$packTabs = new \Ease\TWB5\Tabs([], ['id' => 'PackTabs']);
 
 $reposinfo = new \Ease\TWB5\Card(new \Ease\Html\H3Tag(_('How to use repository')));
 $reposinfo->addItem(new \Ease\Html\EmTag(_('On current debian or ubuntu')));
@@ -52,7 +52,11 @@ $reposinfo->addItem(sprintf(
     $repostats->getUpdatedCount(),
 ));
 
-$packages = ui\PackageInfo::getPackagesInfo();
+$packages = [];
+
+foreach ((new Packages())->listingQuery()->where('Existing', 1)->orderBy('Name')->fetchAll() as $row) {
+    $packages[$row['Name']] ??= $row;
+}
 
 $ptable = new \Ease\Html\TableTag(null, ['class' => 'table', 'id' => 'packs']);
 $ptable->setHeader([_('Package name'), _('Version'), _('Age'), _('Release date'),
@@ -70,20 +74,17 @@ foreach ($packages as $pName => $pProps) {
         $icon = 'img/deb-package.png';
     }
 
-    if (!file_exists($packFile)) {
-        continue;
-    }
 
     $installs = $repostats->getPackageInstalls($pName);
 
     $downloads = $repostats->getPackageDownloads($pName);
 
-    $fileMtime = filemtime($packFile);
+    $fileMtime = (int) strtotime((string) $pProps['fileMtime']);
     $incTime = date('Y m. d.', $fileMtime);
     $packAge = ui\WebPage::secondsToTime((float) (time() - $fileMtime));
 
     $package = new \Ease\Html\ATag(
-        $pProps['Filename'],
+        'https://repo.vitexsoftware.com/'.$pProps['Filename'],
         '<img style="width: 18px;" src="img/deb-package.png">&nbsp;'.$pProps['Architecture'],
         ['class' => 'btn btn-xs btn-success'],
     );

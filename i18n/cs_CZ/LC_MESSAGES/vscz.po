@@ -3156,3 +3156,9 @@ msgstr "Živé demo"
 
 msgid "500+ packages for Debian and Ubuntu – add the repository once and install with apt."
 msgstr "Přes 500 balíčků pro Debian a Ubuntu – jednou přidáte repozitář a instalujete přes apt."
+
+msgid "Registration is not available"
+msgstr "Registrace není dostupná"
+
+msgid "Accounts on this site are only for editors. If you need access or anything else, write to us."
+msgstr "Účty na tomto webu mají jen redaktoři. Pokud potřebujete přístup nebo cokoli jiného, napište nám."

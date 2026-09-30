@@ -696,3 +696,12 @@ html:not(.js) .reveal { opacity: 1; transform: none; }
     *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     .reveal, .vs-home .cycle-item { opacity: 1; transform: none; }
 }
+
+/* product showcase (flexibee.php) */
+.showcase { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin: 24px 0; }
+.showcase-card { overflow: hidden; display: flex; flex-direction: column; }
+.showcase-img { background: #fff; padding: 20px; text-align: center; }
+.showcase-img > div { padding: 0 !important; }
+.showcase-img img { max-height: 140px; max-width: 100%; object-fit: contain; }
+.showcase-body { padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; }
+.showcase-body h3 { font-size: 1.15rem; font-weight: 500; margin: 0; }

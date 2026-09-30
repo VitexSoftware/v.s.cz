@@ -42,6 +42,7 @@ if (\PHP_SAPI === 'cli') {
  *
  * @global \Ease\User
  */
+\Ease\Shared::user(null, '\Ease\Anonym');
 $oUser = \Ease\User::singleton();
 
 /** @var VSWebPage $oPage */
