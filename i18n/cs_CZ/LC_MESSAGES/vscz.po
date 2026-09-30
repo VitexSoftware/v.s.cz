@@ -3072,3 +3072,60 @@ msgstr "Služba pro sdílení teplot z čidel DS18B20"
 
 msgid "Accounting automation for AbraFlexi and Pohoda and open source projects."
 msgstr "Automatizace účetnictví pro AbraFlexi a Pohodu a open source projekty."
+
+msgid "Mon"
+msgstr "Po"
+
+msgid "Tue"
+msgstr "Út"
+
+msgid "Wed"
+msgstr "St"
+
+msgid "Thu"
+msgstr "Čt"
+
+msgid "Fri"
+msgstr "Pá"
+
+msgid "Sat"
+msgstr "So"
+
+msgid "Sun"
+msgstr "Ne"
+
+msgid "Today"
+msgstr "Dnes"
+
+msgid "Other"
+msgstr "Ostatní"
+
+msgid "%d pushes"
+msgstr "%d× push"
+
+msgid "What we are working on right now"
+msgstr "Na čem teď pracujeme"
+
+msgid "Live data from WakaTime and GitHub."
+msgstr "Živá data z WakaTime a GitHubu."
+
+msgid "This week in code"
+msgstr "Tento týden v kódu"
+
+msgid "Languages"
+msgstr "Jazyky"
+
+msgid "On GitHub this week"
+msgstr "Na GitHubu tento týden"
+
+msgid "%d min ago"
+msgstr "před %d min"
+
+msgid "%d h ago"
+msgstr "před %d h"
+
+msgid "%d d ago"
+msgstr "před %d dny"
+
+msgid "yesterday"
+msgstr "včera"

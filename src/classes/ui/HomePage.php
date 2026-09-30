@@ -330,6 +330,107 @@ HTML;
 HTML;
     }
 
+    /**
+     * Coding activity: this week from WakaTime, languages and GitHub pushes.
+     */
+    public static function activity(): string
+    {
+        $days = Activity::days();
+        $langs = Activity::languages();
+        $github = Activity::github();
+
+        if (empty($days) && empty($langs) && empty($github['repos'])) {
+            return '';
+        }
+
+        $t = static fn (string $text): string => _($text);
+        $weekdays = [1 => _('Mon'), _('Tue'), _('Wed'), _('Thu'), _('Fri'), _('Sat'), _('Sun')];
+        $hours = static fn (int $minutes): string => intdiv($minutes, 60).' h '.($minutes % 60).' min';
+        $comma = str_starts_with((string) \Ease\Locale::$localeUsed, 'cs') ? ',' : '.';
+        $decimal = static fn (float $value): string => number_format($value, 1, $comma, '');
+
+        // Week in code: WakaTime labels are relative (…, Tue, Today), the last one is today.
+        $bars = '';
+        $total = array_sum($days);
+        $max = max(1, ...array_values($days ?: [1]));
+        $count = \count($days);
+        $i = 0;
+
+        foreach (array_values($days) as $minutes) {
+            $back = $count - 1 - $i;
+            $label = $back === 0 ? _('Today') : $weekdays[(int) date('N', strtotime("-{$back} days"))];
+            $height = max(3, (int) round($minutes / $max * 100));
+            $bars .= '<div class="act-bar'.($back === 0 ? ' today' : '').'" title="'.$label.': '.$hours($minutes).'" style="--i:'.$i.'">'
+                .'<span class="v">'.$decimal($minutes / 60).'</span><i style="height:'.$height.'%"></i><span class="l">'.$label.'</span></div>';
+            ++$i;
+        }
+
+        // Languages: named ones first, "Other" at the end.
+        $other = $langs['Other'] ?? 0;
+        unset($langs['Other']);
+        $top = \array_slice($langs, 0, 5, true);
+        $other += array_sum(\array_slice($langs, 5));
+        $segments = $legend = '';
+        $colors = ['--p1', '--p2', '--p3', '--p4', '--p5'];
+        $n = 0;
+
+        foreach ($top as $name => $percent) {
+            $color = 'var('.$colors[$n++ % 5].')';
+            $segments .= '<i style="width:'.$percent.'%;background:'.$color.'" title="'.htmlspecialchars($name).' '.$percent.' %"></i>';
+            $legend .= '<li><span class="dot" style="background:'.$color.'"></span>'.htmlspecialchars($name).'<b>'.number_format($percent, 1, $comma, ' ').' %</b></li>';
+        }
+
+        if ($other > 0) {
+            $segments .= '<i style="width:'.$other.'%;background:var(--border-strong)"></i>';
+            $legend .= '<li><span class="dot" style="background:var(--border-strong)"></span>'.$t('Other').'<b>'.number_format($other, 1, $comma, ' ').' %</b></li>';
+        }
+
+        // GitHub: most active repositories and a 7-day strip.
+        $repos = '';
+
+        foreach ($github['repos'] ?? [] as $repo) {
+            [$owner, $name] = explode('/', $repo['name'], 2) + [1 => ''];
+            $repos .= '<li><a href="https://github.com/'.htmlspecialchars($repo['name']).'"><span class="owner">'.htmlspecialchars($owner).'/</span>'.htmlspecialchars($name).'</a>'
+                .'<span class="meta"><b>'.sprintf(_('%d pushes'), $repo['pushes']).'</b> · '.Activity::ago($repo['last']).'</span></li>';
+        }
+
+        $strip = '';
+        $peak = max(1, ...array_values($github['daily'] ?? [1]));
+
+        foreach ($github['daily'] ?? [] as $date => $events) {
+            $strip .= '<i title="'.date('j. n.', strtotime($date)).': '.$events.'" style="--a:'.round(0.12 + 0.88 * $events / $peak, 2).'"></i>';
+        }
+
+        $weekTotal = $hours($total);
+
+        return <<<HTML
+<section id="aktivita" style="padding-top:0">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="reveal"><div class="eyebrow">{$t('Activity')}</div><h2>{$t('What we are working on right now')}</h2></div>
+      <div class="aside reveal" style="--d:1">{$t('Live data from WakaTime and GitHub.')}</div>
+    </div>
+    <div class="activity">
+      <div class="glass act-card reveal" style="--c:var(--p1)">
+        <div class="act-head"><span>{$t('This week in code')}</span><b>{$weekTotal}</b></div>
+        <div class="act-bars">{$bars}</div>
+      </div>
+      <div class="glass act-card reveal" style="--c:var(--p3);--d:1">
+        <div class="act-head"><span>{$t('Languages')}</span><a href="https://wakatime.com/@Vitex">WakaTime ↗</a></div>
+        <div class="act-stack">{$segments}</div>
+        <ul class="act-legend">{$legend}</ul>
+      </div>
+      <div class="glass act-card reveal" style="--c:var(--p2);--d:2">
+        <div class="act-head"><span>{$t('On GitHub this week')}</span><a href="https://github.com/Vitexus">GitHub ↗</a></div>
+        <ul class="act-repos">{$repos}</ul>
+        <div class="act-strip" aria-hidden="true">{$strip}</div>
+      </div>
+    </div>
+  </div>
+</section>
+HTML;
+    }
+
     public static function about(): string
     {
         $t = static fn (string $text): string => _($text);

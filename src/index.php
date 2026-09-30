@@ -429,6 +429,7 @@ $home->addItem(ui\HomePage::catalog([
     _('Libraries') => $libMenu,
 ]));
 $home->addItem(ui\HomePage::news());
+$home->addItem(ui\HomePage::activity());
 $home->addItem(ui\HomePage::about());
 $home->addItem(ui\HomePage::cta());
 
