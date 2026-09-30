@@ -26,7 +26,7 @@ class WebPage extends \Ease\TWB5\WebPage
     /**
      * Bump when css/vitex.css or js/vitex.js change, so browsers fetch the new version.
      */
-    public const ASSET_VERSION = '1.0.0';
+    public const ASSET_VERSION = '1.1.0';
     public string $bootstrapThemeCSS = '';
     public \Ease\TWB5\Container $container;
     public $column1;
@@ -53,7 +53,7 @@ class WebPage extends \Ease\TWB5\WebPage
         $this->head->addItem('<link rel="icon" type="image/png" href="img/tux-server.png" />');
         $this->head->addItem('<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">');
         $this->head->addItem('<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.php">');
-        $this->head->addItem('<meta name="theme-color" content="#060a1d">');
+        $this->head->addItem('<meta name="theme-color" content="#1d1440">');
 
         $this->body->setTagID('page-top');
         $this->container = $this->addItem(new \Ease\TWB5\Container());

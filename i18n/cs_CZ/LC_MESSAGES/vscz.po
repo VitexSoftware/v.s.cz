@@ -2757,3 +2757,318 @@ msgstr "Bezpečnostní audity"
 #, fuzzy
 #~ msgid "Uložit do AbraFlexi"
 #~ msgstr "AbraFlexi"
+
+msgid "Bank"
+msgstr "Banka"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "Fio bank statement imported"
+msgstr "Výpis z Fio importován"
+
+msgid "Pohoda · 23 transactions"
+msgstr "Pohoda · 23 pohybů"
+
+msgid "Payments matched to invoices"
+msgstr "Platby spárovány s fakturami"
+
+msgid "AbraFlexi · by variable symbol"
+msgstr "AbraFlexi · podle VS"
+
+msgid "Payment reminders sent"
+msgstr "Upomínky odeslány"
+
+msgid "only to overdue customers"
+msgstr "jen po splatnosti"
+
+msgid "Received invoices from e-mail"
+msgstr "Přijaté faktury z e-mailu"
+
+msgid "loaded into AbraFlexi"
+msgstr "načteny do AbraFlexi"
+
+msgid "Weekly digest for the management"
+msgstr "Týdenní přehled pro vedení"
+
+msgid "receivables and cash flow"
+msgstr "pohledávky a cashflow"
+
+msgid "Raiffeisenbank transactions"
+msgstr "Transakce z Raiffeisenbank"
+
+msgid "AbraFlexi · bank movements"
+msgstr "AbraFlexi · bankovní pohyby"
+
+msgid "Technology"
+msgstr "Technologie"
+
+msgid "Freedom"
+msgstr "Svoboda"
+
+msgid "Better tomorrow"
+msgstr "Lepší zítřky"
+
+msgid "Accounting automation and"
+msgstr "Automatizace účetnictví a"
+
+msgid "open source projects"
+msgstr "open source projekty"
+
+msgid "We save time, simplify work and give modern technology a meaning. We are Vitex Software –"
+msgstr "Šetříme čas, zjednodušujeme práci a dáváme smysl moderním technologiím. Jsme Vitex Software –"
+
+msgid "cyber hippies with a clear head and working code."
+msgstr "cyber hippies s čistou hlavou a funkčním kódem."
+
+msgid "What we automate for you"
+msgstr "Co pro vás automatizujeme"
+
+msgid "About us"
+msgstr "O nás"
+
+msgid "Example of a MultiFlexi morning"
+msgstr "Ukázka rána s MultiFlexi"
+
+msgid "this morning · example"
+msgstr "dnes ráno · ukázka"
+
+msgid "A better world starts with good software"
+msgstr "Lepší svět začíná dobrým softwarem"
+
+msgid "Products and services"
+msgstr "Produkty a služby"
+
+msgid "Smart solutions for your business"
+msgstr "Chytrá řešení pro vaše podnikání"
+
+msgid "Less manual work."
+msgstr "Méně ruční práce."
+
+msgid "More time for what matters."
+msgstr "Více času na to, co má smysl."
+
+msgid "Accounting automation"
+msgstr "Automatizace účetnictví"
+
+msgid "AbraFlexi and Pohoda via MultiFlexi"
+msgstr "AbraFlexi a Pohoda přes MultiFlexi"
+
+msgid "We connect your accounting with the bank, e-mail and other services. Statements, payment matching, reminders and reports run by themselves – we host and watch over it for you. 78 ready-made automations from 290 CZK a month."
+msgstr "Propojíme vaše účetnictví s bankou, e-mailem a dalšími službami. Výpisy, párování plateb, upomínky i přehledy běží samy – hostujeme a hlídáme to za vás. 78 hotových automatizací, od 290 Kč měsíčně."
+
+msgid "Pricing"
+msgstr "Ceník"
+
+msgid "All automations"
+msgstr "Všechny automatizace"
+
+msgid "Banks"
+msgstr "Banky"
+
+msgid "Open source projects"
+msgstr "Open source projekty"
+
+msgid "We share what works"
+msgstr "Sdílíme, co funguje"
+
+msgid "Everything the automations run on is open – on GitHub and as 500+ packages for Debian and Ubuntu."
+msgstr "Všechno, na čem automatizace běží, je otevřené – na GitHubu a jako 500+ balíčků pro Debian a Ubuntu."
+
+msgid "WE SHOW"
+msgstr "UKÁŽEME"
+
+msgid "15 minutes on your data"
+msgstr "15 minut na vašich datech"
+
+msgid "We show you what can be automated in your company. No obligation."
+msgstr "Nezávazně předvedeme, co jde u vás automatizovat."
+
+msgid "WE SET UP"
+msgstr "NASTAVÍME"
+
+msgid "We connect and configure"
+msgstr "Propojíme a nastavíme"
+
+msgid "Credentials are kept safely in one place by MultiFlexi."
+msgstr "Přístupy spravuje MultiFlexi bezpečně na jednom místě."
+
+msgid "WE WATCH"
+msgstr "HLÍDÁME"
+
+msgid "It runs and we watch over it"
+msgstr "Běží a my to hlídáme"
+
+msgid "Monitoring reports problems before you notice them."
+msgstr "Monitoring hlásí problémy dřív, než si jich všimnete."
+
+msgid "try one automation"
+msgstr "vyzkoušet 1 automatizaci"
+
+msgid "CZK"
+msgstr "Kč"
+
+msgid "setup 2 900 CZK one-off"
+msgstr "nastavení 2 900 Kč jednorázově"
+
+msgid "1 automation of your choice"
+msgstr "1 automatizace dle výběru"
+
+msgid "hosting included"
+msgstr "hostování v ceně"
+
+msgid "tool updates"
+msgstr "aktualizace nástroje"
+
+msgid "e-mail support"
+msgstr "podpora e-mailem"
+
+msgid "Operation"
+msgstr "Provoz"
+
+msgid "a typical company on AbraFlexi / Pohoda"
+msgstr "běžná firma na AbraFlexi / Pohodě"
+
+msgid "setup 4 900 CZK one-off"
+msgstr "nastavení 4 900 Kč jednorázově"
+
+msgid "2–3 automations of your choice"
+msgstr "2–3 automatizace dle výběru"
+
+msgid "hosting + monitoring"
+msgstr "hostování + monitoring"
+
+msgid "automatic updates"
+msgstr "automatické aktualizace"
+
+msgid "priority support"
+msgstr "přednostní podpora"
+
+msgid "Turnkey"
+msgstr "Na klíč"
+
+msgid "complex operation and customisation"
+msgstr "složitější provoz a úpravy"
+
+msgid "from"
+msgstr "od"
+
+msgid "setup from 9 900 CZK one-off"
+msgstr "nastavení od 9 900 Kč jednorázově"
+
+msgid "unlimited automations"
+msgstr "neomezeně automatizací"
+
+msgid "custom changes"
+msgstr "úpravy na míru"
+
+msgid "priority SLA + phone"
+msgstr "prioritní SLA + telefon"
+
+msgid "monthly report"
+msgstr "měsíční report"
+
+msgid "most popular"
+msgstr "nejoblíbenější"
+
+msgid "month"
+msgstr "měsíc"
+
+msgid "I am interested"
+msgstr "Mám zájem"
+
+msgid "One automation saves more than it costs"
+msgstr "Jedna automatizace ušetří víc, než stojí"
+
+msgid "Paying a year in advance = 2 months of operation free."
+msgstr "Roční platba předem = 2 měsíce provozu zdarma."
+
+msgid "Prices are final, we are not VAT payers."
+msgstr "Ceny jsou konečné, nejsme plátci DPH."
+
+msgid "Runs, schedules and watches integrations on top of AbraFlexi and Pohoda."
+msgstr "Spouští, plánuje a hlídá integrace nad AbraFlexi a Pohodou."
+
+msgid "Catalog of MCP servers and configuration generator for AI tools."
+msgstr "Katalog MCP serverů a generátor konfigurace pro AI nástroje."
+
+msgid "Jasper report compiler with AbraFlexi support."
+msgstr "Kompilátor Jasper reportů s podporou AbraFlexi."
+
+msgid "Library for the AbraFlexi REST API."
+msgstr "Knihovna pro AbraFlexi REST API."
+
+msgid "Selected projects"
+msgstr "Vybrané projekty"
+
+msgid "Open source that makes sense"
+msgstr "Open source, který dává smysl"
+
+msgid "Show all projects"
+msgstr "Zobrazit všechny projekty"
+
+msgid "Tool catalog"
+msgstr "Katalog nástrojů"
+
+msgid "Everything we have built"
+msgstr "Všechno, co jsme postavili"
+
+msgid "From the workshop"
+msgstr "Z dílny"
+
+msgid "News and releases"
+msgstr "Novinky a vydání"
+
+msgid "All articles"
+msgstr "Všechny články"
+
+msgid "A small workshop with a big heart for open source. We write, set up and watch over the automations ourselves."
+msgstr "Malá dílna s velkým srdcem pro open source. Automatizace píšeme, nastavujeme i hlídáme sami."
+
+msgid "Vitex Software builds integrations for AbraFlexi and Pohoda and gives everything it writes back to the community – on GitHub and as packages for Debian and Ubuntu."
+msgstr "Vitex Software vyvíjí integrace pro AbraFlexi a Pohodu a všechno, co napíše, dává zpátky komunitě – na GitHub a jako balíčky pro Debian a Ubuntu."
+
+msgid "automations"
+msgstr "automatizací"
+
+msgid "packages"
+msgstr "balíčků"
+
+msgid "since"
+msgstr "od roku"
+
+msgid "Book 15 minutes"
+msgstr "Domluvit 15 minut"
+
+msgid "so, shall we try it?"
+msgstr "tak co, zkusíme to?"
+
+msgid "15 minutes and we will show you"
+msgstr "15 minut a ukážeme vám to"
+
+msgid "on your own data."
+msgstr "na vašich datech."
+
+msgid "One automation usually saves more working hours in a month than it costs for a whole year."
+msgstr "Jedna automatizace obvykle ušetří za měsíc víc hodin práce, než stojí za celý rok."
+
+msgid "Switch light / dark mode"
+msgstr "Přepnout světlý / tmavý režim"
+
+msgid "Get a free quote"
+msgstr "Nezávazně poptat"
+
+msgid "Code · Nature · Freedom"
+msgstr "Kód · Příroda · Svoboda"
+
+msgid "Magnetic Nymph – the Vitex Software mascot"
+msgstr "Magnetic Nymph – maskotka Vitex Software"
+
+msgid "Thermoservice"
+msgstr "Thermoservice"
+
+msgid "Temperature sharing service for DS18B20"
+msgstr "Služba pro sdílení teplot z čidel DS18B20"
+
+msgid "Accounting automation for AbraFlexi and Pohoda and open source projects."
+msgstr "Automatizace účetnictví pro AbraFlexi a Pohodu a open source projekty."

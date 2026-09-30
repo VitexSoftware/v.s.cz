@@ -347,9 +347,9 @@ HTML;
         <blockquote class="reveal" style="--d:2">{$t('A small workshop with a big heart for open source. We write, set up and watch over the automations ourselves.')}</blockquote>
         <p class="reveal" style="--d:3">{$t('Vitex Software builds integrations for AbraFlexi and Pohoda and gives everything it writes back to the community – on GitHub and as packages for Debian and Ubuntu.')}</p>
         <div class="facts reveal" style="--d:4">
-          <div style="--c:#6b8cff"><b>78</b><span>{$t('automations')}</span></div>
-          <div style="--c:#4fd8ff"><b>500+</b><span>{$t('packages')}</span></div>
-          <div style="--c:#ffc857"><b>2012</b><span>{$t('since')}</span></div>
+          <div style="--c:#ff6f9f"><b>78</b><span>{$t('automations')}</span></div>
+          <div style="--c:#5ee7ff"><b>500+</b><span>{$t('packages')}</span></div>
+          <div style="--c:#ffd166"><b>2012</b><span>{$t('since')}</span></div>
         </div>
         <div class="portrait-foot reveal" style="--d:5">
           <a class="btn btn-glow" href="kontakt.php">{$t('Book 15 minutes')} <span class="arrow">→</span></a>
