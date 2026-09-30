@@ -82,6 +82,7 @@ class PageBottom extends \Ease\Html\FooterTag
         }
 
         $motto = _('Code · Nature · Freedom');
+        $mascot = _('Magnetic Nymph – the Vitex Software mascot');
         $copyright = _('&copy; 2012-2026 Vitex Software');
         $poweredBy = _('Powered by debian');
 
@@ -90,7 +91,7 @@ class PageBottom extends \Ease\Html\FooterTag
 <div class="foot-wrap">
   <div class="foot-top">
     <a class="brand" href="index.php"><img src="img/vstux.png" alt="" width="36" height="36"><span class="brand-name"><b>Vitex</b> Software</span></a>
-    <span class="motto hand">{$motto} ☮</span>
+    <span class="motto hand"><a class="mascot-badge" href="img/magnetic-nymph-vitexsoftware.png" title="{$mascot}"><img src="img/magnetic-nymph-badge.webp" alt="{$mascot}" width="40" height="40" loading="lazy"></a>{$motto} ☮</span>
     <div class="social">
       <a class="icon-btn" rel="me" href="https://f.cz/@vitexsoftware" aria-label="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
       <a class="icon-btn" href="https://www.linkedin.com/in/vitexsoftware" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>

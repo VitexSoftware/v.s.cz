@@ -410,6 +410,10 @@ $multiflexiMenu->addLibraryItem(
 // $mainPageMenu->addMenuItem('img/tux-server.png', _('Hosting'), 'hosting.php',
 //    _('Specializovaný hosting'));
 $oPage->body->addTagClass('home');
+$oPage->head->addItem('<meta property="og:title" content="Vitex Software">');
+$oPage->head->addItem('<meta property="og:description" content="'._('Accounting automation for AbraFlexi and Pohoda and open source projects.').'">');
+$oPage->head->addItem('<meta property="og:image" content="https://vitexsoftware.cz/img/magnetic-nymph-vitexsoftware.png">');
+$oPage->head->addItem('<meta name="twitter:card" content="summary_large_image">');
 
 $home = $oPage->container->addItem(new \Ease\Html\DivTag(null, ['class' => 'vs-home']));
 $home->addItem(ui\HomePage::hero());
