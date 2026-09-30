@@ -3129,3 +3129,30 @@ msgstr "před %d dny"
 
 msgid "yesterday"
 msgstr "včera"
+
+msgid "Write or call – we will gladly show you what can be automated in your company."
+msgstr "Napište nebo zavolejte – rádi vám ukážeme, co jde u vás automatizovat."
+
+msgid "Programming, integrations and server administration"
+msgstr "Programování, integrace a správa serverů"
+
+msgid "Billing details"
+msgstr "Fakturační údaje"
+
+msgid "Company"
+msgstr "Firma"
+
+msgid "Bank account"
+msgstr "Bankovní účet"
+
+msgid "Elsewhere on the web"
+msgstr "Kde nás ještě najdete"
+
+msgid "Libraries, tools and applications for AbraFlexi, Pohoda and Debian – all of it on GitHub."
+msgstr "Knihovny, nástroje a aplikace pro AbraFlexi, Pohodu a Debian – všechno na GitHubu."
+
+msgid "Live demo"
+msgstr "Živé demo"
+
+msgid "500+ packages for Debian and Ubuntu – add the repository once and install with apt."
+msgstr "Přes 500 balíčků pro Debian a Ubuntu – jednou přidáte repozitář a instalujete přes apt."

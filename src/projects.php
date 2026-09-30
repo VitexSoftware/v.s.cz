@@ -108,7 +108,11 @@ $projectLogo = static function (string $name) use ($logoExts, $logoDirs): ?strin
     return null;
 };
 
-$oPage->container->addItem(new \Ease\Html\H1Tag(_('Open Source Projects')));
+$oPage->container->addItem(new ui\PageHero(
+    _('Open Source Projects'),
+    _('Libraries, tools and applications for AbraFlexi, Pohoda and Debian – all of it on GitHub.'),
+    _('Projects'),
+));
 
 $filterBar = new \Ease\Html\DivTag(null, ['class' => 'mb-3']);
 $filterBar->addItem('<input id="project-search" class="form-control mb-2" type="search" placeholder="'.htmlspecialchars(_('Search projects…')).'" oninput="filterProjects()">');

@@ -26,7 +26,7 @@ class WebPage extends \Ease\TWB5\WebPage
     /**
      * Bump when css/vitex.css or js/vitex.js change, so browsers fetch the new version.
      */
-    public const ASSET_VERSION = '1.2.0';
+    public const ASSET_VERSION = '1.3.0';
     public string $bootstrapThemeCSS = '';
     public \Ease\TWB5\Container $container;
     public $column1;
