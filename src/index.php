@@ -23,8 +23,6 @@ namespace VSCZ;
  */
 require_once 'includes/VSInit.php';
 
-$oPage->includeJavaScript('js/github-activity.js');
-
 // echo _('');
 
 $oPage->addItem(new ui\PageTop(_('Vitex Software')));
@@ -411,99 +409,24 @@ $multiflexiMenu->addLibraryItem(
 
 // $mainPageMenu->addMenuItem('img/tux-server.png', _('Hosting'), 'hosting.php',
 //    _('Specializovaný hosting'));
-$mainPageRow = new \Ease\TWB5\Row();
+$oPage->body->addTagClass('home');
 
-$activityColumn = $mainPageRow->addColumn(3, new \Ease\Html\H1Tag(_('Activity')));
-
-$activityColumn->addItem(new \Ease\TWB5\Card('<h3>'._('Languages used last week').'</h3><figure><embed src="https://wakatime.com/share/@Vitex/f11768fc-15a3-4bdb-a419-32c058346b7e.svg"></embed></figure>'));
-
-$activityColumn->addItem(new \Ease\TWB5\Card('<h3>'._('Coding activity last week').'</h3><figure><embed src="https://wakatime.com/share/@Vitex/5c5862c7-25c7-452d-a381-591ba73f9501.svg"></embed></figure>'));
-
-$activityColumn->addItem(new \Ease\Html\DivTag(null, ['id' => 'ghfeed']));
-
-$activityColumn->setTagCss(['background-image' => 'url(img/magnetic-nymph-head.png)', 'background-repeat' => 'no-repeat', 'background-position' => 'bottom left', 'background-attachment' => 'fixed']);
-
-$mainPageRow->addColumn(7, [
-    new \Ease\Html\H1Tag(_('Applications')),
-    new ui\PromoBanner(
-        _('MultiFlexi'),
-        _('Run various tools on top of AbraFlexi and Stormware Pohoda — schedule, monitor and manage all your integrations in one place.'),
-        'img/multiflexi.svg',
-        'https://multiflexi.eu/',
-    ),
-    new ui\PromoBanner(
-        _('MCPRack'),
-        _('MCP Self-Service Server Catalog & Config Generator — spin up and configure Model Context Protocol servers in minutes.'),
-        'img/mcprack.svg',
-        'mcprack.php',
-    ),
-    $appMenu->toCarousel('carousel-apps'),
-    new \Ease\Html\H1Tag(_('MultiFlexi Components')),
-    $multiflexiMenu->toCarousel('carousel-multiflexi'),
-    new \Ease\Html\H1Tag(_('Utilities')),
-    $utilsMenu->toCarousel('carousel-utils'),
-    new \Ease\Html\H1Tag(_('Libraries')),
-    $libMenu->toCarousel('carousel-libs'),
-]);
-
-$mainPageRow->addColumn(2, new \Ease\Html\DivTag(
-    [
-        '<h3>'._('Mastodon Feed').'</h3><div id="rss-feed"></div>',
-        '<iframe allowfullscreen sandbox="allow-top-navigation allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 100%; max-width: 100%;" height="800" src="https://mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Ff.cz%2Fusers%2Fvitexsoftware&theme=dark&size=100&header=false&replies=true&boosts=true"></iframe>',
-    ],
-    ['class' => 'rss-widget'],
-));
-
-\Ease\Part::jQueryze();
-$oPage->includeCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css');
-$oPage->includeJavaScript('//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js');
-
-$oPage->addJavaScript(<<<'EOD'
-
- GitHubActivity.feed({
-	username: "Vitexus",
-	selector: "#ghfeed",
-});
-
-EOD);
-
-$oPage->container->addItem($mainPageRow);
-
-// $oPage->container->addItem(new \Ease\Html\H1Tag(_('News')));
-
-$newsRow = new \Ease\TWB5\Row();
-
-$newsColumn = $newsRow->addColumn(
-    8,
-    //    new \Ease\TWB5\Card([new ui\NewsShow(new News()), new \Ease\TWB5\LinkButton('articles.php',
-    //            '<img src="img/news.svg" style="height: 20px"> '._('More articles').' <i class="fa fa-angle-double-right" aria-hidden="true"></i>',
-    //            'info')])
-    '',
-);
-
-$oPage->addJavaScript(<<<'EOD'
-fetch('https://repo.vitexsoftware.com/rss.php')
-    .then(response => response.text())
-    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-    .then(data => {
-        const items = data.querySelectorAll("item");
-        let html = "";
-        items.forEach(el => {
-            const title = el.querySelector("title").innerHTML;
-            const linkElement = el.querySelector("link");
-            // Extract package name from the existing link URL
-            const packageName = linkElement ? new URL(linkElement.innerHTML).searchParams.get('package') : title.replace(/\s+[0-9]+.*$/, '');
-            html += `<div class="card" style="width: 18rem;">`;
-            html += `<h5 class="card-title"><a href="package.php?package=${encodeURIComponent(packageName)}" style="text-decoration: none; color: inherit;">📦${title}.deb</a></h5>`;
-            html += `<p class="card-text">${el.querySelector("description").innerHTML}</p>`;
-            html += `<!-- a class="btn btn-xsm btn-success" href="${el.querySelector("link").innerHTML}">💾</a -->`;
-            html += `</div>`;
-        });
-        document.getElementById("rss-feed").innerHTML = html;
-    });
-EOD);
-
-$oPage->container->addItem($newsRow);
+$home = $oPage->container->addItem(new \Ease\Html\DivTag(null, ['class' => 'vs-home']));
+$home->addItem(ui\HomePage::hero());
+$home->addItem('<div class="spectrum"></div>');
+$home->addItem(ui\HomePage::products());
+$home->addItem(ui\HomePage::pricing());
+$home->addItem('<div class="spectrum"></div>');
+$home->addItem(ui\HomePage::projects());
+$home->addItem(ui\HomePage::catalog([
+    _('Applications') => $appMenu,
+    _('MultiFlexi Components') => $multiflexiMenu,
+    _('Utilities') => $utilsMenu,
+    _('Libraries') => $libMenu,
+]));
+$home->addItem(ui\HomePage::news());
+$home->addItem(ui\HomePage::about());
+$home->addItem(ui\HomePage::cta());
 
 $oPage->addItem(new \VSCZ\ui\PageBottom());
 

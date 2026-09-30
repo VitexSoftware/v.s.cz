@@ -27,126 +27,84 @@ class PageBottom extends \Ease\Html\FooterTag
         parent::__construct($content);
         $this->setTagID('footer');
         $this->addTagClass('footer');
-        $this->addItem('<hr>');
 
-        $rowFluid1 = new \Ease\TWB5\Row();
-        $colA = $rowFluid1->addItem(new \Ease\TWB5\Col(2));
-        $listA1 = $colA->addItem(new \Ease\Html\UlTag(
-            _('Source codes'),
-            ['style' => 'list-style-type: none'],
-        ));
-        $listA1->addItemSmart(new \Ease\Html\ATag('https://git.vitexsoftware.cz/VitexSoftware', 'GITEA'));
-        $listA1->addItemSmart(new \Ease\Html\ATag(
-            'https://github.com/VitexSoftware',
-            'GitHub',
-        ));
-        $listA1->addItemSmart(new \Ease\Html\ATag(
-            'https://hub.docker.com/u/vitexsoftware/',
-            'DockerHUB',
-        ));
-        $listA1->addItemSmart(new \Ease\Html\ATag(
-            'https://pypi.org/user/vitex/',
-            'PyPI',
-        ));
-        $listA1->addItemSmart(new \Ease\Html\ATag(
-            'https://atlas.hashicorp.com/vitexsoftware/',
-            'Vagrant',
-        ));
+        $columns = [
+            _('Source codes') => [
+                'https://git.vitexsoftware.cz/VitexSoftware' => 'GITEA',
+                'https://github.com/VitexSoftware' => 'GitHub',
+                'https://hub.docker.com/u/vitexsoftware/' => 'DockerHUB',
+                'https://pypi.org/user/vitex/' => 'PyPI',
+                'https://atlas.hashicorp.com/vitexsoftware/' => 'Vagrant',
+            ],
+            _('Applications') => [
+                'https://multiflexi.vitexsoftware.com/' => 'MultiFlexi',
+                'mcprack.php' => 'MCPRack',
+                'automatizace.php' => _('Automation'),
+            ],
+            _('Services') => [
+                'monitoring.php' => _('Monitoring'),
+                'repos.php' => _('Repository'),
+                'hosting.php' => _('Hosting'),
+            ],
+            _('Documentation') => [
+                '/php-spojenet-abraflexi-doc/namespaces/abraflexi.html' => '<img src="img/php-flexibee.svg" alt=""> '._('PHP AbraFlexi'),
+                '/php-vitexsoftware-ease-doc/namespaces/ease.html' => '<img src="img/ease-core.svg" alt=""> '._('EasePHP Framework Core'),
+                '/php-vitexsoftware-ease-TWB5-doc/namespaces/ease-TWB5.html' => '<img src="img/ease-twbootstrap4.svg" alt=""> '._('EasePHP Framework Twitter Bootstrap4'),
+                '/php-vitexsoftware-ease-twb5-doc/namespaces/ease-twb5.html' => '<img src="img/php-ease-twbootstrap5.svg" alt=""> '._('EasePHP Framework Twitter Bootstrap5'),
+                '/php-vitexsoftware-abraflexi-bricks-doc/namespaces/abraflexi-bricks.html' => '<img src="img/php-flexibee-bricks.svg" alt=""> PHP Based AbraFlexi RestAPI/Json library Addons',
+                '/php-vitexsoftware-ease-fluentpdo-doc/namespaces/ease-sql.html' => '<img src="img/php-ease-fluentpdo.svg" alt=""> Ease FluentPDO',
+                '/php-vitexsoftware-ease-html-doc/namespaces/ease.html' => '<img src="img/ease-html.svg" alt=""> EasePHP Framework HTML',
+                '/php-vitexsoftware-rbczpremiumapi/index.html' => '<img src="img/php-rbczpremiumapi.svg" alt=""> '._('Raiffeisenbank Premium API client library'),
+                'https://multiflexi.readthedocs.io/en/latest/' => '<img src="https://multiflexi.readthedocs.io/en/latest/_images/project-logo.svg" alt=""> '._('MultiFlexi'),
+            ],
+            _('Related') => [
+                'http://murka.cz' => _('Murka.cz'),
+                'http://spoje.net' => _('Spoje.Net'),
+            ],
+            _('More') => [
+                'reference.php' => _('Reference'),
+                'cenik.php' => _('Pricelist'),
+                'attic.php' => _('Old projects'),
+                'kontakt.php' => _('Contacts'),
+            ],
+        ];
 
-        $colB = $rowFluid1->addItem(new \Ease\TWB5\Col(2));
-        $listB1 = $colB->addItem(new \Ease\Html\UlTag(
-            _('Applications'),
-            ['style' => 'list-style-type: none'],
-        ));
-        //        $listB1->addItemSmart(new \Ease\Html\ATag('cease.php', 'Ease Framework'));
-        //        $listB1->addItemSmart(new \Ease\Html\ATag('monitoring.php','Icinga Editor'));
-        //        $listB1->addItemSmart(new \Ease\Html\ATag('/flexplorer', 'FlexPlorer'));
-        $listB1->addItemSmart(new \Ease\Html\ATag('https://multiflexi.vitexsoftware.com/', 'MultiFlexi'));
+        $cols = '';
 
-        $colC = $rowFluid1->addItem(new \Ease\TWB5\Col(2));
-        $listC1 = $colC->addItem(new \Ease\Html\UlTag(
-            _('Services'),
-            ['style' => 'list-style-type: none'],
-        ));
-        $listC1->addItemSmart(new \Ease\Html\ATag('monitoring.php', 'Monitoring'));
-        $listC1->addItemSmart(new \Ease\Html\ATag('repos.php', _('Repository')));
-        $listC1->addItemSmart(new \Ease\Html\ATag('hosting.php', _('Hosting')));
+        foreach ($columns as $heading => $links) {
+            $cols .= '<div><h4>'.$heading.'</h4><ul>';
 
-        $colD = $rowFluid1->addItem(new \Ease\TWB5\Col(2));
-        $listD1 = $colD->addItem(new \Ease\Html\UlTag(
-            _('Documentation'),
-            ['style' => 'list-style-type: none'],
-        ));
+            foreach ($links as $url => $label) {
+                $cols .= '<li><a href="'.htmlspecialchars($url).'">'.$label.'</a></li>';
+            }
 
-        $listD1->addItemSmart(new \Ease\Html\ATag('/php-spojenet-abraflexi-doc/namespaces/abraflexi.html', '<img style="height: 20px" src="img/php-flexibee.svg"> '._('PHP AbraFlexi')));
-        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-doc/namespaces/ease.html', '<img style="height: 20px;" src="img/ease-core.svg"> '._('EasePHP Framework Core')));
-        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-TWB5-doc/namespaces/ease-TWB5.html', '<img style="height: 20px;" src="img/ease-twbootstrap4.svg"> '._('EasePHP Framework Twitter Bootstrap4')));
-        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-twb5-doc/namespaces/ease-twb5.html', '<img style="height: 20px;" src="img/php-ease-twbootstrap5.svg"> '._('EasePHP Framework Twitter Bootstrap5')));
-        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-abraflexi-bricks-doc/namespaces/abraflexi-bricks.html', '<img style="height: 20px;" src="img/php-flexibee-bricks.svg"> PHP Based AbraFlexi RestAPI/Json library Addons'));
+            $cols .= '</ul></div>';
+        }
 
-        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-fluentpdo-doc/namespaces/ease-sql.html', '<img src="img/php-ease-fluentpdo.svg" style="height: 20px;"> Ease FluentPDO'));
-        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-ease-html-doc/namespaces/ease.html', '<img src="img/ease-html.svg" style="width: 20px;"> EasePHP Framework HTML'));
-        $listD1->addItemSmart(new \Ease\Html\ATag('/php-vitexsoftware-rbczpremiumapi/index.html', '<img src="img/php-rbczpremiumapi.svg" style="width: 20px;"> '._('Raiffeisenbank Premium API client library')));
-        $listD1->addItemSmart(new \Ease\Html\ATag('https://multiflexi.readthedocs.io/en/latest/', '<img src="https://multiflexi.readthedocs.io/en/latest/_images/project-logo.svg" style="width: 20px;"> '._('MultiFlexi')));
+        $motto = _('Code · Nature · Freedom');
+        $copyright = _('&copy; 2012-2026 Vitex Software');
+        $poweredBy = _('Powered by debian');
 
-        $colE = $rowFluid1->addItem(new \Ease\TWB5\Col(2));
-        $listE1 = $colE->addItem(new \Ease\Html\UlTag(
-            _('Related'),
-            ['style' => 'list-style-type: none'],
-        ));
-        $listE1->addItemSmart(new \Ease\Html\ATag(
-            'http://murka.cz',
-            _('Murka.cz'),
-        ));
-        $listE1->addItemSmart(new \Ease\Html\ATag(
-            'http://spoje.net',
-            _('Spoje.Net'),
-        ));
-
-        $colF = $rowFluid1->addItem(new \Ease\TWB5\Col(2));
-        $listF1 = $colF->addItem(new \Ease\Html\UlTag(
-            _('More'),
-            ['style' => 'list-style-type: none'],
-        ));
-        $listF1->addItemSmart(new \Ease\Html\ATag(
-            'reference.php',
-            _('Reference'),
-        ));
-        $listF1->addItemSmart(new \Ease\Html\ATag('cenik.php', _('Pricelist')));
-        $listF1->addItemSmart(new \Ease\Html\ATag('kontakt.php', _('Contacts')));
-
-        $rowFluid2 = new \Ease\TWB5\Row();
-
-        $socialIcons = <<<'EOD'
-        <a class = "btn btn-primary social-login-btn social-mastodon" rel="me" href="https://f.cz/@vitexsoftware"><i class = "fa fa-mastodon"></i></a>
-        <a class = "btn btn-primary social-login-btn social-linkedin" href="https://www.linkedin.com/in/vitexsoftware"><i class = "fa fa-linkedin"></i></a>
-        <a class = "btn btn-primary social-login-btn social-github" href="https://github.com/VitexSoftware/"><i class = "fa fa-github"></i></a>
-
-EOD;
-
-        $rowFluid2->addItem(new \Ease\TWB5\Col(
-            12,
-            [new \Ease\TWB5\Col(8, $socialIcons), new \Ease\TWB5\Col(
-                4,
-                _('&copy; 2012-2026 Vitex Software'),
-            )],
-        ));
-
-        $mainBottomRow = new \Ease\TWB5\Row();
-        $mainBottomRow->addColumn(10, [$rowFluid1, $rowFluid2]);
-        $mainBottomRow->addColumn(
-            2,
-            new \Ease\Html\ATag(
-                'https://www.debian.org/',
-                new \Ease\Html\ImgTag(
-                    'img/poweredbydebian.png',
-                    _('Powered by debian'),
-                    ['class' => 'img-responsive', 'style' => 'width: 100%'],
-                ),
-            ),
-        );
-
-        $this->addItem($mainBottomRow);
+        $this->addItem(<<<HTML
+<svg class="topo" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><path d="M0 150C200 120 320 170 520 140S860 90 1060 130 1340 170 1440 140"/><path d="M0 170C220 145 330 190 540 160S880 115 1080 150 1350 190 1440 165"/><path d="M0 125C190 95 310 145 500 118S840 65 1040 105 1330 145 1440 115"/><path d="M0 100C180 72 300 120 480 95S820 42 1020 82 1320 120 1440 92"/></g></svg>
+<div class="foot-wrap">
+  <div class="foot-top">
+    <a class="brand" href="index.php"><img src="img/vstux.png" alt="" width="36" height="36"><span class="brand-name"><b>Vitex</b> Software</span></a>
+    <span class="motto hand">{$motto} ☮</span>
+    <div class="social">
+      <a class="icon-btn" rel="me" href="https://f.cz/@vitexsoftware" aria-label="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/vitexsoftware" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a class="icon-btn" href="https://github.com/VitexSoftware/" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a class="icon-btn" href="mailto:info@vitexsoftware.cz" aria-label="E-mail"><i class="fa-regular fa-envelope"></i></a>
+    </div>
+  </div>
+  <div class="foot-cols">{$cols}</div>
+  <div class="foot-bottom">
+    <span>{$copyright} · IČO 69438676</span>
+    <a href="https://www.debian.org/"><img src="img/poweredbydebian.png" alt="{$poweredBy}"></a>
+  </div>
+</div>
+HTML);
     }
 
     /**
@@ -158,6 +116,6 @@ EOD;
             unset($this->webPage->container->pageParts['\Ease\Html\DivTag@heroUnit']);
         }
 
-        $this->includeCss('css/font-awesome.min.css');
+        parent::finalize();
     }
 }
