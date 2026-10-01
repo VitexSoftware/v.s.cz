@@ -130,21 +130,6 @@ class WebPage extends \Ease\TWB5\WebPage
     }
 
     /**
-     * Sets up column1/column2/column3 as a 3-column Bootstrap row inside
-     * the page container. Several pages (newsedit.php, hosting.php,
-     * monitoring.php) call this expecting it to exist, but it was never
-     * actually defined anywhere in the class hierarchy.
-     */
-    public function addPageColumns(): void
-    {
-        $pageRow = new \Ease\TWB5\Row();
-        $this->column1 = $pageRow->addColumn('4');
-        $this->column2 = $pageRow->addColumn('4');
-        $this->column3 = $pageRow->addColumn('4');
-        $this->container->addItem($pageRow);
-    }
-
-    /**
      * Only Admin can continue.
      */
     public function onlyForAdmin(): void
