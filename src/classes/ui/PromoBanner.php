@@ -42,7 +42,7 @@ class PromoBanner extends \Ease\Html\DivTag
                     new \Ease\Html\ATag($url, $title, ['class' => 'text-dark text-decoration-none']),
                     ['class' => 'mb-1'],
                 ),
-                new \Ease\Html\PTag($tagline, ['class' => 'mb-2']),
+                new \Ease\Html\PTag($tagline, ['class' => 'mb-2 text-dark']),
                 new \Ease\TWB5\LinkButton($url, $ctaLabel.' &raquo;', 'primary'),
             ],
             ['class' => 'flex-grow-1 p-3'],

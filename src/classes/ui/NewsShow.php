@@ -34,14 +34,14 @@ class NewsShow extends \Ease\Container
 
         if (\count($articles)) {
             foreach ($articles as $article) {
-                $this->addItem($this->renderArticle($article));
+                $this->addItem(self::renderArticle($article));
             }
         } else {
             $this->addItem(new \Ease\TWB5\Alert('warning', _('No articles')));
         }
     }
 
-    private function resolveDate(array $article): string
+    private static function resolveDate(array $article): string
     {
         foreach (['DatCreate', 'DatSave'] as $col) {
             $raw = $article[$col] ?? '';
@@ -58,10 +58,10 @@ class NewsShow extends \Ease\Container
         return '';
     }
 
-    private function renderArticle(array $article): \Ease\Container
+    private static function renderArticle(array $article): \Ease\Container
     {
-        $lang  = strtoupper($article['language'] ?? '');
-        $date  = $this->resolveDate($article);
+        $lang = strtoupper($article['language'] ?? '');
+        $date = self::resolveDate($article);
         $login = $article['login'] ?? '';
 
         // --- Hero header ---
@@ -79,7 +79,7 @@ class NewsShow extends \Ease\Container
         }
 
         $personIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="mb-1 me-1" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4"/></svg>';
-        $calIcon    = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="mb-1 me-1" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/></svg>';
+        $calIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="mb-1 me-1" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/></svg>';
 
         $meta = new \Ease\Html\DivTag(null, ['class' => 'article-meta text-white-50 small']);
 
@@ -92,12 +92,12 @@ class NewsShow extends \Ease\Container
         }
 
         $heroInner = new \Ease\TWB5\Container([$titleRow, $meta]);
-        $hero      = new \Ease\Html\DivTag($heroInner, ['class' => 'blog-header']);
+        $hero = new \Ease\Html\DivTag($heroInner, ['class' => 'blog-header']);
 
         // --- Article body ---
         $bodyCol = new \Ease\Html\DivTag($article['text'], ['class' => 'col-12 col-lg-9 col-xl-8 article-content']);
         $bodyRow = new \Ease\Html\DivTag($bodyCol, ['class' => 'row justify-content-center']);
-        $body    = new \Ease\Html\DivTag($bodyRow, ['class' => 'container py-4']);
+        $body = new \Ease\Html\DivTag($bodyRow, ['class' => 'container py-4']);
 
         $wrapper = new \Ease\Container();
         $wrapper->addItem($hero);

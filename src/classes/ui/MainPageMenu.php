@@ -18,91 +18,17 @@ namespace VSCZ\ui;
 class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
 {
     /**
-     * Extract first plain-text paragraph from AppStream HTML description.
-     * Prefers the site's current language, falling back to English/neutral.
-     */
-    private static function appStreamExcerpt(array $comp, int $maxLen = 280): string
-    {
-        $locale2 = \Ease\Locale::singleton()->get2Code();
-        $html    = \VSCZ\AppStream::localized($comp['Description'] ?? [], $locale2)
-            ?: \VSCZ\AppStream::localized($comp['Summary'] ?? [], $locale2);
-
-        if (empty($html)) {
-            return '';
-        }
-
-        if (preg_match('/<p>(.*?)<\/p>/si', $html, $m)) {
-            $text = strip_tags($m[1]);
-        } else {
-            $text = strip_tags($html);
-        }
-
-        $text = preg_replace('/\s+/', ' ', trim($text));
-
-        return mb_strlen($text) > $maxLen ? mb_substr($text, 0, $maxLen).'…' : $text;
-    }
-
-    /**
-     * Render a row of small Bootstrap secondary badges.
-     */
-    private static function tagBadges(array $tags): string
-    {
-        $html = '';
-
-        foreach (array_slice($tags, 0, 6) as $tag) {
-            $html .= '<span class="badge bg-secondary me-1 mb-1">'.htmlspecialchars($tag).'</span>';
-        }
-
-        return $html;
-    }
-
-    /**
-     * Resolve the best icon URL: AppStream remote icon → fallback to $image path.
-     */
-    private static function resolveIcon(string $image, string $debPackage = ''): string
-    {
-        if ($debPackage) {
-            $url = \VSCZ\AppStream::iconUrl($debPackage);
-
-            if ($url) {
-                return $url;
-            }
-        }
-
-        return $image;
-    }
-
-    /**
-     * Build the horizontal card shell: fixed-width icon column + flex content column.
-     *
-     * @return array{0: \Ease\Html\DivTag, 1: \Ease\Html\DivTag}  [$iconWrap, $body]
-     */
-    private function makeCardShell(string $iconSrc, string $title, string $linkUrl): array
-    {
-        $icon = new \Ease\Html\ImgTag($iconSrc, $title, [
-            'alt'   => $title,
-            'style' => 'width:72px;height:72px;object-fit:contain;',
-        ]);
-
-        $iconWrap = new \Ease\Html\DivTag(
-            new \Ease\Html\ATag($linkUrl, $icon),
-            [
-                'class' => 'flex-shrink-0 d-flex align-items-center justify-content-center p-3 border-end',
-                'style' => 'width:100px;background:#fff;',
-            ],
-        );
-
-        $body = new \Ease\Html\DivTag(null, ['class' => 'flex-grow-1 p-3']);
-
-        return [$iconWrap, $body];
-    }
-
-    /**
      * Modern horizontal card for application/utility entries.
      *
-     * @param string $debPackage Optional deb package name. Auto-detected when $url
-     *                           starts with "deb.php?package=". Supply explicitly for
-     *                           items that use a GitHub URL.
+     * @param mixed      $title
+     * @param mixed      $url
+     * @param mixed      $image
+     * @param mixed      $description
+     * @param null|mixed $buttonText
+     * @param mixed      $properties
+     * @param string     $debPackage  Optional deb package name. Auto-detected when $url
+     *                                starts with "deb.php?package=". Supply explicitly for
+     *                                items that use a GitHub URL.
      */
     public function addMenuItem($title, $url, $image, $description, $buttonText = null, $properties = [], string $debPackage = '', string $demoUrl = ''): \Ease\TWB5\Col
     {
@@ -141,8 +67,8 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
 
         if ($appComp) {
             $tags = array_merge($tags, $appComp['Categories'] ?? []);
-            $kw   = $appComp['Keywords']['en-US'] ?? $appComp['Keywords']['C'] ?? $appComp['Keywords']['en'] ?? [];
-            $tags = array_merge($tags, array_slice((array) $kw, 0, 4));
+            $kw = $appComp['Keywords']['en-US'] ?? $appComp['Keywords']['C'] ?? $appComp['Keywords']['en'] ?? [];
+            $tags = array_merge($tags, \array_slice((array) $kw, 0, 4));
         }
 
         if ($ghInfo) {
@@ -157,7 +83,7 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
         // Primary link: deb.php when a package is known, otherwise original $url
         $primaryUrl = $debPackage ? 'deb.php?package='.$debPackage : $url;
 
-        [$iconWrap, $body] = $this->makeCardShell($iconSrc, $title, $primaryUrl);
+        [$iconWrap, $body] = self::makeCardShell($iconSrc, $title, $primaryUrl);
 
         $body->addItem(new \Ease\Html\H5Tag(
             new \Ease\Html\ATag($primaryUrl, $title, ['class' => 'text-dark text-decoration-none']),
@@ -208,7 +134,7 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
 
         $body->addItem($footer);
 
-        $wrap     = new \Ease\Html\DivTag([$iconWrap, $body], ['class' => 'd-flex align-items-stretch']);
+        $wrap = new \Ease\Html\DivTag([$iconWrap, $body], ['class' => 'd-flex align-items-stretch']);
         $menuCard = new \Ease\TWB5\Card($wrap, array_merge(['class' => 'mp-menu-item overflow-hidden'], $properties));
 
         return $this->addItem(new \Ease\TWB5\Col(3, $menuCard));
@@ -227,9 +153,9 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
      */
     public function addLibraryItem($url, $title, $description, $image = null, $packagist = null, string $registry = 'packagist')
     {
-        $gitHubURL     = str_replace('https://github.com/', '', $url);
+        $gitHubURL = str_replace('https://github.com/', '', $url);
         $vendorProject = substr((string) parse_url($url, \PHP_URL_PATH), 1);
-        $packagist     = null === $packagist
+        $packagist = null === $packagist
             ? str_replace(['spoje-net', 'php-flexibee'], ['spoje.net', 'flexibee'], strtolower($vendorProject))
             : $packagist;
 
@@ -242,12 +168,12 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
         // GitHub metadata (cached)
         $ghInfo = GitHubInfo::get($gitHubURL);
         $topics = $ghInfo['topics'] ?? [];
-        $lang   = $ghInfo['language'] ?? '';
+        $lang = $ghInfo['language'] ?? '';
 
         // Extended description from GitHub
         $ghDesc = $ghInfo['description'] ?? '';
 
-        [$iconWrap, $body] = $this->makeCardShell($image, $title, $url);
+        [$iconWrap, $body] = self::makeCardShell($image, $title, $url);
 
         $body->addItem(new \Ease\Html\H5Tag(
             new \Ease\Html\ATag($url, $title, ['class' => 'text-dark text-decoration-none']),
@@ -273,12 +199,12 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
                 $url,
                 _('Star'),
                 [
-                    'class'             => 'github-button',
-                    'data-icon'         => 'octicon-star',
+                    'class' => 'github-button',
+                    'data-icon' => 'octicon-star',
                     'data-color-scheme' => 'no-preference: dark; light: dark; dark: dark;',
-                    'data-size'         => 'large',
-                    'data-show-count'   => 'true',
-                    'aria-label'        => _(sprintf('Star %s on GitHub', $gitHubURL)),
+                    'data-size' => 'large',
+                    'data-show-count' => 'true',
+                    'aria-label' => _(sprintf('Star %s on GitHub', $gitHubURL)),
                 ],
             ),
             '&nbsp;',
@@ -286,12 +212,12 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
                 $url.'/fork',
                 _('Fork'),
                 [
-                    'class'             => 'github-button',
-                    'data-icon'         => 'octicon-repo-forked',
+                    'class' => 'github-button',
+                    'data-icon' => 'octicon-repo-forked',
                     'data-color-scheme' => 'no-preference: dark; light: dark; dark: dark;',
-                    'data-size'         => 'large',
-                    'data-show-count'   => 'true',
-                    'aria-label'        => _(sprintf('Fork %s on GitHub', $gitHubURL)),
+                    'data-size' => 'large',
+                    'data-show-count' => 'true',
+                    'aria-label' => _(sprintf('Fork %s on GitHub', $gitHubURL)),
                 ],
             ),
             '&nbsp;&nbsp;',
@@ -304,7 +230,7 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
                 : new PackagistBadge($vendorProject, $packagist, 'dt'),
         ], ['class' => 'mb-1 d-flex flex-wrap align-items-center gap-1']));
 
-        $wrap     = new \Ease\Html\DivTag([$iconWrap, $body], ['class' => 'd-flex align-items-stretch']);
+        $wrap = new \Ease\Html\DivTag([$iconWrap, $body], ['class' => 'd-flex align-items-stretch']);
         $menuCard = new \Ease\TWB5\Card($wrap, ['class' => 'mp-menu-item overflow-hidden']);
 
         return $this->addItem(new \Ease\TWB5\Col(3, $menuCard));
@@ -327,13 +253,13 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
     /**
      * Returns "Current version X" from composer.json or the apt Packages file.
      *
-     * @param string $composerPath  Path to installed composer.json
-     * @param string $debPackage    Optional deb package name for apt fallback
+     * @param string $composerPath Path to installed composer.json
+     * @param string $debPackage   Optional deb package name for apt fallback
      */
     public static function composerVersion($composerPath, string $debPackage = '')
     {
         if (file_exists($composerPath)) {
-            $data    = json_decode(file_get_contents($composerPath));
+            $data = json_decode(file_get_contents($composerPath));
             $version = $data->version ?? '';
 
             if ($version) {
@@ -359,5 +285,84 @@ class MainPageMenu extends \Ease\TWB5\Widgets\MainPageMenu
         }
 
         return sprintf(_('Current version %s'), 'n/a');
+    }
+    /**
+     * Extract first plain-text paragraph from AppStream HTML description.
+     * Prefers the site's current language, falling back to English/neutral.
+     */
+    private static function appStreamExcerpt(array $comp, int $maxLen = 280): string
+    {
+        $locale2 = \Ease\Locale::singleton()->get2Code();
+        $html = \VSCZ\AppStream::localized($comp['Description'] ?? [], $locale2)
+            ?: \VSCZ\AppStream::localized($comp['Summary'] ?? [], $locale2);
+
+        if (empty($html)) {
+            return '';
+        }
+
+        if (preg_match('/<p>(.*?)<\/p>/si', $html, $m)) {
+            $text = strip_tags($m[1]);
+        } else {
+            $text = strip_tags($html);
+        }
+
+        $text = preg_replace('/\s+/', ' ', trim($text));
+
+        return mb_strlen($text) > $maxLen ? mb_substr($text, 0, $maxLen).'…' : $text;
+    }
+
+    /**
+     * Render a row of small Bootstrap secondary badges.
+     */
+    private static function tagBadges(array $tags): string
+    {
+        $html = '';
+
+        foreach (\array_slice($tags, 0, 6) as $tag) {
+            $html .= '<span class="badge bg-secondary me-1 mb-1">'.htmlspecialchars($tag).'</span>';
+        }
+
+        return $html;
+    }
+
+    /**
+     * Resolve the best icon URL: AppStream remote icon → fallback to $image path.
+     */
+    private static function resolveIcon(string $image, string $debPackage = ''): string
+    {
+        if ($debPackage) {
+            $url = \VSCZ\AppStream::iconUrl($debPackage);
+
+            if ($url) {
+                return $url;
+            }
+        }
+
+        return $image;
+    }
+
+    /**
+     * Build the horizontal card shell: fixed-width icon column + flex content column.
+     *
+     * @return array{0: \Ease\Html\DivTag, 1: \Ease\Html\DivTag} [$iconWrap, $body]
+     */
+    private static function makeCardShell(string $iconSrc, string $title, string $linkUrl): array
+    {
+        $icon = new \Ease\Html\ImgTag($iconSrc, $title, [
+            'alt' => $title,
+            'style' => 'width:72px;height:72px;object-fit:contain;',
+        ]);
+
+        $iconWrap = new \Ease\Html\DivTag(
+            new \Ease\Html\ATag($linkUrl, $icon),
+            [
+                'class' => 'flex-shrink-0 d-flex align-items-center justify-content-center p-3 border-end',
+                'style' => 'width:100px;background:#fff;',
+            ],
+        );
+
+        $body = new \Ease\Html\DivTag(null, ['class' => 'flex-grow-1 p-3']);
+
+        return [$iconWrap, $body];
     }
 }

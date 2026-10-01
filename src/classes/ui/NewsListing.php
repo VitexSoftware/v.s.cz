@@ -35,14 +35,14 @@ class NewsListing extends \Ease\Container
 
         if (\count($articles)) {
             foreach ($articles as $article) {
-                $this->addItem($this->renderCard($article));
+                $this->addItem(self::renderCard($article));
             }
         } else {
             $this->addItem(new \Ease\TWB5\Alert('info', _('No articles')));
         }
     }
 
-    private function excerpt(string $html, int $maxLen = 260): string
+    private static function excerpt(string $html, int $maxLen = 260): string
     {
         $text = html_entity_decode(strip_tags($html), \ENT_QUOTES | \ENT_HTML5, 'UTF-8');
         $text = preg_replace('/\s+/', ' ', trim($text));
@@ -50,21 +50,23 @@ class NewsListing extends \Ease\Container
         return mb_strlen($text) > $maxLen ? mb_substr($text, 0, $maxLen).'…' : $text;
     }
 
-    private function renderCard(array $article): string
+    private static function renderCard(array $article): string
     {
-        $id      = (int) $article['id'];
-        $title   = htmlspecialchars($article['title'], \ENT_QUOTES, 'UTF-8');
-        $excerpt = htmlspecialchars($this->excerpt($article['text']), \ENT_QUOTES, 'UTF-8');
-        $author  = htmlspecialchars($article['login'] ?? '', \ENT_QUOTES, 'UTF-8');
-        $lang    = htmlspecialchars(strtoupper($article['language'] ?? ''), \ENT_QUOTES, 'UTF-8');
+        $id = (int) $article['id'];
+        $title = htmlspecialchars($article['title'], \ENT_QUOTES, 'UTF-8');
+        $excerpt = htmlspecialchars(self::excerpt($article['text']), \ENT_QUOTES, 'UTF-8');
+        $author = htmlspecialchars($article['login'] ?? '', \ENT_QUOTES, 'UTF-8');
+        $lang = htmlspecialchars(strtoupper($article['language'] ?? ''), \ENT_QUOTES, 'UTF-8');
 
         $rawDate = $article['DatCreate'] ?? '';
+
         if (!$rawDate || str_starts_with($rawDate, '0000')) {
             $rawDate = $article['DatSave'] ?? '';
         }
-        $ts   = ($rawDate && !str_starts_with($rawDate, '0000')) ? strtotime($rawDate) : false;
+
+        $ts = ($rawDate && !str_starts_with($rawDate, '0000')) ? strtotime($rawDate) : false;
         $date = ($ts !== false && $ts > 0) ? date('j M Y', $ts) : '';
-        $url     = 'article.php?id='.$id;
+        $url = 'article.php?id='.$id;
         $readMore = _('Read more');
 
         $langBadge = $lang

@@ -21,12 +21,13 @@ $package = trim((string) $oPage->getRequestValue('package', 'string'));
 
 if (empty($package)) {
     header('Location: debs.php');
+
     exit;
 }
 
-$comp     = AppStream::get($package);
-$iconUrl  = AppStream::iconUrl($package);
-$vcsUrl   = AppStream::vcsBrowserUrl($package);
+$comp = AppStream::get($package);
+$iconUrl = AppStream::iconUrl($package);
+$vcsUrl = AppStream::vcsBrowserUrl($package);
 
 // Fall back to the locally stocked AppStream icon when no remote icon is cached
 if (!$iconUrl) {
@@ -52,7 +53,7 @@ if ($iconUrl) {
 }
 
 $ogDescription = $comp ? strip_tags(AppStream::localized($comp['Summary'] ?? [])) : '';
-$ogUrl         = 'https://vitexsoftware.com/deb.php?package='.urlencode($package);
+$ogUrl = 'https://vitexsoftware.com/deb.php?package='.urlencode($package);
 
 $oPage->head->addItem('<meta property="og:type" content="website">');
 $oPage->head->addItem('<meta property="og:url" content="'.htmlspecialchars($ogUrl).'">');
@@ -147,7 +148,7 @@ if ($comp) {
 
     // ── Links ─────────────────────────────────────────────────────────────────
     $links = new \Ease\Html\DivTag(null, ['class' => 'mb-3 d-flex flex-wrap gap-2']);
-    $urls  = $comp['Url'] ?? [];
+    $urls = $comp['Url'] ?? [];
 
     if (!empty($urls['homepage'])) {
         $links->addItem(new \Ease\Html\ATag(
@@ -157,7 +158,7 @@ if ($comp) {
         ));
     }
 
-    $vcsUrl = $vcsUrl ?? ($urls['vcs-browser'] ?? null);
+    $vcsUrl ??= ($urls['vcs-browser'] ?? null);
 
     if ($vcsUrl) {
         $links->addItem(new \Ease\Html\ATag(
@@ -188,7 +189,7 @@ if ($comp) {
 
     if ($screenshots) {
         $mediaBase = AppStream::mediaBaseUrl();
-        $gallery   = new \Ease\Html\DivTag(null, [
+        $gallery = new \Ease\Html\DivTag(null, [
             'class' => 'd-flex flex-wrap gap-2 mb-4',
         ]);
 
@@ -229,7 +230,7 @@ $readmeUrl = $vcsUrl ?? ($comp['Url']['homepage'] ?? null);
 if (!$readmeUrl) {
     try {
         $pkgObj = new Packages($package);
-        $props  = $pkgObj->getData();
+        $props = $pkgObj->getData();
 
         if ($props && str_contains((string) ($props['Homepage'] ?? ''), 'github.com')) {
             $readmeUrl = $props['Homepage'];

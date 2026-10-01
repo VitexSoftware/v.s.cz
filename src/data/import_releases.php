@@ -4,14 +4,14 @@
 declare(strict_types=1);
 
 /**
- * Import GitHub release notes as blog articles (EN + CS via Claude translation).
+ * This file is part of the VitexSoftware package
  *
- * Usage:
- *   php src/data/import_releases.php [--dry-run] [--repo VitexSoftware/name] [--limit N] [--prereleases]
+ * https://vitexsoftware.com/
  *
- * Requires:
- *   ANTHROPIC_API_KEY env var for Czech translation.
- *   Authenticated gh CLI for GitHub access.
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace VSCZ;
@@ -21,12 +21,12 @@ require_once __DIR__.'/../includes/VSInit.php';
 use League\CommonMark\GithubFlavoredMarkdownConverter;
 
 // --- CLI argument parsing ---
-$opts       = getopt('', ['dry-run', 'repo:', 'limit:', 'prereleases']);
-$dryRun     = isset($opts['dry-run']);
-$onlyRepo   = $opts['repo'] ?? null;
+$opts = getopt('', ['dry-run', 'repo:', 'limit:', 'prereleases']);
+$dryRun = isset($opts['dry-run']);
+$onlyRepo = $opts['repo'] ?? null;
 $releaseLimit = (int) ($opts['limit'] ?? 20);
 $includePre = isset($opts['prereleases']);
-$apiKey     = getenv('ANTHROPIC_API_KEY') ?: '';
+$apiKey = getenv('ANTHROPIC_API_KEY') ?: '';
 
 if ($dryRun) {
     echo "[DRY-RUN] No DB writes will happen.\n";
@@ -39,28 +39,29 @@ if (!$apiKey) {
 // --- Setup ---
 $converter = new GithubFlavoredMarkdownConverter(['html_input' => 'allow', 'allow_unsafe_links' => true]);
 $newsModel = new News();
-$pdo       = $newsModel->getFluentPDO()->getPdo();
+$pdo = $newsModel->getFluentPDO()->getPdo();
 
 $allRepos = require __DIR__.'/github_repos.php';
-$repos    = array_filter(
+$repos = array_filter(
     $allRepos,
     static fn (string $k): bool => str_starts_with($k, 'VitexSoftware/'),
     \ARRAY_FILTER_USE_KEY,
 );
 
 if ($onlyRepo) {
-    $key   = str_starts_with($onlyRepo, 'VitexSoftware/') ? $onlyRepo : 'VitexSoftware/'.$onlyRepo;
+    $key = str_starts_with($onlyRepo, 'VitexSoftware/') ? $onlyRepo : 'VitexSoftware/'.$onlyRepo;
     $repos = isset($repos[$key]) ? [$key => $repos[$key]] : [];
 
     if (empty($repos)) {
         echo "[ERROR] Repo '{$key}' not found in github_repos.php\n";
+
         exit(1);
     }
 }
 
 $totalInserted = 0;
-$totalSkipped  = 0;
-$totalErrors   = 0;
+$totalSkipped = 0;
+$totalErrors = 0;
 
 // --- Helpers ---
 
@@ -93,24 +94,24 @@ function translateToCs(string $text, string $apiKey, string $context = 'body'): 
         : 'Translate the following GitHub release notes from English to Czech. Keep ALL Markdown formatting, code blocks, commands, URLs, package names, and technical identifiers exactly as-is. Only translate prose text. Return only the translated text.';
 
     $payload = json_encode([
-        'model'      => 'claude-haiku-4-5-20251001',
+        'model' => 'claude-haiku-4-5-20251001',
         'max_tokens' => 4096,
-        'system'     => $system,
-        'messages'   => [['role' => 'user', 'content' => $text]],
+        'system' => $system,
+        'messages' => [['role' => 'user', 'content' => $text]],
     ]);
 
     $ch = curl_init('https://api.anthropic.com/v1/messages');
     curl_setopt_array($ch, [
         \CURLOPT_RETURNTRANSFER => true,
-        \CURLOPT_HTTPHEADER     => [
+        \CURLOPT_HTTPHEADER => [
             'x-api-key: '.$apiKey,
             'anthropic-version: 2023-06-01',
             'content-type: application/json',
         ],
         \CURLOPT_POSTFIELDS => $payload,
-        \CURLOPT_TIMEOUT    => 30,
+        \CURLOPT_TIMEOUT => 30,
     ]);
-    $raw  = curl_exec($ch);
+    $raw = curl_exec($ch);
     $code = curl_getinfo($ch, \CURLINFO_HTTP_CODE);
     curl_close($ch);
 
@@ -179,8 +180,8 @@ function insertArticle(\PDO $pdo, array $data, bool $dryRun): bool
 
 // --- Main loop ---
 foreach ($repos as $repoPath => $_meta) {
-    $repoName = substr($repoPath, strlen('VitexSoftware/'));
-    $logoUrl  = resolveLogoUrl($repoName);
+    $repoName = substr($repoPath, \strlen('VitexSoftware/'));
+    $logoUrl = resolveLogoUrl($repoName);
 
     echo "\n[{$repoPath}]\n";
 
@@ -211,7 +212,7 @@ foreach ($repos as $repoPath => $_meta) {
             continue;
         }
 
-        $tag      = $rel['tagName'];
+        $tag = $rel['tagName'];
         $enSrcUrl = "https://github.com/{$repoPath}/releases/tag/{$tag}#en";
         $csSrcUrl = "https://github.com/{$repoPath}/releases/tag/{$tag}#cs";
 
@@ -242,9 +243,9 @@ foreach ($repos as $repoPath => $_meta) {
             continue;
         }
 
-        $data        = json_decode($viewJson, true);
-        $body        = $data['body'] ?? '';
-        $githubUrl   = $data['url'] ?? "https://github.com/{$repoPath}/releases/tag/{$tag}";
+        $data = json_decode($viewJson, true);
+        $body = $data['body'] ?? '';
+        $githubUrl = $data['url'] ?? "https://github.com/{$repoPath}/releases/tag/{$tag}";
         $publishedAt = substr($data['publishedAt'] ?? date('Y-m-d H:i:s'), 0, 19);
         $publishedAt = str_replace('T', ' ', $publishedAt);
 
@@ -254,12 +255,12 @@ foreach ($repos as $repoPath => $_meta) {
         // --- English article ---
         if (!$enExists) {
             $enTitle = "{$repoName} {$tag} released";
-            $enHtml  = buildArticleHtml($repoName, $tag, $logoUrl, $bodyHtml, $githubUrl, 'View release on GitHub →');
-            $ok      = insertArticle($pdo, [
-                'title'      => $enTitle,
-                'text'       => $enHtml,
-                'DatCreate'  => $publishedAt,
-                'language'   => 'en',
+            $enHtml = buildArticleHtml($repoName, $tag, $logoUrl, $bodyHtml, $githubUrl, 'View release on GitHub →');
+            $ok = insertArticle($pdo, [
+                'title' => $enTitle,
+                'text' => $enHtml,
+                'DatCreate' => $publishedAt,
+                'language' => 'en',
                 'source_url' => $enSrcUrl,
             ], $dryRun);
 
@@ -274,9 +275,9 @@ foreach ($repos as $repoPath => $_meta) {
 
         // --- Czech article ---
         if (!$csExists) {
-            $csBody  = translateToCs($body ?: $repoName.' '.$tag, $apiKey, 'body');
+            $csBody = translateToCs($body ?: $repoName.' '.$tag, $apiKey, 'body');
             $csTitle = translateToCs("{$repoName} {$tag} released", $apiKey, 'title');
-            $csHtml  = buildArticleHtml(
+            $csHtml = buildArticleHtml(
                 $repoName,
                 $tag,
                 $logoUrl,
@@ -285,10 +286,10 @@ foreach ($repos as $repoPath => $_meta) {
                 'Zobrazit vydání na GitHub →',
             );
             $ok = insertArticle($pdo, [
-                'title'      => $csTitle,
-                'text'       => $csHtml,
-                'DatCreate'  => $publishedAt,
-                'language'   => 'cs',
+                'title' => $csTitle,
+                'text' => $csHtml,
+                'DatCreate' => $publishedAt,
+                'language' => 'cs',
                 'source_url' => $csSrcUrl,
             ], $dryRun);
 

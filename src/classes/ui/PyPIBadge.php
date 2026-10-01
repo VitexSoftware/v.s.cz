@@ -20,14 +20,13 @@ class PyPIBadge extends \Ease\Html\ATag
     public string $baseUrl = 'https://pypi.org/project/';
 
     /**
-     * @param string $package    PyPI package name
-     * @param string $type       v (version) | dm (monthly downloads)
-     * @param array  $properties
+     * @param string $package PyPI package name
+     * @param string $type    v (version) | dm (monthly downloads)
      */
     public function __construct(string $package, string $type = 'dm', array $properties = [])
     {
         $label = match ($type) {
-            'v'  => _('PyPI Version'),
+            'v' => _('PyPI Version'),
             'dm' => _('PyPI Downloads'),
             default => 'PyPI',
         };

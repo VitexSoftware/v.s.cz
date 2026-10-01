@@ -28,13 +28,13 @@ class CardCarousel extends \Ease\Html\DivTag
     public function __construct(string $id, int $perSlide = 1)
     {
         parent::__construct(null, [
-            'id'               => $id,
-            'class'            => 'carousel slide carousel-dark mb-4',
-            'data-bs-ride'     => 'false',
+            'id' => $id,
+            'class' => 'carousel slide carousel-dark mb-4',
+            'data-bs-ride' => 'false',
             'data-bs-interval' => 'false',
         ]);
         $this->carouselId = $id;
-        $this->perSlide   = $perSlide;
+        $this->perSlide = $perSlide;
     }
 
     public function addCard($card): void
@@ -51,15 +51,15 @@ class CardCarousel extends \Ease\Html\DivTag
         $this->carouselBuilt = true;
 
         $chunks = array_chunk($this->cards, $this->perSlide);
-        $id     = htmlspecialchars($this->carouselId);
+        $id = htmlspecialchars($this->carouselId);
 
         // Dot indicators
         $indicators = '<div class="carousel-indicators">';
 
         foreach ($chunks as $i => $_) {
-            $active      = $i === 0 ? ' class="active" aria-current="true"' : '';
-            $indicators .= "<button type=\"button\" data-bs-target=\"#$id\""
-                         ." data-bs-slide-to=\"$i\"$active></button>";
+            $active = $i === 0 ? ' class="active" aria-current="true"' : '';
+            $indicators .= "<button type=\"button\" data-bs-target=\"#{$id}\""
+                         ." data-bs-slide-to=\"{$i}\"{$active}></button>";
         }
 
         $indicators .= '</div>';
@@ -72,8 +72,8 @@ class CardCarousel extends \Ease\Html\DivTag
             : 'col-md-'.(12 / $this->perSlide);
 
         foreach ($chunks as $i => $chunk) {
-            $active  = $i === 0 ? ' active' : '';
-            $inner  .= "<div class=\"carousel-item$active\">"
+            $active = $i === 0 ? ' active' : '';
+            $inner .= "<div class=\"carousel-item{$active}\">"
                      .'<div class="row g-3 px-5">';
 
             foreach ($chunk as $card) {
@@ -87,11 +87,11 @@ class CardCarousel extends \Ease\Html\DivTag
 
         // Prev / next controls
         $controls = <<<HTML
-<button class="carousel-control-prev" type="button" data-bs-target="#$id" data-bs-slide="prev">
+<button class="carousel-control-prev" type="button" data-bs-target="#{$id}" data-bs-slide="prev">
   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
   <span class="visually-hidden">Previous</span>
 </button>
-<button class="carousel-control-next" type="button" data-bs-target="#$id" data-bs-slide="next">
+<button class="carousel-control-next" type="button" data-bs-target="#{$id}" data-bs-slide="next">
   <span class="carousel-control-next-icon" aria-hidden="true"></span>
   <span class="visually-hidden">Next</span>
 </button>

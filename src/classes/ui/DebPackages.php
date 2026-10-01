@@ -21,8 +21,48 @@ namespace VSCZ\ui;
  */
 class DebPackages
 {
-    private static array $index  = [];
-    private static bool $loaded  = false;
+    private static array $index = [];
+    private static bool $loaded = false;
+
+    public static function get(string $package): ?array
+    {
+        self::load();
+
+        return self::$index[$package] ?? null;
+    }
+
+    public static function version(string $package): string
+    {
+        $pkg = self::get($package);
+
+        if (!$pkg) {
+            return '';
+        }
+
+        // Strip epoch and distro suffix (e.g. "2.0.0.230~trixie" → "2.0.0.230")
+        $v = preg_replace('/~[a-z]+$/', '', $pkg['Version'] ?? '');
+
+        return preg_replace('/^\d+:/', '', (string) $v);
+    }
+
+    public static function description(string $package): string
+    {
+        $pkg = self::get($package);
+
+        return $pkg['LongDescription'] ?? $pkg['ShortDescription'] ?? '';
+    }
+
+    public static function homepage(string $package): string
+    {
+        return self::get($package)['Homepage'] ?? '';
+    }
+
+    public static function has(string $package): bool
+    {
+        self::load();
+
+        return isset(self::$index[$package]);
+    }
 
     private static function load(): void
     {
@@ -69,9 +109,9 @@ class DebPackages
 
     private static function parseStanza(string $stanza): array
     {
-        $result    = [];
-        $lines     = explode("\n", $stanza);
-        $lastKey   = null;
+        $result = [];
+        $lines = explode("\n", $stanza);
+        $lastKey = null;
         $descLines = [];
 
         foreach ($lines as $line) {
@@ -95,63 +135,22 @@ class DebPackages
                 continue;
             }
 
-            $key     = substr($line, 0, $colon);
-            $value   = substr($line, $colon + 2);
+            $key = substr($line, 0, $colon);
+            $value = substr($line, $colon + 2);
             $lastKey = $key;
 
             if ($key === 'Description') {
                 $result['ShortDescription'] = $value;
-                $descLines                  = [];
+                $descLines = [];
             } else {
                 $result[$key] = $value;
             }
         }
 
         if ($descLines) {
-            $result['LongDescription'] = trim(implode(' ', array_filter($descLines, fn ($l) => $l !== '')));
+            $result['LongDescription'] = trim(implode(' ', array_filter($descLines, static fn ($l) => $l !== '')));
         }
 
         return $result;
-    }
-
-    public static function get(string $package): ?array
-    {
-        self::load();
-
-        return self::$index[$package] ?? null;
-    }
-
-    public static function version(string $package): string
-    {
-        $pkg = self::get($package);
-
-        if (!$pkg) {
-            return '';
-        }
-
-        // Strip epoch and distro suffix (e.g. "2.0.0.230~trixie" → "2.0.0.230")
-        $v = preg_replace('/~[a-z]+$/', '', $pkg['Version'] ?? '');
-        $v = preg_replace('/^\d+:/', '', (string) $v);
-
-        return $v;
-    }
-
-    public static function description(string $package): string
-    {
-        $pkg = self::get($package);
-
-        return $pkg['LongDescription'] ?? $pkg['ShortDescription'] ?? '';
-    }
-
-    public static function homepage(string $package): string
-    {
-        return self::get($package)['Homepage'] ?? '';
-    }
-
-    public static function has(string $package): bool
-    {
-        self::load();
-
-        return isset(self::$index[$package]);
     }
 }

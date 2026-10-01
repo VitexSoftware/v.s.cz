@@ -47,16 +47,16 @@ foreach ($vsRepos as $meta) {
 arsort($languages);
 
 $langColors = [
-    'PHP'        => 'primary',
-    'Python'     => 'warning',
-    'Shell'      => 'success',
+    'PHP' => 'primary',
+    'Python' => 'warning',
+    'Shell' => 'success',
     'JavaScript' => 'danger',
-    'C++'        => 'info',
-    'CSS'        => 'secondary',
-    'Dart'       => 'primary',
-    'Go'         => 'info',
-    'Rust'       => 'danger',
-    'Java'       => 'warning',
+    'C++' => 'info',
+    'CSS' => 'secondary',
+    'Dart' => 'primary',
+    'Go' => 'info',
+    'Rust' => 'danger',
+    'Java' => 'warning',
     'TypeScript' => 'primary',
 ];
 
@@ -67,22 +67,22 @@ $langBadge = static function (string $lang) use ($langColors): string {
 };
 
 $langIcons = [
-    'PHP'        => 'fa-brands fa-php',
-    'Python'     => 'fa-brands fa-python',
+    'PHP' => 'fa-brands fa-php',
+    'Python' => 'fa-brands fa-python',
     'JavaScript' => 'fa-brands fa-js',
     'TypeScript' => 'fa-brands fa-js',
-    'CSS'        => 'fa-brands fa-css3-alt',
-    'HTML'       => 'fa-brands fa-html5',
-    'Shell'      => 'fa-solid fa-terminal',
+    'CSS' => 'fa-brands fa-css3-alt',
+    'HTML' => 'fa-brands fa-html5',
+    'Shell' => 'fa-solid fa-terminal',
     'Dockerfile' => 'fa-brands fa-docker',
-    'Rust'       => 'fa-brands fa-rust',
-    'Ruby'       => 'fa-solid fa-gem',
-    'Makefile'   => 'fa-solid fa-gears',
+    'Rust' => 'fa-brands fa-rust',
+    'Ruby' => 'fa-solid fa-gem',
+    'Makefile' => 'fa-solid fa-gears',
 ];
 
 $langIcon = static function (string $lang) use ($langColors, $langIcons): string {
     $color = $langColors[$lang] ?? 'secondary';
-    $icon  = $langIcons[$lang] ?? 'fa-solid fa-code';
+    $icon = $langIcons[$lang] ?? 'fa-solid fa-code';
 
     return '<span class="project-icon bg-'.$color.' text-white rounded-circle d-inline-flex align-items-center justify-content-center flex-shrink-0" style="width:36px;height:36px;"><i class="'.$icon.'"></i></span>';
 };
@@ -118,7 +118,7 @@ $filterBar = new \Ease\Html\DivTag(null, ['class' => 'mb-3']);
 $filterBar->addItem('<input id="project-search" class="form-control mb-2" type="search" placeholder="'.htmlspecialchars(_('Search projects…')).'" oninput="filterProjects()">');
 
 $langBtns = new \Ease\Html\DivTag(null, ['class' => 'd-flex flex-wrap gap-1', 'id' => 'lang-filters']);
-$langBtns->addItem('<button class="btn btn-sm btn-dark active" data-lang="" onclick="setLang(this)">'._('All').' <span class="badge bg-secondary">'.count($vsRepos).'</span></button>');
+$langBtns->addItem('<button class="btn btn-sm btn-dark active" data-lang="" onclick="setLang(this)">'._('All').' <span class="badge bg-secondary">'.\count($vsRepos).'</span></button>');
 
 foreach ($languages as $lang => $count) {
     $color = $langColors[$lang] ?? 'secondary';
@@ -134,26 +134,26 @@ $oPage->container->addItem(new \Ease\TWB5\Container($filterBar));
 $grid = new \Ease\Html\DivTag(null, ['class' => 'row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3', 'id' => 'project-grid']);
 
 foreach ($vsRepos as $repoPath => $meta) {
-    $name        = substr($repoPath, strlen('VitexSoftware/'));
+    $name = substr($repoPath, \strlen('VitexSoftware/'));
     $description = $meta['description'] ?? '';
-    $language    = $meta['language'] ?? '';
-    $stars       = (int) ($meta['stars'] ?? 0);
-    $forks       = (int) ($meta['forks'] ?? 0);
-    $topics      = $meta['topics'] ?? [];
-    $pushedAt    = $meta['pushedAt'] ?? '';
-    $ghUrl       = 'https://github.com/'.$repoPath;
+    $language = $meta['language'] ?? '';
+    $stars = (int) ($meta['stars'] ?? 0);
+    $forks = (int) ($meta['forks'] ?? 0);
+    $topics = $meta['topics'] ?? [];
+    $pushedAt = $meta['pushedAt'] ?? '';
+    $ghUrl = 'https://github.com/'.$repoPath;
 
     $topicSearch = strtolower($name.' '.$description.' '.$language.' '.implode(' ', $topics));
 
     $card = new \Ease\Html\DivTag(null, [
-        'class'            => 'col project-card',
-        'data-name'        => strtolower($name),
-        'data-lang'        => $language,
-        'data-search'      => $topicSearch,
+        'class' => 'col project-card',
+        'data-name' => strtolower($name),
+        'data-lang' => $language,
+        'data-search' => $topicSearch,
     ]);
 
     $inner = new \Ease\Html\DivTag(null, ['class' => 'card h-100 shadow-sm']);
-    $body  = new \Ease\Html\DivTag(null, ['class' => 'card-body d-flex flex-column']);
+    $body = new \Ease\Html\DivTag(null, ['class' => 'card-body d-flex flex-column']);
 
     $title = new \Ease\Html\H5Tag(
         new \Ease\Html\ATag($ghUrl, htmlspecialchars($name), ['class' => 'text-decoration-none stretched-link']),

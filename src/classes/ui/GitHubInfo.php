@@ -24,18 +24,6 @@ class GitHubInfo
 {
     private static ?array $data = null;
 
-    private static function load(): array
-    {
-        if (self::$data !== null) {
-            return self::$data;
-        }
-
-        $file = \dirname(__DIR__, 2).'/data/github_repos.php';
-        self::$data = file_exists($file) ? (require $file) : [];
-
-        return self::$data;
-    }
-
     public static function get(string $repoPath): array
     {
         return self::load()[$repoPath] ?? [];
@@ -59,5 +47,17 @@ class GitHubInfo
     public static function stars(string $repoPath): int
     {
         return (int) (self::get($repoPath)['stars'] ?? 0);
+    }
+
+    private static function load(): array
+    {
+        if (self::$data !== null) {
+            return self::$data;
+        }
+
+        $file = \dirname(__DIR__, 2).'/data/github_repos.php';
+        self::$data = file_exists($file) ? (require $file) : [];
+
+        return self::$data;
     }
 }

@@ -54,7 +54,7 @@ $steps->addItemSmart(
 
 // ── VitexSoftware projects card grid ─────────────────────────────────────────
 $components = AppStream::all();
-uasort($components, fn($a, $b) => strcasecmp(
+uasort($components, static fn ($a, $b) => strcasecmp(
     AppStream::localized($a['Name'] ?? []) ?: ($a['Package'] ?? ''),
     AppStream::localized($b['Name'] ?? []) ?: ($b['Package'] ?? ''),
 ));
@@ -62,7 +62,7 @@ uasort($components, fn($a, $b) => strcasecmp(
 $grid = new \Ease\Html\DivTag(null, ['class' => 'row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 mt-1']);
 
 foreach ($components as $pkg => $comp) {
-    $name    = AppStream::localized($comp['Name'] ?? []) ?: $pkg;
+    $name = AppStream::localized($comp['Name'] ?? []) ?: $pkg;
     $summary = AppStream::localized($comp['Summary'] ?? []);
     $iconUrl = AppStream::iconUrl($pkg);
 
@@ -88,8 +88,8 @@ foreach ($components as $pkg => $comp) {
 
 $pTabs = new \Ease\TWB5\Tabs([
     _('VitexSoftware') => $grid,
-    _('All packages')  => new ui\Repositor($repodir),
-    _('How to use')    => $reposinfo,
+    _('All packages') => new ui\Repositor($repodir),
+    _('How to use') => $reposinfo,
 ]);
 $oPage->container->addItem($pTabs);
 $oPage->addItem(new \VSCZ\ui\PageBottom());
