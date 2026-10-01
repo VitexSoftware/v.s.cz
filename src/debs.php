@@ -24,6 +24,11 @@ namespace VSCZ;
 
 require_once 'includes/VSInit.php';
 $oPage->addItem(new ui\PageTop(_('Debian Repository')));
+$oPage->container->addItem(new ui\PageHero(
+    _('Debian Repository'),
+    _('500+ packages for Debian and Ubuntu – add the repository once and install with apt.'),
+    _('Packages'),
+));
 $repodir = 'repo';
 
 // ── How to use card ───────────────────────────────────────────────────────────

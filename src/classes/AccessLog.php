@@ -40,47 +40,68 @@ class AccessLog extends \Ease\SQL\Engine
         $this->setupProperty($options, 'myTable');
         $this->setupProperty($options, 'debug', 'STATS_DEBUG');
 
+        // Without a separate stats database the access log is expected in the main one.
+        if (empty($this->dbType)) {
+            $this->setupProperty($options, 'dbType', 'DB_TYPE');
+            $this->setupProperty($options, 'server', 'DB_HOST');
+            $this->setupProperty($options, 'dbLogin', 'DB_USERNAME');
+            $this->setupProperty($options, 'dbPass', 'DB_PASSWORD');
+            $this->setupProperty($options, 'database', 'DB_DATABASE');
+            $this->setupProperty($options, 'port', 'DB_PORT');
+        }
+
         return true;
     }
 
     /**
-     * @return int
+     * How many times apt fetched the repository index.
      */
-    public function getUpdatedCount()
+    public function getUpdatedCount(): int
     {
-        return $this->listingQuery()->select('count(*) as count')->where(
-            'request_uri',
-            '/dists/stable/InRelease',
-        )->fetch()['count'];
+        return $this->countRequests('request_uri = ?', ['/dists/stable/InRelease']);
     }
 
-    public function getPackageInstalls($pName)
+    public function getPackageInstalls($pName): int
     {
-        return $this->listingQuery()->select('count(*) as count')->where(sprintf(
-            "request_uri LIKE '/pool/main/%%/%s_%%'",
-            $pName,
-        ))->where("agent LIKE 'Debian APT%%'")->fetch()['count'];
+        return $this->countRequests('request_uri LIKE ? AND agent LIKE ?', [self::poolPattern($pName), 'Debian APT%']);
     }
 
-    public function getPackageDownloads($pName)
+    public function getPackageDownloads($pName): int
     {
-        return $this->listingQuery()->select('count(*) as count')->where(sprintf(
-            "request_uri LIKE '/pool/main/%%/%s_%%'",
-            $pName,
-        ))->where("agent  NOT LIKE 'Debian APT%%'")->fetch()['count'];
+        return $this->countRequests('request_uri LIKE ? AND agent NOT LIKE ?', [self::poolPattern($pName), 'Debian APT%']);
     }
 
-    public function getPackageVersionInstalls($pName)
+    public function getPackageVersionInstalls($pName): array
     {
         $allInstalls = [];
-        $viRaw = $this->listingQuery()->select('COUNT(*) as count')->select('FROM_UNIXTIME(time_stamp) as last')->
-                where(sprintf("request_uri LIKE '/pool/main/%%/%s_%%'", $pName))->where("agent LIKE 'Debian APT%%'")->groupBy('request_uri')->orderBy('request_uri DESC');
 
-        foreach ($viRaw as $installs) {
-            [$tmp, $ver, $tmp] = explode('_', $installs['request_uri']);
-            $allInstalls[] = ['count' => $installs['count'], 'ver' => $ver, 'last' => $installs['last']];
+        try {
+            $viRaw = $this->listingQuery()->select('COUNT(*) as count')->select('FROM_UNIXTIME(time_stamp) as last')
+                ->where('request_uri LIKE ? AND agent LIKE ?', self::poolPattern($pName), 'Debian APT%')
+                ->groupBy('request_uri')->orderBy('request_uri DESC');
+
+            foreach ($viRaw as $installs) {
+                $ver = explode('_', (string) $installs['request_uri'])[1] ?? '';
+                $allInstalls[] = ['count' => $installs['count'], 'ver' => $ver, 'last' => $installs['last']];
+            }
+        } catch (\Throwable $exception) {
+            // no access log (stats DB not configured or unreachable)
         }
 
         return $allInstalls;
+    }
+
+    private static function poolPattern(string $pName): string
+    {
+        return '/pool/main/%/'.addcslashes($pName, '%_\\').'\_%';
+    }
+
+    private function countRequests(string $condition, array $params): int
+    {
+        try {
+            return (int) ($this->listingQuery()->select('count(*) as count')->where($condition, ...$params)->fetch()['count'] ?? 0);
+        } catch (\Throwable $exception) {
+            return 0; // no access log (stats DB not configured or unreachable)
+        }
     }
 }

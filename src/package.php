@@ -24,7 +24,13 @@ namespace VSCZ;
 
 require_once 'includes/VSInit.php';
 
-$package = $oPage->getRequestValue('package', 'string');
+$package = trim((string) $oPage->getRequestValue('package', 'string'));
+
+if ($package === '') {
+    header('Location: debs.php');
+
+    exit;
+}
 
 $oPage->addItem(new ui\PageTop(sprintf(_('Package %s details'), $package)));
 

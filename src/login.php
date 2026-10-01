@@ -54,7 +54,7 @@ $submit = new \Ease\TWB5\SubmitButton(_('Sign in'), 'success');
 
 $loginPanel = new \Ease\TWB5\Panel(new \Ease\Html\ImgTag(
     'img/vitexsoftwarelogo.png',
-    null,
+    'Vitex Software',
     ['style' => 'width: 100px;'],
 ), 'success', null, $submit);
 $loginPanel->addItem(new \Ease\TWB5\FormGroup(_('Username'), new \Ease\Html\InputTextTag('login', $login)));
@@ -67,12 +67,7 @@ $passRecoveryColumn = $loginRow->addItem(new \Ease\TWB5\Col(4, new \Ease\TWB5\Li
 
 EOD._('Password recovery'), 'warning')));
 
-$passRecoveryColumn->additem(new \Ease\TWB5\LinkButton('createaccount.php', <<<'EOD'
-<i class="fa fa-user"></i>
-
-EOD._('Create account'), 'success'));
-
-$oPage->container->addItem(new \Ease\TWB5\Form(['name' => 'login'], $loginRow));
+$oPage->container->addItem(new \Ease\TWB5\Form(['name' => 'login'], [], $loginRow));
 
 $oPage->addItem(new ui\PageBottom());
 

@@ -25,17 +25,16 @@ date_default_timezone_set('Europe/Prague');
 
 \Ease\Shared::init([], '/etc/vscz.env');
 
-\Ease\Locale::singleton(null, '../i18n', 'vscz');
-
-session_start();
-
 if (\PHP_SAPI === 'cli') {
     if (!\defined('EASE_LOGGER')) {
         \define('EASE_LOGGER', 'syslog|console|email');
     }
+
+    \Ease\Locale::singleton(null, '../i18n', 'vscz');
 } else {
-    /** @var ui\WebPage $oPage */
-    $oPage = new ui\WebPage();
+    // Session first, so the language chosen via ?locale= survives to the next page.
+    session_start();
+    \Ease\Locale::singleton(ui\WebPage::preferredLocale('../i18n'), '../i18n', 'vscz');
 }
 
 /**
@@ -43,6 +42,7 @@ if (\PHP_SAPI === 'cli') {
  *
  * @global \Ease\User
  */
+\Ease\Shared::user(null, '\Ease\Anonym');
 $oUser = \Ease\User::singleton();
 
 /** @var VSWebPage $oPage */

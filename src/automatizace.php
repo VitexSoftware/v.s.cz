@@ -80,18 +80,15 @@ $oPage->head->addItem('<meta name="twitter:image" content="https://vitexsoftware
 $oPage->addItem(new ui\PageTop(_('Automatizace na klíč — Vitex Software')));
 
 // ── HERO ─────────────────────────────────────────────────────────────────────
-$hero = $oPage->container->addItem(new \Ease\Html\DivTag(null, ['class' => 'text-center py-5']));
-$hero->addItem(new \Ease\Html\ImgTag('img/abraflexitools.svg', 'AbraFlexi automatizace', ['style' => 'height: 90px', 'class' => 'mb-3']));
-$hero->addItem(new \Ease\Html\H1Tag(_('Automatizace účetnictví na klíč')));
-$hero->addItem(new \Ease\Html\PTag(
+$oPage->container->addItem(new ui\PageHero(
+    _('Automatizace účetnictví na klíč'),
     _('Přestaňte dělat ručně to, co zvládne stroj. Nastavím to a provozuji za vás — vy jen koukáte na výsledek.'),
-    ['class' => 'lead'],
+    _('78 hotových automatizací').' · '._('AbraFlexi i Pohoda').' · '._('hostováno na MultiFlexi'),
+    [
+        new \Ease\Html\ATag('kontakt.php', _('Nezávazně poptat').' <span class="arrow">→</span>', ['class' => 'btn btn-glow']),
+        new \Ease\Html\ATag('https://multiflexi.eu/', 'MultiFlexi.eu', ['class' => 'btn btn-line']),
+    ],
 ));
-$hero->addItem(new \Ease\Html\PTag(
-    '<strong>'._('78 hotových automatizací').'</strong> · '._('AbraFlexi i Pohoda').' · '._('hostováno na MultiFlexi'),
-    ['class' => 'text-muted'],
-));
-$hero->addItem(new \Ease\TWB5\LinkButton('kontakt.php', _('Nezávazně poptat').' →', 'primary', ['class' => 'btn-lg mt-2']));
 
 // ── SCHOPNOSTI ───────────────────────────────────────────────────────────────
 $oPage->container->addItem(new \Ease\Html\H2Tag(_('Co to umí'), ['class' => 'text-center mt-4']));
@@ -205,8 +202,7 @@ foreach ($balicky as $b) {
 
     $telo->addItem(new \Ease\TWB5\LinkButton('kontakt.php', _('Mám zájem'), $b['zvyraznit'] ? 'primary' : 'outline-primary', ['class' => 'mt-2']));
 
-    $col = $cenikRow->addColumn(12);
-    $col->addTagClass('col-md-4');
+    $col = $cenikRow->addColumn(4);
     $col->addItem(new \Ease\TWB5\Card($telo, ['class' => 'h-100 shadow-sm'.($b['zvyraznit'] ? ' border-primary' : '')]));
 }
 

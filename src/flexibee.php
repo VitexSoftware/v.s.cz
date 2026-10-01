@@ -93,7 +93,7 @@ $oPage->container->addItem(new \Ease\Html\H2Tag(_('AbraFlexi enhancenments')));
 $oPage->container->addItem(new \Ease\Html\DivTag(_('Díky několikaleté praxi s tímto systémem vám přinášíme tyto naše vylepšení, integrace a nástroje').':'));
 // $oPage->container->addItem($productRow);
 
-$flexiCarousel = new \Ease\TWB5\Carousel(true, true, true, ['id' => 'FlexiCarousel']);
+$flexiCarousel = new ui\Showcase(['id' => 'FlexiCarousel']);
 
 $flexiCarousel->addSlide(
     new SlideImage(

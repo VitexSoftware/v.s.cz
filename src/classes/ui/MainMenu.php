@@ -19,7 +19,6 @@ use Ease\Html\ATag;
 use Ease\Html\DivTag;
 use Ease\Shared;
 use Ease\TWB5\Navbar;
-use Ease\TWB5\Widgets\LangLinks;
 use VSCZ\User;
 
 /**
@@ -37,23 +36,13 @@ class MainMenu extends Navbar
      */
     public function __construct(string $name, $brand, $properties = [])
     {
+        $this->mainpage = 'index.php';
         parent::__construct($brand, $name, $properties);
-        $this->addTagClass('navbar navbar-dark bg-secondary navbar-expand-lg text-uppercase fixed-top');
+        $this->addTagClass('site-header navbar-expand-lg fixed-top');
 
-        $this->addMenuItem(new ATag(
-            'debs.php',
-            '<img style="height: 19px;" src="img/deb-package.png"> '._('Packages'),
-        ));
-
-        $this->addMenuItem(new ATag(
-            'projects.php',
-            '<img style="height: 19px;" src="img/github.svg"> '._('Projects'),
-        ));
-
-        $this->addMenuItem(new ATag(
-            'automatizace.php',
-            '<img style="height: 19px;" src="img/abraflexitools.svg"> '._('Automation'),
-        ));
+        $this->addMenuItem(new ATag('automatizace.php', _('Automation')));
+        $this->addMenuItem(new ATag('projects.php', _('Projects')));
+        $this->addMenuItem(new ATag('debs.php', _('Packages')));
         //
         //        $this->addDropDownMenu(
         //            _('Projects'),
@@ -83,7 +72,7 @@ class MainMenu extends Navbar
                 );
          */
         $this->addDropDownMenu(
-            '<img style="height: 19px;" src="img/docs.svg"> '._('Docs'),
+            _('Docs'),
             [
                 '/abraflexi-api-doc-cs/' => '<img style="height: 20px;" src="img/abra-flexibee-square.png"> '._('AbraFlexi REST API (CS)'),
                 '/abraflexi-api-doc-en/' => '<img style="height: 20px;" src="img/abra-flexibee-square.png"> '._('AbraFlexi REST API (EN)'),
@@ -101,23 +90,74 @@ class MainMenu extends Navbar
             ],
         );
 
-        $this->addMenuItem(new ATag(
-            'articles.php',
-            '<img style="height: 19px;" src="img/news.svg"> '._('Articles'),
-        ));
-
-        $this->addMenuItem(new ATag('attic.php', '<img style="height: 19px;" src="img/Treasure_chest.svg"> '._('Old projects')));
+        $this->addMenuItem(new ATag('articles.php', _('Articles')));
 
         //        $this->addMenuItem(new \Ease\Html\ATag('umim.php', _('My Skills')));
         //        $this->addMenuItem(new \Ease\Html\ATag('reference.php', _('Reference')));
         //        $this->addMenuItem(new \Ease\Html\ATag('cenik.php', _('Pricelist')));
-        $this->addMenuItem(new ATag('kontakt.php', _('Contact')), 'left');
+        $this->addMenuItem(new ATag('kontakt.php', _('Contact')));
 
         if (User::singleton()->getUserLogin()) {
-            $this->addMenuItem(new ATag('newsedit.php', _('News Editor')), 'left');
+            $this->addMenuItem(new ATag('newsedit.php', _('News Editor')));
+        }
+    }
+
+    /**
+     * Mark the item of the current page as active (the parent compares the navbar's own href).
+     *
+     * @param mixed $content
+     * @param mixed $enabled
+     * @param mixed $placement
+     */
+    public function addMenuItem($content, $enabled = true, $placement = 'left')
+    {
+        $item = parent::addMenuItem($content, $enabled, $placement);
+
+        if ($content instanceof ATag && basename((string) parse_url((string) $content->getTagProperty('href'), \PHP_URL_PATH)) === basename($_SERVER['SCRIPT_NAME'] ?? '')) {
+            $item->addTagClass('active');
+            $content->setTagProperties(['aria-current' => 'page']);
         }
 
-        $this->addMenuItem(new LangLinks(), 'right');
+        return $item;
+    }
+
+    /**
+     * Menu items followed by the language switch, light/dark toggle and the call to action.
+     */
+    public function navBarCollapse()
+    {
+        $collapse = parent::navBarCollapse();
+        $controls = new DivTag(null, ['class' => 'header-controls']);
+
+        $langs = new DivTag(null, ['class' => 'lang-switch', 'role' => 'group', 'aria-label' => _('Language')]);
+
+        foreach (array_keys(\Ease\Locale::singleton()->availble()) as $code) {
+            $lang = substr($code, 0, 2);
+            $langs->addItem(new ATag(
+                '?'.http_build_query(array_merge($_GET, ['locale' => $code])),
+                strtoupper($lang),
+                ['class' => $code === \Ease\Locale::$localeUsed ? 'active' : '', 'hreflang' => $lang, 'lang' => $lang],
+            ));
+        }
+
+        $controls->addItem($langs);
+        $controls->addItem('<button type="button" class="icon-btn theme-toggle" aria-label="'._('Switch light / dark mode').'" title="'._('Switch light / dark mode').'">'
+            .'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button>');
+        $controls->addItem(new ATag('kontakt.php', _('Get a free quote'), ['class' => 'btn btn-glow btn-sm']));
+        $collapse->addItem($controls);
+
+        return $collapse;
+    }
+
+    /**
+     * Hamburger must toggle the collapsed menu (the parent uses "dropdown", which does nothing).
+     */
+    public function navBarToggler()
+    {
+        $toggler = parent::navBarToggler();
+        $toggler->setTagProperties(['data-bs-toggle' => 'collapse']);
+
+        return $toggler;
     }
 
     /**
@@ -125,14 +165,6 @@ class MainMenu extends Navbar
      */
     public function finalize(): void
     {
-        WebPage::singleton()->addCss(<<<'EOD'
-
-.navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-EOD);
-
         if (!empty(Shared::logger()->getMessages())) {
             WebPage::singleton()->addCss(<<<'EOD'
 

@@ -20,7 +20,7 @@ $oPage->addJavaScript('$("#packs").tablesorter();');
 
 $oPage->addItem(new \VSCZ\ui\PageTop(_('Deb Repository')));
 
-$packTabs = new Ease\TWB5\Tabs('PackTabs');
+$packTabs = new \Ease\TWB5\Tabs([], ['id' => 'PackTabs']);
 
 $reposinfo = new \Ease\TWB5\Card(new \Ease\Html\H3Tag(_('How to use repository')));
 
@@ -43,7 +43,7 @@ $steps->addItemSmart(
     ['class' => 'list-group-item'],
 );
 
-$updated = \Ease\Shared::db()->queryToValue('SELECT count(*) FROM `vs_access_log` WHERE `request_uri` = \'/dists/stable/InRelease\'');
+$updated = (new \VSCZ\AccessLog())->getUpdatedCount();
 $reposinfo->addItem(sprintf(_('apt-get update feeded %d times'), $updated));
 
 $packages = [];
