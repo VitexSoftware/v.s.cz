@@ -42,14 +42,6 @@ class NewPackages extends \Ease\Html\SpanTag
 
         $this->packagesByTime = $packager->listingQuery()->limit($howmuch)->where('Existing', 1)->groupBy('Name')->orderBy('updated,created DESC')->fetchAll();
 
-        $this->getPdo([
-            'dbType' => \constant('STATS_TYPE'),
-            'server' => \constant('STATS_SERVER'),
-            'username' => \constant('STATS_USERNAME'),
-            'password' => \constant('STATS_PASSWORD'),
-            'database' => \constant('STATS_DATABASE'),
-            'port' => \constant('STATS_PORT'),
-        ]);
 
         parent::__construct(new \Ease\Html\H1Tag(
             _('Fresh Packages'),
@@ -146,8 +138,6 @@ class NewPackages extends \Ease\Html\SpanTag
             $icon = 'img/deb-package.png';
         }
 
-        $counts = $this->getPullCounts($pProps['Filename'], $pProps['Version']);
-
         $download = new \Ease\Html\ATag(
             'http://repo.vitexsoftware.cz/'.$pProps['Filename'],
             '<img style="width: 30px;" src="img/deb-package.png">&nbsp; '.\Ease\Functions::formatBytes((int) $pProps['Size']),
@@ -208,8 +198,22 @@ class NewPackages extends \Ease\Html\SpanTag
     public function getPullCounts($package)
     {
         $params = [':package' => sprintf('%%%s%%', basename($package)), ':agent' => 'Debian APT%%'];
-        $installs = $this->getFluentPDO()->from('repo_access_log')->where('request_uri LIKE :package AND agent LIKE :agent', $params)->count();
-        $downloads = $this->getFluentPDO()->from('repo_access_log')->where('request_uri LIKE :package AND agent NOT LIKE :agent', $params)->count();
+
+        try {
+            // Access log lives in a separate stats database (STATS_* in /etc/vscz.env).
+            $this->getPdo([
+                'dbType' => \Ease\Shared::cfg('STATS_TYPE', \Ease\Shared::cfg('DB_TYPE')),
+                'server' => \Ease\Shared::cfg('STATS_SERVER', \Ease\Shared::cfg('DB_HOST')),
+                'username' => \Ease\Shared::cfg('STATS_USERNAME', \Ease\Shared::cfg('DB_USERNAME')),
+                'password' => \Ease\Shared::cfg('STATS_PASSWORD', \Ease\Shared::cfg('DB_PASSWORD')),
+                'database' => \Ease\Shared::cfg('STATS_DATABASE', \Ease\Shared::cfg('DB_DATABASE')),
+                'port' => \Ease\Shared::cfg('STATS_PORT', \Ease\Shared::cfg('DB_PORT')),
+            ]);
+            $installs = $this->getFluentPDO()->from('repo_access_log')->where('request_uri LIKE :package AND agent LIKE :agent', $params)->count();
+            $downloads = $this->getFluentPDO()->from('repo_access_log')->where('request_uri LIKE :package AND agent NOT LIKE :agent', $params)->count();
+        } catch (\Throwable $exception) {
+            $installs = $downloads = 0;
+        }
 
         return ['installs' => $installs, 'downloads' => $downloads];
     }

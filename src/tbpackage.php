@@ -16,10 +16,10 @@ declare(strict_types=1);
 require_once 'includes/VSInit.php';
 
 $dwDir = '/var/www/html/download/';
-$d = dir($dwDir);
 $downloads = [];
+$d = is_dir($dwDir) ? dir($dwDir) : false;
 
-while (false !== ($entry = $d->read())) {
+while ($d && false !== ($entry = $d->read())) {
     if ($entry[0] === '.') {
         continue;
     }
@@ -27,7 +27,10 @@ while (false !== ($entry = $d->read())) {
     $downloads[$entry] = VSCZ\ui\WebPage::_format_bytes(filesize($dwDir.$entry));
 }
 
-$d->close();
+
+if ($d) {
+    $d->close();
+}
 ksort($downloads);
 $tbPackage = [];
 $fuelUXPackage = [];
@@ -58,8 +61,8 @@ $oPage->addItem(new \VSCZ\ui\PageTop(_('unofficial Twitter Bootstrap Debian/Ubun
 
 $container = $oPage->addItem(new \Ease\TWB5\Container());
 
-$packTabs = new \Ease\TWB5\Tabs('PackTabs');
-$bootStrapTab = $packTabs->addTab('Twitter Bootstrap');
+$packTabs = new \Ease\TWB5\Tabs([], ['id' => 'PackTabs']);
+$packTabs->addTab('Twitter Bootstrap', $bootStrapTab = new \Ease\Html\DivTag());
 
 $bootStrapTab->addItem(new \Ease\Html\DivTag(
     new VSCZ\ui\DownloadButton($tbPackage),
@@ -72,7 +75,7 @@ $bootStrapTab->addItem(new \Ease\Html\DivTag(new \Ease\Html\ATag(
 ), ['style' => 'float:right;']));
 $bootStrapTab->addItem('is a free collection of tools for creating websites and web applications. It contains HTML and CSS-based design templates for typography, forms, buttons, charts, navigation and other interface components, as well as optional JavaScript extensions.');
 
-$fuelUXTab = $packTabs->addTab('Fuel UX');
+$packTabs->addTab('Fuel UX', $fuelUXTab = new \Ease\Html\DivTag());
 $fuelUXTab->addItem(new \Ease\Html\DivTag(
     new VSCZ\ui\DownloadButton($fuelUXPackage),
     ['style' => 'float:left;'],
@@ -87,7 +90,7 @@ $fuelUXTab->addItem(new \Ease\Html\DivTag(
 ));
 $fuelUXTab->addItem('extends Twitter Bootstrap with additional lightweight JavaScript controls. Other benefits include easy installation into web projects, integrated scripts for customizing Bootstrap and Fuel UX, simple updates, and solid optimization for deployment. All functionality is covered by live documentation and unit tests.');
 
-$bsSwitchTab = $packTabs->addTab('Bootstrap Switch');
+$packTabs->addTab('Bootstrap Switch', $bsSwitchTab = new \Ease\Html\DivTag());
 $bsSwitchTab->addItem(new \Ease\Html\DivTag(
     new VSCZ\ui\DownloadButton($tbSwPackage),
     ['style' => 'float:left;'],
@@ -102,7 +105,7 @@ $bsSwitchTab->addItem(new \Ease\Html\DivTag(
 ));
 $bsSwitchTab->addItem('extends Twitter Bootstrap with switch widget.');
 
-$jqueryTab = $packTabs->addTab('jQuery');
+$packTabs->addTab('jQuery', $jqueryTab = new \Ease\Html\DivTag());
 $jqueryTab->addItem(new \Ease\Html\DivTag(
     new VSCZ\ui\DownloadButton($jqueryPackage),
     ['style' => 'float:left;'],
@@ -121,7 +124,7 @@ $container->addItem($packTabs);
 
 $container2 = $oPage->addItem(new \Ease\TWB5\Container('<p><br></p>'));
 
-$tabs = new \Ease\TWB5\Tabs('infotabs');
+$tabs = new \Ease\TWB5\Tabs([], ['id' => 'infotabs']);
 
 $steps = new \Ease\Html\UlTag(null, ['class' => 'list-group']);
 

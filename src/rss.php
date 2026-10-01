@@ -46,14 +46,17 @@ $channel->addChild('language', 'en-us');
 foreach ($packager->getRssData(\Ease\WebPage::getRequestValue('search')) as $entry) {
     $item = $channel->addChild('item');
 
-    $item->addChild('title', $entry['title']);
+    $item->addChild('title', htmlspecialchars((string) $entry['title']));
     $item->addChild('link', 'https://vitexsoftware.cz/'.$entry['link']);
-    $item->addChild('description', $entry['description']);
-    $item->addChild('pubDate', $entry['date']);
+    $item->addChild('description', htmlspecialchars((string) $entry['description']));
+    $item->addChild('pubDate', date(\DATE_RSS, is_numeric($entry['date']) ? (int) $entry['date'] : (int) strtotime((string) $entry['date'])));
 
-    $enclosure = $item->addChild('enclosure');
-    $enclosure->addAttribute('url', $entry['icon']);
-    $enclosure->addAttribute('type', mime_content_type($entry['icon']));
+    if (!empty($entry['icon']) && is_file($entry['icon'])) {
+        $enclosure = $item->addChild('enclosure');
+        $enclosure->addAttribute('url', 'https://vitexsoftware.cz/'.$entry['icon']);
+        $enclosure->addAttribute('length', (string) filesize($entry['icon']));
+        $enclosure->addAttribute('type', (string) mime_content_type($entry['icon']));
+    }
 }
 
 echo $xml->asXML();

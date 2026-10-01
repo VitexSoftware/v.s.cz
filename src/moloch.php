@@ -35,7 +35,7 @@ $prehled->addItemSmart('Současná verze je kompletní přepis do aktuálních t
 $infopanel->addItem(new \Ease\Html\ImgTag(
     'img/moloch-main2015.png',
     'Moloch',
-    null,
+    [],
     null,
     ['class' => 'img-responsive img-rounded'],
 ));

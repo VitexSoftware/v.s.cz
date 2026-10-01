@@ -20,9 +20,9 @@ $oPage->addPageColumns();
 
 $oPage->addItem('<a href="https://github.com/Vitexus/icinga_configurator" class="ribbon bg-teal">Forkni na GitHubu</a>');
 
-$monitoringTabs = new \Ease\TWB5\Tabs('montabs');
+$monitoringTabs = new \Ease\TWB5\Tabs([], ['id' => 'montabs']);
 
-$serviceTab = $monitoringTabs->addTab(_('Monitor your network'));
+$monitoringTabs->addTab(_('Monitor your network'), $serviceTab = new \Ease\Html\DivTag());
 $serviceRow = new \Ease\TWB5\Row();
 
 $serviceInfo = $serviceRow->addColumn(8);
@@ -63,7 +63,7 @@ $loginFrame->addItem(new \Ease\Html\DivTag(
 ));
 $loginFrame->addItem($loginForm);
 
-$ossTab = $monitoringTabs->addTab(_('Open Source'));
+$monitoringTabs->addTab(_('Open Source'), $ossTab = new \Ease\Html\DivTag());
 $ossTab->addItem(new \Ease\Html\H4Tag(_('Freedom first')));
 $ossTab->addItem(new \Ease\Html\PTag(_('Ctíme myšlenku že software má být svobodný a proto jsou k dispozici zdrojové kódy i instalační balíčky pro debian a odvozené distribuce.')));
 $ossTab->addItem(new \Ease\Html\H4Tag(_('Instalace zdroje a balíčku')));
@@ -105,7 +105,7 @@ $pageRow->addColumn(
 EOD
 );
 
-$supportTab = $monitoringTabs->addTab(_('Podpora'));
+$monitoringTabs->addTab(_('Podpora'), $supportTab = new \Ease\Html\DivTag());
 $supportTab->addItem(new \Ease\Html\H4Tag(_('Snadný start')));
 $supportTab->addItem(new \Ease\Html\PTag(_('Ke spuštění monitoringu nejsou třeba žádné zvláštní znalosti. I přes to jsme pro vás připravili tento stručný ale názorný návod')));
 $supportTab->addItem(new \Ease\TWB5\LinkButton(

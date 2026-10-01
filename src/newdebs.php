@@ -24,5 +24,7 @@ namespace VSCZ;
 
 require_once 'includes/VSInit.php';
 
-$oPage->addItem(new ui\NewPackages());
+$oPage->addItem(new ui\PageTop(_('Fresh Packages')));
+$oPage->container->addItem(new ui\NewPackages());
+$oPage->addItem(new ui\PageBottom());
 $oPage->draw();

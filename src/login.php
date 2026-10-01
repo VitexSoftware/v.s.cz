@@ -66,11 +66,6 @@ $passRecoveryColumn = $loginRow->addItem(new \Ease\TWB5\Col(4, new \Ease\TWB5\Li
 
 EOD._('Password recovery'), 'warning')));
 
-$passRecoveryColumn->additem(new \Ease\TWB5\LinkButton('createaccount.php', <<<'EOD'
-<i class="fa fa-user"></i>
-
-EOD._('Create account'), 'success'));
-
 $oPage->container->addItem(new \Ease\TWB5\Form(['name' => 'login'], [], $loginRow));
 
 $oPage->addItem(new ui\PageBottom());

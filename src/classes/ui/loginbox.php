@@ -27,11 +27,7 @@ class loginbox extends \Ease\Html\DivTag
     {
         parent::__construct(null, ['id' => 'LoginFace']);
         $loginForm = $this->addItem(new \Ease\Html\Form(
-            'Login',
-            $target,
-            'POST',
-            null,
-            ['class' => 'form-vertical'],
+            ['name' => 'Login', 'action' => $target, 'method' => 'POST', 'class' => 'form-vertical'],
         ));
 
         $loginForm->addItem(new \Ease\TWB5\FormGroup(
@@ -44,7 +40,7 @@ class loginbox extends \Ease\Html\DivTag
         ));
 
         $loginForm->addItem(new \Ease\TWB5\SubmitButton(
-            \Ease\TWB5\Part::GlyphIcon('log-in').'&nbsp;'._('Sign In'),
+            '<i class="fa-solid fa-right-to-bracket"></i>&nbsp;'._('Sign In'),
             'success',
         ));
     }

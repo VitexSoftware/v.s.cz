@@ -28,10 +28,10 @@ $oPage->column1->addItem(new \Ease\Html\H3Tag(_('Download')));
 $oPage->column1->addItem('<div style="background-color: #CAAAAA; margin: 2px; padding: 5px;">imap2mx package<br>');
 
 $dwDir = '/var/www/html/download/';
-$d = dir($dwDir);
 $downloads = [];
+$d = is_dir($dwDir) ? dir($dwDir) : false;
 
-while (false !== ($entry = $d->read())) {
+while ($d && false !== ($entry = $d->read())) {
     if ($entry[0] === '.') {
         continue;
     }
@@ -39,7 +39,10 @@ while (false !== ($entry = $d->read())) {
     $downloads[$entry] = \VSCZ\ui\WebPage::_format_bytes(filesize($dwDir.$entry));
 }
 
-$d->close();
+
+if ($d) {
+    $d->close();
+}
 ksort($downloads);
 $SquirelPackage = [];
 $RoundcubePackage = [];
@@ -65,10 +68,10 @@ $oPage->column3->addItem(new \Ease\Html\H3Tag(_('Download')));
 $oPage->column3->addItem('<div style="background-color: #CAAAAA; margin: 2px; padding: 5px;">imap2mx package<br>');
 
 $dwDir = '/var/www/html/download/';
-$d = dir($dwDir);
 $downloads = [];
+$d = is_dir($dwDir) ? dir($dwDir) : false;
 
-while (false !== ($entry = $d->read())) {
+while ($d && false !== ($entry = $d->read())) {
     if ($entry[0] === '.') {
         continue;
     }
@@ -76,7 +79,10 @@ while (false !== ($entry = $d->read())) {
     $downloads[$entry] = VSCZ\ui\WebPage::_format_bytes(filesize($dwDir.$entry));
 }
 
-$d->close();
+
+if ($d) {
+    $d->close();
+}
 ksort($downloads);
 $SquirelPackage = [];
 $RoundcubePackage = [];
