@@ -122,7 +122,7 @@ class HomePage
     <div class="hero-copy">
       <div class="eyebrow">{$t('Technology')}<i>/</i>{$t('Freedom')}<i>/</i>{$t('Better tomorrow')}</div>
       <h1>{$t('Accounting automation and')} <span class="grad">{$t('open source projects')}</span></h1>
-      <p class="lead">{$t('We save time, simplify work and give modern technology a meaning. We are Vitex Software –')} <b>{$t('cyber hippies with a clear head and working code.')}</b></p>
+      <p class="lead">{$t('We save time, simplify work and give modern technology a meaning. We are Vitex Software')}</p>
       <div class="hero-ctas">
         <a class="btn btn-glow" href="#produkty">{$t('What we automate for you')} <span class="arrow">→</span></a>
         <a class="btn btn-line" href="#onas">{$t('About us')} <span class="arrow">↓</span></a>

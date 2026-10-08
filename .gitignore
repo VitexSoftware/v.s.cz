@@ -8,3 +8,5 @@ src/php_errors.log
 debian/vitexsoftware-website/
 vendor/
 debian/vitexsoftware-website.debhelper.log
+debian/.debhelper/
+debian/vitexsoftware-website.substvars

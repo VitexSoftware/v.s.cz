@@ -4,19 +4,19 @@ msgstr ""
 "Project-Id-Version: vscz\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-16 11:26+0200\n"
-"PO-Revision-Date: 2020-05-06 23:30+0200\n"
-"Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
+"PO-Revision-Date: 2026-10-08 11:39+0200\n"
+"Last-Translator: Vítězslav Dvořák <vitex@vitexsoftware.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: ../vendor\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 
 #: src/article.php:20
 msgid "Article"
@@ -247,14 +247,8 @@ msgid "Automatizace účetnictví na klíč — VitexSoftware"
 msgstr "Automatizace účetnictví na klíč — VitexSoftware"
 
 #: src/automatizace.php:68
-msgid ""
-"Automatizace AbraFlexi i Pohody: import bankovních výpisů a párování plateb,"
-" přijaté faktury z e-mailu, rozesílání dokladů, digest stavu firmy. 78 "
-"hotových automatizací — nastavím a provozuji za vás."
-msgstr ""
-"Automatizace AbraFlexi i Pohody: import bankovních výpisů a párování plateb,"
-" přijaté faktury z e-mailu, rozesílání dokladů, digest stavu firmy. 78 "
-"hotových automatizací — nastavím a provozuji za vás."
+msgid "Automatizace AbraFlexi i Pohody: import bankovních výpisů a párování plateb, přijaté faktury z e-mailu, rozesílání dokladů, digest stavu firmy. 78 hotových automatizací — nastavím a provozuji za vás."
+msgstr "Automatizace AbraFlexi i Pohody: import bankovních výpisů a párování plateb, přijaté faktury z e-mailu, rozesílání dokladů, digest stavu firmy. 78 hotových automatizací — nastavím a provozuji za vás."
 
 #: src/automatizace.php:80
 msgid "Automatizace na klíč — Vitex Software"
@@ -265,12 +259,8 @@ msgid "Automatizace účetnictví na klíč"
 msgstr "Automatizace účetnictví na klíč"
 
 #: src/automatizace.php:87
-msgid ""
-"Přestaňte dělat ručně to, co zvládne stroj. Nastavím to a provozuji za vás —"
-" vy jen koukáte na výsledek."
-msgstr ""
-"Přestaňte dělat ručně to, co zvládne stroj. Nastavím to a provozuji za vás —"
-" vy jen koukáte na výsledek."
+msgid "Přestaňte dělat ručně to, co zvládne stroj. Nastavím to a provozuji za vás — vy jen koukáte na výsledek."
+msgstr "Přestaňte dělat ručně to, co zvládne stroj. Nastavím to a provozuji za vás — vy jen koukáte na výsledek."
 
 #: src/automatizace.php:91
 msgid "78 hotových automatizací"
@@ -383,12 +373,8 @@ msgid "Ceník"
 msgstr "Ceník"
 
 #: src/automatizace.php:178
-msgid ""
-"Roční platba předem = 2 měsíce provozu zdarma. Ceny jsou bez DPH (neplátce →"
-" finální)."
-msgstr ""
-"Roční platba předem = 2 měsíce provozu zdarma. Ceny jsou bez DPH (neplátce →"
-" finální)."
+msgid "Roční platba předem = 2 měsíce provozu zdarma. Ceny jsou bez DPH (neplátce → finální)."
+msgstr "Roční platba předem = 2 měsíce provozu zdarma. Ceny jsou bez DPH (neplátce → finální)."
 
 #: src/automatizace.php:188
 msgid "nejoblíbenější"
@@ -415,12 +401,8 @@ msgid "Ušetřete si ruční práci"
 msgstr "Ušetřete si ruční práci"
 
 #: src/automatizace.php:217
-msgid ""
-"Jedna automatizace obvykle ušetří víc hodin práce za měsíc, než stojí za "
-"rok. Ozvěte se, 15 minut vám to ukážu na vašich datech."
-msgstr ""
-"Jedna automatizace obvykle ušetří víc hodin práce za měsíc, než stojí za "
-"rok. Ozvěte se, 15 minut vám to ukážu na vašich datech."
+msgid "Jedna automatizace obvykle ušetří víc hodin práce za měsíc, než stojí za rok. Ozvěte se, 15 minut vám to ukážu na vašich datech."
+msgstr "Jedna automatizace obvykle ušetří víc hodin práce za měsíc, než stojí za rok. Ozvěte se, 15 minut vám to ukážu na vašich datech."
 
 #: src/cenik.php:28
 msgid "Remote programming / administration work"
@@ -578,12 +560,8 @@ msgid "Package \"%s\" not found"
 msgstr "Balíček „%s“ nebyl nalezen"
 
 #: src/classes/ui/PackageInfo.php:37
-msgid ""
-"This package may not be indexed in our database yet. Please try again later "
-"or check the package repository directly."
-msgstr ""
-"Tento balíček zatím možná není v naší databázi zaindexován. Zkuste to prosím"
-" později, nebo zkontrolujte přímo repozitář balíčků."
+msgid "This package may not be indexed in our database yet. Please try again later or check the package repository directly."
+msgstr "Tento balíček zatím možná není v naší databázi zaindexován. Zkuste to prosím později, nebo zkontrolujte přímo repozitář balíčků."
 
 #: src/classes/ui/PackageInfo.php:38
 msgid "Browse Repository"
@@ -813,9 +791,7 @@ msgstr "kontrola hesla nesouhlasí"
 
 #: src/createaccount.php:101
 #, php-format
-msgid ""
-"The specified username %s is already in the database. Please choose another "
-"one."
+msgid "The specified username %s is already in the database. Please choose another one."
 msgstr "Zadané uživatelské jméno %s už je v databázi. Zvolte prosím jiné."
 
 #: src/createaccount.php:122
@@ -945,12 +921,8 @@ msgid "Go to AbraFlexi site"
 msgstr "Jít na stránky AbraFlexi"
 
 #: src/flexibee.php:46
-msgid ""
-"Účetní a ekonomický systém pro menší firmy a živnostníky s bohatými "
-"možnostmi integrace."
-msgstr ""
-"Účetní a ekonomický systém pro menší firmy a živnostníky s bohatými "
-"možnostmi integrace."
+msgid "Účetní a ekonomický systém pro menší firmy a živnostníky s bohatými možnostmi integrace."
+msgstr "Účetní a ekonomický systém pro menší firmy a živnostníky s bohatými možnostmi integrace."
 
 #. $productRow = new \Ease\TWB5\Row();
 #. $column1 = $productRow->addColumn(4);
@@ -991,26 +963,16 @@ msgid "AbraFlexi enhancenments"
 msgstr "Rozšíření AbraFlexi"
 
 #: src/flexibee.php:93
-msgid ""
-"Díky několikaleté praxi s tímto systémem vám přinášíme tyto naše vylepšení, "
-"integrace a nástroje"
-msgstr ""
-"Díky několikaleté praxi s tímto systémem vám přinášíme tyto naše vylepšení, "
-"integrace a nástroje"
+msgid "Díky několikaleté praxi s tímto systémem vám přinášíme tyto naše vylepšení, integrace a nástroje"
+msgstr "Díky několikaleté praxi s tímto systémem vám přinášíme tyto naše vylepšení, integrace a nástroje"
 
 #: src/flexibee.php:103
 msgid "AbraFlexi Server"
 msgstr "AbraFlexi server"
 
 #: src/flexibee.php:106
-msgid ""
-"Abra poskytuje pouze instalační balíčkek grafického klienta pro desktop a "
-"nebo klienta se serverem. Kdo si ale nechce na server instalovat nepotřebné "
-"grafické knihovny, ten si nainstaluje náš balíček."
-msgstr ""
-"Abra poskytuje pouze instalační balíčkek grafického klienta pro desktop a "
-"nebo klienta se serverem. Kdo si ale nechce na server instalovat nepotřebné "
-"grafické knihovny, ten si nainstaluje náš balíček."
+msgid "Abra poskytuje pouze instalační balíčkek grafického klienta pro desktop a nebo klienta se serverem. Kdo si ale nechce na server instalovat nepotřebné grafické knihovny, ten si nainstaluje náš balíček."
+msgstr "Abra poskytuje pouze instalační balíčkek grafického klienta pro desktop a nebo klienta se serverem. Kdo si ale nechce na server instalovat nepotřebné grafické knihovny, ten si nainstaluje náš balíček."
 
 #: src/flexibee.php:114 src/flexibee.php:130 src/flexibee.php:253
 #: src/flexibee.php:272
@@ -1026,10 +988,8 @@ msgid "Backup"
 msgstr "Záloha"
 
 #: src/flexibee.php:126
-msgid ""
-"Snadno nastavitelná utilita pro každodení zálohování vašich účetních dat"
-msgstr ""
-"Snadno nastavitelná utilita pro každodení zálohování vašich účetních dat"
+msgid "Snadno nastavitelná utilita pro každodení zálohování vašich účetních dat"
+msgstr "Snadno nastavitelná utilita pro každodení zálohování vašich účetních dat"
 
 #: src/flexibee.php:138 src/flexibee.php:140
 msgid "Testing Tools"
@@ -1044,57 +1004,40 @@ msgid "Monitoring"
 msgstr "Monitoring"
 
 #: src/flexibee.php:159
-msgid ""
-"Senzory pro sledování stavu AbraFlexi. Použitelné v monitorovacích systémech"
-" Nagios/Icinga."
-msgstr ""
-"Senzory pro sledování stavu AbraFlexi. Použitelné v monitorovacích systémech"
-" Nagios/Icinga."
+msgid "Senzory pro sledování stavu AbraFlexi. Použitelné v monitorovacích systémech Nagios/Icinga."
+msgstr "Senzory pro sledování stavu AbraFlexi. Použitelné v monitorovacích systémech Nagios/Icinga."
 
 #: src/flexibee.php:173 src/flexibee.php:175 src/index.php:93
 msgid "AbraFlexi Digest"
 msgstr "AbraFlexi Digest"
 
 #: src/flexibee.php:178
-msgid ""
-"AbraFlexi company status digest every  day, week, month,year or alltime"
-msgstr ""
-"Přehled stavu firmy AbraFlexi každý den, týden, měsíc, rok nebo za celou "
-"dobu"
+msgid "AbraFlexi company status digest every  day, week, month,year or alltime"
+msgstr "Přehled stavu firmy AbraFlexi každý den, týden, měsíc, rok nebo za celou dobu"
 
 #: src/flexibee.php:192 src/flexibee.php:194
 msgid "FlexPlorer"
 msgstr "Flexplorer"
 
 #: src/flexibee.php:197
-msgid ""
-"Vývojářský nástroj a editor pro AbraFlexi API. Napsaný s využitím knihovny "
-"FlexiPeeHP:"
-msgstr ""
-"Vývojářský nástroj a editor pro AbraFlexi API. Napsaný s využitím knihovny "
-"FlexiPeeHP:"
+msgid "Vývojářský nástroj a editor pro AbraFlexi API. Napsaný s využitím knihovny FlexiPeeHP:"
+msgstr "Vývojářský nástroj a editor pro AbraFlexi API. Napsaný s využitím knihovny FlexiPeeHP:"
 
 #: src/flexibee.php:206 src/flexibee.php:234
 msgid "See in action"
 msgstr "Ukaž v akci"
 
 #: src/flexibee.php:225
-msgid ""
-"Nástroj pro účetní, který pomáhá se správným předělem účetních období v "
-"AbraFlexi."
-msgstr ""
-"Nástroj pro účetní, který pomáhá se správným předělem účetních období v "
-"AbraFlexi."
+msgid "Nástroj pro účetní, který pomáhá se správným předělem účetních období v AbraFlexi."
+msgstr "Nástroj pro účetní, který pomáhá se správným předělem účetních období v AbraFlexi."
 
 #: src/flexibee.php:243 src/flexibee.php:245 src/index.php:175
 msgid "AbraFlexi Reminder"
 msgstr "AbraFlexi upomínač"
 
 #: src/flexibee.php:246
-msgid ""
-"Reminds your customers by email with invoices in attachment as pdf and isdoc"
-msgstr ""
-"Připomíná vašim zákazníkům e-mailem faktury v příloze ve formátu PDF a ISDOC"
+msgid "Reminds your customers by email with invoices in attachment as pdf and isdoc"
+msgstr "Připomíná vašim zákazníkům e-mailem faktury v příloze ve formátu PDF a ISDOC"
 
 #: src/flexibee.php:262 src/flexibee.php:264 src/index.php:167
 msgid "AbraFlexi Matcher"
@@ -1105,11 +1048,8 @@ msgid "Match invoices"
 msgstr "Párování faktur"
 
 #: src/flexibee.php:286
-msgid ""
-"Transparent Proxy for filering and modification communictation with "
-"AbraFlexi "
-msgstr ""
-"Transparentní proxy pro filtrování a modifikaci komunikace s AbraFlexi"
+msgid "Transparent Proxy for filering and modification communictation with AbraFlexi "
+msgstr "Transparentní proxy pro filtrování a modifikaci komunikace s AbraFlexi"
 
 #: src/flexibee.php:295
 msgid "Live Demo"
@@ -1381,8 +1321,7 @@ msgstr "Jasper Compiler"
 
 #: src/index.php:130
 msgid "Commandline Jasper compiler with AbraFlexi custom reports support"
-msgstr ""
-"Příkazořádkový Jasper kompilátor s podporou vlastních sestav AbraFlexi"
+msgstr "Příkazořádkový Jasper kompilátor s podporou vlastních sestav AbraFlexi"
 
 #: src/index.php:135
 msgid "AbraFlexi Report Tools"
@@ -1661,12 +1600,8 @@ msgid "Mastodon Feed"
 msgstr "Mastodon feed"
 
 #: src/install.php:20
-msgid ""
-"Installing Package  - If your install does not start automatically, type in "
-"terminal"
-msgstr ""
-"Instalace balíčku – pokud se instalace nespustí automaticky, zadejte do "
-"terminálu"
+msgid "Installing Package  - If your install does not start automatically, type in terminal"
+msgstr "Instalace balíčku – pokud se instalace nespustí automaticky, zadejte do terminálu"
 
 #: src/kontakt.php:27
 msgid "contacts"
@@ -1738,22 +1673,15 @@ msgstr "Regisrace"
 
 #: src/monitoring.php:37
 msgid "Služba jako taková je nabízena do deseti monitorovaných služeb zdarma."
-msgstr ""
-"Služba jako taková je nabízena do deseti monitorovaných služeb zdarma."
+msgstr "Služba jako taková je nabízena do deseti monitorovaných služeb zdarma."
 
 #: src/monitoring.php:38
-msgid ""
-"Nad deset monitorovaných služeb požadujeme deset korun za každý host na "
-"měsíc"
-msgstr ""
-"Nad deset monitorovaných služeb požadujeme deset korun za každý host na "
-"měsíc"
+msgid "Nad deset monitorovaných služeb požadujeme deset korun za každý host na měsíc"
+msgstr "Nad deset monitorovaných služeb požadujeme deset korun za každý host na měsíc"
 
 #: src/monitoring.php:39
-msgid ""
-"Zpoplatněny jsou i notifikační SMS a to dvěmi korunami za jednu zprávu."
-msgstr ""
-"Zpoplatněny jsou i notifikační SMS a to dvěmi korunami za jednu zprávu."
+msgid "Zpoplatněny jsou i notifikační SMS a to dvěmi korunami za jednu zprávu."
+msgstr "Zpoplatněny jsou i notifikační SMS a to dvěmi korunami za jednu zprávu."
 
 #: src/monitoring.php:43
 msgid "Sign IN"
@@ -1772,36 +1700,24 @@ msgid "Freedom first"
 msgstr "Svoboda především"
 
 #: src/monitoring.php:68
-msgid ""
-"Ctíme myšlenku že software má být svobodný a proto jsou k dispozici zdrojové"
-" kódy i instalační balíčky pro debian a odvozené distribuce."
-msgstr ""
-"Ctíme myšlenku že software má být svobodný a proto jsou k dispozici zdrojové"
-" kódy i instalační balíčky pro debian a odvozené distribuce."
+msgid "Ctíme myšlenku že software má být svobodný a proto jsou k dispozici zdrojové kódy i instalační balíčky pro debian a odvozené distribuce."
+msgstr "Ctíme myšlenku že software má být svobodný a proto jsou k dispozici zdrojové kódy i instalační balíčky pro debian a odvozené distribuce."
 
 #: src/monitoring.php:69
 msgid "Instalace zdroje a balíčku"
 msgstr "Instalace zdroje a balíčku"
 
 #: src/monitoring.php:70
-msgid ""
-"Bude pro nás výrazem uznání kvality naší práce pokud se rozhodnete používat "
-"naše konfigurační rozhraní monitoringu i na vašem serveru."
-msgstr ""
-"Bude pro nás výrazem uznání kvality naší práce pokud se rozhodnete používat "
-"naše konfigurační rozhraní monitoringu i na vašem serveru."
+msgid "Bude pro nás výrazem uznání kvality naší práce pokud se rozhodnete používat naše konfigurační rozhraní monitoringu i na vašem serveru."
+msgstr "Bude pro nás výrazem uznání kvality naší práce pokud se rozhodnete používat naše konfigurační rozhraní monitoringu i na vašem serveru."
 
 #: src/monitoring.php:75
 msgid "Veřejně dostupné zdrojové kódy"
 msgstr "Veřejně dostupné zdrojové kódy"
 
 #: src/monitoring.php:77
-msgid ""
-"Pro všechny zájemce o nahlédnutí nebo i přispění do zdrojových kódů jsou "
-"dveře otevřené."
-msgstr ""
-"Pro všechny zájemce o nahlédnutí nebo i přispění do zdrojových kódů jsou "
-"dveře otevřené."
+msgid "Pro všechny zájemce o nahlédnutí nebo i přispění do zdrojových kódů jsou dveře otevřené."
+msgstr "Pro všechny zájemce o nahlédnutí nebo i přispění do zdrojových kódů jsou dveře otevřené."
 
 #: src/monitoring.php:108
 msgid "Podpora"
@@ -1812,12 +1728,8 @@ msgid "Snadný start"
 msgstr "Snadný start"
 
 #: src/monitoring.php:110
-msgid ""
-"Ke spuštění monitoringu nejsou třeba žádné zvláštní znalosti. I přes to jsme"
-" pro vás připravili tento stručný ale názorný návod"
-msgstr ""
-"Ke spuštění monitoringu nejsou třeba žádné zvláštní znalosti. I přes to jsme"
-" pro vás připravili tento stručný ale názorný návod"
+msgid "Ke spuštění monitoringu nejsou třeba žádné zvláštní znalosti. I přes to jsme pro vás připravili tento stručný ale názorný návod"
+msgstr "Ke spuštění monitoringu nejsou třeba žádné zvláštní znalosti. I přes to jsme pro vás připravili tento stručný ale názorný návod"
 
 #: src/monitoring.php:113
 msgid "Začínáme"
@@ -1828,14 +1740,8 @@ msgid "Zajímá nás váš názor"
 msgstr "Zajímá nás váš názor"
 
 #: src/monitoring.php:118
-msgid ""
-"Náš systém je neustále ve vývoji a tak se může stát že něco přestane "
-"fungovat. Proto oceníme pokud nám toto oznámíte. Stejně tak oceníme vaše "
-"přání a připomínky."
-msgstr ""
-"Náš systém je neustále ve vývoji a tak se může stát že něco přestane "
-"fungovat. Proto oceníme pokud nám toto oznámíte. Stejně tak oceníme vaše "
-"přání a připomínky."
+msgid "Náš systém je neustále ve vývoji a tak se může stát že něco přestane fungovat. Proto oceníme pokud nám toto oznámíte. Stejně tak oceníme vaše přání a připomínky."
+msgstr "Náš systém je neustále ve vývoji a tak se může stát že něco přestane fungovat. Proto oceníme pokud nám toto oznámíte. Stejně tak oceníme vaše přání a připomínky."
 
 #: src/newsedit.php:30
 msgid "Article was saved"
@@ -1894,12 +1800,8 @@ msgid "Tip"
 msgstr "Tip"
 
 #: src/passwordrecovery.php:85
-msgid ""
-"Forgot your password? Enter your e-mail address you entered during the "
-"registration and we will send you a new one."
-msgstr ""
-"Zapomněli jste heslo? Zadejte e-mailovou adresu, kterou jste uvedli při "
-"registraci, a my vám pošleme nové."
+msgid "Forgot your password? Enter your e-mail address you entered during the registration and we will send you a new one."
+msgstr "Zapomněli jste heslo? Zadejte e-mailovou adresu, kterou jste uvedli při registraci, a my vám pošleme nové."
 
 #: src/passwordrecovery.php:90
 msgid "Password Recovery"
@@ -1992,6 +1894,411 @@ msgstr "Servis aplikací"
 #: src/umim.php:73
 msgid "Bezpečnostní audity"
 msgstr "Bezpečnostní audity"
+
+msgid "Bank"
+msgstr "Banka"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "Fio bank statement imported"
+msgstr "Výpis z Fio importován"
+
+msgid "Pohoda · 23 transactions"
+msgstr "Pohoda · 23 pohybů"
+
+msgid "Payments matched to invoices"
+msgstr "Platby spárovány s fakturami"
+
+msgid "AbraFlexi · by variable symbol"
+msgstr "AbraFlexi · podle VS"
+
+msgid "Payment reminders sent"
+msgstr "Upomínky odeslány"
+
+msgid "only to overdue customers"
+msgstr "jen po splatnosti"
+
+msgid "Received invoices from e-mail"
+msgstr "Přijaté faktury z e-mailu"
+
+msgid "loaded into AbraFlexi"
+msgstr "načteny do AbraFlexi"
+
+msgid "Weekly digest for the management"
+msgstr "Týdenní přehled pro vedení"
+
+msgid "receivables and cash flow"
+msgstr "pohledávky a cashflow"
+
+msgid "Raiffeisenbank transactions"
+msgstr "Transakce z Raiffeisenbank"
+
+msgid "AbraFlexi · bank movements"
+msgstr "AbraFlexi · bankovní pohyby"
+
+msgid "Technology"
+msgstr "Technologie"
+
+msgid "Freedom"
+msgstr "Svoboda"
+
+msgid "Better tomorrow"
+msgstr "Lepší zítřky"
+
+msgid "Accounting automation and"
+msgstr "Automatizace účetnictví a"
+
+msgid "open source projects"
+msgstr "open source projekty"
+
+msgid "We save time, simplify work and give modern technology a meaning."
+msgstr "Šetříme čas, zjednodušujeme práci a dáváme smysl moderním technologiím."
+
+msgid "cyber hippies with a clear head and working code."
+msgstr "cyber hippies s čistou hlavou a funkčním kódem."
+
+msgid "What we automate for you"
+msgstr "Co pro vás automatizujeme"
+
+msgid "About us"
+msgstr "O nás"
+
+msgid "Example of a MultiFlexi morning"
+msgstr "Ukázka rána s MultiFlexi"
+
+msgid "this morning · example"
+msgstr "dnes ráno · ukázka"
+
+msgid "A better world starts with good software"
+msgstr "Lepší svět začíná dobrým softwarem"
+
+msgid "Products and services"
+msgstr "Produkty a služby"
+
+msgid "Smart solutions for your business"
+msgstr "Chytrá řešení pro vaše podnikání"
+
+msgid "Less manual work."
+msgstr "Méně ruční práce."
+
+msgid "More time for what matters."
+msgstr "Více času na to, co má smysl."
+
+msgid "Accounting automation"
+msgstr "Automatizace účetnictví"
+
+msgid "AbraFlexi and Pohoda via MultiFlexi"
+msgstr "AbraFlexi a Pohoda přes MultiFlexi"
+
+msgid "We connect your accounting with the bank, e-mail and other services. Statements, payment matching, reminders and reports run by themselves – we host and watch over it for you. 78 ready-made automations from 290 CZK a month."
+msgstr "Propojíme vaše účetnictví s bankou, e-mailem a dalšími službami. Výpisy, párování plateb, upomínky i přehledy běží samy – hostujeme a hlídáme to za vás. 78 hotových automatizací, od 290 Kč měsíčně."
+
+msgid "Pricing"
+msgstr "Ceník"
+
+msgid "All automations"
+msgstr "Všechny automatizace"
+
+msgid "Banks"
+msgstr "Banky"
+
+msgid "Open source projects"
+msgstr "Open source projekty"
+
+msgid "We share what works"
+msgstr "Sdílíme, co funguje"
+
+msgid "Everything the automations run on is open – on GitHub and as 500+ packages for Debian and Ubuntu."
+msgstr "Všechno, na čem automatizace běží, je otevřené – na GitHubu a jako 500+ balíčků pro Debian a Ubuntu."
+
+msgid "WE SHOW"
+msgstr "UKÁŽEME"
+
+msgid "15 minutes on your data"
+msgstr "15 minut na vašich datech"
+
+msgid "We show you what can be automated in your company. No obligation."
+msgstr "Nezávazně předvedeme, co jde u vás automatizovat."
+
+msgid "WE SET UP"
+msgstr "NASTAVÍME"
+
+msgid "We connect and configure"
+msgstr "Propojíme a nastavíme"
+
+msgid "Credentials are kept safely in one place by MultiFlexi."
+msgstr "Přístupy spravuje MultiFlexi bezpečně na jednom místě."
+
+msgid "WE WATCH"
+msgstr "HLÍDÁME"
+
+msgid "It runs and we watch over it"
+msgstr "Běží a my to hlídáme"
+
+msgid "Monitoring reports problems before you notice them."
+msgstr "Monitoring hlásí problémy dřív, než si jich všimnete."
+
+msgid "try one automation"
+msgstr "vyzkoušet 1 automatizaci"
+
+msgid "CZK"
+msgstr "Kč"
+
+msgid "setup 2 900 CZK one-off"
+msgstr "nastavení 2 900 Kč jednorázově"
+
+msgid "1 automation of your choice"
+msgstr "1 automatizace dle výběru"
+
+msgid "hosting included"
+msgstr "hostování v ceně"
+
+msgid "tool updates"
+msgstr "aktualizace nástroje"
+
+msgid "e-mail support"
+msgstr "podpora e-mailem"
+
+msgid "Operation"
+msgstr "Provoz"
+
+msgid "a typical company on AbraFlexi / Pohoda"
+msgstr "běžná firma na AbraFlexi / Pohodě"
+
+msgid "setup 4 900 CZK one-off"
+msgstr "nastavení 4 900 Kč jednorázově"
+
+msgid "2–3 automations of your choice"
+msgstr "2–3 automatizace dle výběru"
+
+msgid "hosting + monitoring"
+msgstr "hostování + monitoring"
+
+msgid "automatic updates"
+msgstr "automatické aktualizace"
+
+msgid "priority support"
+msgstr "přednostní podpora"
+
+msgid "Turnkey"
+msgstr "Na klíč"
+
+msgid "complex operation and customisation"
+msgstr "složitější provoz a úpravy"
+
+msgid "from"
+msgstr "od"
+
+msgid "setup from 9 900 CZK one-off"
+msgstr "nastavení od 9 900 Kč jednorázově"
+
+msgid "unlimited automations"
+msgstr "neomezeně automatizací"
+
+msgid "custom changes"
+msgstr "úpravy na míru"
+
+msgid "priority SLA + phone"
+msgstr "prioritní SLA + telefon"
+
+msgid "monthly report"
+msgstr "měsíční report"
+
+msgid "most popular"
+msgstr "nejoblíbenější"
+
+msgid "month"
+msgstr "měsíc"
+
+msgid "I am interested"
+msgstr "Mám zájem"
+
+msgid "One automation saves more than it costs"
+msgstr "Jedna automatizace ušetří víc, než stojí"
+
+msgid "Paying a year in advance = 2 months of operation free."
+msgstr "Roční platba předem = 2 měsíce provozu zdarma."
+
+msgid "Prices are final, we are not VAT payers."
+msgstr "Ceny jsou konečné, nejsme plátci DPH."
+
+msgid "Runs, schedules and watches integrations on top of AbraFlexi and Pohoda."
+msgstr "Spouští, plánuje a hlídá integrace nad AbraFlexi a Pohodou."
+
+msgid "Catalog of MCP servers and configuration generator for AI tools."
+msgstr "Katalog MCP serverů a generátor konfigurace pro AI nástroje."
+
+msgid "Jasper report compiler with AbraFlexi support."
+msgstr "Kompilátor Jasper reportů s podporou AbraFlexi."
+
+msgid "Library for the AbraFlexi REST API."
+msgstr "Knihovna pro AbraFlexi REST API."
+
+msgid "Selected projects"
+msgstr "Vybrané projekty"
+
+msgid "Open source that makes sense"
+msgstr "Open source, který dává smysl"
+
+msgid "Show all projects"
+msgstr "Zobrazit všechny projekty"
+
+msgid "Tool catalog"
+msgstr "Katalog nástrojů"
+
+msgid "Everything we have built"
+msgstr "Všechno, co jsme postavili"
+
+msgid "From the workshop"
+msgstr "Z dílny"
+
+msgid "News and releases"
+msgstr "Novinky a vydání"
+
+msgid "All articles"
+msgstr "Všechny články"
+
+msgid "A small workshop with a big heart for open source. We write, set up and watch over the automations ourselves."
+msgstr "Malá dílna s velkým srdcem pro open source. Automatizace píšeme, nastavujeme i hlídáme sami."
+
+msgid "Vitex Software builds integrations for AbraFlexi and Pohoda and gives everything it writes back to the community – on GitHub and as packages for Debian and Ubuntu."
+msgstr "Vitex Software vyvíjí integrace pro AbraFlexi a Pohodu a všechno, co napíše, dává zpátky komunitě – na GitHub a jako balíčky pro Debian a Ubuntu."
+
+msgid "automations"
+msgstr "automatizací"
+
+msgid "packages"
+msgstr "balíčků"
+
+msgid "since"
+msgstr "od roku"
+
+msgid "Book 15 minutes"
+msgstr "Domluvit 15 minut"
+
+msgid "so, shall we try it?"
+msgstr "tak co, zkusíme to?"
+
+msgid "15 minutes and we will show you"
+msgstr "15 minut a ukážeme vám to"
+
+msgid "on your own data."
+msgstr "na vašich datech."
+
+msgid "One automation usually saves more working hours in a month than it costs for a whole year."
+msgstr "Jedna automatizace obvykle ušetří za měsíc víc hodin práce, než stojí za celý rok."
+
+msgid "Switch light / dark mode"
+msgstr "Přepnout světlý / tmavý režim"
+
+msgid "Get a free quote"
+msgstr "Nezávazně poptat"
+
+msgid "Code · Nature · Freedom"
+msgstr "Kód · Příroda · Svoboda"
+
+msgid "Magnetic Nymph – the Vitex Software mascot"
+msgstr "Magnetic Nymph – maskotka Vitex Software"
+
+msgid "Thermoservice"
+msgstr "Thermoservice"
+
+msgid "Temperature sharing service for DS18B20"
+msgstr "Služba pro sdílení teplot z čidel DS18B20"
+
+msgid "Accounting automation for AbraFlexi and Pohoda and open source projects."
+msgstr "Automatizace účetnictví pro AbraFlexi a Pohodu a open source projekty."
+
+msgid "Mon"
+msgstr "Po"
+
+msgid "Tue"
+msgstr "Út"
+
+msgid "Wed"
+msgstr "St"
+
+msgid "Thu"
+msgstr "Čt"
+
+msgid "Fri"
+msgstr "Pá"
+
+msgid "Sat"
+msgstr "So"
+
+msgid "Sun"
+msgstr "Ne"
+
+msgid "Today"
+msgstr "Dnes"
+
+msgid "Other"
+msgstr "Ostatní"
+
+msgid "%d pushes"
+msgstr "%d× push"
+
+msgid "What we are working on right now"
+msgstr "Na čem teď pracujeme"
+
+msgid "Live data from WakaTime and GitHub."
+msgstr "Živá data z WakaTime a GitHubu."
+
+msgid "This week in code"
+msgstr "Tento týden v kódu"
+
+msgid "Languages"
+msgstr "Jazyky"
+
+msgid "On GitHub this week"
+msgstr "Na GitHubu tento týden"
+
+msgid "%d min ago"
+msgstr "před %d min"
+
+msgid "%d h ago"
+msgstr "před %d h"
+
+msgid "%d d ago"
+msgstr "před %d dny"
+
+msgid "yesterday"
+msgstr "včera"
+
+msgid "Write or call – we will gladly show you what can be automated in your company."
+msgstr "Napište nebo zavolejte – rádi vám ukážeme, co jde u vás automatizovat."
+
+msgid "Programming, integrations and server administration"
+msgstr "Programování, integrace a správa serverů"
+
+msgid "Billing details"
+msgstr "Fakturační údaje"
+
+msgid "Company"
+msgstr "Firma"
+
+msgid "Bank account"
+msgstr "Bankovní účet"
+
+msgid "Elsewhere on the web"
+msgstr "Kde nás ještě najdete"
+
+msgid "Libraries, tools and applications for AbraFlexi, Pohoda and Debian – all of it on GitHub."
+msgstr "Knihovny, nástroje a aplikace pro AbraFlexi, Pohodu a Debian – všechno na GitHubu."
+
+msgid "Live demo"
+msgstr "Živé demo"
+
+msgid "500+ packages for Debian and Ubuntu"
+msgstr "Přes 500 balíčků pro Debian a Ubuntu"
+
+msgid "Registration is not available"
+msgstr "Registrace není dostupná"
+
+msgid "Accounts on this site are only for editors. If you need access or anything else, write to us."
+msgstr "Účty na tomto webu mají jen redaktoři. Pokud potřebujete přístup nebo cokoli jiného, napište nám."
 
 #~ msgid "More articles"
 #~ msgstr "Více článků"
@@ -2757,408 +3064,3 @@ msgstr "Bezpečnostní audity"
 #, fuzzy
 #~ msgid "Uložit do AbraFlexi"
 #~ msgstr "AbraFlexi"
-
-msgid "Bank"
-msgstr "Banka"
-
-msgid "E-mail"
-msgstr "E-mail"
-
-msgid "Fio bank statement imported"
-msgstr "Výpis z Fio importován"
-
-msgid "Pohoda · 23 transactions"
-msgstr "Pohoda · 23 pohybů"
-
-msgid "Payments matched to invoices"
-msgstr "Platby spárovány s fakturami"
-
-msgid "AbraFlexi · by variable symbol"
-msgstr "AbraFlexi · podle VS"
-
-msgid "Payment reminders sent"
-msgstr "Upomínky odeslány"
-
-msgid "only to overdue customers"
-msgstr "jen po splatnosti"
-
-msgid "Received invoices from e-mail"
-msgstr "Přijaté faktury z e-mailu"
-
-msgid "loaded into AbraFlexi"
-msgstr "načteny do AbraFlexi"
-
-msgid "Weekly digest for the management"
-msgstr "Týdenní přehled pro vedení"
-
-msgid "receivables and cash flow"
-msgstr "pohledávky a cashflow"
-
-msgid "Raiffeisenbank transactions"
-msgstr "Transakce z Raiffeisenbank"
-
-msgid "AbraFlexi · bank movements"
-msgstr "AbraFlexi · bankovní pohyby"
-
-msgid "Technology"
-msgstr "Technologie"
-
-msgid "Freedom"
-msgstr "Svoboda"
-
-msgid "Better tomorrow"
-msgstr "Lepší zítřky"
-
-msgid "Accounting automation and"
-msgstr "Automatizace účetnictví a"
-
-msgid "open source projects"
-msgstr "open source projekty"
-
-msgid "We save time, simplify work and give modern technology a meaning. We are Vitex Software –"
-msgstr "Šetříme čas, zjednodušujeme práci a dáváme smysl moderním technologiím. Jsme Vitex Software –"
-
-msgid "cyber hippies with a clear head and working code."
-msgstr "cyber hippies s čistou hlavou a funkčním kódem."
-
-msgid "What we automate for you"
-msgstr "Co pro vás automatizujeme"
-
-msgid "About us"
-msgstr "O nás"
-
-msgid "Example of a MultiFlexi morning"
-msgstr "Ukázka rána s MultiFlexi"
-
-msgid "this morning · example"
-msgstr "dnes ráno · ukázka"
-
-msgid "A better world starts with good software"
-msgstr "Lepší svět začíná dobrým softwarem"
-
-msgid "Products and services"
-msgstr "Produkty a služby"
-
-msgid "Smart solutions for your business"
-msgstr "Chytrá řešení pro vaše podnikání"
-
-msgid "Less manual work."
-msgstr "Méně ruční práce."
-
-msgid "More time for what matters."
-msgstr "Více času na to, co má smysl."
-
-msgid "Accounting automation"
-msgstr "Automatizace účetnictví"
-
-msgid "AbraFlexi and Pohoda via MultiFlexi"
-msgstr "AbraFlexi a Pohoda přes MultiFlexi"
-
-msgid "We connect your accounting with the bank, e-mail and other services. Statements, payment matching, reminders and reports run by themselves – we host and watch over it for you. 78 ready-made automations from 290 CZK a month."
-msgstr "Propojíme vaše účetnictví s bankou, e-mailem a dalšími službami. Výpisy, párování plateb, upomínky i přehledy běží samy – hostujeme a hlídáme to za vás. 78 hotových automatizací, od 290 Kč měsíčně."
-
-msgid "Pricing"
-msgstr "Ceník"
-
-msgid "All automations"
-msgstr "Všechny automatizace"
-
-msgid "Banks"
-msgstr "Banky"
-
-msgid "Open source projects"
-msgstr "Open source projekty"
-
-msgid "We share what works"
-msgstr "Sdílíme, co funguje"
-
-msgid "Everything the automations run on is open – on GitHub and as 500+ packages for Debian and Ubuntu."
-msgstr "Všechno, na čem automatizace běží, je otevřené – na GitHubu a jako 500+ balíčků pro Debian a Ubuntu."
-
-msgid "WE SHOW"
-msgstr "UKÁŽEME"
-
-msgid "15 minutes on your data"
-msgstr "15 minut na vašich datech"
-
-msgid "We show you what can be automated in your company. No obligation."
-msgstr "Nezávazně předvedeme, co jde u vás automatizovat."
-
-msgid "WE SET UP"
-msgstr "NASTAVÍME"
-
-msgid "We connect and configure"
-msgstr "Propojíme a nastavíme"
-
-msgid "Credentials are kept safely in one place by MultiFlexi."
-msgstr "Přístupy spravuje MultiFlexi bezpečně na jednom místě."
-
-msgid "WE WATCH"
-msgstr "HLÍDÁME"
-
-msgid "It runs and we watch over it"
-msgstr "Běží a my to hlídáme"
-
-msgid "Monitoring reports problems before you notice them."
-msgstr "Monitoring hlásí problémy dřív, než si jich všimnete."
-
-msgid "try one automation"
-msgstr "vyzkoušet 1 automatizaci"
-
-msgid "CZK"
-msgstr "Kč"
-
-msgid "setup 2 900 CZK one-off"
-msgstr "nastavení 2 900 Kč jednorázově"
-
-msgid "1 automation of your choice"
-msgstr "1 automatizace dle výběru"
-
-msgid "hosting included"
-msgstr "hostování v ceně"
-
-msgid "tool updates"
-msgstr "aktualizace nástroje"
-
-msgid "e-mail support"
-msgstr "podpora e-mailem"
-
-msgid "Operation"
-msgstr "Provoz"
-
-msgid "a typical company on AbraFlexi / Pohoda"
-msgstr "běžná firma na AbraFlexi / Pohodě"
-
-msgid "setup 4 900 CZK one-off"
-msgstr "nastavení 4 900 Kč jednorázově"
-
-msgid "2–3 automations of your choice"
-msgstr "2–3 automatizace dle výběru"
-
-msgid "hosting + monitoring"
-msgstr "hostování + monitoring"
-
-msgid "automatic updates"
-msgstr "automatické aktualizace"
-
-msgid "priority support"
-msgstr "přednostní podpora"
-
-msgid "Turnkey"
-msgstr "Na klíč"
-
-msgid "complex operation and customisation"
-msgstr "složitější provoz a úpravy"
-
-msgid "from"
-msgstr "od"
-
-msgid "setup from 9 900 CZK one-off"
-msgstr "nastavení od 9 900 Kč jednorázově"
-
-msgid "unlimited automations"
-msgstr "neomezeně automatizací"
-
-msgid "custom changes"
-msgstr "úpravy na míru"
-
-msgid "priority SLA + phone"
-msgstr "prioritní SLA + telefon"
-
-msgid "monthly report"
-msgstr "měsíční report"
-
-msgid "most popular"
-msgstr "nejoblíbenější"
-
-msgid "month"
-msgstr "měsíc"
-
-msgid "I am interested"
-msgstr "Mám zájem"
-
-msgid "One automation saves more than it costs"
-msgstr "Jedna automatizace ušetří víc, než stojí"
-
-msgid "Paying a year in advance = 2 months of operation free."
-msgstr "Roční platba předem = 2 měsíce provozu zdarma."
-
-msgid "Prices are final, we are not VAT payers."
-msgstr "Ceny jsou konečné, nejsme plátci DPH."
-
-msgid "Runs, schedules and watches integrations on top of AbraFlexi and Pohoda."
-msgstr "Spouští, plánuje a hlídá integrace nad AbraFlexi a Pohodou."
-
-msgid "Catalog of MCP servers and configuration generator for AI tools."
-msgstr "Katalog MCP serverů a generátor konfigurace pro AI nástroje."
-
-msgid "Jasper report compiler with AbraFlexi support."
-msgstr "Kompilátor Jasper reportů s podporou AbraFlexi."
-
-msgid "Library for the AbraFlexi REST API."
-msgstr "Knihovna pro AbraFlexi REST API."
-
-msgid "Selected projects"
-msgstr "Vybrané projekty"
-
-msgid "Open source that makes sense"
-msgstr "Open source, který dává smysl"
-
-msgid "Show all projects"
-msgstr "Zobrazit všechny projekty"
-
-msgid "Tool catalog"
-msgstr "Katalog nástrojů"
-
-msgid "Everything we have built"
-msgstr "Všechno, co jsme postavili"
-
-msgid "From the workshop"
-msgstr "Z dílny"
-
-msgid "News and releases"
-msgstr "Novinky a vydání"
-
-msgid "All articles"
-msgstr "Všechny články"
-
-msgid "A small workshop with a big heart for open source. We write, set up and watch over the automations ourselves."
-msgstr "Malá dílna s velkým srdcem pro open source. Automatizace píšeme, nastavujeme i hlídáme sami."
-
-msgid "Vitex Software builds integrations for AbraFlexi and Pohoda and gives everything it writes back to the community – on GitHub and as packages for Debian and Ubuntu."
-msgstr "Vitex Software vyvíjí integrace pro AbraFlexi a Pohodu a všechno, co napíše, dává zpátky komunitě – na GitHub a jako balíčky pro Debian a Ubuntu."
-
-msgid "automations"
-msgstr "automatizací"
-
-msgid "packages"
-msgstr "balíčků"
-
-msgid "since"
-msgstr "od roku"
-
-msgid "Book 15 minutes"
-msgstr "Domluvit 15 minut"
-
-msgid "so, shall we try it?"
-msgstr "tak co, zkusíme to?"
-
-msgid "15 minutes and we will show you"
-msgstr "15 minut a ukážeme vám to"
-
-msgid "on your own data."
-msgstr "na vašich datech."
-
-msgid "One automation usually saves more working hours in a month than it costs for a whole year."
-msgstr "Jedna automatizace obvykle ušetří za měsíc víc hodin práce, než stojí za celý rok."
-
-msgid "Switch light / dark mode"
-msgstr "Přepnout světlý / tmavý režim"
-
-msgid "Get a free quote"
-msgstr "Nezávazně poptat"
-
-msgid "Code · Nature · Freedom"
-msgstr "Kód · Příroda · Svoboda"
-
-msgid "Magnetic Nymph – the Vitex Software mascot"
-msgstr "Magnetic Nymph – maskotka Vitex Software"
-
-msgid "Thermoservice"
-msgstr "Thermoservice"
-
-msgid "Temperature sharing service for DS18B20"
-msgstr "Služba pro sdílení teplot z čidel DS18B20"
-
-msgid "Accounting automation for AbraFlexi and Pohoda and open source projects."
-msgstr "Automatizace účetnictví pro AbraFlexi a Pohodu a open source projekty."
-
-msgid "Mon"
-msgstr "Po"
-
-msgid "Tue"
-msgstr "Út"
-
-msgid "Wed"
-msgstr "St"
-
-msgid "Thu"
-msgstr "Čt"
-
-msgid "Fri"
-msgstr "Pá"
-
-msgid "Sat"
-msgstr "So"
-
-msgid "Sun"
-msgstr "Ne"
-
-msgid "Today"
-msgstr "Dnes"
-
-msgid "Other"
-msgstr "Ostatní"
-
-msgid "%d pushes"
-msgstr "%d× push"
-
-msgid "What we are working on right now"
-msgstr "Na čem teď pracujeme"
-
-msgid "Live data from WakaTime and GitHub."
-msgstr "Živá data z WakaTime a GitHubu."
-
-msgid "This week in code"
-msgstr "Tento týden v kódu"
-
-msgid "Languages"
-msgstr "Jazyky"
-
-msgid "On GitHub this week"
-msgstr "Na GitHubu tento týden"
-
-msgid "%d min ago"
-msgstr "před %d min"
-
-msgid "%d h ago"
-msgstr "před %d h"
-
-msgid "%d d ago"
-msgstr "před %d dny"
-
-msgid "yesterday"
-msgstr "včera"
-
-msgid "Write or call – we will gladly show you what can be automated in your company."
-msgstr "Napište nebo zavolejte – rádi vám ukážeme, co jde u vás automatizovat."
-
-msgid "Programming, integrations and server administration"
-msgstr "Programování, integrace a správa serverů"
-
-msgid "Billing details"
-msgstr "Fakturační údaje"
-
-msgid "Company"
-msgstr "Firma"
-
-msgid "Bank account"
-msgstr "Bankovní účet"
-
-msgid "Elsewhere on the web"
-msgstr "Kde nás ještě najdete"
-
-msgid "Libraries, tools and applications for AbraFlexi, Pohoda and Debian – all of it on GitHub."
-msgstr "Knihovny, nástroje a aplikace pro AbraFlexi, Pohodu a Debian – všechno na GitHubu."
-
-msgid "Live demo"
-msgstr "Živé demo"
-
-msgid "500+ packages for Debian and Ubuntu – add the repository once and install with apt."
-msgstr "Přes 500 balíčků pro Debian a Ubuntu – jednou přidáte repozitář a instalujete přes apt."
-
-msgid "Registration is not available"
-msgstr "Registrace není dostupná"
-
-msgid "Accounts on this site are only for editors. If you need access or anything else, write to us."
-msgstr "Účty na tomto webu mají jen redaktoři. Pokud potřebujete přístup nebo cokoli jiného, napište nám."
