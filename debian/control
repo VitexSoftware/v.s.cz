@@ -21,6 +21,8 @@ Depends: ${misc:Depends},
  php-cakephp-phinx
 Recommends: abraflexi-api-doc-cs,
  abraflexi-api-doc-en,
+ pohoda-api-doc-cs,
+ pohoda-api-doc-en,
  php-spojenet-abraflexi-doc,
  php-vitexsoftware-ease-core-doc,
  php-vitexsoftware-abraflexi-bricks-doc,

@@ -71,11 +71,16 @@ class MainMenu extends Navbar
                         ]
                 );
          */
+        // API docs exist in cs and en only; link the one matching the selected locale.
+        $docsCs = 0 === strpos((string) \Ease\Locale::$localeUsed, 'cs');
+        $docsLang = $docsCs ? 'cs' : 'en';
+        $docsLocale = $docsCs ? 'cs_CZ' : 'en_US';
+
         $this->addDropDownMenu(
             _('Docs'),
             [
-                '/abraflexi-api-doc-cs/' => '<img style="height: 20px;" src="img/abra-flexibee-square.png"> '._('AbraFlexi REST API (CS)'),
-                '/abraflexi-api-doc-en/' => '<img style="height: 20px;" src="img/abra-flexibee-square.png"> '._('AbraFlexi REST API (EN)'),
+                '/abraflexi-api-doc-'.$docsLang.'/?locale='.$docsLocale => '<img style="height: 20px;" src="img/abra-flexibee-square.png"> '._('AbraFlexi REST API'),
+                '/pohoda-api-doc-'.$docsLang.'/?locale='.$docsLocale => '<img style="height: 20px;" src="img/pohodaSQL.svg"> '._('Stormware Pohoda API'),
                 '/php-spojenet-abraflexi-doc/namespaces/abraflexi.html' => '<img style="height: 20px" src="img/php-flexibee.svg"> '._('PHP AbraFlexi'),
                 '/php-vitexsoftware-ease-core-doc/namespaces/ease.html' => '<img style="height: 20px;" src="img/ease-core.svg"> '._('EaseCore'),
                 '/php-vitexsoftware-abraflexi-bricks-doc/namespaces/abraflexi-bricks.html' => '<img style="height: 20px;" src="https://www.vitexsoftware.cz/img/php-flexibee-bricks.svg"> PHP Based AbraFlexi RestAPI/Json library Addons',
