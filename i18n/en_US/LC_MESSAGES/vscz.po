@@ -454,13 +454,13 @@ msgstr "Automation"
 msgid "Docs"
 msgstr "Docs"
 
-#: src/classes/ui/MainMenu.php:88
-msgid "AbraFlexi REST API (CS)"
-msgstr "AbraFlexi REST API (CS)"
+#: src/classes/ui/MainMenu.php:83
+msgid "AbraFlexi REST API"
+msgstr "AbraFlexi REST API"
 
-#: src/classes/ui/MainMenu.php:89
-msgid "AbraFlexi REST API (EN)"
-msgstr "AbraFlexi REST API (EN)"
+#: src/classes/ui/MainMenu.php:84
+msgid "Stormware Pohoda API"
+msgstr "Stormware Pohoda API"
 
 #. $mainPageMenu->addMenuItem('img/deb-package.png', _('Repozitář'), 'repos.php',
 #. _('Repozitář balíčků pro Debian & Ubuntu'));
