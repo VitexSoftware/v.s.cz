@@ -47,7 +47,8 @@ $hero->addItem(new \Ease\Html\PTag(
 ));
 $hero->addItem(new \Ease\Html\DivTag([
     new \Ease\TWB5\LinkButton('https://mcprack.vitexsoftware.com/login?username=demo&password=demo', '▶ '._('Vyzkoušet živé demo'), 'primary', ['class' => 'btn-lg mt-2 me-2']),
-    new \Ease\TWB5\LinkButton('https://github.com/VitexSoftware/mcprack', '↗ '._('Zobrazit na GitHubu'), 'outline-secondary', ['class' => 'btn-lg mt-2']),
+    new \Ease\TWB5\LinkButton('https://github.com/VitexSoftware/mcprack', '↗ '._('Zobrazit na GitHubu'), 'outline-secondary', ['class' => 'btn-lg mt-2 me-2']),
+    new \Ease\TWB5\LinkButton('/mcprack-doc/', '📖 '._('Documentation'), 'outline-secondary', ['class' => 'btn-lg mt-2']),
 ]));
 
 $oPage->container->addItem(new \Ease\Html\DivTag(

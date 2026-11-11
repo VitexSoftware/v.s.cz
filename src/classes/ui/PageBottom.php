@@ -56,6 +56,7 @@ class PageBottom extends \Ease\Html\FooterTag
                 '/php-vitexsoftware-ease-html-doc/namespaces/ease.html' => '<img src="img/ease-html.svg" alt=""> EasePHP Framework HTML',
                 '/php-vitexsoftware-rbczpremiumapi/index.html' => '<img src="img/php-rbczpremiumapi.svg" alt=""> '._('Raiffeisenbank Premium API client library'),
                 'https://multiflexi.readthedocs.io/en/latest/' => '<img src="https://multiflexi.readthedocs.io/en/latest/_images/project-logo.svg" alt=""> '._('MultiFlexi'),
+                '/mcprack-doc/' => '<img src="img/mcprack.svg" alt=""> '._('MCPRack'),
             ],
             _('Related') => [
                 'http://murka.cz' => _('Murka.cz'),

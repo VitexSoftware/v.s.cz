@@ -30,7 +30,8 @@ Recommends: abraflexi-api-doc-cs,
  php-vitexsoftware-ease-bootstrap5-doc,
  php-vitexsoftware-ease-fluentpdo-doc,
  php-vitexsoftware-ease-html-doc,
- php-vitexsoftware-rbczpremiumapi
+ php-vitexsoftware-rbczpremiumapi,
+ mcprack-doc
 Architecture: all
 Section: web
 Priority: optional
